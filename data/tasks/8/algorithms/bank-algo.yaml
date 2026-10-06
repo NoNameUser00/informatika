@@ -1,0 +1,204 @@
+# Банк «Алгоритмы, 8 класс» — тренажёрный. teacher_only — только через серверные VIEW.
+- id: inf-8-algo-001
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Свойства алгоритма
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-props], meta: [plan-actions] }
+  prompt: "Сколько свойств алгоритма выделяют в школьном курсе?"
+  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "4" }, { id: C, text: "5" }, { id: D, text: "6" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Дискретность, понятность, определённость, результативность, массовость" }
+
+- id: inf-8-algo-002
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Формальный исполнитель
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
+  prompt: "Что такое формальный исполнитель?"
+  student_view: { options: [{ id: A, text: "Выполняет команды всегда одинаково, не вникая в смысл" }, { id: B, text: "Понимает смысл задачи и рассуждает" }, { id: C, text: "Выполняет только одну команду" }, { id: D, text: "Работает без системы команд" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Одинаковость без понимания смысла — основа автоматизации" }
+
+- id: inf-8-algo-003
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Исполнитель Вычислитель
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
+  prompt: "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 21212 над числом 1. Что получится? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "((1·3−1)·3−1)·3 = 15" }
+
+- id: inf-8-algo-004
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Исполнитель Вычислитель
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
+  prompt: "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 21212 над числом 2. Что получится? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [42], answer_text: "42", explanation: "((2·3−1)·3−1)·3 = 42" }
+
+- id: inf-8-algo-005
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Исполнитель Черепаха
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
+  prompt: "Какая фигура появится после «Повтори 4 [Вперёд 20 Направо 90]»?"
+  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: D, text: "Отрезок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "4 поворота по 90° замыкают квадрат" }
+
+- id: inf-8-algo-006
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: Фигуры блок-схем
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 2
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Установите соответствие: фигура блок-схемы — её назначение."
+  student_view: { left: ["Овал", "Параллелограмм", "Прямоугольник", "Ромб"], right: ["действие", "условие", "начало и конец", "ввод и вывод"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: { Овал: "начало и конец", Параллелограмм: "ввод и вывод", Прямоугольник: "действие", Ромб: "условие" }, explanation: "Четыре фигуры и их роли" }
+
+- id: inf-8-algo-007
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: Присваивание
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Что означает запись «x := x + 1»?"
+  student_view: { options: [{ id: A, text: "Положить в x старое x плюс 1" }, { id: B, text: "Утверждение, что x равен x + 1" }, { id: C, text: "Сравнение x с x + 1" }, { id: D, text: "Цикл по x" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: ":= — команда положить, сначала считается правая часть" }
+
+- id: inf-8-algo-008
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: Присваивание
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Было x = 5. Выполнили «x := x + 1». Чему теперь равен x? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Правая часть 5 + 1 = 6 кладётся в x" }
+
+- id: inf-8-algo-009
+  class: 8
+  topic: Ветвление
+  subtopic: Полная и неполная формы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-03-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
+  prompt: "В какой форме ветвления при ложном условии не выполняется ничего?"
+  student_view: { options: [{ id: A, text: "В полной" }, { id: B, text: "В неполной" }, { id: C, text: "В обеих" }, { id: D, text: "Ни в какой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Неполная форма — только «если-то», без «иначе»" }
+
+- id: inf-8-algo-010
+  class: 8
+  topic: Ветвление
+  subtopic: Трассировка
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-03-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
+  prompt: "Алгоритм: если x чётное, то x := x / 2, иначе x := x + 1. Что будет при x = 7?"
+  student_view: { options: [{ id: A, text: "x = 8" }, { id: B, text: "x = 3" }, { id: C, text: "x = 7" }, { id: D, text: "x = 14" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "7 нечётное — ветка иначе: 7 + 1 = 8" }
+
+- id: inf-8-algo-011
+  class: 8
+  topic: Повторение
+  subtopic: Деление вычитанием
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-04-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "20−6=14, 14−6=8, 8−6=2 — три вычитания, остаток 2" }
+
+- id: inf-8-algo-012
+  class: 8
+  topic: Повторение
+  subtopic: Условие цикла
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-04-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Когда проверяется условие в цикле «нц пока … кц»?"
+  student_view: { options: [{ id: A, text: "До выполнения тела" }, { id: B, text: "После выполнения тела" }, { id: C, text: "В середине тела" }, { id: D, text: "Не проверяется" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Если условие сразу ложно, тело не выполнится ни разу" }

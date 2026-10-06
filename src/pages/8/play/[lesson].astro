@@ -18,7 +18,8 @@ const next = LESSONS_8[idx + 1];
 const play = getPlay(meta.id);
 const B = import.meta.env.BASE_URL;
 const isLogic = meta.id.startsWith('logic-');
-const trainerHref = `${B}8/${isLogic ? 'logic' : 'trainer'}/`;
+const isAlgo = meta.id.startsWith('alg-');
+const trainerHref = `${B}8/${isLogic ? 'logic' : isAlgo ? 'algo' : 'trainer'}/`;
 ---
 <!doctype html>
 <html lang="ru">

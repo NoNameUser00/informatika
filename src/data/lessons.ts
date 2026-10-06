@@ -15,4 +15,8 @@ export const LESSONS_8: LessonMeta[] = [
   { id: 'logic-02-operations', title: 'Логические операции И, ИЛИ, НЕ', file: 'logic-02-operations.md' },
   { id: 'logic-03-truth-tables', title: 'Логические выражения и таблицы истинности', file: 'logic-03-truth-tables.md' },
   { id: 'logic-04-elements', title: 'Логические элементы и основы компьютера', file: 'logic-04-elements.md' },
+  { id: 'alg-01-performers', title: 'Алгоритмы и исполнители', file: 'alg-01-performers.md' },
+  { id: 'alg-02-notation', title: 'Способы записи алгоритмов', file: 'alg-02-notation.md' },
+  { id: 'alg-03-branching', title: 'Ветвление: полная и неполная формы', file: 'alg-03-branching.md' },
+  { id: 'alg-04-loops', title: 'Повторение: циклы', file: 'alg-04-loops.md' },
 ];

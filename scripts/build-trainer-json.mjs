@@ -7,7 +7,8 @@ import { parse } from 'yaml';
 import { checkNumericBase, checkSingleChoice, checkMatching } from '../src/lib/scoring/check.mjs';
 
 const LESSON_ORDER = ['numsys-01-intro', 'numsys-02-binary', 'numsys-03-octal', 'numsys-04-hex', 'numsys-05-arith', 'numsys-06-review',
-  'logic-01-utterances', 'logic-02-operations', 'logic-03-truth-tables', 'logic-04-elements'];
+  'logic-01-utterances', 'logic-02-operations', 'logic-03-truth-tables', 'logic-04-elements',
+  'alg-01-performers', 'alg-02-notation', 'alg-03-branching', 'alg-04-loops'];
 
 const JOBS = [
   { inputs: ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml'],
@@ -15,6 +16,9 @@ const JOBS = [
     instruction: 'В ответе запишите только само число. Основание системы счисления (₂, ₈, ₁₀, ₁₆) указывать не нужно.' },
   { inputs: ['data/tasks/8/logic/bank-logic.yaml'],
     output: 'src/data/logic-tasks.json', test_code: 'logic-pilot-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/8/algorithms/bank-algo.yaml'],
+    output: 'src/data/algo-tasks.json', test_code: 'algo-pilot-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 

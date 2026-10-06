@@ -9,6 +9,10 @@ import { LOGIC_01_PLAY } from './logic-01-utterances';
 import { LOGIC_02_PLAY } from './logic-02-operations';
 import { LOGIC_03_PLAY } from './logic-03-truth-tables';
 import { LOGIC_04_PLAY } from './logic-04-elements';
+import { ALG_01_PLAY } from './alg-01-performers';
+import { ALG_02_PLAY } from './alg-02-notation';
+import { ALG_03_PLAY } from './alg-03-branching';
+import { ALG_04_PLAY } from './alg-04-loops';
 
 export type PlayStep =
   | { kind: 'theory'; title: string; body: string[]; mono?: string[] }
@@ -45,6 +49,10 @@ const REGISTRY: Record<string, PlayLesson> = {
   'logic-02-operations': LOGIC_02_PLAY,
   'logic-03-truth-tables': LOGIC_03_PLAY,
   'logic-04-elements': LOGIC_04_PLAY,
+  'alg-01-performers': ALG_01_PLAY,
+  'alg-02-notation': ALG_02_PLAY,
+  'alg-03-branching': ALG_03_PLAY,
+  'alg-04-loops': ALG_04_PLAY,
 };
 
 export function hasPlay(id: string): boolean {
