@@ -7,14 +7,17 @@ export interface Grade {
   emoji: string;
   status: string;
   topics: string;
+  /** Демо-прогресс для прототипа: где остановился и что дальше. */
+  stopped: string;
+  next: string;
 }
 
 export const GRADES: Grade[] = [
-  { n: '7', color: '#16a34a', emoji: '🧩', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке' },
-  { n: '8', color: '#2563eb', emoji: '💻', status: 'Полный блок', topics: 'ТБ · Системы счисления · Логика' },
-  { n: '9', color: '#9333ea', emoji: '🤖', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке' },
-  { n: '10', color: '#ea580c', emoji: '📊', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке' },
-  { n: '11', color: '#dc2626', emoji: '🎓', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке' },
+  { n: '7', color: '#16a34a', emoji: '🧩', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке', stopped: 'Урок 0 · Техника безопасности', next: 'Новые темы — скоро' },
+  { n: '8', color: '#2563eb', emoji: '💻', status: 'Полный блок', topics: 'ТБ · Системы счисления · Логика', stopped: 'СС · Урок 2 · Двоичная система', next: 'СС · Урок 3 · Восьмеричная и триады' },
+  { n: '9', color: '#9333ea', emoji: '🤖', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке', stopped: 'Урок 0 · Техника безопасности', next: 'Новые темы — скоро' },
+  { n: '10', color: '#ea580c', emoji: '📊', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке', stopped: 'Урок 0 · Техника безопасности', next: 'Новые темы — скоро' },
+  { n: '11', color: '#dc2626', emoji: '🎓', status: 'Только урок 0', topics: 'ТБ · остальное — в разработке', stopped: 'Урок 0 · Техника безопасности', next: 'Новые темы — скоро' },
 ];
 
 export type NodeState = 'done' | 'current' | 'locked';

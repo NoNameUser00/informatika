@@ -28,8 +28,13 @@
 .bad { color: #dc2626; font-weight: 700; }
 .muted { color: #475569; }
 
-/* ============ HOME A (Khan) ============ */
-.ha { background: #101c5e; color: #fff; min-height: 100vh; padding-bottom: 90px; }
+/* ============ HOME A (Khan + космос) ============ */
+.px-space { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.ha { position: relative; background: #020617; color: #fff; min-height: 100vh; padding-bottom: 90px; }
+.ha-veil { position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%); }
+.ha-content { position: relative; z-index: 2; }
+.ha-progress { color: #1d4ed8 !important; font-weight: 700; }
 .ha-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; }
 .ha-logo { font-weight: 900; font-size: 1.2rem; }
 .ha-top nav a { color: #c7d2fe; margin-left: 16px; font-weight: 700; }

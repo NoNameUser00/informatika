@@ -1,6 +1,7 @@
 // PROTOTYPE (throwaway): три варианта главной, переключаются через ?variant=a|b|c.
 // Вопрос: «как выглядит главная по design-brief?» A=Khan, B=карточки, C=золотой путь.
 import PrototypeSwitcher, { useVariant } from './PrototypeSwitcher';
+import SpaceBackground from './SpaceBackground';
 import { GRADES, PATH_8 } from './demo-data';
 
 const VARIANTS = [
@@ -21,12 +22,15 @@ export default function HomePrototype({ base }: { base: string }) {
   );
 }
 
-/* A — Khan: тёмно-синий, цвет класса = навигация, один смысл на страницу. */
+/* A — Khan: тёмный космос, цвет класса = навигация, один смысл на страницу. */
 function HomeA({ base }: { base: string }) {
   const current = PATH_8.find((n) => n.state === 'current')!;
   const doneCount = PATH_8.filter((n) => n.state === 'done').length;
   return (
     <div className="ha">
+      <SpaceBackground />
+      <div className="ha-veil" aria-hidden="true" />
+      <div className="ha-content">
       <header className="ha-top">
         <span className="ha-logo">Информатика</span>
         <nav>
@@ -59,11 +63,15 @@ function HomeA({ base }: { base: string }) {
             <span className="ha-rowbody">
               <strong>{g.n} класс</strong>
               <small>{g.topics}</small>
+              <small className="ha-progress">
+                ⏸ Остановка: {g.stopped} · Дальше: {g.next}
+              </small>
             </span>
             <span className="ha-status">{g.status}</span>
           </a>
         ))}
       </main>
+      </div>
     </div>
   );
 }
