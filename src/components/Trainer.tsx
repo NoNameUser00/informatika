@@ -6,6 +6,7 @@ import {
   percentToMark,
 } from '../lib/scoring/check.mjs';
 import { saveResult } from '../lib/results';
+import DragMatch from './DragMatch';
 
 // Структура как в Яндекс.Форме учителя:
 // стр.1 — ФИО, Класс, Буква класса; дальше страницы по 5 вопросов,
@@ -189,23 +190,12 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
           </div>
         )}
         {t.type === 'matching' && (
-          <div>
-            {t.left.map((k: string) => (
-              <div key={k}>
-                <label htmlFor={`${t.id}-${k}`}>{k} →</label>
-                <select
-                  id={`${t.id}-${k}`}
-                  value={((answers[t.id] as Record<string, string>) ?? {})[k] ?? ''}
-                  onChange={(e) => setA(t.id, { ...((answers[t.id] as Record<string, string>) ?? {}), [k]: e.target.value })}
-                >
-                  <option value="">— выбрать —</option>
-                  {t.right.map((r: string) => (
-                    <option key={r} value={r}>{r}</option>
-                  ))}
-                </select>
-              </div>
-            ))}
-          </div>
+          <DragMatch
+            left={t.left}
+            right={t.right}
+            value={(answers[t.id] as Record<string, string>) ?? {}}
+            onChange={(v) => setA(t.id, v)}
+          />
         )}
       </fieldset>
     );
