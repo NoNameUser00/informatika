@@ -1,6 +1,8 @@
 ---
 import SpaceBackground from '../components/SpaceBackground';
+import BoardFloat from '../components/BoardFloat';
 import '../components/space-background.css';
+import '../components/board-float.css';
 // ЕДИНЫЙ стиль сайта: тёмный космос + матовое стекло (как главная).
 // Контентные карточки — светлое стекло с тёмным текстом, хром — светлый на тёмном.
 interface Props {
@@ -98,7 +100,7 @@ const B = import.meta.env.BASE_URL;
       input[type='text']::placeholder { color: #94a3b8; }
       fieldset { border: 2px solid rgba(255, 255, 255, 0.25); border-radius: 12px; margin: 16px 0; padding: 16px; }
       fieldset.card { border: 1px solid rgba(255, 255, 255, 0.55); }
-      fieldset.card > legend { color: var(--ink); }
+      fieldset.card > legend { color: var(--ink); float: left; width: 100%; margin: 0 0 8px; padding: 0; }
       legend { font-weight: 800; padding: 0 8px; }
       .radio-row { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; }
       .radio-row input { width: 22px; height: 22px; accent-color: #fbbf24; }
@@ -128,5 +130,6 @@ const B = import.meta.env.BASE_URL;
     <main>
       <slot />
     </main>
+    <BoardFloat client:load />
   </body>
 </html>

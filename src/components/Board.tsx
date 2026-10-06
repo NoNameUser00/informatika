@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 // Доска разборов: рисуй столбики, схемы, блок-схемы — скачай PNG в работу.
 // Всё локально в браузере (Excalidraw, MIT), на сервер ничего не уходит.
 // Импорт динамический: Excalidraw не переживает SSR, только клиент.
-export default function Board({ id }: { id: string }) {
+export default function Board({ id, height = 480 }: { id: string; height?: number }) {
   const [mod, setMod] = useState<any>(null);
   const [scene, setScene] = useState<{ elements: readonly any[]; appState: any; files: any }>({
     elements: [],
@@ -58,7 +58,7 @@ export default function Board({ id }: { id: string }) {
 
   return (
     <div>
-      <div style={{ height: 480, border: '1px solid #cbd5e1', borderRadius: 12, overflow: 'hidden' }}>
+      <div style={{ height, border: '1px solid #cbd5e1', borderRadius: 12, overflow: 'hidden' }}>
         <Excalidraw
           langCode="ru-RU"
           onChange={handleChange}

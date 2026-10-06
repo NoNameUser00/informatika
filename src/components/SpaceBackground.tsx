@@ -38,40 +38,47 @@ const MIN_SPEED = 10;
 const MAX_SPEED = 300;
 const DEFAULT_SPEED = 100; // = старая 1.0×
 
-function loadPrefs(): Prefs {
-  const fallback: Prefs = {
-    paused:
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    count: 350,
-    speed: DEFAULT_SPEED,
-  };
+function loadPrefs(): Prefs | null {
   try {
     const raw = localStorage.getItem(KEY);
-    if (!raw) return fallback;
+    if (!raw) return null;
     const v = JSON.parse(raw);
-    let speed = typeof v.speed === 'number' ? v.speed : fallback.speed;
+    let speed = typeof v.speed === 'number' ? v.speed : DEFAULT_SPEED;
     if (speed < MIN_SPEED) speed *= 100; // миграция со старой шкалы 0.2–3
     return {
-      paused: typeof v.paused === 'boolean' ? v.paused : fallback.paused,
+      paused: typeof v.paused === 'boolean' ? v.paused : false,
       count:
         typeof v.count === 'number'
-          ? Math.min(MAX_COUNT, Math.max(MIN_COUNT, v.count))
-          : fallback.count,
-      speed: Math.min(MAX_SPEED, Math.max(MIN_SPEED, speed)),
+          ? Math.min(MAX_COUNT, Math.max(MIN_COUNT, Math.round(v.count)))
+          : 350,
+      speed: Math.min(MAX_SPEED, Math.max(MIN_SPEED, Math.round(speed))),
     };
   } catch {
-    return fallback;
+    return null;
   }
 }
 
+// Стартовые значения — КОНСТАНТА: сервер и первый клиентский рендер обязаны
+// совпасть, иначе React роняет гидратацию. Реальные настройки подтягиваем
+// эффектом вторым проходом.
+const INITIAL: Prefs = { paused: false, count: 350, speed: DEFAULT_SPEED };
+
 export default function SpaceBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
-  const [prefs, setPrefs] = useState<Prefs>(() =>
-    typeof window === 'undefined' ? { paused: false, count: 350, speed: DEFAULT_SPEED } : loadPrefs(),
-  );
+  const [prefs, setPrefs] = useState<Prefs>(INITIAL);
   const prefsRef = useRef(prefs);
   prefsRef.current = prefs;
+
+  // Второй проход: подтягиваем сохранённые настройки (и reduced-motion).
+  // Только здесь трогаем localStorage/matchMedia — иначе рассинхрон с SSR.
+  useEffect(() => {
+    const stored = loadPrefs();
+    if (stored) {
+      setPrefs(stored);
+    } else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setPrefs((p) => ({ ...p, paused: true }));
+    }
+  }, []);
 
   const patch = (p: Partial<Prefs>) => {
     setPrefs((prev) => {
