@@ -57,8 +57,39 @@ export function mdToHtml(src: string): string {
   return html;
 }
 
-export function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {
-  const meta: Record<string, string> = {};
+export interface Slide {
+  heading: string;
+  html: string;
+}
+
+// Разбивка урока на слайды: титул (# ...) + по одному на каждый ## ....
+// Возвращает заголовок страницы и массив слайдов (первый — титульный, без heading).
+export function splitSlides(body: string): { title: string; slides: Slide[] } {
+  const lines = body.split('\n');
+  let title = '';
+  const chunks: { heading: string; lines: string[] }[] = [];
+  let cur: { heading: string; lines: string[] } | null = null;
+  for (const line of lines) {
+    const h1 = line.match(/^#\s+(.*)/);
+    const h2 = line.match(/^##\s+(.*)/);
+    if (h1 && !title) {
+      title = h1[1].trim();
+      cur = { heading: '', lines: [] };
+      chunks.push(cur);
+    } else if (h2) {
+      cur = { heading: h2[1].trim(), lines: [] };
+      chunks.push(cur);
+    } else if (cur) {
+      cur.lines.push(line);
+    }
+  }
+  const slides = chunks
+    .map((c) => ({ heading: c.heading, html: mdToHtml(c.lines.join('\n').trim()) }))
+    .filter((s) => s.heading !== '' || s.html.replace(/<[^>]+>/g, '').trim() !== '');
+  return { title, slides };
+}
+
+export function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {  const meta: Record<string, string> = {};
   const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if (!m) return { meta, body: raw };
   for (const line of m[1].split('\n')) {

@@ -141,6 +141,34 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"lessons": {
+"8/logic-01-utterances.md": {
+	id: "8/logic-01-utterances.md";
+  slug: "8/logic-01-utterances";
+  body: string;
+  collection: "lessons";
+  data: any
+} & { render(): Render[".md"] };
+"8/logic-02-operations.md": {
+	id: "8/logic-02-operations.md";
+  slug: "8/logic-02-operations";
+  body: string;
+  collection: "lessons";
+  data: any
+} & { render(): Render[".md"] };
+"8/logic-03-truth-tables.md": {
+	id: "8/logic-03-truth-tables.md";
+  slug: "8/logic-03-truth-tables";
+  body: string;
+  collection: "lessons";
+  data: any
+} & { render(): Render[".md"] };
+"8/logic-04-elements.md": {
+	id: "8/logic-04-elements.md";
+  slug: "8/logic-04-elements";
+  body: string;
+  collection: "lessons";
+  data: any
+} & { render(): Render[".md"] };
 "8/numsys-01-intro.md": {
 	id: "8/numsys-01-intro.md";
   slug: "8/numsys-01-intro";
@@ -179,6 +207,13 @@ declare module 'astro:content' {
 "8/numsys-06-review.md": {
 	id: "8/numsys-06-review.md";
   slug: "8/numsys-06-review";
+  body: string;
+  collection: "lessons";
+  data: any
+} & { render(): Render[".md"] };
+"tb-safety.md": {
+	id: "tb-safety.md";
+  slug: "tb-safety";
   body: string;
   collection: "lessons";
   data: any

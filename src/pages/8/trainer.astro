@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Trainer from '../../components/Trainer';
+import bank from '../../data/numsys-tasks.json';
 ---
 <Layout title="Тренажер — Системы счисления, 8 класс">
-  <Trainer client:load />
+  <Trainer client:load data={bank} title="Системы счисления" />
 </Layout>

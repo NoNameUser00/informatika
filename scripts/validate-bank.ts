@@ -5,7 +5,7 @@ import { parse } from 'yaml';
 import { bankSchema } from '../src/lib/tasks/schema.js';
 
 const paths = process.argv.slice(2);
-const files = paths.length > 0 ? paths : ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml'];
+const files = paths.length > 0 ? paths : ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml', 'data/tasks/8/logic/bank-logic.yaml'];
 
 let all: unknown[] = [];
 for (const path of files) {
@@ -26,14 +26,19 @@ if (new Set(ids).size !== ids.length) {
   process.exit(1);
 }
 
-// Пулы под шаблон контрольной v1 (слоты 5/3/2): запас минимум ×3
+// Пулы под шаблон контрольной СС v1 (слоты 5/3/2): запас минимум ×3.
+// Проверяются только файлы банка СС (по имени).
 const need: Record<string, number> = { basic: 15, intermediate: 9, advanced: 6 };
-for (const [d, min] of Object.entries(need)) {
-  const n = all.filter((t) => (t as { difficulty: string }).difficulty === d).length;
-  console.log(`pool ${d}: ${n} (мин. ${min})`);
-  if (n < min) {
-    console.error(`BANK INVALID: пул ${d} мал для 30 вариантов`);
-    process.exit(1);
+const isNumsys = files.some((f) => f.includes('number-systems'));
+if (isNumsys) {
+  const pool = all.filter((t) => (t as { id: string }).id.startsWith('inf-8-numsys-'));
+  for (const [d, min] of Object.entries(need)) {
+    const n = pool.filter((t) => (t as { difficulty: string }).difficulty === d).length;
+    console.log(`pool numsys/${d}: ${n} (мин. ${min})`);
+    if (n < min) {
+      console.error(`BANK INVALID: пул ${d} мал для 30 вариантов`);
+      process.exit(1);
+    }
   }
 }
 console.log(`BANK TOTAL: ${all.length} заданий, id уникальны`);

@@ -1,0 +1,272 @@
+# Сгенерировано scripts/make-logic-bank.mjs — руками не править.
+- id: inf-8-logic-001
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Понятие высказывания
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Что из перечисленного является высказыванием?"
+  student_view: { options: [{ id: A, text: "«Который час?»" }, { id: B, text: "«Закрой окно!»" }, { id: C, text: "«2 + 2 = 5»" }, { id: D, text: "«Ура!»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
+
+- id: inf-8-logic-002
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Значения высказываний
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Какие значения может принимать логическое высказывание?"
+  student_view: { options: [{ id: A, text: "Только истину" }, { id: B, text: "Истину или ложь" }, { id: C, text: "Любое число" }, { id: D, text: "Да, нет или неизвестно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Третьего не дано: истина (1) или ложь (0)" }
+
+- id: inf-8-logic-003
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Составные высказывания
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Какое высказывание составное?"
+  student_view: { options: [{ id: A, text: "«Идет дождь»" }, { id: B, text: "«Идет дождь и дует ветер»" }, { id: C, text: "«Закрой окно»" }, { id: D, text: "«2 × 2»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Два простых соединены связкой И" }
+
+- id: inf-8-logic-004
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Обозначения операций
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-02-operations
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Какой знак обозначает конъюнкцию (И)?"
+  student_view: { options: [{ id: A, text: "∨" }, { id: B, text: "¬" }, { id: C, text: "∧" }, { id: D, text: "=" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
+
+- id: inf-8-logic-005
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Обозначения операций
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-02-operations
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Какой знак обозначает отрицание (НЕ)?"
+  student_view: { options: [{ id: A, text: "∧" }, { id: B, text: "∨" }, { id: C, text: "¬" }, { id: D, text: "≠" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "¬ — НЕ" }
+
+- id: inf-8-logic-006
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Размер таблицы истинности
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "Сколько строк (без шапки) в таблице истинности для 2 переменных? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "2^2 = 4" }
+
+- id: inf-8-logic-007
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Размер таблицы истинности
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "Сколько строк (без шапки) в таблице истинности для 3 переменных? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "2^3 = 8" }
+
+- id: inf-8-logic-008
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Операции и знаки
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-02-operations
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Установите соответствие: операция — её знак."
+  student_view: { left: ["И", "ИЛИ", "НЕ"], right: ["¬", "∧", "∨"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "И": "∧", "ИЛИ": "∨", "НЕ": "¬" }, explanation: "И=∧, ИЛИ=∨, НЕ=¬" }
+
+- id: inf-8-logic-009
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Вычисление выражения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "При A=1, B=0 вычислите A ∧ B."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+
+- id: inf-8-logic-010
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Вычисление выражения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "При A=0, B=0 вычислите A ∨ B."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+
+- id: inf-8-logic-011
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Вычисление выражения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "При A=0, B=0 вычислите ¬A."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Подстановка даёт 1" }
+
+- id: inf-8-logic-012
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Вычисление выражения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "При A=1, B=1 вычислите A ∧ ¬B."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+
+- id: inf-8-logic-013
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Вычисление выражения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "При A=0, B=1 вычислите ¬(A ∨ B)."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+
+- id: inf-8-logic-014
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Приоритет операций
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Какая операция выполняется первой в выражении A ∨ ¬B ∧ C?"
+  student_view: { options: [{ id: A, text: "ИЛИ" }, { id: B, text: "И" }, { id: C, text: "НЕ" }, { id: D, text: "Все одновременно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Сначала НЕ, потом И, потом ИЛИ" }
+
+- id: inf-8-logic-015
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Равносильность
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "Чему равносильно выражение A ∨ (A ∧ B)?"
+  student_view: { options: [{ id: A, text: "A" }, { id: B, text: "B" }, { id: C, text: "A ∧ B" }, { id: D, text: "0" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Поглощение: при A=1 всегда 1, при A=0 всегда 0" }
+
+- id: inf-8-logic-016
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Анализ таблицы
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [self-control] }
+  prompt: "В скольких строках таблицы истинности выражение A ∧ B истинно? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Только набор 11 из четырёх" }

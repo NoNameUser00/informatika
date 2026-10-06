@@ -13,8 +13,8 @@ const meta = z.object({
   difficulty: z.enum(['basic', 'intermediate', 'advanced']),
   cognitive_level: z.enum(['remember', 'apply', 'analyze']),
   lesson: z.string().min(1),
-  fgos_requirement: z.union([z.literal(1.1), z.literal(1.2)]),
-  fgos_element: z.union([z.literal(1.1), z.literal(1.2), z.literal(1.3), z.literal(1.4)]),
+  fgos_requirement: z.union([z.literal(1.1), z.literal(1.2), z.literal(1.3), z.literal(1.4)]),
+  fgos_element: z.union([z.literal(1.1), z.literal(1.2), z.literal(1.3), z.literal(1.4), z.literal(1.5), z.literal(1.6), z.literal(1.7)]),
   fgos: z.object({ subject: z.array(z.string()), meta: z.array(z.string()) }),
   prompt: z.string().min(1),
 });

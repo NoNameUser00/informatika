@@ -5,7 +5,6 @@ import {
   checkSingleChoice,
   percentToMark,
 } from '../lib/scoring/check.mjs';
-import bank from '../data/numsys-tasks.json';
 import { saveResult } from '../lib/results';
 
 // Структура как в Яндекс.Форме учителя:
@@ -32,7 +31,8 @@ function chunk<T>(arr: T[], size: number): T[][] {
   return out;
 }
 
-export default function Trainer() {
+export default function Trainer({ data, title }: { data: any; title: string }) {
+  const bank = data;
   const [mode] = useState<Mode>(() =>
     typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('mode') === 'proverka'
       ? 'proverka'
@@ -241,7 +241,7 @@ export default function Trainer() {
 
   return (
     <div>
-      <h1>{mode === 'proverka' ? 'Проверочная: Системы счисления' : 'Тренажер: Системы счисления'}</h1>
+      <h1>{mode === 'proverka' ? `Проверочная: ${title}` : `Тренажер: ${title}`}</h1>
       <p className="muted">Страница {step + 1} из {totalPages}</p>
 
       {step === 0 && (
