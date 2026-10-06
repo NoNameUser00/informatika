@@ -44,7 +44,7 @@ export default function Slides({ title, slides, quiz }: { title: string; slides:
   return (
     <div>
       <p className="muted">Слайд {idx + 1} из {total}</p>
-      <div style={{ background: '#e2e8f0', borderRadius: 8, height: 8, marginBottom: 12 }} aria-hidden="true">
+      <div style={{ background: 'rgba(255,255,255,.18)', borderRadius: 8, height: 8, marginBottom: 12 }} aria-hidden="true">
         <div style={{ width: `${((idx + 1) / total) * 100}%`, background: 'var(--subject)', height: 8, borderRadius: 8 }} />
       </div>
 

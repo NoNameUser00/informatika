@@ -90,7 +90,8 @@ export function splitSlides(body: string): { title: string; slides: Slide[] } {
 }
 
 export function parseFrontmatter(raw: string): { meta: Record<string, string>; body: string } {  const meta: Record<string, string> = {};
-  const m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const text = raw.replace(/\r\n/g, '\n'); // md-файлы лежат в CRLF — нормализуем
+  const m = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if (!m) return { meta, body: raw };
   for (const line of m[1].split('\n')) {
     const i = line.indexOf(':');

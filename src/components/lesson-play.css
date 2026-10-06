@@ -24,6 +24,16 @@
 .lp-check { display: flex; align-items: center; gap: 10px; min-height: 48px; cursor: pointer; font-weight: 700; color: #0f172a; }
 .lp-check input { width: 22px; height: 22px; }
 .lp-lines li { margin-bottom: 10px; }
+.lp-mono {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: .92rem;
+  background: rgba(15,23,42,.78);
+  color: #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  white-space: pre;
+}
 .lp-stepbtn {
   display: inline-block; background: rgba(30,41,59,.8); color: #f8fafc; font-weight: 700;
   border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 12px 22px; min-height: 48px;

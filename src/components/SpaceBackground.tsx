@@ -1,6 +1,8 @@
-// Фон «варп-полёт»: звёзды летят от центра наружу, планеты дрейфуют медленно,
-// чёрные дыры — очень редко. Canvas 2D, без зависимостей.
-// Кнопка паузы встроена; prefers-reduced-motion — старт на паузе.
+// ЕДИНЫЙ фон сайта «варп-полёт»: звёзды летят от центра наружу, планеты
+// дрейфуют медленно, чёрные дыры — очень редко. Canvas 2D, без зависимостей.
+// Панель управления (пауза + ползунки звёзд/скорости) встроена; настройки
+// хранятся в localStorage и общие для всех страниц. prefers-reduced-motion —
+// старт на паузе.
 import { useEffect, useRef, useState } from 'react';
 
 interface Star {
@@ -23,23 +25,65 @@ interface Body {
   rot: number;
 }
 
-export default function SpaceBackground({
-  starCount = 120,
-  speed = 1,
-}: {
-  starCount?: number;
-  speed?: number;
-}) {
-  const ref = useRef<HTMLCanvasElement>(null);
-  const [paused, setPaused] = useState(
-    () =>
+interface Prefs {
+  paused: boolean;
+  count: number;
+  speed: number;
+}
+
+const KEY = 'inf-space-v1';
+const MIN_COUNT = 40;
+const MAX_COUNT = 260;
+const MIN_SPEED = 0.2;
+const MAX_SPEED = 3;
+
+function loadPrefs(): Prefs {
+  const fallback: Prefs = {
+    paused:
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    count: 120,
+    speed: 1,
+  };
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (!raw) return fallback;
+    const v = JSON.parse(raw);
+    return {
+      paused: typeof v.paused === 'boolean' ? v.paused : fallback.paused,
+      count:
+        typeof v.count === 'number'
+          ? Math.min(MAX_COUNT, Math.max(MIN_COUNT, v.count))
+          : fallback.count,
+      speed:
+        typeof v.speed === 'number'
+          ? Math.min(MAX_SPEED, Math.max(MIN_SPEED, v.speed))
+          : fallback.speed,
+    };
+  } catch {
+    return fallback;
+  }
+}
+
+export default function SpaceBackground() {
+  const ref = useRef<HTMLCanvasElement>(null);
+  const [prefs, setPrefs] = useState<Prefs>(() =>
+    typeof window === 'undefined' ? { paused: false, count: 120, speed: 1 } : loadPrefs(),
   );
-  const pausedRef = useRef(paused);
-  pausedRef.current = paused;
-  const speedRef = useRef(speed);
-  speedRef.current = speed;
+  const prefsRef = useRef(prefs);
+  prefsRef.current = prefs;
+
+  const patch = (p: Partial<Prefs>) => {
+    setPrefs((prev) => {
+      const next = { ...prev, ...p };
+      try {
+        localStorage.setItem(KEY, JSON.stringify(next));
+      } catch {
+        /* ignore */
+      }
+      return next;
+    });
+  };
 
   useEffect(() => {
     const canvas = ref.current;
@@ -65,14 +109,22 @@ export default function SpaceBackground({
     window.addEventListener('resize', resize);
 
     const rnd = (a: number, b: number) => a + Math.random() * (b - a);
-    const stars: Star[] = Array.from({ length: starCount }, () => ({
+    const makeStar = (): Star => ({
       angle: rnd(0, Math.PI * 2),
       dist: Math.random(),
       speed: rnd(0.5, 1.4),
       size: rnd(0.6, 2.2),
       tw: rnd(0, Math.PI * 2),
       warm: Math.random() < 0.18,
-    }));
+    });
+    let stars: Star[] = [];
+    const syncStars = () => {
+      const want = Math.round(prefsRef.current.count);
+      while (stars.length < want) stars.push(makeStar());
+      if (stars.length > want) stars = stars.slice(0, want);
+    };
+    syncStars();
+
     const bodies: Body[] = [
       { kind: 'planet', x: 0.85, y: 0.1, r: 46, vx: -0.002, hue: 20, ring: true, rot: 0.5 },
     ];
@@ -148,7 +200,7 @@ export default function SpaceBackground({
       ctx.stroke();
     };
 
-    const paint = (t: number) => {
+    const paint = (t: number, speedK: number) => {
       const bg = ctx.createLinearGradient(0, 0, 0, h);
       bg.addColorStop(0, '#020617');
       bg.addColorStop(0.55, '#0b1445');
@@ -159,6 +211,9 @@ export default function SpaceBackground({
       const cx = w * 0.5;
       const cy = h * 0.42;
       const maxR = Math.hypot(Math.max(cx, w - cx), Math.max(cy, h - cy));
+      // На большой скорости шлейфы длиннее и ярче, на медленной — почти точки.
+      const stretch = 0.3 + speedK * 0.9;
+      const glow = 0.75 + Math.min(0.45, speedK * 0.15);
 
       for (const b of bodies) (b.kind === 'planet' ? drawPlanet : drawHole)(b, t);
 
@@ -166,11 +221,11 @@ export default function SpaceBackground({
         const r = s.dist * maxR;
         const px = cx + Math.cos(s.angle) * r;
         const py = cy + Math.sin(s.angle) * r;
-        const back = Math.min(0.96, s.dist - (0.012 + s.dist * 0.05) * s.speed);
+        const back = Math.min(0.96, s.dist - (0.012 + s.dist * 0.05) * s.speed * stretch);
         const br = back * maxR;
         const qx = cx + Math.cos(s.angle) * br;
         const qy = cy + Math.sin(s.angle) * br;
-        const a = 0.25 + s.dist * 0.75 * (0.72 + 0.28 * Math.sin(t / 800 + s.tw));
+        const a = Math.min(1, (0.25 + s.dist * 0.75 * (0.72 + 0.28 * Math.sin(t / 800 + s.tw))) * glow);
         ctx.strokeStyle = s.warm
           ? `rgba(253,230,200,${a.toFixed(3)})`
           : `rgba(226,232,240,${a.toFixed(3)})`;
@@ -192,14 +247,16 @@ export default function SpaceBackground({
 
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame);
-      if (pausedRef.current) {
+      const p = prefsRef.current;
+      if (p.paused) {
         last = now;
         return;
       }
       const dt = Math.min(80, now - last);
       last = now;
       const t = now;
-      const fall = (dt / 1000) * speedRef.current;
+      const fall = dt / 1000;
+      syncStars();
 
       nextPlanet -= dt;
       nextHole -= dt;
@@ -221,38 +278,60 @@ export default function SpaceBackground({
       }
 
       for (const s of stars) {
-        s.dist += 0.055 * s.speed * (0.25 + s.dist * 1.6) * fall;
-        if (s.dist > 1) {
-          s.dist = rnd(0, 0.08);
-          s.angle = rnd(0, Math.PI * 2);
-          s.speed = rnd(0.5, 1.4);
-        }
+        s.dist += 0.055 * s.speed * (0.25 + s.dist * 1.6) * fall * p.speed;
+        if (s.dist > 1) Object.assign(s, makeStar(), { dist: rnd(0, 0.08) });
       }
 
-      paint(t);
+      paint(t, p.speed);
     };
 
-    paint(performance.now());
+    paint(performance.now(), prefsRef.current.speed);
     last = performance.now();
     raf = requestAnimationFrame(frame);
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('resize', resize);
     };
-  }, [starCount]);
+  }, []);
 
   return (
     <>
       <canvas className="space-canvas" ref={ref} aria-hidden="true" />
-      <button
-        type="button"
-        className="space-pause"
-        onClick={() => setPaused(!paused)}
-        aria-pressed={paused}
-        aria-label={paused ? 'Запустить анимацию фона' : 'Остановить анимацию фона'}
-      >
-        {paused ? '▶ Полёт' : '⏸ Пауза'}
-      </button>
+      <div className="space-panel" role="group" aria-label="Управление фоном">
+        <button
+          type="button"
+          className="space-pause"
+          onClick={() => patch({ paused: !prefs.paused })}
+          aria-pressed={prefs.paused}
+          aria-label={prefs.paused ? 'Запустить анимацию фона' : 'Остановить анимацию фона'}
+        >
+          {prefs.paused ? '▶ Старт' : '⏸ Пауза'}
+        </button>
+        <label className="space-slider">
+          <span>Звёзды · {Math.round(prefs.count)}</span>
+          <input
+            type="range"
+            min={MIN_COUNT}
+            max={MAX_COUNT}
+            step={10}
+            value={Math.round(prefs.count)}
+            onChange={(e) => patch({ count: Number(e.target.value) })}
+            aria-label="Количество звёзд"
+          />
+        </label>
+        <label className="space-slider">
+          <span>Скорость · {prefs.speed.toFixed(1)}×</span>
+          <input
+            type="range"
+            min={MIN_SPEED}
+            max={MAX_SPEED}
+            step={0.1}
+            value={prefs.speed}
+            onChange={(e) => patch({ speed: Number(e.target.value) })}
+            aria-label="Скорость полёта"
+          />
+        </label>
+      </div>
     </>
   );
 }

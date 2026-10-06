@@ -273,7 +273,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
         </div>
       )}
 
-      {error && <p className="bad" role="alert">{error}</p>}
+      {error && <p className="form-error" role="alert">{error}</p>}
       <div>
         {step > 0 && <button className="btn secondary" onClick={() => { setError(''); setStep(step - 1); }}>Назад</button>}
         <span> </span>

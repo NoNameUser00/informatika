@@ -3,7 +3,7 @@
 // что в тренажёре (нормализация ё/е, пробелов, префиксов).
 import { useMemo, useState } from 'react';
 import { checkNumericBase, checkSingleChoice } from '../lib/scoring/check.mjs';
-import type { PlayLesson, PlayStep } from '../data/lesson-play/numsys-02-binary';
+import type { PlayLesson, PlayStep } from '../data/lesson-play/registry';
 
 type Phase = 'theory' | 'key' | 'example' | 'task' | 'final';
 const PHASE_LABEL: Record<Phase, string> = {
@@ -109,6 +109,11 @@ export default function LessonPlay({
           {step.body.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
+          {step.mono && (
+            <pre className="lp-mono">
+              {step.mono.join('\n')}
+            </pre>
+          )}
         </article>
       )}
 
@@ -121,6 +126,11 @@ export default function LessonPlay({
               <li key={i}>{p}</li>
             ))}
           </ol>
+          {step.mono && (
+            <pre className="lp-mono">
+              {step.mono.join('\n')}
+            </pre>
+          )}
           <p className="lp-write">✍️ {step.writeDown}</p>
           <label className="lp-check">
             <input
@@ -138,6 +148,11 @@ export default function LessonPlay({
           <p className="lp-kicker">Пример — разбираем по шагам</p>
           <h1>{step.title}</h1>
           <p>{step.intro}</p>
+          {step.mono && (
+            <pre className="lp-mono">
+              {step.mono.join('\n')}
+            </pre>
+          )}
           <ol className="lp-lines">
             {step.lines.slice(0, revealed[idx] ?? 0).map((l, i) => (
               <li key={i}>{l}</li>
