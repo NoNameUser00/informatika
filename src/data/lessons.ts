@@ -20,3 +20,10 @@ export const LESSONS_8: LessonMeta[] = [
   { id: 'alg-03-branching', title: 'Ветвление: полная и неполная формы', file: 'alg-03-branching.md' },
   { id: 'alg-04-loops', title: 'Повторение: циклы', file: 'alg-04-loops.md' },
 ];
+
+export const LESSONS_7: LessonMeta[] = [
+  { id: '7inf-01-info', title: 'Информация, свойства, процессы', file: '7inf-01-info.md' },
+  { id: '7inf-02-coding', title: 'Двоичное кодирование', file: '7inf-02-coding.md' },
+  { id: '7inf-03-measure', title: 'Измерение информации: вес символа и объём', file: '7inf-03-measure.md' },
+  { id: '7inf-04-textvolume', title: 'Объём текста: решаем задачи', file: '7inf-04-textvolume.md' },
+];

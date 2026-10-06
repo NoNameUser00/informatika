@@ -8,7 +8,8 @@ import { checkNumericBase, checkSingleChoice, checkMatching } from '../src/lib/s
 
 const LESSON_ORDER = ['numsys-01-intro', 'numsys-02-binary', 'numsys-03-octal', 'numsys-04-hex', 'numsys-05-arith', 'numsys-06-review',
   'logic-01-utterances', 'logic-02-operations', 'logic-03-truth-tables', 'logic-04-elements',
-  'alg-01-performers', 'alg-02-notation', 'alg-03-branching', 'alg-04-loops'];
+  'alg-01-performers', 'alg-02-notation', 'alg-03-branching', 'alg-04-loops',
+  '7inf-01-info', '7inf-02-coding', '7inf-03-measure', '7inf-04-textvolume'];
 
 const JOBS = [
   { inputs: ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml'],
@@ -19,6 +20,9 @@ const JOBS = [
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
   { inputs: ['data/tasks/8/algorithms/bank-algo.yaml'],
     output: 'src/data/algo-tasks.json', test_code: 'algo-pilot-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/7/information/bank-7inf.yaml'],
+    output: 'src/data/grade7-tasks.json', test_code: 'grade7-info-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 

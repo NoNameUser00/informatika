@@ -13,6 +13,10 @@ import { ALG_01_PLAY } from './alg-01-performers';
 import { ALG_02_PLAY } from './alg-02-notation';
 import { ALG_03_PLAY } from './alg-03-branching';
 import { ALG_04_PLAY } from './alg-04-loops';
+import { INF7_01_PLAY } from './7inf-01-info';
+import { INF7_02_PLAY } from './7inf-02-coding';
+import { INF7_03_PLAY } from './7inf-03-measure';
+import { INF7_04_PLAY } from './7inf-04-textvolume';
 
 export type PlayStep =
   | { kind: 'theory'; title: string; body: string[]; mono?: string[] }
@@ -53,6 +57,10 @@ const REGISTRY: Record<string, PlayLesson> = {
   'alg-02-notation': ALG_02_PLAY,
   'alg-03-branching': ALG_03_PLAY,
   'alg-04-loops': ALG_04_PLAY,
+  '7inf-01-info': INF7_01_PLAY,
+  '7inf-02-coding': INF7_02_PLAY,
+  '7inf-03-measure': INF7_03_PLAY,
+  '7inf-04-textvolume': INF7_04_PLAY,
 };
 
 export function hasPlay(id: string): boolean {
