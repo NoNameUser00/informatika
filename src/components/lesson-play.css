@@ -1,0 +1,64 @@
+/* Плеер урока в стилистике главной: тёмный космос, светлые стеклянные карточки,
+   янтарные primary-кнопки, графитовые secondary. */
+.lp { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; padding: 16px 20px 90px; color: #fff; }
+.lp-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.lp-top a { color: #c7d2fe; font-weight: 700; }
+.lp-progress { height: 10px; background: rgba(255,255,255,.18); border-radius: 999px; margin: 6px 0 8px; overflow: hidden; }
+.lp-progress i { display: block; height: 100%; background: #16a34a; border-radius: 999px; transition: width .3s; }
+.lp-phases { display: flex; gap: 6px; list-style: none; padding: 0; margin: 0 0 12px; }
+.lp-phases li { flex: 1; text-align: center; font-size: .78rem; font-weight: 800; color: #cbd5e1; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 6px 2px; }
+.lp-phases li.now { color: #fff; background: #2563eb; border-color: #2563eb; }
+.lp-phases li.past { color: #bbf7d0; background: rgba(22,163,74,.35); border-color: rgba(22,163,74,.5); }
+.lp-meta { color: #c7d2fe; }
+.lp-card {
+  background: rgba(203,213,225,.82); color: #0f172a;
+  border: 1px solid rgba(255,255,255,.55); border-radius: 18px; padding: 22px; margin: 12px 0;
+  -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: 0 4px 20px rgba(2,6,23,.3);
+}
+.lp-kicker { color: #1e3a8a; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; margin: 0 0 4px; }
+.lp-card h1 { margin-top: 0; font-size: 1.4rem; color: #0f172a; }
+.lp-card p, .lp-card li { color: #1e293b; }
+.lp-key { border-left: 8px solid #f59e0b; }
+.lp-write { background: rgba(251,191,36,.25); border: 1px dashed #b45309; border-radius: 12px; padding: 10px 14px; font-weight: 700; color: #451a03 !important; }
+.lp-check { display: flex; align-items: center; gap: 10px; min-height: 48px; cursor: pointer; font-weight: 700; color: #0f172a; }
+.lp-check input { width: 22px; height: 22px; }
+.lp-lines li { margin-bottom: 10px; }
+.lp-stepbtn {
+  display: inline-block; background: rgba(30,41,59,.8); color: #f8fafc; font-weight: 700;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 12px 22px; min-height: 48px;
+  font-size: 1rem; cursor: pointer;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.lp-taskinput {
+  width: 100%; padding: 12px; font-size: 1rem; border-radius: 12px;
+  border: 2px solid #94a3b8; background: rgba(255,255,255,.85); color: #0f172a; min-height: 48px;
+}
+.lp-taskinput:focus { border-color: #2563eb; outline: none; }
+.lp-radio { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; color: #0f172a; }
+.lp-radio input { width: 22px; height: 22px; }
+.lp-checkbtn {
+  display: inline-block; background: rgba(30,41,59,.8); color: #f8fafc; font-weight: 700;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 12px 22px; min-height: 48px;
+  font-size: 1rem; cursor: pointer;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.lp-ok { color: #15803d; font-weight: 700; }
+.lp-bad { color: #b91c1c; font-weight: 700; }
+.lp-hint { color: #1e3a8a; }
+.lp-gate { color: #e2e8f0; text-shadow: 0 1px 8px rgba(2,6,23,.9); }
+.lp-nav { display: flex; gap: 10px; margin-top: 6px; }
+.lp-back {
+  flex: 1; text-align: center; background: rgba(30,41,59,.78); color: #f8fafc; font-weight: 700;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 12px; padding: 12px 22px; min-height: 48px;
+  font-size: 1rem; cursor: pointer;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.lp-back:disabled { opacity: .45; cursor: default; }
+.lp-next {
+  flex: 1; text-align: center; background: rgba(251,191,36,.85); color: #451a03; font-weight: 900;
+  border: 1px solid rgba(255,255,255,.55); border-radius: 12px; padding: 12px 22px; min-height: 48px;
+  font-size: 1rem; cursor: pointer;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4); backdrop-filter: blur(12px) saturate(1.4);
+  box-shadow: 0 4px 18px rgba(2,6,23,.35);
+}
