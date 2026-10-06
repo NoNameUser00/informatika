@@ -30,6 +30,11 @@
 
 /* ============ HOME A (Khan + космос) ============ */
 .px-space { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+/* кнопка паузы фона: тёмное стекло, всегда поверх контента, но под PROTO-пилюлей */
+.px-pause { position: fixed; bottom: 70px; right: 12px; z-index: 50; background: rgba(15,23,42,.6); color: #f8fafc;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 10px 16px; min-height: 44px;
+  font-weight: 800; font-size: .9rem; cursor: pointer;
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .ha { position: relative; background: #020617; color: #fff; min-height: 100vh; padding-bottom: 90px; }
 .ha-veil { position: fixed; inset: 0; z-index: 1; pointer-events: none;
   background: radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%); }
