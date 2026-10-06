@@ -57,7 +57,21 @@ const matchingTask = meta.extend({
   }),
 });
 
-export const taskSchema = z.discriminatedUnion('type', [numericTask, singleTask, matchingTask]);
+const codeRunTask = meta.extend({
+  type: z.literal('code_run'),
+  student_view: z.object({
+    language: z.literal('python'),
+    template: z.string().min(1),
+  }),
+  auto_check: z.object({ method: z.literal('code_stdout'), timeout_s: z.number().positive().optional() }),
+  teacher_only: z.object({
+    solution_code: z.string().min(1),
+    expected_stdout: z.string().min(1),
+    explanation: z.string().min(1),
+  }),
+});
+
+export const taskSchema = z.discriminatedUnion('type', [numericTask, singleTask, matchingTask, codeRunTask]);
 export const bankSchema = z.array(taskSchema);
 export type BankTask = z.infer<typeof taskSchema>;
 

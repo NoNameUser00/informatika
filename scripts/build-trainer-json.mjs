@@ -24,6 +24,9 @@ const JOBS = [
   { inputs: ['data/tasks/7/information/bank-7inf.yaml'],
     output: 'src/data/grade7-tasks.json', test_code: 'grade7-info-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/8/code-run/bank-code.yaml'],
+    output: 'src/data/code-tasks.json', test_code: 'code-pilot-v1', variant: 'trainer-v1',
+    instruction: 'Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.' },
 ];
 
 function convert(t) {
@@ -46,6 +49,14 @@ function convert(t) {
     return { id: t.id, lesson: t.lesson, type: t.type, points: t.points, prompt: t.prompt,
       left: t.student_view.left, right: t.student_view.right, answerMap: t.teacher_only.answer_map,
       key: t.student_view.left.map((k) => `${k}=${t.teacher_only.answer_map[k]}`).join(', ') };
+  }
+  if (t.type === 'code_run') {
+    // Эталон проверен прогоном solution_code локальным Python при написании банка.
+    // В CI только структурная проверка: непустые решение и ожидаемый вывод.
+    if (!t.teacher_only.solution_code.trim() || !t.teacher_only.expected_stdout) throw new Error(`selfcheck FAIL ${t.id}`);
+    return { id: t.id, lesson: t.lesson, type: t.type, points: t.points, prompt: t.prompt,
+      template: t.student_view.template, expected: t.teacher_only.expected_stdout,
+      key: t.teacher_only.expected_stdout };
   }
   throw new Error(`unknown type ${t.type} (${t.id})`);
 }

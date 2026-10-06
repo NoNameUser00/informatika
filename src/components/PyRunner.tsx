@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 import { compareOutput } from '../lib/pyrun/compare.mjs';
-import { runPython } from '../lib/pyrun/pyodide';
+import { RUN_TIMEOUT_MS, runPythonWorker } from '../lib/pyrun/run-worker';
 
-// PyRunner: код ученика выполняется В БРАУЗЕРЕ (Pyodide/WASM) — это и есть песочница:
-// нет доступа к DOM/cookie/сети кроме fetch браузера, нет сервера для проверки.
-// Pyodide грузится лениво с CDN по первой кнопке, немодифицированным (MPL-2.0).
-// Ограничение v1: выполнение в главном потоке — бесконечный цикл заморозит вкладку.
-// В прод-код не пускать без воркера + interrupt; только тренажер/практика, не контрольная.
+// PyRunner: код ученика выполняется В БРАУЗЕРЕ (Pyodide/WASM в воркере) —
+// это и есть песочница: нет доступа к DOM/cookie, вкладка не виснет.
+// Зависший код (бесконечный цикл) убивается таймаутом, воркер пересоздаётся.
+// Pyodide грузится лениво с CDN по первой кнопке, немодифицированный (MPL-2.0).
+// Только тренажер/практика, не контрольная.
 
 export default function PyRunner({
   id,
@@ -30,7 +30,7 @@ export default function PyRunner({
     setVerdict(null);
     try {
       setStatus('running');
-      const { out, err } = await runPython(code);
+      const { out, err } = await runPythonWorker(code);
       if (my !== runId.current) return;
       if (err) {
         setStatus('error');
@@ -62,7 +62,7 @@ export default function PyRunner({
       />
       <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center' }}>
         <button type="button" className="btn" style={{ width: 'auto' }} onClick={run} disabled={status === 'loading' || status === 'running'}>
-          {status === 'loading' ? 'Гружу Python…' : status === 'running' ? 'Выполняется…' : 'Запустить'}
+          {status === 'loading' ? 'Гружу Python…' : status === 'running' ? `Выполняется… (лимит ${RUN_TIMEOUT_MS / 1000} c)` : 'Запустить'}
         </button>
         {status === 'error' && <span className="bad">Ошибка — читай вывод ниже.</span>}
         {verdict === true && <span className="ok">Вывод совпал с ожидаемым.</span>}

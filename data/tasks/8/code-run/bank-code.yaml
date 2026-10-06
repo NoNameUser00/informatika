@@ -1,0 +1,133 @@
+# Банк «Код: Python в браузере» — тренажёрный. Эталоны проверены прогоном
+# solution_code локальным Python при написании. teacher_only — только через серверные VIEW.
+- id: inf-8-code-001
+  class: 8
+  topic: Код в тренажёре
+  subtopic: bin()
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-code-bin], meta: [plan-actions] }
+  prompt: "Выведи двоичную запись числа 13 функцией bin()."
+  student_view:
+    language: python
+    template: "# Допиши код: выведи bin(13)\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(bin(13))"
+    expected_stdout: "0b1101"
+    explanation: "bin() возвращает строку с префиксом 0b"
+
+- id: inf-8-code-002
+  class: 8
+  topic: Код в тренажёре
+  subtopic: hex()
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-code-hex], meta: [plan-actions] }
+  prompt: "Выведи шестнадцатеричную запись числа 175 функцией hex()."
+  student_view:
+    language: python
+    template: "# Допиши код: выведи hex(175)\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(hex(175))"
+    expected_stdout: "0xaf"
+    explanation: "hex() возвращает строку с префиксом 0x, буквы маленькие"
+
+- id: inf-8-code-003
+  class: 8
+  topic: Код в тренажёре
+  subtopic: int() с основанием
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-code-int], meta: [plan-actions] }
+  prompt: "Выведи десятичное значение двоичной строки '101101' через int()."
+  student_view:
+    language: python
+    template: "# Допиши код: переведи '101101' из двоичной\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(int('101101', 2))"
+    expected_stdout: "45"
+    explanation: "int(s, 2) парсит строку как двоичную"
+
+- id: inf-8-code-004
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Цикл и bin()
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Циклом выведи числа 1, 2, 3 и их двоичные записи (каждое с новой строки: число, пробел, bin)."
+  student_view:
+    language: python
+    template: "# Допиши цикл\nfor i in range(1, 4):\n    ..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "for i in range(1, 4):\n    print(i, bin(i))"
+    expected_stdout: "1 0b1\n2 0b10\n3 0b11"
+    explanation: "Три строки: десятичное и bin через пробел"
+
+- id: inf-8-code-005
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Алгоритм Евклида
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-04-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-euclid], meta: [plan-actions] }
+  prompt: "Найди НОД чисел 48 и 18 циклом while (алгоритм Евклида) и выведи его."
+  student_view:
+    language: python
+    template: "# Допиши алгоритм Евклида\na, b = 48, 18\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "a, b = 48, 18\nwhile b:\n    a, b = b, a % b\nprint(a)"
+    expected_stdout: "6"
+    explanation: "НОД(48, 18) = 6"
+
+- id: inf-8-code-006
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Сумма с условием
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: alg-04-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-sum], meta: [plan-actions] }
+  prompt: "Выведи сумму всех чётных чисел от 1 до 10 включительно."
+  student_view:
+    language: python
+    template: "# Допиши код: сумма чётных 1..10\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(sum(i for i in range(1, 11) if i % 2 == 0))"
+    expected_stdout: "30"
+    explanation: "2+4+6+8+10 = 30"

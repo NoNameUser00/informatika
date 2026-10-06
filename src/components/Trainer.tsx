@@ -7,6 +7,7 @@ import {
 } from '../lib/scoring/check.mjs';
 import { saveResult } from '../lib/results';
 import DragMatch from './DragMatch';
+import CodeRunner from './CodeRunner';
 
 // Структура как в Яндекс.Форме учителя:
 // стр.1 — ФИО, Класс, Буква класса; дальше страницы по 5 вопросов,
@@ -48,6 +49,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
   const [classLetter, setClassLetter] = useState('');
   const [consent, setConsent] = useState(false);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
+  const [codeVerdicts, setCodeVerdicts] = useState<Record<string, boolean>>({});
   const [error, setError] = useState('');
   const [done, setDone] = useState<null | {
     per: PerQ[];
@@ -67,6 +69,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
 
   const isAnswered = (t: any): boolean => {
     const a = answers[t.id];
+    if (t.type === 'code_run') return a != null && String(a).trim() !== '' && codeVerdicts[t.id] !== undefined;
     if (a == null || a === '') return false;
     if (t.type === 'matching') return t.left.every((k: string) => (a as Record<string, string>)[k]);
     return true;
@@ -122,6 +125,11 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
       if (t.type === 'single_choice') {
         const r = checkSingleChoice(t.correct, String(a));
         return { id: t.id, ok: r.isCorrect, score: r.isCorrect ? t.points : 0, max: t.points, given: String(a), key: t.key };
+      }
+      if (t.type === 'code_run') {
+        const ok = codeVerdicts[t.id] === true;
+        const given = String(a ?? '').split('\n')[0];
+        return { id: t.id, ok, score: ok ? t.points : 0, max: t.points, given, key: t.key };
       }
       const r = checkMatching(t.answerMap, a as Record<string, string>, t.points);
       const given = t.left.map((k: string) => `${k}=${(a as Record<string, string>)[k]}`).join(', ');
@@ -198,6 +206,17 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
             right={t.right}
             value={(answers[t.id] as Record<string, string>) ?? {}}
             onChange={(v) => setA(t.id, v)}
+          />
+        )}
+        {t.type === 'code_run' && (
+          <CodeRunner
+            id={t.id}
+            template={String(t.template ?? '')}
+            expected={String(t.expected ?? '')}
+            onResult={(ok, code) => {
+              setCodeVerdicts((m) => ({ ...m, [t.id]: ok }));
+              setA(t.id, code);
+            }}
           />
         )}
       </fieldset>

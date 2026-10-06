@@ -1,0 +1,69 @@
+{
+  "test_code": "code-pilot-v1",
+  "variant": "trainer-v1",
+  "max_score": 15,
+  "instruction": "Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-8-code-001",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи двоичную запись числа 13 функцией bin().",
+      "template": "# Допиши код: выведи bin(13)\nprint(...)",
+      "expected": "0b1101",
+      "key": "0b1101"
+    },
+    {
+      "id": "inf-8-code-003",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи десятичное значение двоичной строки '101101' через int().",
+      "template": "# Допиши код: переведи '101101' из двоичной\nprint(...)",
+      "expected": "45",
+      "key": "45"
+    },
+    {
+      "id": "inf-8-code-004",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Циклом выведи числа 1, 2, 3 и их двоичные записи (каждое с новой строки: число, пробел, bin).",
+      "template": "# Допиши цикл\nfor i in range(1, 4):\n    ...",
+      "expected": "1 0b1\n2 0b10\n3 0b11",
+      "key": "1 0b1\n2 0b10\n3 0b11"
+    },
+    {
+      "id": "inf-8-code-002",
+      "lesson": "numsys-04-hex",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи шестнадцатеричную запись числа 175 функцией hex().",
+      "template": "# Допиши код: выведи hex(175)\nprint(...)",
+      "expected": "0xaf",
+      "key": "0xaf"
+    },
+    {
+      "id": "inf-8-code-005",
+      "lesson": "alg-04-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди НОД чисел 48 и 18 циклом while (алгоритм Евклида) и выведи его.",
+      "template": "# Допиши алгоритм Евклида\na, b = 48, 18\n...",
+      "expected": "6",
+      "key": "6"
+    },
+    {
+      "id": "inf-8-code-006",
+      "lesson": "alg-04-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи сумму всех чётных чисел от 1 до 10 включительно.",
+      "template": "# Допиши код: сумма чётных 1..10\nprint(...)",
+      "expected": "30",
+      "key": "30"
+    }
+  ]
+}

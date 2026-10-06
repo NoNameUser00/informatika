@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/code-tasks.json';
+---
+<Layout title="Тренажер — Код Python, 8 класс">
+  <Trainer client:load data={bank} title="Python в браузере" />
+</Layout>

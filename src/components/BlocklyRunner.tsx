@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { compareOutput } from '../lib/pyrun/compare.mjs';
-import { runPython } from '../lib/pyrun/pyodide';
+import { runPythonWorker } from '../lib/pyrun/run-worker';
 
 // BlocklyRunner: программу собирают из блоков, Python генерируется и выполняется
-// в браузере (Pyodide/WASM — песочница). Импорты Blockly динамические: только клиент.
-// Ограничение v1 как у PyRunner: главный поток, бесконечный цикл заморозит вкладку.
+// в браузере (Pyodide/WASM в воркере — песочница, зависший код убивает таймаут).
+// Импорты Blockly динамические: только клиент.
 const TOOLBOX = {
   kind: 'categoryToolbox',
   contents: [
@@ -100,7 +100,7 @@ export default function BlocklyRunner({
       if (!src.trim()) throw new Error('Пусто: собери программу из блоков слева.');
       setCode(src);
       setStatus('running');
-      const { out, err } = await runPython(src);
+      const { out, err } = await runPythonWorker(src);
       if (my !== runId.current) return;
       if (err) {
         setStatus('error');
