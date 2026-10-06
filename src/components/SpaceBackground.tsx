@@ -32,33 +32,33 @@ interface Prefs {
 }
 
 const KEY = 'inf-space-v1';
-const MIN_COUNT = 40;
-const MAX_COUNT = 260;
-const MIN_SPEED = 0.2;
-const MAX_SPEED = 3;
+const MIN_COUNT = 100;
+const MAX_COUNT = 600;
+const MIN_SPEED = 10;
+const MAX_SPEED = 300;
+const DEFAULT_SPEED = 100; // = старая 1.0×
 
 function loadPrefs(): Prefs {
   const fallback: Prefs = {
     paused:
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    count: 120,
-    speed: 1,
+    count: 350,
+    speed: DEFAULT_SPEED,
   };
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return fallback;
     const v = JSON.parse(raw);
+    let speed = typeof v.speed === 'number' ? v.speed : fallback.speed;
+    if (speed < MIN_SPEED) speed *= 100; // миграция со старой шкалы 0.2–3
     return {
       paused: typeof v.paused === 'boolean' ? v.paused : fallback.paused,
       count:
         typeof v.count === 'number'
           ? Math.min(MAX_COUNT, Math.max(MIN_COUNT, v.count))
           : fallback.count,
-      speed:
-        typeof v.speed === 'number'
-          ? Math.min(MAX_SPEED, Math.max(MIN_SPEED, v.speed))
-          : fallback.speed,
+      speed: Math.min(MAX_SPEED, Math.max(MIN_SPEED, speed)),
     };
   } catch {
     return fallback;
@@ -68,7 +68,7 @@ function loadPrefs(): Prefs {
 export default function SpaceBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
   const [prefs, setPrefs] = useState<Prefs>(() =>
-    typeof window === 'undefined' ? { paused: false, count: 120, speed: 1 } : loadPrefs(),
+    typeof window === 'undefined' ? { paused: false, count: 350, speed: DEFAULT_SPEED } : loadPrefs(),
   );
   const prefsRef = useRef(prefs);
   prefsRef.current = prefs;
@@ -200,20 +200,22 @@ export default function SpaceBackground() {
       ctx.stroke();
     };
 
-    const paint = (t: number, speedK: number) => {
+    const paint = (t: number, speedRaw: number) => {
+      const k = speedRaw / 100; // 0.1…3, дефолт 1
       const bg = ctx.createLinearGradient(0, 0, 0, h);
-      bg.addColorStop(0, '#020617');
-      bg.addColorStop(0.55, '#0b1445');
-      bg.addColorStop(1, '#101c5e');
+      bg.addColorStop(0, '#01030a');
+      bg.addColorStop(0.55, '#050a20');
+      bg.addColorStop(1, '#0a1330');
       ctx.fillStyle = bg;
       ctx.fillRect(0, 0, w, h);
 
       const cx = w * 0.5;
       const cy = h * 0.42;
       const maxR = Math.hypot(Math.max(cx, w - cx), Math.max(cy, h - cy));
-      // На большой скорости шлейфы длиннее и ярче, на медленной — почти точки.
-      const stretch = 0.3 + speedK * 0.9;
-      const glow = 0.75 + Math.min(0.45, speedK * 0.15);
+      // Хвост растёт со скоростью нелинейно: на первых делениях почти
+      // точки, на максимуме — до ~четверти радиуса, но не на весь экран.
+      const trailK = Math.pow(k, 1.4);
+      const glow = 0.55 + Math.min(0.45, k * 0.15);
 
       for (const b of bodies) (b.kind === 'planet' ? drawPlanet : drawHole)(b, t);
 
@@ -221,7 +223,7 @@ export default function SpaceBackground() {
         const r = s.dist * maxR;
         const px = cx + Math.cos(s.angle) * r;
         const py = cy + Math.sin(s.angle) * r;
-        const back = Math.min(0.96, s.dist - (0.012 + s.dist * 0.05) * s.speed * stretch);
+        const back = Math.min(0.96, s.dist - (0.003 + s.dist * 0.035) * s.speed * trailK);
         const br = back * maxR;
         const qx = cx + Math.cos(s.angle) * br;
         const qy = cy + Math.sin(s.angle) * br;
@@ -278,7 +280,7 @@ export default function SpaceBackground() {
       }
 
       for (const s of stars) {
-        s.dist += 0.055 * s.speed * (0.25 + s.dist * 1.6) * fall * p.speed;
+        s.dist += 0.055 * s.speed * (0.25 + s.dist * 1.6) * fall * (p.speed / 100);
         if (s.dist > 1) Object.assign(s, makeStar(), { dist: rnd(0, 0.08) });
       }
 
@@ -320,13 +322,13 @@ export default function SpaceBackground() {
           />
         </label>
         <label className="space-slider">
-          <span>Скорость · {prefs.speed.toFixed(1)}×</span>
+          <span>Скорость · {Math.round(prefs.speed)}</span>
           <input
             type="range"
             min={MIN_SPEED}
             max={MAX_SPEED}
-            step={0.1}
-            value={prefs.speed}
+            step={10}
+            value={Math.round(prefs.speed)}
             onChange={(e) => patch({ speed: Number(e.target.value) })}
             aria-label="Скорость полёта"
           />
