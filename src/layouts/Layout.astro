@@ -1,0 +1,103 @@
+---
+// Минимальный каркас. Полноценный дизайн — позже по docs/design-source.md
+// (Khan: цвет предмета; Яндекс.Учебник: карточки; Duolingo: 1 экран = 1 действие).
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Школьная информатика: теория, тренажеры, проверочные.' } = Astro.props;
+const B = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --subject: #2563eb; /* информатика — синий, закреплен за предметом везде */
+        --bg: #f8fafc;
+        --ink: #0f172a;
+        --muted: #475569;
+        --card: #ffffff;
+        --ok: #16a34a;
+        --bad: #dc2626;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Nunito, Inter, Roboto, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      header.top {
+        background: var(--subject);
+        color: #fff;
+        padding: 12px 20px;
+      }
+      header.top a { color: #fff; text-decoration: none; font-weight: 800; }
+      header.top nav a { margin-right: 16px; }
+      main { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 20px;
+        margin: 16px 0;
+        box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+      }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+      .btn {
+        display: inline-block;
+        background: var(--subject);
+        color: #fff;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        min-height: 48px;
+      }
+      .btn:disabled { opacity: 0.5; cursor: default; }
+      .btn.secondary { background: #e2e8f0; color: var(--ink); }
+      label { display: block; margin: 12px 0 4px; font-weight: 700; }
+      input[type='text'], select {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 12px;
+        border: 2px solid #cbd5e1;
+        min-height: 48px;
+      }
+      input[type='text']:focus, select:focus { border-color: var(--subject); outline: none; }
+      fieldset { border: 2px solid #e2e8f0; border-radius: 12px; margin: 16px 0; padding: 16px; }
+      legend { font-weight: 800; padding: 0 8px; }
+      .radio-row { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; }
+      .radio-row input { width: 22px; height: 22px; }
+      .ok { color: var(--ok); font-weight: 700; }
+      .bad { color: var(--bad); font-weight: 700; }
+      .muted { color: var(--muted); }
+      .q { scroll-margin-top: 12px; }
+      @media (max-width: 560px) {
+        main { padding: 16px 12px 48px; }
+        .btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <nav>
+        <a href={B}>Информатика</a>
+        <a href={`${B}8/`}>8 класс</a>
+        <a href={`${B}8/trainer/`}>Тренажер</a>
+        <a href={`${B}teacher/`}>Учитель</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

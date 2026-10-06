@@ -1,0 +1,21 @@
+.env
+.env*.local
+.venv/
+__pycache__/
+*.pyc
+backend/storage/
+backend/qdrant_data/
+node_modules/
+node_modules/.cache/
+dist/
+# Чужие учебники целиком (копирайт + вес) и внутренние документы школы — не в публичный репо.
+# На сайте только свои конспекты (src/content).
+material/
+# Локальные дампы парсинга
+/ktp8_dump.txt
+/parse_compare.txt
+/pdf_pypdf_dump.txt
+/probe_all.txt
+/toc_10_11.txt
+/u8_toc.txt
+/tmp_*/

@@ -1,0 +1,800 @@
+# Сгенерировано scripts/make-numsys-bank.mjs — руками не править.
+# Ответы вычислены кодом (parseInt/toString/fromRoman).
+- id: inf-8-numsys-014
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 26₁₀ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [26], answer_text: "11010", explanation: "26 = 11010_2" }
+
+- id: inf-8-numsys-015
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 91₁₀ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [91], answer_text: "1011011", explanation: "91 = 1011011_2" }
+
+- id: inf-8-numsys-016
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 150₁₀ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [150], answer_text: "10010110", explanation: "150 = 10010110_2" }
+
+- id: inf-8-numsys-017
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 200₁₀ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [200], answer_text: "11001000", explanation: "200 = 11001000_2" }
+
+- id: inf-8-numsys-018
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 11001₂ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [25], answer_text: "25", explanation: "11001_2 = 25" }
+
+- id: inf-8-numsys-019
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 100111₂ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [39], answer_text: "39", explanation: "100111_2 = 39" }
+
+- id: inf-8-numsys-020
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 1010101₂ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [85], answer_text: "85", explanation: "1010101_2 = 85" }
+
+- id: inf-8-numsys-021
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 1110001₂ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [113], answer_text: "113", explanation: "1110001_2 = 113" }
+
+- id: inf-8-numsys-022
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->8
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 83₁₀ в восьмеричную систему. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [83], answer_text: "123", explanation: "83 = 123_8" }
+
+- id: inf-8-numsys-023
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->8
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 150₁₀ в восьмеричную систему. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [150], answer_text: "226", explanation: "150 = 226_8" }
+
+- id: inf-8-numsys-024
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 57₈ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [47], answer_text: "47", explanation: "57_8 = 47" }
+
+- id: inf-8-numsys-025
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 145₈ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [101], answer_text: "101", explanation: "145_8 = 101" }
+
+- id: inf-8-numsys-026
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->16
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 92₁₀ в шестнадцатеричную систему. Запишите только число."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [92], answer_text: "5C", explanation: "92 = 5C_16" }
+
+- id: inf-8-numsys-027
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->16
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 200₁₀ в шестнадцатеричную систему. Запишите только число."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [200], answer_text: "C8", explanation: "200 = C8_16" }
+
+- id: inf-8-numsys-028
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 2F₁₆ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [47], answer_text: "47", explanation: "2F_16 = 47" }
+
+- id: inf-8-numsys-029
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число A4₁₆ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [164], answer_text: "164", explanation: "A4_16 = 164" }
+
+- id: inf-8-numsys-030
+  class: 8
+  topic: Системы счисления
+  subtopic: Римская система
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Переведите число IX из римской системы в десятичную. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "IX = 9" }
+
+- id: inf-8-numsys-031
+  class: 8
+  topic: Системы счисления
+  subtopic: Римская система
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Переведите число XLIV из римской системы в десятичную. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [44], answer_text: "44", explanation: "XLIV = 44" }
+
+- id: inf-8-numsys-032
+  class: 8
+  topic: Системы счисления
+  subtopic: Римская система
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Переведите число XCIX из римской системы в десятичную. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [99], answer_text: "99", explanation: "XCIX = 99" }
+
+- id: inf-8-numsys-033
+  class: 8
+  topic: Системы счисления
+  subtopic: Развернутая форма
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Вычислите 1×2⁴ + 1×2³ + 0×2² + 1×2¹ + 0×2⁰. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [26], answer_text: "26", explanation: "Развернутая форма 11010_2 = 26" }
+
+- id: inf-8-numsys-034
+  class: 8
+  topic: Системы счисления
+  subtopic: Развернутая форма
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Вычислите 1×2⁴ + 0×2³ + 0×2² + 1×2¹ + 1×2⁰. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [19], answer_text: "19", explanation: "Развернутая форма 10011_2 = 19" }
+
+- id: inf-8-numsys-035
+  class: 8
+  topic: Системы счисления
+  subtopic: Количество нулей
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Сколько нулей в двоичной записи числа 128₁₀?"
+  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "7" }, { id: C, text: "8" }, { id: D, text: "9" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "128 = 10000000_2: один и семь нулей" }
+
+- id: inf-8-numsys-036
+  class: 8
+  topic: Системы счисления
+  subtopic: Количество единиц
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Сколько единиц в двоичной записи числа 255₁₀?"
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "7" }, { id: C, text: "9" }, { id: D, text: "10" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "255 = 11111111_2: восемь единиц" }
+
+- id: inf-8-numsys-037
+  class: 8
+  topic: Системы счисления
+  subtopic: Минимальное основание
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 123."
+  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "5" }, { id: C, text: "4" }, { id: D, text: "8" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Старшая цифра 3, основание > 3, минимальное 4" }
+
+- id: inf-8-numsys-038
+  class: 8
+  topic: Системы счисления
+  subtopic: Минимальное основание
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 506."
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "6" }, { id: C, text: "9" }, { id: D, text: "7" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Старшая цифра 6, минимальное основание 7" }
+
+- id: inf-8-numsys-039
+  class: 8
+  topic: Системы счисления
+  subtopic: Правило римской записи
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?"
+  student_view: { options: [{ id: A, text: "IIII" }, { id: B, text: "XIV" }, { id: C, text: "XL" }, { id: D, text: "MCM" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "IIII — четыре I подряд, надо IV" }
+
+- id: inf-8-numsys-040
+  class: 8
+  topic: Системы счисления
+  subtopic: Алфавит системы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Сколько цифр в алфавите восьмеричной системы счисления?"
+  student_view: { options: [{ id: A, text: "7" }, { id: B, text: "16" }, { id: C, text: "8" }, { id: D, text: "10" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Цифры 0-7, всего 8" }
+
+- id: inf-8-numsys-041
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->8
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 101110₂ в восьмеричную систему. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [46], answer_text: "56", explanation: "Триады: 101110_2 = 56_8" }
+
+- id: inf-8-numsys-042
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->8
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 110101₂ в восьмеричную систему. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [53], answer_text: "65", explanation: "Триады: 110101_2 = 65_8" }
+
+- id: inf-8-numsys-043
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->2
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 57₈ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [47], answer_text: "101111", explanation: "Триады: 57_8 = 101111_2" }
+
+- id: inf-8-numsys-044
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->2
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 123₈ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [83], answer_text: "1010011", explanation: "Триады: 123_8 = 1010011_2" }
+
+- id: inf-8-numsys-045
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->2
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число B4₁₆ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [180], answer_text: "10110100", explanation: "Тетрады: B4_16 = 10110100_2" }
+
+- id: inf-8-numsys-046
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->2
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 5D₁₆ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [93], answer_text: "1011101", explanation: "Тетрады: 5D_16 = 1011101_2" }
+
+- id: inf-8-numsys-047
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->16
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 101101₂ в шестнадцатеричную систему. Запишите только число."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [45], answer_text: "2D", explanation: "Тетрады: 101101_2 = 2D_16" }
+
+- id: inf-8-numsys-048
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->16
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 27₈ в шестнадцатеричную систему. Запишите только число."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [23], answer_text: "17", explanation: "Через двоичную: 27_8 = 10111_2 = 17_16" }
+
+- id: inf-8-numsys-049
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->8
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число F5₁₆ в восьмеричную систему. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [245], answer_text: "365", explanation: "Через двоичную: F5_16 = 11110101_2 = 365_8" }
+
+- id: inf-8-numsys-050
+  class: 8
+  topic: Системы счисления
+  subtopic: Арифметика 2СС, ответ в 10СС
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Вычислите: 1100₂ - 101₂. Ответ дайте в десятичной системе."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "12 - 5 = 7; проверка через десятичную" }
+
+- id: inf-8-numsys-051
+  class: 8
+  topic: Системы счисления
+  subtopic: Арифметика 2СС, ответ в 10СС
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Вычислите: 101₂ × 11₂. Ответ дайте в десятичной системе."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "5 × 3 = 15; проверка через десятичную" }
+
+- id: inf-8-numsys-052
+  class: 8
+  topic: Системы счисления
+  subtopic: Арифметика 2СС, ответ в 10СС
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Вычислите: 10101₂ + 1101₂. Ответ дайте в десятичной системе."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [34], answer_text: "34", explanation: "21 + 13 = 34; проверка через десятичную" }
+
+- id: inf-8-numsys-053
+  class: 8
+  topic: Системы счисления
+  subtopic: Соответствие записей
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Установите соответствие: число в десятичной — его запись."
+  student_view: { left: ["12", "10", "6"], right: ["110₂", "1010₂", "1100₂"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "12": "1100₂", "10": "1010₂", "6": "110₂" }, explanation: "12=1100₂, 10=1010₂, 6=110₂" }
+
+- id: inf-8-numsys-054
+  class: 8
+  topic: Системы счисления
+  subtopic: Соответствие записей
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Установите соответствие: число в десятичной — его запись."
+  student_view: { left: ["10", "15", "12"], right: ["A₁₆", "C₁₆", "F₁₆"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "10": "A₁₆", "15": "F₁₆", "12": "C₁₆" }, explanation: "10=A₁₆, 15=F₁₆, 12=C₁₆" }
+
+- id: inf-8-numsys-055
+  class: 8
+  topic: Системы счисления
+  subtopic: Цепочка переводов
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert, inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Число F0₁₆ переведите в двоичную, затем подсчитайте количество нулей. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "F0_16 = 11110000_2, нулей: 4" }
+
+- id: inf-8-numsys-056
+  class: 8
+  topic: Системы счисления
+  subtopic: Цепочка переводов
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert, inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Число 73₈ переведите в двоичную, затем подсчитайте количество единиц. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "73_8 = 111011_2, единиц: 5" }
+
+- id: inf-8-numsys-057
+  class: 8
+  topic: Системы счисления
+  subtopic: Минимальное основание
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 352. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Старшая цифра 5, основание > неё" }
+
+- id: inf-8-numsys-058
+  class: 8
+  topic: Системы счисления
+  subtopic: Минимальное основание
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 2012. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Старшая цифра 2, основание > неё" }
+
+- id: inf-8-numsys-059
+  class: 8
+  topic: Системы счисления
+  subtopic: Сравнение чисел
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Какое из чисел наибольшее?"
+  student_view: { options: [{ id: A, text: "10111₂" }, { id: B, text: "1F₁₆" }, { id: C, text: "27₈" }, { id: D, text: "30₈" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Значения: 10111₂=23, 1F₁₆=31, 27₈=23, 30₈=24" }
+
+- id: inf-8-numsys-060
+  class: 8
+  topic: Системы счисления
+  subtopic: Сравнение чисел
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Какое из чисел наибольшее?"
+  student_view: { options: [{ id: A, text: "FF₁₆" }, { id: B, text: "777₈" }, { id: C, text: "11111111₂" }, { id: D, text: "1000₁₀" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Значения: FF₁₆=255, 777₈=511, 11111111₂=255, 1000₁₀=1000" }

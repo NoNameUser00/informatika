@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LESSONS_8 } from '../../data/lessons';
+import { mdToHtml, parseFrontmatter } from '../../lib/md';
+
+export function getStaticPaths() {
+  return LESSONS_8.map((l) => ({ params: { lesson: l.id } }));
+}
+
+const { lesson } = Astro.params;
+const meta = LESSONS_8.find((l) => l.id === lesson)!;
+const idx = LESSONS_8.indexOf(meta);
+const mods = import.meta.glob('../../content/lessons/8/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+const raw = mods[`../../content/lessons/8/${meta.file}`];
+const { meta: fm, body } = parseFrontmatter(raw);
+const html = mdToHtml(body);
+const prev = LESSONS_8[idx - 1];
+const next = LESSONS_8[idx + 1];
+const B = import.meta.env.BASE_URL;
+---
+<Layout title={`${fm.title ?? meta.title} — 8 класс`}>
+  <p class="muted"><a href={`${B}8/`}>8 класс</a> · Урок {idx + 1} из {LESSONS_8.length}</p>
+  <article class="card" set:html={html} />
+  <div class="card">
+    <a class="btn" href={`${B}8/trainer/`}>Решить тренажер →</a>
+  </div>
+  <p>
+    {prev && <a href={`${B}8/${prev.id}/`}>← {prev.title}</a>}
+    {prev && next && <span> · </span>}
+    {next && <a href={`${B}8/${next.id}/`}>{next.title} →</a>}
+  </p>
+</Layout>

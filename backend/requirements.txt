@@ -1,0 +1,12 @@
+# RAG backend: llama-index (Python). Server-only.
+# Python: 3.12 (интеграция qdrant требует <3.14). Окружение: backend/.venv.
+llama-index-core>=0.14
+llama-index-readers-file>=0.4
+llama-index-embeddings-huggingface>=0.5
+llama-index-llms-ollama>=0.6
+llama-index-vector-stores-qdrant>=0.9
+qdrant-client>=1.1.1
+pyyaml>=6
+pydantic>=2
+fonttools>=4  # CFF/Type1-шрифты в учебниках (pypdf без него теряет кодировки)
+pytest>=8

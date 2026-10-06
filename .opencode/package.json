@@ -1,0 +1,10 @@
+{
+  "name": "informatics-opencode-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.18.34",
+    "@opencode/plugin": "^0.0.0-beta-19507"
+  }
+}

@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+const B = import.meta.env.BASE_URL;
+---
+<Layout title="404 — страница сбежала">
+  <h1>404 — здесь ничего нет</h1>
+  <p class="muted">R2-D2 убегает от штурмовиков. Пробел / ↑ / тап — прыжок, ↓ — пригнуться. Летающих — перепрыгивай или пригибайся, от болтов уворачивайся.</p>
+  <div class="card">
+    <canvas id="game" width="880" height="260" style="width:100%;height:auto;background:#0b1020;border-radius:12px;" aria-label="Игра: R2-D2 убегает от штурмовиков"></canvas>
+    <p><span id="score" aria-live="polite">Счет: 0</span> · <span id="best">Рекорд: 0</span></p>
+    <button class="btn" id="start">Старт / заново</button>
+    <p class="muted" id="msg">Нажми «Старт» или пробел.</p>
+  </div>
+  <p><a href={B}>← На главную</a> · <a href={`${B}8/`}>К 8 классу</a></p>
+  <script>
+    const cv = document.getElementById('game');
+    const ctx = cv.getContext('2d');
+    const W = cv.width, H = cv.height, GROUND = H - 40;
+    const scoreEl = document.getElementById('score');
+    const bestEl = document.getElementById('best');
+    const msgEl = document.getElementById('msg');
+    const startBtn = document.getElementById('start');
+    let best = Number(localStorage.getItem('r2-best') || 0);
+    bestEl.textContent = 'Рекорд: ' + best;
+
+    let running = false, over = true, t = 0, speed = 5, score = 0, spawnT = 0, boltT = 0;
+    let enemies = [], bolts = [], stars = [];
+    const r2 = { x: 70, y: GROUND, vy: 0, duck: false, w: 30, h: 52 };
+    for (let i = 0; i < 60; i++) stars.push({ x: Math.random() * W, y: Math.random() * (GROUND - 60) });
+
+    function reset() {
+      t = 0; speed = 5; score = 0; enemies = []; bolts = [];
+      r2.y = GROUND; r2.vy = 0; r2.duck = false; over = false; running = true;
+      msgEl.textContent = 'Беги, R2!';
+    }
+
+    function jump() {
+      if (over) { reset(); return; }
+      if (r2.y >= GROUND) r2.vy = -13.5;
+    }
+
+    // R2-D2: купол + корпус с синими панелями
+    function drawR2() {
+      const h = r2.duck ? 30 : r2.h, y = r2.y - h;
+      ctx.fillStyle = '#c0c8d4';
+      ctx.fillRect(r2.x, y + 12, r2.w, h - 12); // корпус
+      ctx.beginPath(); // купол
+      ctx.arc(r2.x + r2.w / 2, y + 12, r2.w / 2, Math.PI, 0);
+      ctx.fillStyle = '#d7dee9'; ctx.fill();
+      ctx.fillStyle = '#2563eb'; // синие панели
+      ctx.fillRect(r2.x + 4, y + 22, 6, 12);
+      ctx.fillRect(r2.x + 20, y + 22, 6, 12);
+      ctx.fillStyle = '#dc2626'; // глаз
+      ctx.fillRect(r2.x + 13, y + 8, 4, 4);
+      ctx.fillStyle = '#64748b'; // ноги
+      const step = running && !over ? Math.floor(t / 6) % 2 : 0;
+      ctx.fillRect(r2.x + 2, r2.y - 2, 10, 4 + step * 2);
+      ctx.fillRect(r2.x + 18, r2.y - 2, 10, 4 + (1 - step) * 2);
+    }
+
+    // Летающий штурмовик (на джетпаке)
+    function drawFlyer(e) {
+      ctx.fillStyle = '#e8ecf3';
+      ctx.fillRect(e.x, e.y, 26, 22);
+      ctx.fillStyle = '#0f172a'; // визор
+      ctx.fillRect(e.x + 14, e.y + 6, 10, 5);
+      ctx.fillStyle = '#f59e0b'; // пламя джетпака
+      const f = 4 + (t % 3) * 2;
+      ctx.fillRect(e.x + 4, e.y + 22, 6, f);
+      ctx.fillRect(e.x + 16, e.y + 22, 6, f);
+    }
+
+    // Стреляющий штурмовик (на земле, с пистолетом)
+    function drawShooter(e) {
+      ctx.fillStyle = '#e8ecf3';
+      ctx.fillRect(e.x, e.y - 44, 22, 44);
+      ctx.fillStyle = '#0f172a';
+      ctx.fillRect(e.x + 8, e.y - 38, 12, 5); // визор
+      ctx.fillStyle = '#334155'; // пистолет
+      ctx.fillRect(e.x - 12, e.y - 30, 14, 4);
+    }
+
+    function update() {
+      if (!running || over) return;
+      t++;
+      speed = 5 + Math.min(7, t / 600); // ускорение мира
+      score = Math.floor(t / 6);
+      // спавн: летающие высоко/низко + стрелки
+      spawnT -= 1;
+      if (spawnT <= 0) {
+        const kind = Math.random();
+        if (kind < 0.45) enemies.push({ kind: 'fly', x: W + 20, y: GROUND - 70 - Math.random() * 60 });
+        else if (kind < 0.75) enemies.push({ kind: 'fly', x: W + 20, y: GROUND - 34 });
+        else enemies.push({ kind: 'shooter', x: W + 20, y: GROUND, cd: 50 });
+        spawnT = 70 + Math.random() * 60 - Math.min(40, t / 40);
+      }
+      // физика R2
+      r2.vy += 0.7;
+      r2.y += r2.vy;
+      if (r2.y > GROUND) { r2.y = GROUND; r2.vy = 0; }
+      // враги
+      for (const e of enemies) {
+        e.x -= speed;
+        if (e.kind === 'shooter') {
+          e.cd -= 1;
+          if (e.cd <= 0 && e.x < W && e.x > 120) {
+            bolts.push({ x: e.x - 12, y: e.y - 28, v: 3 + Math.min(5, t / 900) }); // болты ускоряются
+            e.cd = 110;
+          }
+        }
+      }
+      enemies = enemies.filter((e) => e.x > -40);
+      for (const b of bolts) b.x -= speed + b.v;
+      bolts = bolts.filter((b) => b.x > -20);
+      // столкновения
+      const rh = r2.duck ? 30 : r2.h;
+      const box = (x, y, w, h) =>
+        r2.x + 4 < x + w && r2.x + 26 > x && r2.y - rh + 4 < y + h && r2.y > y;
+      for (const e of enemies) {
+        const hit = e.kind === 'shooter'
+          ? box(e.x, e.y - 44, 22, 44)
+          : box(e.x + 2, e.y + 2, 22, 18);
+        if (hit) return gameOver();
+      }
+      for (const b of bolts) if (box(b.x, b.y - 3, 10, 6)) return gameOver();
+      scoreEl.textContent = 'Счет: ' + score;
+    }
+
+    function gameOver() {
+      over = true; running = false;
+      if (score > best) { best = score; localStorage.setItem('r2-best', String(best)); }
+      bestEl.textContent = 'Рекорд: ' + best;
+      msgEl.textContent = 'Штурмовики поймали R2. Счет ' + score + '. Еще раз?';
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = '#0b1020'; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#fff';
+      for (const s of stars) {
+        s.x -= speed * 0.2; if (s.x < 0) s.x = W;
+        ctx.fillRect(s.x, s.y, 2, 2);
+      }
+      ctx.fillStyle = '#38bdf8'; // земля-«взлетка»
+      ctx.fillRect(0, GROUND + 2, W, 3);
+      for (const e of enemies) (e.kind === 'fly' ? drawFlyer : drawShooter)(e);
+      ctx.fillStyle = '#dc2626'; // болты
+      for (const b of bolts) { ctx.fillRect(b.x, b.y - 3, 10, 6); ctx.fillStyle = '#fca5a5'; ctx.fillRect(b.x, b.y - 1, 10, 2); ctx.fillStyle = '#dc2626'; }
+      if (!over || score > 0) drawR2();
+      else {
+        drawR2();
+        ctx.fillStyle = '#fff'; ctx.font = '20px sans-serif';
+        ctx.fillText('R2-D2 ждет старта', W / 2 - 90, H / 2);
+      }
+      requestAnimationFrame(draw);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); jump(); }
+      if (e.code === 'ArrowDown') r2.duck = true;
+    });
+    document.addEventListener('keyup', (e) => { if (e.code === 'ArrowDown') r2.duck = false; });
+    cv.addEventListener('pointerdown', jump);
+    startBtn.addEventListener('click', reset);
+    setInterval(update, 1000 / 60);
+    draw();
+  </script>
+</Layout>

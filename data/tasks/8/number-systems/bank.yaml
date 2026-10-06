@@ -1,0 +1,319 @@
+# Банк пилота: 8 класс, Системы счисления. Учебный срез (тренажер).
+# ВНИМАНИЕ: для боевой контрольной teacher_only уходит в БД/Edge Function, в GitHub Pages не попадает.
+# Теги: fgos_requirement 1.1/1.2, fgos_element 1.1-1.4 (ФРП база 7-9, 8 класс), lesson numsys-01..06.
+# Формат промптов — как в Яндекс.Форме учителя: основание подстрочным (₂ ₈ ₁₀ ₁₆),
+# «Запишите только число», арифметика — ответ в десятичной.
+
+- id: inf-8-numsys-001
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: Переведите число 13₁₀ в двоичную систему. Запишите только число.
+  student_view:
+    base: 2
+    placeholder: "только число"
+  auto_check:
+    method: numeric_base
+    base: 2
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [13]
+    answer_text: "1101"
+    explanation: "13 = 8+4+1 = 1101_2"
+
+- id: inf-8-numsys-002
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 10->16
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: Переведите число 175₁₀ в шестнадцатеричную систему. Запишите только число.
+  student_view:
+    base: 16
+    placeholder: "только число"
+  auto_check:
+    method: numeric_base
+    base: 16
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [175]
+    answer_text: "AF"
+    explanation: "175 = 10*16 + 15 = AF_16"
+
+- id: inf-8-numsys-003
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [self-control] }
+  prompt: Переведите число 101101₂ в десятичную систему. Запишите только число.
+  student_view:
+    base: 10
+    placeholder: "только число"
+  auto_check:
+    method: numeric_base
+    base: 10
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [45]
+    answer_text: "45"
+    explanation: "32+8+4+1 = 45"
+
+- id: inf-8-numsys-004
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 8->10
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: Переведите число 27₈ в десятичную систему. Запишите только число.
+  student_view:
+    base: 10
+  auto_check:
+    method: numeric_base
+    base: 10
+  teacher_only:
+    accepted_values_decimal: [23]
+    answer_text: "23"
+    explanation: "2*8+7 = 23"
+
+- id: inf-8-numsys-005
+  class: 8
+  topic: Системы счисления
+  subtopic: Количество единиц
+  type: single_choice
+  difficulty: basic
+  cognitive_level: analyze
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: Сколько единиц в двоичной записи числа 15₁₀?
+  student_view:
+    options:
+      - { id: A, text: "2" }
+      - { id: B, text: "3" }
+      - { id: C, text: "4" }
+      - { id: D, text: "1" }
+  auto_check:
+    method: exact_option
+  teacher_only:
+    answer: C
+    explanation: "15 = 1111_2, четыре единицы"
+    common_errors: ["Путают с числом нулей", "Считают 15_10 как 111_2"]
+
+- id: inf-8-numsys-006
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 16->2 через тетрады
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: Переведите число 3A₁₆ в двоичную систему. Запишите только число.
+  student_view:
+    base: 2
+  auto_check:
+    method: numeric_base
+    base: 2
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [58]
+    answer_text: "111010"
+    explanation: "3=0011, A=1010 -> 111010 (ведущие нули отбрасываются)"
+
+- id: inf-8-numsys-007
+  class: 8
+  topic: Системы счисления
+  subtopic: Сложение в двоичной, ответ в десятичной
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Вычислите: 1011₂ + 110₂. Ответ дайте в десятичной системе."
+  student_view:
+    base: 10
+  auto_check:
+    method: numeric_base
+    base: 10
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [17]
+    answer_text: "17"
+    explanation: "11+6=17; в двоичной это 10001_2, но ответ просили десятичным"
+
+- id: inf-8-numsys-008
+  class: 8
+  topic: Системы счисления
+  subtopic: Перевод 2->8
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: Переведите число 1101011₂ в восьмеричную систему. Запишите только число.
+  student_view:
+    base: 8
+  auto_check:
+    method: numeric_base
+    base: 8
+    strip_affixes: true
+  teacher_only:
+    accepted_values_decimal: [107]
+    answer_text: "153"
+    explanation: "1|101|011 = 1 5 3 = 153_8 (107_10)"
+
+- id: inf-8-numsys-009
+  class: 8
+  topic: Системы счисления
+  subtopic: Соответствие записей
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Установите соответствие: число в десятичной — его запись."
+  student_view:
+    left: ["10", "16", "8"]
+    right: ["1010₂", "1000₂", "10000₂"]
+  auto_check:
+    method: matching
+    partial: proportional
+  teacher_only:
+    answer_map: { "10": "1010₂", "16": "10000₂", "8": "1000₂" }
+    explanation: "10=1010_2, 8=1000_2, 16=10000_2"
+
+- id: inf-8-numsys-010
+  class: 8
+  topic: Системы счисления
+  subtopic: Цепочка переводов
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert, inf-8-numsys-arith], meta: [self-control] }
+  prompt: Число 2A₁₆ переведите в двоичную, затем подсчитайте количество единиц. Запишите только число.
+  student_view:
+    base: 10
+  auto_check:
+    method: numeric_base
+    base: 10
+  teacher_only:
+    accepted_values_decimal: [3]
+    answer_text: "3"
+    explanation: "2A_16 = 0010 1010 = 101010_2, единиц: 3"
+
+- id: inf-8-numsys-011
+  class: 8
+  topic: Системы счисления
+  subtopic: Развернутая форма
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: Вычислите 1×2³ + 0×2² + 1×2 + 1. Запишите только число.
+  student_view:
+    base: 10
+  auto_check:
+    method: numeric_base
+    base: 10
+  teacher_only:
+    accepted_values_decimal: [11]
+    answer_text: "11"
+    explanation: "8+0+2+1=11. Это развернутая форма числа 1011_2"
+
+- id: inf-8-numsys-012
+  class: 8
+  topic: Системы счисления
+  subtopic: Позиционная vs непозиционная
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: Какая система счисления является непозиционной?
+  student_view:
+    options:
+      - { id: A, text: "Двоичная" }
+      - { id: B, text: "Римская" }
+      - { id: C, text: "Восьмеричная" }
+      - { id: D, text: "Шестнадцатеричная" }
+  auto_check:
+    method: exact_option
+  teacher_only:
+    answer: B
+    explanation: "В римской значение знака не зависит от позиции (I, V, X...), в остальных — зависит от разряда"
+    common_errors: ["Путают основание с позиционностью"]
+
+- id: inf-8-numsys-013
+  class: 8
+  topic: Системы счисления
+  subtopic: Римская система
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: Переведите число XIV из римской системы в десятичную. Запишите только число.
+  student_view:
+    base: 10
+  auto_check:
+    method: numeric_base
+    base: 10
+  teacher_only:
+    accepted_values_decimal: [14]
+    answer_text: "14"
+    explanation: "X=10, IV=4, итого 14"

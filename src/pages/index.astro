@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+const B = import.meta.env.BASE_URL;
+---
+<Layout title="Информатика — школьный тренажер">
+  <h1>Информатика</h1>
+  <p class="muted">Теория, тренажеры, проверочные. Экзаменационные ключи хранятся на сервере и ученику не показываются.</p>
+  <div class="card">
+    <a class="btn" href={`${B}8/`}>Начать учиться → 8 класс</a>
+  </div>
+  <div class="card">
+    <p class="muted">Заблудились? R2-D2 уже убегает от штурмовиков.</p>
+    <p><a href={`${B}404.html`}>о сайте</a></p>
+  </div>
+  <h2>Классы</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>8 класс</h3>
+      <p class="muted">Системы счисления · Логика · Алгоритмы · Паскаль/Python</p>
+      <p><a href={`${B}8/`}>6 уроков СС</a> · <a href={`${B}8/trainer/`}>Тренажер</a></p>
+    </div>
+    <div class="card">
+      <h3>7 · 9 · 10 · 11 классы</h3>
+      <p class="muted">Разбивка учебников готова (<code>material/uchebniki/split/</code>). Контент — следующий этап.</p>
+    </div>
+  </div>
+</Layout>

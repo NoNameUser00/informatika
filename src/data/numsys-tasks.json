@@ -1,0 +1,818 @@
+{
+  "test_code": "numsys-pilot-v1",
+  "variant": "trainer-v1",
+  "max_score": 95,
+  "instruction": "В ответе запишите только само число. Основание системы счисления (₂, ₈, ₁₀, ₁₆) указывать не нужно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-8-numsys-011",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите 1×2³ + 0×2² + 1×2 + 1. Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
+      "id": "inf-8-numsys-012",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая система счисления является непозиционной?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Двоичная"
+        },
+        {
+          "id": "B",
+          "text": "Римская"
+        },
+        {
+          "id": "C",
+          "text": "Восьмеричная"
+        },
+        {
+          "id": "D",
+          "text": "Шестнадцатеричная"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-numsys-013",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число XIV из римской системы в десятичную. Запишите только число.",
+      "base": 10,
+      "expected": 14,
+      "key": "14"
+    },
+    {
+      "id": "inf-8-numsys-030",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число IX из римской системы в десятичную. Запишите только число.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
+    },
+    {
+      "id": "inf-8-numsys-031",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число XLIV из римской системы в десятичную. Запишите только число.",
+      "base": 10,
+      "expected": 44,
+      "key": "44"
+    },
+    {
+      "id": "inf-8-numsys-032",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число XCIX из римской системы в десятичную. Запишите только число.",
+      "base": 10,
+      "expected": 99,
+      "key": "99"
+    },
+    {
+      "id": "inf-8-numsys-033",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите 1×2⁴ + 1×2³ + 0×2² + 1×2¹ + 0×2⁰. Запишите только число.",
+      "base": 10,
+      "expected": 26,
+      "key": "26"
+    },
+    {
+      "id": "inf-8-numsys-034",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите 1×2⁴ + 0×2³ + 0×2² + 1×2¹ + 1×2⁰. Запишите только число.",
+      "base": 10,
+      "expected": 19,
+      "key": "19"
+    },
+    {
+      "id": "inf-8-numsys-037",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Укажите минимальное основание системы счисления, в которой может быть записано число 123.",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-038",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Укажите минимальное основание системы счисления, в которой может быть записано число 506.",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-numsys-039",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IIII"
+        },
+        {
+          "id": "B",
+          "text": "XIV"
+        },
+        {
+          "id": "C",
+          "text": "XL"
+        },
+        {
+          "id": "D",
+          "text": "MCM"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-numsys-001",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 13₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 13,
+      "key": "1101"
+    },
+    {
+      "id": "inf-8-numsys-003",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 101101₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 45,
+      "key": "45"
+    },
+    {
+      "id": "inf-8-numsys-005",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько единиц в двоичной записи числа 15₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-014",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 26₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 26,
+      "key": "11010"
+    },
+    {
+      "id": "inf-8-numsys-015",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 91₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 91,
+      "key": "1011011"
+    },
+    {
+      "id": "inf-8-numsys-016",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 150₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 150,
+      "key": "10010110"
+    },
+    {
+      "id": "inf-8-numsys-017",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 200₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 200,
+      "key": "11001000"
+    },
+    {
+      "id": "inf-8-numsys-018",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 11001₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 25,
+      "key": "25"
+    },
+    {
+      "id": "inf-8-numsys-019",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 100111₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 39,
+      "key": "39"
+    },
+    {
+      "id": "inf-8-numsys-020",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 1010101₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 85,
+      "key": "85"
+    },
+    {
+      "id": "inf-8-numsys-021",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 1110001₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 113,
+      "key": "113"
+    },
+    {
+      "id": "inf-8-numsys-035",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько нулей в двоичной записи числа 128₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-numsys-036",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько единиц в двоичной записи числа 255₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-numsys-004",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 27₈ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 23,
+      "key": "23"
+    },
+    {
+      "id": "inf-8-numsys-008",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 1101011₂ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 107,
+      "key": "153"
+    },
+    {
+      "id": "inf-8-numsys-022",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 83₁₀ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 83,
+      "key": "123"
+    },
+    {
+      "id": "inf-8-numsys-023",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 150₁₀ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 150,
+      "key": "226"
+    },
+    {
+      "id": "inf-8-numsys-024",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 57₈ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 47,
+      "key": "47"
+    },
+    {
+      "id": "inf-8-numsys-025",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 145₈ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 101,
+      "key": "101"
+    },
+    {
+      "id": "inf-8-numsys-040",
+      "lesson": "numsys-03-octal",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько цифр в алфавите восьмеричной системы счисления?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-041",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 101110₂ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 46,
+      "key": "56"
+    },
+    {
+      "id": "inf-8-numsys-042",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 110101₂ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 53,
+      "key": "65"
+    },
+    {
+      "id": "inf-8-numsys-043",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 57₈ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 47,
+      "key": "101111"
+    },
+    {
+      "id": "inf-8-numsys-044",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 123₈ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 83,
+      "key": "1010011"
+    },
+    {
+      "id": "inf-8-numsys-048",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 27₈ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16,
+      "expected": 23,
+      "key": "17"
+    },
+    {
+      "id": "inf-8-numsys-002",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 175₁₀ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16,
+      "expected": 175,
+      "key": "AF"
+    },
+    {
+      "id": "inf-8-numsys-006",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 3A₁₆ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 58,
+      "key": "111010"
+    },
+    {
+      "id": "inf-8-numsys-026",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 92₁₀ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16,
+      "expected": 92,
+      "key": "5C"
+    },
+    {
+      "id": "inf-8-numsys-027",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 200₁₀ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16,
+      "expected": 200,
+      "key": "C8"
+    },
+    {
+      "id": "inf-8-numsys-028",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 2F₁₆ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 47,
+      "key": "47"
+    },
+    {
+      "id": "inf-8-numsys-029",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число A4₁₆ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 164,
+      "key": "164"
+    },
+    {
+      "id": "inf-8-numsys-045",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число B4₁₆ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 180,
+      "key": "10110100"
+    },
+    {
+      "id": "inf-8-numsys-046",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 5D₁₆ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 93,
+      "key": "1011101"
+    },
+    {
+      "id": "inf-8-numsys-047",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 101101₂ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16,
+      "expected": 45,
+      "key": "2D"
+    },
+    {
+      "id": "inf-8-numsys-049",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число F5₁₆ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 245,
+      "key": "365"
+    },
+    {
+      "id": "inf-8-numsys-007",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 1011₂ + 110₂. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 17,
+      "key": "17"
+    },
+    {
+      "id": "inf-8-numsys-050",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 1100₂ - 101₂. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-8-numsys-051",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 101₂ × 11₂. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 15,
+      "key": "15"
+    },
+    {
+      "id": "inf-8-numsys-052",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 10101₂ + 1101₂. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 34,
+      "key": "34"
+    },
+    {
+      "id": "inf-8-numsys-009",
+      "lesson": "numsys-06-review",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: число в десятичной — его запись.",
+      "left": [
+        "10",
+        "16",
+        "8"
+      ],
+      "right": [
+        "1010₂",
+        "1000₂",
+        "10000₂"
+      ],
+      "answerMap": {
+        "8": "1000₂",
+        "10": "1010₂",
+        "16": "10000₂"
+      },
+      "key": "10=1010₂, 16=10000₂, 8=1000₂"
+    },
+    {
+      "id": "inf-8-numsys-010",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Число 2A₁₆ переведите в двоичную, затем подсчитайте количество единиц. Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-numsys-053",
+      "lesson": "numsys-06-review",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: число в десятичной — его запись.",
+      "left": [
+        "12",
+        "10",
+        "6"
+      ],
+      "right": [
+        "110₂",
+        "1010₂",
+        "1100₂"
+      ],
+      "answerMap": {
+        "6": "110₂",
+        "10": "1010₂",
+        "12": "1100₂"
+      },
+      "key": "12=1100₂, 10=1010₂, 6=110₂"
+    },
+    {
+      "id": "inf-8-numsys-054",
+      "lesson": "numsys-06-review",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: число в десятичной — его запись.",
+      "left": [
+        "10",
+        "15",
+        "12"
+      ],
+      "right": [
+        "A₁₆",
+        "C₁₆",
+        "F₁₆"
+      ],
+      "answerMap": {
+        "10": "A₁₆",
+        "12": "C₁₆",
+        "15": "F₁₆"
+      },
+      "key": "10=A₁₆, 15=F₁₆, 12=C₁₆"
+    },
+    {
+      "id": "inf-8-numsys-055",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Число F0₁₆ переведите в двоичную, затем подсчитайте количество нулей. Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-numsys-056",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Число 73₈ переведите в двоичную, затем подсчитайте количество единиц. Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-numsys-057",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Укажите минимальное основание системы счисления, в которой может быть записано число 352. Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-numsys-058",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Укажите минимальное основание системы счисления, в которой может быть записано число 2012. Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-numsys-059",
+      "lesson": "numsys-06-review",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Какое из чисел наибольшее?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10111₂"
+        },
+        {
+          "id": "B",
+          "text": "1F₁₆"
+        },
+        {
+          "id": "C",
+          "text": "27₈"
+        },
+        {
+          "id": "D",
+          "text": "30₈"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-numsys-060",
+      "lesson": "numsys-06-review",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Какое из чисел наибольшее?",
+      "options": [
+        {
+          "id": "A",
+          "text": "FF₁₆"
+        },
+        {
+          "id": "B",
+          "text": "777₈"
+        },
+        {
+          "id": "C",
+          "text": "11111111₂"
+        },
+        {
+          "id": "D",
+          "text": "1000₁₀"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    }
+  ]
+}
