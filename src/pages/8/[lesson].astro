@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import RecordVisit from '../../components/RecordVisit';
 import { LESSONS_8 } from '../../data/lessons';
 import { mdToHtml, parseFrontmatter } from '../../lib/md';
 
@@ -23,6 +24,13 @@ const next = LESSONS_8[idx + 1];
 const B = import.meta.env.BASE_URL;
 ---
 <Layout title={`${fm.title ?? meta.title} — 8 класс`}>
+  <RecordVisit
+    client:load
+    grade="8"
+    lesson={meta.id}
+    title={`${fm.title ?? meta.title}`}
+    href={`${B}8/${meta.id}/`}
+  />
   <p class="muted"><a href={`${B}8/`}>8 класс</a> · Урок {idx + 1} из {LESSONS_8.length}</p>
   <article class="card" set:html={html} />
   <div class="card">

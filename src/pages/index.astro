@@ -1,28 +1,133 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import SpaceBackground from '../components/SpaceBackground';
+import ContinueCard from '../components/ContinueCard';
+import '../components/space-background.css';
 const B = import.meta.env.BASE_URL;
+
+interface Grade {
+  n: string;
+  color: string;
+  topics: string;
+  status: string;
+}
+// Состав — по реальному контенту сайта (без выдуманного прогресса:
+// личное «где остановился» показывает карточка ContinueCard из localStorage).
+const GRADES: Grade[] = [
+  { n: '7', color: '#16a34a', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
+  { n: '8', color: '#2563eb', topics: 'ТБ · 6 уроков СС · 4 урока логики · тренажёры', status: 'Полный блок' },
+  { n: '9', color: '#9333ea', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
+  { n: '10', color: '#ea580c', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
+  { n: '11', color: '#dc2626', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
+];
 ---
-<Layout title="Информатика — школьный тренажер">
-  <h1>Информатика</h1>
-  <p class="muted">Теория, тренажеры, проверочные. Экзаменационные ключи хранятся на сервере и ученику не показываются.</p>
-  <div class="card">
-    <a class="btn" href={`${B}8/`}>Начать учиться → 8 класс</a>
-  </div>
-  <div class="card">
-    <p class="muted">Заблудились? R2-D2 уже убегает от штурмовиков.</p>
-    <p><a href={`${B}404.html`}>о сайте</a></p>
-  </div>
-  <h2>Классы</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>8 класс</h3>
-      <p class="muted">Системы счисления · Логика · Алгоритмы · Паскаль/Python</p>
-      <p><a href={`${B}8/`}>6 уроков СС</a> · <a href={`${B}8/trainer/`}>Тренажер</a></p>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Школьная информатика: теория, тренажеры, проверочные. 7–11 классы." />
+    <title>Информатика — школьный тренажер</title>
+    <style is:global>
+      /* is:global — стили должны доставать и до React-островов (ContinueCard). */
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Nunito, Inter, Roboto, system-ui, sans-serif;
+        background: #020617;
+        color: #fff;
+        line-height: 1.6;
+      }
+      a { text-decoration: none; }
+      .home-veil {
+        position: fixed; inset: 0; z-index: 1; pointer-events: none;
+        background: radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%);
+      }
+      .home-content { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; padding: 0 20px 90px; }
+      .home-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+      .home-logo { font-weight: 900; font-size: 1.2rem; color: #fff; }
+      .home-top nav a { color: #c7d2fe; margin-left: 16px; font-weight: 700; }
+      .home-hero { padding: 40px 0 8px; }
+      .home-kicker { color: #93c5fd; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
+      .home-hero h1 { font-size: 2.4rem; margin: 8px 0; text-shadow: 0 2px 14px rgba(2,6,23,.85); }
+      .home-sub { color: #e2e8f0; text-shadow: 0 1px 10px rgba(2,6,23,.9); }
+      .home-cta {
+        display: inline-block; margin-top: 12px;
+        background: rgba(251,191,36,.85); color: #451a03;
+        font-weight: 900; border: 1px solid rgba(255,255,255,.55); border-radius: 12px;
+        padding: 14px 26px; min-height: 48px;
+        -webkit-backdrop-filter: blur(12px) saturate(1.4); backdrop-filter: blur(12px) saturate(1.4);
+        box-shadow: 0 4px 18px rgba(2,6,23,.35);
+      }
+      .home-continue {
+        display: flex; align-items: center; gap: 10px; margin-top: 12px;
+        background: rgba(203,213,225,.78); color: #0f172a;
+        border: 1px solid rgba(255,255,255,.55); border-radius: 14px; padding: 12px 16px;
+        -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
+        box-shadow: 0 4px 20px rgba(2,6,23,.25);
+      }
+      .home-continue-go { margin-left: auto; font-weight: 800; color: #1e3a8a; white-space: nowrap; }
+      .home-main h2 { font-size: 1.1rem; color: #c7d2fe; margin-top: 28px; }
+      .home-row {
+        display: flex; align-items: center; gap: 12px;
+        background: rgba(203,213,225,.78); color: #0f172a;
+        border-radius: 14px; border: 1px solid rgba(255,255,255,.55);
+        padding: 14px 16px; margin: 10px 0;
+        -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
+        box-shadow: 0 4px 20px rgba(2,6,23,.25);
+      }
+      .home-grade {
+        color: #fff; font-weight: 900; font-size: 1.3rem; border-radius: 10px;
+        width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex: none;
+      }
+      .home-rowbody { display: flex; flex-direction: column; flex: 1; }
+      .home-rowbody small { color: #1e293b; }
+      .home-status {
+        background: rgba(15,23,42,.62); border: 1px solid rgba(255,255,255,.3);
+        border-radius: 999px; padding: 4px 12px; font-size: .8rem; font-weight: 700;
+        color: #fff; white-space: nowrap;
+        -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+      }
+      .home-open { font-weight: 800; color: #1e3a8a; white-space: nowrap; }
+      @media (max-width: 560px) {
+        .home-hero h1 { font-size: 1.8rem; }
+        .home-status { display: none; }
+        .home-cta { width: 100%; text-align: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <SpaceBackground client:load />
+    <div class="home-veil" aria-hidden="true"></div>
+    <div class="home-content">
+      <header class="home-top">
+        <span class="home-logo">Информатика</span>
+        <nav>
+          <a href={`${B}8/`}>8 класс</a>
+          <a href={`${B}teacher/`}>Учителю</a>
+        </nav>
+      </header>
+      <section class="home-hero">
+        <p class="home-kicker">Информатика · 7–11 классы</p>
+        <h1>Теория, тренажёры, проверочные</h1>
+        <p class="home-sub">Экзаменационные ключи хранятся на сервере и ученику не показываются.</p>
+        <a class="home-cta" href={`${B}8/`}>Начать учиться → 8 класс</a>
+        <ContinueCard client:load />
+      </section>
+      <main class="home-main">
+        <h2>Класс → тема → урок</h2>
+        {GRADES.map((g) => (
+          <a class="home-row" href={`${B}${g.n}/`}>
+            <span class="home-grade" style={{ background: g.color }}>{g.n}</span>
+            <span class="home-rowbody">
+              <strong>{g.n} класс</strong>
+              <small>{g.topics}</small>
+            </span>
+            <span class="home-status">{g.status}</span>
+            <span class="home-open">Открыть →</span>
+          </a>
+        ))}
+      </main>
     </div>
-    <div class="card">
-      <h3>7 · 9 · 10 · 11 классы</h3>
-      <p class="muted">Пока только урок 0. Полные темы — следующий этап.</p>
-      <p><a href={`${B}7/`}>7 класс</a> · <a href={`${B}9/`}>9 класс</a> · <a href={`${B}10/`}>10 класс</a> · <a href={`${B}11/`}>11 класс</a></p>
-    </div>
-  </div>
-</Layout>
+  </body>
+</html>
