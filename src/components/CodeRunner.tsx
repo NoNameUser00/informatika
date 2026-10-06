@@ -9,11 +9,14 @@ export default function CodeRunner({
   template,
   expected,
   onResult,
+  quiet = false,
 }: {
   id: string;
   template: string;
   expected: string;
   onResult: (ok: boolean, code: string) => void;
+  /** Тихий режим ученика: вердикт «совпало/нет» скрыт, виден только вывод. */
+  quiet?: boolean;
 }) {
   const [code, setCode] = useState(template);
   const [status, setStatus] = useState<'idle' | 'running' | 'error' | 'done'>('idle');
@@ -76,9 +79,12 @@ export default function CodeRunner({
         </button>
       </p>
       {status === 'error' && <p className="bad" role="status">Ошибка — читай вывод ниже.</p>}
-      {verdict === true && <p className="ok" role="status">Вывод совпал с ожидаемым — задание засчитано.</p>}
-      {verdict === false && status === 'done' && (
+      {!quiet && verdict === true && <p className="ok" role="status">Вывод совпал с ожидаемым — задание засчитано.</p>}
+      {!quiet && verdict === false && status === 'done' && (
         <p className="bad" role="status">Вывод не совпал — сравни с ожидаемым и попробуй ещё.</p>
+      )}
+      {quiet && verdict !== null && status === 'done' && (
+        <p className="muted" role="status">Запущено. Ответ записан — дальше.</p>
       )}
       {(output || status === 'running') && (
         <pre role="status" aria-label="Вывод программы" style={{ background: '#0f172a', color: '#e2e8f0', padding: 12, borderRadius: 8, overflowX: 'auto' }}>

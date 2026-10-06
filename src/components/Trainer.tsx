@@ -1,11 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   checkMatching,
   checkNumericBase,
   checkSingleChoice,
   percentToMark,
 } from '../lib/scoring/check.mjs';
-import { saveResult } from '../lib/results';
+import { saveQuietAttempt, saveResult } from '../lib/results';
+import { getRole, isAuthConfigured, type Role } from '../lib/auth/client';
 import DragMatch from './DragMatch';
 import CodeRunner from './CodeRunner';
 
@@ -40,6 +41,18 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
       ? 'proverka'
       : 'trainer',
   );
+  // Роль: гость — как раньше (с ответами); ученик — тихо (без верно/неверно и ключей).
+  // ?as= — только для локальной разработки без бэкенда (там нет секретов).
+  const [role, setRole] = useState<Role>('guest');
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const q = new URLSearchParams(window.location.search).get('as');
+    if (!isAuthConfigured() && (q === 'student' || q === 'teacher' || q === 'guest')) {
+      setRole(q);
+      return;
+    }
+    getRole().then((r) => setRole(r.role));
+  }, []);
   const pages = useMemo<any[][]>(() => chunk((bank as any).tasks, (bank as any).page_size ?? 5), []);
   const totalPages = pages.length + 1; // + страница с ФИО
   const [step, setStep] = useState(0);
@@ -51,6 +64,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [codeVerdicts, setCodeVerdicts] = useState<Record<string, boolean>>({});
   const [error, setError] = useState('');
+  const [quietDone, setQuietDone] = useState<string | null>(null);
   const [done, setDone] = useState<null | {
     per: PerQ[];
     total: number;
@@ -65,6 +79,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
   const setA = (id: string, v: Answer) => {
     setAnswers((a) => ({ ...a, [id]: v }));
     setDone(null);
+    setQuietDone(null);
   };
 
   const isAnswered = (t: any): boolean => {
@@ -114,6 +129,22 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
     const missing = pages[step - 1].filter((t: any) => !isAnswered(t));
     if (missing.length > 0) {
       setError(`Ответьте на все вопросы страницы (не отвечен: Вопрос №${qNum(missing[0].id)}).`);
+      return;
+    }
+    // Тихий режим ученика: только ответы, без подсчёта и ключей.
+    if (role === 'student') {
+      const status = saveQuietAttempt({
+        surname: surname.trim(),
+        firstname: firstname.trim(),
+        className: `${classNum}-${classLetter}`,
+        testType: mode === 'proverka' ? 'proverka' : 'trainer',
+        testCode: (bank as any).test_code,
+        variant: (bank as any).variant,
+        tasks: (bank as any).tasks,
+        answers: answers as Record<string, string | Record<string, string>>,
+      });
+      setQuietDone(status);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
     const per: PerQ[] = (bank as any).tasks.map((t: any) => {
@@ -213,6 +244,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
             id={t.id}
             template={String(t.template ?? '')}
             expected={String(t.expected ?? '')}
+            quiet={role === 'student'}
             onResult={(ok, code) => {
               setCodeVerdicts((m) => ({ ...m, [t.id]: ok }));
               setA(t.id, code);
@@ -220,6 +252,24 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
           />
         )}
       </fieldset>
+    );
+  }
+
+  if (quietDone) {
+    return (
+      <div>
+        <div className="card">
+          <h2>Ответы сохранены</h2>
+          <p>
+            {surname} {firstname}, {classNum}-{classLetter} · {mode === 'proverka' ? 'проверочная' : 'тренажер'}
+          </p>
+          <p className="muted">{quietDone}</p>
+          <p className="muted">Здесь нет «верно/неверно», ключей и баллов — их знает только учитель.</p>
+        </div>
+        <button className="btn secondary" onClick={() => { setQuietDone(null); setAnswers({}); setCodeVerdicts({}); setStep(0); }}>
+          Пройти заново
+        </button>
+      </div>
     );
   }
 
@@ -255,6 +305,9 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
     <div>
       <h1>{mode === 'proverka' ? `Проверочная: ${title}` : `Тренажер: ${title}`}</h1>
       <p className="muted">Страница {step + 1} из {totalPages}</p>
+      {role === 'student' && (
+        <p className="muted">Тихий режим ученика: отвечай на всё по порядку — «верно/неверно» скажет учитель.</p>
+      )}
 
       {step === 0 && (
         <div className="card">

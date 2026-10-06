@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Board from './Board';
+import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
 // Источник: Supabase (когда настроен доступ teacher) + локальная очередь этого браузера.
@@ -26,17 +27,25 @@ export default function Teacher() {
   const [rows, setRows] = useState<Row[]>([]);
   const [note, setNote] = useState('Загрузка…');
   const [open, setOpen] = useState<number | null>(null);
+  const [role, setRole] = useState<Role>('guest');
+
+  useEffect(() => {
+    getRole().then((r) => setRole(r.role));
+  }, []);
 
   useEffect(() => {
     (async () => {
       const local: Row[] = JSON.parse(localStorage.getItem('results-queue-v1') || '[]');
       const url = import.meta.env.PUBLIC_SUPABASE_URL as string | undefined;
       const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY as string | undefined;
-      if (url && key) {
+      // Журнал из базы — только учителю и только его токеном (RLS иначе не пустит).
+      const r = await getRole().catch(() => ({ role: 'guest' as Role }));
+      const token = r.role === 'teacher' ? await getToken() : null;
+      if (url && key && token) {
         try {
           const res = await fetch(
             `${url.replace(/\/$/, '')}/rest/v1/results?select=*&order=created_at.desc&limit=200`,
-            { headers: { apikey: key, Authorization: `Bearer ${key}` } },
+            { headers: { apikey: key, Authorization: `Bearer ${token}` } },
           );
           if (res.ok) {
             const remote = (await res.json()) as Row[];
@@ -71,6 +80,11 @@ export default function Teacher() {
   return (
     <div>
       <h1>Журнал работ</h1>
+      {role !== 'teacher' && (
+        <div className="card">
+          <p><strong>Раздел учителя.</strong> Войди через Google/Яндекс и получи роль учителя (см. docs/auth-setup.md) — иначе видны только локальные строки этого браузера без отметок.</p>
+        </div>
+      )}
       <div className="card">
         <h2>Доска разборов</h2>
         <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>

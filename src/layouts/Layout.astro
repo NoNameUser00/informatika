@@ -1,6 +1,7 @@
 ---
 import SpaceBackground from '../components/SpaceBackground';
 import BoardFloat from '../components/BoardFloat';
+import AuthPanel from '../components/AuthPanel';
 import '../components/space-background.css';
 import '../components/board-float.css';
 // ЕДИНЫЙ стиль сайта: тёмный космос + матовое стекло (как главная).
@@ -53,6 +54,14 @@ const B = import.meta.env.BASE_URL;
       }
       header.top a { color: #fff; text-decoration: none; font-weight: 800; }
       header.top nav a { margin-right: 16px; color: #c7d2fe; }
+      .auth-panel { float: right; font-size: 0.85rem; }
+      .auth-btn {
+        background: rgba(255,255,255,.14); color: #fff;
+        border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+        padding: 6px 14px; min-height: 36px; font-weight: 700; cursor: pointer;
+      }
+      .auth-btn:disabled { opacity: .5; }
+      .auth-error { color: #fca5a5; }
       main { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
       main h1, main h2, main h3 { color: #fff; text-shadow: 0 2px 12px rgba(2,6,23,.8); }
       .card {
@@ -125,6 +134,7 @@ const B = import.meta.env.BASE_URL;
         <a href={`${B}8/`}>8 класс</a>
         <a href={`${B}8/trainer/`}>Тренажер</a>
         <a href={`${B}teacher/`}>Учитель</a>
+        <AuthPanel client:load />
       </nav>
     </header>
     <main>
