@@ -88,6 +88,9 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
     return true;
   }
 
+  // Человеческий номер вопроса в тесте (1-based), вместо технического id.
+  const qNum = (id: string): number => (bank as any).tasks.findIndex((t: any) => t.id === id) + 1;
+
   function next() {
     setError('');
     if (step === 0) {
@@ -96,7 +99,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
     }
     const missing = pages[step - 1].filter((t: any) => !isAnswered(t));
     if (missing.length > 0) {
-      setError(`Ответьте на все вопросы страницы (не отвечен: ${missing[0].id}).`);
+      setError(`Ответьте на все вопросы страницы (не отвечен: Вопрос №${qNum(missing[0].id)}).`);
       document.getElementById(missing[0].id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
@@ -107,7 +110,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
     setError('');
     const missing = pages[step - 1].filter((t: any) => !isAnswered(t));
     if (missing.length > 0) {
-      setError(`Ответьте на все вопросы страницы (не отвечен: ${missing[0].id}).`);
+      setError(`Ответьте на все вопросы страницы (не отвечен: Вопрос №${qNum(missing[0].id)}).`);
       return;
     }
     const per: PerQ[] = (bank as any).tasks.map((t: any) => {
@@ -214,7 +217,7 @@ export default function Trainer({ data, title }: { data: any; title: string }) {
         {done.per.map((p) => (
           <div className="card q" key={p.id}>
             <p>
-              <strong>{p.id}</strong> — <span className={p.ok ? 'ok' : 'bad'}>{p.ok ? 'верно' : 'неверно'}</span> · {p.score}/{p.max}
+              <strong>Вопрос №{qNum(p.id)}</strong> — <span className={p.ok ? 'ok' : 'bad'}>{p.ok ? 'верно' : 'неверно'}</span> · {p.score}/{p.max}
             </p>
             <p className="muted">Ваш ответ: {p.given}</p>
             {mode === 'trainer' && <p>Правильно: {p.key}</p>}
