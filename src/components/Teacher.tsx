@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Board from './Board';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
 // Источник: Supabase (когда настроен доступ teacher) + локальная очередь этого браузера.
@@ -70,6 +71,11 @@ export default function Teacher() {
   return (
     <div>
       <h1>Журнал работ</h1>
+      <div className="card">
+        <h2>Доска разборов</h2>
+        <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>
+        <Board id="teacher-board" />
+      </div>
       <p className="muted">{note}</p>
       {rows.length > 0 && <button className="btn secondary" onClick={csv}>Экспорт CSV</button>}
       {rows.map((r, i) => (
