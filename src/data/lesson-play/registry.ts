@@ -5,6 +5,10 @@ import { NUMSYS_03_PLAY } from './numsys-03-octal';
 import { NUMSYS_04_PLAY } from './numsys-04-hex';
 import { NUMSYS_05_PLAY } from './numsys-05-arith';
 import { NUMSYS_06_PLAY } from './numsys-06-review';
+import { LOGIC_01_PLAY } from './logic-01-utterances';
+import { LOGIC_02_PLAY } from './logic-02-operations';
+import { LOGIC_03_PLAY } from './logic-03-truth-tables';
+import { LOGIC_04_PLAY } from './logic-04-elements';
 
 export type PlayStep =
   | { kind: 'theory'; title: string; body: string[]; mono?: string[] }
@@ -37,6 +41,10 @@ const REGISTRY: Record<string, PlayLesson> = {
   'numsys-04-hex': NUMSYS_04_PLAY,
   'numsys-05-arith': NUMSYS_05_PLAY,
   'numsys-06-review': NUMSYS_06_PLAY,
+  'logic-01-utterances': LOGIC_01_PLAY,
+  'logic-02-operations': LOGIC_02_PLAY,
+  'logic-03-truth-tables': LOGIC_03_PLAY,
+  'logic-04-elements': LOGIC_04_PLAY,
 };
 
 export function hasPlay(id: string): boolean {

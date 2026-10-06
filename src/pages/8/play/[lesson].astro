@@ -17,6 +17,8 @@ const idx = LESSONS_8.indexOf(meta);
 const next = LESSONS_8[idx + 1];
 const play = getPlay(meta.id);
 const B = import.meta.env.BASE_URL;
+const isLogic = meta.id.startsWith('logic-');
+const trainerHref = `${B}8/${isLogic ? 'logic' : 'trainer'}/`;
 ---
 <!doctype html>
 <html lang="ru">
@@ -51,7 +53,7 @@ const B = import.meta.env.BASE_URL;
       <LessonPlay
         client:load
         lesson={play}
-        trainerHref={`${B}8/trainer/`}
+        trainerHref={trainerHref}
         nextHref={next ? `${B}8/${next.id}/` : undefined}
         nextTitle={next?.title}
       />
