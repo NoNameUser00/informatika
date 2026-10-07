@@ -16,11 +16,11 @@ interface Grade {
 // Состав — по реальному контенту сайта (без выдуманного прогресса:
 // личное «где остановился» показывает карточка ContinueCard из localStorage).
 const GRADES: Grade[] = [
-  { n: '7', color: '#16a34a', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
-  { n: '8', color: '#2563eb', topics: 'ТБ · 6 уроков СС · 4 урока логики · тренажёры', status: 'Полный блок' },
-  { n: '9', color: '#9333ea', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
-  { n: '10', color: '#ea580c', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
-  { n: '11', color: '#dc2626', topics: 'Урок 0 · Техника безопасности', status: 'Только урок 0' },
+  { n: '7', color: '#16a34a', topics: 'Информация · Компьютер · Тексты · Графика · Интернет', status: '13 уроков' },
+  { n: '8', color: '#2563eb', topics: 'СС · Логика · Алгоритмы · Python · тренажёры', status: '17 уроков' },
+  { n: '9', color: '#9333ea', topics: 'Таблицы · Массивы · Графы · Роботы · Интернет', status: '9 уроков' },
+  { n: '10', color: '#ea580c', topics: 'Железо · Информация · СС · Логика · Документы', status: '6 уроков' },
+  { n: '11', color: '#dc2626', topics: 'Данные · БД · Алгоритмы · Сети · Безопасность', status: '6 уроков' },
 ];
 ---
 <!doctype html>
@@ -119,13 +119,12 @@ const GRADES: Grade[] = [
       <header class="home-top">
         <span class="home-logo">Информатика</span>
         <nav>
-          <a href={`${B}8/`}>8 класс</a>
           <a href={`${B}teacher/`}>Учителю</a>
           <AuthPanel client:load />
         </nav>
       </header>
-      <section class="home-hero">
-        <p class="home-kicker">Информатика · 7–11 классы</p>
+      <section className="home-hero">
+        <p className="home-kicker">7–11 классы</p>
         <h1>Теория, тренажёры, проверочные</h1>
         <p class="home-sub">Экзаменационные ключи хранятся на сервере и ученику не показываются.</p>
         <a class="home-cta" href={`${B}8/`}>Начать учиться → 8 класс</a>
