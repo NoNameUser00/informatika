@@ -52,9 +52,9 @@ import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
 
 export type PlayStep =
-  | { kind: 'theory'; title: string; body: string[]; mono?: string[] }
-  | { kind: 'key'; title: string; body: string[]; writeDown: string; mono?: string[] }
-  | { kind: 'example'; title: string; intro: string; lines: string[]; mono?: string[] }
+  | { kind: 'theory'; title: string; body: string[]; mono?: string[]; tip?: string }
+  | { kind: 'key'; title: string; body: string[]; writeDown: string; mono?: string[]; tip?: string }
+  | { kind: 'example'; title: string; intro: string; lines: string[]; mono?: string[]; tip?: string }
   | {
       kind: 'task';
       title: string;
@@ -65,6 +65,7 @@ export type PlayStep =
       options?: { id: string; text: string }[];
       correct?: string;
       hint: string;
+      tip?: string;
     };
 
 export interface PlayLesson {

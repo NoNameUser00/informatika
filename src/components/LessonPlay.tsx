@@ -4,6 +4,15 @@
 import { useMemo, useState } from 'react';
 import { checkNumericBase, checkSingleChoice } from '../lib/scoring/check.mjs';
 import type { PlayLesson, PlayStep } from '../data/lesson-play/registry';
+import Mascot, { type MascotMood } from './Mascot';
+
+const PHASE_TIP: Record<string, { text: string; mood: MascotMood }> = {
+  theory: { text: 'Читаем внимательно — дальше спрошу!', mood: 'happy' },
+  key: { text: 'Это в тетрадь! Без галочки дальше не пущу.', mood: 'think' },
+  example: { text: 'Открывай шаги по одному, не подглядывай.', mood: 'happy' },
+  task: { text: 'Решай сам. Подсказка — только после двух ошибок.', mood: 'think' },
+  final: { text: 'Урок пройден! Так держать.', mood: 'cool' },
+};
 
 type Phase = 'theory' | 'key' | 'example' | 'task' | 'final';
 const PHASE_LABEL: Record<Phase, string> = {
@@ -88,6 +97,8 @@ export default function LessonPlay({
   const phases: Phase[] = ['theory', 'key', 'example', 'task', 'final'];
   const now = phaseOf(lesson, idx);
   const nowPos = phases.indexOf(now);
+  const phaseTip = PHASE_TIP[isLast ? 'final' : step!.kind];
+  const stepTip = !isLast && 'tip' in step! && step!.tip ? (step as { tip?: string }).tip : null;
 
   return (
     <div className="lp">
@@ -101,6 +112,10 @@ export default function LessonPlay({
           </li>
         ))}
       </ol>
+      <div className="mascot-row">
+        <Mascot mood={isLast ? (score.got === score.n ? 'cool' : 'happy') : phaseTip.mood} size={56} />
+        <p className="mascot-say">{stepTip ?? (isLast ? (score.got === score.n ? 'Всё верно — ты звезда!' : phaseTip.text) : phaseTip.text)}</p>
+      </div>
       <p className="lp-meta">
         Урок {lesson.no} · {lesson.title} · шаг {idx + 1} из {total} · ≈{lesson.minutes} мин
       </p>

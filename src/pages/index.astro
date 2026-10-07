@@ -3,8 +3,10 @@ import SpaceBackground from '../components/SpaceBackground';
 import ContinueCard from '../components/ContinueCard';
 import BoardFloat from '../components/BoardFloat';
 import AuthPanel from '../components/AuthPanel';
+import Mascot from '../components/Mascot';
 import '../components/space-background.css';
 import '../components/board-float.css';
+import '../components/mascot.css';
 const B = import.meta.env.BASE_URL;
 
 interface Grade {
@@ -123,9 +125,13 @@ const GRADES: Grade[] = [
           <AuthPanel client:load />
         </nav>
       </header>
-      <section className="home-hero">
-        <p className="home-kicker">7–11 классы</p>
+      <section class="home-hero">
+        <p class="home-kicker">7–11 классы</p>
         <h1>Теория, тренажёры, проверочные</h1>
+        <div class="mascot-row">
+          <Mascot mood="happy" size={84} />
+          <p class="mascot-say">Привет! Я Робит. Полетели учиться — начни с 8 класса!</p>
+        </div>
         <p class="home-sub">Экзаменационные ключи хранятся на сервере и ученику не показываются.</p>
         <a class="home-cta" href={`${B}8/`}>Начать учиться → 8 класс</a>
         <ContinueCard client:load />
