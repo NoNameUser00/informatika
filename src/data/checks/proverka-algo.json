@@ -1,7 +1,7 @@
 {
   "test_code": "algo-proverka-v1",
   "variant": "v1",
-  "max_score": 6,
+  "max_score": 7,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -101,6 +101,33 @@
         {
           "id": "D",
           "text": "Отрезок"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-012",
+      "lesson": "alg-04-loops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "До выполнения тела"
+        },
+        {
+          "id": "B",
+          "text": "После выполнения тела"
+        },
+        {
+          "id": "C",
+          "text": "В середине тела"
+        },
+        {
+          "id": "D",
+          "text": "Не проверяется"
         }
       ],
       "correct": "A",

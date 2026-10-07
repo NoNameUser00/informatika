@@ -31,9 +31,9 @@ const B = import.meta.env.BASE_URL;
   <div class="card">
     <a class="btn" href={`${B}8/logic/`}>Тренажер по логике</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}8/proverka-logic/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}8/proverka-logic/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}8/control-logic/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}8/control-logic/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_8.filter((l) => l.id.startsWith('logic')).map((l, i) => (
     <div class="card">
@@ -45,9 +45,9 @@ const B = import.meta.env.BASE_URL;
   <div class="card">
     <a class="btn" href={`${B}8/algo/`}>Тренажер по алгоритмам</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}8/proverka-algo/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}8/proverka-algo/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}8/control-algo/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}8/control-algo/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_8.filter((l) => l.id.startsWith('alg')).map((l, i) => (
     <div class="card">

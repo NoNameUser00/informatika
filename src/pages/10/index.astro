@@ -15,7 +15,7 @@ const grade = '10';
   <div class="card">
     <a class="btn" href={`${B}${grade}/base/`}>Тренажер: железо и информация</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-10base/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-10base/`}>Проверочная (6 заданий)</a>
     <span> </span>
     <a class="btn secondary" href={`${B}${grade}/control-10base/`}>Контрольная (5 заданий)</a>
   </div>
@@ -31,9 +31,9 @@ const grade = '10';
     <span> </span>
     <a class="btn" href={`${B}${grade}/logic/`}>Тренажер: логика</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-10adv/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-10adv/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-10adv/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-10adv/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_10.filter((l) => l.id.startsWith('10ss') || l.id.startsWith('10logic')).map((l, i) => (
     <div class="card">
@@ -45,7 +45,7 @@ const grade = '10';
   <div class="card">
     <a class="btn" href={`${B}${grade}/media/`}>Тренажер: документы</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-10media/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-10media/`}>Проверочная (6 заданий)</a>
     <span> </span>
     <a class="btn secondary" href={`${B}${grade}/control-10media/`}>Контрольная (6 заданий)</a>
   </div>

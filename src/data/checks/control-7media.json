@@ -1,7 +1,7 @@
 {
   "test_code": "grade7media-control-v1",
   "variant": "v1",
-  "max_score": 11,
+  "max_score": 13,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -178,6 +178,60 @@
         {
           "id": "D",
           "text": "Без репетиции"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-003",
+      "lesson": "7gfx-02-editors",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем взять цвет с картинки в растровом редакторе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Пипеткой"
+        },
+        {
+          "id": "B",
+          "text": "Ластиком"
+        },
+        {
+          "id": "C",
+          "text": "Кистью"
+        },
+        {
+          "id": "D",
+          "text": "Заливкой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-006",
+      "lesson": "7soft-01-practice",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Где безопасно качать программы?",
+      "options": [
+        {
+          "id": "A",
+          "text": "На официальных сайтах"
+        },
+        {
+          "id": "B",
+          "text": "Где попало"
+        },
+        {
+          "id": "C",
+          "text": "По ссылкам из спама"
+        },
+        {
+          "id": "D",
+          "text": "С чужой флешки"
         }
       ],
       "correct": "A",

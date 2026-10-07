@@ -83,3 +83,70 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Время = объём / скорость" }
+- id: inf-10-base-006
+  class: 10
+  topic: Устройство и информация
+  subtopic: Шины
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Что идёт по шине адреса?"
+  student_view: { options: [{ id: A, text: "Адреса ячеек памяти" }, { id: B, text: "Данные программ" }, { id: C, text: "Питание" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Адрес — куда, данные — что" }
+
+- id: inf-10-base-007
+  class: 10
+  topic: Устройство и информация
+  subtopic: Биты исходов
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Сколько бит нужно, чтобы различить 16 исходов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "2^4 = 16" }
+
+- id: inf-10-base-008
+  class: 10
+  topic: Устройство и информация
+  subtopic: Избыточность
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Чем борются с помехами в канале?"
+  student_view: { options: [{ id: A, text: "Избыточностью: повторы и контрольные суммы" }, { id: B, text: "Криком" }, { id: C, text: "Ничем" }, { id: D, text: "Удалением канала" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Лишние биты ловят искажения" }
+
+- id: inf-10-base-009
+  class: 10
+  topic: Устройство и информация
+  subtopic: Время передачи
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Файл 2048 бит, канал 512 бит/с. Сколько секунд качать? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "2048 / 512 = 4" }

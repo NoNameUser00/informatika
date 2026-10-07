@@ -1,7 +1,7 @@
 {
   "test_code": "algo-control-v1",
   "variant": "v1",
-  "max_score": 14,
+  "max_score": 16,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -164,6 +164,60 @@
         {
           "id": "D",
           "text": "Не проверяется"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-009",
+      "lesson": "alg-03-branching",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "В какой форме ветвления при ложном условии не выполняется ничего?",
+      "options": [
+        {
+          "id": "A",
+          "text": "В полной"
+        },
+        {
+          "id": "B",
+          "text": "В неполной"
+        },
+        {
+          "id": "C",
+          "text": "В обеих"
+        },
+        {
+          "id": "D",
+          "text": "Ни в какой"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-007",
+      "lesson": "alg-02-notation",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает запись «x := x + 1»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Положить в x старое x плюс 1"
+        },
+        {
+          "id": "B",
+          "text": "Утверждение, что x равен x + 1"
+        },
+        {
+          "id": "C",
+          "text": "Сравнение x с x + 1"
+        },
+        {
+          "id": "D",
+          "text": "Цикл по x"
         }
       ],
       "correct": "A",

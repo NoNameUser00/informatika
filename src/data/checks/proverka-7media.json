@@ -1,7 +1,7 @@
 {
   "test_code": "grade7media-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -135,6 +135,33 @@
         {
           "id": "D",
           "text": "Без репетиции"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-009",
+      "lesson": "7code-01-sound",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что будет, если поднять частоту дискретизации и глубину?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Лучше качество и больше вес"
+        },
+        {
+          "id": "B",
+          "text": "Хуже качество"
+        },
+        {
+          "id": "C",
+          "text": "Ничего не изменится"
+        },
+        {
+          "id": "D",
+          "text": "Звук исчезнет"
         }
       ],
       "correct": "A",

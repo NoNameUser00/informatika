@@ -100,3 +100,53 @@
   student_view: { options: [{ id: A, text: "Специальным редактором формул" }, { id: B, text: "Надстрочными костылями" }, { id: C, text: "Картинками из чата" }, { id: D, text: "Ничем" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Формулы — редактором, иначе разъедутся" }
+- id: inf-10-media-007
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Структура документа
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
+  prompt: "Что помогает ориентироваться в большом документе?"
+  student_view: { options: [{ id: A, text: "Оглавление, сноски, нумерация" }, { id: B, text: "Только картинки" }, { id: C, text: "Только шрифт" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Структурные элементы документа" }
+
+- id: inf-10-media-008
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Скриншот текста
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-fmt], meta: [plan-actions] }
+  prompt: "В каком формате сохранить скриншот с текстом?"
+  student_view: { options: [{ id: A, text: "PNG" }, { id: B, text: "JPEG" }, { id: C, text: "MP3" }, { id: D, text: "AVI" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Текст чёткий только без потерь" }
+
+- id: inf-10-media-009
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: VR и AR
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-3d], meta: [plan-actions] }
+  prompt: "Чем виртуальная реальность отличается от дополненной?"
+  student_view: { options: [{ id: A, text: "VR погружает, AR дополняет мир" }, { id: B, text: "Ничем" }, { id: C, text: "AR дороже" }, { id: D, text: "VR — это монитор" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Погружение против наложения" }

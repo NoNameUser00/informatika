@@ -1,7 +1,7 @@
 {
   "test_code": "graph9-control-v1",
   "variant": "v1",
-  "max_score": 10,
+  "max_score": 12,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -152,6 +152,26 @@
       "base": 10,
       "expected": 2,
       "key": "2"
+    },
+    {
+      "id": "inf-9-graph-009",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько рёбер в звезде: центр и 4 луча? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-010",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько вершин в цепочке из 3 рёбер? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
     }
   ]
 }

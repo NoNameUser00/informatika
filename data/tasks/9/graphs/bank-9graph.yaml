@@ -134,3 +134,37 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Два ребра — две единицы" }
+- id: inf-9-graph-009
+  class: 9
+  topic: Графы
+  subtopic: Звезда
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Сколько рёбер в звезде: центр и 4 луча? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "По ребру на луч" }
+
+- id: inf-9-graph-010
+  class: 9
+  topic: Графы
+  subtopic: Вершины цепочки
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Сколько вершин в цепочке из 3 рёбер? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Вершин на одну больше" }
+

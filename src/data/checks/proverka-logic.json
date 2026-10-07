@@ -1,7 +1,7 @@
 {
   "test_code": "logic-proverka-v1",
   "variant": "v1",
-  "max_score": 6,
+  "max_score": 8,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -98,6 +98,25 @@
       "base": 10,
       "expected": 2,
       "key": "2"
+    },
+    {
+      "id": "inf-8-logic-010",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=0, B=0 вычислите A ∨ B.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
     }
   ]
 }

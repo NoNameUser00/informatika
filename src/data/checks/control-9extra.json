@@ -1,7 +1,7 @@
 {
   "test_code": "extra9-control-v1",
   "variant": "v1",
-  "max_score": 11,
+  "max_score": 13,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -182,6 +182,60 @@
         {
           "id": "D",
           "text": "Выключать интернет"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-002",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем роботу датчики?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Получать сигналы о мире"
+        },
+        {
+          "id": "B",
+          "text": "Красиво выглядеть"
+        },
+        {
+          "id": "C",
+          "text": "Греть моторы"
+        },
+        {
+          "id": "D",
+          "text": "Шуметь"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-004",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда модель адекватна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Результаты близки к эксперименту"
+        },
+        {
+          "id": "B",
+          "text": "Она красивая"
+        },
+        {
+          "id": "C",
+          "text": "Она большая"
+        },
+        {
+          "id": "D",
+          "text": "Она старая"
         }
       ],
       "correct": "A",

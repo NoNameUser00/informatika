@@ -1,7 +1,7 @@
 {
   "test_code": "algo11-v1",
   "variant": "trainer-v1",
-  "max_score": 12,
+  "max_score": 15,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -169,6 +169,43 @@
       "base": 10,
       "expected": 10000,
       "key": "10000"
+    },
+    {
+      "id": "inf-11-algo-009",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(4)? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-11-algo-010",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое инвариант цикла?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Утверждение, верное до и после каждого прохода"
+        },
+        {
+          "id": "B",
+          "text": "Счётчик цикла"
+        },
+        {
+          "id": "C",
+          "text": "Условие выхода"
+        },
+        {
+          "id": "D",
+          "text": "Тело цикла"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "test_code": "grade7base-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -135,6 +135,33 @@
         {
           "id": "D",
           "text": "Ждать неделю"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-base-012",
+      "lesson": "7net-01-internet",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что защищает от вирусов в первую очередь?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Антивирусная программа"
+        },
+        {
+          "id": "B",
+          "text": "Яркие обои"
+        },
+        {
+          "id": "C",
+          "text": "Громкий звук"
+        },
+        {
+          "id": "D",
+          "text": "Быстрый интернет"
         }
       ],
       "correct": "A",

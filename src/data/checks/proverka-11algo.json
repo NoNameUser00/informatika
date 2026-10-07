@@ -1,7 +1,7 @@
 {
   "test_code": "algo11-proverka-v1",
   "variant": "v1",
-  "max_score": 6,
+  "max_score": 8,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -122,6 +122,16 @@
       "base": 10,
       "expected": 10000,
       "key": "10000"
+    },
+    {
+      "id": "inf-11-algo-007",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(3)? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
     }
   ]
 }

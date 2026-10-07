@@ -1,7 +1,7 @@
 {
   "test_code": "sheet9-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -139,6 +139,16 @@
       ],
       "correct": "A",
       "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-009",
+      "lesson": "9sheet-01-base",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что вычислит формула =(2+3)*4? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
     }
   ]
 }

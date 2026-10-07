@@ -144,3 +144,37 @@
   student_view: { options: [{ id: A, text: "Номер элемента-чемпиона" }, { id: B, text: "Само число-чемпион" }, { id: C, text: "Длину списка" }, { id: D, text: "Сумму" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "imax — индекс, a[imax] — значение" }
+- id: inf-9-arr-009
+  class: 9
+  topic: Массивы
+  subtopic: Среднее массива
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Найдите среднее чисел [4, 6, 8]. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "18 / 3 = 6" }
+
+- id: inf-9-arr-010
+  class: 9
+  topic: Массивы
+  subtopic: Длина списка
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-idx], meta: [plan-actions] }
+  prompt: "Чему равен len([1, 2, 3])? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Три элемента" }
+

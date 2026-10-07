@@ -14,9 +14,9 @@ const grade = '7';
   <div class="card">
     <a class="btn" href={`${B}${grade}/trainer/`}>Тренажер «Информация»</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-info/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-info/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-info/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-info/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_7.filter((l) => l.id.startsWith('7inf')).map((l, i) => (
     <div class="card">
@@ -26,9 +26,9 @@ const grade = '7';
   ))}
   <h2>Компьютер, файлы, тексты, графика, интернет</h2>
   <div class="card">
-    <a class="btn secondary" href={`${B}${grade}/proverka-7base/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-7base/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-7base/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-7base/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_7.filter((l) => ['7pc-01-hardware', '7pc-02-files', '7doc-01-text', '7gfx-01-graphics', '7net-01-internet'].includes(l.id)).map((l, i) => (
     <div class="card">
@@ -38,9 +38,9 @@ const grade = '7';
   ))}
   <h2>Мультимедиа и практика</h2>
   <div class="card">
-    <a class="btn secondary" href={`${B}${grade}/proverka-7media/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-7media/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-7media/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-7media/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_7.filter((l) => ['7media-01-slides', '7gfx-02-editors', '7soft-01-practice', '7code-01-sound'].includes(l.id)).map((l, i) => (
     <div class="card">

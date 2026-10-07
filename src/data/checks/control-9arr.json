@@ -1,7 +1,7 @@
 {
   "test_code": "arr9-control-v1",
   "variant": "v1",
-  "max_score": 14,
+  "max_score": 16,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -135,6 +135,26 @@
       ],
       "correct": "A",
       "key": "A"
+    },
+    {
+      "id": "inf-9-arr-009",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найдите среднее чисел [4, 6, 8]. Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-arr-010",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен len([1, 2, 3])? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
     }
   ]
 }

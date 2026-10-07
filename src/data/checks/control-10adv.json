@@ -1,7 +1,7 @@
 {
   "test_code": "adv10-control-v1",
   "variant": "v1",
-  "max_score": 13,
+  "max_score": 15,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -184,6 +184,60 @@
         {
           "id": "D",
           "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-ss-005",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что общего у переводов в любой P-ичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Веса P^i и деление на P"
+        },
+        {
+          "id": "B",
+          "text": "Только деление"
+        },
+        {
+          "id": "C",
+          "text": "Только триады"
+        },
+        {
+          "id": "D",
+          "text": "Ничего общего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-logic-003",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое предикат?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Утверждение с переменными"
+        },
+        {
+          "id": "B",
+          "text": "Готовая истина"
+        },
+        {
+          "id": "C",
+          "text": "Вопрос"
+        },
+        {
+          "id": "D",
+          "text": "Число"
         }
       ],
       "correct": "A",

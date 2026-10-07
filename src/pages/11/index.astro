@@ -17,9 +17,9 @@ const grade = '11';
     <span> </span>
     <a class="btn" href={`${B}${grade}/db/`}>Тренажер: базы данных</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-11base/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11base/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-11base/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-11base/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_11.filter((l) => l.id.startsWith('11data') || l.id.startsWith('11db')).map((l, i) => (
     <div class="card">
@@ -31,9 +31,9 @@ const grade = '11';
   <div class="card">
     <a class="btn" href={`${B}${grade}/algo/`}>Тренажер: алгоритмы</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-11algo/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11algo/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-11algo/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-11algo/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_11.filter((l) => l.id.startsWith('11algo')).map((l, i) => (
     <div class="card">
@@ -45,9 +45,9 @@ const grade = '11';
   <div class="card">
     <a class="btn" href={`${B}${grade}/net/`}>Тренажер: сети</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-11net/`}>Проверочная (5 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11net/`}>Проверочная (6 заданий)</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-11net/`}>Контрольная (8 заданий)</a>
+    <a class="btn secondary" href={`${B}${grade}/control-11net/`}>Контрольная (10 заданий)</a>
   </div>
   {LESSONS_11.filter((l) => l.id.startsWith('11net') || l.id.startsWith('11safe')).map((l, i) => (
     <div class="card">

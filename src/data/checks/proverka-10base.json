@@ -1,7 +1,7 @@
 {
   "test_code": "base10-proverka-v1",
   "variant": "v1",
-  "max_score": 8,
+  "max_score": 9,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -88,6 +88,33 @@
       "base": 10,
       "expected": 8,
       "key": "8"
+    },
+    {
+      "id": "inf-10-base-006",
+      "lesson": "10hw-01-pc",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что идёт по шине адреса?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Адреса ячеек памяти"
+        },
+        {
+          "id": "B",
+          "text": "Данные программ"
+        },
+        {
+          "id": "C",
+          "text": "Питание"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     }
   ]
 }

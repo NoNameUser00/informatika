@@ -134,3 +134,36 @@
   student_view: { options: [{ id: A, text: "Уверенно ошибается в фактах" }, { id: B, text: "Всегда прав" }, { id: C, text: "Медленный" }, { id: D, text: "Дорогой" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "ИИ — инструмент с проверкой" }
+- id: inf-11-net-009
+  class: 11
+  topic: Сети
+  subtopic: Числа адреса
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-ip6], meta: [plan-actions] }
+  prompt: "Сколько чисел в IPv4-адресе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Четыре числа по 8 бит" }
+
+- id: inf-11-net-010
+  class: 11
+  topic: Сети
+  subtopic: Фишинг
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-dns], meta: [plan-actions] }
+  prompt: "Что такое фишинг?"
+  student_view: { options: [{ id: A, text: "Поддельные письма и сайты для кражи данных" }, { id: B, text: "Вид рыбы" }, { id: C, text: "Антивирусная программа" }, { id: D, text: "Протокол сети" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Подделка под настоящее" }

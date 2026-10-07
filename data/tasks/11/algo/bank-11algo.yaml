@@ -134,3 +134,37 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [10000], answer_text: "10000", explanation: "n² при n = 100" }
+- id: inf-11-algo-009
+  class: 11
+  topic: Сортировки и структуры
+  subtopic: Факториал кодом
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-02-advanced
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
+  prompt: "F(n) = n · F(n−1), F(0) = 1. Чему равно F(4)? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [24], answer_text: "24", explanation: "4·3·2·1 = 24" }
+
+- id: inf-11-algo-010
+  class: 11
+  topic: Сортировки и структуры
+  subtopic: Инвариант
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-advanced
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Что такое инвариант цикла?"
+  student_view: { options: [{ id: A, text: "Утверждение, верное до и после каждого прохода" }, { id: B, text: "Счётчик цикла" }, { id: C, text: "Условие выхода" }, { id: D, text: "Тело цикла" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Инвариант доказывает правильность" }
+

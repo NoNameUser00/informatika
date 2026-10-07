@@ -1,7 +1,7 @@
 {
   "test_code": "base11-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -118,6 +118,33 @@
         {
           "id": "D",
           "text": "Никак"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-006",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем показать динамику за 5 лет?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Линейной диаграммой"
+        },
+        {
+          "id": "B",
+          "text": "Круговой"
+        },
+        {
+          "id": "C",
+          "text": "Таблицей без сортировки"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
         }
       ],
       "correct": "A",

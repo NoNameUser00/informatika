@@ -1,7 +1,7 @@
 {
   "test_code": "extra9-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -122,6 +122,33 @@
       "base": 10,
       "expected": 32,
       "key": "32"
+    },
+    {
+      "id": "inf-9-extra-006",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Из чего состоит IP-адрес?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 числа от 0 до 255"
+        },
+        {
+          "id": "B",
+          "text": "3 буквы"
+        },
+        {
+          "id": "C",
+          "text": "10 цифр подряд"
+        },
+        {
+          "id": "D",
+          "text": "Имя сайта"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     }
   ]
 }

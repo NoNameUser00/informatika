@@ -1,7 +1,7 @@
 {
   "test_code": "grade7-proverka-v1",
   "variant": "v1",
-  "max_score": 5,
+  "max_score": 6,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -122,6 +122,33 @@
       "base": 10,
       "expected": 1024,
       "key": "1024"
+    },
+    {
+      "id": "inf-7-inf-002",
+      "lesson": "7inf-01-info",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что идёт первым в цепочке передачи информации?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Приёмник"
+        },
+        {
+          "id": "B",
+          "text": "Источник"
+        },
+        {
+          "id": "C",
+          "text": "Канал связи"
+        },
+        {
+          "id": "D",
+          "text": "Декодирующее устройство"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
     }
   ]
 }

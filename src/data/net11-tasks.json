@@ -1,7 +1,7 @@
 {
   "test_code": "net11-v1",
   "variant": "trainer-v1",
-  "max_score": 9,
+  "max_score": 11,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -192,6 +192,43 @@
         {
           "id": "D",
           "text": "Дорогой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-009",
+      "lesson": "11net-01-networks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел в IPv4-адресе? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-11-net-010",
+      "lesson": "11net-01-networks",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое фишинг?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Поддельные письма и сайты для кражи данных"
+        },
+        {
+          "id": "B",
+          "text": "Вид рыбы"
+        },
+        {
+          "id": "C",
+          "text": "Антивирусная программа"
+        },
+        {
+          "id": "D",
+          "text": "Протокол сети"
         }
       ],
       "correct": "A",

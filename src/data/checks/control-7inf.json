@@ -1,7 +1,7 @@
 {
   "test_code": "grade7-control-v1",
   "variant": "v1",
-  "max_score": 13,
+  "max_score": 18,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -135,6 +135,26 @@
       "base": 10,
       "expected": 5,
       "key": "5"
+    },
+    {
+      "id": "inf-7-inf-004",
+      "lesson": "7inf-02-coding",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Какой наименьшей длины нужен двоичный код, чтобы закодировать 100 разных символов? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-7-inf-012",
+      "lesson": "7inf-04-textvolume",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Племя Пульти пишет 32-символьным алфавитом. Сколько байт на одной табличке из 256 символов? Запишите только число.",
+      "base": 10,
+      "expected": 160,
+      "key": "160"
     }
   ]
 }

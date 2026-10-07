@@ -1,7 +1,7 @@
 {
   "test_code": "base11-control-v1",
   "variant": "v1",
-  "max_score": 10,
+  "max_score": 13,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -195,6 +195,60 @@
         {
           "id": "D",
           "text": "Сломает монитор"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-004",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что ищет подбор параметра?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Вход, дающий нужный выход"
+        },
+        {
+          "id": "B",
+          "text": "Ошибки в тексте"
+        },
+        {
+          "id": "C",
+          "text": "Вирусы"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-db-004",
+      "lesson": "11db-01-databases",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Нужны фамилии всех с баллом выше 80. Что это?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Запрос на выборку"
+        },
+        {
+          "id": "B",
+          "text": "Удаление таблицы"
+        },
+        {
+          "id": "C",
+          "text": "Смена пароля"
+        },
+        {
+          "id": "D",
+          "text": "Архивация"
         }
       ],
       "correct": "A",

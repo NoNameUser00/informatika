@@ -1,7 +1,7 @@
 {
   "test_code": "arr9-proverka-v1",
   "variant": "v1",
-  "max_score": 7,
+  "max_score": 8,
   "instruction": "Отвечайте точно.",
   "page_size": 5,
   "tasks": [
@@ -105,6 +105,16 @@
       "base": 10,
       "expected": 2,
       "key": "2"
+    },
+    {
+      "id": "inf-9-arr-002",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найдите сумму элементов [3, 7, 5]. Запишите только число.",
+      "base": 10,
+      "expected": 15,
+      "key": "15"
     }
   ]
 }
