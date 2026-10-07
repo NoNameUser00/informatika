@@ -1,7 +1,7 @@
 /* Плеер урока в стилистике главной: тёмный космос, светлые стеклянные карточки,
    янтарные primary-кнопки, графитовые secondary. */
 .lp { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; padding: 16px 20px 90px; color: #fff; }
-.lp-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.lp-top { display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between; align-items: center; padding: 14px 0; }
 .lp-top a { color: #c7d2fe; font-weight: 700; }
 .lp-progress { height: 10px; background: rgba(255,255,255,.18); border-radius: 999px; margin: 6px 0 8px; overflow: hidden; }
 .lp-progress i { display: block; height: 100%; background: #16a34a; border-radius: 999px; transition: width .3s; }

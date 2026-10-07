@@ -61,3 +61,17 @@
 .board-body .card {
   margin: 0;
 }
+/* Мобильные: компактный кружок, чтобы не перекрывать контролы форм. */
+@media (max-width: 560px) {
+  .board-fab {
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.3rem;
+  }
+  .board-fab-label {
+    display: none;
+  }
+}

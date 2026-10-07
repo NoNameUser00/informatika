@@ -70,6 +70,9 @@ export default function SpaceBackground() {
   const [prefs, setPrefs] = useState<Prefs>(INITIAL);
   const prefsRef = useRef(prefs);
   prefsRef.current = prefs;
+  // Панель свёрнута/развёрнута. Дефолт — развёрнута (как SSR); на узких
+  // экранах сворачиваем эффектом, чтобы не закрывать контент.
+  const [panelOpen, setPanelOpen] = useState(true);
   // Эко-режим: true, когда FPS-метр срезал плотность ради плавности.
   const [eco, setEco] = useState(false);
 
@@ -82,6 +85,7 @@ export default function SpaceBackground() {
     } else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setPrefs((p) => ({ ...p, paused: true }));
     }
+    if (window.innerWidth <= 560) setPanelOpen(false);
   }, []);
 
   const patch = (p: Partial<Prefs>) => {
@@ -342,39 +346,55 @@ export default function SpaceBackground() {
     <>
       <canvas className="space-canvas" ref={ref} aria-hidden="true" />
       <div className="space-panel" role="group" aria-label="Управление фоном">
-        <button
-          type="button"
-          className="space-pause"
-          onClick={() => patch({ paused: !prefs.paused })}
-          aria-pressed={prefs.paused}
-          aria-label={prefs.paused ? 'Запустить анимацию фона' : 'Остановить анимацию фона'}
-        >
-          {prefs.paused ? '▶ Старт' : '⏸ Пауза'}{eco ? ' · ECO' : ''}
-        </button>
-        <label className="space-slider">
-          <span>Звёзды · {Math.round(prefs.count)}%</span>
-          <input
-            type="range"
-            min={MIN_COUNT}
-            max={MAX_COUNT}
-            step={1}
-            value={Math.round(prefs.count)}
-            onChange={(e) => patch({ count: Number(e.target.value) })}
-            aria-label="Плотность звёзд, проценты"
-          />
-        </label>
-        <label className="space-slider">
-          <span>Скорость · {Math.round(prefs.speed)}</span>
-          <input
-            type="range"
-            min={MIN_SPEED}
-            max={MAX_SPEED}
-            step={10}
-            value={Math.round(prefs.speed)}
-            onChange={(e) => patch({ speed: Number(e.target.value) })}
-            aria-label="Скорость полёта"
-          />
-        </label>
+        <div className="space-row">
+          <button
+            type="button"
+            className="space-gear"
+            onClick={() => setPanelOpen(!panelOpen)}
+            aria-expanded={panelOpen}
+            aria-label={panelOpen ? 'Свернуть управление фоном' : 'Развернуть управление фоном'}
+            title="Фон: настройки"
+          >
+            {panelOpen ? '✕' : '⚙'}
+          </button>
+          <button
+            type="button"
+            className="space-pause"
+            onClick={() => patch({ paused: !prefs.paused })}
+            aria-pressed={prefs.paused}
+            aria-label={prefs.paused ? 'Запустить анимацию фона' : 'Остановить анимацию фона'}
+          >
+            {prefs.paused ? '▶ Старт' : '⏸ Пауза'}{eco ? ' · ECO' : ''}
+          </button>
+        </div>
+        {panelOpen && (
+          <>
+            <label className="space-slider">
+              <span>Звёзды · {Math.round(prefs.count)}%</span>
+              <input
+                type="range"
+                min={MIN_COUNT}
+                max={MAX_COUNT}
+                step={1}
+                value={Math.round(prefs.count)}
+                onChange={(e) => patch({ count: Number(e.target.value) })}
+                aria-label="Плотность звёзд, проценты"
+              />
+            </label>
+            <label className="space-slider">
+              <span>Скорость · {Math.round(prefs.speed)}</span>
+              <input
+                type="range"
+                min={MIN_SPEED}
+                max={MAX_SPEED}
+                step={10}
+                value={Math.round(prefs.speed)}
+                onChange={(e) => patch({ speed: Number(e.target.value) })}
+                aria-label="Скорость полёта"
+              />
+            </label>
+          </>
+        )}
       </div>
     </>
   );

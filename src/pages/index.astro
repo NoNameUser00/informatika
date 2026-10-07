@@ -78,6 +78,10 @@ const GRADES: Grade[] = [
         box-shadow: 0 4px 20px rgba(2,6,23,.25);
       }
       .home-continue-go { margin-left: auto; font-weight: 800; color: #1e3a8a; white-space: nowrap; }
+      @media (max-width: 560px) {
+        .home-continue { flex-wrap: wrap; }
+        .home-continue-go { margin-left: 0; }
+      }
       .home-main h2 { font-size: 1.1rem; color: #c7d2fe; margin-top: 28px; }
       .home-row {
         display: flex; align-items: center; gap: 12px;
@@ -91,7 +95,8 @@ const GRADES: Grade[] = [
         color: #fff; font-weight: 900; font-size: 1.3rem; border-radius: 10px;
         width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex: none;
       }
-      .home-rowbody { display: flex; flex-direction: column; flex: 1; }
+      .home-top nav { display: flex; flex-wrap: wrap; align-items: center; }
+      .home-rowbody { display: flex; flex-direction: column; flex: 1; min-width: 0; }
       .home-rowbody small { color: #1e293b; }
       .home-status {
         background: rgba(15,23,42,.62); border: 1px solid rgba(255,255,255,.3);

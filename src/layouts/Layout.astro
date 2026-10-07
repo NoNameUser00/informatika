@@ -63,6 +63,10 @@ const B = import.meta.env.BASE_URL;
       .auth-btn:disabled { opacity: .5; }
       .auth-error { color: #fca5a5; }
       main { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
+      fieldset { min-width: 0; }
+      input[type='text'], select, textarea { max-width: 100%; }
+      .card { overflow-wrap: break-word; }
+      header.top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; }
       main h1, main h2, main h3 { color: #fff; text-shadow: 0 2px 12px rgba(2,6,23,.8); }
       .card {
         background: rgba(203, 213, 225, 0.82);

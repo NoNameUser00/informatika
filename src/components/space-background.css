@@ -39,6 +39,23 @@
   font-weight: 700;
   font-size: 0.8rem;
   cursor: pointer;
+  flex: 1;
+}
+.space-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.space-gear {
+  background: transparent;
+  color: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 .space-slider {
   display: flex;

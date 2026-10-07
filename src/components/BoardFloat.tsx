@@ -25,7 +25,7 @@ export default function BoardFloat() {
           aria-label="Открыть доску для черновиков"
           title="Доска для черновиков"
         >
-          🎨 Доска
+          <span aria-hidden="true">🎨</span> <span className="board-fab-label">Доска</span>
         </button>
       )}
       {open && (
