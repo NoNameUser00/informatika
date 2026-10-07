@@ -37,6 +37,12 @@ import { SS10_01_PLAY } from './10ss-01-systems';
 import { LOGIC10_01_PLAY } from './10logic-01-ops';
 import { LOGIC10_02_PLAY } from './10logic-02-transform';
 import { MEDIA10_01_PLAY } from './10media-01-docs';
+import { DATA11_01_PLAY } from './11data-01-analysis';
+import { DB11_01_PLAY } from './11db-01-databases';
+import { ALGO11_01_PLAY } from './11algo-01-analysis';
+import { ALGO11_02_PLAY } from './11algo-02-advanced';
+import { NET11_01_PLAY } from './11net-01-networks';
+import { SAFE11_01_PLAY } from './11safe-01-security';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
@@ -106,6 +112,12 @@ const REGISTRY: Record<string, PlayLesson> = {
   '10logic-01-ops': LOGIC10_01_PLAY,
   '10logic-02-transform': LOGIC10_02_PLAY,
   '10media-01-docs': MEDIA10_01_PLAY,
+  '11data-01-analysis': DATA11_01_PLAY,
+  '11db-01-databases': DB11_01_PLAY,
+  '11algo-01-analysis': ALGO11_01_PLAY,
+  '11algo-02-advanced': ALGO11_02_PLAY,
+  '11net-01-networks': NET11_01_PLAY,
+  '11safe-01-security': SAFE11_01_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,

@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/checks/proverka-11algo.json';
+---
+<Layout title="Проверочная — Алгоритмы 11, 11 класс">
+  <Trainer client:load data={bank} forceMode="proverka" title="Проверочная: Алгоритмы 11" />
+</Layout>

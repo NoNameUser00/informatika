@@ -1,30 +1,58 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { LESSONS_11 } from '../../data/lessons';
 const B = import.meta.env.BASE_URL;
 const grade = '11';
-// Карта тем — по КТП 11 класс. Блоки открываются по мере наполнения (сейчас — урок 0).
-const BLOCKS: { title: string; topics: string[] }[] = [
-  { title: 'Анализ данных и моделирование', topics: ['Этапы моделирования, анализ данных', 'Статистика в таблицах, диаграммы', 'Корреляция, подбор параметра, оптимизация'] },
-  { title: 'Базы данных', topics: ['Реляционные БД: проектирование', 'Заполнение, поиск, сортировка, запросы'] },
-  { title: 'Алгоритмы (углубление)', topics: ['Анализ алгоритмов: результат и входные данные', 'Цифры числа, последовательности, перебор', 'Сортировки, матрицы, строки', 'Подпрограммы и рекурсия', 'Сложность: время и память'] },
-  { title: 'Графы и игры', topics: ['Графы, деревья', 'Пути в графах', 'Игры с полной информацией, выигрышные стратегии (дерево и таблицы)'] },
-  { title: 'Сети', topics: ['Компоненты сетей, протоколы, локальная сеть', 'Интернет: адресация, DNS', 'Веб-страницы (HTML)', 'Сервисы, геосервисы, госуслуги'] },
-  { title: 'Безопасность и ИИ', topics: ['Угрозы, право, подпись, архивы и шифрование', 'Вирусы и антивирусы', 'ИИ: перевод, речь, зрение, обучение'] },
-];
 ---
 <Layout title="11 класс — Информатика">
-  <h1>11 класс · Карта тем</h1>
-  <p class="muted">Учебный год открывает урок 0. Темы ниже — план по КТП: блоки открываются по мере наполнения.</p>
+  <h1>11 класс · Данные, алгоритмы, сети</h1>
+  <p class="muted">Учебный год открывает урок 0. Дальше — четыре блока: теория, уроки целиком, тренажеры, проверочные и контрольные.</p>
   <div class="card">
     <h3>Урок 0. Техника безопасности в кабинете информатики</h3>
     <p><a href={`${B}${grade}/tb/`}>Открыть презентацию →</a></p>
   </div>
-  {BLOCKS.map((b) => (
+  <h2>Данные и базы данных</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/data/`}>Тренажер: данные</a>
+    <span> </span>
+    <a class="btn" href={`${B}${grade}/db/`}>Тренажер: базы данных</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11base/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-11base/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_11.filter((l) => l.id.startsWith('11data') || l.id.startsWith('11db')).map((l, i) => (
     <div class="card">
-      <h3>{b.title} <span class="muted">· скоро</span></h3>
-      <ul>
-        {b.topics.map((t) => <li>{t}</li>)}
-      </ul>
+      <h3>Урок {i + 1}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
+  <h2>Алгоритмы углублённо</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/algo/`}>Тренажер: алгоритмы</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11algo/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-11algo/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_11.filter((l) => l.id.startsWith('11algo')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 3}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
+  <h2>Сети и безопасность</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/net/`}>Тренажер: сети</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11net/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-11net/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_11.filter((l) => l.id.startsWith('11net') || l.id.startsWith('11safe')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 5}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
 </Layout>

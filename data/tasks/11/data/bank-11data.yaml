@@ -1,0 +1,102 @@
+# Банк «Анализ данных», 11 класс — тренажёрный.
+- id: inf-11-data-001
+  class: 11
+  topic: Анализ данных
+  subtopic: Среднее
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-mean], meta: [plan-actions] }
+  prompt: "Найди среднее чисел 4, 8, 12. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "24 / 3 = 8" }
+
+- id: inf-11-data-002
+  class: 11
+  topic: Анализ данных
+  subtopic: Корреляция
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Коэффициент корреляции −0,9. Что это значит?"
+  student_view: { options: [{ id: A, text: "Сильная обратная связь" }, { id: B, text: "Сильная прямая связь" }, { id: C, text: "Связи нет" }, { id: D, text: "Ошибка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Близко к −1 — растут врозь" }
+
+- id: inf-11-data-003
+  class: 11
+  topic: Анализ данных
+  subtopic: Корреляция и причина
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Продажи мороженого и утопления коррелируют. Вывод?"
+  student_view: { options: [{ id: A, text: "Общая причина — жара, не причинность" }, { id: B, text: "Мороженое топит людей" }, { id: C, text: "Купание продаёт мороженое" }, { id: D, text: "Данные неверны" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Корреляция ≠ причина" }
+
+- id: inf-11-data-004
+  class: 11
+  topic: Анализ данных
+  subtopic: Подбор параметра
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Что ищет подбор параметра?"
+  student_view: { options: [{ id: A, text: "Вход, дающий нужный выход" }, { id: B, text: "Ошибки в тексте" }, { id: C, text: "Вирусы" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Обратная задача: ответ известен, ищем вход" }
+
+- id: inf-11-data-005
+  class: 11
+  topic: Анализ данных
+  subtopic: Этапы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-steps], meta: [plan-actions] }
+  prompt: "Что идёт первым: чистка данных или выводы?"
+  student_view: { options: [{ id: A, text: "Чистка, потом выводы" }, { id: B, text: "Сначала выводы" }, { id: C, text: "Чистка не нужна" }, { id: D, text: "Всё равно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Мусор на входе — мусор на выходе" }
+
+- id: inf-11-data-006
+  class: 11
+  topic: Анализ данных
+  subtopic: Диаграммы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Чем показать динамику за 5 лет?"
+  student_view: { options: [{ id: A, text: "Линейной диаграммой" }, { id: B, text: "Круговой" }, { id: C, text: "Таблицей без сортировки" }, { id: D, text: "Ничем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Динамика — линии во времени" }

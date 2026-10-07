@@ -1,0 +1,136 @@
+# Банк «Сети и безопасность», 11 класс — тренажёрный.
+- id: inf-11-net-001
+  class: 11
+  topic: Сети
+  subtopic: TCP и IP
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-tcp], meta: [plan-actions] }
+  prompt: "Установите соответствие: протокол — его работа."
+  student_view: { left: ["TCP", "IP"], right: ["доставка между сетями", "нарезка, доставка и сборка"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"TCP": "нарезка, доставка и сборка", "IP": "доставка между сетями"}, explanation: "TCP собирает, IP доносит" }
+
+- id: inf-11-net-002
+  class: 11
+  topic: Сети
+  subtopic: Топологии
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-topo], meta: [plan-actions] }
+  prompt: "Какая топология умирает от одного обрыва?"
+  student_view: { options: [{ id: A, text: "Шина" }, { id: B, text: "Звезда" }, { id: C, text: "Дерево" }, { id: D, text: "Полносвязная" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Общий кабель — общая беда" }
+
+- id: inf-11-net-003
+  class: 11
+  topic: Сети
+  subtopic: Потерянные пакеты
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-tcp], meta: [plan-actions] }
+  prompt: "Что делает маршрутизатор с потерянным пакетом?"
+  student_view: { options: [{ id: A, text: "Отправляет повторно/в обход" }, { id: B, text: "Удаляет всё сообщение" }, { id: C, text: "Выключает сеть" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Надёжность — повтор и обход" }
+
+- id: inf-11-net-004
+  class: 11
+  topic: Сети
+  subtopic: IPv6
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-ip6], meta: [plan-actions] }
+  prompt: "Сколько бит в IPv6-адресе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [128], answer_text: "128", explanation: "8 групп по 16 бит" }
+
+- id: inf-11-net-005
+  class: 11
+  topic: Сети
+  subtopic: DNS
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-dns], meta: [plan-actions] }
+  prompt: "Что делает DNS?"
+  student_view: { options: [{ id: A, text: "Переводит имена в IP" }, { id: B, text: "Рисует сайты" }, { id: C, text: "Пишет вирусы" }, { id: D, text: "Гасит свет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Телефонная книга интернета" }
+
+- id: inf-11-net-006
+  class: 11
+  topic: Безопасность и ИИ
+  subtopic: Слои защиты
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-layers], meta: [plan-actions] }
+  prompt: "Что НЕ относится к защите данных?"
+  student_view: { options: [{ id: A, text: "Один пароль везде" }, { id: B, text: "Антивирус" }, { id: C, text: "Резервные копии" }, { id: D, text: "Шифрование" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Один пароль — одна утечка на всё" }
+
+- id: inf-11-net-007
+  class: 11
+  topic: Безопасность и ИИ
+  subtopic: Подпись
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-sign], meta: [plan-actions] }
+  prompt: "Что доказывает электронная подпись?"
+  student_view: { options: [{ id: A, text: "Авторство и неизменность" }, { id: B, text: "Красоту шрифта" }, { id: C, text: "Скорость сети" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Кто подписал и что не меняли" }
+
+- id: inf-11-net-008
+  class: 11
+  topic: Безопасность и ИИ
+  subtopic: ИИ
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-ai], meta: [plan-actions] }
+  prompt: "Почему ответ ИИ надо проверять?"
+  student_view: { options: [{ id: A, text: "Уверенно ошибается в фактах" }, { id: B, text: "Всегда прав" }, { id: C, text: "Медленный" }, { id: D, text: "Дорогой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "ИИ — инструмент с проверкой" }

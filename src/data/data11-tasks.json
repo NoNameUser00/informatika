@@ -1,0 +1,154 @@
+{
+  "test_code": "data11-v1",
+  "variant": "trainer-v1",
+  "max_score": 7,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-data-001",
+      "lesson": "11data-01-analysis",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найди среднее чисел 4, 8, 12. Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-11-data-002",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Коэффициент корреляции −0,9. Что это значит?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Сильная обратная связь"
+        },
+        {
+          "id": "B",
+          "text": "Сильная прямая связь"
+        },
+        {
+          "id": "C",
+          "text": "Связи нет"
+        },
+        {
+          "id": "D",
+          "text": "Ошибка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-003",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Продажи мороженого и утопления коррелируют. Вывод?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Общая причина — жара, не причинность"
+        },
+        {
+          "id": "B",
+          "text": "Мороженое топит людей"
+        },
+        {
+          "id": "C",
+          "text": "Купание продаёт мороженое"
+        },
+        {
+          "id": "D",
+          "text": "Данные неверны"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-004",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что ищет подбор параметра?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Вход, дающий нужный выход"
+        },
+        {
+          "id": "B",
+          "text": "Ошибки в тексте"
+        },
+        {
+          "id": "C",
+          "text": "Вирусы"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-005",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что идёт первым: чистка данных или выводы?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Чистка, потом выводы"
+        },
+        {
+          "id": "B",
+          "text": "Сначала выводы"
+        },
+        {
+          "id": "C",
+          "text": "Чистка не нужна"
+        },
+        {
+          "id": "D",
+          "text": "Всё равно"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-data-006",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем показать динамику за 5 лет?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Линейной диаграммой"
+        },
+        {
+          "id": "B",
+          "text": "Круговой"
+        },
+        {
+          "id": "C",
+          "text": "Таблицей без сортировки"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

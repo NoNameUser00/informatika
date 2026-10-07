@@ -1,0 +1,201 @@
+{
+  "test_code": "net11-v1",
+  "variant": "trainer-v1",
+  "max_score": 9,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-net-001",
+      "lesson": "11net-01-networks",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие: протокол — его работа.",
+      "left": [
+        "TCP",
+        "IP"
+      ],
+      "right": [
+        "доставка между сетями",
+        "нарезка, доставка и сборка"
+      ],
+      "answerMap": {
+        "TCP": "нарезка, доставка и сборка",
+        "IP": "доставка между сетями"
+      },
+      "key": "TCP=нарезка, доставка и сборка, IP=доставка между сетями"
+    },
+    {
+      "id": "inf-11-net-002",
+      "lesson": "11net-01-networks",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая топология умирает от одного обрыва?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Шина"
+        },
+        {
+          "id": "B",
+          "text": "Звезда"
+        },
+        {
+          "id": "C",
+          "text": "Дерево"
+        },
+        {
+          "id": "D",
+          "text": "Полносвязная"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-003",
+      "lesson": "11net-01-networks",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что делает маршрутизатор с потерянным пакетом?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Отправляет повторно/в обход"
+        },
+        {
+          "id": "B",
+          "text": "Удаляет всё сообщение"
+        },
+        {
+          "id": "C",
+          "text": "Выключает сеть"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-004",
+      "lesson": "11net-01-networks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько бит в IPv6-адресе? Запишите только число.",
+      "base": 10,
+      "expected": 128,
+      "key": "128"
+    },
+    {
+      "id": "inf-11-net-005",
+      "lesson": "11net-01-networks",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что делает DNS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Переводит имена в IP"
+        },
+        {
+          "id": "B",
+          "text": "Рисует сайты"
+        },
+        {
+          "id": "C",
+          "text": "Пишет вирусы"
+        },
+        {
+          "id": "D",
+          "text": "Гасит свет"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-006",
+      "lesson": "11safe-01-security",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что НЕ относится к защите данных?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Один пароль везде"
+        },
+        {
+          "id": "B",
+          "text": "Антивирус"
+        },
+        {
+          "id": "C",
+          "text": "Резервные копии"
+        },
+        {
+          "id": "D",
+          "text": "Шифрование"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-007",
+      "lesson": "11safe-01-security",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что доказывает электронная подпись?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Авторство и неизменность"
+        },
+        {
+          "id": "B",
+          "text": "Красоту шрифта"
+        },
+        {
+          "id": "C",
+          "text": "Скорость сети"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-net-008",
+      "lesson": "11safe-01-security",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Почему ответ ИИ надо проверять?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Уверенно ошибается в фактах"
+        },
+        {
+          "id": "B",
+          "text": "Всегда прав"
+        },
+        {
+          "id": "C",
+          "text": "Медленный"
+        },
+        {
+          "id": "D",
+          "text": "Дорогой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

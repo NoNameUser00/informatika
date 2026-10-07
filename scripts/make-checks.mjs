@@ -17,6 +17,10 @@ const BANK_FILES = [
   'src/data/ss10-tasks.json',
   'src/data/logic10-tasks.json',
   'src/data/media10-tasks.json',
+  'src/data/data11-tasks.json',
+  'src/data/db11-tasks.json',
+  'src/data/algo11-tasks.json',
+  'src/data/net11-tasks.json',
 ];
 
 const CHECKS = [
@@ -92,6 +96,24 @@ const CHECKS = [
   { file: 'control-10media.json', code: 'media10-control-v1', title: 'Контрольная: Документы и мультимедиа',
     instruction: 'Отвечайте точно.',
     ids: ['inf-10-media-001', 'inf-10-media-002', 'inf-10-media-003', 'inf-10-media-004', 'inf-10-media-005', 'inf-10-media-006'] },
+  { file: 'proverka-11base.json', code: 'base11-proverka-v1', title: 'Проверочная: Данные и БД',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-11-data-001', 'inf-11-data-002', 'inf-11-data-004', 'inf-11-db-001', 'inf-11-db-003'] },
+  { file: 'control-11base.json', code: 'base11-control-v1', title: 'Контрольная: Данные и БД',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-11-data-001', 'inf-11-data-002', 'inf-11-data-003', 'inf-11-data-005', 'inf-11-db-001', 'inf-11-db-002', 'inf-11-db-003', 'inf-11-db-005'] },
+  { file: 'proverka-11algo.json', code: 'algo11-proverka-v1', title: 'Проверочная: Алгоритмы 11',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-11-algo-003', 'inf-11-algo-004', 'inf-11-algo-006', 'inf-11-algo-005', 'inf-11-algo-008'] },
+  { file: 'control-11algo.json', code: 'algo11-control-v1', title: 'Контрольная: Алгоритмы 11',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-11-algo-001', 'inf-11-algo-002', 'inf-11-algo-003', 'inf-11-algo-004', 'inf-11-algo-005', 'inf-11-algo-006', 'inf-11-algo-007', 'inf-11-algo-008'] },
+  { file: 'proverka-11net.json', code: 'net11-proverka-v1', title: 'Проверочная: Сети и безопасность',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-11-net-002', 'inf-11-net-003', 'inf-11-net-005', 'inf-11-net-006', 'inf-11-net-007'] },
+  { file: 'control-11net.json', code: 'net11-control-v1', title: 'Контрольная: Сети и безопасность',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-11-net-001', 'inf-11-net-002', 'inf-11-net-004', 'inf-11-net-005', 'inf-11-net-006', 'inf-11-net-007', 'inf-11-net-008', 'inf-11-net-003'] },
 ];
 
 const pool = new Map();

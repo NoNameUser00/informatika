@@ -56,3 +56,12 @@ export const LESSONS_10: LessonMeta[] = [
   { id: '10logic-02-transform', title: 'Уравнения, нормальные формы, схемы', file: '10logic-02-transform.md' },
   { id: '10media-01-docs', title: 'Документы, графика, мультимедиа', file: '10media-01-docs.md' },
 ];
+
+export const LESSONS_11: LessonMeta[] = [
+  { id: '11data-01-analysis', title: 'Анализ данных в таблицах', file: '11data-01-analysis.md' },
+  { id: '11db-01-databases', title: 'Реляционные базы данных', file: '11db-01-databases.md' },
+  { id: '11algo-01-analysis', title: 'Анализ алгоритмов и исполнитель Автомат', file: '11algo-01-analysis.md' },
+  { id: '11algo-02-advanced', title: 'Сортировки, матрицы, строки, рекурсия', file: '11algo-02-advanced.md' },
+  { id: '11net-01-networks', title: 'Сети: пакеты, топологии, маски, DNS', file: '11net-01-networks.md' },
+  { id: '11safe-01-security', title: 'Безопасность и искусственный интеллект', file: '11safe-01-security.md' },
+];

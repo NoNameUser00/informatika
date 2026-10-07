@@ -51,6 +51,18 @@ const JOBS = [
   { inputs: ['data/tasks/10/media/bank-10media.yaml'],
     output: 'src/data/media10-tasks.json', test_code: 'media10-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/11/data/bank-11data.yaml'],
+    output: 'src/data/data11-tasks.json', test_code: 'data11-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/11/db/bank-11db.yaml'],
+    output: 'src/data/db11-tasks.json', test_code: 'db11-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/11/algo/bank-11algo.yaml'],
+    output: 'src/data/algo11-tasks.json', test_code: 'algo11-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/11/net/bank-11net.yaml'],
+    output: 'src/data/net11-tasks.json', test_code: 'net11-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 
 function convert(t) {

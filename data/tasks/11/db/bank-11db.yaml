@@ -1,0 +1,85 @@
+# Банк «Базы данных», 11 класс — тренажёрный.
+- id: inf-11-db-001
+  class: 11
+  topic: Базы данных
+  subtopic: Ключи
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-keys], meta: [plan-actions] }
+  prompt: "Что годится в первичные ключи таблицы учеников?"
+  student_view: { options: [{ id: A, text: "Номер личного дела" }, { id: B, text: "Имя" }, { id: C, text: "Рост" }, { id: D, text: "Любимый цвет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Уникален и неизменен" }
+
+- id: inf-11-db-002
+  class: 11
+  topic: Базы данных
+  subtopic: Термины
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-terms], meta: [plan-actions] }
+  prompt: "Установите соответствие: термин — его смысл."
+  student_view: { left: ["Запись", "Поле", "Первичный ключ"], right: ["столбец-свойство", "уникальный идентификатор", "строка-объект"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"Запись": "строка-объект", "Поле": "столбец-свойство", "Первичный ключ": "уникальный идентификатор"}, explanation: "Три базовых термина" }
+
+- id: inf-11-db-003
+  class: 11
+  topic: Базы данных
+  subtopic: Связи
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
+  prompt: "Как связать «Ученики» и «Классы» без дублей?"
+  student_view: { options: [{ id: A, text: "Внешним ключом на справочник" }, { id: B, text: "Копировать всё в каждую строку" }, { id: C, text: "Удалить классы" }, { id: D, text: "Никак" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Ссылка вместо копипасты" }
+
+- id: inf-11-db-004
+  class: 11
+  topic: Базы данных
+  subtopic: Выборка
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
+  prompt: "Нужны фамилии всех с баллом выше 80. Что это?"
+  student_view: { options: [{ id: A, text: "Запрос на выборку" }, { id: B, text: "Удаление таблицы" }, { id: C, text: "Смена пароля" }, { id: D, text: "Архивация" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Выборка: поля + условие" }
+
+- id: inf-11-db-005
+  class: 11
+  topic: Базы данных
+  subtopic: Сортировка
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
+  prompt: "Чем опасна сортировка одного столбца?"
+  student_view: { options: [{ id: A, text: "Строки разъедутся" }, { id: B, text: "Ничем" }, { id: C, text: "Удалит данные" }, { id: D, text: "Сломает монитор" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сортировать весь диапазон" }

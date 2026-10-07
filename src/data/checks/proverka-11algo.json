@@ -1,0 +1,127 @@
+{
+  "test_code": "algo11-proverka-v1",
+  "variant": "v1",
+  "max_score": 6,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-algo-003",
+      "lesson": "11algo-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "От чего сложность зависит сильнее всего?",
+      "options": [
+        {
+          "id": "A",
+          "text": "От размера данных"
+        },
+        {
+          "id": "B",
+          "text": "От цвета монитора"
+        },
+        {
+          "id": "C",
+          "text": "От дня недели"
+        },
+        {
+          "id": "D",
+          "text": "Ни от чего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-004",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как работает сортировка выбором?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Минимум из остатка — на своё место"
+        },
+        {
+          "id": "B",
+          "text": "Всё перемешать"
+        },
+        {
+          "id": "C",
+          "text": "Удалить половину"
+        },
+        {
+          "id": "D",
+          "text": "Никак"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-006",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что обязательно в рекурсии?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Базовый случай-выход"
+        },
+        {
+          "id": "B",
+          "text": "Громкий звук"
+        },
+        {
+          "id": "C",
+          "text": "Интернет"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-005",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает a[1][2]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строка 1, столбец 2"
+        },
+        {
+          "id": "B",
+          "text": "Строка 2, столбец 1"
+        },
+        {
+          "id": "C",
+          "text": "Число 12"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-008",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько действий во вложенных циклах 100×100? Запишите только число.",
+      "base": 10,
+      "expected": 10000,
+      "key": "10000"
+    }
+  ]
+}
