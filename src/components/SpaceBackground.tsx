@@ -4,6 +4,7 @@
 // хранятся в localStorage и общие для всех страниц. prefers-reduced-motion —
 // старт на паузе.
 import { useEffect, useRef, useState } from 'react';
+import { ecoStep } from '../lib/space/eco.mjs';
 
 interface Star {
   angle: number;
@@ -69,6 +70,8 @@ export default function SpaceBackground() {
   const [prefs, setPrefs] = useState<Prefs>(INITIAL);
   const prefsRef = useRef(prefs);
   prefsRef.current = prefs;
+  // Эко-режим: true, когда FPS-метр срезал плотность ради плавности.
+  const [eco, setEco] = useState(false);
 
   // Второй проход: подтягиваем сохранённые настройки (и reduced-motion).
   // Только здесь трогаем localStorage/matchMedia — иначе рассинхрон с SSR.
@@ -126,13 +129,30 @@ export default function SpaceBackground() {
       warm: Math.random() < 0.18,
     });
     let stars: Star[] = [];
+    // Авто-эко: стартуем с капа на слабом железе, дальше рулит FPS-метр.
+    // factor — доля от ползунка пользователя (сам ползунок не трогаем).
+    let factor = 1;
+    try {
+      const mem = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
+      const cores = navigator.hardwareConcurrency;
+      if ((mem && mem <= 4) || (cores && cores <= 4)) factor = 0.5;
+    } catch {
+      /* ignore */
+    }
     const syncStars = () => {
-      // Ползунок — проценты 1–100 от потока MAX_STARS.
-      const want = Math.max(1, Math.round((prefsRef.current.count / 100) * MAX_STARS));
+      // Ползунок — проценты 1–100 от потока MAX_STARS, умножить на эко-фактор.
+      const want = Math.max(
+        1,
+        Math.round((prefsRef.current.count / 100) * MAX_STARS * factor),
+      );
       while (stars.length < want) stars.push(makeStar());
       if (stars.length > want) stars = stars.slice(0, want);
     };
     syncStars();
+    // FPS-метр: окно 120 кадров; <28 fps — режем плотность (минимум 15%),
+    // >55 fps — возвращаем обратно. Перепроверка не чаще окна.
+    let winFrames = 0;
+    let winMs = 0;
 
     const bodies: Body[] = [
       { kind: 'planet', x: 0.85, y: 0.1, r: 46, vx: -0.002, hue: 20, ring: true, rot: 0.5 },
@@ -265,6 +285,19 @@ export default function SpaceBackground() {
       }
       const dt = Math.min(80, now - last);
       last = now;
+      // FPS-окно поверх логики кадра (пауза кадры не считает — выше return).
+      winFrames++;
+      winMs += dt;
+      if (winFrames >= 120) {
+        const fps = (winFrames * 1000) / Math.max(1, winMs);
+        const next = ecoStep(fps, factor);
+        if (next !== factor) {
+          factor = next;
+          setEco(factor < 1);
+        }
+        winFrames = 0;
+        winMs = 0;
+      }
       const t = now;
       const fall = dt / 1000;
       syncStars();
@@ -316,7 +349,7 @@ export default function SpaceBackground() {
           aria-pressed={prefs.paused}
           aria-label={prefs.paused ? 'Запустить анимацию фона' : 'Остановить анимацию фона'}
         >
-          {prefs.paused ? '▶ Старт' : '⏸ Пауза'}
+          {prefs.paused ? '▶ Старт' : '⏸ Пауза'}{eco ? ' · ECO' : ''}
         </button>
         <label className="space-slider">
           <span>Звёзды · {Math.round(prefs.count)}%</span>
