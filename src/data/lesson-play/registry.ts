@@ -28,6 +28,9 @@ import { SHEET9_03_PLAY } from './9sheet-03-analysis';
 import { ARR9_01_PLAY } from './9arr-01-basics';
 import { ARR9_02_PLAY } from './9arr-02-search';
 import { GRAPH9_01_PLAY } from './9graph-01-graphs';
+import { ROBOT9_01_PLAY } from './9robot-01-control';
+import { MODEL9_01_PLAY } from './9model-01-models';
+import { NET9_01_PLAY } from './9net-01-internet';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
@@ -88,6 +91,9 @@ const REGISTRY: Record<string, PlayLesson> = {
   '9arr-01-basics': ARR9_01_PLAY,
   '9arr-02-search': ARR9_02_PLAY,
   '9graph-01-graphs': GRAPH9_01_PLAY,
+  '9robot-01-control': ROBOT9_01_PLAY,
+  '9model-01-models': MODEL9_01_PLAY,
+  '9net-01-internet': NET9_01_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,

@@ -12,6 +12,7 @@ const BANK_FILES = [
   'src/data/sheet9-tasks.json',
   'src/data/arr9-tasks.json',
   'src/data/graph9-tasks.json',
+  'src/data/extra9-tasks.json',
 ];
 
 const CHECKS = [
@@ -63,6 +64,12 @@ const CHECKS = [
   { file: 'control-9graph.json', code: 'graph9-control-v1', title: 'Контрольная: Графы',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-9-graph-001', 'inf-9-graph-002', 'inf-9-graph-003', 'inf-9-graph-004', 'inf-9-graph-005', 'inf-9-graph-006', 'inf-9-graph-007', 'inf-9-graph-008'] },
+  { file: 'proverka-9extra.json', code: 'extra9-proverka-v1', title: 'Проверочная: Роботы и модели',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-9-extra-001', 'inf-9-extra-002', 'inf-9-extra-003', 'inf-9-extra-004', 'inf-9-extra-007'] },
+  { file: 'control-9extra.json', code: 'extra9-control-v1', title: 'Контрольная: Роботы, модели, интернет',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-9-extra-001', 'inf-9-extra-003', 'inf-9-extra-005', 'inf-9-extra-006', 'inf-9-extra-007', 'inf-9-extra-008', 'inf-9-extra-009', 'inf-9-extra-010'] },
 ];
 
 const pool = new Map();

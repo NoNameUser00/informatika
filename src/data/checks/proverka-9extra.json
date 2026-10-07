@@ -1,0 +1,127 @@
+{
+  "test_code": "extra9-proverka-v1",
+  "variant": "v1",
+  "max_score": 5,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-extra-001",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое обратная связь в управлении?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Возврат сведений о состоянии объекта в управление"
+        },
+        {
+          "id": "B",
+          "text": "Громкий звук робота"
+        },
+        {
+          "id": "C",
+          "text": "Выключение питания"
+        },
+        {
+          "id": "D",
+          "text": "Новая батарейка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-002",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем роботу датчики?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Получать сигналы о мире"
+        },
+        {
+          "id": "B",
+          "text": "Красиво выглядеть"
+        },
+        {
+          "id": "C",
+          "text": "Греть моторы"
+        },
+        {
+          "id": "D",
+          "text": "Шуметь"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-003",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что отражает модель?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Существенные для цели признаки"
+        },
+        {
+          "id": "B",
+          "text": "Абсолютно всё"
+        },
+        {
+          "id": "C",
+          "text": "Только цвет"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-004",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда модель адекватна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Результаты близки к эксперименту"
+        },
+        {
+          "id": "B",
+          "text": "Она красивая"
+        },
+        {
+          "id": "C",
+          "text": "Она большая"
+        },
+        {
+          "id": "D",
+          "text": "Она старая"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-007",
+      "lesson": "9net-01-internet",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько бит в IPv4-адресе? Запишите только число.",
+      "base": 10,
+      "expected": 32,
+      "key": "32"
+    }
+  ]
+}

@@ -43,4 +43,7 @@ export const LESSONS_9: LessonMeta[] = [
   { id: '9arr-01-basics', title: 'Массивы: хранение и обработка', file: '9arr-01-basics.md' },
   { id: '9arr-02-search', title: 'Поиск и сортировка: максимум, перебор', file: '9arr-02-search.md' },
   { id: '9graph-01-graphs', title: 'Графы: элементы, матрицы, пути', file: '9graph-01-graphs.md' },
+  { id: '9robot-01-control', title: 'Управление, сигналы, роботы', file: '9robot-01-control.md' },
+  { id: '9model-01-models', title: 'Модели и моделирование', file: '9model-01-models.md' },
+  { id: '9net-01-internet', title: 'Интернет: адреса, DNS, безопасность', file: '9net-01-internet.md' },
 ];

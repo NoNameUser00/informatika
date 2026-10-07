@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/extra9-tasks.json';
+---
+<Layout title="Тренажер — Роботы, модели, интернет, 9 класс">
+  <Trainer client:load data={bank} title="Роботы, модели, интернет" />
+</Layout>

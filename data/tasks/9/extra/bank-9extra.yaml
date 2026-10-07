@@ -1,0 +1,170 @@
+# Банк «Роботы, модели, интернет», 9 класс — тренажёрный.
+- id: inf-9-extra-001
+  class: 9
+  topic: Управление и роботы
+  subtopic: Обратная связь
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9robot-01-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
+  prompt: "Что такое обратная связь в управлении?"
+  student_view: { options: [{ id: A, text: "Возврат сведений о состоянии объекта в управление" }, { id: B, text: "Громкий звук робота" }, { id: C, text: "Выключение питания" }, { id: D, text: "Новая батарейка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Без связи система слепая" }
+
+- id: inf-9-extra-002
+  class: 9
+  topic: Управление и роботы
+  subtopic: Датчики
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9robot-01-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
+  prompt: "Зачем роботу датчики?"
+  student_view: { options: [{ id: A, text: "Получать сигналы о мире" }, { id: B, text: "Красиво выглядеть" }, { id: C, text: "Греть моторы" }, { id: D, text: "Шуметь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Датчики — глаза робота" }
+
+- id: inf-9-extra-003
+  class: 9
+  topic: Моделирование
+  subtopic: Понятие модели
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-01-models
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "Что отражает модель?"
+  student_view: { options: [{ id: A, text: "Существенные для цели признаки" }, { id: B, text: "Абсолютно всё" }, { id: C, text: "Только цвет" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Цель решает, что существенно" }
+
+- id: inf-9-extra-004
+  class: 9
+  topic: Моделирование
+  subtopic: Адекватность
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-01-models
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "Когда модель адекватна?"
+  student_view: { options: [{ id: A, text: "Результаты близки к эксперименту" }, { id: B, text: "Она красивая" }, { id: C, text: "Она большая" }, { id: D, text: "Она старая" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сверка с опытом — критерий" }
+
+- id: inf-9-extra-005
+  class: 9
+  topic: Моделирование
+  subtopic: Тормозной путь
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9model-01-models
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "Модель тормозного пути: s = v²/10 (v в м/с). Скорость 72 км/ч. Найди s в метрах. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [40], answer_text: "40", explanation: "72 км/ч = 20 м/с, s = 400/10 = 40" }
+
+- id: inf-9-extra-006
+  class: 9
+  topic: Интернет
+  subtopic: IP-адреса
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Из чего состоит IP-адрес?"
+  student_view: { options: [{ id: A, text: "4 числа от 0 до 255" }, { id: B, text: "3 буквы" }, { id: C, text: "10 цифр подряд" }, { id: D, text: "Имя сайта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Всего 32 бита" }
+
+- id: inf-9-extra-007
+  class: 9
+  topic: Интернет
+  subtopic: Биты адреса
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Сколько бит в IPv4-адресе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "4 числа по 8 бит" }
+
+- id: inf-9-extra-008
+  class: 9
+  topic: Интернет
+  subtopic: Невалидные адреса
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Какая последовательность НЕ может быть IP-адресом?"
+  student_view: { options: [{ id: A, text: "10.55.0.225" }, { id: B, text: "113.256.0.138" }, { id: C, text: "22.4.13.73" }, { id: D, text: "1.2.3.4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "256 больше максимума 255" }
+
+- id: inf-9-extra-009
+  class: 9
+  topic: Интернет
+  subtopic: Сборка фрагментов
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?"
+  student_view: { options: [{ id: A, text: "22.4.13.73.133" }, { id: B, text: "3.133.22.4.13.73" }, { id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Каждое число 0–255, всего четыре: Б-Г-В-А" }
+
+- id: inf-9-extra-010
+  class: 9
+  topic: Интернет
+  subtopic: DNS
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Зачем нужен DNS?"
+  student_view: { options: [{ id: A, text: "Переводить имена в IP-адреса" }, { id: B, text: "Рисовать сайты" }, { id: C, text: "Писать вирусы" }, { id: D, text: "Выключать интернет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Телефонная книга интернета" }

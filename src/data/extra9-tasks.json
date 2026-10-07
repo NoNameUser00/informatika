@@ -1,0 +1,245 @@
+{
+  "test_code": "extra9-v1",
+  "variant": "trainer-v1",
+  "max_score": 13,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-extra-001",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое обратная связь в управлении?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Возврат сведений о состоянии объекта в управление"
+        },
+        {
+          "id": "B",
+          "text": "Громкий звук робота"
+        },
+        {
+          "id": "C",
+          "text": "Выключение питания"
+        },
+        {
+          "id": "D",
+          "text": "Новая батарейка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-002",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем роботу датчики?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Получать сигналы о мире"
+        },
+        {
+          "id": "B",
+          "text": "Красиво выглядеть"
+        },
+        {
+          "id": "C",
+          "text": "Греть моторы"
+        },
+        {
+          "id": "D",
+          "text": "Шуметь"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-003",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что отражает модель?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Существенные для цели признаки"
+        },
+        {
+          "id": "B",
+          "text": "Абсолютно всё"
+        },
+        {
+          "id": "C",
+          "text": "Только цвет"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-004",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда модель адекватна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Результаты близки к эксперименту"
+        },
+        {
+          "id": "B",
+          "text": "Она красивая"
+        },
+        {
+          "id": "C",
+          "text": "Она большая"
+        },
+        {
+          "id": "D",
+          "text": "Она старая"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-005",
+      "lesson": "9model-01-models",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Модель тормозного пути: s = v²/10 (v в м/с). Скорость 72 км/ч. Найди s в метрах. Запишите только число.",
+      "base": 10,
+      "expected": 40,
+      "key": "40"
+    },
+    {
+      "id": "inf-9-extra-006",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Из чего состоит IP-адрес?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 числа от 0 до 255"
+        },
+        {
+          "id": "B",
+          "text": "3 буквы"
+        },
+        {
+          "id": "C",
+          "text": "10 цифр подряд"
+        },
+        {
+          "id": "D",
+          "text": "Имя сайта"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-007",
+      "lesson": "9net-01-internet",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько бит в IPv4-адресе? Запишите только число.",
+      "base": 10,
+      "expected": 32,
+      "key": "32"
+    },
+    {
+      "id": "inf-9-extra-008",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какая последовательность НЕ может быть IP-адресом?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.55.0.225"
+        },
+        {
+          "id": "B",
+          "text": "113.256.0.138"
+        },
+        {
+          "id": "C",
+          "text": "22.4.13.73"
+        },
+        {
+          "id": "D",
+          "text": "1.2.3.4"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-extra-009",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?",
+      "options": [
+        {
+          "id": "A",
+          "text": "22.4.13.73.133"
+        },
+        {
+          "id": "B",
+          "text": "3.133.22.4.13.73"
+        },
+        {
+          "id": "C",
+          "text": "22.73.4.13.133"
+        },
+        {
+          "id": "D",
+          "text": "4.13.73.3.133.22"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-010",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем нужен DNS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Переводить имена в IP-адреса"
+        },
+        {
+          "id": "B",
+          "text": "Рисовать сайты"
+        },
+        {
+          "id": "C",
+          "text": "Писать вирусы"
+        },
+        {
+          "id": "D",
+          "text": "Выключать интернет"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

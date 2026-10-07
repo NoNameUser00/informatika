@@ -36,6 +36,9 @@ const JOBS = [
   { inputs: ['data/tasks/9/graphs/bank-9graph.yaml'],
     output: 'src/data/graph9-tasks.json', test_code: 'graph9-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/9/extra/bank-9extra.yaml'],
+    output: 'src/data/extra9-tasks.json', test_code: 'extra9-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 
 function convert(t) {
