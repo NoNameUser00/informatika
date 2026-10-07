@@ -131,3 +131,135 @@
     solution_code: "print(sum(i for i in range(1, 11) if i % 2 == 0))"
     expected_stdout: "30"
     explanation: "2+4+6+8+10 = 30"
+
+- id: inf-8-code-007
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Повторение строк
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-01-basics
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её."
+  student_view:
+    language: python
+    template: "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "s = 'ab'\nprint(s * 3)"
+    expected_stdout: "ababab"
+    explanation: "Умножение строки на число повторяет её"
+
+- id: inf-8-code-008
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Код символа
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-01-basics
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Выведи числовой код символа 'A' функцией ord()."
+  student_view:
+    language: python
+    template: "# Допиши код: код символа 'A'\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(ord('A'))"
+    expected_stdout: "65"
+    explanation: "ord возвращает код символа"
+
+- id: inf-8-code-009
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Максимум ветвлениями
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: py-02-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-if], meta: [plan-actions] }
+  prompt: "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его."
+  student_view:
+    language: python
+    template: "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "a, b, c = 3, 7, 5\ny = a\nif b > y:\n    y = b\nif c > y:\n    y = c\nprint(y)"
+    expected_stdout: "7"
+    explanation: "Чемпион переживает оба сравнения"
+
+- id: inf-8-code-010
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Условие отрезка
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-02-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-if], meta: [plan-actions] }
+  prompt: "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and."
+  student_view:
+    language: python
+    template: "# Допиши код: проверка отрезка\nx = 0\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "x = 0\nprint((x >= 0) and (x <= 1))"
+    expected_stdout: "True"
+    explanation: "Оба сравнения истинны"
+
+- id: inf-8-code-011
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Подсчёт цифр
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: py-03-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-while], meta: [plan-actions] }
+  prompt: "Посчитай циклом while количество цифр в числе 9876 и выведи его."
+  student_view:
+    language: python
+    template: "# Допиши код: счётчик цифр 9876\nn, k = 9876, 0\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n, k = 9876, 0\nwhile n:\n    n //= 10\n    k += 1\nprint(k)"
+    expected_stdout: "4"
+    explanation: "Четыре укорачивания до нуля"
+
+- id: inf-8-code-012
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Сумма цифр
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: py-03-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-while], meta: [plan-actions] }
+  prompt: "Найди циклом сумму цифр числа 12345 и выведи её."
+  student_view:
+    language: python
+    template: "# Допиши код: сумма цифр 12345\nn, s = 12345, 0\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n, s = 12345, 0\nwhile n:\n    s += n % 10\n    n //= 10\nprint(s)"
+    expected_stdout: "15"
+    explanation: "1+2+3+4+5 = 15"

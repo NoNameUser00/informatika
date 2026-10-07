@@ -1,10 +1,70 @@
 {
   "test_code": "code-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 15,
+  "max_score": 30,
   "instruction": "Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.",
   "page_size": 5,
   "tasks": [
+    {
+      "id": "inf-8-code-007",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её.",
+      "template": "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)",
+      "expected": "ababab",
+      "key": "ababab"
+    },
+    {
+      "id": "inf-8-code-008",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи числовой код символа 'A' функцией ord().",
+      "template": "# Допиши код: код символа 'A'\nprint(...)",
+      "expected": "65",
+      "key": "65"
+    },
+    {
+      "id": "inf-8-code-009",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его.",
+      "template": "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n...",
+      "expected": "7",
+      "key": "7"
+    },
+    {
+      "id": "inf-8-code-010",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and.",
+      "template": "# Допиши код: проверка отрезка\nx = 0\nprint(...)",
+      "expected": "True",
+      "key": "True"
+    },
+    {
+      "id": "inf-8-code-011",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Посчитай циклом while количество цифр в числе 9876 и выведи его.",
+      "template": "# Допиши код: счётчик цифр 9876\nn, k = 9876, 0\n...",
+      "expected": "4",
+      "key": "4"
+    },
+    {
+      "id": "inf-8-code-012",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди циклом сумму цифр числа 12345 и выведи её.",
+      "template": "# Допиши код: сумма цифр 12345\nn, s = 12345, 0\n...",
+      "expected": "15",
+      "key": "15"
+    },
     {
       "id": "inf-8-code-001",
       "lesson": "numsys-02-binary",
