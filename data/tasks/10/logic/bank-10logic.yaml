@@ -1,0 +1,102 @@
+# Банк «Логика углублённо», 10 класс — тренажёрный.
+- id: inf-10-logic-001
+  class: 10
+  topic: Алгебра логики
+  subtopic: Импликация
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
+  prompt: "Вычислите 1 → 0."
+  student_view: { options: [{ id: A, text: "Ложь" }, { id: B, text: "Истина" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Импликация ложна только как 1→0" }
+
+- id: inf-10-logic-002
+  class: 10
+  topic: Алгебра логики
+  subtopic: XOR и эквиваленция
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
+  prompt: "Установите соответствие: операция — когда истинна."
+  student_view: { left: ["Исключающее ИЛИ", "Эквиваленция"], right: ["при равных", "при разных"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"Исключающее ИЛИ": "при разных", "Эквиваленция": "при равных"}, explanation: "XOR — разные, ↔ — равные" }
+
+- id: inf-10-logic-003
+  class: 10
+  topic: Алгебра логики
+  subtopic: Предикаты
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-pred], meta: [plan-actions] }
+  prompt: "Что такое предикат?"
+  student_view: { options: [{ id: A, text: "Утверждение с переменными" }, { id: B, text: "Готовая истина" }, { id: C, text: "Вопрос" }, { id: D, text: "Число" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Подставил значения — получил высказывание" }
+
+- id: inf-10-logic-004
+  class: 10
+  topic: Алгебра логики
+  subtopic: Уравнения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Решите уравнение A → B = 0."
+  student_view: { options: [{ id: A, text: "A=1, B=0" }, { id: B, text: "A=0, B=1" }, { id: C, text: "A=0, B=0" }, { id: D, text: "A=1, B=1" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Единственный ноль импликации — из истины ложь" }
+
+- id: inf-10-logic-005
+  class: 10
+  topic: Алгебра логики
+  subtopic: Нормальные формы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Что собирает ДНФ?"
+  student_view: { options: [{ id: A, text: "Строки, где функция истинна" }, { id: B, text: "Строки, где функция ложна" }, { id: C, text: "Только шапку" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Дизъюнкция конъюнкций по единицам" }
+
+- id: inf-10-logic-006
+  class: 10
+  topic: Алгебра логики
+  subtopic: Эйлер-Венна
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Что показывает пересечение кругов Эйлера?"
+  student_view: { options: [{ id: A, text: "Логическое И" }, { id: B, text: "Логическое ИЛИ" }, { id: C, text: "Отрицание" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Пересечение — общие элементы, как И" }

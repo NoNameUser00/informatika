@@ -39,6 +39,18 @@ const JOBS = [
   { inputs: ['data/tasks/9/extra/bank-9extra.yaml'],
     output: 'src/data/extra9-tasks.json', test_code: 'extra9-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/10/base/bank-10base.yaml'],
+    output: 'src/data/base10-tasks.json', test_code: 'base10-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/10/ss/bank-10ss.yaml'],
+    output: 'src/data/ss10-tasks.json', test_code: 'ss10-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/10/logic/bank-10logic.yaml'],
+    output: 'src/data/logic10-tasks.json', test_code: 'logic10-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/10/media/bank-10media.yaml'],
+    output: 'src/data/media10-tasks.json', test_code: 'media10-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 
 function convert(t) {

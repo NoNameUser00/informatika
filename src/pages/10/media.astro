@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/media10-tasks.json';
+---
+<Layout title="Тренажер — Документы, 10 класс">
+  <Trainer client:load data={bank} title="Документы и мультимедиа" />
+</Layout>

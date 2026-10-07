@@ -1,0 +1,127 @@
+{
+  "test_code": "ss10-v1",
+  "variant": "trainer-v1",
+  "max_score": 7,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-10-ss-001",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Как переводят дробную часть в другую систему?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Умножают на основание, забирают целые"
+        },
+        {
+          "id": "B",
+          "text": "Делят на основание"
+        },
+        {
+          "id": "C",
+          "text": "Отбрасывают"
+        },
+        {
+          "id": "D",
+          "text": "Округляют до целых"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-ss-002",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чему равно 0,625 в двоичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0,101"
+        },
+        {
+          "id": "B",
+          "text": "0,11"
+        },
+        {
+          "id": "C",
+          "text": "0,100"
+        },
+        {
+          "id": "D",
+          "text": "0,011"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-ss-003",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Почему 0,1 + 0,2 ≠ 0,3 на компьютере?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Конечная точность вещественных"
+        },
+        {
+          "id": "B",
+          "text": "Процессор сломан"
+        },
+        {
+          "id": "C",
+          "text": "Мало памяти"
+        },
+        {
+          "id": "D",
+          "text": "Вирус"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-ss-004",
+      "lesson": "10ss-01-systems",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько байт займёт слово «Привет» в UTF-8? Запишите только число.",
+      "base": 10,
+      "expected": 12,
+      "key": "12"
+    },
+    {
+      "id": "inf-10-ss-005",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что общего у переводов в любой P-ичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Веса P^i и деление на P"
+        },
+        {
+          "id": "B",
+          "text": "Только деление"
+        },
+        {
+          "id": "C",
+          "text": "Только триады"
+        },
+        {
+          "id": "D",
+          "text": "Ничего общего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

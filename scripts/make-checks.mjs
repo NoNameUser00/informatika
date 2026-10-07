@@ -13,6 +13,10 @@ const BANK_FILES = [
   'src/data/arr9-tasks.json',
   'src/data/graph9-tasks.json',
   'src/data/extra9-tasks.json',
+  'src/data/base10-tasks.json',
+  'src/data/ss10-tasks.json',
+  'src/data/logic10-tasks.json',
+  'src/data/media10-tasks.json',
 ];
 
 const CHECKS = [
@@ -70,6 +74,24 @@ const CHECKS = [
   { file: 'control-9extra.json', code: 'extra9-control-v1', title: 'Контрольная: Роботы, модели, интернет',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-9-extra-001', 'inf-9-extra-003', 'inf-9-extra-005', 'inf-9-extra-006', 'inf-9-extra-007', 'inf-9-extra-008', 'inf-9-extra-009', 'inf-9-extra-010'] },
+  { file: 'proverka-10base.json', code: 'base10-proverka-v1', title: 'Проверочная: Железо и информация',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-10-base-001', 'inf-10-base-002', 'inf-10-base-003', 'inf-10-base-004', 'inf-10-base-005'] },
+  { file: 'control-10base.json', code: 'base10-control-v1', title: 'Контрольная: Железо и информация',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-10-base-001', 'inf-10-base-002', 'inf-10-base-003', 'inf-10-base-004', 'inf-10-base-005'] },
+  { file: 'proverka-10adv.json', code: 'adv10-proverka-v1', title: 'Проверочная: СС и логика',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-10-ss-003', 'inf-10-ss-005', 'inf-10-logic-003', 'inf-10-logic-005', 'inf-10-logic-006'] },
+  { file: 'control-10adv.json', code: 'adv10-control-v1', title: 'Контрольная: СС и логика',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-10-ss-001', 'inf-10-ss-002', 'inf-10-ss-003', 'inf-10-ss-004', 'inf-10-logic-001', 'inf-10-logic-002', 'inf-10-logic-004', 'inf-10-logic-005'] },
+  { file: 'proverka-10media.json', code: 'media10-proverka-v1', title: 'Проверочная: Документы',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-10-media-001', 'inf-10-media-003', 'inf-10-media-004', 'inf-10-media-005', 'inf-10-media-006'] },
+  { file: 'control-10media.json', code: 'media10-control-v1', title: 'Контрольная: Документы и мультимедиа',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-10-media-001', 'inf-10-media-002', 'inf-10-media-003', 'inf-10-media-004', 'inf-10-media-005', 'inf-10-media-006'] },
 ];
 
 const pool = new Map();

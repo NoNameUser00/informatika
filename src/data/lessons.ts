@@ -47,3 +47,12 @@ export const LESSONS_9: LessonMeta[] = [
   { id: '9model-01-models', title: 'Модели и моделирование', file: '9model-01-models.md' },
   { id: '9net-01-internet', title: 'Интернет: адреса, DNS, безопасность', file: '9net-01-internet.md' },
 ];
+
+export const LESSONS_10: LessonMeta[] = [
+  { id: '10hw-01-pc', title: 'Компьютер: устройство, конфигурация, ПО', file: '10hw-01-pc.md' },
+  { id: '10info-01-measure', title: 'Измерение информации: Шеннон и алфавит', file: '10info-01-measure.md' },
+  { id: '10ss-01-systems', title: 'Системы счисления: P-ичные, дроби, память', file: '10ss-01-systems.md' },
+  { id: '10logic-01-ops', title: 'Логика: пять операций, предикаты', file: '10logic-01-ops.md' },
+  { id: '10logic-02-transform', title: 'Уравнения, нормальные формы, схемы', file: '10logic-02-transform.md' },
+  { id: '10media-01-docs', title: 'Документы, графика, мультимедиа', file: '10media-01-docs.md' },
+];

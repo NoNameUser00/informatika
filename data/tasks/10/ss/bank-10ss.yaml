@@ -1,0 +1,85 @@
+# Банк «СС и кодировки», 10 класс — тренажёрный.
+- id: inf-10-ss-001
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: Дробные переводы
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-frac], meta: [plan-actions] }
+  prompt: "Как переводят дробную часть в другую систему?"
+  student_view: { options: [{ id: A, text: "Умножают на основание, забирают целые" }, { id: B, text: "Делят на основание" }, { id: C, text: "Отбрасывают" }, { id: D, text: "Округляют до целых" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Целые части произведений — цифры результата" }
+
+- id: inf-10-ss-002
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: Дробь 0,625
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-frac], meta: [plan-actions] }
+  prompt: "Чему равно 0,625 в двоичной системе?"
+  student_view: { options: [{ id: A, text: "0,101" }, { id: B, text: "0,11" }, { id: C, text: "0,100" }, { id: D, text: "0,011" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "0,625·2=1,25→1; 0,25·2=0,5→0; 0,5·2=1→1" }
+
+- id: inf-10-ss-003
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: Вещественные в памяти
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Почему 0,1 + 0,2 ≠ 0,3 на компьютере?"
+  student_view: { options: [{ id: A, text: "Конечная точность вещественных" }, { id: B, text: "Процессор сломан" }, { id: C, text: "Мало памяти" }, { id: D, text: "Вирус" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "0,1 в двоичной бесконечно, хранится приближение" }
+
+- id: inf-10-ss-004
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: UTF-8
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "Сколько байт займёт слово «Привет» в UTF-8? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12], answer_text: "12", explanation: "6 букв по 2 байта" }
+
+- id: inf-10-ss-005
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: P-ичные системы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Что общего у переводов в любой P-ичной системе?"
+  student_view: { options: [{ id: A, text: "Веса P^i и деление на P" }, { id: B, text: "Только деление" }, { id: C, text: "Только триады" }, { id: D, text: "Ничего общего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Приёмы 8 класса работают при любом основании" }

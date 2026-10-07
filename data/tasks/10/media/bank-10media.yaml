@@ -1,0 +1,102 @@
+# Банк «Документы и мультимедиа», 10 класс — тренажёрный.
+- id: inf-10-media-001
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Стили
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
+  prompt: "Зачем нужны стили в текстовом процессоре?"
+  student_view: { options: [{ id: A, text: "Менять всё разом и собирать оглавление" }, { id: B, text: "Рисовать картинки" }, { id: C, text: "Играть музыку" }, { id: D, text: "Не нужны" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Стиль — именованный набор, оглавление собирается само" }
+
+- id: inf-10-media-002
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Форматы графики
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-fmt], meta: [plan-actions] }
+  prompt: "Установите соответствие: формат — применение."
+  student_view: { left: ["JPEG", "PNG", "SVG"], right: ["фото", "схемы без потерь", "вектор для веба"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"JPEG": "фото", "PNG": "схемы без потерь", "SVG": "вектор для веба"}, explanation: "Фото — JPEG, схемы — PNG, вектор — SVG" }
+
+- id: inf-10-media-003
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: 3D
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-3d], meta: [plan-actions] }
+  prompt: "Из чего строятся 3D-модели?"
+  student_view: { options: [{ id: A, text: "Из примитивов с рендером" }, { id: B, text: "Из текста" }, { id: C, text: "Из звука" }, { id: D, text: "Из ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Примитивы → сцена → рендер" }
+
+- id: inf-10-media-004
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Презентации
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Что должно быть на слайде?"
+  student_view: { options: [{ id: A, text: "Один смысл крупно" }, { id: B, text: "Стена мелкого текста" }, { id: C, text: "Всё сразу" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Один слайд — один смысл" }
+
+- id: inf-10-media-005
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Рецензирование
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
+  prompt: "Что дают инструменты рецензирования?"
+  student_view: { options: [{ id: A, text: "Правки, комментарии и версии" }, { id: B, text: "Новые шрифты" }, { id: C, text: "Музыку" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Совместная работа с историей" }
+
+- id: inf-10-media-006
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Математические тексты
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
+  prompt: "Чем набирать формулы в документе?"
+  student_view: { options: [{ id: A, text: "Специальным редактором формул" }, { id: B, text: "Надстрочными костылями" }, { id: C, text: "Картинками из чата" }, { id: D, text: "Ничем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Формулы — редактором, иначе разъедутся" }

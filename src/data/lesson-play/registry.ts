@@ -31,6 +31,12 @@ import { GRAPH9_01_PLAY } from './9graph-01-graphs';
 import { ROBOT9_01_PLAY } from './9robot-01-control';
 import { MODEL9_01_PLAY } from './9model-01-models';
 import { NET9_01_PLAY } from './9net-01-internet';
+import { HW10_01_PLAY } from './10hw-01-pc';
+import { INFO10_01_PLAY } from './10info-01-measure';
+import { SS10_01_PLAY } from './10ss-01-systems';
+import { LOGIC10_01_PLAY } from './10logic-01-ops';
+import { LOGIC10_02_PLAY } from './10logic-02-transform';
+import { MEDIA10_01_PLAY } from './10media-01-docs';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
@@ -94,6 +100,12 @@ const REGISTRY: Record<string, PlayLesson> = {
   '9robot-01-control': ROBOT9_01_PLAY,
   '9model-01-models': MODEL9_01_PLAY,
   '9net-01-internet': NET9_01_PLAY,
+  '10hw-01-pc': HW10_01_PLAY,
+  '10info-01-measure': INFO10_01_PLAY,
+  '10ss-01-systems': SS10_01_PLAY,
+  '10logic-01-ops': LOGIC10_01_PLAY,
+  '10logic-02-transform': LOGIC10_02_PLAY,
+  '10media-01-docs': MEDIA10_01_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,

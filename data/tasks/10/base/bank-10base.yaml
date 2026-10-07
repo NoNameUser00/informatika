@@ -1,0 +1,85 @@
+# Банк «Железо и информация», 10 класс — тренажёрный.
+- id: inf-10-base-001
+  class: 10
+  topic: Устройство и информация
+  subtopic: Магистрали
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Что соединяют магистрали компьютера?"
+  student_view: { options: [{ id: A, text: "Процессор, память и устройства" }, { id: B, text: "Только файлы" }, { id: C, text: "Только монитор" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Шины данных, адреса и управления" }
+
+- id: inf-10-base-002
+  class: 10
+  topic: Устройство и информация
+  subtopic: Лицензии
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Чем свободное ПО отличается от пиратского?"
+  student_view: { options: [{ id: A, text: "Лицензия разрешает: GNU GPL" }, { id: B, text: "Ничем" }, { id: C, text: "Ценой" }, { id: D, text: "Цветом диска" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Свободное — легально по лицензии" }
+
+- id: inf-10-base-003
+  class: 10
+  topic: Устройство и информация
+  subtopic: Вероятностный подход
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Сообщение об исходе из 8 равновероятных. Сколько бит информации? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "2^3 = 8" }
+
+- id: inf-10-base-004
+  class: 10
+  topic: Устройство и информация
+  subtopic: Поле крестиков
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Первый ход в крестиках-ноликах n×n несёт 6 бит. Найди n. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "N = 64 клетки, поле 8×8" }
+
+- id: inf-10-base-005
+  class: 10
+  topic: Устройство и информация
+  subtopic: Скорость передачи
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Файл 8000 бит, канал 1000 бит/с. Сколько секунд качать? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Время = объём / скорость" }
