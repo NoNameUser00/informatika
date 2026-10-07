@@ -32,8 +32,10 @@ interface Prefs {
 }
 
 const KEY = 'inf-space-v1';
-const MIN_COUNT = 100;
-const MAX_COUNT = 600;
+const MIN_COUNT = 1;
+const MAX_COUNT = 100;
+const MAX_STARS = 1200;
+const DEFAULT_COUNT = 35;
 const MIN_SPEED = 10;
 const MAX_SPEED = 300;
 const DEFAULT_SPEED = 100; // = старая 1.0×
@@ -45,12 +47,11 @@ function loadPrefs(): Prefs | null {
     const v = JSON.parse(raw);
     let speed = typeof v.speed === 'number' ? v.speed : DEFAULT_SPEED;
     if (speed < MIN_SPEED) speed *= 100; // миграция со старой шкалы 0.2–3
+    let count = typeof v.count === 'number' ? v.count : DEFAULT_COUNT;
+    if (count > MAX_COUNT) count = Math.min(100, Math.max(1, Math.round(count / 12))); // миграция со шкалы 100–600
     return {
       paused: typeof v.paused === 'boolean' ? v.paused : false,
-      count:
-        typeof v.count === 'number'
-          ? Math.min(MAX_COUNT, Math.max(MIN_COUNT, Math.round(v.count)))
-          : 350,
+      count: Math.min(MAX_COUNT, Math.max(MIN_COUNT, Math.round(count))),
       speed: Math.min(MAX_SPEED, Math.max(MIN_SPEED, Math.round(speed))),
     };
   } catch {
@@ -61,7 +62,7 @@ function loadPrefs(): Prefs | null {
 // Стартовые значения — КОНСТАНТА: сервер и первый клиентский рендер обязаны
 // совпасть, иначе React роняет гидратацию. Реальные настройки подтягиваем
 // эффектом вторым проходом.
-const INITIAL: Prefs = { paused: false, count: 350, speed: DEFAULT_SPEED };
+const INITIAL: Prefs = { paused: false, count: DEFAULT_COUNT, speed: DEFAULT_SPEED };
 
 export default function SpaceBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -126,7 +127,8 @@ export default function SpaceBackground() {
     });
     let stars: Star[] = [];
     const syncStars = () => {
-      const want = Math.round(prefsRef.current.count);
+      // Ползунок — проценты 1–100 от потока MAX_STARS.
+      const want = Math.max(1, Math.round((prefsRef.current.count / 100) * MAX_STARS));
       while (stars.length < want) stars.push(makeStar());
       if (stars.length > want) stars = stars.slice(0, want);
     };
@@ -317,15 +319,15 @@ export default function SpaceBackground() {
           {prefs.paused ? '▶ Старт' : '⏸ Пауза'}
         </button>
         <label className="space-slider">
-          <span>Звёзды · {Math.round(prefs.count)}</span>
+          <span>Звёзды · {Math.round(prefs.count)}%</span>
           <input
             type="range"
             min={MIN_COUNT}
             max={MAX_COUNT}
-            step={10}
+            step={1}
             value={Math.round(prefs.count)}
             onChange={(e) => patch({ count: Number(e.target.value) })}
-            aria-label="Количество звёзд"
+            aria-label="Плотность звёзд, проценты"
           />
         </label>
         <label className="space-slider">
