@@ -1,0 +1,204 @@
+# Банк «Компьютер, файлы, тексты, графика, интернет», 7 класс — тренажёрный.
+- id: inf-7-base-001
+  class: 7
+  topic: Компьютер и ПО
+  subtopic: Процессор
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
+  prompt: "Что такое тактовая частота процессора?"
+  student_view: { options: [{ id: A, text: "Число тактов в секунду" }, { id: B, text: "Число ядер" }, { id: C, text: "Объём памяти" }, { id: D, text: "Длина кода за раз" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Тактов в секунду, измеряется в ГГц" }
+
+- id: inf-7-base-002
+  class: 7
+  topic: Компьютер и ПО
+  subtopic: Память
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
+  prompt: "Что хранится в постоянной памяти (ПЗУ)?"
+  student_view: { options: [{ id: A, text: "Программа первоначальной загрузки" }, { id: B, text: "Открытые документы" }, { id: C, text: "Скачанные фильмы" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "ПЗУ не стирается при выключении и грузит компьютер" }
+
+- id: inf-7-base-003
+  class: 7
+  topic: Компьютер и ПО
+  subtopic: Свободное ПО
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Какое право даёт свободное ПО (лицензия GNU GPL)?"
+  student_view: { options: [{ id: A, text: "Изучать и изменять программу" }, { id: B, text: "Только смотреть рекламу" }, { id: C, text: "Платить каждый месяц" }, { id: D, text: "Скрывать исходный код" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Использовать, изучать, копировать, распространять изменения" }
+
+- id: inf-7-base-004
+  class: 7
+  topic: Файлы и защита
+  subtopic: Маски
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-mask], meta: [plan-actions] }
+  prompt: "Установите соответствие: символ маски — его смысл."
+  student_view: { left: ["?", "*", "н*.txt"], right: ["ровно один символ", "любая последовательность символов", "файлы на н с расширением txt"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"?": "ровно один символ", "*": "любая последовательность символов", "н*.txt": "файлы на н с расширением txt"}, explanation: "? — один символ, * — сколько угодно" }
+
+- id: inf-7-base-005
+  class: 7
+  topic: Файлы и защита
+  subtopic: Архиваторы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
+  prompt: "Зачем упаковывать фотографии в архив перед отправкой?"
+  student_view: { options: [{ id: A, text: "Меньше места и быстрее передать" }, { id: B, text: "Фотографии станут цветными" }, { id: C, text: "Чтобы удалить вирусы" }, { id: D, text: "Чтобы поменять формат" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Архив сжимает без потери качества" }
+
+- id: inf-7-base-006
+  class: 7
+  topic: Текст
+  subtopic: Форматирование
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-format], meta: [plan-actions] }
+  prompt: "Что относится к прямому форматированию символов?"
+  student_view: { options: [{ id: A, text: "Жирность и размер шрифта" }, { id: B, text: "Нумерация страниц" }, { id: C, text: "Колонтитулы" }, { id: D, text: "Оглавление" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Символы — шрифт/размер/начертание; остальное — абзацы и документ" }
+
+- id: inf-7-base-007
+  class: 7
+  topic: Текст
+  subtopic: Списки и таблицы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
+  prompt: "Чем структурируют перечисления в документе?"
+  student_view: { options: [{ id: A, text: "Списками и таблицами" }, { id: B, text: "Только картинками" }, { id: C, text: "Только шрифтом" }, { id: D, text: "Колонтитулами" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Списки — для перечислений, таблицы — для сеток данных" }
+
+- id: inf-7-base-008
+  class: 7
+  topic: Графика
+  subtopic: Растр и вектор
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7gfx-01-graphics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-types], meta: [plan-actions] }
+  prompt: "Чем растровое изображение отличается от векторного?"
+  student_view: { options: [{ id: A, text: "Хранит цвет каждого пикселя" }, { id: B, text: "Хранит формулы фигур" }, { id: C, text: "Не имеет размера" }, { id: D, text: "Не хранит цвета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Растр — сетка пикселей; вектор — формулы" }
+
+- id: inf-7-base-009
+  class: 7
+  topic: Графика
+  subtopic: Объём растра
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7gfx-01-graphics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-volume], meta: [plan-actions] }
+  prompt: "Чёрно-белый рисунок 10 на 10 пикселей (1 бит на пиксель). Сколько бит он весит? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [100], answer_text: "100", explanation: "I = 100·1 = 100" }
+
+- id: inf-7-base-010
+  class: 7
+  topic: Интернет
+  subtopic: Поисковые запросы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Запрос «канарейки AND щеглы» найдёт документы…"
+  student_view: { options: [{ id: A, text: "Где есть оба слова" }, { id: B, text: "Где есть хоть одно" }, { id: C, text: "Где нет этих слов" }, { id: D, text: "Только с картинками" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "AND — пересечение, как в логике" }
+
+- id: inf-7-base-011
+  class: 7
+  topic: Интернет
+  subtopic: Поиск без результата
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Поиск ничего не нашёл. Что сделать первым делом?"
+  student_view: { options: [{ id: A, text: "Проверить написание слов" }, { id: B, text: "Выключить компьютер" }, { id: C, text: "Удалить браузер" }, { id: D, text: "Ждать неделю" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Дальше: связки, синонимы, логика запроса, другой поисковик" }
+
+- id: inf-7-base-012
+  class: 7
+  topic: Интернет
+  subtopic: Безопасность
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
+  prompt: "Что защищает от вирусов в первую очередь?"
+  student_view: { options: [{ id: A, text: "Антивирусная программа" }, { id: B, text: "Яркие обои" }, { id: C, text: "Громкий звук" }, { id: D, text: "Быстрый интернет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Антивирусы + осторожность с файлами" }

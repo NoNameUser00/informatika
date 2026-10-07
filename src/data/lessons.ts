@@ -29,4 +29,9 @@ export const LESSONS_7: LessonMeta[] = [
   { id: '7inf-02-coding', title: 'Двоичное кодирование', file: '7inf-02-coding.md' },
   { id: '7inf-03-measure', title: 'Измерение информации: вес символа и объём', file: '7inf-03-measure.md' },
   { id: '7inf-04-textvolume', title: 'Объём текста: решаем задачи', file: '7inf-04-textvolume.md' },
+  { id: '7pc-01-hardware', title: 'Компьютер: устройства, память, программы', file: '7pc-01-hardware.md' },
+  { id: '7pc-02-files', title: 'Файлы: маски, архивы, вирусы', file: '7pc-02-files.md' },
+  { id: '7doc-01-text', title: 'Текст: набор, форматирование, структуры', file: '7doc-01-text.md' },
+  { id: '7gfx-01-graphics', title: 'Графика: растр и вектор, объём', file: '7gfx-01-graphics.md' },
+  { id: '7net-01-internet', title: 'Интернет: поиск, адреса, безопасность', file: '7net-01-internet.md' },
 ];

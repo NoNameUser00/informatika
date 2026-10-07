@@ -36,6 +36,12 @@ const CHECKS = [
   { file: 'control-7inf.json', code: 'grade7-control-v1', title: 'Контрольная: Информация',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-7-inf-001', 'inf-7-inf-002', 'inf-7-inf-003', 'inf-7-inf-006', 'inf-7-inf-007', 'inf-7-inf-008', 'inf-7-inf-010', 'inf-7-inf-011'] },
+  { file: 'proverka-7base.json', code: 'grade7base-proverka-v1', title: 'Проверочная: Компьютер и софт',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-7-base-001', 'inf-7-base-002', 'inf-7-base-005', 'inf-7-base-010', 'inf-7-base-011'] },
+  { file: 'control-7base.json', code: 'grade7base-control-v1', title: 'Контрольная: Компьютер и софт',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-7-base-001', 'inf-7-base-003', 'inf-7-base-004', 'inf-7-base-006', 'inf-7-base-008', 'inf-7-base-009', 'inf-7-base-010', 'inf-7-base-012'] },
 ];
 
 const pool = new Map();

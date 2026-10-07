@@ -5,7 +5,7 @@ import { parse } from 'yaml';
 import { bankSchema } from '../src/lib/tasks/schema.js';
 
 const paths = process.argv.slice(2);
-const files = paths.length > 0 ? paths : ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml', 'data/tasks/8/logic/bank-logic.yaml', 'data/tasks/8/algorithms/bank-algo.yaml', 'data/tasks/7/information/bank-7inf.yaml', 'data/tasks/8/code-run/bank-code.yaml'];
+const files = paths.length > 0 ? paths : ['data/tasks/8/number-systems/bank.yaml', 'data/tasks/8/number-systems/bank-gen.yaml', 'data/tasks/8/logic/bank-logic.yaml', 'data/tasks/8/algorithms/bank-algo.yaml', 'data/tasks/7/information/bank-7inf.yaml', 'data/tasks/7/base/bank-7base.yaml', 'data/tasks/8/code-run/bank-code.yaml'];
 
 let all: unknown[] = [];
 for (const path of files) {

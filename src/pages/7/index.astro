@@ -18,9 +18,21 @@ const grade = '7';
     <span> </span>
     <a class="btn secondary" href={`${B}${grade}/control-info/`}>Контрольная (8 заданий)</a>
   </div>
-  {LESSONS_7.map((l, i) => (
+  {LESSONS_7.filter((l) => l.id.startsWith('7inf')).map((l, i) => (
     <div class="card">
       <h3>Урок {i + 1}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
+  <h2>Компьютер, файлы, тексты, графика, интернет</h2>
+  <div class="card">
+    <a class="btn secondary" href={`${B}${grade}/proverka-7base/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-7base/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_7.filter((l) => !l.id.startsWith('7inf')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 5}. {l.title}</h3>
       <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}

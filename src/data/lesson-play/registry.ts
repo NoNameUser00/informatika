@@ -17,6 +17,11 @@ import { INF7_01_PLAY } from './7inf-01-info';
 import { INF7_02_PLAY } from './7inf-02-coding';
 import { INF7_03_PLAY } from './7inf-03-measure';
 import { INF7_04_PLAY } from './7inf-04-textvolume';
+import { PC7_01_PLAY } from './7pc-01-hardware';
+import { PC7_02_PLAY } from './7pc-02-files';
+import { DOC7_01_PLAY } from './7doc-01-text';
+import { GFX7_01_PLAY } from './7gfx-01-graphics';
+import { NET7_01_PLAY } from './7net-01-internet';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
@@ -66,6 +71,11 @@ const REGISTRY: Record<string, PlayLesson> = {
   '7inf-02-coding': INF7_02_PLAY,
   '7inf-03-measure': INF7_03_PLAY,
   '7inf-04-textvolume': INF7_04_PLAY,
+  '7pc-01-hardware': PC7_01_PLAY,
+  '7pc-02-files': PC7_02_PLAY,
+  '7doc-01-text': DOC7_01_PLAY,
+  '7gfx-01-graphics': GFX7_01_PLAY,
+  '7net-01-internet': NET7_01_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,
