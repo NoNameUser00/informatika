@@ -6,7 +6,9 @@ source_ref: "split/10/03-gl3-sozdanie-obrabotka.pdf, 05-gl5; КТП 10: проц
 lesson: 6
 ---
 
-# Документы уровня 10 класса
+# Документы уровня 10 класса (LibreOffice Writer)
+
+Работаем в **LibreOffice Writer** — основном редакторе курса.
 
 ## Стили и структура
 
