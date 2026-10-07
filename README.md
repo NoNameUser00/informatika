@@ -34,6 +34,14 @@ supabase/ — миграции, функции, seed (следующий эта�
 - Запрет: никогда не сканировать `data/tasks/**` (там `teacher_only`) и `material/**` — ответы и копирайт не уходят в LLM.
 - Полноценный `ocr scan`/`review` требует git-репо и настроенного провайдера (`ocr config provider`); без ключей работает только `delegation` через свой агент.
 
+## Дайджест для LLM (gitingest)
+
+- `gitingest` стоит изолированно (`uv tool install gitingest`). Рецепт без утечек — только скриптом
+  (в shell-команде glob-паттерны раскрываются и ломают вызов):
+  `uv tool run --from gitingest python scripts/make-llm-digest.py`
+- Исключены: `data/tasks/*` (teacher_only), `material/*` (копирайт), окружения/сборки/бинарники.
+  Остаются ответы ТРЕНАЖЕРА (`src/data/*.json`) — они public-by-design; ответов контрольной в репо нет.
+
 ## Запуск тренажера (после `pnpm create astro`)
 
 - `pnpm install`

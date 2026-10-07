@@ -150,3 +150,37 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "2048 / 512 = 4" }
+
+- id: inf-10-base-010
+  class: 10
+  topic: Устройство и информация
+  subtopic: Условие Фано
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Какой код удовлетворяет условию Фано (ни одно слово — не начало другого)?"
+  student_view: { options: [{ id: A, text: "А–0, Б–10, В–110" }, { id: B, text: "А–0, Б–01, В–011" }, { id: C, text: "А–1, Б–11, В–111" }, { id: D, text: "А–0, Б–00, В–000" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "В остальных есть вложенность: 0 в начале 01/011 и 00/000, 1 в начале 11/111" }
+
+- id: inf-10-base-011
+  class: 10
+  topic: Устройство и информация
+  subtopic: Декодирование
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-01-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Код: А–0, Б–10, В–110. Расшифруй сообщение 010110."
+  student_view: { options: [{ id: A, text: "АБВ" }, { id: B, text: "БАВ" }, { id: C, text: "ВБА" }, { id: D, text: "АВБ" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Читаем слева: 0 — А, 10 — Б, 110 — В" }

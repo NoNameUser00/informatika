@@ -236,3 +236,71 @@
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Два отрезка под 90° — путь не замкнулся" }
 
+- id: inf-8-algo-015
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Результат по входным данным
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?"
+  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "10" }, { id: C, text: "5" }, { id: D, text: "8" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "5 > 3 — верхняя ветка: 5 · 2 = 10" }
+
+- id: inf-8-algo-016
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Результат цикла
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Алгоритм: s := 0; для i от 1 до 4: s := s + i. Чему равен s в конце? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "1 + 2 + 3 + 4 = 10" }
+
+- id: inf-8-algo-017
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Входные по результату
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?"
+  student_view: { options: [{ id: A, text: "20" }, { id: B, text: "5" }, { id: C, text: "9" }, { id: D, text: "4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
+
+- id: inf-8-algo-018
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Строковые операции
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Установите соответствие для s = 'Python'."
+  student_view: { left: ["len(s)", "s[0]", "s[1:4]", "'on' in s"], right: ["'P'", "'yth'", "6", "True"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: { "len(s)": "6", "s[0]": "'P'", "s[1:4]": "'yth'", "'on' in s": "True" }, explanation: "Длина 6, первый символ P, срез с 1 по 3, подстрока есть" }
+

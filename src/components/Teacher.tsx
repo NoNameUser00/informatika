@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import Board from './Board';
+import ErrorReview from './ErrorReview';
+import Analytics from './Analytics';
+import TeacherGate from './TeacherGate';
 import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
@@ -78,6 +81,7 @@ export default function Teacher() {
   }
 
   return (
+    <TeacherGate>
     <div>
       <h1>Журнал работ</h1>
       {role !== 'teacher' && (
@@ -85,11 +89,13 @@ export default function Teacher() {
           <p><strong>Раздел учителя.</strong> Войди через Google/Яндекс и получи роль учителя (см. docs/auth-setup.md) — иначе видны только локальные строки этого браузера без отметок.</p>
         </div>
       )}
+      <Analytics rows={rows} />
       <div className="card">
         <h2>Доска разборов</h2>
         <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>
         <Board id="teacher-board" />
       </div>
+      <ErrorReview />
       <p className="muted">{note}</p>
       {rows.length > 0 && <button className="btn secondary" onClick={csv}>Экспорт CSV</button>}
       {rows.map((r, i) => (
@@ -111,5 +117,6 @@ export default function Teacher() {
         </div>
       ))}
     </div>
+    </TeacherGate>
   );
 }

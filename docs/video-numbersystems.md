@@ -51,6 +51,28 @@
 - В роликах — только уровень тренажёра (student_view + общие правила). Разборы из `teacher_only` не озвучивать дословно.
 - В облачные провайдеры (если понадобятся) — никакой ПДн, только синтетика (AGENTS.md).
 
+## Озвучка-трек (Piper, проверено end-to-end 2026-10-07)
+
+- Голос: `ru_RU-dmitri-medium` (`D:\openmontage\projects\numsys\voices/`, 63 МБ; установка:
+  `venv/Scripts/python -m piper.download_voices ru_RU-dmitri-medium --download-dir voices`).
+- Тексты блоков: `vo_0{1..4}_*.txt` (из `docs/video/script-01-dec-to-bin.md`, цифры для проговаривания расписаны словами).
+- Синтез блока: `python -m piper -m voices/ru_RU-dmitri-medium.onnx -c voices/ru_RU-dmitri-medium.onnx.json -i vo_XX.txt -f vo_XX.wav --sentence-silence 0.4`.
+  Длительности пилота: 8.7 / 9.4 / 16.1 / 11.9 с (сумма 46.1 с).
+- Метод синхронизации (конструкцией, не подгонкой): эпизод = 4 сцены (`dec_episode.py`: Hook/Base/Work/Final),
+  каждая рендерится чуть короче своего аудио → видео добивается freeze-кадром (`tpad=stop_mode=clone`) ровно
+  до длины аудио → concat демuxer → `episode_dec_to_bin.mp4` (46.1 с, h264+aac, проверен кадрами и звуком).
+- Паузы: пунктуация + `--sentence-silence`; цифры проговаривать словами («один, один, ноль, один»), иначе TTS читает как число.
+
+## HyperFrames-трек (motion-graphics, проверено рендером 2026-10-07)
+
+- Проект: `D:\openmontage\projects\numsys\hf-title` (`index.html` — композиция 10 с, 1920×1080, GSAP paused timeline;
+  пин `hyperframes@0.8.139` в `package.json`). Команды: `check` (включая WCAG AA — 43/43), `render`.
+- Готов: титр эпизода (кикер → заголовок с `<sub>10</sub>` → биты стаггером → правило). Рендер 10 с за ~28 с,
+  `renders/hf-title_2026-10-07_13-00-45.mp4`, проверен кадрами.
+- Роль в контуре: титры/заставки/схемы эпизодов (HTML вместо React-сборки); Manim — точная математика.
+  FFmpeg в PATH новых оболочек обязателен, иначе `render` падает с «FFmpeg not found».
+- Следующее: склейка титра с `episode_dec_to_bin.mp4` (интро 3–4 с + основной ролик).
+
 ## ComfyUI track (локальная генерация медиа)
 
 - Роль: заставки/превью/иллюстрации для explainer-сцен вместо платных fal.ai/Kling. Связка предусмотрена самим OpenMontage (`COMFYUI_SERVER_URL`, `D:\openmontage\.env` уже указывает на `http://localhost:8188`).
@@ -60,6 +82,6 @@
 
 ## Следующий шаг (без GPU)
 
-1. `winget install Gyan.FFmpeg`; `pip install piper-tts` + голос ru_RU (проверка: `python -m piper --help`).
+1. ~~FFmpeg + Piper~~ — готово (FFmpeg 9.0.2, piper-tts 1.8.0, голос ru_RU-dmitri-medium, эпизод-пилот собран).
 2. `make setup` в `D:\openmontage` (проверить `config.yaml`; `.env` уже содержит только локальный COMFYUI_URL без секретов).
 3. Прогнать пайплайн на пилотном сценарии от стадии `assets` (research/proposal/script уже закрыты этим брифом).

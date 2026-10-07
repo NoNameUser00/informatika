@@ -1,0 +1,170 @@
+# Банк «Графы и игры», 11 класс — тренажёрный. teacher_only — только через серверные VIEW.
+- id: inf-11-graph-001
+  class: 11
+  topic: Графы и деревья
+  subtopic: Определение дерева
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-trees], meta: [plan-actions] }
+  prompt: "Что такое дерево в теории графов?"
+  student_view: { options: [{ id: A, text: "Связный граф без циклов" }, { id: B, text: "Граф с ровно одним циклом" }, { id: C, text: "Несвязный граф" }, { id: D, text: "Полный граф" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Связность + нет циклов: между вершинами ровно один путь" }
+
+- id: inf-11-graph-002
+  class: 11
+  topic: Графы и деревья
+  subtopic: Рёбра дерева
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-trees], meta: [plan-actions] }
+  prompt: "Сколько рёбер в дереве из 6 вершин? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Дерево: рёбер на одно меньше, чем вершин" }
+
+- id: inf-11-graph-003
+  class: 11
+  topic: Графы и деревья
+  subtopic: Число путей в DAG
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-paths], meta: [plan-actions] }
+  prompt: "Рёбра: A→B, A→C, B→C, B→D, C→D. Сколько различных путей из A в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "C = A + B = 2, D = B + C = 3 (маршруты A-B-D, A-B-C-D, A-C-D)" }
+
+- id: inf-11-graph-004
+  class: 11
+  topic: Графы и деревья
+  subtopic: Кратчайший путь
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-paths], meta: [plan-actions] }
+  prompt: "Веса рёбер: A–B 4, A–C 2, C–B 1, B–D 5, C–D 8. Какова длина кратчайшего пути из A в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Маршруты: 9, 10 и A-C-B-D = 2 + 1 + 5 = 8" }
+
+- id: inf-11-graph-005
+  class: 11
+  topic: Графы и деревья
+  subtopic: Матрица смежности
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Строка матрицы смежности вершины 2: 0 0 1 1. С какими вершинами она смежна?"
+  student_view: { options: [{ id: A, text: "3 и 4" }, { id: B, text: "1 и 2" }, { id: C, text: "2 и 3" }, { id: D, text: "Только 4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Единицы в столбцах 3 и 4; строка — «откуда»" }
+
+- id: inf-11-graph-006
+  class: 11
+  topic: Выигрышные стратегии
+  subtopic: Полная информация
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Что означает «игра с полной информацией»?"
+  student_view: { options: [{ id: A, text: "Оба игрока видят позицию и все ходы" }, { id: B, text: "Ходы делаются одновременно" }, { id: C, text: "Часть ходов скрыта" }, { id: D, text: "Игрок один" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Всё на столе: побеждает тот, кто дальше посчитал" }
+
+- id: inf-11-graph-007
+  class: 11
+  topic: Выигрышные стратегии
+  subtopic: Первый ход
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Куча 7 камней, ходы +1/+2, выигрыш при 11+. Какой первый ход ведёт к победе?"
+  student_view: { options: [{ id: A, text: "+1 (в 8)" }, { id: B, text: "+2 (в 9)" }, { id: C, text: "Оба хода равноценны" }, { id: D, text: "Выигрыша нет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "8 — L-позиция для соперника; из 9 он выигрывает сразу (9 + 2 = 11)" }
+
+- id: inf-11-graph-008
+  class: 11
+  topic: Выигрышные стратегии
+  subtopic: Таблица W/L
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Куча, ходы +1/+2, цель 11+. Какая позиция проигрышна для того, чей ход?"
+  student_view: { options: [{ id: A, text: "7" }, { id: B, text: "8" }, { id: C, text: "9" }, { id: D, text: "10" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Из 8 все ходы — в W (9 и 10); 7, 9, 10 — W-позиции" }
+
+- id: inf-11-graph-009
+  class: 11
+  topic: Выигрышные стратегии
+  subtopic: Победа в один ход
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Куча, ходы +1/+2, выигрыш при 11+. Минимальное число камней для победы в 1 ход? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "S + 2 ≥ 11: S = 9; с 8 максимум 10" }
+
+- id: inf-11-graph-010
+  class: 11
+  topic: Выигрышные стратегии
+  subtopic: Длина стратегии
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Куча 7 камней, ходы +1/+2, цель 11+. За сколько своих ходов выиграет первый при лучшей игре обоих?"
+  student_view: { options: [{ id: A, text: "1" }, { id: B, text: "2" }, { id: C, text: "3" }, { id: D, text: "Не выиграет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "7 → 8, затем 9 → 11 или 10 → 11: победа на 2-м ходу при любом ответе" }

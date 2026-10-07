@@ -63,6 +63,9 @@ const JOBS = [
   { inputs: ['data/tasks/11/net/bank-11net.yaml'],
     output: 'src/data/net11-tasks.json', test_code: 'net11-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/11/graph/bank-11graph.yaml'],
+    output: 'src/data/graph11-tasks.json', test_code: 'graph11-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 
 function convert(t) {

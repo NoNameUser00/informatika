@@ -148,9 +148,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?"
-  student_view: { options: [{ id: A, text: "22.4.13.73.133" }, { id: B, text: "3.133.22.4.13.73" }, { id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }] }
+  student_view: { options: [{ id: A, text: "224.133.133.73" }, { id: B, text: "3.133.22.4.13.73" }, { id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Каждое число 0–255, всего четыре: Б-Г-В-А" }
+  teacher_only: { answer: A, explanation: "Единственная склейка с четырьмя числами 0–255: Б-Г-А-В. Остальные дают 5 групп или числа >255" }
 
 - id: inf-9-extra-010
   class: 9
@@ -168,3 +168,54 @@
   student_view: { options: [{ id: A, text: "Переводить имена в IP-адреса" }, { id: B, text: "Рисовать сайты" }, { id: C, text: "Писать вирусы" }, { id: D, text: "Выключать интернет" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Телефонная книга интернета" }
+
+- id: inf-9-extra-011
+  class: 9
+  topic: Интернет
+  subtopic: Веб-страницы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Каким тегом вставляется картинка на веб-страницу?"
+  student_view: { options: [{ id: A, text: "<img>" }, { id: B, text: "<p>" }, { id: C, text: "<a>" }, { id: D, text: "<table>" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "<p> — абзац, <a> — ссылка, <table> — таблица" }
+
+- id: inf-9-extra-012
+  class: 9
+  topic: Интернет
+  subtopic: Онлайн-офис
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Что такое онлайн-офис как веб-сервис?"
+  student_view: { options: [{ id: A, text: "Редактирование документов в браузере без установки программ" }, { id: B, text: "Ускорение процессора через интернет" }, { id: C, text: "Замена антивируса" }, { id: D, text: "Печать без принтера" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Программа живёт в сети: открыл ссылку — и работаешь, можно вместе" }
+
+- id: inf-9-extra-013
+  class: 9
+  topic: Интернет
+  subtopic: Совместная работа
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Документ лежит в облаке. Что позволяет двум ученикам править его одновременно?"
+  student_view: { options: [{ id: A, text: "Совместное редактирование в онлайн-офисе" }, { id: B, text: "Архив с паролем" }, { id: C, text: "Две копии на разных флешках" }, { id: D, text: "Скриншоты страниц" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Один документ, общий доступ, история помнит авторов" }

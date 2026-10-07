@@ -21,6 +21,7 @@ const BANK_FILES = [
   'src/data/db11-tasks.json',
   'src/data/algo11-tasks.json',
   'src/data/net11-tasks.json',
+  'src/data/graph11-tasks.json',
 ];
 
 const CHECKS = [
@@ -114,6 +115,12 @@ const CHECKS = [
   { file: 'control-11net.json', code: 'net11-control-v1', title: 'Контрольная: Сети и безопасность',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-11-net-001', 'inf-11-net-002', 'inf-11-net-004', 'inf-11-net-005', 'inf-11-net-006', 'inf-11-net-007', 'inf-11-net-008', 'inf-11-net-003', 'inf-11-net-009', 'inf-11-net-010'] },
+  { file: 'proverka-11graph.json', code: 'graph11-proverka-v1', title: 'Проверочная: Графы и игры',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-11-graph-001', 'inf-11-graph-002', 'inf-11-graph-005', 'inf-11-graph-006', 'inf-11-graph-007', 'inf-11-graph-009'] },
+  { file: 'control-11graph.json', code: 'graph11-control-v1', title: 'Контрольная: Графы и игры',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-11-graph-001', 'inf-11-graph-002', 'inf-11-graph-003', 'inf-11-graph-004', 'inf-11-graph-005', 'inf-11-graph-006', 'inf-11-graph-007', 'inf-11-graph-008', 'inf-11-graph-009', 'inf-11-graph-010'] },
   { file: 'proverka-7media.json', code: 'grade7media-proverka-v1', title: 'Проверочная: Мультимедиа',
     instruction: 'Отвечайте точно.',
     ids: ['inf-7-media-001', 'inf-7-media-003', 'inf-7-media-005', 'inf-7-media-006', 'inf-7-media-010', 'inf-7-media-009'] },

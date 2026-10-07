@@ -263,3 +263,113 @@
     solution_code: "n, s = 12345, 0\nwhile n:\n    s += n % 10\n    n //= 10\nprint(s)"
     expected_stdout: "15"
     explanation: "1+2+3+4+5 = 15"
+
+- id: inf-8-code-013
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Длина строки
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Выведи длину слова 'информатика' функцией len()."
+  student_view:
+    language: python
+    template: "# Допиши код: длина слова 'информатика'\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(len('информатика'))"
+    expected_stdout: "11"
+    explanation: "В слове 11 букв"
+
+- id: inf-8-code-014
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Индексы символов
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Строка s = 'Python'. Выведи её первый и последний символы одной строкой (без пробела)."
+  student_view:
+    language: python
+    template: "# Допиши код: первый и последний символы\ns = 'Python'\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "s = 'Python'\nprint(s[0] + s[-1])"
+    expected_stdout: "Pn"
+    explanation: "Индекс 0 — первый, индекс −1 — последний"
+
+- id: inf-8-code-015
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Поиск подстроки
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Проверь оператором in, есть ли подстрока 'yth' в строке 'Python', и выведи результат."
+  student_view:
+    language: python
+    template: "# Допиши код: поиск подстроки\ns = 'Python'\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "s = 'Python'\nprint('yth' in s)"
+    expected_stdout: "True"
+    explanation: "Символы 1–3 дают 'yth', вхождение есть"
+
+- id: inf-8-code-016
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Перебор строки
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Посчитай циклом for, сколько раз буква 'а' встречается в слове 'барабан', и выведи счётчик."
+  student_view:
+    language: python
+    template: "# Допиши код: счётчик буквы 'а'\nw = 'барабан'\nk = 0\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "w = 'барабан'\nk = 0\nfor ch in w:\n    if ch == 'а':\n        k += 1\nprint(k)"
+    expected_stdout: "3"
+    explanation: "Три вхождения: позиции 2, 4, 6"
+
+- id: inf-8-code-017
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Код символа
+  type: code_run
+  difficulty: basic
+  cognitive_level: apply
+  points: 2
+  lesson: py-04-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Выведи символ с кодом 66 функцией chr()."
+  student_view:
+    language: python
+    template: "# Допиши код: символ с кодом 66\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "print(chr(66))"
+    expected_stdout: "B"
+    explanation: "chr — обратная к ord: 66 это 'B'"

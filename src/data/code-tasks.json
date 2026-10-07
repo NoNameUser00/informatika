@@ -1,7 +1,7 @@
 {
   "test_code": "code-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 30,
+  "max_score": 41,
   "instruction": "Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.",
   "page_size": 5,
   "tasks": [
@@ -64,6 +64,56 @@
       "template": "# Допиши код: сумма цифр 12345\nn, s = 12345, 0\n...",
       "expected": "15",
       "key": "15"
+    },
+    {
+      "id": "inf-8-code-013",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи длину слова 'информатика' функцией len().",
+      "template": "# Допиши код: длина слова 'информатика'\nprint(...)",
+      "expected": "11",
+      "key": "11"
+    },
+    {
+      "id": "inf-8-code-014",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Строка s = 'Python'. Выведи её первый и последний символы одной строкой (без пробела).",
+      "template": "# Допиши код: первый и последний символы\ns = 'Python'\nprint(...)",
+      "expected": "Pn",
+      "key": "Pn"
+    },
+    {
+      "id": "inf-8-code-015",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Проверь оператором in, есть ли подстрока 'yth' в строке 'Python', и выведи результат.",
+      "template": "# Допиши код: поиск подстроки\ns = 'Python'\nprint(...)",
+      "expected": "True",
+      "key": "True"
+    },
+    {
+      "id": "inf-8-code-016",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Посчитай циклом for, сколько раз буква 'а' встречается в слове 'барабан', и выведи счётчик.",
+      "template": "# Допиши код: счётчик буквы 'а'\nw = 'барабан'\nk = 0\n...",
+      "expected": "3",
+      "key": "3"
+    },
+    {
+      "id": "inf-8-code-017",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи символ с кодом 66 функцией chr().",
+      "template": "# Допиши код: символ с кодом 66\nprint(...)",
+      "expected": "B",
+      "key": "B"
     },
     {
       "id": "inf-8-code-001",

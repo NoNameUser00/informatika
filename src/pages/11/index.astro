@@ -55,4 +55,18 @@ const grade = '11';
       <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
+  <h2>Графы и игры</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/graph/`}>Тренажер: графы и игры</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-11graph/`}>Проверочная (6 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-11graph/`}>Контрольная (10 заданий)</a>
+  </div>
+  {LESSONS_11.filter((l) => l.id.startsWith('11graph')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 7}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
 </Layout>

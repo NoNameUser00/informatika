@@ -1,7 +1,7 @@
 {
   "test_code": "base10-v1",
   "variant": "trainer-v1",
-  "max_score": 12,
+  "max_score": 16,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -162,6 +162,60 @@
       "base": 10,
       "expected": 4,
       "key": "4"
+    },
+    {
+      "id": "inf-10-base-010",
+      "lesson": "10info-01-measure",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какой код удовлетворяет условию Фано (ни одно слово — не начало другого)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "А–0, Б–10, В–110"
+        },
+        {
+          "id": "B",
+          "text": "А–0, Б–01, В–011"
+        },
+        {
+          "id": "C",
+          "text": "А–1, Б–11, В–111"
+        },
+        {
+          "id": "D",
+          "text": "А–0, Б–00, В–000"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-base-011",
+      "lesson": "10info-01-measure",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Код: А–0, Б–10, В–110. Расшифруй сообщение 010110.",
+      "options": [
+        {
+          "id": "A",
+          "text": "АБВ"
+        },
+        {
+          "id": "B",
+          "text": "БАВ"
+        },
+        {
+          "id": "C",
+          "text": "ВБА"
+        },
+        {
+          "id": "D",
+          "text": "АВБ"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     }
   ]
 }

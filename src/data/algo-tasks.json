@@ -1,10 +1,100 @@
 {
   "test_code": "algo-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 21,
+  "max_score": 30,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
+    {
+      "id": "inf-8-algo-015",
+      "lesson": "py-04-strings",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-016",
+      "lesson": "py-04-strings",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: s := 0; для i от 1 до 4: s := s + i. Чему равен s в конце? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-017",
+      "lesson": "py-04-strings",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-018",
+      "lesson": "py-04-strings",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие для s = 'Python'.",
+      "left": [
+        "len(s)",
+        "s[0]",
+        "s[1:4]",
+        "'on' in s"
+      ],
+      "right": [
+        "'P'",
+        "'yth'",
+        "6",
+        "True"
+      ],
+      "answerMap": {
+        "len(s)": "6",
+        "s[0]": "'P'",
+        "s[1:4]": "'yth'",
+        "'on' in s": "True"
+      },
+      "key": "len(s)=6, s[0]='P', s[1:4]='yth', 'on' in s=True"
+    },
     {
       "id": "inf-8-algo-001",
       "lesson": "alg-01-performers",

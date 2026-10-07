@@ -47,9 +47,12 @@ import { ALGO11_01_PLAY } from './11algo-01-analysis';
 import { ALGO11_02_PLAY } from './11algo-02-advanced';
 import { NET11_01_PLAY } from './11net-01-networks';
 import { SAFE11_01_PLAY } from './11safe-01-security';
+import { GRAPH11_01_PLAY } from './11graph-01-graphs';
+import { GRAPH11_02_PLAY } from './11graph-02-games';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
+import { PY_04_PLAY } from './py-04-strings';
 
 export type PlayStep =
   | { kind: 'theory'; title: string; body: string[]; mono?: string[]; tip?: string }
@@ -127,9 +130,12 @@ const REGISTRY: Record<string, PlayLesson> = {
   '11algo-02-advanced': ALGO11_02_PLAY,
   '11net-01-networks': NET11_01_PLAY,
   '11safe-01-security': SAFE11_01_PLAY,
+  '11graph-01-graphs': GRAPH11_01_PLAY,
+  '11graph-02-games': GRAPH11_02_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,
+  'py-04-strings': PY_04_PLAY,
 };
 
 export function hasPlay(id: string): boolean {

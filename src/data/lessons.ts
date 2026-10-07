@@ -22,6 +22,7 @@ export const LESSONS_8: LessonMeta[] = [
   { id: 'py-01-basics', title: 'Python: программа, присваивание, ввод и вывод', file: 'py-01-basics.md' },
   { id: 'py-02-branching', title: 'Python: ветвление if-else', file: 'py-02-branching.md' },
   { id: 'py-03-loops', title: 'Python: циклы while и for', file: 'py-03-loops.md' },
+  { id: 'py-04-strings', title: 'Python: строки и анализ алгоритмов', file: 'py-04-strings.md' },
 ];
 
 export const LESSONS_7: LessonMeta[] = [
@@ -68,4 +69,6 @@ export const LESSONS_11: LessonMeta[] = [
   { id: '11algo-02-advanced', title: 'Сортировки, матрицы, строки, рекурсия', file: '11algo-02-advanced.md' },
   { id: '11net-01-networks', title: 'Сети: пакеты, топологии, маски, DNS', file: '11net-01-networks.md' },
   { id: '11safe-01-security', title: 'Безопасность и искусственный интеллект', file: '11safe-01-security.md' },
+  { id: '11graph-01-graphs', title: 'Графы и деревья: пути и оптимум', file: '11graph-01-graphs.md' },
+  { id: '11graph-02-games', title: 'Игры с полной информацией: стратегии', file: '11graph-02-games.md' },
 ];
