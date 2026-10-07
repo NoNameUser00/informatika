@@ -35,3 +35,12 @@ export const LESSONS_7: LessonMeta[] = [
   { id: '7gfx-01-graphics', title: 'Графика: растр и вектор, объём', file: '7gfx-01-graphics.md' },
   { id: '7net-01-internet', title: 'Интернет: поиск, адреса, безопасность', file: '7net-01-internet.md' },
 ];
+
+export const LESSONS_9: LessonMeta[] = [
+  { id: '9sheet-01-base', title: 'Таблицы: интерфейс, формулы, режимы', file: '9sheet-01-base.md' },
+  { id: '9sheet-02-refs', title: 'Ссылки: относительные, абсолютные, смешанные', file: '9sheet-02-refs.md' },
+  { id: '9sheet-03-analysis', title: 'Анализ данных: условия, сортировка, диаграммы', file: '9sheet-03-analysis.md' },
+  { id: '9arr-01-basics', title: 'Массивы: хранение и обработка', file: '9arr-01-basics.md' },
+  { id: '9arr-02-search', title: 'Поиск и сортировка: максимум, перебор', file: '9arr-02-search.md' },
+  { id: '9graph-01-graphs', title: 'Графы: элементы, матрицы, пути', file: '9graph-01-graphs.md' },
+];

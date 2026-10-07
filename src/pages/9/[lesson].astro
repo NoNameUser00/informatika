@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RecordVisit from '../../components/RecordVisit';
+import { LESSONS_9 } from '../../data/lessons';
+import { mdToHtml, parseFrontmatter } from '../../lib/md';
+import { hasPlay } from '../../data/lesson-play/registry';
+
+export function getStaticPaths() {
+  return LESSONS_9.map((l) => ({ params: { lesson: l.id } }));
+}
+
+const { lesson } = Astro.params;
+const meta = LESSONS_9.find((l) => l.id === lesson)!;
+const idx = LESSONS_9.indexOf(meta);
+const mods = import.meta.glob('../../content/lessons/9/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+const raw = mods[`../../content/lessons/9/${meta.file}`];
+const { meta: fm, body } = parseFrontmatter(raw);
+const html = mdToHtml(body);
+const prev = LESSONS_9[idx - 1];
+const next = LESSONS_9[idx + 1];
+const B = import.meta.env.BASE_URL;
+---
+<Layout title={`${fm.title ?? meta.title} — 9 класс`}>
+  <RecordVisit client:load grade="9" lesson={meta.id} title={`${fm.title ?? meta.title}`} href={`${B}9/${meta.id}/`} />
+  <p class="muted"><a href={`${B}9/`}>9 класс</a> · Урок {idx + 1} из {LESSONS_9.length}</p>
+  <article class="card" set:html={html} />
+  <div class="card">
+    <a class="btn" href={`${B}9/sheets/`}>К тренажерам →</a>
+    {hasPlay(meta.id) && <span> <a class="btn secondary" href={`${B}9/play/${meta.id}/`}>Пройти урок целиком (45 мин) →</a></span>}
+  </div>
+  <p>
+    {prev && <a href={`${B}9/${prev.id}/`}>← {prev.title}</a>}
+    {prev && next && <span> · </span>}
+    {next && <a href={`${B}9/${next.id}/`}>{next.title} →</a>}
+  </p>
+</Layout>

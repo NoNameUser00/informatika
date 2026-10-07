@@ -27,6 +27,15 @@ const JOBS = [
   { inputs: ['data/tasks/8/code-run/bank-code.yaml'],
     output: 'src/data/code-tasks.json', test_code: 'code-pilot-v1', variant: 'trainer-v1',
     instruction: 'Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.' },
+  { inputs: ['data/tasks/9/spreadsheets/bank-9sheet.yaml'],
+    output: 'src/data/sheet9-tasks.json', test_code: 'sheet9-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/9/arrays/bank-9arr.yaml'],
+    output: 'src/data/arr9-tasks.json', test_code: 'arr9-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
+  { inputs: ['data/tasks/9/graphs/bank-9graph.yaml'],
+    output: 'src/data/graph9-tasks.json', test_code: 'graph9-v1', variant: 'trainer-v1',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
 ];
 
 function convert(t) {

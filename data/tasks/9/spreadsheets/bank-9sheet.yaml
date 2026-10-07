@@ -1,0 +1,170 @@
+# Банк «Электронные таблицы», 9 класс — тренажёрный.
+- id: inf-9-sheet-001
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Формулы и режимы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "С какого знака начинается любая формула?"
+  student_view: { options: [{ id: A, text: "=" }, { id: B, text: ":" }, { id: C, text: ";" }, { id: D, text: "пробел" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Без = ячейка хранит текст" }
+
+- id: inf-9-sheet-002
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Режимы отображения
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "Что видно в режиме отображения формул?"
+  student_view: { options: [{ id: A, text: "Сами формулы" }, { id: B, text: "Только результаты" }, { id: C, text: "Только адреса" }, { id: D, text: "Пустые ячейки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Режим формул — для проверки логики" }
+
+- id: inf-9-sheet-003
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Относительные ссылки
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
+  prompt: "Формула =A1^2 из ячейки A2 скопирована в A3. Что теперь в A3?"
+  student_view: { options: [{ id: A, text: "=A2^2" }, { id: B, text: "=A1^2" }, { id: C, text: "=B1^2" }, { id: D, text: "=A1^3" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Относительная ссылка сдвинулась на строку вниз" }
+
+- id: inf-9-sheet-004
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Абсолютные ссылки
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
+  prompt: "Какая ссылка не меняется при копировании?"
+  student_view: { options: [{ id: A, text: "$A$1" }, { id: B, text: "A1" }, { id: C, text: "$A1" }, { id: D, text: "A$1" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Два доллара — полное закрепление" }
+
+- id: inf-9-sheet-005
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Функции МАКС
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "Что вернёт МАКС(3, 7, 5)? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Максимум из трёх" }
+
+- id: inf-9-sheet-006
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Условные функции
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
+  prompt: "Чем СЧЁТЕСЛИ отличается от СУММЕСЛИ?"
+  student_view: { options: [{ id: A, text: "Считает штуки, а не сумму" }, { id: B, text: "Считает сумму, а не штуки" }, { id: C, text: "Работает без условия" }, { id: D, text: "Ничем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "СЧЁТ — количество, СУММ — сумма подходящих" }
+
+- id: inf-9-sheet-007
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Диаграммы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Какая диаграмма показывает доли целого?"
+  student_view: { options: [{ id: A, text: "Круговая" }, { id: B, text: "Столбчатая" }, { id: C, text: "Точечная" }, { id: D, text: "Лепестковая" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Круг — доли, столбцы — сравнение" }
+
+- id: inf-9-sheet-008
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Сортировка
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-sort], meta: [plan-actions] }
+  prompt: "Что сломается, если отсортировать только столбец баллов?"
+  student_view: { options: [{ id: A, text: "Строки разъедутся: баллы оторвутся от учеников" }, { id: B, text: "Ничего" }, { id: C, text: "Удалятся формулы" }, { id: D, text: "Пропадёт шапка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сортировать надо весь диапазон строк" }
+
+- id: inf-9-sheet-009
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Арифметика формул
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "Что вычислит формула =(2+3)*4? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "Скобки первые: 5·4 = 20" }
+
+- id: inf-9-sheet-010
+  class: 9
+  topic: Электронные таблицы
+  subtopic: Функции и диапазоны
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "Установите соответствие: функция — её назначение."
+  student_view: { left: ["СУММ", "МИН", "МАКС"], right: ["минимум", "сумма", "максимум"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"СУММ": "сумма", "МИН": "минимум", "МАКС": "максимум"}, explanation: "Три базовые агрегатные функции" }

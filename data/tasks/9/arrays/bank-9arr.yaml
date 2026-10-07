@@ -1,0 +1,146 @@
+# Банк «Массивы», 9 класс — тренажёрный. Только Python (Паскаль запрещён).
+- id: inf-9-arr-001
+  class: 9
+  topic: Массивы
+  subtopic: Индексы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-idx], meta: [plan-actions] }
+  prompt: "Чему равно a[0], если a = [3, 7, 5]?"
+  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "7" }, { id: C, text: "5" }, { id: D, text: "0" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Индексы с нуля: a[0] — первый" }
+
+- id: inf-9-arr-002
+  class: 9
+  topic: Массивы
+  subtopic: Сумма
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Найдите сумму элементов [3, 7, 5]. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "3 + 7 + 5 = 15" }
+
+- id: inf-9-arr-003
+  class: 9
+  topic: Массивы
+  subtopic: Подсчёт по условию
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-count], meta: [plan-actions] }
+  prompt: "Сколько чётных чисел в [2, 5, 8]? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Чётные: 2 и 8" }
+
+- id: inf-9-arr-004
+  class: 9
+  topic: Массивы
+  subtopic: Поиск максимума
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-max], meta: [plan-actions] }
+  prompt: "С чего начинаем поиск максимума (чемпион)?"
+  student_view: { options: [{ id: A, text: "С первого элемента" }, { id: B, text: "С нуля" }, { id: C, text: "С последнего" }, { id: D, text: "Со ста" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Чемпион = a[0], иначе массив из отрицательных сломается" }
+
+- id: inf-9-arr-005
+  class: 9
+  topic: Массивы
+  subtopic: Код максимума
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: 9arr-02-search
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-9-arr-code], meta: [plan-actions] }
+  prompt: "Найдите максимум списка [3, 7, 5] циклом (без max) и выведите его."
+  student_view:
+    language: python
+    template: "# Допиши код: максимум [3, 7, 5]\na = [3, 7, 5]\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "a = [3, 7, 5]\nm = a[0]\nfor x in a:\n    if x > m:\n        m = x\nprint(m)"
+    expected_stdout: "7"
+    explanation: "Чемпион переживает сравнения"
+
+- id: inf-9-arr-006
+  class: 9
+  topic: Массивы
+  subtopic: Код суммы чётных
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 3
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-9-arr-code], meta: [plan-actions] }
+  prompt: "Найдите сумму чётных чисел списка [2, 5, 8] и выведите её."
+  student_view:
+    language: python
+    template: "# Допиши код: сумма чётных [2, 5, 8]\ns = 0\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "s = 0\nfor x in [2, 5, 8]:\n    if x % 2 == 0:\n        s += x\nprint(s)"
+    expected_stdout: "10"
+    explanation: "2 + 8 = 10"
+
+- id: inf-9-arr-007
+  class: 9
+  topic: Массивы
+  subtopic: Число сравнений
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-02-search
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-max], meta: [plan-actions] }
+  prompt: "Сколько сравнений сделает поиск максимума в списке из 100 элементов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [99], answer_text: "99", explanation: "Первый — чемпион без сравнений, дальше 99" }
+
+- id: inf-9-arr-008
+  class: 9
+  topic: Массивы
+  subtopic: Индекс и значение
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-idx], meta: [plan-actions] }
+  prompt: "Что хранит переменная imax в поиске максимума?"
+  student_view: { options: [{ id: A, text: "Номер элемента-чемпиона" }, { id: B, text: "Само число-чемпион" }, { id: C, text: "Длину списка" }, { id: D, text: "Сумму" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "imax — индекс, a[imax] — значение" }

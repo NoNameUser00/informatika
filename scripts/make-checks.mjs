@@ -9,6 +9,9 @@ const BANK_FILES = [
   'src/data/logic-tasks.json',
   'src/data/algo-tasks.json',
   'src/data/grade7-tasks.json',
+  'src/data/sheet9-tasks.json',
+  'src/data/arr9-tasks.json',
+  'src/data/graph9-tasks.json',
 ];
 
 const CHECKS = [
@@ -42,6 +45,24 @@ const CHECKS = [
   { file: 'control-7base.json', code: 'grade7base-control-v1', title: 'Контрольная: Компьютер и софт',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-7-base-001', 'inf-7-base-003', 'inf-7-base-004', 'inf-7-base-006', 'inf-7-base-008', 'inf-7-base-009', 'inf-7-base-010', 'inf-7-base-012'] },
+  { file: 'proverka-9sheet.json', code: 'sheet9-proverka-v1', title: 'Проверочная: Таблицы',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-9-sheet-001', 'inf-9-sheet-002', 'inf-9-sheet-004', 'inf-9-sheet-007', 'inf-9-sheet-008'] },
+  { file: 'control-9sheet.json', code: 'sheet9-control-v1', title: 'Контрольная: Таблицы',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-9-sheet-001', 'inf-9-sheet-003', 'inf-9-sheet-004', 'inf-9-sheet-005', 'inf-9-sheet-006', 'inf-9-sheet-009', 'inf-9-sheet-002', 'inf-9-sheet-010'] },
+  { file: 'proverka-9arr.json', code: 'arr9-proverka-v1', title: 'Проверочная: Массивы',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-9-arr-001', 'inf-9-arr-004', 'inf-9-arr-008', 'inf-9-arr-007', 'inf-9-arr-003'] },
+  { file: 'control-9arr.json', code: 'arr9-control-v1', title: 'Контрольная: Массивы',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-9-arr-001', 'inf-9-arr-002', 'inf-9-arr-003', 'inf-9-arr-004', 'inf-9-arr-005', 'inf-9-arr-006', 'inf-9-arr-007', 'inf-9-arr-008'] },
+  { file: 'proverka-9graph.json', code: 'graph9-proverka-v1', title: 'Проверочная: Графы',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-9-graph-001', 'inf-9-graph-003', 'inf-9-graph-005', 'inf-9-graph-006', 'inf-9-graph-004'] },
+  { file: 'control-9graph.json', code: 'graph9-control-v1', title: 'Контрольная: Графы',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-9-graph-001', 'inf-9-graph-002', 'inf-9-graph-003', 'inf-9-graph-004', 'inf-9-graph-005', 'inf-9-graph-006', 'inf-9-graph-007', 'inf-9-graph-008'] },
 ];
 
 const pool = new Map();

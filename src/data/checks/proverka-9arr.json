@@ -1,0 +1,110 @@
+{
+  "test_code": "arr9-proverka-v1",
+  "variant": "v1",
+  "max_score": 7,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-arr-001",
+      "lesson": "9arr-01-basics",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чему равно a[0], если a = [3, 7, 5]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-arr-004",
+      "lesson": "9arr-02-search",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С чего начинаем поиск максимума (чемпион)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "С первого элемента"
+        },
+        {
+          "id": "B",
+          "text": "С нуля"
+        },
+        {
+          "id": "C",
+          "text": "С последнего"
+        },
+        {
+          "id": "D",
+          "text": "Со ста"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-arr-008",
+      "lesson": "9arr-02-search",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что хранит переменная imax в поиске максимума?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Номер элемента-чемпиона"
+        },
+        {
+          "id": "B",
+          "text": "Само число-чемпион"
+        },
+        {
+          "id": "C",
+          "text": "Длину списка"
+        },
+        {
+          "id": "D",
+          "text": "Сумму"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-arr-007",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько сравнений сделает поиск максимума в списке из 100 элементов? Запишите только число.",
+      "base": 10,
+      "expected": 99,
+      "key": "99"
+    },
+    {
+      "id": "inf-9-arr-003",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько чётных чисел в [2, 5, 8]? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    }
+  ]
+}

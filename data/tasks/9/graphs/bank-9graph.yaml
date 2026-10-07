@@ -1,0 +1,136 @@
+# Банк «Графы», 9 класс — тренажёрный.
+- id: inf-9-graph-001
+  class: 9
+  topic: Графы
+  subtopic: Матрица смежности
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Что означают строка и столбец матрицы смежности?"
+  student_view: { options: [{ id: A, text: "Откуда и куда" }, { id: B, text: "Цену и длину" }, { id: C, text: "Имена вершин" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Строка — откуда, столбец — куда" }
+
+- id: inf-9-graph-002
+  class: 9
+  topic: Графы
+  subtopic: Подсчёт путей
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-paths], meta: [plan-actions] }
+  prompt: "В вершину D ведут вершины B (2 пути) и C (3 пути). Сколько путей в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Суммируем предшественников: 2 + 3" }
+
+- id: inf-9-graph-003
+  class: 9
+  topic: Графы
+  subtopic: Деревья
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
+  prompt: "Чем дерево отличается от графа?"
+  student_view: { options: [{ id: A, text: "Нет циклов" }, { id: B, text: "Нет вершин" }, { id: C, text: "Нет рёбер" }, { id: D, text: "Ничем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Дерево — граф без циклов" }
+
+- id: inf-9-graph-004
+  class: 9
+  topic: Графы
+  subtopic: Рёбра цепочки
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Сколько рёбер в цепочке из 4 вершин (1→2→3→4)? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Рёбер на одно меньше, чем вершин" }
+
+- id: inf-9-graph-005
+  class: 9
+  topic: Графы
+  subtopic: Весовая матрица
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Что хранит весовая матрица вместо единиц?"
+  student_view: { options: [{ id: A, text: "Веса рёбер" }, { id: B, text: "Нули" }, { id: C, text: "Имена" }, { id: D, text: "Цвета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Вес — расстояние, цена, время" }
+
+- id: inf-9-graph-006
+  class: 9
+  topic: Графы
+  subtopic: Орграф
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
+  prompt: "Что такое ориентированный граф?"
+  student_view: { options: [{ id: A, text: "Граф со стрелками" }, { id: B, text: "Граф без вершин" }, { id: C, text: "Только дерево" }, { id: D, text: "Только цепочка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Направление рёбер имеет значение" }
+
+- id: inf-9-graph-007
+  class: 9
+  topic: Графы
+  subtopic: Подсчёт путей
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-paths], meta: [plan-actions] }
+  prompt: "В вершину D ведут B (1 путь), C (2 пути) и E (4 пути). Сколько путей в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "1 + 2 + 4 = 7" }
+
+- id: inf-9-graph-008
+  class: 9
+  topic: Графы
+  subtopic: Матрица смежности
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Сколько единиц в матрице смежности цепочки 1→2→3? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Два ребра — две единицы" }

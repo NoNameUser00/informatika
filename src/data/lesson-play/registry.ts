@@ -22,6 +22,12 @@ import { PC7_02_PLAY } from './7pc-02-files';
 import { DOC7_01_PLAY } from './7doc-01-text';
 import { GFX7_01_PLAY } from './7gfx-01-graphics';
 import { NET7_01_PLAY } from './7net-01-internet';
+import { SHEET9_01_PLAY } from './9sheet-01-base';
+import { SHEET9_02_PLAY } from './9sheet-02-refs';
+import { SHEET9_03_PLAY } from './9sheet-03-analysis';
+import { ARR9_01_PLAY } from './9arr-01-basics';
+import { ARR9_02_PLAY } from './9arr-02-search';
+import { GRAPH9_01_PLAY } from './9graph-01-graphs';
 import { PY_01_PLAY } from './py-01-basics';
 import { PY_02_PLAY } from './py-02-branching';
 import { PY_03_PLAY } from './py-03-loops';
@@ -76,6 +82,12 @@ const REGISTRY: Record<string, PlayLesson> = {
   '7doc-01-text': DOC7_01_PLAY,
   '7gfx-01-graphics': GFX7_01_PLAY,
   '7net-01-internet': NET7_01_PLAY,
+  '9sheet-01-base': SHEET9_01_PLAY,
+  '9sheet-02-refs': SHEET9_02_PLAY,
+  '9sheet-03-analysis': SHEET9_03_PLAY,
+  '9arr-01-basics': ARR9_01_PLAY,
+  '9arr-02-search': ARR9_02_PLAY,
+  '9graph-01-graphs': GRAPH9_01_PLAY,
   'py-01-basics': PY_01_PLAY,
   'py-02-branching': PY_02_PLAY,
   'py-03-loops': PY_03_PLAY,

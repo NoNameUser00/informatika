@@ -1,0 +1,157 @@
+{
+  "test_code": "graph9-v1",
+  "variant": "trainer-v1",
+  "max_score": 10,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-graph-001",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означают строка и столбец матрицы смежности?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Откуда и куда"
+        },
+        {
+          "id": "B",
+          "text": "Цену и длину"
+        },
+        {
+          "id": "C",
+          "text": "Имена вершин"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-graph-002",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В вершину D ведут вершины B (2 пути) и C (3 пути). Сколько путей в D? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-003",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем дерево отличается от графа?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Нет циклов"
+        },
+        {
+          "id": "B",
+          "text": "Нет вершин"
+        },
+        {
+          "id": "C",
+          "text": "Нет рёбер"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-graph-004",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько рёбер в цепочке из 4 вершин (1→2→3→4)? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-005",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что хранит весовая матрица вместо единиц?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Веса рёбер"
+        },
+        {
+          "id": "B",
+          "text": "Нули"
+        },
+        {
+          "id": "C",
+          "text": "Имена"
+        },
+        {
+          "id": "D",
+          "text": "Цвета"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-graph-006",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое ориентированный граф?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Граф со стрелками"
+        },
+        {
+          "id": "B",
+          "text": "Граф без вершин"
+        },
+        {
+          "id": "C",
+          "text": "Только дерево"
+        },
+        {
+          "id": "D",
+          "text": "Только цепочка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-graph-007",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В вершину D ведут B (1 путь), C (2 пути) и E (4 пути). Сколько путей в D? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-9-graph-008",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько единиц в матрице смежности цепочки 1→2→3? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    }
+  ]
+}

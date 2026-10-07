@@ -1,29 +1,56 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { LESSONS_9 } from '../../data/lessons';
 const B = import.meta.env.BASE_URL;
 const grade = '9';
-// Карта тем — по КТП 9 класс. Блоки открываются по мере наполнения (сейчас — урок 0).
-const BLOCKS: { title: string; topics: string[] }[] = [
-  { title: 'Электронные таблицы', topics: ['Интерфейс и типы данных', 'Ссылки: относительные, абсолютные, смешанные', 'Функции: сумма, мин/макс, среднее', 'Логические функции', 'Сортировка и фильтрация', 'Диаграммы и графики', 'Численное моделирование'] },
-  { title: 'Алгоритмы и массивы', topics: ['Ветвления, циклы, вспомогательные алгоритмы', 'Массивы: ввод, вывод, доступ', 'Сумма, количество, среднее', 'Линейный поиск', 'Минимум и максимум', 'Сортировка массива'] },
-  { title: 'Управление и роботы', topics: ['Сигнал, обратная связь', 'Датчики и роботизированные системы'] },
-  { title: 'Моделирование', topics: ['Модели и классификация', 'Математические модели', 'Табличные модели и БД', 'Графы: матрицы, пути', 'Деревья и перебор вариантов'] },
-  { title: 'Интернет', topics: ['IP-адреса, хранение данных', 'Безопасность и приватность', 'Сервисы, облака, совместная работа', 'Поисковые запросы с логикой', 'Веб-сервисы и онлайн-офис'] },
-];
 ---
 <Layout title="9 класс — Информатика">
-  <h1>9 класс · Карта тем</h1>
-  <p class="muted">Учебный год открывает урок 0. Темы ниже — план по КТП: блоки открываются по мере наполнения.</p>
+  <h1>9 класс · Таблицы, массивы, графы</h1>
+  <p class="muted">Учебный год открывает урок 0. Дальше — три блока: теория, уроки целиком, тренажеры, проверочные и контрольные.</p>
   <div class="card">
     <h3>Урок 0. Техника безопасности в кабинете информатики</h3>
     <p><a href={`${B}${grade}/tb/`}>Открыть презентацию →</a></p>
   </div>
-  {BLOCKS.map((b) => (
+  <h2>Электронные таблицы</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/sheets/`}>Тренажер по таблицам</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-9sheet/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-9sheet/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_9.filter((l) => l.id.startsWith('9sheet')).map((l, i) => (
     <div class="card">
-      <h3>{b.title} <span class="muted">· скоро</span></h3>
-      <ul>
-        {b.topics.map((t) => <li>{t}</li>)}
-      </ul>
+      <h3>Урок {i + 1}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
+  <h2>Массивы в Python</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/arrays/`}>Тренажер по массивам</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-9arr/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-9arr/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_9.filter((l) => l.id.startsWith('9arr')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 4}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+    </div>
+  ))}
+  <h2>Графы</h2>
+  <div class="card">
+    <a class="btn" href={`${B}${grade}/graphs/`}>Тренажер по графам</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/proverka-9graph/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-9graph/`}>Контрольная (8 заданий)</a>
+  </div>
+  {LESSONS_9.filter((l) => l.id.startsWith('9graph')).map((l, i) => (
+    <div class="card">
+      <h3>Урок {i + 6}. {l.title}</h3>
+      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
 </Layout>

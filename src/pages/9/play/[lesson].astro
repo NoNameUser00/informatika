@@ -1,0 +1,65 @@
+---
+import SpaceBackground from '../../../components/SpaceBackground';
+import RecordVisit from '../../../components/RecordVisit';
+import LessonPlay from '../../../components/LessonPlay';
+import BoardFloat from '../../../components/BoardFloat';
+import '../../../components/space-background.css';
+import '../../../components/lesson-play.css';
+import '../../../components/board-float.css';
+import { LESSONS_9 } from '../../../data/lessons';
+import { getPlay, hasPlay } from '../../../data/lesson-play/registry';
+
+export function getStaticPaths() {
+  return LESSONS_9.filter((l) => hasPlay(l.id)).map((l) => ({ params: { lesson: l.id } }));
+}
+
+const { lesson } = Astro.params;
+const meta = LESSONS_9.find((l) => l.id === lesson)!;
+const idx = LESSONS_9.indexOf(meta);
+const next = LESSONS_9[idx + 1];
+const play = getPlay(meta.id);
+const B = import.meta.env.BASE_URL;
+const trainerHref = `${B}9/${meta.id.startsWith('9arr') ? 'arrays' : meta.id.startsWith('9graph') ? 'graphs' : 'sheets'}/`;
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={`${meta.title} — полный урок на 45 минут.`} />
+    <title>{meta.title} — урок целиком — 9 класс</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Nunito, Inter, Roboto, system-ui, sans-serif;
+        background: #020617; color: #fff; line-height: 1.6;
+      }
+      a { text-decoration: none; }
+      .play-veil {
+        position: fixed; inset: 0; z-index: 1; pointer-events: none;
+        background: radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <SpaceBackground client:load />
+    <div class="play-veil" aria-hidden="true"></div>
+    <RecordVisit client:load grade="9" lesson={meta.id} title={meta.title} href={`${B}9/play/${meta.id}/`} />
+    <div class="lp">
+      <header class="lp-top">
+        <a href={`${B}9/`}>← 9 класс</a>
+        <a href={`${B}9/${meta.id}/`}>Теория</a>
+      </header>
+      <LessonPlay
+        client:load
+        lesson={play}
+        trainerHref={trainerHref}
+        checksBase={`${B}9/`}
+        nextHref={next ? `${B}9/${next.id}/` : undefined}
+        nextTitle={next?.title}
+      />
+    </div>
+    <BoardFloat client:load />
+  </body>
+</html>

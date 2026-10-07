@@ -1,0 +1,144 @@
+{
+  "test_code": "sheet9-proverka-v1",
+  "variant": "v1",
+  "max_score": 5,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-sheet-001",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С какого знака начинается любая формула?",
+      "options": [
+        {
+          "id": "A",
+          "text": "="
+        },
+        {
+          "id": "B",
+          "text": ":"
+        },
+        {
+          "id": "C",
+          "text": ";"
+        },
+        {
+          "id": "D",
+          "text": "пробел"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-002",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что видно в режиме отображения формул?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Сами формулы"
+        },
+        {
+          "id": "B",
+          "text": "Только результаты"
+        },
+        {
+          "id": "C",
+          "text": "Только адреса"
+        },
+        {
+          "id": "D",
+          "text": "Пустые ячейки"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-004",
+      "lesson": "9sheet-02-refs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая ссылка не меняется при копировании?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$A$1"
+        },
+        {
+          "id": "B",
+          "text": "A1"
+        },
+        {
+          "id": "C",
+          "text": "$A1"
+        },
+        {
+          "id": "D",
+          "text": "A$1"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-007",
+      "lesson": "9sheet-03-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая диаграмма показывает доли целого?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Круговая"
+        },
+        {
+          "id": "B",
+          "text": "Столбчатая"
+        },
+        {
+          "id": "C",
+          "text": "Точечная"
+        },
+        {
+          "id": "D",
+          "text": "Лепестковая"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-008",
+      "lesson": "9sheet-03-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что сломается, если отсортировать только столбец баллов?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строки разъедутся: баллы оторвутся от учеников"
+        },
+        {
+          "id": "B",
+          "text": "Ничего"
+        },
+        {
+          "id": "C",
+          "text": "Удалятся формулы"
+        },
+        {
+          "id": "D",
+          "text": "Пропадёт шапка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

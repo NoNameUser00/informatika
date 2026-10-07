@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/arr9-tasks.json';
+---
+<Layout title="Тренажер — Массивы, 9 класс">
+  <Trainer client:load data={bank} title="Массивы в Python" />
+</Layout>
