@@ -21,7 +21,7 @@ const JOBS = [
   { inputs: ['data/tasks/8/algorithms/bank-algo.yaml'],
     output: 'src/data/algo-tasks.json', test_code: 'algo-pilot-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
-  { inputs: ['data/tasks/7/information/bank-7inf.yaml', 'data/tasks/7/base/bank-7base.yaml'],
+  { inputs: ['data/tasks/7/information/bank-7inf.yaml', 'data/tasks/7/base/bank-7base.yaml', 'data/tasks/7/media/bank-7media.yaml'],
     output: 'src/data/grade7-tasks.json', test_code: 'grade7-info-v1', variant: 'trainer-v1',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.' },
   { inputs: ['data/tasks/8/code-run/bank-code.yaml'],

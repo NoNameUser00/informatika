@@ -1,0 +1,144 @@
+{
+  "test_code": "grade7media-proverka-v1",
+  "variant": "v1",
+  "max_score": 5,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-7-media-001",
+      "lesson": "7media-01-slides",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что идёт первым при создании презентации?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Планирование"
+        },
+        {
+          "id": "B",
+          "text": "Анимация"
+        },
+        {
+          "id": "C",
+          "text": "Репетиция"
+        },
+        {
+          "id": "D",
+          "text": "Монтаж"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-003",
+      "lesson": "7gfx-02-editors",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем взять цвет с картинки в растровом редакторе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Пипеткой"
+        },
+        {
+          "id": "B",
+          "text": "Ластиком"
+        },
+        {
+          "id": "C",
+          "text": "Кистью"
+        },
+        {
+          "id": "D",
+          "text": "Заливкой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-005",
+      "lesson": "7soft-01-practice",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем ярлык отличается от файла?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ярлык — ссылка, удаление не трогает программу"
+        },
+        {
+          "id": "B",
+          "text": "Ничем"
+        },
+        {
+          "id": "C",
+          "text": "Ярлык тяжелее"
+        },
+        {
+          "id": "D",
+          "text": "Файл — это ярлык"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-006",
+      "lesson": "7soft-01-practice",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Где безопасно качать программы?",
+      "options": [
+        {
+          "id": "A",
+          "text": "На официальных сайтах"
+        },
+        {
+          "id": "B",
+          "text": "Где попало"
+        },
+        {
+          "id": "C",
+          "text": "По ссылкам из спама"
+        },
+        {
+          "id": "D",
+          "text": "С чужой флешки"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-media-010",
+      "lesson": "7media-01-slides",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какое правило слайда верное?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Один смысл крупно"
+        },
+        {
+          "id": "B",
+          "text": "Стена мелкого текста"
+        },
+        {
+          "id": "C",
+          "text": "Десять анимаций сразу"
+        },
+        {
+          "id": "D",
+          "text": "Без репетиции"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

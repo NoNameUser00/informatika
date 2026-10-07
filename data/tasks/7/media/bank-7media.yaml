@@ -1,0 +1,170 @@
+# Банк «Мультимедиа и практика», 7 класс — тренажёрный.
+- id: inf-7-media-001
+  class: 7
+  topic: Мультимедиа
+  subtopic: Этапы презентации
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7media-01-slides
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-media-steps], meta: [plan-actions] }
+  prompt: "Что идёт первым при создании презентации?"
+  student_view: { options: [{ id: A, text: "Планирование" }, { id: B, text: "Анимация" }, { id: C, text: "Репетиция" }, { id: D, text: "Монтаж" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "План → слайды → монтаж → репетиция" }
+
+- id: inf-7-media-002
+  class: 7
+  topic: Мультимедиа
+  subtopic: Шаблон и макет
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7media-01-slides
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-media-templ], meta: [plan-actions] }
+  prompt: "Чем шаблон отличается от макета?"
+  student_view: { options: [{ id: A, text: "Шаблон — заготовка, макет — места на слайде" }, { id: B, text: "Ничем" }, { id: C, text: "Шаблон — это картинка" }, { id: D, text: "Макет — это шрифт" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Шаблон задаёт стиль, макет — раскладку" }
+
+- id: inf-7-media-003
+  class: 7
+  topic: Графические редакторы
+  subtopic: Инструменты растра
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7gfx-02-editors
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-tools], meta: [plan-actions] }
+  prompt: "Чем взять цвет с картинки в растровом редакторе?"
+  student_view: { options: [{ id: A, text: "Пипеткой" }, { id: B, text: "Ластиком" }, { id: C, text: "Кистью" }, { id: D, text: "Заливкой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Пипетка берёт цвет, заливка кладёт" }
+
+- id: inf-7-media-004
+  class: 7
+  topic: Графические редакторы
+  subtopic: Форматы
+  type: matching
+  difficulty: intermediate
+  cognitive_level: remember
+  points: 2
+  lesson: 7gfx-02-editors
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-fmt], meta: [plan-actions] }
+  prompt: "Установите соответствие: формат — применение."
+  student_view: { left: ["JPEG", "PNG", "GIF"], right: ["схемы без потерь", "фото", "анимация 256 цветов"] }
+  auto_check: { method: matching }
+  teacher_only: { answer_map: {"JPEG": "фото", "PNG": "схемы без потерь", "GIF": "анимация 256 цветов"}, explanation: "Фото — JPEG, схемы — PNG, анимация — GIF" }
+
+- id: inf-7-media-005
+  class: 7
+  topic: ПО на практике
+  subtopic: Ярлыки
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7soft-01-practice
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-soft-links], meta: [plan-actions] }
+  prompt: "Чем ярлык отличается от файла?"
+  student_view: { options: [{ id: A, text: "Ярлык — ссылка, удаление не трогает программу" }, { id: B, text: "Ничем" }, { id: C, text: "Ярлык тяжелее" }, { id: D, text: "Файл — это ярлык" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Ссылка ≠ данные" }
+
+- id: inf-7-media-006
+  class: 7
+  topic: ПО на практике
+  subtopic: Безопасная установка
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7soft-01-practice
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-soft-install], meta: [plan-actions] }
+  prompt: "Где безопасно качать программы?"
+  student_view: { options: [{ id: A, text: "На официальных сайтах" }, { id: B, text: "Где попало" }, { id: C, text: "По ссылкам из спама" }, { id: D, text: "С чужой флешки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Плюс читать галочки установщика" }
+
+- id: inf-7-media-007
+  class: 7
+  topic: Звук и скорость
+  subtopic: Объём звука
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7code-01-sound
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-vol], meta: [plan-actions] }
+  prompt: "Сколько байт весят 10 секунд звука (8000 Гц, 8 бит)? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [80000], answer_text: "80000", explanation: "8000·8·10 = 640000 бит = 80000 байт" }
+
+- id: inf-7-media-008
+  class: 7
+  topic: Звук и скорость
+  subtopic: Время передачи
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7code-01-sound
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-speed], meta: [plan-actions] }
+  prompt: "Файл 1 Кбайт, канал 1024 бит/с. Сколько секунд качать? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { answer_text: "8", accepted_values_decimal: [8], explanation: "8192 / 1024 = 8" }
+
+- id: inf-7-media-009
+  class: 7
+  topic: Звук и скорость
+  subtopic: Качество звука
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7code-01-sound
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-quality], meta: [plan-actions] }
+  prompt: "Что будет, если поднять частоту дискретизации и глубину?"
+  student_view: { options: [{ id: A, text: "Лучше качество и больше вес" }, { id: B, text: "Хуже качество" }, { id: C, text: "Ничего не изменится" }, { id: D, text: "Звук исчезнет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Качество и вес растут вместе" }
+
+- id: inf-7-media-010
+  class: 7
+  topic: Мультимедиа
+  subtopic: Правило слайда
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7media-01-slides
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-media-rule], meta: [plan-actions] }
+  prompt: "Какое правило слайда верное?"
+  student_view: { options: [{ id: A, text: "Один смысл крупно" }, { id: B, text: "Стена мелкого текста" }, { id: C, text: "Десять анимаций сразу" }, { id: D, text: "Без репетиции" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Слайд — плакат, не книга" }

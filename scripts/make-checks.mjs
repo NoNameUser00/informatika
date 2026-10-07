@@ -114,6 +114,12 @@ const CHECKS = [
   { file: 'control-11net.json', code: 'net11-control-v1', title: 'Контрольная: Сети и безопасность',
     instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
     ids: ['inf-11-net-001', 'inf-11-net-002', 'inf-11-net-004', 'inf-11-net-005', 'inf-11-net-006', 'inf-11-net-007', 'inf-11-net-008', 'inf-11-net-003'] },
+  { file: 'proverka-7media.json', code: 'grade7media-proverka-v1', title: 'Проверочная: Мультимедиа',
+    instruction: 'Отвечайте точно.',
+    ids: ['inf-7-media-001', 'inf-7-media-003', 'inf-7-media-005', 'inf-7-media-006', 'inf-7-media-010'] },
+  { file: 'control-7media.json', code: 'grade7media-control-v1', title: 'Контрольная: Мультимедиа и практика',
+    instruction: 'Отвечайте точно. В числовых ответах запишите только число.',
+    ids: ['inf-7-media-001', 'inf-7-media-002', 'inf-7-media-004', 'inf-7-media-005', 'inf-7-media-007', 'inf-7-media-008', 'inf-7-media-009', 'inf-7-media-010'] },
 ];
 
 const pool = new Map();

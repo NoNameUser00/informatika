@@ -22,6 +22,10 @@ import { PC7_02_PLAY } from './7pc-02-files';
 import { DOC7_01_PLAY } from './7doc-01-text';
 import { GFX7_01_PLAY } from './7gfx-01-graphics';
 import { NET7_01_PLAY } from './7net-01-internet';
+import { MEDIA7_01_PLAY } from './7media-01-slides';
+import { GFX7_02_PLAY } from './7gfx-02-editors';
+import { SOFT7_01_PLAY } from './7soft-01-practice';
+import { CODE7_01_PLAY } from './7code-01-sound';
 import { SHEET9_01_PLAY } from './9sheet-01-base';
 import { SHEET9_02_PLAY } from './9sheet-02-refs';
 import { SHEET9_03_PLAY } from './9sheet-03-analysis';
@@ -97,6 +101,10 @@ const REGISTRY: Record<string, PlayLesson> = {
   '7doc-01-text': DOC7_01_PLAY,
   '7gfx-01-graphics': GFX7_01_PLAY,
   '7net-01-internet': NET7_01_PLAY,
+  '7media-01-slides': MEDIA7_01_PLAY,
+  '7gfx-02-editors': GFX7_02_PLAY,
+  '7soft-01-practice': SOFT7_01_PLAY,
+  '7code-01-sound': CODE7_01_PLAY,
   '9sheet-01-base': SHEET9_01_PLAY,
   '9sheet-02-refs': SHEET9_02_PLAY,
   '9sheet-03-analysis': SHEET9_03_PLAY,

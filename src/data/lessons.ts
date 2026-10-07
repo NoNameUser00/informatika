@@ -34,6 +34,10 @@ export const LESSONS_7: LessonMeta[] = [
   { id: '7doc-01-text', title: 'Текст: набор, форматирование, структуры', file: '7doc-01-text.md' },
   { id: '7gfx-01-graphics', title: 'Графика: растр и вектор, объём', file: '7gfx-01-graphics.md' },
   { id: '7net-01-internet', title: 'Интернет: поиск, адреса, безопасность', file: '7net-01-internet.md' },
+  { id: '7media-01-slides', title: 'Презентации: слайды, дизайн, анимация', file: '7media-01-slides.md' },
+  { id: '7gfx-02-editors', title: 'Графические редакторы: растр и вектор', file: '7gfx-02-editors.md' },
+  { id: '7soft-01-practice', title: 'ПО и файлы на практике', file: '7soft-01-practice.md' },
+  { id: '7code-01-sound', title: 'Звук и скорость передачи', file: '7code-01-sound.md' },
 ];
 
 export const LESSONS_9: LessonMeta[] = [
