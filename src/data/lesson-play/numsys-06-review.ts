@@ -7,6 +7,7 @@ export const NUMSYS_06_PLAY: PlayLesson = {
   no: 6,
   title: 'Обобщение: ловушки переводов и смешанный тренажер',
   minutes: 45,
+  nextCheck: { kind: 'control', title: 'Контрольная: Системы счисления', slug: 'control-ss' },
   steps: [
     {
       kind: 'theory',

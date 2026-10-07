@@ -1,0 +1,192 @@
+{
+  "test_code": "logic-control-v1",
+  "variant": "v1",
+  "max_score": 12,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-8-logic-001",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что из перечисленного является высказыванием?",
+      "options": [
+        {
+          "id": "A",
+          "text": "«Который час?»"
+        },
+        {
+          "id": "B",
+          "text": "«Закрой окно!»"
+        },
+        {
+          "id": "C",
+          "text": "«2 + 2 = 5»"
+        },
+        {
+          "id": "D",
+          "text": "«Ура!»"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-logic-002",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какие значения может принимать логическое высказывание?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Только истину"
+        },
+        {
+          "id": "B",
+          "text": "Истину или ложь"
+        },
+        {
+          "id": "C",
+          "text": "Любое число"
+        },
+        {
+          "id": "D",
+          "text": "Да, нет или неизвестно"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-003",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какое высказывание составное?",
+      "options": [
+        {
+          "id": "A",
+          "text": "«Идет дождь»"
+        },
+        {
+          "id": "B",
+          "text": "«Идет дождь и дует ветер»"
+        },
+        {
+          "id": "C",
+          "text": "«Закрой окно»"
+        },
+        {
+          "id": "D",
+          "text": "«2 × 2»"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-004",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой знак обозначает конъюнкцию (И)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "∨"
+        },
+        {
+          "id": "B",
+          "text": "¬"
+        },
+        {
+          "id": "C",
+          "text": "∧"
+        },
+        {
+          "id": "D",
+          "text": "="
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-logic-005",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой знак обозначает отрицание (НЕ)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "∧"
+        },
+        {
+          "id": "B",
+          "text": "∨"
+        },
+        {
+          "id": "C",
+          "text": "¬"
+        },
+        {
+          "id": "D",
+          "text": "≠"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-logic-009",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=1, B=0 вычислите A ∧ B.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-012",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=1, B=1 вычислите A ∧ ¬B.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-016",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В скольких строках таблицы истинности выражение A ∧ B истинно? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    }
+  ]
+}

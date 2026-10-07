@@ -13,6 +13,7 @@
     "bank:gen": "node scripts/make-numsys-bank.mjs",
     "trainer:json": "node scripts/build-trainer-json.mjs",
     "bank:30": "node scripts/check-30.mjs",
+    "checks": "node scripts/make-checks.mjs",
     "lint": "echo \"eslint TODO: подключить после npm install\""
   },
   "dependencies": {

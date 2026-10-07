@@ -317,3 +317,88 @@
     accepted_values_decimal: [14]
     answer_text: "14"
     explanation: "X=10, IV=4, итого 14"
+
+- id: inf-8-numsys-061
+  class: 8
+  topic: Системы счисления
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 101_2 в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "101_2 = 4+1 = 5" }
+
+- id: inf-8-numsys-062
+  class: 8
+  topic: Системы счисления
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 10_10 в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "1010", explanation: "10 = 1010_2" }
+
+- id: inf-8-numsys-063
+  class: 8
+  topic: Системы счисления
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 13_8 в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "13_8 = 8+3 = 11" }
+
+- id: inf-8-numsys-064
+  class: 8
+  topic: Системы счисления
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число A_16 в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "A = 10" }
+
+- id: inf-8-numsys-065
+  class: 8
+  topic: Системы счисления
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 110_2 + 11_2. Ответ дайте в десятичной системе."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "6 + 3 = 9" }

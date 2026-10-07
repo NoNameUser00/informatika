@@ -19,5 +19,8 @@ jobs:
       - run: npm run validate-bank
       - run: npm run trainer:json
       - run: git diff --exit-code src/data/numsys-tasks.json
+      - run: npm run checks
+      - run: git diff --exit-code src/data/checks
+      - run: npm run bank:30
       - run: npx tsc --noEmit
       - run: npx astro build

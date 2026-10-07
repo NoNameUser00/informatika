@@ -8,6 +8,7 @@ export const LOGIC_04_PLAY: PlayLesson = {
   no: 10,
   title: 'Логические элементы и основы компьютера',
   minutes: 45,
+  nextCheck: { kind: 'control', title: 'Контрольная: Логика', slug: 'control-logic' },
   steps: [
     {
       kind: 'theory',

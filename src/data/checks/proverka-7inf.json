@@ -1,0 +1,127 @@
+{
+  "test_code": "grade7-proverka-v1",
+  "variant": "v1",
+  "max_score": 5,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-7-inf-001",
+      "lesson": "7inf-01-info",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какое свойство информации нарушено, если расписание дано за прошлую неделю?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Актуальность"
+        },
+        {
+          "id": "B",
+          "text": "Достоверность"
+        },
+        {
+          "id": "C",
+          "text": "Полнота"
+        },
+        {
+          "id": "D",
+          "text": "Понятность"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-inf-005",
+      "lesson": "7inf-02-coding",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое мощность алфавита?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Количество символов в нём"
+        },
+        {
+          "id": "B",
+          "text": "Длина самого длинного слова"
+        },
+        {
+          "id": "C",
+          "text": "Вес одного символа"
+        },
+        {
+          "id": "D",
+          "text": "Число слов языка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-7-inf-009",
+      "lesson": "7inf-03-measure",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько байт в одном килобайте?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1000"
+        },
+        {
+          "id": "B",
+          "text": "1024"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "256"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-7-inf-013",
+      "lesson": "7inf-02-coding",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько разных символов можно закодировать кодом длины 3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-7-inf-014",
+      "lesson": "7inf-03-measure",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько байт в одном килобайте? Запишите только число.",
+      "base": 10,
+      "expected": 1024,
+      "key": "1024"
+    }
+  ]
+}

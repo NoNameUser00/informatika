@@ -7,6 +7,7 @@ export const INF7_04_PLAY: PlayLesson = {
   no: 4,
   title: 'Объём текста: решаем задачи',
   minutes: 45,
+  nextCheck: { kind: 'control', title: 'Контрольная: Информация', slug: 'control-info' },
   steps: [
     {
       kind: 'theory',

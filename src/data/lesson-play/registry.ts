@@ -40,6 +40,8 @@ export interface PlayLesson {
   title: string;
   minutes: number;
   steps: PlayStep[];
+  /** Баннер в финале: следующий урок — проверочная/контрольная (slug маршрута). */
+  nextCheck?: { kind: 'proverka' | 'control'; title: string; slug: string };
 }
 
 const REGISTRY: Record<string, PlayLesson> = {

@@ -57,6 +57,7 @@ const trainerHref = `${B}8/${isLogic ? 'logic' : isAlgo ? 'algo' : 'trainer'}/`;
         client:load
         lesson={play}
         trainerHref={trainerHref}
+        checksBase={`${B}8/`}
         nextHref={next ? `${B}8/${next.id}/` : undefined}
         nextTitle={next?.title}
       />

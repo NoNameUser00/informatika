@@ -26,11 +26,14 @@ export default function LessonPlay({
   trainerHref,
   nextHref,
   nextTitle,
+  checksBase,
 }: {
   lesson: PlayLesson;
   trainerHref: string;
   nextHref?: string;
   nextTitle?: string;
+  /** База маршрутов проверок, напр. `${B}8/` — slug берётся из lesson.nextCheck. */
+  checksBase: string;
 }) {
   const total = lesson.steps.length + 1; // + итог
   const [idx, setIdx] = useState(0);
@@ -233,6 +236,13 @@ export default function LessonPlay({
               ? 'Отлично — тема усвоена. Закрепи в тренажёре.'
               : 'Хорошая работа. Разбери ошибки выше и добей в тренажёре.'}
           </p>
+          {lesson.nextCheck && (
+            <p className="lp-write">
+              ⚠️ Следующий шаг — {lesson.nextCheck.kind === 'proverka' ? 'проверочная' : 'контрольная'}:{' '}
+              <a href={`${checksBase}${lesson.nextCheck.slug}/`}>{lesson.nextCheck.title} →</a>
+              {' '}Повтори ключевое выше — дальше без подсказок.
+            </p>
+          )}
           <p>
             <a className="lp-next" href={trainerHref}>
               В тренажёр →

@@ -1,7 +1,7 @@
 {
   "test_code": "numsys-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 95,
+  "max_score": 100,
   "instruction": "В ответе запишите только само число. Основание системы счисления (₂, ₈, ₁₀, ₁₆) указывать не нужно.",
   "page_size": 5,
   "tasks": [
@@ -365,6 +365,26 @@
       "key": "A"
     },
     {
+      "id": "inf-8-numsys-061",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 101_2 в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-numsys-062",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 10_10 в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 10,
+      "key": "1010"
+    },
+    {
       "id": "inf-8-numsys-004",
       "lesson": "numsys-03-octal",
       "type": "numeric_base",
@@ -502,6 +522,16 @@
       "key": "17"
     },
     {
+      "id": "inf-8-numsys-063",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 13_8 в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
       "id": "inf-8-numsys-002",
       "lesson": "numsys-04-hex",
       "type": "numeric_base",
@@ -602,6 +632,16 @@
       "key": "365"
     },
     {
+      "id": "inf-8-numsys-064",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число A_16 в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
       "id": "inf-8-numsys-007",
       "lesson": "numsys-05-arith",
       "type": "numeric_base",
@@ -640,6 +680,16 @@
       "base": 10,
       "expected": 34,
       "key": "34"
+    },
+    {
+      "id": "inf-8-numsys-065",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите: 110_2 + 11_2. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
     },
     {
       "id": "inf-8-numsys-009",

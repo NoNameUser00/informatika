@@ -34,13 +34,14 @@ function chunk<T>(arr: T[], size: number): T[][] {
   return out;
 }
 
-export default function Trainer({ data, title }: { data: any; title: string }) {
+export default function Trainer({ data, title, forceMode }: { data: any; title: string; forceMode?: Mode }) {
   const bank = data;
-  const [mode] = useState<Mode>(() =>
-    typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('mode') === 'proverka'
+  const [mode] = useState<Mode>(() => {
+    if (forceMode) return forceMode;
+    return typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('mode') === 'proverka'
       ? 'proverka'
-      : 'trainer',
-  );
+      : 'trainer';
+  });
   // Роль: гость — как раньше (с ответами); ученик — тихо (без верно/неверно и ключей).
   // ?as= — только для локальной разработки без бэкенда (там нет секретов).
   const [role, setRole] = useState<Role>('guest');

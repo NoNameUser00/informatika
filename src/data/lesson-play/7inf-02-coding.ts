@@ -6,6 +6,7 @@ export const INF7_02_PLAY: PlayLesson = {
   no: 2,
   title: 'Двоичное кодирование',
   minutes: 45,
+  nextCheck: { kind: 'proverka', title: 'Проверочная: Информация', slug: 'proverka-info' },
   steps: [
     {
       kind: 'theory',

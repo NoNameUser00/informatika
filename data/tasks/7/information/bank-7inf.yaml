@@ -202,3 +202,36 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [160], answer_text: "160", explanation: "i = 5, I = 1280 бит = 160 байт" }
+- id: inf-7-inf-013
+  class: 7
+  topic: Информация
+  subtopic: Проверочная облегчённая
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-02-coding
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
+  prompt: "Сколько разных символов можно закодировать кодом длины 3?"
+  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "8" }, { id: C, text: "9" }, { id: D, text: "3" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "2^3 = 8" }
+
+- id: inf-7-inf-014
+  class: 7
+  topic: Информация
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-03-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Сколько байт в одном килобайте? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1024], answer_text: "1024", explanation: "В информатике кило — 1024" }

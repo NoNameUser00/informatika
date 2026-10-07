@@ -7,6 +7,7 @@ export const NUMSYS_04_PLAY: PlayLesson = {
   no: 4,
   title: 'Шестнадцатеричная система и тетрады',
   minutes: 45,
+  nextCheck: { kind: 'proverka', title: 'Проверочная: Системы счисления', slug: 'proverka-ss' },
   steps: [
     {
       kind: 'theory',

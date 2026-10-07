@@ -1,7 +1,7 @@
 {
   "test_code": "algo-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 19,
+  "max_score": 21,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -97,6 +97,43 @@
         {
           "id": "C",
           "text": "Круг"
+        },
+        {
+          "id": "D",
+          "text": "Отрезок"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-013",
+      "lesson": "alg-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет команду 2 над числом 1. Что получится? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-014",
+      "lesson": "alg-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что нарисует Черепаха после «Повтори 2 [Вперёд 10 Направо 90]»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Угол из двух отрезков"
+        },
+        {
+          "id": "B",
+          "text": "Квадрат"
+        },
+        {
+          "id": "C",
+          "text": "Треугольник"
         },
         {
           "id": "D",

@@ -14,7 +14,9 @@ const grade = '7';
   <div class="card">
     <a class="btn" href={`${B}${grade}/trainer/`}>Тренажер «Информация»</a>
     <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/trainer/?mode=proverka`}>Проверочная</a>
+    <a class="btn secondary" href={`${B}${grade}/proverka-info/`}>Проверочная (5 заданий)</a>
+    <span> </span>
+    <a class="btn secondary" href={`${B}${grade}/control-info/`}>Контрольная (8 заданий)</a>
   </div>
   {LESSONS_7.map((l, i) => (
     <div class="card">

@@ -270,3 +270,54 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10 }
   teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Только набор 11 из четырёх" }
+
+- id: inf-8-logic-017
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Проверочная облегчённая
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-02-operations
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "При A=1 вычислите отрицание ¬A."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Отрицание переворачивает: ¬1 = 0" }
+
+- id: inf-8-logic-018
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Проверочная облегчённая
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [self-control] }
+  prompt: "Сколько строк (без шапки) в таблице истинности для 1 переменной? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10 }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "2^1 = 2" }
+
+- id: inf-8-logic-019
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Проверочная облегчённая
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-02-operations
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Вычислите 1 ∨ 1."
+  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "ИЛИ неисключающее: достаточно одной единицы" }

@@ -7,6 +7,7 @@ export const LOGIC_02_PLAY: PlayLesson = {
   no: 8,
   title: 'Логические операции И, ИЛИ, НЕ',
   minutes: 45,
+  nextCheck: { kind: 'proverka', title: 'Проверочная: Логика', slug: 'proverka-logic' },
   steps: [
     {
       kind: 'theory',

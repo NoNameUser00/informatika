@@ -7,6 +7,7 @@ export const ALG_04_PLAY: PlayLesson = {
   no: 14,
   title: 'Повторение: циклы',
   minutes: 45,
+  nextCheck: { kind: 'control', title: 'Контрольная: Алгоритмы', slug: 'control-algo' },
   steps: [
     {
       kind: 'theory',

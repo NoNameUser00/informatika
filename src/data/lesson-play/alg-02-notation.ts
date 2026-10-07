@@ -7,6 +7,7 @@ export const ALG_02_PLAY: PlayLesson = {
   no: 12,
   title: 'Способы записи алгоритмов',
   minutes: 45,
+  nextCheck: { kind: 'proverka', title: 'Проверочная: Алгоритмы', slug: 'proverka-algo' },
   steps: [
     {
       kind: 'theory',
