@@ -92,7 +92,7 @@
     },
     {
       "id": "inf-8-algo-011",
-      "lesson": "alg-04-loops",
+      "lesson": "alg-07-while",
       "type": "numeric_base",
       "points": 2,
       "prompt": "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число.",
@@ -125,7 +125,7 @@
     },
     {
       "id": "inf-8-algo-012",
-      "lesson": "alg-04-loops",
+      "lesson": "alg-07-while",
       "type": "single_choice",
       "points": 1,
       "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",

@@ -23,9 +23,9 @@ const B = import.meta.env.BASE_URL;
     <span> </span>
     <a class="btn secondary" href={`${B}8/code/`}>Код: Python в браузере</a>
   </div>
-  {LESSONS_8.filter((l) => l.id.startsWith('numsys')).map((l, i) => (
+  {LESSONS_8.filter((l) => l.ktp && l.ktp <= 6).map((l) => (
     <div class="card">
-      <h3>Урок {i + 1}. {l.title}</h3>
+      <h3>Урок {l.ktp}. {l.title}</h3>
       <p><a href={`${B}8/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
@@ -37,9 +37,9 @@ const B = import.meta.env.BASE_URL;
     <span> </span>
     <a class="btn secondary" href={`${B}8/control-logic/`}>Контрольная (10 заданий)</a>
   </div>
-  {LESSONS_8.filter((l) => l.id.startsWith('logic')).map((l, i) => (
+  {LESSONS_8.filter((l) => l.ktp && l.ktp >= 7 && l.ktp <= 12).map((l) => (
     <div class="card">
-      <h3>Урок {i + 7}. {l.title}</h3>
+      <h3>Урок {l.ktp}. {l.title}</h3>
       <p><a href={`${B}8/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
@@ -51,9 +51,9 @@ const B = import.meta.env.BASE_URL;
     <span> </span>
     <a class="btn secondary" href={`${B}8/control-algo/`}>Контрольная (10 заданий)</a>
   </div>
-  {LESSONS_8.filter((l) => l.id.startsWith('alg')).map((l, i) => (
+  {LESSONS_8.filter((l) => l.ktp && l.ktp >= 13 && l.ktp <= 25).map((l) => (
     <div class="card">
-      <h3>Урок {i + 11}. {l.title}</h3>
+      <h3>Урок {l.ktp}. {l.title}</h3>
       <p><a href={`${B}8/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}
@@ -61,9 +61,9 @@ const B = import.meta.env.BASE_URL;
   <div class="card">
     <a class="btn" href={`${B}8/code/`}>Тренажер: код в браузере</a>
   </div>
-  {LESSONS_8.filter((l) => l.id.startsWith('py-')).map((l, i) => (
+  {LESSONS_8.filter((l) => l.ktp && l.ktp >= 15).map((l) => (
     <div class="card">
-      <h3>Урок {i + 15}. {l.title}</h3>
+      <h3>Урок {l.ktp}. {l.title}</h3>
       <p><a href={`${B}8/${l.id}/`}>Читать теорию →</a></p>
     </div>
   ))}

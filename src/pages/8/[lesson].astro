@@ -45,6 +45,7 @@ const crumb = ktp ? `Урок ${ktp.n}. ${ktp.topic}` : (fm.title ?? meta.title)
   <div class="card">
     <a class="btn" href={`${B}8/trainer/`}>Решить тренажер →</a>
     {hasPlay(meta.id) && <span> <a class="btn secondary" href={`${B}8/play/${meta.id}/`}>Пройти урок целиком (45 мин) →</a></span>}
+    {meta.id === 'ss-30-control' && <span> <a class="btn" href={`${B}8/control-ss/`}>Перейти к контрольной →</a></span>}
   </div>
   <p>
     {prev && <a href={`${B}8/${prev.id}/`}>← {prev.title}</a>}

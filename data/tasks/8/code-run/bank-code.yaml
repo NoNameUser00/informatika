@@ -96,7 +96,7 @@
   difficulty: advanced
   cognitive_level: analyze
   points: 3
-  lesson: alg-04-loops
+  lesson: py-03-loops
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-8-code-euclid], meta: [plan-actions] }
@@ -118,7 +118,7 @@
   difficulty: intermediate
   cognitive_level: apply
   points: 3
-  lesson: alg-04-loops
+  lesson: py-03-loops
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-8-code-sum], meta: [plan-actions] }

@@ -6,6 +6,26 @@
   "page_size": 5,
   "tasks": [
     {
+      "id": "inf-8-code-005",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди НОД чисел 48 и 18 циклом while (алгоритм Евклида) и выведи его.",
+      "template": "# Допиши алгоритм Евклида\na, b = 48, 18\n...",
+      "expected": "6",
+      "key": "6"
+    },
+    {
+      "id": "inf-8-code-006",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи сумму всех чётных чисел от 1 до 10 включительно.",
+      "template": "# Допиши код: сумма чётных 1..10\nprint(...)",
+      "expected": "30",
+      "key": "30"
+    },
+    {
       "id": "inf-8-code-007",
       "lesson": "py-01-basics",
       "type": "code_run",
@@ -154,26 +174,6 @@
       "template": "# Допиши код: выведи hex(175)\nprint(...)",
       "expected": "0xaf",
       "key": "0xaf"
-    },
-    {
-      "id": "inf-8-code-005",
-      "lesson": "alg-04-loops",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Найди НОД чисел 48 и 18 циклом while (алгоритм Евклида) и выведи его.",
-      "template": "# Допиши алгоритм Евклида\na, b = 48, 18\n...",
-      "expected": "6",
-      "key": "6"
-    },
-    {
-      "id": "inf-8-code-006",
-      "lesson": "alg-04-loops",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Выведи сумму всех чётных чисел от 1 до 10 включительно.",
-      "template": "# Допиши код: сумма чётных 1..10\nprint(...)",
-      "expected": "30",
-      "key": "30"
     }
   ]
 }

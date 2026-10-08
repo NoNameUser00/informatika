@@ -177,7 +177,7 @@
   difficulty: intermediate
   cognitive_level: apply
   points: 2
-  lesson: alg-04-loops
+  lesson: alg-07-while
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
@@ -194,7 +194,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: alg-04-loops
+  lesson: alg-07-while
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
