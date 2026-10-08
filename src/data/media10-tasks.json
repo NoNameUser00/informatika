@@ -1,7 +1,7 @@
 {
   "test_code": "media10-v1",
   "variant": "trainer-v1",
-  "max_score": 10,
+  "max_score": 13,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -239,6 +239,43 @@
         {
           "id": "D",
           "text": "VR — это монитор"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-010",
+      "lesson": "10media-01-docs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько байт займут 10 секунд звука 8000 Гц глубиной 8 бит (моно)? Запишите только число.",
+      "base": 10,
+      "expected": 80000,
+      "key": "80000"
+    },
+    {
+      "id": "inf-10-media-011",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Где собирать проектную презентацию вместе с классом?",
+      "options": [
+        {
+          "id": "A",
+          "text": "В онлайн-сервисе с совместным доступом"
+        },
+        {
+          "id": "B",
+          "text": "На одном листке"
+        },
+        {
+          "id": "C",
+          "text": "По телефону без файла"
+        },
+        {
+          "id": "D",
+          "text": "Нигде"
         }
       ],
       "correct": "A",

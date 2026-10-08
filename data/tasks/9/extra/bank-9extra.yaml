@@ -33,6 +33,91 @@
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Датчики — глаза робота" }
 
+- id: inf-9-extra-014
+  class: 9
+  topic: Управление и роботы
+  subtopic: Вспомогательные алгоритмы
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9robot-01-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
+  prompt: "Процедура «сторона» (вперёд + направо 90) вызвана 4 раза в цикле. Какая фигура получится?"
+  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: D, text: "Отрезок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "4 поворота по 90° замыкают квадрат; процедура переиспользована" }
+
+- id: inf-9-extra-015
+  class: 9
+  topic: Управление и роботы
+  subtopic: Разбиение на подзадачи
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9robot-01-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
+  prompt: "Зачем повторяющийся кусок программы выносить во вспомогательный алгоритм?"
+  student_view: { options: [{ id: A, text: "Одно место для правок вместо копипасты" }, { id: B, text: "Чтобы было длиннее" }, { id: C, text: "Чтобы запутать" }, { id: D, text: "Так нельзя делать" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Написал раз — вызвал много; правишь в одном месте" }
+
+- id: inf-9-extra-016
+  class: 9
+  topic: Интернет
+  subtopic: Умный город
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Что считает компьютерное зрение в умном городе?"
+  student_view: { options: [{ id: A, text: "Потоки машин и объекты на камерах" }, { id: B, text: "Деньги в бюджете" }, { id: C, text: "Оценки учеников" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Камеры + анализ: потоки, пробки, объекты" }
+
+- id: inf-9-extra-017
+  class: 9
+  topic: Интернет
+  subtopic: Большие данные
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Чем анализ больших данных похож на работу с таблицами?"
+  student_view: { options: [{ id: A, text: "Сначала вопрос, потом картинка под него" }, { id: B, text: "Ничем" }, { id: C, text: "Всё хранится в одной ячейке" }, { id: D, text: "Диаграммы запрещены" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Без вопроса утонешь в цифрах" }
+
+- id: inf-9-extra-020
+  class: 9
+  topic: Интернет
+  subtopic: Язык запросов
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "Что делает минус в поисковом запросе «робот -игрушка»?"
+  student_view: { options: [{ id: A, text: "Убирает страницы про игрушки" }, { id: B, text: "Ищет дефис" }, { id: C, text: "Удваивает выдачу" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Минус — вычитание мусора" }
+
 - id: inf-9-extra-003
   class: 9
   topic: Моделирование
@@ -219,3 +304,37 @@
   student_view: { options: [{ id: A, text: "Совместное редактирование в онлайн-офисе" }, { id: B, text: "Архив с паролем" }, { id: C, text: "Две копии на разных флешках" }, { id: D, text: "Скриншоты страниц" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Один документ, общий доступ, история помнит авторов" }
+
+- id: inf-9-extra-018
+  class: 9
+  topic: Моделирование
+  subtopic: Смешанные модели
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-01-models
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "Модель погоды: таблица температур, график, карта, формула. Какая она?"
+  student_view: { options: [{ id: A, text: "Смешанная" }, { id: B, text: "Только табличная" }, { id: C, text: "Только словесная" }, { id: D, text: "Не модель" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Языки описания соединены" }
+
+- id: inf-9-extra-019
+  class: 9
+  topic: Моделирование
+  subtopic: Табличные модели
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9model-01-models
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "База «Ученики»: поля Фамилия/Класс/Рост. Что такое запись?"
+  student_view: { options: [{ id: A, text: "Строка — один ученик" }, { id: B, text: "Столбец" }, { id: C, text: "Название базы" }, { id: D, text: "Пароль" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Поля — свойства, записи — экземпляры" }

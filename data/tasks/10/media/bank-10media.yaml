@@ -150,3 +150,37 @@
   student_view: { options: [{ id: A, text: "VR погружает, AR дополняет мир" }, { id: B, text: "Ничем" }, { id: C, text: "AR дороже" }, { id: D, text: "VR — это монитор" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Погружение против наложения" }
+
+- id: inf-10-media-010
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Объём звука
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-audio], meta: [plan-actions] }
+  prompt: "Сколько байт займут 10 секунд звука 8000 Гц глубиной 8 бит (моно)? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [80000], answer_text: "80000", explanation: "8000 · 8 · 10 / 8 = 80000" }
+
+- id: inf-10-media-011
+  class: 10
+  topic: Документы и мультимедиа
+  subtopic: Проектная презентация
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-slides], meta: [plan-actions] }
+  prompt: "Где собирать проектную презентацию вместе с классом?"
+  student_view: { options: [{ id: A, text: "В онлайн-сервисе с совместным доступом" }, { id: B, text: "На одном листке" }, { id: C, text: "По телефону без файла" }, { id: D, text: "Нигде" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Общий документ + комментарии" }

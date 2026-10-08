@@ -168,3 +168,71 @@
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Инвариант доказывает правильность" }
 
+- id: inf-11-algo-011
+  class: 11
+  topic: Анализ алгоритмов
+  subtopic: Отладка
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-01-analysis
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Что такое трассировка при отладке?"
+  student_view: { options: [{ id: A, text: "Отслеживание значений по шагам выполнения" }, { id: B, text: "Удаление программы" }, { id: C, text: "Ускорение компьютера" }, { id: D, text: "Печать учебника" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Видишь, где значения свернули не туда" }
+
+- id: inf-11-algo-012
+  class: 11
+  topic: Анализ алгоритмов
+  subtopic: Граничные значения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-01-analysis
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Программа делит числа. Какой набор тестов — граничные значения?"
+  student_view: { options: [{ id: A, text: "Деление на ноль и отрицательные" }, { id: B, text: "Только 10 / 2" }, { id: C, text: "Только большие числа" }, { id: D, text: "Тесты не нужны" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Границы (ноль!) ломают чаще всего" }
+
+- id: inf-11-algo-013
+  class: 11
+  topic: Сортировки и структуры
+  subtopic: Библиотеки
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-advanced
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
+  prompt: "Что делает строка import math в программе?"
+  student_view: { options: [{ id: A, text: "Подключает библиотеку математических подпрограмм" }, { id: B, text: "Рисует графики" }, { id: C, text: "Удаляет числа" }, { id: D, text: "Выключает компьютер" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Готовое и проверенное — подключай, а не пиши заново" }
+
+- id: inf-11-algo-014
+  class: 11
+  topic: Сортировки и структуры
+  subtopic: Модули
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-advanced
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
+  prompt: "Где хранить свои переиспользуемые подпрограммы?"
+  student_view: { options: [{ id: A, text: "В отдельном файле-модуле" }, { id: B, text: "В комментариях" }, { id: C, text: "В имени файла" }, { id: D, text: "Нигде" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Модуль подключается import, как стандартный" }
+

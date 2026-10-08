@@ -1,6 +1,6 @@
 // Невидимый остров: фиксирует «где остановился» при открытии урока.
 import { useEffect } from 'react';
-import { progressStore } from '../lib/progress/store.mjs';
+import { progressStore, studyStore } from '../lib/progress/store.mjs';
 
 export default function RecordVisit({
   grade,
@@ -15,6 +15,7 @@ export default function RecordVisit({
 }) {
   useEffect(() => {
     progressStore.record({ grade, lesson, title, href });
+    studyStore.recordLesson(grade, { lesson, title, href });
   }, [grade, lesson, title, href]);
   return null;
 }

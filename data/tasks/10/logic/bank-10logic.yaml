@@ -100,3 +100,54 @@
   student_view: { options: [{ id: A, text: "Логическое И" }, { id: B, text: "Логическое ИЛИ" }, { id: C, text: "Отрицание" }, { id: D, text: "Ничего" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Пересечение — общие элементы, как И" }
+
+- id: inf-10-logic-007
+  class: 10
+  topic: Алгебра логики
+  subtopic: Полусумматор
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Полусумматор: A = 1, B = 1. Чему равны сумма S и перенос P?"
+  student_view: { options: [{ id: A, text: "S = 0, P = 1" }, { id: B, text: "S = 1, P = 0" }, { id: C, text: "S = 1, P = 1" }, { id: D, text: "S = 0, P = 0" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "S = 1 xor 1 = 0, P = 1 and 1 = 1 (в сумме двоичное 10)" }
+
+- id: inf-10-logic-008
+  class: 10
+  topic: Алгебра логики
+  subtopic: Триггер
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Какая комбинация входов запрещена для RS-триггера?"
+  student_view: { options: [{ id: A, text: "R = 1, S = 1" }, { id: B, text: "R = 0, S = 0" }, { id: C, text: "R = 1, S = 0" }, { id: D, text: "R = 0, S = 1" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Обе команды сразу — итог не определён; 0,0 хранит старое" }
+
+- id: inf-10-logic-009
+  class: 10
+  topic: Алгебра логики
+  subtopic: Кванторы
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-pred], meta: [plan-actions] }
+  prompt: "Истинно ли высказывание ∀x (x > 5) на числах?"
+  student_view: { options: [{ id: A, text: "Нет, контрпример x = 3" }, { id: B, text: "Да, всегда" }, { id: C, text: "Да, если x = 6" }, { id: D, text: "Нельзя оценить" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "∀ требует всех значений; 3 > 5 ложно" }

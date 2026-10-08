@@ -178,3 +178,20 @@
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Три элемента" }
 
+- id: inf-9-arr-011
+  class: 9
+  topic: Массивы
+  subtopic: Заполнение формулой
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-fill], meta: [plan-actions] }
+  prompt: "Что получится в списке после [i*i for i in range(5)]?"
+  student_view: { options: [{ id: A, text: "[0, 1, 4, 9, 16]" }, { id: B, text: "[1, 4, 9, 16, 25]" }, { id: C, text: "[0, 1, 2, 3, 4]" }, { id: D, text: "[5, 5, 5, 5, 5]" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Квадраты чисел 0–4" }
+

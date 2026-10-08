@@ -202,3 +202,71 @@
   student_view: { options: [{ id: A, text: "Антивирусная программа" }, { id: B, text: "Яркие обои" }, { id: C, text: "Громкий звук" }, { id: D, text: "Быстрый интернет" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Антивирусы + осторожность с файлами" }
+
+- id: inf-7-base-013
+  class: 7
+  topic: Текст
+  subtopic: Диаграммы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
+  prompt: "Чем показать доли чисел из таблицы документа?"
+  student_view: { options: [{ id: A, text: "Круговой диаграммой" }, { id: B, text: "Жирным шрифтом" }, { id: C, text: "Красной строкой" }, { id: D, text: "Колонтитулом" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Доли — круг; сравнение — столбцы" }
+
+- id: inf-7-base-015
+  class: 7
+  topic: Текст
+  subtopic: Клавиатурное письмо
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
+  prompt: "Где стоят пальцы при слепом десятипальцевом методе?"
+  student_view: { options: [{ id: A, text: "ФЫВА — слева, ОЛДЖ — справа" }, { id: B, text: "На цифрах" }, { id: C, text: "Где попало" }, { id: D, text: "На пробеле все" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Основной ряд; глаза в текст" }
+
+- id: inf-7-base-016
+  class: 7
+  topic: Текст
+  subtopic: Вектор в процессоре
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
+  prompt: "Чем нарисовать схему прямо в текстовом процессоре?"
+  student_view: { options: [{ id: A, text: "Фигурами с группировкой" }, { id: B, text: "Скриншотом экрана" }, { id: C, text: "Жирным шрифтом" }, { id: D, text: "Колонтитулом" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Фигуры — вектор: тянется без мыла" }
+
+- id: inf-7-base-014
+  class: 7
+  topic: Компьютер
+  subtopic: Тенденции
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
+  prompt: "Какая тенденция развития компьютеров верна?"
+  student_view: { options: [{ id: A, text: "Ядер больше, устройства меньше, счёт в облаках" }, { id: B, text: "Одно ядро навсегда" }, { id: C, text: "Компьютеры растут в размерах" }, { id: D, text: "Облаков не существует" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Многоядерность, мобильность, облака" }

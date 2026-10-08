@@ -41,7 +41,7 @@
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
 }
 .lp-taskinput {
-  width: 100%; padding: 12px; font-size: 1rem; border-radius: 12px;
+  display: block; width: 100%; max-width: 100%; box-sizing: border-box; padding: 12px; font-size: 1rem; border-radius: 12px;
   border: 2px solid #94a3b8; background: rgba(255,255,255,.85); color: #0f172a; min-height: 48px;
 }
 .lp-taskinput:focus { border-color: #2563eb; outline: none; }

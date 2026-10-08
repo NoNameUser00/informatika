@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import StudyProgress from '../../components/StudyProgress';
 import { LESSONS_7 } from '../../data/lessons';
 const B = import.meta.env.BASE_URL;
 const grade = '7';
@@ -7,6 +8,7 @@ const grade = '7';
 <Layout title="7 класс — Информатика">
   <h1>7 класс · Информация и кодирование</h1>
   <p class="muted">Учебный год открывает урок 0. Дальше — блок «Информация»: теория, уроки целиком, тренажер.</p>
+  <StudyProgress client:load grade="7" />
   <div class="card">
     <h3>Урок 0. Техника безопасности в кабинете информатики</h3>
     <p><a href={`${B}${grade}/tb/`}>Открыть презентацию →</a></p>

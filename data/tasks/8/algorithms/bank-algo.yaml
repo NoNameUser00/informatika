@@ -304,3 +304,37 @@
   auto_check: { method: matching }
   teacher_only: { answer_map: { "len(s)": "6", "s[0]": "'P'", "s[1:4]": "'yth'", "'on' in s": "True" }, explanation: "Длина 6, первый символ P, срез с 1 по 3, подстрока есть" }
 
+- id: inf-8-algo-019
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: Трассировка
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Было x = 2, y = 5. Выполнили «x := x + y; y := x − y». Чему равен y? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "x = 7, затем y = 7 − 5 = 2" }
+
+- id: inf-8-algo-020
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: Ручное исполнение
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Что такое трассировочная таблица?"
+  student_view: { options: [{ id: A, text: "Значения переменных по шагам выполнения" }, { id: B, text: "Список учеников" }, { id: C, text: "Расписание уроков" }, { id: D, text: "Меню столовой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Ручной прогон: шаг — значения" }
+

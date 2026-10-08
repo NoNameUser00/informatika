@@ -25,6 +25,23 @@ const PHASE_LABEL: Record<Phase, string> = {
 
 type TaskState = { value: string; checked: boolean; ok: boolean; fails: number };
 
+// Теория бьётся на подслайды, чтобы слайд влезал в один экран без прокрутки:
+// по 2 абзаца на слайд + отдельный слайд под код (если есть).
+const THEORY_PER_SLIDE = 2;
+
+function theorySlides(s: Extract<PlayStep, { kind: 'theory' }>): { paras: string[]; mono?: string[] }[] {
+  const out: { paras: string[]; mono?: string[] }[] = [];
+  for (let i = 0; i < s.body.length; i += THEORY_PER_SLIDE) {
+    out.push({ paras: s.body.slice(i, i + THEORY_PER_SLIDE) });
+  }
+  if (s.mono?.length) out.push({ paras: [], mono: s.mono });
+  return out.length ? out : [{ paras: [] }];
+}
+
+function subCount(s: PlayStep): number {
+  return s.kind === 'theory' ? theorySlides(s).length : 1;
+}
+
 function phaseOf(lesson: PlayLesson, idx: number): Phase {
   if (idx >= lesson.steps.length) return 'final';
   return lesson.steps[idx].kind;
@@ -46,6 +63,7 @@ export default function LessonPlay({
 }) {
   const total = lesson.steps.length + 1; // + итог
   const [idx, setIdx] = useState(0);
+  const [sub, setSub] = useState(0);
   const [revealed, setRevealed] = useState<Record<number, number>>({});
   const [written, setWritten] = useState<Record<number, boolean>>({});
   const [tasks, setTasks] = useState<Record<number, TaskState>>({});
@@ -94,6 +112,33 @@ export default function LessonPlay({
   }
 
   const step = isLast ? null : lesson.steps[idx];
+  const nSubs = !isLast && step!.kind === 'theory' ? theorySlides(step as Extract<PlayStep, { kind: 'theory' }>).length : 1;
+  const cur = !isLast && step!.kind === 'theory'
+    ? theorySlides(step as Extract<PlayStep, { kind: 'theory' }>)[Math.min(sub, nSubs - 1)]
+    : null;
+
+  function goNext() {
+    if (!isLast && step!.kind === 'theory' && sub < nSubs - 1) {
+      setSub(sub + 1);
+      return;
+    }
+    if (canNext()) {
+      setIdx(idx + 1);
+      setSub(0);
+    }
+  }
+
+  function goBack() {
+    if (!isLast && step!.kind === 'theory' && sub > 0) {
+      setSub(sub - 1);
+      return;
+    }
+    if (idx > 0) {
+      const prev = lesson.steps[idx - 1];
+      setIdx(idx - 1);
+      setSub(subCount(prev) - 1);
+    }
+  }
   const phases: Phase[] = ['theory', 'key', 'example', 'task', 'final'];
   const now = phaseOf(lesson, idx);
   const nowPos = phases.indexOf(now);
@@ -117,20 +162,28 @@ export default function LessonPlay({
         <p className="mascot-say">{stepTip ?? (isLast ? (score.got === score.n ? 'Всё верно — ты звезда!' : phaseTip.text) : phaseTip.text)}</p>
       </div>
       <p className="lp-meta">
-        Урок {lesson.no} · {lesson.title} · шаг {idx + 1} из {total} · ≈{lesson.minutes} мин
+        Урок {lesson.no} · {lesson.title} · шаг {idx + 1} из {total}
+        {!isLast && step?.kind === 'theory' && nSubs > 1 ? ` · слайд ${Math.min(sub, nSubs - 1) + 1} из ${nSubs}` : ''} · ≈{lesson.minutes} мин
       </p>
 
-      {!isLast && step?.kind === 'theory' && (
+      {!isLast && step?.kind === 'theory' && cur && (
         <article className="lp-card">
-          <p className="lp-kicker">Теория</p>
+          <p className="lp-kicker">Теория{cur.mono ? ' — смотрим код' : ''}</p>
           <h1>{step.title}</h1>
-          {step.body.map((p, i) => (
+          {cur.paras.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
-          {step.mono && (
+          {cur.mono && (
             <pre className="lp-mono">
-              {step.mono.join('\n')}
+              {cur.mono.join('\n')}
             </pre>
+          )}
+          {nSubs > 1 && (
+            <p>
+              <button type="button" className="lp-stepbtn" disabled={sub >= nSubs - 1} onClick={() => setSub(sub + 1)}>
+                Следующий слайд ({Math.min(sub, nSubs - 1) + 1} из {nSubs})
+              </button>
+            </p>
           )}
         </article>
       )}
@@ -280,14 +333,14 @@ export default function LessonPlay({
         <button
           type="button"
           className="lp-back"
-          disabled={idx === 0}
-          onClick={() => setIdx(idx - 1)}
+          disabled={idx === 0 && (isLast || step?.kind !== 'theory' || sub === 0)}
+          onClick={goBack}
         >
           Назад
         </button>
         <span> </span>
         {!isLast ? (
-          <button type="button" className="lp-next" onClick={() => canNext() && setIdx(idx + 1)}>
+          <button type="button" className="lp-next" onClick={goNext}>
             Далее
           </button>
         ) : (

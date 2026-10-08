@@ -13,6 +13,12 @@ interface Props {
 }
 const { title, description = 'Школьная информатика: теория, тренажеры, проверочные.' } = Astro.props;
 const B = import.meta.env.BASE_URL;
+// Шапка показывает текущий класс: берём из URL (…/7/…, …/11/…), иначе — 8 по умолчанию.
+const _segs = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean);
+const _baseLen = B.replace(/\/$/, '').split('/').filter(Boolean).length;
+const _g = _segs[_baseLen] ?? '';
+const navGrade = ['7', '8', '9', '10', '11'].includes(_g) ? _g : '8';
+const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9': 'sheets', '10': 'base', '11': 'data' };
 ---
 <!doctype html>
 <html lang="ru">
@@ -136,8 +142,8 @@ const B = import.meta.env.BASE_URL;
     <header class="top">
       <nav>
         <a href={B}>Информатика</a>
-        <a href={`${B}8/`}>8 класс</a>
-        <a href={`${B}8/trainer/`}>Тренажер</a>
+        <a href={`${B}${navGrade}/`}>{navGrade} класс</a>
+        <a href={`${B}${navGrade}/${NAV_TRAINER[navGrade]}/`}>Тренажер</a>
         <a href={`${B}teacher/`}>Учитель</a>
         <AuthPanel client:load />
         <ClassJoin client:load />

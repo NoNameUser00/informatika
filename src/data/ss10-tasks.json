@@ -1,7 +1,7 @@
 {
   "test_code": "ss10-v1",
   "variant": "trainer-v1",
-  "max_score": 7,
+  "max_score": 9,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
@@ -118,6 +118,33 @@
         {
           "id": "D",
           "text": "Ничего общего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-ss-006",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Как запишется число 25 в двоично-десятичной системе (8421)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0010 0101"
+        },
+        {
+          "id": "B",
+          "text": "11001"
+        },
+        {
+          "id": "C",
+          "text": "0010 0100"
+        },
+        {
+          "id": "D",
+          "text": "2525"
         }
       ],
       "correct": "A",

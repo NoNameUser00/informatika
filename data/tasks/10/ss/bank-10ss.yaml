@@ -83,3 +83,20 @@
   student_view: { options: [{ id: A, text: "Веса P^i и деление на P" }, { id: B, text: "Только деление" }, { id: C, text: "Только триады" }, { id: D, text: "Ничего общего" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Приёмы 8 класса работают при любом основании" }
+
+- id: inf-10-ss-006
+  class: 10
+  topic: Системы счисления углублённо
+  subtopic: BCD
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Как запишется число 25 в двоично-десятичной системе (8421)?"
+  student_view: { options: [{ id: A, text: "0010 0101" }, { id: B, text: "11001" }, { id: C, text: "0010 0100" }, { id: D, text: "2525" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "2 → 0010, 5 → 0101; 11001 — это чисто двоичная запись" }

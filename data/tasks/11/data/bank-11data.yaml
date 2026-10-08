@@ -100,3 +100,37 @@
   student_view: { options: [{ id: A, text: "Линейной диаграммой" }, { id: B, text: "Круговой" }, { id: C, text: "Таблицей без сортировки" }, { id: D, text: "Ничем" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Динамика — линии во времени" }
+
+- id: inf-11-data-007
+  class: 11
+  topic: Анализ данных
+  subtopic: Формализация
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
+  prompt: "Что такое формализация прикладной задачи?"
+  student_view: { options: [{ id: A, text: "Перевод на точный язык: переменные, цель, ограничения" }, { id: B, text: "Украшение отчёта" }, { id: C, text: "Удаление данных" }, { id: D, text: "Печать графиков" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сначала модель — потом вычисления" }
+
+- id: inf-11-data-008
+  class: 11
+  topic: Анализ данных
+  subtopic: Выбор модели
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
+  prompt: "Сеть дорог с расстояниями между городами. Какая модель уместна?"
+  student_view: { options: [{ id: A, text: "Взвешенный граф" }, { id: B, text: "Круговая диаграмма" }, { id: C, text: "Таблица умножения" }, { id: D, text: "Текстовый абзац" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Вершины — города, веса — расстояния" }

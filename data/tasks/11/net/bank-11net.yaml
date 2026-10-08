@@ -167,3 +167,54 @@
   student_view: { options: [{ id: A, text: "Поддельные письма и сайты для кражи данных" }, { id: B, text: "Вид рыбы" }, { id: C, text: "Антивирусная программа" }, { id: D, text: "Протокол сети" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Подделка под настоящее" }
+
+- id: inf-11-net-011
+  class: 11
+  topic: Сети
+  subtopic: ГИС
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Чем геоинформационная система отличается от картинки карты?"
+  student_view: { options: [{ id: A, text: "Карта + привязанные данные слоями" }, { id: B, text: "Ничем" }, { id: C, text: "Только ценой" }, { id: D, text: "Размером файла" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Слои: дороги, дома, пробки поверх карты" }
+
+- id: inf-11-net-012
+  class: 11
+  topic: Сети
+  subtopic: Госуслуги
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Что нужно для получения значимых госуслуг онлайн?"
+  student_view: { options: [{ id: A, text: "Подтверждённая учётная запись" }, { id: B, text: "Только браузер" }, { id: C, text: "Принтер" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Личность должна быть проверена" }
+
+- id: inf-11-net-013
+  class: 11
+  topic: Сети
+  subtopic: Сетевой этикет
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Что проверяют для подлинности новости?"
+  student_view: { options: [{ id: A, text: "Источник, дату и автора" }, { id: B, text: "Число лайков" }, { id: C, text: "Красоту картинки" }, { id: D, text: "Ничего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Кто сказал, откуда взял, что если врёт" }
