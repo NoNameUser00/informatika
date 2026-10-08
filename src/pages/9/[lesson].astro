@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import RecordVisit from '../../components/RecordVisit';
-import { LESSONS_9 } from '../../data/lessons';
+import { LESSONS_9, ktpLesson, KTP_TOTAL } from '../../data/lessons';
 import { mdToHtml, parseFrontmatter } from '../../lib/md';
 import { hasPlay } from '../../data/lesson-play/registry';
 
@@ -23,14 +23,23 @@ const html = mdToHtml(body);
 const prev = LESSONS_9[idx - 1];
 const next = LESSONS_9[idx + 1];
 const B = import.meta.env.BASE_URL;
+// Номер урока по КТП: если проставлен — «Урок N. <тема КТП>» и «Урок N из 36».
+const ktp = ktpLesson('9', meta.ktp);
+const noLabel = ktp ? `Урок ${ktp.n} из ${KTP_TOTAL}` : `Урок ${idx + 1} из ${LESSONS_9.length}`;
+const crumb = ktp ? `Урок ${ktp.n}. ${ktp.topic}` : (fm.title ?? meta.title);
 ---
 <Layout title={`${fm.title ?? meta.title} — 9 класс`}>
+  <h1>{crumb}</h1>
+  <p class="muted">
+    <a href={`${B}9/`}>9 класс</a> · {noLabel}
+    {ktp && ktp.section && <span> · {ktp.section}</span>}
+  </p>
   <RecordVisit client:load grade="9" lesson={meta.id} title={`${fm.title ?? meta.title}`} href={`${B}9/${meta.id}/`} />
-  <p class="muted"><a href={`${B}9/`}>9 класс</a> · Урок {idx + 1} из {LESSONS_9.length}</p>
   <article class="card" set:html={html} />
   <div class="card">
     <a class="btn" href={`${B}9/sheets/`}>К тренажерам →</a>
     {hasPlay(meta.id) && <span> <a class="btn secondary" href={`${B}9/play/${meta.id}/`}>Пройти урок целиком (45 мин) →</a></span>}
+    {meta.id === '9sheet-09-control' && <span> <a class="btn" href={`${B}9/control-9sheet/`}>Перейти к контрольной →</a></span>}
   </div>
   <p>
     {prev && <a href={`${B}9/${prev.id}/`}>← {prev.title}</a>}

@@ -1,9 +1,10 @@
 ---
 id: 9sheet-01-base
 class: 9
-title: "Таблицы: интерфейс, формулы, режимы"
-source_ref: "split/9/03-gl3-tablitsy.pdf; КТП 9: интерфейс, ввод, вычисления"
-lesson: 1
+title: "Интерфейс электронных таблиц"
+source_ref: "split/9/02-gl2-tablicy.pdf; ФРП 9, эл. 1.5-1.6; КТП 9 урок 2"
+lesson: 2
+
 ---
 
 # Электронная таблица: ячейки и формулы (LibreOffice Calc)

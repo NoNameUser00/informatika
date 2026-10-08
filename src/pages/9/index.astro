@@ -4,69 +4,59 @@ import StudyProgress from '../../components/StudyProgress';
 import { LESSONS_9 } from '../../data/lessons';
 const B = import.meta.env.BASE_URL;
 const grade = '9';
+// Разделы КТП 9 класса: уроки сгруппированы по блокам, нумерация — по КТП (1..36).
+const SECTIONS = [
+  { title: 'Уроки 1–11. Электронные таблицы', range: [1, 11] as const, checks: [
+    { name: 'Тренажер по таблицам', slug: 'sheets' },
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-9sheet' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-9sheet' },
+  ] },
+  { title: 'Уроки 12–17. Программирование: алгоритмы и массивы', range: [12, 17] as const, checks: [
+    { name: 'Тренажер по массивам', slug: 'arrays' },
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-9arr' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-9arr' },
+  ] },
+  { title: 'Уроки 18–19. Управление и роботизированные системы', range: [18, 19] as const, checks: null },
+  { title: 'Уроки 20–23. Моделирование как метод познания', range: [20, 23] as const, checks: [
+    { name: 'Тренажер: роботы и модели', slug: 'extra' },
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-9extra' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-9extra' },
+  ] },
+  { title: 'Уроки 24–27. Графы и списки', range: [24, 27] as const, checks: [
+    { name: 'Тренажер по графам', slug: 'graphs' },
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-9graph' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-9graph' },
+  ] },
+  { title: 'Уроки 28–36. Итоги, Интернет и работа в информационном пространстве', range: [28, 36] as const, checks: null },
+];
 ---
 <Layout title="9 класс — Информатика">
   <h1>9 класс · Таблицы, массивы, графы</h1>
-  <p class="muted">Учебный год открывает урок 0. Дальше — три блока: теория, уроки целиком, тренажеры, проверочные и контрольные.</p>
+  <p class="muted">36 уроков по КТП. Учебный год открывает вводный слайд по технике безопасности.</p>
   <StudyProgress client:load grade="9" />
   <div class="card">
     <h3>Урок 0. Техника безопасности в кабинете информатики</h3>
     <p><a href={`${B}${grade}/tb/`}>Открыть презентацию →</a></p>
   </div>
-  <h2>Электронные таблицы</h2>
-  <div class="card">
-    <a class="btn" href={`${B}${grade}/sheets/`}>Тренажер по таблицам</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-9sheet/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-9sheet/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_9.filter((l) => l.id.startsWith('9sheet')).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 1}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
-  ))}
-  <h2>Массивы в Python</h2>
-  <div class="card">
-    <a class="btn" href={`${B}${grade}/arrays/`}>Тренажер по массивам</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-9arr/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-9arr/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_9.filter((l) => l.id.startsWith('9arr')).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 4}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
-  ))}
-  <h2>Графы</h2>
-  <div class="card">
-    <a class="btn" href={`${B}${grade}/graphs/`}>Тренажер по графам</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-9graph/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-9graph/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_9.filter((l) => l.id.startsWith('9graph')).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 6}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
-  ))}
-  <h2>Роботы, модели, интернет</h2>
-  <div class="card">
-    <a class="btn" href={`${B}${grade}/extra/`}>Тренажер: роботы и модели</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/proverka-9extra/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-9extra/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_9.filter((l) => l.id.startsWith('9robot') || l.id.startsWith('9model') || l.id.startsWith('9net')).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 7}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
+  {SECTIONS.map((sec) => (
+    <Fragment>
+      <h2>{sec.title}</h2>
+      {sec.checks && (
+        <div class="card">
+          {sec.checks.map((c) => (
+            <Fragment>
+              <a class="btn secondary" href={`${B}${grade}/${c.slug}/`}>{c.name}</a>
+              <span> </span>
+            </Fragment>
+          ))}
+        </div>
+      )}
+      {LESSONS_9.filter((l) => sec.range[0] <= (l.ktp ?? 0) && (l.ktp ?? 99) <= sec.range[1]).map((l) => (
+        <div class="card">
+          <h3>Урок {l.ktp}. {l.title}</h3>
+          <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+        </div>
+      ))}
+    </Fragment>
   ))}
 </Layout>

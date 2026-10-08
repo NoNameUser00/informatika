@@ -2,10 +2,10 @@
 id: 9arr-01-basics
 class: 9
 title: "Массивы: хранение и обработка"
-source_ref: "split/9/01-gl1-algoritmy-programmirovanie.pdf, §1.5 (Python); КТП 9: массивы, суммы, ввод-вывод"
-lesson: 4
----
+source_ref: "split/9/03-gl3-programmirovanie.pdf; ФРП 9, эл. 1.11-1.12; КТП 9 урок 13"
+lesson: 13
 
+---
 # Массив — это список (Python: list)
 
 **Массив** — пронумерованный набор однотипных значений. В Python — обычный список: `a = [3, 7, 5]`. Номер элемента — **индекс**, счёт с НУЛЯ: `a[0]` — первый!
