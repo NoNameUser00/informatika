@@ -1,0 +1,110 @@
+{
+  "test_code": "logic-proverka-v1",
+  "variant": "v1",
+  "max_score": 8,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-8-logic-004",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой знак обозначает конъюнкцию (И)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "∨"
+        },
+        {
+          "id": "B",
+          "text": "¬"
+        },
+        {
+          "id": "C",
+          "text": "∧"
+        },
+        {
+          "id": "D",
+          "text": "="
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-009",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=1, B=0 вычислите A ∧ B.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-017",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "При A=1 вычислите отрицание ¬A.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-019",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Вычислите 1 ∨ 1.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-018",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для 1 переменной? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-010",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=0, B=0 вычислите A ∨ B.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    }
+  ]
+}

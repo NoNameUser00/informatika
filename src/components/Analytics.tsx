@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { statsForWork, summary, MASTERY_LABEL } from '../lib/analytics/aggregate.mjs';
 import { WORKS } from '../lib/analytics/works';
 import { ERROR_REVIEW } from '../data/error-review';
@@ -38,9 +38,28 @@ export interface AnalyticsRow {
   proposed_mark?: number;
 }
 
-const BANKS = import.meta.glob('../data/checks/*.json', { eager: true }) as Record<string, BankFile>;
-const BY_CODE: Record<string, BankFile> = {};
-for (const m of Object.values(BANKS)) BY_CODE[m.test_code] = m;
+const LOCAL_MODS = import.meta.glob('../data/checks/*.json', { eager: true }) as Record<string, BankFile>;
+// Полные банки с ключами — только для локальной разработки (в прод-бандл не попадают:
+// import.meta.env.DEV вырезается на сборке вместе с веткой).
+const LOCAL_BANKS: Record<string, BankFile> = {};
+if (import.meta.env.DEV) {
+  for (const [p, m] of Object.entries(LOCAL_MODS)) {
+    if (p.endsWith('-public.json')) continue; // публичные копии без ключей — для страниц, не для аналитики
+    LOCAL_BANKS[m.test_code] = m;
+  }
+}
+
+// Фейковый мини-банк для демо-режима: настоящих ключей не содержит.
+const DEMO_BANK: BankFile = {
+  test_code: 'demo-control-v1',
+  max_score: 6,
+  tasks: [
+    { id: 'demo-q1', type: 'single_choice', prompt: 'Демо-вопрос 1', lesson: 'numsys-02-binary', points: 2, key: 'A', correct: 'A', options: [{ id: 'A', text: 'Демо А' }, { id: 'B', text: 'Демо Б' }] },
+    { id: 'demo-q2', type: 'single_choice', prompt: 'Демо-вопрос 2', lesson: 'numsys-03-octal', points: 2, key: 'B', correct: 'B', options: [{ id: 'A', text: 'Демо А' }, { id: 'B', text: 'Демо Б' }] },
+    { id: 'demo-q3', type: 'single_choice', prompt: 'Демо-вопрос 3', lesson: 'numsys-04-hex', points: 2, key: 'A', correct: 'A', options: [{ id: 'A', text: 'Демо А' }, { id: 'B', text: 'Демо Б' }] },
+  ],
+};
+const DEMO_META = { grade: '8', slug: 'control-ss', title: 'Демо: Системы счисления (данные выдуманы)' };
 
 const TITLES = new Map(
   [...LESSONS_7, ...LESSONS_8, ...LESSONS_9, ...LESSONS_10, ...LESSONS_11].map((l) => [l.id, l.title]),
@@ -76,14 +95,6 @@ function barColor(pct: number): string {
   return '#c62828';
 }
 
-/** Неверный, но правдоподобный ответ для демо-данных. */
-function wrongFor(t: BankTask, i: number): string {
-  if (t.options?.length) return (t.options.find((o) => o.id !== t.key) ?? t.options[0]).id;
-  const n = Number(String(t.key ?? '').replace(',', '.'));
-  if (String(t.key ?? '').trim() !== '' && Number.isFinite(n)) return String(n + 1 + (i % 3));
-  return `${t.key ?? ''}0`;
-}
-
 function markFor(pct: number): number {
   if (pct >= 90) return 5;
   if (pct >= 75) return 4;
@@ -91,29 +102,45 @@ function markFor(pct: number): number {
   return 2;
 }
 
-/** Демо-класс: 12 учеников, слабые места — 16СС и арифметика (как в жизни). */
+/** Демо-класс: 12 учеников на фейковом мини-банке (настоящих ключей нет). */
 function buildDemo(): AnalyticsRow[] {
-  const bank = BY_CODE['numsys-control-v1'];
-  if (!bank) return [];
-  const weakFrom: Record<string, number> = {
-    'numsys-04-hex': 4, 'numsys-05-arith': 7, 'numsys-06-review': 8, 'numsys-03-octal': 9,
-  };
+  const bank = DEMO_BANK;
   return Array.from({ length: 12 }, (_, si) => {
     const answers: Record<string, string> = {};
     let score = 0;
     for (const t of bank.tasks) {
-      const bad = si >= (weakFrom[t.lesson] ?? 10);
-      const a = bad ? wrongFor(t, si) : String(t.key ?? '');
+      // Демо-слабость: «восьмеричная» тема (q2) хромает у второй половины класса.
+      const bad = t.id === 'demo-q2' ? si >= 5 : si >= 10;
+      const a = bad ? 'B' === t.key ? 'A' : 'B' : String(t.key ?? '');
       answers[t.id] = a;
       if (!bad) score += t.points;
     }
     const percent = Math.round((score / bank.max_score) * 1000) / 10;
     return {
       surname: `student_${String(si + 1).padStart(3, '0')}`, firstname: 'демо',
-      class_name: '8А', test_code: 'numsys-control-v1', variant: 'demo',
+      class_name: '8А', test_code: DEMO_BANK.test_code, variant: 'demo',
       answers, percent, proposed_mark: markFor(percent),
     };
   });
+}
+
+async function fetchServerBank(code: string): Promise<BankFile | null> {
+  try {
+    const { getClient, getToken } = await import('../lib/auth/client');
+    const c = getClient();
+    if (!c) return null;
+    const token = await getToken();
+    if (!token) return null;
+    const url = import.meta.env.PUBLIC_SUPABASE_URL as string;
+    const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY as string;
+    const r = await fetch(`${url.replace(/\/$/, '')}/functions/v1/submit-attempt?test_code=${encodeURIComponent(code)}`, {
+      headers: { apikey: key, Authorization: `Bearer ${token}` },
+    });
+    if (!r.ok) return null;
+    return (await r.json()) as BankFile;
+  } catch {
+    return null;
+  }
 }
 
 export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
@@ -123,10 +150,22 @@ export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
   const [cls, setCls] = useState('all');
 
   const all = useMemo(() => (demo ? buildDemo() : rows), [demo, rows]);
-  const codes = useMemo(() => [...new Set(all.map((r) => r.test_code))].filter((c) => BY_CODE[c] && WORKS[c]), [all]);
+  const codes = useMemo(
+    () => [...new Set(all.map((r) => r.test_code))].filter(
+      (c) => (LOCAL_BANKS[c] || c === DEMO_BANK.test_code) && (WORKS[c] || c === DEMO_BANK.test_code),
+    ),
+    [all],
+  );
   const cur = codes.includes(code) ? code : codes[0];
-  const bank = cur ? BY_CODE[cur] : undefined;
-  const meta = cur ? WORKS[cur] : undefined;
+  const [serverBanks, setServerBanks] = useState<Record<string, BankFile>>({});
+  useEffect(() => {
+    if (!cur || cur === DEMO_BANK.test_code || serverBanks[cur] || LOCAL_BANKS[cur]) return;
+    fetchServerBank(cur).then((b) => {
+      if (b) setServerBanks((m) => ({ ...m, [cur]: b }));
+    });
+  }, [cur]);
+  const bank = cur === DEMO_BANK.test_code ? DEMO_BANK : (serverBanks[cur] ?? LOCAL_BANKS[cur]);
+  const meta = cur ? (WORKS[cur] ?? (cur === DEMO_BANK.test_code ? DEMO_META : undefined)) : undefined;
   const classes = useMemo(() => [...new Set(all.filter((r) => r.test_code === cur).map((r) => r.class_name ?? '—'))], [all, cur]);
   const sel = useMemo(
     () => all.filter((r) => r.test_code === cur && (cls === 'all' || (r.class_name ?? '—') === cls)),

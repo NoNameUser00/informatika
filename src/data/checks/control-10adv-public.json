@@ -1,0 +1,224 @@
+{
+  "test_code": "adv10-control-v1",
+  "variant": "v1",
+  "max_score": 15,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-10-ss-001",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Как переводят дробную часть в другую систему?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Умножают на основание, забирают целые"
+        },
+        {
+          "id": "B",
+          "text": "Делят на основание"
+        },
+        {
+          "id": "C",
+          "text": "Отбрасывают"
+        },
+        {
+          "id": "D",
+          "text": "Округляют до целых"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-002",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чему равно 0,625 в двоичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0,101"
+        },
+        {
+          "id": "B",
+          "text": "0,11"
+        },
+        {
+          "id": "C",
+          "text": "0,100"
+        },
+        {
+          "id": "D",
+          "text": "0,011"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-003",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Почему 0,1 + 0,2 ≠ 0,3 на компьютере?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Конечная точность вещественных"
+        },
+        {
+          "id": "B",
+          "text": "Процессор сломан"
+        },
+        {
+          "id": "C",
+          "text": "Мало памяти"
+        },
+        {
+          "id": "D",
+          "text": "Вирус"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-004",
+      "lesson": "10ss-01-systems",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько байт займёт слово «Привет» в UTF-8? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-10-logic-001",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Вычислите 1 → 0.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ложь"
+        },
+        {
+          "id": "B",
+          "text": "Истина"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-002",
+      "lesson": "10logic-01-ops",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие: операция — когда истинна.",
+      "left": [
+        "Исключающее ИЛИ",
+        "Эквиваленция"
+      ],
+      "right": [
+        "при равных",
+        "при разных"
+      ]
+    },
+    {
+      "id": "inf-10-logic-004",
+      "lesson": "10logic-02-transform",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Решите уравнение A → B = 0.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A=1, B=0"
+        },
+        {
+          "id": "B",
+          "text": "A=0, B=1"
+        },
+        {
+          "id": "C",
+          "text": "A=0, B=0"
+        },
+        {
+          "id": "D",
+          "text": "A=1, B=1"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-005",
+      "lesson": "10logic-02-transform",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что собирает ДНФ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строки, где функция истинна"
+        },
+        {
+          "id": "B",
+          "text": "Строки, где функция ложна"
+        },
+        {
+          "id": "C",
+          "text": "Только шапку"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-005",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что общего у переводов в любой P-ичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Веса P^i и деление на P"
+        },
+        {
+          "id": "B",
+          "text": "Только деление"
+        },
+        {
+          "id": "C",
+          "text": "Только триады"
+        },
+        {
+          "id": "D",
+          "text": "Ничего общего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-003",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое предикат?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Утверждение с переменными"
+        },
+        {
+          "id": "B",
+          "text": "Готовая истина"
+        },
+        {
+          "id": "C",
+          "text": "Вопрос"
+        },
+        {
+          "id": "D",
+          "text": "Число"
+        }
+      ]
+    }
+  ]
+}

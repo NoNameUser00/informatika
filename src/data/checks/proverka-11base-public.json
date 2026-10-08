@@ -1,0 +1,142 @@
+{
+  "test_code": "base11-proverka-v1",
+  "variant": "v1",
+  "max_score": 6,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-data-001",
+      "lesson": "11data-01-analysis",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найди среднее чисел 4, 8, 12. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-11-data-002",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Коэффициент корреляции −0,9. Что это значит?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Сильная обратная связь"
+        },
+        {
+          "id": "B",
+          "text": "Сильная прямая связь"
+        },
+        {
+          "id": "C",
+          "text": "Связи нет"
+        },
+        {
+          "id": "D",
+          "text": "Ошибка"
+        }
+      ]
+    },
+    {
+      "id": "inf-11-data-004",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что ищет подбор параметра?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Вход, дающий нужный выход"
+        },
+        {
+          "id": "B",
+          "text": "Ошибки в тексте"
+        },
+        {
+          "id": "C",
+          "text": "Вирусы"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    },
+    {
+      "id": "inf-11-db-001",
+      "lesson": "11db-01-databases",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что годится в первичные ключи таблицы учеников?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Номер личного дела"
+        },
+        {
+          "id": "B",
+          "text": "Имя"
+        },
+        {
+          "id": "C",
+          "text": "Рост"
+        },
+        {
+          "id": "D",
+          "text": "Любимый цвет"
+        }
+      ]
+    },
+    {
+      "id": "inf-11-db-003",
+      "lesson": "11db-01-databases",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как связать «Ученики» и «Классы» без дублей?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Внешним ключом на справочник"
+        },
+        {
+          "id": "B",
+          "text": "Копировать всё в каждую строку"
+        },
+        {
+          "id": "C",
+          "text": "Удалить классы"
+        },
+        {
+          "id": "D",
+          "text": "Никак"
+        }
+      ]
+    },
+    {
+      "id": "inf-11-data-006",
+      "lesson": "11data-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем показать динамику за 5 лет?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Линейной диаграммой"
+        },
+        {
+          "id": "B",
+          "text": "Круговой"
+        },
+        {
+          "id": "C",
+          "text": "Таблицей без сортировки"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
+        }
+      ]
+    }
+  ]
+}

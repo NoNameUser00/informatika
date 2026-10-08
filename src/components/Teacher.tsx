@@ -3,6 +3,7 @@ import Board from './Board';
 import ErrorReview from './ErrorReview';
 import Analytics from './Analytics';
 import TeacherGate from './TeacherGate';
+import ClassManager from './ClassManager';
 import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
@@ -84,12 +85,13 @@ export default function Teacher() {
     <TeacherGate>
     <div>
       <h1>Журнал работ</h1>
-      {role !== 'teacher' && (
+      {role !== 'teacher' && role !== 'admin' && (
         <div className="card">
           <p><strong>Раздел учителя.</strong> Войди через Google/Яндекс и получи роль учителя (см. docs/auth-setup.md) — иначе видны только локальные строки этого браузера без отметок.</p>
         </div>
       )}
       <Analytics rows={rows} />
+      <ClassManager role={role} />
       <div className="card">
         <h2>Доска разборов</h2>
         <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>

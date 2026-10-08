@@ -6,7 +6,8 @@ import {
   percentToMark,
 } from '../lib/scoring/check.mjs';
 import { saveQuietAttempt, saveResult } from '../lib/results';
-import { getRole, isAuthConfigured, type Role } from '../lib/auth/client';
+import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
+import { WORKS } from '../lib/analytics/works';
 import DragMatch from './DragMatch';
 import CodeRunner from './CodeRunner';
 
@@ -64,6 +65,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   const [consent, setConsent] = useState(false);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [codeVerdicts, setCodeVerdicts] = useState<Record<string, boolean>>({});
+  const [busySubmit, setBusySubmit] = useState(false);
   const [error, setError] = useState('');
   const [quietDone, setQuietDone] = useState<string | null>(null);
   const [done, setDone] = useState<null | {
@@ -73,7 +75,10 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     percent: number;
     mark: number;
     saveStatus: string;
+    server: boolean;
   }>(null);
+  // Банк проверочной/контрольной (ключи — только на сервере): сдача идёт в Edge Function.
+  const serverEligible = typeof (bank as any).test_code === 'string' && (bank as any).test_code in WORKS;
 
   const max = useMemo(() => (bank as any).tasks.reduce((s: number, t: any) => s + t.points, 0), []);
 
@@ -125,11 +130,85 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     setStep(step + 1);
   }
 
+  /** Серверная сдача проверочной/контрольной: ответы уходят, назад — только итоги. */
+  async function submitServer() {
+    setBusySubmit(true);
+    try {
+      const url = import.meta.env.PUBLIC_SUPABASE_URL as string;
+      const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY as string;
+      const token = await getToken();
+      let studentId: string | undefined;
+      try {
+        const stored = JSON.parse(localStorage.getItem('student-id-v1') || 'null');
+        if (stored?.student_id) studentId = stored.student_id;
+      } catch { /* ignore */ }
+      const plain: Record<string, string> = {};
+      for (const t of (bank as any).tasks) {
+        const a = answers[t.id];
+        plain[t.id] = typeof a === 'string' ? a : JSON.stringify(a);
+      }
+      const testCode = String((bank as any).test_code);
+      const res = await fetch(`${url.replace(/\/$/, '')}/functions/v1/submit-attempt`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: key,
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+        body: JSON.stringify({
+          surname: surname.trim(),
+          firstname: firstname.trim(),
+          class_name: `${classNum}-${classLetter}`,
+          test_type: testCode.includes('control') ? 'control' : 'proverka',
+          test_code: testCode,
+          variant: (bank as any).variant,
+          answers: plain,
+          student_id: studentId,
+          consent,
+        }),
+      });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(`Сервер не принял работу: ${body.error ?? res.status}. Ответы не потеряны — они на экране.`);
+        return;
+      }
+      if (role === 'student') {
+        setQuietDone('Ответы сохранены на сервере. Баллы и отметку подтвердит учитель — здесь их нет.');
+      } else {
+        setDone({ per: [], total: body.total, max: body.max, percent: body.percent, mark: body.mark, saveStatus: 'проверено сервером, сохранено в журнал', server: true });
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } finally {
+      setBusySubmit(false);
+    }
+  }
+
   async function submit() {
     setError('');
     const missing = pages[step - 1].filter((t: any) => !isAnswered(t));
     if (missing.length > 0) {
       setError(`Ответьте на все вопросы страницы (не отвечен: Вопрос №${qNum(missing[0].id)}).`);
+      return;
+    }
+    // Проверочная/контрольная с бэкендом: считает только сервер (ключей в клиенте нет).
+    if (serverEligible && isAuthConfigured()) {
+      await submitServer();
+      return;
+    }
+    // Без бэкенда работу без ключей не проверить — сохраняем ответы, баллы даст учитель.
+    if (serverEligible) {
+      const status = saveQuietAttempt({
+        surname: surname.trim(),
+        firstname: firstname.trim(),
+        className: `${classNum}-${classLetter}`,
+        testType: mode === 'proverka' ? 'proverka' : 'trainer',
+        testCode: (bank as any).test_code,
+        variant: (bank as any).variant,
+        tasks: (bank as any).tasks,
+        answers: answers as Record<string, string | Record<string, string>>,
+      });
+      setQuietDone(`${status} Без бэкенда баллы не считаются — их выставит учитель.`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
     // Тихий режим ученика: только ответы, без подсчёта и ключей.
@@ -197,7 +276,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     } catch {
       saveStatus = 'не удалось сохранить в базу, копия осталась в браузере';
     }
-    setDone({ per, total, max, percent, mark, saveStatus });
+    setDone({ per, total, max, percent, mark, saveStatus, server: false });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -284,7 +363,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
           </p>
           {mode === 'proverka' && <p>Правильные ответы скрыты — работу посмотрит учитель и подтвердит отметку.</p>}
         </div>
-        {done.per.map((p) => (
+        {done.per.length > 0 && done.per.map((p) => (
           <div className="card q" key={p.id}>
             <p>
               <strong>Вопрос №{qNum(p.id)}</strong> — <span className={p.ok ? 'ok' : 'bad'}>{p.ok ? 'верно' : 'неверно'}</span> · {p.score}/{p.max}
@@ -351,7 +430,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         {step > 0 && <button className="btn secondary" onClick={() => { setError(''); setStep(step - 1); }}>Назад</button>}
         <span> </span>
         {!isLast && <button className="btn" onClick={next}>Далее</button>}
-        {isLast && <button className="btn" onClick={submit}>Отправить</button>}
+        {isLast && <button className="btn" disabled={busySubmit} onClick={submit}>{busySubmit ? 'Отправляю…' : 'Отправить'}</button>}
       </div>
       <p className="muted">Нажимая «Отправить», вы сохраняете фамилию, вопросы, ответы, ключи, баллы и отметку в базу журнала.</p>
     </div>

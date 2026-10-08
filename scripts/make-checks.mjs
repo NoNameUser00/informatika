@@ -152,4 +152,18 @@ for (const c of CHECKS) {
     'utf-8',
   );
   console.log(`CHECK OK: src/data/checks/${c.file} — ${tasks.length} заданий, max=${max}`);
+  // Публичный вариант БЕЗ ключей: его грузят страницы работ.
+  // Проверка — только сервер (submit-attempt), клиент ключей не видит и не считает.
+  const pubTasks = tasks.map((t) => {
+    const { key, correct, expected, answerMap, ...rest } = t;
+    void key; void correct; void expected; void answerMap;
+    return rest;
+  });
+  const pubFile = c.file.replace(/\.json$/, '-public.json');
+  writeFileSync(
+    `src/data/checks/${pubFile}`,
+    JSON.stringify({ test_code: c.code, variant: 'v1', max_score: max, instruction: c.instruction, page_size: 5, tasks: pubTasks }, null, 2) + '\n',
+    'utf-8',
+  );
+  console.log(`CHECK PUBLIC OK: src/data/checks/${pubFile}`);
 }

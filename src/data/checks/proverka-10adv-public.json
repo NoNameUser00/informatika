@@ -1,0 +1,142 @@
+{
+  "test_code": "adv10-proverka-v1",
+  "variant": "v1",
+  "max_score": 6,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-10-ss-003",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Почему 0,1 + 0,2 ≠ 0,3 на компьютере?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Конечная точность вещественных"
+        },
+        {
+          "id": "B",
+          "text": "Процессор сломан"
+        },
+        {
+          "id": "C",
+          "text": "Мало памяти"
+        },
+        {
+          "id": "D",
+          "text": "Вирус"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-005",
+      "lesson": "10ss-01-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что общего у переводов в любой P-ичной системе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Веса P^i и деление на P"
+        },
+        {
+          "id": "B",
+          "text": "Только деление"
+        },
+        {
+          "id": "C",
+          "text": "Только триады"
+        },
+        {
+          "id": "D",
+          "text": "Ничего общего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-003",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое предикат?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Утверждение с переменными"
+        },
+        {
+          "id": "B",
+          "text": "Готовая истина"
+        },
+        {
+          "id": "C",
+          "text": "Вопрос"
+        },
+        {
+          "id": "D",
+          "text": "Число"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-005",
+      "lesson": "10logic-02-transform",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что собирает ДНФ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строки, где функция истинна"
+        },
+        {
+          "id": "B",
+          "text": "Строки, где функция ложна"
+        },
+        {
+          "id": "C",
+          "text": "Только шапку"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-logic-006",
+      "lesson": "10logic-02-transform",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что показывает пересечение кругов Эйлера?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Логическое И"
+        },
+        {
+          "id": "B",
+          "text": "Логическое ИЛИ"
+        },
+        {
+          "id": "C",
+          "text": "Отрицание"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-ss-004",
+      "lesson": "10ss-01-systems",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько байт займёт слово «Привет» в UTF-8? Запишите только число.",
+      "base": 10
+    }
+  ]
+}

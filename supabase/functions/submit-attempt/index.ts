@@ -1,74 +1,126 @@
-// Edge Function: прием попытки, СЕРВЕРНАЯ проверка, запись в results.
-// Ключи ученику не возвращаются и во фронтенд не вшиты.
-//
-// Пилотный статус:
-// - банк вариантов грузится из таблицы test_banks (Этап 3, еще не создана) —
-//   пока ее нет, функция отвечает 501;
-// - тренажер/практика считают баллы в клиенте (допустимо: ответы не секретны);
-// - проверочная/контрольная ОБЯЗАНЫ идти только сюда после загрузки банка в БД.
-//
-// Проверка — те же правила, что src/lib/scoring/check.mjs (single source там;
-// здесь копия для Deno-рантайма, паритет покрыть тестом при подключении банка).
+// Edge Function: приём попытки проверочной/контрольной, СЕРВЕРНАЯ проверка, запись в results.
+// Ключи ученику НЕ возвращаются и во фронтенд НЕ вшиты (страницы грузят *-public.json).
+// Банк и чекеры — synced-копии single source (npm run edge:sync, паритет — edge-sync.test.mjs).
+// Тренажёр считает баллы в клиенте (допустимо: ответы тренажёра не секретны).
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts';
+import { z } from 'https://esm.sh/zod@3.23.0';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.117.2';
+import { taskCorrect } from './vendor/src/lib/analytics/aggregate.mjs';
+import { percentToMark } from './vendor/src/lib/scoring/check.mjs';
 
-const CYR: Record<string, string> = { 'А': 'A', 'В': 'B', 'С': 'C', 'Д': 'D', 'Е': 'E', 'Ф': 'F', 'Ё': 'E' };
-const SUB: Record<string, string> = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9' };
-const ALPHA = '0123456789ABCDEF';
+const BANK_DIR = new URL('./vendor/bank/', import.meta.url);
+let bankCache: Record<string, { tasks: BankTask[]; max_score: number }> | null = null;
 
-function norm(s: unknown): string {
-  if (typeof s !== 'string') return '';
-  let t = s.trim().replace(/\s+/g, '');
-  t = t.replace(/[₀₁₂₃₄₅₆₇₈₉]+$/, '');
-  t = t.split('').map((ch) => SUB[ch] ?? CYR[ch] ?? ch).join('');
-  t = t.toUpperCase().replace(/^0(B|O|X)/, '');
-  const suf = t.match(/^(.*?)(?:_(2|8|10|16)|\((2|8|10|16)\))$/);
-  if (suf) t = suf[1];
-  return t.replace(/_/g, '');
+interface BankTask {
+  id: string;
+  type: string;
+  lesson: string;
+  points: number;
+  prompt: string;
+  key?: string;
+  expected?: number;
+  base?: number;
+  correct?: string;
+  answerMap?: Record<string, string>;
 }
 
-function parseBase(input: string, base: number): number {
-  const t = norm(input);
-  if (!t) return NaN;
-  const valid = ALPHA.slice(0, base);
-  let v = 0;
-  for (const ch of t) {
-    const i = valid.indexOf(ch);
-    if (i < 0) return NaN;
-    v = v * base + i;
+const payloadSchema = z.object({
+  surname: z.string().trim().min(1).max(80),
+  firstname: z.string().trim().min(1).max(80),
+  class_name: z.string().trim().min(1).max(20),
+  test_type: z.enum(['proverka', 'control']),
+  test_code: z.string().min(1).max(80),
+  variant: z.string().min(1).max(40),
+  answers: z.record(z.string().min(1).max(80), z.string().max(2000)),
+  student_id: z.string().uuid().optional(),
+  consent: z.literal(true),
+});
+
+async function loadBank(testCode: string) {
+  if (!bankCache) {
+    bankCache = {};
+    for await (const e of Deno.readDir(BANK_DIR)) {
+      if (!e.isFile || !e.name.endsWith('.json')) continue;
+      const j = JSON.parse(await Deno.readTextFile(new URL('./' + e.name, BANK_DIR)));
+      bankCache[j.test_code] = { tasks: j.tasks, max_score: j.max_score };
+    }
   }
-  return v;
-}
-
-function toMark(p: number): number {
-  if (p >= 90) return 5;
-  if (p >= 75) return 4;
-  if (p >= 50) return 3;
-  return 2;
+  return bankCache[testCode];
 }
 
 serve(async (req) => {
+  if (req.method === 'GET') {
+    // Банк для учителя (аналитика): только teacher/admin, ключи — только им.
+    const url = new URL(req.url);
+    const testCode = url.searchParams.get('test_code') ?? '';
+    const bank = await loadBank(testCode);
+    if (!bank) return Response.json({ error: 'unknown test_code' }, { status: 400 });
+    const sUrl = Deno.env.get('SUPABASE_URL') ?? '';
+    const sAnon = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+    const authHeader = req.headers.get('Authorization') ?? '';
+    if (!sUrl || !sAnon || !authHeader) return Response.json({ error: 'login required' }, { status: 401 });
+    const sb = createClient(sUrl, sAnon, { global: { headers: { Authorization: authHeader } } });
+    const { data: { user } } = await sb.auth.getUser();
+    if (!user) return Response.json({ error: 'login required' }, { status: 401 });
+    const { data: profile } = await sb.from('profiles').select('role').eq('id', user.id).maybeSingle();
+    const r = (profile as { role?: string } | null)?.role;
+    if (r !== 'teacher' && r !== 'admin') return Response.json({ error: 'teacher only' }, { status: 403 });
+    return Response.json({ test_code: testCode, variant: 'v1', page_size: 5, ...bank });
+  }
   if (req.method !== 'POST') return new Response('method not allowed', { status: 405 });
-  let body: Record<string, unknown>;
+  let body: unknown;
   try {
     body = await req.json();
   } catch {
     return Response.json({ error: 'bad json' }, { status: 400 });
   }
-  const { surname, firstname, class_name, test_type, test_code, variant, answers, consent } = body as Record<string, never>;
-  if (!surname || !firstname || !class_name || !answers || consent !== true) {
-    return Response.json({ error: 'surname, firstname, class_name, answers, consent=true required' }, { status: 400 });
+  const parsed = payloadSchema.safeParse(body);
+  if (!parsed.success) {
+    return Response.json({ error: 'bad payload', issues: parsed.error.issues.map((i) => i.path.join('.')) }, { status: 400 });
   }
-  if (test_type !== 'proverka' && test_type !== 'control') {
-    return Response.json({ error: 'edge check only for proverka/control; trainer counts client-side' }, { status: 400 });
+  const p = parsed.data;
+
+  const bank = await loadBank(p.test_code);
+  if (!bank) return Response.json({ error: 'unknown test_code' }, { status: 400 });
+
+  let total = 0;
+  const keys: Record<string, string> = {};
+  for (const t of bank.tasks) {
+    const v = taskCorrect(t as never, p.answers[t.id]);
+    if (v) total += t.points;
+    keys[t.id] = String((t as BankTask).key ?? '');
   }
-  // TODO(Этап 3): загрузить снапшот варианта + ключи из test_banks по (test_code, variant).
-  const bank = null;
-  if (!bank) {
-    return Response.json({ error: 'bank not loaded: создайте test_banks (Этап 3)' }, { status: 501 });
+  total = Math.round(total * 100) / 100;
+  const percent = Math.round((total / bank.max_score) * 1000) / 10;
+  const mark = percentToMark(percent);
+
+  const url = Deno.env.get('SUPABASE_URL') ?? '';
+  const anon = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+  if (!url || !anon) return Response.json({ error: 'server misconfigured' }, { status: 500 });
+  const authHeader = req.headers.get('Authorization') ?? '';
+  const sb = createClient(url, anon, { global: { headers: authHeader ? { Authorization: authHeader } : {} } });
+  const { data: { user } } = await sb.auth.getUser();
+
+  const { error: insError } = await sb.from('results').insert({
+    surname: p.surname,
+    firstname: p.firstname,
+    class_name: p.class_name,
+    test_type: p.test_type,
+    test_code: p.test_code,
+    variant: p.variant,
+    answers: p.answers,
+    keys,
+    auto_score: total,
+    max_score: bank.max_score,
+    percent,
+    proposed_mark: mark,
+    student_id: p.student_id ?? null,
+    user_id: user?.id ?? null,
+    consent: true,
+  });
+  if (insError) {
+    return Response.json({ error: 'not saved: ' + insError.message }, { status: 403 });
   }
-  void test_code;
-  void variant;
-  void parseBase;
-  void toMark;
-  return Response.json({ error: 'unreachable' }, { status: 500 });
+  // Ученику — только итоги, без ключей и без разбивки по вопросам.
+  return Response.json({ total, max: bank.max_score, percent, mark });
 });

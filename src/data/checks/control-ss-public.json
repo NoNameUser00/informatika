@@ -1,0 +1,106 @@
+{
+  "test_code": "numsys-control-v1",
+  "variant": "v1",
+  "max_score": 15,
+  "instruction": "В ответе запишите только само число. Основание системы счисления (₂, ₈, ₁₀, ₁₆) указывать не нужно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-8-numsys-001",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 13₁₀ в двоичную систему. Запишите только число.",
+      "base": 2
+    },
+    {
+      "id": "inf-8-numsys-003",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 101101₂ в десятичную систему. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-numsys-004",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 27₈ в десятичную систему. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-numsys-002",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 175₁₀ в шестнадцатеричную систему. Запишите только число.",
+      "base": 16
+    },
+    {
+      "id": "inf-8-numsys-006",
+      "lesson": "numsys-04-hex",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 3A₁₆ в двоичную систему. Запишите только число.",
+      "base": 2
+    },
+    {
+      "id": "inf-8-numsys-008",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 1101011₂ в восьмеричную систему. Запишите только число.",
+      "base": 8
+    },
+    {
+      "id": "inf-8-numsys-007",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 1011₂ + 110₂. Ответ дайте в десятичной системе.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-numsys-010",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Число 2A₁₆ переведите в двоичную, затем подсчитайте количество единиц. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-numsys-035",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько нулей в двоичной записи числа 128₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "9"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-numsys-019",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 100111₂ в десятичную систему. Запишите только число.",
+      "base": 10
+    }
+  ]
+}

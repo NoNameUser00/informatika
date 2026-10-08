@@ -3,6 +3,7 @@ import SpaceBackground from '../components/SpaceBackground';
 import ContinueCard from '../components/ContinueCard';
 import BoardFloat from '../components/BoardFloat';
 import AuthPanel from '../components/AuthPanel';
+import ClassJoin from '../components/ClassJoin';
 import Mascot from '../components/Mascot';
 import '../components/space-background.css';
 import '../components/board-float.css';
@@ -123,6 +124,7 @@ const GRADES: Grade[] = [
         <nav>
           <a href={`${B}teacher/`}>Учителю</a>
           <AuthPanel client:load />
+          <ClassJoin client:load />
         </nav>
       </header>
       <section class="home-hero">

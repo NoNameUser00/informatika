@@ -2,6 +2,7 @@
 import SpaceBackground from '../components/SpaceBackground';
 import BoardFloat from '../components/BoardFloat';
 import AuthPanel from '../components/AuthPanel';
+import ClassJoin from '../components/ClassJoin';
 import '../components/space-background.css';
 import '../components/board-float.css';
 // ЕДИНЫЙ стиль сайта: тёмный космос + матовое стекло (как главная).
@@ -139,6 +140,7 @@ const B = import.meta.env.BASE_URL;
         <a href={`${B}8/trainer/`}>Тренажер</a>
         <a href={`${B}teacher/`}>Учитель</a>
         <AuthPanel client:load />
+        <ClassJoin client:load />
       </nav>
     </header>
     <main>

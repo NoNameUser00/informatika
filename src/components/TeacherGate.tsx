@@ -1,58 +1,94 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getRole, isAuthConfigured, type Role } from '../lib/auth/client';
 
-// ВРЕМЕННАЯ ЗАГЛУШКА входа учителя — только чтобы проверить страницу.
-// Репозиторий с регистрацией/авторизацией подключат позже: тогда этот файл
-// заменяется настоящим гейтом (проверка роли teacher на сервере).
-// Доступ: страница /teacher/ видна только «вошедшему» через эту заглушку.
-const KEY = 'teacher-stub-v1';
-
-export function isStubTeacher(): boolean {
-  try {
-    return (localStorage.getItem(KEY) ?? '') !== '';
-  } catch {
-    return false;
-  }
-}
+// Гейт страницы учителя: пускает только teacher/admin по роли из profiles.
+// Без настроенного бэкенда — демо-режим для проверки вёрстки (как раньше была заглушка).
+const DEMO_KEY = 'teacher-demo-v1';
 
 export default function TeacherGate({ children }: { children: React.ReactNode }) {
-  const [name, setName] = useState('');
-  const [inStub, setInStub] = useState(isStubTeacher());
+  const [configured] = useState(isAuthConfigured());
+  const [role, setRole] = useState<Role | null>(null);
+  const [demo, setDemo] = useState(false);
 
-  function enter() {
+  useEffect(() => {
+    if (!configured) return;
     try {
-      localStorage.setItem(KEY, name.trim() || 'учитель');
-    } catch { /* приватный режим */ }
-    setInStub(true);
-  }
-
-  function exit() {
-    try {
-      localStorage.removeItem(KEY);
+      if (localStorage.getItem(DEMO_KEY) === '1') {
+        setDemo(true);
+        return;
+      }
     } catch { /* ignore */ }
-    setInStub(false);
+    getRole().then((r) => setRole(r.role));
+  }, [configured]);
+
+  function enterDemo() {
+    try {
+      localStorage.setItem(DEMO_KEY, '1');
+    } catch { /* приватный режим */ }
+    setDemo(true);
   }
 
-  if (!inStub) {
+  function exitDemo() {
+    try {
+      localStorage.removeItem(DEMO_KEY);
+    } catch { /* ignore */ }
+    setDemo(false);
+    setRole(null);
+    getRole().then((r) => setRole(r.role));
+  }
+
+  if (!configured) {
+    // Бэкенда нет: роль проверить нельзя. Для проверки вёрстки — демо-режим.
+    if (!demo) {
+      return (
+        <div>
+          <h1>Вход для учителя</h1>
+          <div className="card">
+            <p><strong>Страница только для учителя.</strong> Бэкенд не настроен, проверить роль нельзя.</p>
+            <p><button className="btn" onClick={enterDemo}>Войти в демо-режим (проверка вёрстки)</button></p>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div>
+        <p className="muted">Демо-режим: бэкенд не настроен, данные только локальные.</p>
+        {children}
+        <p><button className="btn secondary" onClick={exitDemo}>Выйти из демо-режима</button></p>
+      </div>
+    );
+  }
+
+  if (demo) {
+    return (
+      <div>
+        <p className="muted">Демо-режим (проверка вёрстки).</p>
+        {children}
+        <p><button className="btn secondary" onClick={exitDemo}>Выйти из демо-режима</button></p>
+      </div>
+    );
+  }
+
+  if (role === null) {
+    return (
+      <div>
+        <h1>Вход для учителя</h1>
+        <div className="card"><p className="muted">Проверяю роль…</p></div>
+      </div>
+    );
+  }
+
+  if (role !== 'teacher' && role !== 'admin') {
     return (
       <div>
         <h1>Вход для учителя</h1>
         <div className="card">
-          <p><strong>Страница только для учителя.</strong> Это временная заглушка для проверки (настоящая регистрация и авторизация подключаются отдельно).</p>
-          <p>
-            <label>Имя (любое):{' '}
-              <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Иванова А.А." />
-            </label>{' '}
-            <button className="btn" onClick={enter}>Войти как учитель (заглушка)</button>
-          </p>
+          <p><strong>Страница только для учителя.</strong> Твоя роль: {role === 'student' ? 'ученик' : 'гость'}.</p>
+          <p className="muted">Войди через Google/Яндекс (панель входа в шапке), получи роль учителя у админа — и возвращайся.</p>
         </div>
       </div>
     );
   }
 
-  return (
-    <div>
-      {children}
-      <p><button className="btn secondary" onClick={exit}>Выйти (заглушка)</button></p>
-    </div>
-  );
+  return <div>{children}</div>;
 }

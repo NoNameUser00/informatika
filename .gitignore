@@ -19,3 +19,5 @@ material/
 /toc_10_11.txt
 /u8_toc.txt
 /tmp_*/
+
+supabase/functions/submit-attempt/vendor/

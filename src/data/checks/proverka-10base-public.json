@@ -1,0 +1,108 @@
+{
+  "test_code": "base10-proverka-v1",
+  "variant": "v1",
+  "max_score": 9,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-10-base-001",
+      "lesson": "10hw-01-pc",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что соединяют магистрали компьютера?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Процессор, память и устройства"
+        },
+        {
+          "id": "B",
+          "text": "Только файлы"
+        },
+        {
+          "id": "C",
+          "text": "Только монитор"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-base-002",
+      "lesson": "10hw-01-pc",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем свободное ПО отличается от пиратского?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Лицензия разрешает: GNU GPL"
+        },
+        {
+          "id": "B",
+          "text": "Ничем"
+        },
+        {
+          "id": "C",
+          "text": "Ценой"
+        },
+        {
+          "id": "D",
+          "text": "Цветом диска"
+        }
+      ]
+    },
+    {
+      "id": "inf-10-base-003",
+      "lesson": "10info-01-measure",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сообщение об исходе из 8 равновероятных. Сколько бит информации? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-10-base-004",
+      "lesson": "10info-01-measure",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Первый ход в крестиках-ноликах n×n несёт 6 бит. Найди n. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-10-base-005",
+      "lesson": "10info-01-measure",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Файл 8000 бит, канал 1000 бит/с. Сколько секунд качать? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-10-base-006",
+      "lesson": "10hw-01-pc",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что идёт по шине адреса?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Адреса ячеек памяти"
+        },
+        {
+          "id": "B",
+          "text": "Данные программ"
+        },
+        {
+          "id": "C",
+          "text": "Питание"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ]
+    }
+  ]
+}
