@@ -1,9 +1,9 @@
 ---
 id: 7inf-02-coding
 class: 7
-title: "Двоичное кодирование"
-source_ref: "split/7/01-gl1-informatsiya-protsessy.pdf, §1.3-1.4; КТП 7: двоичный алфавит, кодирование"
-lesson: 2
+title: "Знаки, языки и двоичный алфавит"
+source_ref: "split/7/01-gl1-informatsiya-protsessy.pdf, §1.3-1.4; ФРП 7, эл. 1.4-1.6; КТП 7 урок 9"
+lesson: 9
 ---
 
 # От знаков — к двоичному коду

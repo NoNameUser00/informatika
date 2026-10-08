@@ -1,9 +1,9 @@
 ---
 id: 7media-01-slides
 class: 7
-title: "Презентации: слайды, дизайн, анимация"
-source_ref: "split/7/05-gl5-multimedia.pdf; КТП 7: презентации, анимация, гиперссылки"
-lesson: 10
+title: "Мультимедиа и компьютерные презентации"
+source_ref: "split/7/05-gl5-multimedia.pdf; ФРП 7, эл. 1.9-1.10; КТП 7 урок 28"
+lesson: 28
 ---
 
 # Презентация как рассказ (LibreOffice Impress)

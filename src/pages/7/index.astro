@@ -4,10 +4,28 @@ import StudyProgress from '../../components/StudyProgress';
 import { LESSONS_7 } from '../../data/lessons';
 const B = import.meta.env.BASE_URL;
 const grade = '7';
+// Разделы КТП 7 класса: уроки сгруппированы по блокам, нумерация — по КТП (1..36).
+const SECTIONS = [
+  { title: 'Уроки 1–8. Информация, компьютер, программы и файлы', range: [1, 8] as const, checks: [
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-info' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-info' },
+  ] },
+  { title: 'Уроки 9–15. Представление информации и измерение', range: [9, 15] as const, checks: [
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-7base' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-7base' },
+  ] },
+  { title: 'Уроки 16–21. Графика, звук, скорость и Интернет', range: [16, 21] as const, checks: null },
+  { title: 'Уроки 22–27. Текстовые документы', range: [22, 27] as const, checks: [
+    { name: 'Проверочная (6 заданий)', slug: 'proverka-7media' },
+    { name: 'Контрольная (10 заданий)', slug: 'control-7media' },
+  ] },
+  { title: 'Уроки 28–30. Мультимедийные презентации', range: [28, 30] as const, checks: null },
+  { title: 'Уроки 31–36. Компьютерная графика и итоги', range: [31, 36] as const, checks: null },
+];
 ---
 <Layout title="7 класс — Информатика">
   <h1>7 класс · Информация и кодирование</h1>
-  <p class="muted">Учебный год открывает урок 0. Дальше — блок «Информация»: теория, уроки целиком, тренажер.</p>
+  <p class="muted">36 уроков по КТП. Учебный год открывает вводный слайд по технике безопасности.</p>
   <StudyProgress client:load grade="7" />
   <div class="card">
     <h3>Урок 0. Техника безопасности в кабинете информатики</h3>
@@ -20,34 +38,25 @@ const grade = '7';
     <span> </span>
     <a class="btn secondary" href={`${B}${grade}/control-info/`}>Контрольная (10 заданий)</a>
   </div>
-  {LESSONS_7.filter((l) => l.id.startsWith('7inf')).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 1}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
-  ))}
-  <h2>Компьютер, файлы, тексты, графика, интернет</h2>
-  <div class="card">
-    <a class="btn secondary" href={`${B}${grade}/proverka-7base/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-7base/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_7.filter((l) => ['7pc-01-hardware', '7pc-02-files', '7doc-01-text', '7gfx-01-graphics', '7net-01-internet'].includes(l.id)).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 5}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
-  ))}
-  <h2>Мультимедиа и практика</h2>
-  <div class="card">
-    <a class="btn secondary" href={`${B}${grade}/proverka-7media/`}>Проверочная (6 заданий)</a>
-    <span> </span>
-    <a class="btn secondary" href={`${B}${grade}/control-7media/`}>Контрольная (10 заданий)</a>
-  </div>
-  {LESSONS_7.filter((l) => ['7media-01-slides', '7gfx-02-editors', '7soft-01-practice', '7code-01-sound'].includes(l.id)).map((l, i) => (
-    <div class="card">
-      <h3>Урок {i + 10}. {l.title}</h3>
-      <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
-    </div>
+  {SECTIONS.map((sec) => (
+    <Fragment>
+      <h2>{sec.title}</h2>
+      {sec.checks && (
+        <div class="card">
+          {sec.checks.map((c) => (
+            <Fragment>
+              <a class="btn secondary" href={`${B}${grade}/${c.slug}/`}>{c.name}</a>
+              <span> </span>
+            </Fragment>
+          ))}
+        </div>
+      )}
+      {LESSONS_7.filter((l) => sec.range[0] <= (l.ktp ?? 0) && (l.ktp ?? 99) <= sec.range[1]).map((l) => (
+        <div class="card">
+          <h3>Урок {l.ktp}. {l.title}</h3>
+          <p><a href={`${B}${grade}/${l.id}/`}>Читать теорию →</a></p>
+        </div>
+      ))}
+    </Fragment>
   ))}
 </Layout>

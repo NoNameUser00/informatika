@@ -1,9 +1,9 @@
 ---
 id: 7net-01-internet
 class: 7
-title: "Интернет: поиск, адреса, безопасность"
-source_ref: "split/7/02-gl2-kompyuter.pdf; КТП 7: поиск, адреса, этикет, угрозы"
-lesson: 9
+title: "Интернет, Всемирная паутина и поисковые запросы"
+source_ref: "split/7/02-gl2-kompyuter.pdf; ФРП 7, эл. 1.5-1.8; КТП 7 урок 20"
+lesson: 20
 ---
 
 # Поиск как логика
