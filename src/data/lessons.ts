@@ -1,22 +1,41 @@
-// Единый реестр уроков пилота (порядок = уроки 1-6 по docs/curriculum-8-ss.md).
+// Реестр уроков. Нумерация — по КТП (material/ktp/*.xlsx -> src/data/ktp.ts, 36 уроков в классе).
+// Правило: одна страница урока = ровно один урок КТП. Даже если тема соседних уроков совпадает.
+// Поле `ktp` проставляется по мере разбивки: урок без `ktp` ещё не отвязан от КТП (показывается
+// порядковый номер по реестру), урок с `ktp` показывает «Урок N. <тема КТП>» и «Урок N из 36».
+import { KTP } from './ktp';
+
 export interface LessonMeta {
   id: string;
   title: string;
   file: string;
+  /** Номер урока в КТП, 1..36. */
+  ktp?: number;
 }
+
+/** Урок КТП по номеру (для заголовков страниц и хлебных крошек). */
+export function ktpLesson(grade: string, n: number | undefined) {
+  if (n == null) return undefined;
+  return KTP[grade]?.find((l) => l.n === n);
+}
+
+/** Сколько уроков в КТП у класса (всегда 36) — для «Урок N из 36». */
+export const KTP_TOTAL = 36;
+
 export const LESSONS_8: LessonMeta[] = [
-  { id: 'numsys-01-intro', title: 'Общие сведения: позиционные и непозиционные системы', file: 'numsys-01-intro.md' },
-  { id: 'numsys-02-binary', title: 'Двоичная система: веса разрядов и переводы 10↔2', file: 'numsys-02-binary.md' },
-  { id: 'numsys-03-octal', title: 'Восьмеричная система и триады', file: 'numsys-03-octal.md' },
-  { id: 'numsys-04-hex', title: 'Шестнадцатеричная система и тетрады', file: 'numsys-04-hex.md' },
-  { id: 'numsys-05-arith', title: 'Арифметика в двоичной системе', file: 'numsys-05-arith.md' },
-  { id: 'numsys-06-review', title: 'Обобщение: ловушки переводов и смешанный тренажер', file: 'numsys-06-review.md' },
-  { id: 'logic-01-utterances', title: 'Высказывания', file: 'logic-01-utterances.md' },
-  { id: 'logic-02-operations', title: 'Логические операции И, ИЛИ, НЕ', file: 'logic-02-operations.md' },
-  { id: 'logic-03-truth-tables', title: 'Логические выражения и таблицы истинности', file: 'logic-03-truth-tables.md' },
-  { id: 'logic-04-elements', title: 'Логические элементы и основы компьютера', file: 'logic-04-elements.md' },
-  { id: 'alg-01-performers', title: 'Алгоритмы и исполнители', file: 'alg-01-performers.md' },
-  { id: 'alg-02-notation', title: 'Способы записи алгоритмов', file: 'alg-02-notation.md' },
+  { id: 'numsys-01-intro', ktp: 1, title: 'Общие сведения: позиционные и непозиционные системы', file: 'numsys-01-intro.md' },
+  { id: 'numsys-02-binary', ktp: 2, title: 'Двоичная система: веса разрядов и переводы 10↔2', file: 'numsys-02-binary.md' },
+  { id: 'numsys-03-octal', ktp: 3, title: 'Восьмеричная система и триады', file: 'numsys-03-octal.md' },
+  { id: 'numsys-04-hex', ktp: 4, title: 'Шестнадцатеричная система и тетрады', file: 'numsys-04-hex.md' },
+  { id: 'numsys-05-arith', ktp: 5, title: 'Арифметика в двоичной системе', file: 'numsys-05-arith.md' },
+  { id: 'numsys-06-review', ktp: 6, title: 'Решение задач: ловушки переводов', file: 'numsys-06-review.md' },
+  { id: 'logic-01-utterances', ktp: 7, title: 'Высказывания, операции и приоритет', file: 'logic-01-utterances.md' },
+  { id: 'logic-02-operations', ktp: 8, title: 'Истинность составного высказывания', file: 'logic-02-operations.md' },
+  { id: 'logic-05-expression', ktp: 9, title: 'Логические выражения и правила записи', file: 'logic-05-expression.md' },
+  { id: 'logic-06-laws', ktp: 10, title: 'Законы алгебры логики', file: 'logic-06-laws.md' },
+  { id: 'logic-03-truth-tables', ktp: 11, title: 'Таблицы истинности логических выражений', file: 'logic-03-truth-tables.md' },
+  { id: 'logic-04-elements', ktp: 12, title: 'Логические элементы и основы компьютера', file: 'logic-04-elements.md' },
+  { id: 'alg-01-performers', ktp: 13, title: 'Алгоритмы, исполнители и формы записи', file: 'alg-01-performers.md' },
+  { id: 'alg-02-notation', ktp: 14, title: 'Объекты алгоритмов и ручное исполнение', file: 'alg-02-notation.md' },
   { id: 'alg-03-branching', title: 'Ветвление: полная и неполная формы', file: 'alg-03-branching.md' },
   { id: 'alg-04-loops', title: 'Повторение: циклы', file: 'alg-04-loops.md' },
   { id: 'py-01-basics', title: 'Python: программа, присваивание, ввод и вывод', file: 'py-01-basics.md' },

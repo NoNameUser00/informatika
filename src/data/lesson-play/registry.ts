@@ -7,6 +7,8 @@ import { NUMSYS_05_PLAY } from './numsys-05-arith';
 import { NUMSYS_06_PLAY } from './numsys-06-review';
 import { LOGIC_01_PLAY } from './logic-01-utterances';
 import { LOGIC_02_PLAY } from './logic-02-operations';
+import { LOGIC_05_PLAY } from './logic-05-expression';
+import { LOGIC_06_PLAY } from './logic-06-laws';
 import { LOGIC_03_PLAY } from './logic-03-truth-tables';
 import { LOGIC_04_PLAY } from './logic-04-elements';
 import { ALG_01_PLAY } from './alg-01-performers';
@@ -90,6 +92,8 @@ const REGISTRY: Record<string, PlayLesson> = {
   'numsys-06-review': NUMSYS_06_PLAY,
   'logic-01-utterances': LOGIC_01_PLAY,
   'logic-02-operations': LOGIC_02_PLAY,
+  'logic-05-expression': LOGIC_05_PLAY,
+  'logic-06-laws': LOGIC_06_PLAY,
   'logic-03-truth-tables': LOGIC_03_PLAY,
   'logic-04-elements': LOGIC_04_PLAY,
   'alg-01-performers': ALG_01_PLAY,
