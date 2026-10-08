@@ -1,0 +1,241 @@
+{
+  "test_code": "sheet9-control-v1",
+  "variant": "v1",
+  "max_score": 13,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-9-sheet-001",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С какого знака начинается любая формула?",
+      "options": [
+        {
+          "id": "A",
+          "text": "="
+        },
+        {
+          "id": "B",
+          "text": ":"
+        },
+        {
+          "id": "C",
+          "text": ";"
+        },
+        {
+          "id": "D",
+          "text": "пробел"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-003",
+      "lesson": "9sheet-02-refs",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Формула =A1^2 из ячейки A2 скопирована в A3. Что теперь в A3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "=A2^2"
+        },
+        {
+          "id": "B",
+          "text": "=A1^2"
+        },
+        {
+          "id": "C",
+          "text": "=B1^2"
+        },
+        {
+          "id": "D",
+          "text": "=A1^3"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-004",
+      "lesson": "9sheet-02-refs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая ссылка не меняется при копировании?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$A$1"
+        },
+        {
+          "id": "B",
+          "text": "A1"
+        },
+        {
+          "id": "C",
+          "text": "$A1"
+        },
+        {
+          "id": "D",
+          "text": "A$1"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-005",
+      "lesson": "9sheet-02-refs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что вернёт МАКС(3, 7, 5)? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-9-sheet-006",
+      "lesson": "9sheet-03-analysis",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чем СЧЁТЕСЛИ отличается от СУММЕСЛИ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Считает штуки, а не сумму"
+        },
+        {
+          "id": "B",
+          "text": "Считает сумму, а не штуки"
+        },
+        {
+          "id": "C",
+          "text": "Работает без условия"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-009",
+      "lesson": "9sheet-01-base",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что вычислит формула =(2+3)*4? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-9-sheet-002",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что видно в режиме отображения формул?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Сами формулы"
+        },
+        {
+          "id": "B",
+          "text": "Только результаты"
+        },
+        {
+          "id": "C",
+          "text": "Только адреса"
+        },
+        {
+          "id": "D",
+          "text": "Пустые ячейки"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-010",
+      "lesson": "9sheet-02-refs",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие: функция — её назначение.",
+      "left": [
+        "СУММ",
+        "МИН",
+        "МАКС"
+      ],
+      "right": [
+        "минимум",
+        "сумма",
+        "максимум"
+      ],
+      "answerMap": {
+        "СУММ": "сумма",
+        "МИН": "минимум",
+        "МАКС": "максимум"
+      },
+      "key": "СУММ=сумма, МИН=минимум, МАКС=максимум"
+    },
+    {
+      "id": "inf-9-sheet-007",
+      "lesson": "9sheet-03-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая диаграмма показывает доли целого?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Круговая"
+        },
+        {
+          "id": "B",
+          "text": "Столбчатая"
+        },
+        {
+          "id": "C",
+          "text": "Точечная"
+        },
+        {
+          "id": "D",
+          "text": "Лепестковая"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-008",
+      "lesson": "9sheet-03-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что сломается, если отсортировать только столбец баллов?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строки разъедутся: баллы оторвутся от учеников"
+        },
+        {
+          "id": "B",
+          "text": "Ничего"
+        },
+        {
+          "id": "C",
+          "text": "Удалятся формулы"
+        },
+        {
+          "id": "D",
+          "text": "Пропадёт шапка"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

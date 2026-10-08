@@ -20,4 +20,4 @@ material/
 /u8_toc.txt
 /tmp_*/
 
-supabase/functions/submit-attempt/vendor/
+# vendor/ edge-функции коммитится намеренно: паритет проверяет CI, деплой — из чистого чекаута

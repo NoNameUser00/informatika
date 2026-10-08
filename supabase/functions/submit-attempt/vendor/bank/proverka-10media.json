@@ -1,0 +1,167 @@
+{
+  "test_code": "media10-proverka-v1",
+  "variant": "v1",
+  "max_score": 7,
+  "instruction": "Отвечайте точно.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-10-media-001",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем нужны стили в текстовом процессоре?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Менять всё разом и собирать оглавление"
+        },
+        {
+          "id": "B",
+          "text": "Рисовать картинки"
+        },
+        {
+          "id": "C",
+          "text": "Играть музыку"
+        },
+        {
+          "id": "D",
+          "text": "Не нужны"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-003",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Из чего строятся 3D-модели?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Из примитивов с рендером"
+        },
+        {
+          "id": "B",
+          "text": "Из текста"
+        },
+        {
+          "id": "C",
+          "text": "Из звука"
+        },
+        {
+          "id": "D",
+          "text": "Из ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-004",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что должно быть на слайде?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Один смысл крупно"
+        },
+        {
+          "id": "B",
+          "text": "Стена мелкого текста"
+        },
+        {
+          "id": "C",
+          "text": "Всё сразу"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-005",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что дают инструменты рецензирования?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Правки, комментарии и версии"
+        },
+        {
+          "id": "B",
+          "text": "Новые шрифты"
+        },
+        {
+          "id": "C",
+          "text": "Музыку"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-006",
+      "lesson": "10media-01-docs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем набирать формулы в документе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Специальным редактором формул"
+        },
+        {
+          "id": "B",
+          "text": "Надстрочными костылями"
+        },
+        {
+          "id": "C",
+          "text": "Картинками из чата"
+        },
+        {
+          "id": "D",
+          "text": "Ничем"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-10-media-002",
+      "lesson": "10media-01-docs",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие: формат — применение.",
+      "left": [
+        "JPEG",
+        "PNG",
+        "SVG"
+      ],
+      "right": [
+        "фото",
+        "схемы без потерь",
+        "вектор для веба"
+      ],
+      "answerMap": {
+        "JPEG": "фото",
+        "PNG": "схемы без потерь",
+        "SVG": "вектор для веба"
+      },
+      "key": "JPEG=фото, PNG=схемы без потерь, SVG=вектор для веба"
+    }
+  ]
+}

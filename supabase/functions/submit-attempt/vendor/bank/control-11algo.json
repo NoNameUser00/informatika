@@ -1,0 +1,211 @@
+{
+  "test_code": "algo11-control-v1",
+  "variant": "v1",
+  "max_score": 15,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-algo-001",
+      "lesson": "11algo-01-analysis",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Автомат получил 9575. Какой результат? Запишите только число.",
+      "base": 10,
+      "expected": 1214,
+      "key": "1214"
+    },
+    {
+      "id": "inf-11-algo-002",
+      "lesson": "11algo-01-analysis",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какое число МОЖЕТ быть результатом Автомата?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1610"
+        },
+        {
+          "id": "B",
+          "text": "1010"
+        },
+        {
+          "id": "C",
+          "text": "1019"
+        },
+        {
+          "id": "D",
+          "text": "2000"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-11-algo-003",
+      "lesson": "11algo-01-analysis",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "От чего сложность зависит сильнее всего?",
+      "options": [
+        {
+          "id": "A",
+          "text": "От размера данных"
+        },
+        {
+          "id": "B",
+          "text": "От цвета монитора"
+        },
+        {
+          "id": "C",
+          "text": "От дня недели"
+        },
+        {
+          "id": "D",
+          "text": "Ни от чего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-004",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как работает сортировка выбором?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Минимум из остатка — на своё место"
+        },
+        {
+          "id": "B",
+          "text": "Всё перемешать"
+        },
+        {
+          "id": "C",
+          "text": "Удалить половину"
+        },
+        {
+          "id": "D",
+          "text": "Никак"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-005",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает a[1][2]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Строка 1, столбец 2"
+        },
+        {
+          "id": "B",
+          "text": "Строка 2, столбец 1"
+        },
+        {
+          "id": "C",
+          "text": "Число 12"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-006",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что обязательно в рекурсии?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Базовый случай-выход"
+        },
+        {
+          "id": "B",
+          "text": "Громкий звук"
+        },
+        {
+          "id": "C",
+          "text": "Интернет"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-algo-007",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(3)? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-11-algo-008",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько действий во вложенных циклах 100×100? Запишите только число.",
+      "base": 10,
+      "expected": 10000,
+      "key": "10000"
+    },
+    {
+      "id": "inf-11-algo-009",
+      "lesson": "11algo-02-advanced",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(4)? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-11-algo-010",
+      "lesson": "11algo-02-advanced",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое инвариант цикла?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Утверждение, верное до и после каждого прохода"
+        },
+        {
+          "id": "B",
+          "text": "Счётчик цикла"
+        },
+        {
+          "id": "C",
+          "text": "Условие выхода"
+        },
+        {
+          "id": "D",
+          "text": "Тело цикла"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    }
+  ]
+}

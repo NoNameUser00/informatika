@@ -1,0 +1,211 @@
+{
+  "test_code": "graph11-control-v1",
+  "variant": "v1",
+  "max_score": 20,
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "tasks": [
+    {
+      "id": "inf-11-graph-001",
+      "lesson": "11graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое дерево в теории графов?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Связный граф без циклов"
+        },
+        {
+          "id": "B",
+          "text": "Граф с ровно одним циклом"
+        },
+        {
+          "id": "C",
+          "text": "Несвязный граф"
+        },
+        {
+          "id": "D",
+          "text": "Полный граф"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-graph-002",
+      "lesson": "11graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько рёбер в дереве из 6 вершин? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-11-graph-003",
+      "lesson": "11graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Рёбра: A→B, A→C, B→C, B→D, C→D. Сколько различных путей из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-11-graph-004",
+      "lesson": "11graph-01-graphs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Веса рёбер: A–B 4, A–C 2, C–B 1, B–D 5, C–D 8. Какова длина кратчайшего пути из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-11-graph-005",
+      "lesson": "11graph-01-graphs",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Строка матрицы смежности вершины 2: 0 0 1 1. С какими вершинами она смежна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 и 4"
+        },
+        {
+          "id": "B",
+          "text": "1 и 2"
+        },
+        {
+          "id": "C",
+          "text": "2 и 3"
+        },
+        {
+          "id": "D",
+          "text": "Только 4"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-graph-006",
+      "lesson": "11graph-02-games",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает «игра с полной информацией»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Оба игрока видят позицию и все ходы"
+        },
+        {
+          "id": "B",
+          "text": "Ходы делаются одновременно"
+        },
+        {
+          "id": "C",
+          "text": "Часть ходов скрыта"
+        },
+        {
+          "id": "D",
+          "text": "Игрок один"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-graph-007",
+      "lesson": "11graph-02-games",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Куча 7 камней, ходы +1/+2, выигрыш при 11+. Какой первый ход ведёт к победе?",
+      "options": [
+        {
+          "id": "A",
+          "text": "+1 (в 8)"
+        },
+        {
+          "id": "B",
+          "text": "+2 (в 9)"
+        },
+        {
+          "id": "C",
+          "text": "Оба хода равноценны"
+        },
+        {
+          "id": "D",
+          "text": "Выигрыша нет"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-11-graph-008",
+      "lesson": "11graph-02-games",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Куча, ходы +1/+2, цель 11+. Какая позиция проигрышна для того, чей ход?",
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-11-graph-009",
+      "lesson": "11graph-02-games",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Куча, ходы +1/+2, выигрыш при 11+. Минимальное число камней для победы в 1 ход? Запишите только число.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
+    },
+    {
+      "id": "inf-11-graph-010",
+      "lesson": "11graph-02-games",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Куча 7 камней, ходы +1/+2, цель 11+. За сколько своих ходов выиграет первый при лучшей игре обоих?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "Не выиграет"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    }
+  ]
+}
