@@ -58,7 +58,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-06-sorting
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
@@ -75,7 +75,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-07-matrix
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
@@ -92,7 +92,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-10-subs
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
@@ -109,7 +109,7 @@
   difficulty: intermediate
   cognitive_level: apply
   points: 2
-  lesson: 11algo-02-advanced
+  lesson: 11algo-10-subs
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
@@ -126,7 +126,7 @@
   difficulty: intermediate
   cognitive_level: apply
   points: 2
-  lesson: 11algo-02-advanced
+  lesson: 11algo-11-complexity
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
@@ -142,7 +142,7 @@
   difficulty: intermediate
   cognitive_level: apply
   points: 2
-  lesson: 11algo-02-advanced
+  lesson: 11algo-10-subs
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
@@ -159,7 +159,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-01-analysis
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
@@ -210,7 +210,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-10-subs
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
@@ -227,7 +227,7 @@
   difficulty: basic
   cognitive_level: remember
   points: 1
-  lesson: 11algo-02-advanced
+  lesson: 11algo-10-subs
   fgos_requirement: 1.4
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }

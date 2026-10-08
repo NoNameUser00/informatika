@@ -71,7 +71,7 @@
     },
     {
       "id": "inf-11-algo-004",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-06-sorting",
       "type": "single_choice",
       "points": 1,
       "prompt": "Как работает сортировка выбором?",
@@ -98,7 +98,7 @@
     },
     {
       "id": "inf-11-algo-005",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-07-matrix",
       "type": "single_choice",
       "points": 1,
       "prompt": "Что означает a[1][2]?",
@@ -125,7 +125,7 @@
     },
     {
       "id": "inf-11-algo-006",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-10-subs",
       "type": "single_choice",
       "points": 1,
       "prompt": "Что обязательно в рекурсии?",
@@ -152,7 +152,7 @@
     },
     {
       "id": "inf-11-algo-007",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-10-subs",
       "type": "numeric_base",
       "points": 2,
       "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(3)? Запишите только число.",
@@ -162,7 +162,7 @@
     },
     {
       "id": "inf-11-algo-008",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-11-complexity",
       "type": "numeric_base",
       "points": 2,
       "prompt": "Сколько действий во вложенных циклах 100×100? Запишите только число.",
@@ -172,7 +172,7 @@
     },
     {
       "id": "inf-11-algo-009",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-10-subs",
       "type": "numeric_base",
       "points": 2,
       "prompt": "F(n) = n · F(n−1), F(0) = 1. Чему равно F(4)? Запишите только число.",
@@ -182,7 +182,7 @@
     },
     {
       "id": "inf-11-algo-010",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-01-analysis",
       "type": "single_choice",
       "points": 1,
       "prompt": "Что такое инвариант цикла?",
@@ -263,7 +263,7 @@
     },
     {
       "id": "inf-11-algo-013",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-10-subs",
       "type": "single_choice",
       "points": 1,
       "prompt": "Что делает строка import math в программе?",
@@ -290,7 +290,7 @@
     },
     {
       "id": "inf-11-algo-014",
-      "lesson": "11algo-02-advanced",
+      "lesson": "11algo-10-subs",
       "type": "single_choice",
       "points": 1,
       "prompt": "Где хранить свои переиспользуемые подпрограммы?",

@@ -45,7 +45,6 @@ import { MEDIA10_01_PLAY } from './10media-01-docs';
 import { DATA11_01_PLAY } from './11data-01-analysis';
 import { DB11_01_PLAY } from './11db-01-databases';
 import { ALGO11_01_PLAY } from './11algo-01-analysis';
-import { ALGO11_02_PLAY } from './11algo-02-advanced';
 import { NET11_01_PLAY } from './11net-01-networks';
 import { SAFE11_01_PLAY } from './11safe-01-security';
 import { GRAPH11_01_PLAY } from './11graph-01-graphs';
@@ -129,7 +128,6 @@ const REGISTRY: Record<string, PlayLesson> = {
   '11data-01-analysis': DATA11_01_PLAY,
   '11db-01-databases': DB11_01_PLAY,
   '11algo-01-analysis': ALGO11_01_PLAY,
-  '11algo-02-advanced': ALGO11_02_PLAY,
   '11net-01-networks': NET11_01_PLAY,
   '11safe-01-security': SAFE11_01_PLAY,
   '11graph-01-graphs': GRAPH11_01_PLAY,
