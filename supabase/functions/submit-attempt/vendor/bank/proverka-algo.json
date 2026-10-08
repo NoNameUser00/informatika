@@ -108,7 +108,7 @@
     },
     {
       "id": "inf-8-algo-012",
-      "lesson": "alg-04-loops",
+      "lesson": "alg-07-while",
       "type": "single_choice",
       "points": 1,
       "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
