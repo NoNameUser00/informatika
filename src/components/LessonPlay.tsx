@@ -118,13 +118,13 @@ export default function LessonPlay({
   }
 
   // Гейты «Далее»: ключевое — только после галочки, пример — после всех шагов,
-  // практика — после галочки «выполнил», задание — после первой проверки.
+  // практика — после всех шагов и галочки «выполнил», задание — после первой проверки.
   function canNext(): boolean {
     if (isLast) return false;
     const s = lesson.steps[idx];
     if (s.kind === 'key') return written[idx] === true;
     if (s.kind === 'example') return (revealed[idx] ?? 0) >= s.lines.length;
-    if (s.kind === 'practice') return practiced[idx] === true;
+    if (s.kind === 'practice') return (revealed[idx] ?? 0) >= s.steps.length && practiced[idx] === true;
     if (s.kind === 'task') return tasks[idx]?.checked === true;
     return true;
   }
@@ -134,7 +134,10 @@ export default function LessonPlay({
     if (isLast || s.kind === 'theory') return '';
     if (s.kind === 'key') return 'Поставь галочку «Записал в тетрадь» — без записи дальше нельзя.';
     if (s.kind === 'example') return 'Открой все шаги разбора кнопкой «Показать шаг».';
-    if (s.kind === 'practice') return 'Выполни работу на компьютере и поставь галочку «Выполнил».';
+    if (s.kind === 'practice') {
+      if ((revealed[idx] ?? 0) < s.steps.length) return 'Открой все шаги работы кнопкой «Показать шаг» — делаем по порядку.';
+      return 'Выполни работу на компьютере и поставь галочку «Выполнил».';
+    }
     return 'Сначала нажми «Проверить».';
   }
 
@@ -310,19 +313,34 @@ export default function LessonPlay({
             <p key={i}>{p}</p>
           ))}
           <ol>
-            {step.steps.map((p, i) => (
+            {step.steps.slice(0, revealed[idx] ?? 0).map((p, i) => (
               <li key={i}>{p}</li>
             ))}
           </ol>
-          <p className="lp-write">✅ {step.result}</p>
-          <label className="lp-check">
-            <input
-              type="checkbox"
-              checked={practiced[idx] === true}
-              onChange={(e) => setPracticed({ ...practiced, [idx]: e.target.checked })}
-            />
-            Выполнил на компьютере
-          </label>
+          {(revealed[idx] ?? 0) < step.steps.length && (
+            <p>
+              <button
+                type="button"
+                className="lp-stepbtn"
+                onClick={() => setRevealed({ ...revealed, [idx]: (revealed[idx] ?? 0) + 1 })}
+              >
+                Показать шаг {(revealed[idx] ?? 0) + 1} из {step.steps.length}
+              </button>
+            </p>
+          )}
+          {(revealed[idx] ?? 0) >= step.steps.length && (
+            <>
+              <p className="lp-write">✅ {step.result}</p>
+              <label className="lp-check">
+                <input
+                  type="checkbox"
+                  checked={practiced[idx] === true}
+                  onChange={(e) => setPracticed({ ...practiced, [idx]: e.target.checked })}
+                />
+                Выполнил на компьютере
+              </label>
+            </>
+          )}
         </article>
       )}
 
