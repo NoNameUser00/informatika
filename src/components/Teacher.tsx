@@ -30,6 +30,44 @@ interface Row {
   filename?: string;
 }
 
+// Разбор ответов/ключей в читаемый вид: по вопросам, с верно/неверно.
+// Значения бывают строками, а matching — JSON-объектом (иногда дважды
+// закодированным). Строгое сравнение не годится: парсим и сравниваем глубоко.
+function parseDeep(v: string): unknown {
+  let cur: unknown = v;
+  for (let i = 0; i < 3; i++) {
+    if (typeof cur !== 'string') return cur;
+    const t = cur.trim();
+    if (!(t.startsWith('{') || t.startsWith('[') || t.startsWith('"'))) return cur;
+    try {
+      cur = JSON.parse(cur);
+    } catch {
+      return cur;
+    }
+  }
+  return cur;
+}
+
+function prettyValue(v: string): string {
+  const p = parseDeep(v);
+  if (p !== null && typeof p === 'object') {
+    if (Array.isArray(p)) return p.map((x) => String(x)).join(', ');
+    return Object.entries(p as Record<string, unknown>)
+      .map(([k, val]) => `${k} → ${typeof val === 'object' ? JSON.stringify(val) : String(val)}`)
+      .join('; ');
+  }
+  return String(p);
+}
+
+function sameAnswer(a: string, b: string): boolean {
+  const pa = parseDeep(a);
+  const pb = parseDeep(b);
+  if (pa !== null && typeof pa === 'object' && pb !== null && typeof pb === 'object') {
+    return JSON.stringify(pa) === JSON.stringify(pb);
+  }
+  return String(pa).trim().replace(/\s+/g, ' ') === String(pb).trim().replace(/\s+/g, ' ');
+}
+
 export default function Teacher() {
   const [rows, setRows] = useState<Row[]>([]);
   const [remoteCount, setRemoteCount] = useState(0);
@@ -209,8 +247,22 @@ export default function Teacher() {
           </button>
           {open === i && (
             <div>
-              <p className="muted">Ответы: {JSON.stringify(r.answers)}</p>
-              <p className="muted">Ключи: {JSON.stringify(r.keys)}</p>
+              {Object.keys(r.answers ?? {}).map((qid, qi) => {
+                const given = String((r.answers as Record<string, string>)[qid] ?? '');
+                const key = String((r.keys as Record<string, string>)?.[qid] ?? '');
+                const ok = key !== '' && sameAnswer(given, key);
+                return (
+                  <p key={qid} className="muted">
+                    <strong>Вопрос №{qi + 1}</strong>
+                    {' '}— <span className={ok ? 'ok' : 'bad'}>{ok ? 'верно' : 'неверно'}</span>
+                    <br />Ответ ученика: {prettyValue(given) || '—'}
+                    {key !== '' && <><br />Ключ: {prettyValue(key)}</>}
+                  </p>
+                );
+              })}
+              {Object.keys(r.answers ?? {}).length === 0 && (
+                <p className="muted">Ответов нет.</p>
+              )}
             </div>
           )}
           <div className="radio-row">
