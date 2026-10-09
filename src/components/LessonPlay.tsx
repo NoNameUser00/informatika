@@ -10,20 +10,35 @@ const PHASE_TIP: Record<string, { text: string; mood: MascotMood }> = {
   theory: { text: 'Читаем внимательно — дальше спрошу!', mood: 'happy' },
   key: { text: 'Это в тетрадь! Без галочки дальше не пущу.', mood: 'think' },
   example: { text: 'Открывай шаги по одному, не подглядывай.', mood: 'happy' },
+  practice: { text: 'Делаем руками на компьютере — потом расскажешь, что вышло.', mood: 'happy' },
   task: { text: 'Решай сам. Подсказка — только после двух ошибок.', mood: 'think' },
   final: { text: 'Урок пройден! Так держать.', mood: 'cool' },
 };
 
-type Phase = 'theory' | 'key' | 'example' | 'task' | 'final';
+type Phase = 'theory' | 'key' | 'example' | 'practice' | 'task' | 'final';
 const PHASE_LABEL: Record<Phase, string> = {
   theory: 'Теория',
   key: 'Запиши',
   example: 'Пример',
+  practice: 'Практика',
   task: 'Задание',
   final: 'Итог',
 };
 
 type TaskState = { value: string; checked: boolean; ok: boolean; fails: number };
+
+const PRAISE = [
+  'Верно! Видишь, как это просто.',
+  'Точно! Бип-бип — так держать.',
+  'Правильно! Ты считаешь как компьютер.',
+  'Да! Ещё один бит в копилку.',
+];
+
+const TRY_AGAIN = [
+  'Не совсем. Разберём, где затык.',
+  'Мимо. Посмотри на подсказку и попробуй ещё.',
+  'Пока нет. Перечитай шаг выше — ответ рядом.',
+];
 
 // Теория бьётся на подслайды, чтобы слайд влезал в один экран без прокрутки:
 // по 2 абзаца на слайд + отдельный слайд под код (если есть).
@@ -67,6 +82,10 @@ export default function LessonPlay({
   const [revealed, setRevealed] = useState<Record<number, number>>({});
   const [written, setWritten] = useState<Record<number, boolean>>({});
   const [tasks, setTasks] = useState<Record<number, TaskState>>({});
+  // Практика: галочка «выполнил на компьютере», как у ключевого.
+  const [practiced, setPracticed] = useState<Record<number, boolean>>({});
+  // Напоминание «сначала введи ответ»: по шагам, сбрасывается при вводе.
+  const [needAnswer, setNeedAnswer] = useState<Record<number, boolean>>({});
 
   const isLast = idx === lesson.steps.length;
 
@@ -83,6 +102,12 @@ export default function LessonPlay({
 
   function checkTask(i: number, s: Extract<PlayStep, { kind: 'task' }>) {
     const cur = tasks[i] ?? { value: '', checked: false, ok: false, fails: 0 };
+    // Пустой ответ — не проверка, а напоминание. Ошибку не считаем.
+    if (!cur.value || String(cur.value).trim() === '') {
+      setNeedAnswer({ ...needAnswer, [i]: true });
+      return;
+    }
+    setNeedAnswer({ ...needAnswer, [i]: false });
     let ok = false;
     if (s.taskKind === 'numeric') {
       ok = checkNumericBase(s.expected ?? 0, cur.value, s.base ?? 10).isCorrect;
@@ -93,12 +118,13 @@ export default function LessonPlay({
   }
 
   // Гейты «Далее»: ключевое — только после галочки, пример — после всех шагов,
-  // задание — после первой проверки.
+  // практика — после галочки «выполнил», задание — после первой проверки.
   function canNext(): boolean {
     if (isLast) return false;
     const s = lesson.steps[idx];
     if (s.kind === 'key') return written[idx] === true;
     if (s.kind === 'example') return (revealed[idx] ?? 0) >= s.lines.length;
+    if (s.kind === 'practice') return practiced[idx] === true;
     if (s.kind === 'task') return tasks[idx]?.checked === true;
     return true;
   }
@@ -108,6 +134,7 @@ export default function LessonPlay({
     if (isLast || s.kind === 'theory') return '';
     if (s.kind === 'key') return 'Поставь галочку «Записал в тетрадь» — без записи дальше нельзя.';
     if (s.kind === 'example') return 'Открой все шаги разбора кнопкой «Показать шаг».';
+    if (s.kind === 'practice') return 'Выполни работу на компьютере и поставь галочку «Выполнил».';
     return 'Сначала нажми «Проверить».';
   }
 
@@ -139,11 +166,45 @@ export default function LessonPlay({
       setSub(subCount(prev) - 1);
     }
   }
-  const phases: Phase[] = ['theory', 'key', 'example', 'task', 'final'];
+  const phases: Phase[] = ['theory', 'key', 'example', 'practice', 'task', 'final'];
   const now = phaseOf(lesson, idx);
   const nowPos = phases.indexOf(now);
   const phaseTip = PHASE_TIP[isLast ? 'final' : step!.kind];
   const stepTip = !isLast && 'tip' in step! && step!.tip ? (step as { tip?: string }).tip : null;
+
+  // Бипин реагирует на результат только что проверенного задания:
+  // верно — восторг (wow + прыжок), неверно — утешение,
+  // 3+ ошибок — злость и молчание, пустой ответ — напоминание.
+  const tState = isLast ? undefined : tasks[idx];
+  const tried = tState?.checked === true;
+  const okTask = tState?.ok === true;
+  const fails = tState?.fails ?? 0;
+  const angry = tried && !okTask && fails >= 3;
+  const emptyWarn = !isLast && (needAnswer[idx] === true);
+  const mood: MascotMood = angry
+    ? 'angry'
+    : emptyWarn
+      ? 'think'
+      : tried
+        ? okTask
+          ? 'wow'
+          : 'sad'
+        : isLast
+          ? score.got === score.n
+            ? 'cool'
+            : 'happy'
+          : phaseTip.mood;
+  // silent=true — Бипин молчит (после 3 ошибок).
+  const silent = angry;
+  const bubble = silent
+    ? ''
+    : emptyWarn
+      ? 'Сначала введи ответ — потом нажмём «Проверить».'
+      : tried
+        ? okTask
+          ? PRAISE[fails % PRAISE.length]
+          : TRY_AGAIN[(fails - 1) % TRY_AGAIN.length]
+        : (stepTip ?? (isLast ? (score.got === score.n ? 'Всё верно — ты звезда!' : phaseTip.text) : phaseTip.text));
 
   return (
     <div className="lp">
@@ -158,8 +219,8 @@ export default function LessonPlay({
         ))}
       </ol>
       <div className="mascot-row">
-        <Mascot mood={isLast ? (score.got === score.n ? 'cool' : 'happy') : phaseTip.mood} size={56} />
-        <p className="mascot-say">{stepTip ?? (isLast ? (score.got === score.n ? 'Всё верно — ты звезда!' : phaseTip.text) : phaseTip.text)}</p>
+        <Mascot mood={mood} size={56} />
+        {!silent && <p className="mascot-say rb-say" key={bubble}>{bubble}</p>}
       </div>
       <p className="lp-meta">
         Урок {lesson.no} · {lesson.title} · шаг {idx + 1} из {total}
@@ -241,6 +302,30 @@ export default function LessonPlay({
         </article>
       )}
 
+      {!isLast && step?.kind === 'practice' && (
+        <article className="lp-card lp-practice">
+          <p className="lp-kicker">Практика — делаем на компьютере</p>
+          <h1>{step.title}</h1>
+          {step.body.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <ol>
+            {step.steps.map((p, i) => (
+              <li key={i}>{p}</li>
+            ))}
+          </ol>
+          <p className="lp-write">✅ {step.result}</p>
+          <label className="lp-check">
+            <input
+              type="checkbox"
+              checked={practiced[idx] === true}
+              onChange={(e) => setPracticed({ ...practiced, [idx]: e.target.checked })}
+            />
+            Выполнил на компьютере
+          </label>
+        </article>
+      )}
+
       {!isLast && step?.kind === 'task' && (
         <article className="lp-card">
           <p className="lp-kicker">{step.title} — проверь себя</p>
@@ -255,9 +340,10 @@ export default function LessonPlay({
               placeholder="только число"
               aria-label={step.prompt}
               value={tasks[idx]?.value ?? ''}
-              onChange={(e) =>
-                setTasks({ ...tasks, [idx]: { value: e.target.value, checked: false, ok: false, fails: tasks[idx]?.fails ?? 0 } })
-              }
+              onChange={(e) => {
+                setTasks({ ...tasks, [idx]: { value: e.target.value, checked: false, ok: false, fails: tasks[idx]?.fails ?? 0 } });
+                if (needAnswer[idx]) setNeedAnswer({ ...needAnswer, [idx]: false });
+              }}
             />
           ) : (
             <div role="radiogroup" aria-label={step.prompt}>
@@ -268,9 +354,10 @@ export default function LessonPlay({
                     name={`lp-${idx}`}
                     value={o.id}
                     checked={(tasks[idx]?.value ?? '') === o.id}
-                    onChange={() =>
-                      setTasks({ ...tasks, [idx]: { value: o.id, checked: false, ok: false, fails: tasks[idx]?.fails ?? 0 } })
-                    }
+                    onChange={() => {
+                      setTasks({ ...tasks, [idx]: { value: o.id, checked: false, ok: false, fails: tasks[idx]?.fails ?? 0 } });
+                      if (needAnswer[idx]) setNeedAnswer({ ...needAnswer, [idx]: false });
+                    }}
                   />
                   {o.id}. {o.text}
                 </label>
@@ -304,6 +391,12 @@ export default function LessonPlay({
               ? 'Отлично — тема усвоена. Закрепи в тренажёре.'
               : 'Хорошая работа. Разбери ошибки выше и добей в тренажёре.'}
           </p>
+          {lesson.fact && (
+            <p className="lp-fact">
+              <span className="lp-fact-label">💡 Интересный факт</span>
+              {lesson.fact}
+            </p>
+          )}
           {lesson.nextCheck && (
             <p className="lp-write">
               ⚠️ Следующий шаг — {lesson.nextCheck.kind === 'proverka' ? 'проверочная' : 'контрольная'}:{' '}

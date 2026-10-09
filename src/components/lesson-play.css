@@ -20,7 +20,10 @@
 .lp-card h1 { margin-top: 0; font-size: 1.4rem; color: #0f172a; }
 .lp-card p, .lp-card li { color: #1e293b; }
 .lp-key { border-left: 8px solid #f59e0b; }
+.lp-practice { border-left: 8px solid #16a34a; }
 .lp-write { background: rgba(251,191,36,.25); border: 1px dashed #b45309; border-radius: 12px; padding: 10px 14px; font-weight: 700; color: #451a03 !important; }
+.lp-fact { background: rgba(125,211,252,.22); border: 1px solid #0284c7; border-radius: 12px; padding: 10px 14px; color: #0c2a3a !important; }
+.lp-fact-label { display: block; font-weight: 800; color: #0c4a6e; margin-bottom: 4px; }
 .lp-check { display: flex; align-items: center; gap: 10px; min-height: 48px; cursor: pointer; font-weight: 700; color: #0f172a; }
 .lp-check input { width: 22px; height: 22px; }
 .lp-lines li { margin-bottom: 10px; }

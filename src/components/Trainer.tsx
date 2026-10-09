@@ -11,6 +11,38 @@ import { WORKS } from '../lib/analytics/works';
 import { resolveWork } from '../lib/variants/resolve.mjs';
 import DragMatch from './DragMatch';
 import CodeRunner from './CodeRunner';
+import Mascot, { type MascotMood } from './Mascot';
+import './mascot.css';
+
+// Бипин в тренажёре:
+// - тренажёр: радость/печаль по результату + похвала или «попробуй ещё»;
+// - проверочная/контрольная: только итоговая отметка, без разбора по вопросам;
+// - пустой ответ: напоминание (ошибку не считаем, дальше не пускаем);
+// - «2» на проверке: Бипин обижается и молчит.
+const TRAINER_PRAISE = [
+  'Всё верно! Ты считаешь как компьютер.',
+  'Отлично! Бип-бип — так держать.',
+  'Точно! Ещё один бит в копилку.',
+];
+
+const TRAINER_TRY = [
+  'Не всё сошлось. Разбери ключи ниже и попробуй ещё раз.',
+  'Мимо в этот раз. Посмотри, где затык, и пройди заново.',
+  'Пока не всё. Ошибки — это тоже данные. Разбери и повтори.',
+];
+
+const MARK_BUBBLE: Record<number, string> = {
+  5: 'Отлично! Пять — ты звезда.',
+  4: 'Хорошо! Четыре — почти всё сошлось.',
+  3: 'Тройка. Разбери ошибки и добей тему.',
+};
+
+function markMood(mark: number): MascotMood {
+  if (mark === 5) return 'wow';
+  if (mark === 4) return 'happy';
+  if (mark === 3) return 'sad';
+  return 'angry';
+}
 
 // Структура как в Яндекс.Форме учителя:
 // стр.1 — ФИО, Класс, Буква класса; дальше страницы по 5 вопросов,
@@ -356,6 +388,10 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   if (quietDone) {
     return (
       <div>
+        <div className="mascot-row">
+          <Mascot mood="happy" size={56} />
+          <p className="mascot-say rb-say" key="quiet">Ответы ушли учителю. Жди отметку — я держу за тебя кулачки.</p>
+        </div>
         <div className="card">
           <h2>Ответы сохранены</h2>
           <p>
@@ -372,8 +408,22 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   }
 
   if (done) {
+    const isCheck = mode === 'proverka' || done.server;
+    const mood = markMood(done.mark);
+    const silent = isCheck && done.mark === 2;
+    const bubble = silent
+      ? ''
+      : isCheck
+        ? (MARK_BUBBLE[done.mark] ?? MARK_BUBBLE[3])
+        : done.mark >= 4
+          ? TRAINER_PRAISE[done.total % TRAINER_PRAISE.length]
+          : TRAINER_TRY[done.total % TRAINER_TRY.length];
     return (
       <div>
+        <div className="mascot-row">
+          <Mascot mood={mood} size={64} />
+          {!silent && <p className="mascot-say rb-say" key={bubble}>{bubble}</p>}
+        </div>
         <div className="card">
           <h2>Результат: {done.total} из {done.max} ({done.percent}%) — отметка {done.mark}</h2>
           <p className="muted">
@@ -415,6 +465,22 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
             : ' Номер задан учителем.'}
         </p>
       )}
+
+      {(() => {
+        const emptyHint = /Ответьте|не отвечен|Заполните|Выберите|согласие/i.test(error);
+        const m: MascotMood = emptyHint ? 'think' : 'happy';
+        const b = emptyHint
+          ? 'Сначала заполни всё на странице — пустые ответы я не проверяю.'
+          : mode === 'proverka'
+            ? 'Это проверка: отвечай внимательно, подсказок не будет.'
+            : 'Отвечай на всё по порядку — в конце скажу, что верно.';
+        return (
+          <div className="mascot-row">
+            <Mascot mood={m} size={56} />
+            <p className="mascot-say rb-say" key={b}>{b}</p>
+          </div>
+        );
+      })()}
 
       {step === 0 && (
         <div className="card">

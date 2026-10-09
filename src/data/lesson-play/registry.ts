@@ -59,6 +59,14 @@ export type PlayStep =
   | { kind: 'key'; title: string; body: string[]; writeDown: string; mono?: string[]; tip?: string }
   | { kind: 'example'; title: string; intro: string; lines: string[]; mono?: string[]; tip?: string }
   | {
+      kind: 'practice';
+      title: string;
+      body: string[];
+      steps: string[];
+      result: string;
+      tip?: string;
+    }
+  | {
       kind: 'task';
       title: string;
       taskKind: 'numeric' | 'choice';
@@ -79,6 +87,8 @@ export interface PlayLesson {
   steps: PlayStep[];
   /** Баннер в финале: следующий урок — проверочная/контрольная (slug маршрута). */
   nextCheck?: { kind: 'proverka' | 'control'; title: string; slug: string };
+  /** Интересный факт для финала урока. */
+  fact?: string;
 }
 
 const REGISTRY: Record<string, PlayLesson> = {
@@ -138,6 +148,9 @@ const REGISTRY: Record<string, PlayLesson> = {
   'py-04-strings': PY_04_PLAY,
 };
 
+import { FACTS } from './facts';
+import { PRACTICES } from './practices';
+
 export function hasPlay(id: string): boolean {
   return id in REGISTRY;
 }
@@ -145,5 +158,17 @@ export function hasPlay(id: string): boolean {
 export function getPlay(id: string): PlayLesson {
   const lesson = REGISTRY[id];
   if (!lesson) throw new Error(`Нет сценария урока: ${id}`);
-  return lesson;
+  let out = lesson;
+  // Факт финала: прямое поле урока важнее общей карты.
+  const fact = lesson.fact ?? FACTS[id];
+  if (fact && !lesson.fact) out = { ...out, fact };
+  // Практика: вставляется перед первым заданием (работа с программами).
+  const practice = PRACTICES[id];
+  if (practice && !out.steps.some((s) => s.kind === 'practice')) {
+    const at = out.steps.findIndex((s) => s.kind === 'task');
+    const steps = [...out.steps];
+    steps.splice(at >= 0 ? at : steps.length, 0, practice);
+    out = { ...out, steps };
+  }
+  return out;
 }

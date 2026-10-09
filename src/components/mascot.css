@@ -1,4 +1,4 @@
-/* Робит + облачко реплики. Тёмный вариант (hero, плеер) и светлый (в карточке). */
+/* Бипин + облачко реплики. Тёмный вариант (hero, плеер) и светлый (в карточке). */
 .mascot-row {
   display: flex;
   gap: 12px;
@@ -13,6 +13,7 @@
   border-radius: 4px 16px 16px 16px;
   padding: 10px 14px;
   font-size: 0.95rem;
+  max-width: 42ch;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -32,4 +33,384 @@
 }
 .mascot-say.light::before {
   border-right-color: rgba(148, 163, 184, 0.5);
+}
+
+/* ============================================================
+   Бипин: слоистая система эмоций.
+   Каждый слой всегда нарисован; настроение — класс на <svg>.
+   Постоянные циклы во вложенных группах, позы — через transition.
+   ============================================================ */
+
+.rb {
+  display: block;
+}
+
+/* --- Постоянные циклы (бесконечные) --- */
+.rb-anim .rb-bob {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: rb-bob 3.6s ease-in-out infinite;
+}
+.rb-anim .rb-wing-r {
+  transform-box: fill-box;
+  transform-origin: 28% 8%;
+  animation: rb-wave 2.8s ease-in-out infinite;
+}
+.rb-anim .rb-antenna {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: rb-pulse 2.2s ease-in-out infinite;
+}
+.rb-anim .rb-blink {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: rb-blink 5.2s infinite;
+}
+.rb-anim.rb-tilt {
+  animation: rb-tilt 4.2s ease-in-out infinite;
+}
+
+/* --- Века: поза через transition, моргание во вложенной группе --- */
+.rb-lid {
+  transition: transform 0.22s ease-out;
+}
+.rb-lid-l,
+.rb-lid-r {
+  transform: translateY(-30px); /* открыты */
+}
+.m-ok .rb-lid-r {
+  transform: translateY(0); /* подмиг — правый закрыт */
+}
+.m-sad .rb-lid-l,
+.m-sad .rb-lid-r {
+  transform: translateY(-14px); /* опущены */
+}
+
+/* --- Брови --- */
+.rb-brow {
+  transition: transform 0.22s ease-out;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+.m-happy .rb-brow-l,
+.m-happy .rb-brow-r,
+.m-ok .rb-brow-l,
+.m-ok .rb-brow-r {
+  transform: translateY(-2px);
+}
+.m-think .rb-brow-l {
+  transform: translateY(-4px);
+}
+.m-think .rb-brow-r {
+  transform: translateY(0);
+}
+.m-cool .rb-brow-l,
+.m-cool .rb-brow-r,
+.m-wow .rb-brow-l,
+.m-wow .rb-brow-r {
+  transform: translateY(-3px);
+}
+.m-sad .rb-brow-l {
+  transform: rotate(7deg);
+}
+.m-sad .rb-brow-r {
+  transform: rotate(-7deg);
+}
+
+/* --- Подмиг (дуга закрытого глаза) --- */
+.rb-eye-line {
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+.m-ok .rb-eye-line-r {
+  opacity: 1;
+}
+
+/* --- Звёздные глаза --- */
+.rb-stars {
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+.m-wow .rb-stars {
+  opacity: 1;
+}
+.m-wow .rb-star {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: rb-star-pop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+/* --- Очки --- */
+.rb-glasses {
+  opacity: 0;
+  transform: translateY(-18px);
+  transition:
+    opacity 0.2s,
+    transform 0.25s ease-out;
+}
+.m-cool .rb-glasses {
+  opacity: 1;
+  transform: translateY(0);
+}
+.rb-shine {
+  opacity: 0;
+}
+.m-cool .rb-shine {
+  animation: rb-shine 3.6s ease-in-out infinite;
+}
+
+/* --- Рты: кроссфейд --- */
+.rb-mouth {
+  opacity: 0;
+  transition: opacity 0.16s;
+}
+.rb-say {
+  animation: rb-say-pop 0.18s ease-out both;
+}
+@keyframes rb-say-pop {
+  0% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.m-happy .rb-mouth-happy {
+  opacity: 1;
+}
+.m-ok .rb-mouth-ok {
+  opacity: 1;
+}
+.m-think .rb-mouth-think {
+  opacity: 1;
+}
+.m-cool .rb-mouth-cool {
+  opacity: 1;
+}
+.m-sad .rb-mouth-sad {
+  opacity: 1;
+}
+.m-angry .rb-mouth-angry {
+  opacity: 1;
+}
+.rb-mouth-open {
+  opacity: 0;
+  transition: opacity 0.16s;
+}
+.m-wow .rb-mouth-open {
+  opacity: 1;
+}
+
+/* --- Злость: дрожание, прищур, брови внутрь --- */
+.m-angry .rb-lid-l,
+.m-angry .rb-lid-r {
+  transform: translateY(-6px);
+}
+.m-angry .rb-brow-l {
+  transform: rotate(-10deg);
+}
+.m-angry .rb-brow-r {
+  transform: rotate(10deg);
+}
+.m-angry .rb-emote {
+  animation: rb-tremble 0.4s ease-in-out infinite;
+}
+
+/* --- Румянец --- */
+.rb-blush {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.m-happy .rb-blush,
+.m-ok .rb-blush,
+.m-wow .rb-blush {
+  opacity: 0.55;
+}
+.m-wow .rb-blush {
+  animation: rb-blush-pop 0.45s ease-out both;
+}
+
+/* --- Слеза --- */
+.rb-tear {
+  opacity: 0;
+}
+.m-sad .rb-tear {
+  opacity: 1;
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: rb-tear-drip 3.2s ease-in-out infinite;
+}
+
+/* --- Облачко мысли --- */
+.rb-thought {
+  opacity: 0;
+}
+.m-think .rb-thought {
+  opacity: 1;
+  animation: rb-thought-drift 3s ease-in-out infinite;
+}
+
+/* --- Прыжок восторга (wow) --- */
+.m-wow .rb-emote {
+  animation: rb-hop 0.6s ease-out both;
+}
+
+/* ============================================================
+   КЛЮЧФРЕЙМЫ
+   ============================================================ */
+@keyframes rb-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes rb-blink {
+  0%,
+  90%,
+  100% {
+    transform: scaleY(1);
+  }
+  94% {
+    transform: scaleY(0.08);
+  }
+  97% {
+    transform: scaleY(0.08);
+  }
+}
+@keyframes rb-wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-14deg);
+  }
+}
+@keyframes rb-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+@keyframes rb-tilt {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(-7deg);
+  }
+}
+@keyframes rb-star-pop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rb-shine {
+  0%,
+  55% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.35;
+  }
+  85% {
+    transform: translateX(110px);
+    opacity: 0.35;
+  }
+  90%,
+  100% {
+    transform: translateX(110px);
+    opacity: 0;
+  }
+}
+@keyframes rb-blush-pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.55;
+  }
+}
+@keyframes rb-tear-drip {
+  0%,
+  55% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  62% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(16px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(16px) scale(0.8);
+    opacity: 0;
+  }
+}
+@keyframes rb-thought-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 0.5;
+  }
+}
+@keyframes rb-hop {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes rb-tremble {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1.5px);
+  }
+  75% {
+    transform: translateX(1.5px);
+  }
+}
+
+/* Уважаем системную настройку: движение отключаем полностью. */
+@media (prefers-reduced-motion: reduce) {
+  .rb-anim,
+  .rb-anim *,
+  .rb-say {
+    animation: none !important;
+    transition: none !important;
+  }
 }
