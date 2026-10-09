@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
   prompt: "Что соединяют магистрали компьютера?"
-  student_view: { options: [{ id: A, text: "Процессор, память и устройства" }, { id: B, text: "Только файлы" }, { id: C, text: "Только монитор" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: B, text: "Только файлы" }, { id: C, text: "Только монитор" }, { id: D, text: "Ничего" }, { id: A, text: "Процессор, память и устройства" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Шины данных, адреса и управления" }
+  teacher_only: { answer: D, explanation: "Шины данных, адреса и управления" }
 
 - id: inf-10-base-002
   class: 10
@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
   prompt: "Чем свободное ПО отличается от пиратского?"
-  student_view: { options: [{ id: A, text: "Лицензия разрешает: GNU GPL" }, { id: B, text: "Ничем" }, { id: C, text: "Ценой" }, { id: D, text: "Цветом диска" }] }
+  student_view: { options: [{ id: D, text: "Цветом диска" }, { id: B, text: "Ничем" }, { id: A, text: "Лицензия разрешает: GNU GPL" }, { id: C, text: "Ценой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Свободное — легально по лицензии" }
+  teacher_only: { answer: C, explanation: "Свободное — легально по лицензии" }
 
 - id: inf-10-base-003
   class: 10
@@ -96,9 +96,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
   prompt: "Что идёт по шине адреса?"
-  student_view: { options: [{ id: A, text: "Адреса ячеек памяти" }, { id: B, text: "Данные программ" }, { id: C, text: "Питание" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: C, text: "Питание" }, { id: A, text: "Адреса ячеек памяти" }, { id: D, text: "Ничего" }, { id: B, text: "Данные программ" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Адрес — куда, данные — что" }
+  teacher_only: { answer: B, explanation: "Адрес — куда, данные — что" }
 
 - id: inf-10-base-007
   class: 10
@@ -130,7 +130,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
   prompt: "Чем борются с помехами в канале?"
-  student_view: { options: [{ id: A, text: "Избыточностью: повторы и контрольные суммы" }, { id: B, text: "Криком" }, { id: C, text: "Ничем" }, { id: D, text: "Удалением канала" }] }
+  student_view: { options: [{ id: A, text: "Избыточностью: повторы и контрольные суммы" }, { id: D, text: "Удалением канала" }, { id: B, text: "Криком" }, { id: C, text: "Ничем" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Лишние биты ловят искажения" }
 
@@ -164,9 +164,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
   prompt: "Какой код удовлетворяет условию Фано (ни одно слово — не начало другого)?"
-  student_view: { options: [{ id: A, text: "А–0, Б–10, В–110" }, { id: B, text: "А–0, Б–01, В–011" }, { id: C, text: "А–1, Б–11, В–111" }, { id: D, text: "А–0, Б–00, В–000" }] }
+  student_view: { options: [{ id: B, text: "А–0, Б–01, В–011" }, { id: D, text: "А–0, Б–00, В–000" }, { id: C, text: "А–1, Б–11, В–111" }, { id: A, text: "А–0, Б–10, В–110" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "В остальных есть вложенность: 0 в начале 01/011 и 00/000, 1 в начале 11/111" }
+  teacher_only: { answer: D, explanation: "В остальных есть вложенность: 0 в начале 01/011 и 00/000, 1 в начале 11/111" }
 
 - id: inf-10-base-011
   class: 10
@@ -181,6 +181,1242 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
   prompt: "Код: А–0, Б–10, В–110. Расшифруй сообщение 010110."
-  student_view: { options: [{ id: A, text: "АБВ" }, { id: B, text: "БАВ" }, { id: C, text: "ВБА" }, { id: D, text: "АВБ" }] }
+  student_view: { options: [{ id: C, text: "ВБА" }, { id: A, text: "АБВ" }, { id: B, text: "БАВ" }, { id: D, text: "АВБ" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Читаем слева: 0 — А, 10 — Б, 110 — В" }
+  teacher_only: { answer: B, explanation: "Читаем слева: 0 — А, 10 — Б, 110 — В" }
+# === ДОПИСАНО scripts/make-10-bank.mjs (руками не править) ===
+# Ответы посчитаны кодом (parseBase, popcount, rowsOf, equivalent, dnf, knf, solve)
+# и проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-base-012 … inf-10-base-041 (30 заданий).
+- id: inf-10-base-012
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Пропускная способность магистрали"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "За один такт по магистрали проходит 64 байта данных. Сколько это бит? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [512], answer_text: "512", explanation: "1 байт = 8 бит, значит 64 · 8 = 512 бит за такт. Пропускная способность магистрали — узкое место всей системы." }
+
+- id: inf-10-base-013
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Функции устройств"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Установите соответствие: устройство — что оно делает."
+  student_view: { left: ["Процессор", "Оперативная память", "Устройство вывода"], right: ["выполняет команды программы", "хранит программы и данные, пока компьютер включён", "передаёт результат работы человеку"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Процессор": "выполняет команды программы", "Оперативная память": "хранит программы и данные, пока компьютер включён", "Устройство вывода": "передаёт результат работы человеку" }, explanation: "Процессор исполняет команды, память хранит их до выключения, устройство вывода показывает результат. Всё общение идёт через магистраль." }
+
+- id: inf-10-base-014
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "ОЗУ и накопитель"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Чем оперативная память отличается от накопителя?"
+  student_view: { options: [{ id: D, text: "ОЗУ медленнее накопителя, поэтому её почти не используют" }, { id: A, text: "ОЗУ — рабочая область: при выключении очищается, а накопитель хранит файлы постоянно" }, { id: B, text: "ОЗУ хранит файлы постоянно, а накопитель — только до выключения компьютера" }, { id: C, text: "Они отличаются только скоростью: оба хранят данные постоянно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "ОЗУ — рабочий стол: быстро, но стирается при выключении. Накопитель — шкаф: медленно, зато файлы остаются. Закрыл программу — освободил память." }
+
+- id: inf-10-base-015
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Расчёт оперативной памяти"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "В компьютере 8 ГБ оперативной памяти. Открыты три программы, они занимают 3 ГБ, 2 ГБ и 1 ГБ. Сколько ГБ памяти осталось свободно? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Занято 3 + 2 + 1 = 6 ГБ, свободно 8 − 6 = 2 ГБ. Если свободной памяти не хватает, система сбрасывает данные на накопитель и начинает «тормозить»." }
+
+- id: inf-10-base-016
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "SSD против замены процессора"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Почему замена HDD на SSD ускоряет компьютер сильнее, чем смена процессора среднего класса на мощный?"
+  student_view: { options: [{ id: B, text: "SSD умеет хранить больше гигабайт, поэтому компьютер работает быстрее" }, { id: C, text: "Никак: смена процессора даёт не меньший выигрыш" }, { id: A, text: "SSD убирает движущиеся детали из пути к данным, и система перестаёт подтормаживать при обращении к файлам" }, { id: D, text: "Дело в том, что процессор на SSD всегда работает на более высокой частоте" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "HDD каждый раз подводит головку к пластине — это миллисекунды ожидания. В SSD ячейки памяти без механики, поэтому подтормаживания исчезают." }
+
+- id: inf-10-base-017
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Условие параллельности"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "При каком условии задачу можно выполнять параллельно?"
+  student_view: { options: [{ id: A, text: "Когда её шаги независимы: ни один шаг не ждёт результата предыдущего" }, { id: D, text: "Когда задача состоит из одинаковых повторяющихся шагов" }, { id: C, text: "Когда компьютер достаточно быстрый, чтобы делать всё сразу" }, { id: B, text: "Когда программа написана на низкоуровневом языке" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Если каждое следующее действие ждёт предыдущего, добавить ядра не поможет. Параллельны обработка изображений, расчёт погоды, рендеринг видео." }
+
+- id: inf-10-base-018
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Время параллельной обработки"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Нужно обработать 1000 фотографий, на каждую уходит 4 секунды. Обработка идёт сразу в 8 потоках. Сколько секунд займёт работа? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [500], answer_text: "500", explanation: "По одному потоку: 1000 · 4 = 4000 с. Восемь потоков делят работу на 8: 4000 : 8 = 500 с. Столько же фотографий, но в 8 раз меньше времени." }
+
+- id: inf-10-base-019
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Микроконтроллер"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Чем микроконтроллер отличается от процессора персонального компьютера?"
+  student_view: { options: [{ id: D, text: "Разницы нет: это два названия одного и того же устройства" }, { id: B, text: "Микроконтроллер — это просто процессор с более низкой частотой" }, { id: A, text: "В микроконтроллере процессор, память и ввод-вывод собраны на одном кристалле, и он работает по одной программе без операционной системы" }, { id: C, text: "Микроконтроллер умеет всё то же, что и компьютер, только компактнее" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Микроконтроллеры стоят в стиральных машинах, пультах и датчиках: всё встроено, программа одна, устройство работает годами без перезагрузки." }
+
+- id: inf-10-base-020
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Драйверы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Что делает драйвер устройства?"
+  student_view: { options: [{ id: D, text: "Распределяет оперативную память между запущенными программами" }, { id: C, text: "Проверяет текст на опечатки во время работы программы" }, { id: B, text: "Загружает операционную систему в память при включении компьютера" }, { id: A, text: "Переводит обращения операционной системы к устройству в понятные этому устройству команды" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Драйвер — «переводчик» между ОС и конкретным устройством. Без драйвера принтера система не поймёт, как им управлять, и не покажет его." }
+
+- id: inf-10-base-021
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Слои программного обеспечения"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Установите соответствие: понятие — что оно делает."
+  student_view: { left: ["Системное ПО", "Драйвер устройства", "Утилита", "Прикладная программа"], right: ["управляет устройствами и запускает другие программы", "переводит обращения операционной системы в команды устройства", "обслуживает систему: проверяет, чистит, восстанавливает", "решает задачи пользователя"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Системное ПО": "управляет устройствами и запускает другие программы", "Драйвер устройства": "переводит обращения операционной системы в команды устройства", "Утилита": "обслуживает систему: проверяет, чистит, восстанавливает", "Прикладная программа": "решает задачи пользователя" }, explanation: "Слои идут от железа к задачам: системное ПО управляет устройствами, драйвер переводит обращения к конкретному устройству, утилиты обслуживают систему, прикладные программы работают для человека." }
+
+- id: inf-10-base-022
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Права приложения на смартфоне"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Почему приложение на смартфоне обычно не видит файлы других приложений?"
+  student_view: { options: [{ id: D, text: "Это ограничение связано только с лицензией на само приложение" }, { id: C, text: "Смартфон не умеет искать файлы во внутренней памяти" }, { id: B, text: "Файлов других приложений не существует: телефон хранит только запущенные программы" }, { id: A, text: "Приложению доступна только своя папка: это защищает чужие данные от вмешательства и утечки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Ограниченная файловая система — одна из особенностей мобильного ПО: приложение видит свою папку и не лезет в чужую." }
+
+- id: inf-10-base-023
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Удаление и восстановление"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Почему удалённый с компьютера файл иногда удаётся восстановить?"
+  student_view: { options: [{ id: A, text: "При удалении место на накопителе помечается как свободное, а данные стираются только при перезаписи" }, { id: B, text: "Файл сохраняется в корзине дважды, поэтому удаление не работает" }, { id: C, text: "Операционная система сама делает резервную копию перед каждым удалением" }, { id: D, text: "Данные стираются, но система умеет восстанавливать их из памяти процессора" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Файловая система не стирает данные сразу: сначала помечает занятое место свободным. Пока это место не перезаписано, прежние данные лежат на диске." }
+
+- id: inf-10-base-024
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Размер блока файловой системы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Файловая система записывает данные блоками по 4 КБ. Сколько блоков займёт файл размером 3 Мбайта? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [768], answer_text: "768", explanation: "3 Мбайта = 3 · 1024 = 3072 Кбайта, значит блоков 3072 : 4 = 768. Записывая данные, система разбивает их на такие блоки и отмечает занятые места." }
+
+- id: inf-10-base-025
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Правило трёх копий"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Ученик сделал три копии проектной работы, но все три лежат на том же диске. В чём ошибка?"
+  student_view: { options: [{ id: C, text: "Ничего страшного: диск не поломается" }, { id: A, text: "При поломке диска пропадут все три копии сразу: одну из них нужно хранить в другом месте" }, { id: D, text: "Копии нужно переименовать в «_final», тогда они не пропадут" }, { id: B, text: "Три копии занимают слишком много места, хватит одной" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Правило трёх копий: оригинал плюс две резервные копии, причём хотя бы одна — не на том же носителе. Копии рядом с оригиналом не защищают от отказа диска." }
+
+- id: inf-10-base-026
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Авторское право"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Что запрещено делать с чужой программой без разрешения правообладателя?"
+  student_view: { options: [{ id: C, text: "Только продавать копии, а у себя использовать сколько угодно" }, { id: D, text: "Только использовать в коммерческих целях, а копировать для себя можно" }, { id: A, text: "Копировать и распространять её, продавать копии и обходить лицензионную проверку" }, { id: B, text: "Ничего: программу можно установить и запускать бесплатно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Авторское право защищает код, оформление и документацию. Законно делать резервную копию для себя и использовать свободное ПО — но не распространять чужие программы." }
+
+- id: inf-10-base-027
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Виды лицензий"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид лицензии — что она разрешает."
+  student_view: { left: ["Бесплатная (freeware)", "Пробная (trial)", "Условно бесплатная (shareware)", "Платная на одного пользователя"], right: ["использовать бесплатно, но не распространять и не менять", "работать ограниченное время или с ограничениями", "работать бесплатно с ограничениями, платная версия без них", "одна установка на один компьютер"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Бесплатная (freeware)": "использовать бесплатно, но не распространять и не менять", "Пробная (trial)": "работать ограниченное время или с ограничениями", "Условно бесплатная (shareware)": "работать бесплатно с ограничениями, платная версия без них", "Платная на одного пользователя": "одна установка на один компьютер" }, explanation: "Лицензия определяет, что именно разрешено: бесплатно, платно, изменять, распространять. Бесплатная программа не обязана разрешать всё." }
+
+- id: inf-10-base-028
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "САПР"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Чем САПР отличается от обычного графического редактора?"
+  student_view: { options: [{ id: C, text: "Разницы нет: это два названия одной и той же программы" }, { id: B, text: "САПР рисует только в векторе, а графический редактор — только в растре" }, { id: A, text: "САПР умеет считать по чертежу: размеры, площади, прочности — и проверяет, не нарушены ли ограничения" }, { id: D, text: "САПР работает без компьютера, на бумаге с линейкой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Система автоматизированного проектирования считает по модели, а не только рисует. Примеры: FreeCAD, OpenSCAD, КОМПАС." }
+
+- id: inf-10-base-029
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Формулировка условия Фано"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Как звучит условие Фано для кода с несколькими символами?"
+  student_view: { options: [{ id: A, text: "Ни одно кодовое слово не должно быть началом другого" }, { id: B, text: "Все кодовые слова должны начинаться с разных цифр" }, { id: C, text: "Все кодовые слова должны иметь одинаковую длину" }, { id: D, text: "Каждое кодовое слово должно заканчиваться единицей" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Тогда расшифровка слева направо однозначна: как только очередной кусок совпал с кодом символа, он «закрыт». Такой код называют префиксным." }
+
+- id: inf-10-base-030
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Равномерный код"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "В системе кодирования 8 символов, каждому отведено одинаковое число бит. Сколько бит займёт сообщение из 5 символов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "Равномерный код всегда префиксный: 8 = 2³, значит на символ 3 бита. Сообщение из 5 символов занимает 5 · 3 = 15 бит." }
+
+- id: inf-10-base-031
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Проверка кода на Фано"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "В каком коде нарушено условие Фано?"
+  student_view: { options: [{ id: C, text: "А — 0, Б — 10, В — 11" }, { id: D, text: "А — 10, Б — 11, В — 0" }, { id: A, text: "А — 0, Б — 1, В — 10" }, { id: B, text: "А — 00, Б — 01, В — 10" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Проверяем все пары: в коде «А — 0, Б — 1, В — 10» слово 1 является началом слова 10, поэтому сообщение из двух единиц читается и как ББ, и как В — однозначной расшифровки нет. В остальных кодах ни одно слово не является началом другого." }
+
+- id: inf-10-base-032
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Формула 2^i = N"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Сообщение различает 32 равновероятных исхода. Сколько бит оно несёт? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Ответ ищем как i, при котором 2^i = 32: 2⁵ = 32, значит сообщение несёт 5 бит. Всегда проверяем: подставили 2⁵ и получили исходное число." }
+
+- id: inf-10-base-033
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Число исходов по битам"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Сообщение несёт 6 бит информации. Сколько равновероятных исходов оно способно различить? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [64], answer_text: "64", explanation: "Идём от формулы в другую сторону: N = 2^i = 2⁶ = 64 исхода. Каждый бит делит варианты пополам, шесть бит делят 64 вариантов на один." }
+
+- id: inf-10-base-034
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Равновероятность исходов"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Почему формулу 2^i = N нельзя применять к исходам лотереи?"
+  student_view: { options: [{ id: C, text: "В лотерее используют десятичную систему, а не двоичную" }, { id: A, text: "Исходы лотереи не равновероятны, а формула считает, что каждый вариант одинаково вероятен" }, { id: B, text: "Исходов лотереи слишком много, чтобы их пересчитать" }, { id: D, text: "Формула работает, просто нужно округлить результат до целого" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Сообщение «я выиграл» снимает куда больше неопределённости, чем «я не выиграл». Подход работает там, где исходы равновероятны." }
+
+- id: inf-10-base-035
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Обратная задача объёмного подхода"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-01-measure
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Сообщение из 180 символов занимает 720 бит. Сколько символов было в алфавите, если все символы кодировались одинаково? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "Сначала вес символа: i = 720 : 180 = 4 бита. Затем мощность алфавита: N = 2^i = 2⁴ = 16 символов. Объёмный подход не учитывает смысл сообщения — важны только длина и алфавит." }
+
+- id: inf-10-base-036
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Помехи"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Что такое помехи при передаче информации?"
+  student_view: { options: [{ id: D, text: "Скорость, с которой передаётся сообщение" }, { id: A, text: "Посторонние воздействия, которые искажают сигнал в канале связи" }, { id: C, text: "Программы, которые шифруют сообщение перед отправкой" }, { id: B, text: "Файлы, которые слишком велики для канала" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Шум, наводки и потери в линии искажают сигнал. Борются избыточностью: повторами, контрольными суммами и кодами с проверкой на чётность." }
+
+- id: inf-10-base-037
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Время передачи файла"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Файл размером 2 Кбайта передаётся по каналу со скоростью 2048 бит в секунду. Сколько секунд займёт передача? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Сначала объём в битах: 2 · 1024 · 8 = 16384 бит. Затем время = объём : скорость = 16384 : 2048 = 8 секунд. Забыть перевести Кбайты в биты — самая частая ошибка." }
+
+- id: inf-10-base-038
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Скорость и пропускная способность"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Чем скорость передачи данных отличается от пропускной способности канала?"
+  student_view: { options: [{ id: D, text: "Разницы нет: оба термина означают количество переданных данных" }, { id: B, text: "Это одно и то же: скорость всегда равна пропускной способности" }, { id: C, text: "Пропускная способность измеряется в байтах, а скорость — в битах" }, { id: A, text: "Пропускная способность — сколько данных пройдёт без искажений, а скорость показывает, сколько бит идёт в секунду вообще" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Канал может иметь высокую скорость, но плохую помехоустойчивость: тогда часть данных приходит с ошибками и приходится передавать повторно." }
+
+- id: inf-10-base-039
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Вес символа по алфавиту"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Алфавит содержит 64 символа. Сколько бит отводится на один символ? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Ищем i, чтобы 2^i = 64: 2⁶ = 64, значит на символ 6 бит. Объёмный подход отвечает на вопрос о весе символа, а не о числе вариантов исхода." }
+
+- id: inf-10-base-040
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Объём сообщения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Сообщение состоит из 140 символов, алфавит содержит 32 символа. Сколько бит занимает сообщение? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [700], answer_text: "700", explanation: "32 = 2⁵, значит вес символа 5 бит. Объём I = K · i = 140 · 5 = 700 бит, то есть 700 : 8 = 87,5 байта. Смысл сообщения подход не учитывает." }
+
+- id: inf-10-base-041
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Передача файла с переводом единиц"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Файл размером 300 Кбайт передаётся по каналу со скоростью 600 Кбит в секунду. Сколько секунд займёт передача? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Объём в битах: 300 · 1024 · 8 = 2 457 600 бит. Скорость: 600 · 1024 = 614 400 бит/с. Время = 2 457 600 : 614 400 = 4 секунды. Кбайты и Кбиты различаются в 8 раз, путать их нельзя." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bank2.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, fracBits, rowsOf, evalAt,
+# equivalent, dnf, knf, solve) и проверены assert-ами: если число или формула
+# не сошлись, сборка падает. Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-base-042 … inf-10-base-071 (30 заданий).
+- id: inf-10-base-042
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Частота и число ядер"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Чем тактовая частота процессора отличается от числа ядер?"
+  student_view: { options: [{ id: A, text: "Частота — это скорость работы одного потока, а ядра — это сколько вычислений выполняется параллельно" }, { id: D, text: "Ничем: это два названия одной характеристики" }, { id: B, text: "Частота — это число ядер, умноженное на такт в секунду" }, { id: C, text: "Ядра отвечают за объём памяти, а частота — за тип накопителя" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Много ядер на низкой частоте выигрывают в многозадачности, а высокая частота при малом числе ядер — в однопоточных задачах. Путать их — самая частая ошибка при выборе процессора." }
+
+- id: inf-10-base-043
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Единицы памяти и магистраль"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-mem], meta: [plan-actions] }
+  prompt: "Компьютер хранит данные порциями по 8 бит (1 байт). Сколько бит в четырёх байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "8 бит в одном байте, значит в четырёх байтах 8 · 4 = 32 бит. Байт — минимальная адресуемая единица памяти: по одному биту процессор не адресует, поэтому объём памяти всегда кратен 8." }
+
+- id: inf-10-base-044
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Дефицит памяти"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Для сборки схемы выбрали компьютер с 32 ГБ оперативной памяти. Одновременно работают браузер (12 ГБ), видеоредактор (14 ГБ) и 3D-редактор (9 ГБ). Сколько гигабайт памяти не хватит? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Потребность 12 + 14 + 9 = 35 ГБ, а есть 32 ГБ. Не хватает 35 − 32 = 3 ГБ. Симптом нехватки памяти известен: система сбрасывает данные на накопитель и начинает подтормаживать." }
+
+- id: inf-10-base-045
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Однопоточные задачи"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Есть два процессора: первый — 8 ядер по 2 ГГц, второй — 4 ядра по 3 ГГц. Какой выбрать для однопоточной работы (например, для компиляции большой программы) и почему?"
+  student_view: { options: [{ id: B, text: "Первый: ядер больше, значит работа всегда идёт быстрее независимо от частоты" }, { id: A, text: "Второй: однопоточная задача выполняется одним потоком, поэтому важна частота — 3 ГГц, а число ядер здесь не используется" }, { id: C, text: "Первой: 8 ядер по 2 ГГц дают в два раза больше вычислений в секунду" }, { id: D, text: "Одинаково: для однопоточной задачи ядра и частота не имеют значения" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Однопоточный код занимает одно ядро, остальные семь простаивают. Решает тактовая частота, поэтому процессор с меньшим числом ядер, но большей частотой выигрывает именно в таких задачах." }
+
+- id: inf-10-base-046
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Тенденции развития"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Установите соответствие: тенденция развития компьютеров — что она означает."
+  student_view: { left: ["Многоядерность", "Мобильность", "Облачные вычисления", "Миниатюризация"], right: ["задачи делятся между ядрами процессора", "системный блок превращается в ноутбук, планшет и смартфон", "тяжёлые вычисления уходят с устройства в дата-центр", "на квадратный сантиметр помещается всё больше вычислений"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Многоядерность": "задачи делятся между ядрами процессора", "Мобильность": "системный блок превращается в ноутбук, планшет и смартфон", "Облачные вычисления": "тяжёлые вычисления уходят с устройства в дата-центр", "Миниатюризация": "на квадратный сантиметр помещается всё больше вычислений" }, explanation: "Четыре тенденции идут параллельно: ядер становится больше, устройство меньше, а тяжёлые вычисления уезжают в дата-центр. Общая идея — та же задача выполняется меньшим устройством и быстрее." }
+
+- id: inf-10-base-047
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Разбиение задачи на части"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Суперкомпьютер объединяет 8192 процессоров. Задачу разделили на 64 равных независимых частей и выделили каждой столько процессоров, сколько помещается без остатка. Сколько процессоров достанется одной части? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [128], answer_text: "128", explanation: "8192 : 64 = 128 процессоров на часть. Параллельность возможна именно потому, что части независимы: каждая считает своё и не ждёт остальных." }
+
+- id: inf-10-base-048
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Суперкомпьютер"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Почему суперкомпьютер — это не «просто очень быстрый персональный компьютер»?"
+  student_view: { options: [{ id: C, text: "Он не имеет процессоров и работает на оптическом принципе" }, { id: B, text: "Он умеет то же самое, просто делает это быстрее в сто раз" }, { id: D, text: "Он отличается только размером корпуса и ценой" }, { id: A, text: "Он решает принципиально другие по объёму задачи: прогноз погоды, моделирование климата, расшифровку генома — где нужно разбить вычисления на миллиарды простых операций" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Отличие не в скорости одной операции, а в объёме: суперкомпьютер складывает тысячи независимых вычислений в одну огромную задачу. Обычный ПК для таких задач просто не имеет нужного запаса вычислений." }
+
+- id: inf-10-base-049
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Бесплатное и свободное ПО"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Чем свободное программное обеспечение отличается от просто бесплатного?"
+  student_view: { options: [{ id: A, text: "Свободное даёт четыре свободы: использовать, изучать, копировать и распространять в изменённом виде, а бесплатное может запрещать изменение кода" }, { id: C, text: "Ничем: это два названия одного и того же понятия" }, { id: D, text: "Свободное работает только в Linux, а бесплатное — в Windows" }, { id: B, text: "Свободное всегда стоит ноль рублей, а бесплатное бывает платным после пробного срока" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Цена и свобода — разные вещи. Программа может стоить ноль рублей и при этом запрещать правку кода: лицензия важнее ярлыка «бесплатно»." }
+
+- id: inf-10-base-050
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Особенности мобильного ПО"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Установите соответствие: особенность программного обеспечения мобильного устройства — как она проявляется."
+  student_view: { left: ["Ограниченность ресурсов", "Автоматические обновления", "Ограниченная файловая система", "Приложения из магазина"], right: ["часть вычислений переносится на сервер, чтобы экономить заряд и память", "разработчик обновляет программу, не спрашивая разрешения", "приложение видит только свою папку и не лезет в чужие данные", "программа скачивается из магазина приложений, а не устанавливается с диска"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Ограниченность ресурсов": "часть вычислений переносится на сервер, чтобы экономить заряд и память", "Автоматические обновления": "разработчик обновляет программу, не спрашивая разрешения", "Ограниченная файловая система": "приложение видит только свою папку и не лезет в чужие данные", "Приложения из магазина": "программа скачивается из магазина приложений, а не устанавливается с диска" }, explanation: "Смартфон экономнее расходует заряд и память, обновления приходят автоматически, а файловая система ограничивает приложение собственной папкой. Из-за этого часть вычислений уходит на сервер." }
+
+- id: inf-10-base-051
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Обращение к устройству"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Почему прикладная программа не обращается к устройству (например, к принтеру) напрямую, а через операционную систему?"
+  student_view: { options: [{ id: B, text: "Потому что прикладная программа работает медленнее операционной системы" }, { id: D, text: "Потому что прямой доступ к устройству запрещён лицензией программы" }, { id: A, text: "Потому что обращения переводит операционная система вместе с драйвером: без них система не знает, как управлять этим устройством" }, { id: C, text: "Потому что устройство нельзя использовать из прикладной программы в принципе" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Драйвер — «переводчик» между ОС и конкретным устройством. Прикладная программа работает с абстракцией и не знает, как устроен принтер, поэтому работать с железом напрямую она не умеет." }
+
+- id: inf-10-base-052
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Задачи файловой системы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Что делает файловая система?"
+  student_view: { options: [{ id: A, text: "Определяет правила записи данных на носитель и доступа к ним: имена файлов, структуру, права доступа и поведение при сбое питания" }, { id: B, text: "Только удаляет ненужные файлы и освобождает место на накопителе" }, { id: D, text: "Только запускает установленные программы" }, { id: C, text: "Только переводит текст в двоичный код" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Файловая система — это правила, а не отдельная программа: она определяет, как данные разбиваются на блоки, как помечаются занятые места и что происходит с файлом при удалении." }
+
+- id: inf-10-base-053
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Свободное место на диске"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "На накопителе объёмом 500 ГБ занято: системные файлы — 40 ГБ, документы — 25 ГБ, фотографии — 180 ГБ, видео — 210 ГБ. Сколько гигабайт осталось свободно? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [45], answer_text: "45", explanation: "40 + 25 + 180 + 210 = 455 ГБ занято. Свободно 500 − 455 = 45 ГБ. Именно эту проверку делают при обслуживании компьютера, чтобы найти, что съело место." }
+
+- id: inf-10-base-054
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Виды носителей"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид носителя — как он работает и чего лишён."
+  student_view: { left: ["Жёсткий диск (HDD)", "Твердотельный накопитель (SSD)", "Флеш-память", "Облачное хранилище"], right: ["вращающиеся пластины с магнитной записью: дёшево за гигабайт, но медленно", "ячейки памяти без движущихся деталей: быстро и надёжно, но дороже за гигабайт", "те же ячейки памяти в компактном корпусе: компактно, но теряет данные без питания", "файлы хранятся на сервере в интернете: доступно с любого устройства, но нужен интернет"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Жёсткий диск (HDD)": "вращающиеся пластины с магнитной записью: дёшево за гигабайт, но медленно", "Твердотельный накопитель (SSD)": "ячейки памяти без движущихся деталей: быстро и надёжно, но дороже за гигабайт", "Флеш-память": "те же ячейки памяти в компактном корпусе: компактно, но теряет данные без питания", "Облачное хранилище": "файлы хранятся на сервере в интернете: доступно с любого устройства, но нужен интернет" }, explanation: "Главный тренд — уход от механики: SSD и флеш-память работают без движущихся деталей. У каждого вида своя плата: HDD дешёвый, SSD быстрый, облако доступно отовсюду, но зависит от интернета." }
+
+- id: inf-10-base-055
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Очистка корзины"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Почему очистка корзины и очистка диска — это разные действия?"
+  student_view: { options: [{ id: A, text: "Очистка корзины удаляет сами файлы, но место на накопителе освобождается только при последующей перезаписи; очистка диска убирает временные файлы и кэш" }, { id: B, text: "Очистка корзины не удаляет файлы вообще, поэтому место не освобождается никогда" }, { id: C, text: "Различия нет: это два названия одной операции" }, { id: D, text: "Очистка диска удаляет только фотографии, а корзина — только документы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Файловая система при удалении сначала помечает место свободным, а данные стираются при перезаписи. Поэтому «свободное место» может не совпадать с реально освобождённым — это разные вещи, и их путают." }
+
+- id: inf-10-base-056
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Виды прикладного ПО"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Какая программа относится к инженерному прикладному ПО?"
+  student_view: { options: [{ id: A, text: "Система автоматизированного проектирования" }, { id: B, text: "Видеоредактор" }, { id: C, text: "Текстовый процессор" }, { id: D, text: "Браузер" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Прикладное ПО делится по назначению: офисное, графическое, мультимедийное, инженерное (САПР), обучающее и коммуникационное. САПР отличается тем, что считает по чертежу." }
+
+- id: inf-10-base-057
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "ПО по назначению"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид прикладного ПО — примеры программ этого вида."
+  student_view: { left: ["Офисное", "Графическое", "Инженерное", "Мультимедийное"], right: ["LibreOffice Writer, LibreOffice Calc, LibreOffice Impress", "Inkscape, GIMP — работа с изображениями", "FreeCAD, КОМПАС — чертежи, расчёты и модели", "видеоредактор, аудиоредактор — монтаж звука и видео"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Офисное": "LibreOffice Writer, LibreOffice Calc, LibreOffice Impress", "Графическое": "Inkscape, GIMP — работа с изображениями", "Инженерное": "FreeCAD, КОМПАС — чертежи, расчёты и модели", "Мультимедийное": "видеоредактор, аудиоредактор — монтаж звука и видео" }, explanation: "Классификация идёт по назначению, а не по интерфейсу. Основной офисный набор в проекте — LibreOffice: Writer для текста, Calc для таблиц, Impress для презентаций." }
+
+- id: inf-10-base-058
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Риски пиратского ПО"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Почему пиратская копия программы опасна не только с точки зрения закона?"
+  student_view: { options: [{ id: D, text: "Опасности нет: если программа запустилась, значит она безопасна" }, { id: A, text: "Взломанные сборки часто содержат добавленный вредоносный код, поэтому рискуют и данные, и деньги" }, { id: B, text: "Пиратские копии работают медленнее, потому что в них нет драйверов" }, { id: C, text: "Пиратское ПО не запускается на компьютерах с 64-разрядной системой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Лицензионная проверка обходится вмешательством в код, и в сборку попадает всё, что добавил автор сборки. Это и нарушение авторского права, и источник вирусов." }
+
+- id: inf-10-base-059
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Корпоративная лицензия"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Организация купила корпоративную лицензию на 50 рабочих мест, но программой пользуются 60 сотрудников. В чём проблема и что произойдёт?"
+  student_view: { options: [{ id: A, text: "Корпоративная лицензия даёт право на 50 рабочих мест, поэтому у 10 сотрудников копия не лицензирована: это нарушение договора и риск претензий правообладателя" }, { id: C, text: "Нужно лишь доплатить за 10 рабочих мест по той же цене, и нарушения не будет" }, { id: B, text: "Никаких проблем: корпоративная лицензия не ограничивает число пользователей" }, { id: D, text: "Проблемы нет: лицензия ограничивает только число компьютеров, а не людей" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Корпоративная лицензия — это лицензия на строго определённое число рабочих мест. Договор заключается заранее, и превышение числа пользователей означает использование нелицензионных копий." }
+
+- id: inf-10-base-060
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Информация, данные, знание"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Установите соответствие: понятие — что оно означает."
+  student_view: { left: ["Информация", "Данные", "Знание"], right: ["сведения, снимающие неопределённость", "информация, представленная в виде, пригодном для обработки", "информация, полученная на опыте и применяемая для решения задач"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Информация": "сведения, снимающие неопределённость", "Данные": "информация, представленная в виде, пригодном для обработки", "Знание": "информация, полученная на опыте и применяемая для решения задач" }, explanation: "Информация снимает неопределённость, данные — это её запись в пригодном для обработки виде, знание требует проверки и опыта. Не всякая информация становится знанием." }
+
+- id: inf-10-base-061
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Длина сообщения в коде"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Код: А — 0, Б — 10, В — 110. Сообщение «АБВ» записано этим кодом. Сколько двоичных знаков содержится в этой записи? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Складываем длины кодовых слов: А — 0 (1 знак), Б — 10 (2 знака), В — 110 (3 знака). 1 + 2 + 3 = 6. Получается запись 0 10 110, которая и читается однозначно." }
+
+- id: inf-10-base-062
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Однозначность расшифровки"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "Сообщение 001 записано кодом А — 0, Б — 01, В — 1. Как читается это сообщение?"
+  student_view: { options: [{ id: B, text: "Однозначно: 0 — это А, далее 01 — это Б, расшифровка АБ" }, { id: A, text: "Двусмысленно: и как АБ (0 + 01), и как ААВ (0 + 0 + 1) — условие Фано нарушено" }, { id: D, text: "Сообщение не расшифровывается вовсе" }, { id: C, text: "Однозначно: 001 разбирается как три отдельных символа" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Кодовое слово 0 является началом слова 01, поэтому условие Фано нарушено: одни и те же биты 001 читаются и как АБ, и как ААВ. Значит, расшифровать однозначно нельзя — проверять надо попарно все слова кода, а не «на глаз»." }
+
+- id: inf-10-base-063
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Эталон одного бита"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Что называется эталоном одного бита информации?"
+  student_view: { options: [{ id: D, text: "Вопрос, на который можно ответить только «да» или «нет»" }, { id: B, text: "Один символ в двоичной записи числа" }, { id: C, text: "Сообщение, которое несёт ровно один байт информации" }, { id: A, text: "Сообщение с двумя равновероятными ответами «да» и «нет», делящее варианты пополам" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Бит — это не символ и не байт, а деление вариантов пополам. Каждый ответ «да/нет», делящий варианты на две равные части, снимает ровно один бит неопределённости." }
+
+- id: inf-10-base-064
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Число вопросов «да/нет»"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Счёт в матче может быть от 0:0 до 7:7 — всего 128 равновероятных вариантов. Сколько вопросов «да/нет», каждый из которых делит варианты пополам, нужно задать, чтобы узнать счёт однозначно? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Каждый вопрос делит варианты пополам: 128 → 64 → 32 → 16 → 8 → 4 → 2 → 1. Всего 7 вопросов. Проверка: 2⁷ = 128." }
+
+- id: inf-10-base-065
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Неравновероятные исходы"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "В лотерее 64 билета, и вероятность выигрыша сильно зависит от номера: одни билеты выигрывают чаще других. Можно ли здесь посчитать объём сообщения по формуле 2^i = N?"
+  student_view: { options: [{ id: B, text: "Да: объём сообщения зависит только от числа билетов, а не от их вероятностей" }, { id: A, text: "Нет: формула считает, что все исходы равновероятны, а здесь частые исходы снимают неопределённость слабее, чем редкие" }, { id: D, text: "Нет: формула применима только к двоичным сигналам" }, { id: C, text: "Да, но результат нужно округлить до ближайшего целого бита" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Формула 2^i = 64 дала бы i = 6, но только при равновероятности. Сообщение о редком исходе снимает неопределённость сильнее, чем о частом, поэтому одного деления пополам здесь недостаточно." }
+
+- id: inf-10-base-066
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Информационные процессы"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Установите соответствие: информационный процесс — что при нём происходит."
+  student_view: { left: ["Получение", "Хранение", "Обработка", "Передача"], right: ["приём информации от источника", "сохранение информации на носителе без изменения", "изменение информации по заданным правилам", "перенос информации по каналу связи от источника к получателю"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Получение": "приём информации от источника", "Хранение": "сохранение информации на носителе без изменения", "Обработка": "изменение информации по заданным правилам", "Передача": "перенос информации по каналу связи от источника к получателю" }, explanation: "Базовые действия — получение, хранение, обработка и передача. Каждое из них может сопровождаться помехами, потерями и требовать контроля правильности результата." }
+
+- id: inf-10-base-067
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Время передачи при избыточности"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Файл размером 4 Кбайта передаётся по каналу со скоростью 8192 бит в секунду. Сколько секунд займёт передача? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Объём в битах: 4 · 1024 · 8 = 32768 бит. Время = объём : скорость = 32768 : 8192 = 4 с. Забыть перевести Кбайты в биты — самая частая ошибка в таких задачах." }
+
+- id: inf-10-base-068
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Обратная связь"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "При передаче по каналу с помехами сообщение из 5 блоков пришлось отправлять повторно, каждый раз заново целиком. Из-за этого потери выросли на 30 бит. Что показывает этот пример?"
+  student_view: { options: [{ id: A, text: "Избыточность — это плата за надёжность: повторы снижают полезную скорость, и канал приходится делать быстрее, чтобы передать то же самое за то же время" }, { id: D, text: "Повторять сообщение нужно только при хранении, а при передаче это лишний расход" }, { id: B, text: "Помехи не влияют на скорость передачи: важна только разрядность сигнала" }, { id: C, text: "Избыточность ускоряет передачу, потому что повторы добавляют данные" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "При повторной отправке всех пяти блоков потери выросли на 30 бит. Чем больше избыточность, тем надёжнее канал и тем меньше полезной скорости: это обмен, и его всегда надо учитывать при расчёте времени." }
+
+- id: inf-10-base-069
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Два подхода к измерению"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Установите соответствие: утверждение темы — как оно формулируется."
+  student_view: { left: ["Каким подходом решается задача?", "Что даёт 1 бит", "Что означает 2^i = N", "Как выбрать подход"], right: ["вероятностным: сообщение ценно тем, что отсекает варианты", "деление числа вариантов пополам", "i — число бит в сообщении, N — число равновероятных исходов", "если варианты равновероятны — вероятностный, если считаем место в файле — объёмный"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Каким подходом решается задача?": "вероятностным: сообщение ценно тем, что отсекает варианты", "Что даёт 1 бит": "деление числа вариантов пополам", "Что означает 2^i = N": "i — число бит в сообщении, N — число равновероятных исходов", "Как выбрать подход": "если варианты равновероятны — вероятностный, если считаем место в файле — объёмный" }, explanation: "Вероятностный подход отвечает на вопрос о числе вариантов, объёмный — о числе символов и алфавите. Путать их — первая из типичных ошибок при решении задач по теме." }
+
+- id: inf-10-base-070
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Объём файла в битах"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Файл размером 2 Мбайта. Сколько бит он содержит? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16777216], answer_text: "16777216", explanation: "Сначала в байты: 2 · 1024 · 1024 = 2097152 байт. Затем в биты: 2097152 · 8 = 16777216 бит. Считать время передачи можно только после такого перевода — из мегабайтов объём в битах получается умножением на восемь." }
+
+- id: inf-10-base-071
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Мбайты и Мбиты"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "Файл передаётся по каналу со скоростью 2 Мбит в секунду. Как перевести объём файла в биты и посчитать время?"
+  student_view: { options: [{ id: B, text: "Объём в байтах умножаем на 1 000 000, а скорость делим на 8: важно только, чтобы множители отличались" }, { id: D, text: "Делить объём в мегабайтах на скорость в мегабитах можно сразу, без перевода объёма в биты" }, { id: A, text: "Объём в байтах умножаем на 1024 (Мбайт) и на 8, скорость в Мбит/с умножаем на 1 000 000, затем делим объём на скорость" }, { id: C, text: "Смешивать можно: 2 Мбайта и 2 Мбит — это одно и то же, ведь множитель одинаковый" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "В байтах множитель 1024, и один байт равен 8 битам. Скорость в Мбит/с переводится множителем 1 000 000. Смешивать эти множители нельзя: ошибка «2 Мбайта это 16 Мбит» возникает именно из-за этого, и ответ получается в 8 раз меньше нужного." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bases-bank3.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, bitLen) и проверены assert-ами:
+# если число или формула не сошлись, сборка падает. Эталоны code_run прогоняются
+# локальным Python, expected_stdout взят из реального вывода solution_code.
+# Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-base-072 … inf-10-base-083 (12 заданий).
+- id: inf-10-base-072
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Подбор памяти по бюджету"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10hw-01-pc
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-mem], meta: [plan-actions] }
+  prompt: "В магазине есть модули оперативной памяти: 4 ГБ за 1500 рублей, 8 ГБ за 2600 рублей и 16 ГБ за 4800 рублей. Нужно купить ровно три модуля и уложиться в 12 000 рублей. Переберите все варианты и выведите два числа через пробел: наибольший суммарный объём памяти в ГБ, который можно купить, и стоимость этого варианта в рублях."
+  student_view: { language: python, template: "# Переберите все тройки модулей и найдите лучшую\nmods = [(4, 1500), (8, 2600), (16, 4800)]\nbudget = 12000\nbest_gb = 0\nbest_cost = 0\nfor a in mods:\n    for b in mods:\n        for c in mods:\n            gb = ...\n            cost = ...\n            # пропускаем слишком дорогие варианты, лучший запоминаем\n            ...\nprint(best_gb, best_cost)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "mods = [(4, 1500), (8, 2600), (16, 4800)]\nbudget = 12000\nbest_gb = 0\nbest_cost = 0\nfor a in mods:\n    for b in mods:\n        for c in mods:\n            gb = a[0] + b[0] + c[0]\n            cost = a[1] + b[1] + c[1]\n            if cost <= budget:\n                if gb > best_gb:\n                    best_gb = gb\n                    best_cost = cost\nprint(best_gb, best_cost)", expected_stdout: "36 11100", explanation: "Тройки перебираются с повторениями: одинаковые планки покупать можно, поэтому всего вариантов 3 · 3 · 3 = 27. Лучший из уложившихся в бюджет — 16 + 16 + 4 ГБ: это 36 ГБ за 11 100 рублей. На 40 ГБ денег уже не хватает: 16 + 16 + 8 ГБ стоят 12 200 рублей, а на 36 ГБ остаётся ещё 900. Так и работают с комплектующими: сначала ограничение (бюджет и число слотов), потом перебор вариантов, и только потом выбор." }
+
+- id: inf-10-base-073
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Частота обновления и кабель"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-02-config
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Видеокарта умеет выводить изображение 1920 × 1080 с частотой обновления 144 Гц, но монитор подключён кабелем, который передаёт только 1080p 60 Гц. Что произойдёт, если в настройках видео выбрать 144 Гц?"
+  student_view: { options: [{ id: D, text: "Разрешение уменьшится до 1280 × 720, а частота поднимется до 144 Гц" }, { id: B, text: "144 Гц применится, потому что частоту ограничивает только видеокарта, а кабель на это не влияет" }, { id: A, text: "Частоту 144 Гц монитор через этот кабель не получит: система вернёт 60 Гц или попросит кабель, который её поддерживает" }, { id: C, text: "Монитор сломается: частота выше его паспортной недопустима" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Частоту обновления ограничивает самое слабое звено цепочки «видеокарта — кабель — монитор». Здесь кабель пропускает только 60 Гц, поэтому запас видеокарты просто не используется, и монитор работает на 60 Гц. В настройках видео полезно смотреть все три значения: сколько умеет карта, сколько поддерживает монитор и что пропускает подключение." }
+
+- id: inf-10-base-074
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Закон Мура"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-03-trends
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "О чём говорит закон Мура?"
+  student_view: { options: [{ id: A, text: "Число элементов на единицу площади кристалла примерно удваивается каждые два года" }, { id: C, text: "Объём оперативной памяти компьютера удваивается каждый год" }, { id: B, text: "Производительность любого процессора удваивается каждые два года" }, { id: D, text: "Тактовая частота процессора удваивается каждые пять лет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Закон Мура относится к плотности элементов на кристалле: совершенствование технологии позволяет упаковывать на той же площади примерно вдвое больше элементов раз в два года. Отсюда растут и объёмы памяти, и число ядер, но формулировка «производительность удваивается каждые два года» — это эмпирическое наблюдение, а не сам закон. Действует закон не бесконечно: когда транзисторы уменьшить не удаётся, развитие уходит в новые архитектуры и специализированные вычислители." }
+
+- id: inf-10-base-075
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Совместимость версий"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-04-software
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Файл, созданный в старой версии программы, перестал открываться после обновления. Почему так бывает и как подстраховаться?"
+  student_view: { options: [{ id: C, text: "Ничего: файл нужно открывать только самой новой версией программы" }, { id: D, text: "Обновление всегда удаляет старые файлы, поэтому их придётся заранее копировать вручную" }, { id: B, text: "Файл повредился при обновлении: программа перезаписала его принудительно" }, { id: A, text: "Формат файла в новой версии изменился и обратной совместимости не предусмотрено — нужна копия документа, сохранённая в старом формате" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Формат файла — это договорённость между версиями программы. Когда разработчик меняет структуру, он не обязан добавлять чтение старого варианта: новая версия открывает новое, старая — старое. Надёжный приём — при сдаче работы сохранять копию в исходном формате и хранить её рядом с новой версией." }
+
+- id: inf-10-base-076
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Формат .odt"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "Документ сохранён в файле «Отчёт.odt». В какой программе его можно открыть и редактировать?"
+  student_view: { options: [{ id: D, text: "Только в текстовом редакторе, потому что .odt — обычный текст без разметки" }, { id: C, text: "В растровом графическом редакторе: .odt — это формат изображений" }, { id: A, text: "В LibreOffice Writer: этот формат сохраняет текстовый документ вместе с оформлением" }, { id: B, text: "В LibreOffice Calc: расширение .odt используется для таблиц" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Расширение .odt — открытый формат текстового документа LibreOffice Writer: в нём хранятся и буквы, и оформление, и таблицы. Формат открытый, поэтому документ можно открыть и другими программами. Если программа формат не поддерживает, она покажет текст без разметки — это не значит, что файл испорчен." }
+
+- id: inf-10-base-077
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Объём фотографий в папке"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-05-files
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-arch], meta: [plan-actions] }
+  prompt: "В папке лежат 15 файлов: 9 фотографий по 3 Мбайта и 6 документов по 0,5 Мбайта. Сколько мегабайт занимают только фотографии? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [27], answer_text: "27", explanation: "Каждая фотография занимает 3 Мбайта, их 9: 9 · 3 = 27 Мбайта. Документы в этот объём не входят — вместе со всеми файлами папка весит 27 + 6 · 0,5 = 30 Мбайта. Разница между «всей папкой» и «только фотографиями» и объясняет, зачем при очистке места считать по типам файлов." }
+
+- id: inf-10-base-078
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Что требует GPL"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Программист распространяет свою программу под лицензией GNU GPL. Что он обязан предоставить вместе с ней?"
+  student_view: { options: [{ id: C, text: "Только название автора и год создания, без исходного текста" }, { id: D, text: "Исходный текст, но только для компаний, купивших лицензию" }, { id: B, text: "Ничего: открывать исходный текст необязательно, запрет касается только продажи" }, { id: A, text: "Исходный текст программы: по этой лицензии любой может её изучить, изменить и распространять дальше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Свободная лицензия GNU GPL требует доступности исходного текста: в этом и состоит право изучать и изменять программу. Закрыть исходники и при этом распространять программу по GPL нельзя. Отсюда и другое правило: производные работы распространяются на тех же условиях, поэтому GPL называют заражающей лицензией." }
+
+- id: inf-10-base-079
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Что нарушает лицензию"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10hw-06-licenses
+  fgos_requirement: 1.1
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-pc-license], meta: [plan-actions] }
+  prompt: "Установите соответствие: действие пользователя — чем оно нарушает лицензию."
+  student_view: { left: ["Скопировали платную программу с одного компьютера на второй", "Удалили из бесплатной программы строку об авторских правах", "Передали свою программу по лицензии GPL, не приложив исходный текст", "Купили лицензию на одно рабочее место и поставили программу на 20 компьютеров"], right: ["копирование без разрешения правообладателя", "нарушение требования сохранять уведомление об авторских правах", "нарушение условия о передаче исходного текста", "превышение числа лицензированных рабочих мест"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Скопировали платную программу с одного компьютера на второй": "копирование без разрешения правообладателя", "Удалили из бесплатной программы строку об авторских правах": "нарушение требования сохранять уведомление об авторских правах", "Передали свою программу по лицензии GPL, не приложив исходный текст": "нарушение условия о передаче исходного текста", "Купили лицензию на одно рабочее место и поставили программу на 20 компьютеров": "превышение числа лицензированных рабочих мест" }, explanation: "Почти каждое нарушение связано с копированием или распространением: копия платной программы на чужом компьютере, удаление обязательного уведомления об авторских правах, передача своей программы без исходного текста и установка на 20 компьютеров копии с одной лицензией. Пользоваться программой, установленной законно, можно: претензии возникают там, где появляются копии." }
+
+- id: inf-10-base-080
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Число символов по длине кода"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-02-fano
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-fano], meta: [plan-actions] }
+  prompt: "В системе кодирования каждый символ заменяется кодовым словом длиной 3 бита. Сколько различных символов такая система способна закодировать?"
+  student_view: { options: [{ id: B, text: "3 символа: столько бит в кодовом слове" }, { id: C, text: "16 символов: три бита и ещё один бит на разделитель" }, { id: D, text: "Столько, сколько нужно: длина слова не ограничивает алфавит" }, { id: A, text: "8 символов: кодовое слово из трёх бит имеет 2³ = 8 вариантов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Кодовое слово длиной 3 бита имеет ровно 2^3 = 8 различных записей, и каждой отводится один символ алфавита. Это равномерный код: все символы занимают одинаковое число бит, и сообщение просто складывается из кодовых слов. Больше символов такая система не закодирует — записей просто не хватит." }
+
+- id: inf-10-base-081
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Разряд одного символа"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-03-content
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-shannon], meta: [plan-actions] }
+  prompt: "Алфавит текста содержит 66 символов: 52 латинские буквы, 10 цифр и 4 знака. Сколько бит нужно отвести на один символ, чтобы закодировать весь алфавит? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Ищем наименьшее i, для которого 2^i не меньше 66: 2^6 = 64 — на один символ не хватает, а 2^7 = 128 — хватает. Значит на символ отводят 7 бит, и один код останется неиспользованным. Округлять надо вверх: при 6 битах последние два символа получили бы одинаковый код, и расшифровать текст было бы невозможно." }
+
+- id: inf-10-base-082
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Цена переключения контекста"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-04-processes
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-channel], meta: [plan-actions] }
+  prompt: "Компьютер поочерёдно выполняет три программы, переключаясь между ними. Одно переключение занимает 2 миллисекунды. За минуту работы система выполнила 9000 переключений. Сколько секунд из этой минуты заняли сами переключения? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [18], answer_text: "18", explanation: "Каждое переключение занимает 0,002 с, а их было 9000: 9000 · 0,002 = 18 с. Это почти треть минуты — плата за многозадачность, которая ничего не вычисляла: сохранялись и восстанавливались состояния процессов. Чем короче программы работают по очереди, тем больше доля таких потерь, поэтому системе приходится задавать потокам разные приоритеты." }
+
+- id: inf-10-base-083
+  class: 10
+  topic: "Устройство и информация"
+  subtopic: "Тест, на котором программа не проходит"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10info-05-tasks
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-info-task], meta: [plan-actions] }
+  prompt: "При проверке программы один тест не совпал с ожидаемым результатом. Что это означает и что делают дальше?"
+  student_view: { options: [{ id: B, text: "Лишний тест: его надо удалить из набора, он не соответствует задаче" }, { id: D, text: "Ошибка в самом тесте: правильный ответ нужно заменить на результат программы" }, { id: A, text: "Тест выявил ошибку: по нему ищут причину в коде, исправляют её и прогоняют всю проверку заново" }, { id: C, text: "Программа готова: остальные тесты прошли, а этот можно не учитывать" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Тест, на котором программа не проходит, — это описание найденной ошибки, а не повод отмахнуться. Сначала по нему локализуют причину, потом правят код, и только после этого прогоняют весь набор заново, чтобы убедиться, что исправление ничего не сломало. Подменять ожидаемый ответ выводом программы нельзя: иначе ошибка станет новым правилом." }

@@ -1,10 +1,121 @@
 {
   "test_code": "graph9-proverka-v1",
-  "variant": "v1",
-  "max_score": 7,
-  "instruction": "Отвечайте точно.",
+  "kind": "proverka",
+  "grade": "9",
+  "title": "Проверочная: Графы и пути",
+  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
-  "tasks": [
+  "variant_count": 30,
+  "per_variant": 10,
+  "final": false,
+  "ktp_to": null,
+  "sections": [
+    {
+      "title": "Элементы графа, матрицы, КТП 24",
+      "ktp": [
+        {
+          "from": 24,
+          "to": 24
+        }
+      ],
+      "task_ids": [
+        "inf-9-graph-001",
+        "inf-9-graph-002",
+        "inf-9-graph-003",
+        "inf-9-graph-004",
+        "inf-9-graph-005",
+        "inf-9-graph-006",
+        "inf-9-graph-007",
+        "inf-9-graph-008",
+        "inf-9-graph-009",
+        "inf-9-graph-010",
+        "inf-9-graph-011",
+        "inf-9-graph-021",
+        "inf-9-graph-022",
+        "inf-9-graph-023",
+        "inf-9-graph-024"
+      ]
+    },
+    {
+      "title": "Списки и деревья, КТП 25",
+      "ktp": [
+        {
+          "from": 25,
+          "to": 25
+        }
+      ],
+      "task_ids": [
+        "inf-9-graph-012",
+        "inf-9-graph-013",
+        "inf-9-graph-014",
+        "inf-9-graph-025",
+        "inf-9-graph-026",
+        "inf-9-graph-027",
+        "inf-9-graph-028",
+        "inf-9-graph-029",
+        "inf-9-graph-030",
+        "inf-9-graph-031",
+        "inf-9-graph-032",
+        "inf-9-graph-033",
+        "inf-9-graph-034",
+        "inf-9-graph-035",
+        "inf-9-graph-036"
+      ]
+    },
+    {
+      "title": "Графы в решении задач, КТП 26",
+      "ktp": [
+        {
+          "from": 26,
+          "to": 26
+        }
+      ],
+      "task_ids": [
+        "inf-9-graph-016",
+        "inf-9-graph-017",
+        "inf-9-graph-037",
+        "inf-9-graph-038",
+        "inf-9-graph-039",
+        "inf-9-graph-040",
+        "inf-9-graph-041",
+        "inf-9-graph-042",
+        "inf-9-graph-043",
+        "inf-9-graph-044",
+        "inf-9-graph-045",
+        "inf-9-graph-046",
+        "inf-9-graph-047",
+        "inf-9-graph-048",
+        "inf-9-graph-049"
+      ]
+    },
+    {
+      "title": "Число путей в ациклическом графе, КТП 27",
+      "ktp": [
+        {
+          "from": 27,
+          "to": 27
+        }
+      ],
+      "task_ids": [
+        "inf-9-graph-018",
+        "inf-9-graph-019",
+        "inf-9-graph-020",
+        "inf-9-graph-050",
+        "inf-9-graph-051",
+        "inf-9-graph-052",
+        "inf-9-graph-053",
+        "inf-9-graph-054",
+        "inf-9-graph-055",
+        "inf-9-graph-056",
+        "inf-9-graph-057",
+        "inf-9-graph-058",
+        "inf-9-graph-059",
+        "inf-9-graph-060",
+        "inf-9-graph-061"
+      ]
+    }
+  ],
+  "pool": [
     {
       "id": "inf-9-graph-001",
       "lesson": "9graph-01-graphs",
@@ -13,24 +124,34 @@
       "prompt": "Что означают строка и столбец матрицы смежности?",
       "options": [
         {
-          "id": "A",
-          "text": "Откуда и куда"
-        },
-        {
-          "id": "B",
-          "text": "Цену и длину"
+          "id": "D",
+          "text": "Ничего"
         },
         {
           "id": "C",
           "text": "Имена вершин"
         },
         {
-          "id": "D",
-          "text": "Ничего"
+          "id": "A",
+          "text": "Откуда и куда"
+        },
+        {
+          "id": "B",
+          "text": "Цену и длину"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-graph-002",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В вершину D ведут вершины B (2 пути) и C (3 пути). Сколько путей в D? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
     },
     {
       "id": "inf-9-graph-003",
@@ -39,6 +160,10 @@
       "points": 1,
       "prompt": "Чем дерево отличается от графа?",
       "options": [
+        {
+          "id": "D",
+          "text": "Ничем"
+        },
         {
           "id": "A",
           "text": "Нет циклов"
@@ -50,68 +175,10 @@
         {
           "id": "C",
           "text": "Нет рёбер"
-        },
-        {
-          "id": "D",
-          "text": "Ничем"
         }
       ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-9-graph-005",
-      "lesson": "9graph-01-graphs",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "Что хранит весовая матрица вместо единиц?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Веса рёбер"
-        },
-        {
-          "id": "B",
-          "text": "Нули"
-        },
-        {
-          "id": "C",
-          "text": "Имена"
-        },
-        {
-          "id": "D",
-          "text": "Цвета"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-9-graph-006",
-      "lesson": "9graph-01-graphs",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "Что такое ориентированный граф?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Граф со стрелками"
-        },
-        {
-          "id": "B",
-          "text": "Граф без вершин"
-        },
-        {
-          "id": "C",
-          "text": "Только дерево"
-        },
-        {
-          "id": "D",
-          "text": "Только цепочка"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-9-graph-004",
@@ -124,6 +191,60 @@
       "key": "3"
     },
     {
+      "id": "inf-9-graph-005",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что хранит весовая матрица вместо единиц?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Нули"
+        },
+        {
+          "id": "A",
+          "text": "Веса рёбер"
+        },
+        {
+          "id": "C",
+          "text": "Имена"
+        },
+        {
+          "id": "D",
+          "text": "Цвета"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-graph-006",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое ориентированный граф?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Только дерево"
+        },
+        {
+          "id": "D",
+          "text": "Только цепочка"
+        },
+        {
+          "id": "A",
+          "text": "Граф со стрелками"
+        },
+        {
+          "id": "B",
+          "text": "Граф без вершин"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
       "id": "inf-9-graph-007",
       "lesson": "9graph-01-graphs",
       "type": "numeric_base",
@@ -132,6 +253,1409 @@
       "base": 10,
       "expected": 7,
       "key": "7"
+    },
+    {
+      "id": "inf-9-graph-008",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько единиц в матрице смежности цепочки 1→2→3? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-009",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько рёбер в звезде: центр и 4 луча? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-010",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько вершин в цепочке из 3 рёбер? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-011",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Весовая матрица дорог между A, B, C, D (∞ — ребра нет):\n0 4 2 ∞\n∞ 0 ∞ 5\n∞ 1 0 8\n∞ ∞ ∞ 0\nСколько рёбер в этом графе? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-021",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В графе вершины: A, B, C, D, E. Сколько вершин в графе? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-022",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В графе есть рёбра: A—B, A—C, B—D, C—D, D—E. Сколько рёбер в графе? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-023",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Матрица смежности (строки — «откуда», столбцы — «куда»):\n0 1 1\n0 0 1\n0 0 0\nЧему равна сумма элементов первой строки, то есть сколько рёбер выходит из вершины 1? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-024",
+      "lesson": "9graph-01-graphs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Весовая матрица (веса рёбер, 0 — ребра нет):\n0 4 2\n4 0 1\n2 1 0\nСумма весов всех рёбер сколько? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-9-graph-012",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В дереве решений переставляют числа 1, 2, 3 на трёх местах. Сколько листьев в этом дереве? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-graph-013",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько листьев в дереве решений, где переставляют числа 1, 2, 3, 4 на четырёх местах? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-9-graph-014",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Имеются монеты 1, 3 и 5 рубля. Сколькими способами можно набрать сумму 7 рублей? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-025",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В дереве 6 вершин. Сколько в нём рёбер? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-026",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В дереве 9 рёбер. Сколько в нём вершин? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-9-graph-027",
+      "lesson": "9graph-02-trees",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какое свойство отличает дерево от произвольного связного графа?",
+      "options": [
+        {
+          "id": "D",
+          "text": "У каждой вершины одинаковая степень"
+        },
+        {
+          "id": "A",
+          "text": "Между любыми двумя вершинами есть ровно один простой путь"
+        },
+        {
+          "id": "B",
+          "text": "Все вершины соединены со всеми"
+        },
+        {
+          "id": "C",
+          "text": "Рёбра направлены от корня"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-graph-028",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В дереве выбран корень, и от него до самой глубокой вершины 3 ребра. Какова глубина дерева? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-029",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "У дерева с 12 вершинами корень один. Сколько рёбер ведёт к листьям — вершинам без потомков? Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
+      "id": "inf-9-graph-030",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В задаче выбирается один вариант из трёх: А, Б, В. Сколько всего вариантов выбора? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-031",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Дерево перебора: первый выбор — 4 вариантов, второй — 3 варианта для каждого. Сколько листьев в дереве? Запишите только число.",
+      "base": 10,
+      "expected": 12,
+      "key": "12"
+    },
+    {
+      "id": "inf-9-graph-032",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Перебирают пары из монет: 2 руб., 5 руб., 10 руб.. Каждая монета используется один раз, порядок не важен. Сколько всего пар? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-graph-033",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив 4, 7, 2, 9 представлен деревом: в каждой внутренней вершине хранится меньший из элементов её ветви. Чему равен минимум в корне? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-034",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Дерево перебора трёх монет имеет корень, 3 узла второго уровня и столько же листьев. Сколько в нём всего вершин? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-9-graph-035",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В двоичном дереве перебора 7 листьев (по варианту на каждом шаге). Сколько у него внутренних вершин? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-graph-036",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Перебирают тройки из монет: 2 руб., 5 руб., 10 руб., 20 руб., каждая монета используется один раз, порядок не важен. Сколько всего троек? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-graph-016",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Дороги: A→B вес 4, A→C вес 2, C→B вес 1, B→D вес 5, C→D вес 8. Чему равна минимальная сумма весов пути из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-9-graph-017",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Дороги: A→B 7, A→C 3, A→D 12, C→B 2, B→D 4, C→D 9. Найдите минимальную сумму весов пути из A в D перебором всех путей. Запишите только число.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
+    },
+    {
+      "id": "inf-9-graph-037",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Взвешенный граф: рёбра A–B (4), A–C (2), B–D (5), C–D (8). Чему равна длина кратчайшего пути из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
+    },
+    {
+      "id": "inf-9-graph-038",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Тот же граф: A–B (4), A–C (2), B–D (5), C–D (8). Чему равна длина пути A→C→D? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-9-graph-039",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Граф-цепочка: A→B→C→D. Сколько различных маршрутов ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-040",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В ориентированном ациклическом графе рёбра A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-041",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В графе рёбра A→B, A→C, B→D. Сколько маршрутов ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-042",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в B? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-043",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Граф-цепочка A→B→C→D. Сколько рёбер в маршруте из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-044",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Граф: веса рёбер A–B = 4, A–C = 2, B–D = 5, C–D = 8. Кратчайший путь из A в D идёт по маршруту A→B→D→D. Сколько рёбер в этом маршруте? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-045",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В графе города вершины: A, B, C, D, E. Сколько вершин нужно посетить, чтобы обойти все? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-046",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В ациклическом графе рёбра A→B, A→C, B→D, C→E. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-047",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Граф: веса рёбер A–B = 1, A–C = 1, B–D = 5, C–D = 5, B–E = 2, E–D = 2. Чему равен кратчайший путь из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-048",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D. Сколько всего путей из A в D существует? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-049",
+      "lesson": "9graph-03-tasks",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Граф содержит рёбра A→B, B→C, C→A. Можно ли в таком графе накапливать число путей от начала до конца?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Да, всегда можно"
+        },
+        {
+          "id": "C",
+          "text": "Да, если начать с любой вершины"
+        },
+        {
+          "id": "D",
+          "text": "Нет, потому что рёбер больше, чем вершин"
+        },
+        {
+          "id": "A",
+          "text": "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-graph-018",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько путей ведёт в вершину-источник направленного ациклического графа? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-019",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-020",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Граф: X→Y, X→Z, Y→W, Z→W, W→V, Y→V. Сколько путей ведёт из X в V? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-050",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-051",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-052",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, D→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-graph-053",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф-цепочка A→B→C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-054",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, A→D, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-055",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, C→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-056",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, B→E, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-057",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-058",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→C, C→D, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-graph-059",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→C, B→D, C→D, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-060",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, A→E, D→E. В вершину-источник A засчитывается 1 путь. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-061",
+      "lesson": "9graph-04-paths",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: понятие — что оно означает.",
+      "left": [
+        "Вершина",
+        "Ребро",
+        "Путь",
+        "Цикл"
+      ],
+      "right": [
+        "объект графа",
+        "связь между двумя вершинами",
+        "последовательность вершин и рёбер без повторов",
+        "замкнутый маршрут, начинающийся и заканчивающийся в одной вершине"
+      ],
+      "answerMap": {
+        "Вершина": "объект графа",
+        "Ребро": "связь между двумя вершинами",
+        "Путь": "последовательность вершин и рёбер без повторов",
+        "Цикл": "замкнутый маршрут, начинающийся и заканчивающийся в одной вершине"
+      },
+      "key": "Вершина=объект графа, Ребро=связь между двумя вершинами, Путь=последовательность вершин и рёбер без повторов, Цикл=замкнутый маршрут, начинающийся и заканчивающийся в одной вершине"
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-9-graph-006",
+        "inf-9-graph-060",
+        "inf-9-graph-046",
+        "inf-9-graph-027",
+        "inf-9-graph-005",
+        "inf-9-graph-026",
+        "inf-9-graph-002",
+        "inf-9-graph-013",
+        "inf-9-graph-052",
+        "inf-9-graph-043"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-graph-005": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-9-graph-008",
+        "inf-9-graph-038",
+        "inf-9-graph-060",
+        "inf-9-graph-030",
+        "inf-9-graph-007",
+        "inf-9-graph-018",
+        "inf-9-graph-034",
+        "inf-9-graph-005",
+        "inf-9-graph-012",
+        "inf-9-graph-047"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-9-graph-047",
+        "inf-9-graph-007",
+        "inf-9-graph-001",
+        "inf-9-graph-054",
+        "inf-9-graph-057",
+        "inf-9-graph-041",
+        "inf-9-graph-034",
+        "inf-9-graph-029",
+        "inf-9-graph-027",
+        "inf-9-graph-006"
+      ],
+      "orders": {
+        "inf-9-graph-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-9-graph-059",
+        "inf-9-graph-004",
+        "inf-9-graph-037",
+        "inf-9-graph-027",
+        "inf-9-graph-031",
+        "inf-9-graph-050",
+        "inf-9-graph-002",
+        "inf-9-graph-032",
+        "inf-9-graph-006",
+        "inf-9-graph-016"
+      ],
+      "orders": {
+        "inf-9-graph-027": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-9-graph-038",
+        "inf-9-graph-007",
+        "inf-9-graph-003",
+        "inf-9-graph-051",
+        "inf-9-graph-028",
+        "inf-9-graph-060",
+        "inf-9-graph-009",
+        "inf-9-graph-026",
+        "inf-9-graph-016",
+        "inf-9-graph-013"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-9-graph-030",
+        "inf-9-graph-021",
+        "inf-9-graph-031",
+        "inf-9-graph-051",
+        "inf-9-graph-013",
+        "inf-9-graph-016",
+        "inf-9-graph-005",
+        "inf-9-graph-038",
+        "inf-9-graph-058",
+        "inf-9-graph-009"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-9-graph-057",
+        "inf-9-graph-028",
+        "inf-9-graph-022",
+        "inf-9-graph-050",
+        "inf-9-graph-010",
+        "inf-9-graph-032",
+        "inf-9-graph-008",
+        "inf-9-graph-025",
+        "inf-9-graph-044",
+        "inf-9-graph-042"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-9-graph-010",
+        "inf-9-graph-045",
+        "inf-9-graph-034",
+        "inf-9-graph-060",
+        "inf-9-graph-029",
+        "inf-9-graph-055",
+        "inf-9-graph-016",
+        "inf-9-graph-005",
+        "inf-9-graph-023",
+        "inf-9-graph-030"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-9-graph-037",
+        "inf-9-graph-032",
+        "inf-9-graph-004",
+        "inf-9-graph-060",
+        "inf-9-graph-021",
+        "inf-9-graph-046",
+        "inf-9-graph-055",
+        "inf-9-graph-026",
+        "inf-9-graph-025",
+        "inf-9-graph-005"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-9-graph-007",
+        "inf-9-graph-001",
+        "inf-9-graph-025",
+        "inf-9-graph-043",
+        "inf-9-graph-044",
+        "inf-9-graph-056",
+        "inf-9-graph-033",
+        "inf-9-graph-006",
+        "inf-9-graph-027",
+        "inf-9-graph-060"
+      ],
+      "orders": {
+        "inf-9-graph-001": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-9-graph-036",
+        "inf-9-graph-021",
+        "inf-9-graph-045",
+        "inf-9-graph-003",
+        "inf-9-graph-016",
+        "inf-9-graph-053",
+        "inf-9-graph-028",
+        "inf-9-graph-004",
+        "inf-9-graph-058",
+        "inf-9-graph-026"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-9-graph-007",
+        "inf-9-graph-018",
+        "inf-9-graph-004",
+        "inf-9-graph-034",
+        "inf-9-graph-016",
+        "inf-9-graph-038",
+        "inf-9-graph-010",
+        "inf-9-graph-060",
+        "inf-9-graph-025",
+        "inf-9-graph-029"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-9-graph-052",
+        "inf-9-graph-038",
+        "inf-9-graph-031",
+        "inf-9-graph-057",
+        "inf-9-graph-006",
+        "inf-9-graph-029",
+        "inf-9-graph-036",
+        "inf-9-graph-016",
+        "inf-9-graph-002",
+        "inf-9-graph-003"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-9-graph-059",
+        "inf-9-graph-005",
+        "inf-9-graph-028",
+        "inf-9-graph-025",
+        "inf-9-graph-023",
+        "inf-9-graph-044",
+        "inf-9-graph-054",
+        "inf-9-graph-010",
+        "inf-9-graph-040",
+        "inf-9-graph-013"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-9-graph-006",
+        "inf-9-graph-056",
+        "inf-9-graph-039",
+        "inf-9-graph-013",
+        "inf-9-graph-026",
+        "inf-9-graph-059",
+        "inf-9-graph-002",
+        "inf-9-graph-012",
+        "inf-9-graph-048",
+        "inf-9-graph-008"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-9-graph-030",
+        "inf-9-graph-054",
+        "inf-9-graph-004",
+        "inf-9-graph-031",
+        "inf-9-graph-036",
+        "inf-9-graph-003",
+        "inf-9-graph-021",
+        "inf-9-graph-059",
+        "inf-9-graph-038",
+        "inf-9-graph-048"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-9-graph-033",
+        "inf-9-graph-026",
+        "inf-9-graph-001",
+        "inf-9-graph-039",
+        "inf-9-graph-023",
+        "inf-9-graph-004",
+        "inf-9-graph-059",
+        "inf-9-graph-044",
+        "inf-9-graph-051",
+        "inf-9-graph-030"
+      ],
+      "orders": {
+        "inf-9-graph-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-9-graph-012",
+        "inf-9-graph-001",
+        "inf-9-graph-016",
+        "inf-9-graph-003",
+        "inf-9-graph-026",
+        "inf-9-graph-041",
+        "inf-9-graph-054",
+        "inf-9-graph-036",
+        "inf-9-graph-019",
+        "inf-9-graph-021"
+      ],
+      "orders": {
+        "inf-9-graph-001": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-9-graph-023",
+        "inf-9-graph-001",
+        "inf-9-graph-034",
+        "inf-9-graph-008",
+        "inf-9-graph-046",
+        "inf-9-graph-025",
+        "inf-9-graph-027",
+        "inf-9-graph-037",
+        "inf-9-graph-060",
+        "inf-9-graph-054"
+      ],
+      "orders": {
+        "inf-9-graph-001": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-9-graph-054",
+        "inf-9-graph-028",
+        "inf-9-graph-004",
+        "inf-9-graph-060",
+        "inf-9-graph-038",
+        "inf-9-graph-002",
+        "inf-9-graph-030",
+        "inf-9-graph-048",
+        "inf-9-graph-034",
+        "inf-9-graph-009"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-9-graph-009",
+        "inf-9-graph-058",
+        "inf-9-graph-033",
+        "inf-9-graph-010",
+        "inf-9-graph-045",
+        "inf-9-graph-030",
+        "inf-9-graph-048",
+        "inf-9-graph-018",
+        "inf-9-graph-022",
+        "inf-9-graph-028"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-9-graph-010",
+        "inf-9-graph-008",
+        "inf-9-graph-060",
+        "inf-9-graph-038",
+        "inf-9-graph-029",
+        "inf-9-graph-056",
+        "inf-9-graph-032",
+        "inf-9-graph-030",
+        "inf-9-graph-007",
+        "inf-9-graph-048"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-9-graph-005",
+        "inf-9-graph-027",
+        "inf-9-graph-057",
+        "inf-9-graph-033",
+        "inf-9-graph-004",
+        "inf-9-graph-043",
+        "inf-9-graph-021",
+        "inf-9-graph-018",
+        "inf-9-graph-028",
+        "inf-9-graph-047"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-9-graph-031",
+        "inf-9-graph-053",
+        "inf-9-graph-008",
+        "inf-9-graph-002",
+        "inf-9-graph-009",
+        "inf-9-graph-042",
+        "inf-9-graph-047",
+        "inf-9-graph-060",
+        "inf-9-graph-029",
+        "inf-9-graph-032"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-9-graph-007",
+        "inf-9-graph-032",
+        "inf-9-graph-008",
+        "inf-9-graph-003",
+        "inf-9-graph-046",
+        "inf-9-graph-057",
+        "inf-9-graph-053",
+        "inf-9-graph-027",
+        "inf-9-graph-031",
+        "inf-9-graph-040"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-9-graph-028",
+        "inf-9-graph-032",
+        "inf-9-graph-003",
+        "inf-9-graph-046",
+        "inf-9-graph-058",
+        "inf-9-graph-027",
+        "inf-9-graph-038",
+        "inf-9-graph-052",
+        "inf-9-graph-008",
+        "inf-9-graph-022"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-9-graph-045",
+        "inf-9-graph-047",
+        "inf-9-graph-012",
+        "inf-9-graph-007",
+        "inf-9-graph-026",
+        "inf-9-graph-053",
+        "inf-9-graph-013",
+        "inf-9-graph-058",
+        "inf-9-graph-010",
+        "inf-9-graph-003"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-9-graph-037",
+        "inf-9-graph-022",
+        "inf-9-graph-033",
+        "inf-9-graph-006",
+        "inf-9-graph-051",
+        "inf-9-graph-004",
+        "inf-9-graph-028",
+        "inf-9-graph-058",
+        "inf-9-graph-047",
+        "inf-9-graph-026"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-9-graph-003",
+        "inf-9-graph-043",
+        "inf-9-graph-029",
+        "inf-9-graph-019",
+        "inf-9-graph-004",
+        "inf-9-graph-028",
+        "inf-9-graph-051",
+        "inf-9-graph-047",
+        "inf-9-graph-034",
+        "inf-9-graph-023"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-9-graph-044",
+        "inf-9-graph-004",
+        "inf-9-graph-038",
+        "inf-9-graph-052",
+        "inf-9-graph-057",
+        "inf-9-graph-028",
+        "inf-9-graph-009",
+        "inf-9-graph-029",
+        "inf-9-graph-036",
+        "inf-9-graph-022"
+      ],
+      "orders": {},
+      "max_score": 14
     }
   ]
 }

@@ -42,6 +42,22 @@ if (isNumsys) {
     }
   }
 }
+// Число баллов должно строго соответствовать сложности: 1 / 2 / 3.
+// Иначе в контрольной разъезжается распределение баллов по сложности,
+// а max_score варианта перестаёт совпадать с суммой слотов.
+const POINTS_FOR: Record<string, number> = { basic: 1, intermediate: 2, advanced: 3 };
+const badPoints = (all as Array<{ id: string; difficulty: string; points: number }>).filter(
+  (t) => POINTS_FOR[t.difficulty] !== t.points,
+);
+if (badPoints.length > 0) {
+  console.error(`BANK INVALID: у ${badPoints.length} заданий points не соответствует сложности`);
+  for (const t of badPoints.slice(0, 10)) {
+    console.error(`- ${t.id}: ${t.difficulty} = ${t.points} (должно быть ${POINTS_FOR[t.difficulty]})`);
+  }
+  process.exit(1);
+}
+console.log(`points: у всех заданий 1/2/3 по сложности`);
+
 // Все lesson: в заданиях должны указывать на существующий урок из реестра.
 // Иначе привязка молча теряется: задание не попадёт ни на одну страницу урока.
 const LESSON_IDS = new Set(
@@ -63,5 +79,56 @@ if (dangling.size > 0) {
   process.exit(1);
 }
 console.log(`lesson: все ссылки разрешаются (${LESSON_IDS.size} уроков в реестре)`);
+
+// Целостность соответствий и проверок: иначе задание выглядит рабочим, но ученик не может его выполнить.
+// Ключевой случай — matching: DragMatch убирает использованную плашку из пула, поэтому при
+// len(right) < len(left) часть полей физически нечем заполнить, а задание остаётся незавершённым навсегда.
+const badMatch: string[] = [];
+const badCheck: string[] = [];
+for (const t of all as Array<{
+  id: string;
+  type: string;
+  student_view: any;
+  auto_check: any;
+  teacher_only: any;
+}>) {
+  const sv = t.student_view ?? {};
+  const ac = t.auto_check ?? {};
+  const to = t.teacher_only ?? {};
+  if (t.type === 'matching') {
+    const left: string[] = sv.left ?? [];
+    const right: string[] = sv.right ?? [];
+    const map: Record<string, string> = to.answer_map ?? {};
+    if (left.length !== right.length) {
+      badMatch.push(`${t.id}: слева ${left.length}, справа ${right.length} — полей больше, чем вариантов`);
+    }
+    for (const k of Object.keys(map)) if (!left.includes(k)) badMatch.push(`${t.id}: в answer_map нет такой левой части: ${k}`);
+    for (const v of Object.values(map)) if (!right.includes(v)) badMatch.push(`${t.id}: в answer_map значение не из правой части: ${v}`);
+    if (new Set(Object.values(map)).size !== Object.values(map).length) badMatch.push(`${t.id}: значения answer_map повторяются`);
+  }
+  if (t.type === 'single_choice') {
+    const ids: string[] = (sv.options ?? []).map((o: any) => String(o.id));
+    if (!ids.includes(String(to.answer))) badCheck.push(`${t.id}: answer=${to.answer} не среди ${ids.join(',')}`);
+    const texts: string[] = (sv.options ?? []).map((o: any) => String(o.text));
+    if (new Set(texts).size !== texts.length) badCheck.push(`${t.id}: тексты вариантов повторяются`);
+  }
+  if (t.type === 'numeric_base' && sv.base !== ac.base) {
+    badCheck.push(`${t.id}: student_view.base=${sv.base} != auto_check.base=${ac.base}`);
+  }
+  if (t.type === 'numeric_base' && !(to.accepted_values_decimal ?? []).length) {
+    badCheck.push(`${t.id}: пустой accepted_values_decimal`);
+  }
+}
+if (badMatch.length) {
+  console.error('BANK INVALID: несогласованные соответствия matching (задание невыполнимо)');
+  for (const p of badMatch) console.error(`- ${p}`);
+  process.exit(1);
+}
+if (badCheck.length) {
+  console.error('BANK INVALID: несогласованность полей проверки');
+  for (const p of badCheck) console.error(`- ${p}`);
+  process.exit(1);
+}
+console.log('matching/single_choice/numeric_base: внутренние данные согласованы');
 
 console.log(`BANK TOTAL: ${all.length} заданий, id уникальны`);

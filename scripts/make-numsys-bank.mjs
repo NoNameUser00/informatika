@@ -1,6 +1,6 @@
 // Генератор банка СС 014-060: ответы вычисляются кодом, а не руками.
 // Ручной банк 001-013 не трогаем. Выход: data/tasks/8/number-systems/bank-gen.yaml
-// Проверка: build-trainer-json.mjs прогоняет каждый ключ через check.mjs.
+// Проверка: build-trainer-json.ts прогоняет каждый ключ через check.mjs.
 import { writeFileSync } from 'node:fs';
 
 const SUB = { 0: '₀', 1: '₁', 2: '₂', 3: '₃', 4: '₄', 5: '₅', 6: '₆', 7: '₇', 8: '₈', 9: '₉' };

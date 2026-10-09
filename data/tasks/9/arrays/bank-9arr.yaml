@@ -12,7 +12,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-arr-idx], meta: [plan-actions] }
   prompt: "Чему равно a[0], если a = [3, 7, 5]?"
-  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "7" }, { id: C, text: "5" }, { id: D, text: "0" }] }
+  student_view: { options: [{ id: A, text: "3" }, { id: D, text: "0" }, { id: C, text: "5" }, { id: B, text: "7" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Индексы с нуля: a[0] — первый" }
 
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-arr-max], meta: [plan-actions] }
   prompt: "С чего начинаем поиск максимума (чемпион)?"
-  student_view: { options: [{ id: A, text: "С первого элемента" }, { id: B, text: "С нуля" }, { id: C, text: "С последнего" }, { id: D, text: "Со ста" }] }
+  student_view: { options: [{ id: D, text: "Со ста" }, { id: C, text: "С последнего" }, { id: B, text: "С нуля" }, { id: A, text: "С первого элемента" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Чемпион = a[0], иначе массив из отрицательных сломается" }
+  teacher_only: { answer: D, explanation: "Чемпион = a[0], иначе массив из отрицательных сломается" }
 
 - id: inf-9-arr-005
   class: 9
@@ -74,7 +74,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: 9arr-02-search
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -96,7 +96,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: 9arr-01-basics
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -141,7 +141,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-arr-idx], meta: [plan-actions] }
   prompt: "Что хранит переменная imax в поиске максимума?"
-  student_view: { options: [{ id: A, text: "Номер элемента-чемпиона" }, { id: B, text: "Само число-чемпион" }, { id: C, text: "Длину списка" }, { id: D, text: "Сумму" }] }
+  student_view: { options: [{ id: A, text: "Номер элемента-чемпиона" }, { id: C, text: "Длину списка" }, { id: D, text: "Сумму" }, { id: B, text: "Само число-чемпион" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "imax — индекс, a[imax] — значение" }
 - id: inf-9-arr-009
@@ -191,7 +191,809 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-arr-fill], meta: [plan-actions] }
   prompt: "Что получится в списке после [i*i for i in range(5)]?"
-  student_view: { options: [{ id: A, text: "[0, 1, 4, 9, 16]" }, { id: B, text: "[1, 4, 9, 16, 25]" }, { id: C, text: "[0, 1, 2, 3, 4]" }, { id: D, text: "[5, 5, 5, 5, 5]" }] }
+  student_view: { options: [{ id: A, text: "[0, 1, 4, 9, 16]" }, { id: C, text: "[0, 1, 2, 3, 4]" }, { id: D, text: "[5, 5, 5, 5, 5]" }, { id: B, text: "[1, 4, 9, 16, 25]" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Квадраты чисел 0–4" }
 
+# ==== ДОПИСАНО scripts/make-9-bank.mjs (далее руками не править) ====
+- id: inf-9-arr-012
+  class: 9
+  topic: Массивы
+  subtopic: "Заполнение формулой"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-arr-fill], meta: [plan-actions] }
+  prompt: "Заполни список пятью первыми нечётными числами по формуле (append в цикле) и выведи их через пробел."
+  student_view: {
+    language: python,
+    template: "c = []\nfor i in range(5):\n    c.append(...)"
+  }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: 
+    solution_code: "c = []\nfor i in range(5):\n    c.append(2 * i + 1)\nprint(*c)"
+    expected_stdout: "1 3 5 7 9"
+    explanation: "Формула 2 * i + 1 при i от 0 до 4 даёт 1, 3, 5, 7, 9 — это первые пять нечётных чисел."
+
+- id: inf-9-arr-013
+  class: 9
+  topic: Массивы
+  subtopic: "Сумма"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Найдите сумму элементов списка [12, 7, 25, 3, 18, 9]. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [74], answer_text: "74", explanation: "12 + 7 + 25 + 3 + 18 + 9 = 74. Накопитель s заводим равным 0 до цикла, иначе результат потеряется." }
+
+- id: inf-9-arr-014
+  class: 9
+  topic: Массивы
+  subtopic: "Количество по условию"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-count], meta: [plan-actions] }
+  prompt: "Сколько чисел в списке [12, 7, 25, 3, 18, 9] больше 10? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Под условию подходят 12, 25 и 18 — три числа. Счётчик k = 0 заводим до цикла, внутри увеличиваем на 1." }
+
+- id: inf-9-arr-015
+  class: 9
+  topic: Массивы
+  subtopic: "Один проход — два результата"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "За один проход по списку [-3, 5, -1, 8, 0] найди сумму положительных чисел и их количество. Выведи сумму и количество через пробел."
+  student_view: {
+    language: python,
+    template: "a = [-3, 5, -1, 8, 0]\ns = 0\nk = 0\nfor x in a:\n    if x > 0:\n        ...\nprint(s, k)"
+  }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: 
+    solution_code: "a = [-3, 5, -1, 8, 0]\ns = 0\nk = 0\nfor x in a:\n    if x > 0:\n        s += x\n        k += 1\nprint(s, k)"
+    expected_stdout: "13 2"
+    explanation: "Положительные — 5 и 8: сумма 13, количество 2. Один проход по массиву дешевле двух, а накопители заводятся до цикла."
+
+- id: inf-9-arr-016
+  class: 9
+  topic: Массивы
+  subtopic: "Бинарный поиск"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-02-search
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив из 1000 элементов отсортирован. Сколько шагов потребуется бинарному поиску, чтобы гарантированно найти нужное значение? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Каждый шаг делит остаток пополам: нужно не более ⌈log2(1001)⌉ = 10 шагов вместо 1000 проверок линейного поиска. Работает только на отсортированном массиве." }
+
+- id: inf-9-arr-017
+  class: 9
+  topic: Массивы
+  subtopic: "Максимум"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-max], meta: [plan-actions] }
+  prompt: "Чему равен максимум списка [12, -5, 23, -1, 8]? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [23], answer_text: "23", explanation: "Список просматривают целиком, текущий чемпион всё время сравнивается с новым элементом. Ответ 23." }
+
+- id: inf-9-arr-018
+  class: 9
+  topic: Массивы
+  subtopic: "Индекс чемпиона"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-max], meta: [plan-actions] }
+  prompt: "В списке [12, -5, 23, -1, 8] на каком индексе (с нуля) находится максимум? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Максимум 23 стоит третьим, индексы с нуля: 0, 1, 2 — значит imax = 2. В программе запоминают индекс, значение читают в конце: a[imax]." }
+
+- id: inf-9-arr-019
+  class: 9
+  topic: Массивы
+  subtopic: "Ловушка нуля"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-arr-min], meta: [plan-actions] }
+  prompt: "Программа ищет максимум списка [-5, -2, -9], но чемпион задан числом m = 0. Что она выведет? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Ни одно из чисел не больше 0, поэтому m остаётся равным 0 — числа, которого в списке нет. Чемпион надо брать первым элементом (m = a[0]), а ноль годится только для счётчика количества." }
+
+- id: inf-9-arr-020
+  class: 9
+  topic: Массивы
+  subtopic: "Сложность сортировки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Сколько сравнений сделает сортировка выбором для массива из 8 элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [28], answer_text: "28", explanation: "Сортировка выбором делает ровно n(n − 1)/2 сравнений: 8 · 7 / 2 = 28. Рост квадратичный: данных в 10 раз больше — работы примерно в 100 раз больше." }
+
+- id: inf-9-arr-021
+  class: 9
+  topic: Массивы
+  subtopic: "Второй по величине"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Какое число в списке [5, 2, 8, 1] является вторым по величине? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "После сортировки по возрастанию получаем [1, 2, 5, 8], второй по величине — предпоследний элемент, то есть 5." }
+
+- id: inf-9-arr-022
+  class: 9
+  topic: Массивы
+  subtopic: "Сортировка выбором"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Отсортируй список [5, 2, 8] по возрастанию сортировкой выбором (два вложенных цикла, без sorted) и выведи результат."
+  student_view: {
+    language: python,
+    template: "a = [5, 2, 8]\nfor i in range(len(a)):\n    imin = i\n    for j in range(i + 1, len(a)):\n        ...\nprint(a)"
+  }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: 
+    solution_code: "a = [5, 2, 8]\nfor i in range(len(a)):\n    imin = i\n    for j in range(i + 1, len(a)):\n        if a[j] < a[imin]:\n            imin = j\n    a[i], a[imin] = a[imin], a[i]\nprint(a)"
+    expected_stdout: "[2, 5, 8]"
+    explanation: "Внешний цикл выбирает место, внутренний ищет минимум в остатке; обмен — одной строкой через две переменные."
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9-bank2.mjs — руками не править ====
+
+- id: inf-9-arr-023
+  class: 9
+  topic: "Массивы"
+  subtopic: "Линейный алгоритм"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "Алгоритм состоит из 4 шагов: прочитать числа, сложить положительные, сравнить с нулём, вывести результат. Сколько шагов содержит алгоритм? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Шагов 4: 1) прочитать числа; 2) сложить положительные; 3) сравнить с нулём; 4) вывести результат. Алгоритм выполняется строго по порядку, поэтому шаги нумеруют и записывают по порядку." }
+
+- id: inf-9-arr-024
+  class: 9
+  topic: "Массивы"
+  subtopic: "Условие ветвления"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "Что делает условие в алгоритме с ветвлением?"
+  student_view: { options: [{ id: D, text: "Останавливает программу" }, { id: B, text: "Повторяет действия заданное число раз" }, { id: C, text: "Записывает результат в таблицу" }, { id: A, text: "Выбирает, какую из двух ветвей выполнять дальше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Ветвление — это выбор: условие проверяется, и дальше выполняется только одна из ветвей. Цикл, в отличие от ветвления, повторяет действия, а не выбирает их." }
+
+- id: inf-9-arr-025
+  class: 9
+  topic: "Массивы"
+  subtopic: "Цикл"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "Цикл выполняет действие 5 раз: к переменной, равной 0, каждый раз прибавляют 2. Какое значение получится? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Ноль, прибавляем 2 ровно 5 раз: 2 · 5 = 10. Число повторений цикла важно не перепутать с числом шагов внутри тела цикла." }
+
+- id: inf-9-arr-026
+  class: 9
+  topic: "Массивы"
+  subtopic: "Остаток и деление"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "В цикле идёт остаток от деления: остаток(7 ; 3). Чему он равен? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "7 = 3 · 2 + 1, поэтому остаток равен 1. Ошибка — считать целую часть вместо остатка, их путают чаще всего." }
+
+- id: inf-9-arr-027
+  class: 9
+  topic: "Массивы"
+  subtopic: "Индекс элемента"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "Массив: 3, 8, 2. Сколько элементов нужно проверить, чтобы найти первый элемент больше 8? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Первый же элемент 3 не подходит, второй 8 — подходит, поэтому проверяли 1 элемент(а). Линейный поиск останавливается на первом совпадении." }
+
+- id: inf-9-arr-028
+  class: 9
+  topic: "Массивы"
+  subtopic: "Вложенные циклы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-algo], meta: [plan-actions] }
+  prompt: "Алгоритм перебирает все пары значений: список из 2 пар, внутри каждой — 2 проверки. Сколько всего проверок? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "2 · 2 = 4 проверок: внешний цикл идёт 2 раз, внутренний — 2. Вложенные циклы растут произведением, поэтому быстро становятся дорогими." }
+
+- id: inf-9-arr-029
+  class: 9
+  topic: "Массивы"
+  subtopic: "Индексация"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-01-basics
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Чему равен элемент с индексом 2? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Нумерация с нуля: a[0] = 4, a[1] = 7, a[2] = 2. Путаница «с нуля или с единицы» — самая частая ошибка: в программировании индексы начинаются с 0." }
+
+- id: inf-9-arr-030
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сумма элементов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 3, 8, 2, 5. Чему равна сумма элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [18], answer_text: "18", explanation: "3 + 8 + 2 + 5 = 18. Сумма считается проходом по всем элементам; начинать надо с нуля, иначе потеряется первое значение." }
+
+- id: inf-9-arr-031
+  class: 9
+  topic: "Массивы"
+  subtopic: "Количество элементов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 3, 8, 2, 5. Сколько в нём элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Элементов 4: a[0], a[1], a[2], a[3]. В Python это len(a), в таблице — ЧИСЛСТРОК или СЧЁТЗ." }
+
+- id: inf-9-arr-032
+  class: 9
+  topic: "Массивы"
+  subtopic: "Среднее арифметическое"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 2, 4, 6. Чему равно среднее арифметическое? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Сумма 12, элементов 3: 12 / 3 = 4. Среднее всегда между минимумом и максимумом — хорошая проверка результата." }
+
+- id: inf-9-arr-033
+  class: 9
+  topic: "Массивы"
+  subtopic: "Произведение элементов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 3, 8, 2, 5. Чему равно произведение элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [240], answer_text: "240", explanation: "3 · 8 · 2 · 5 = 240. Начинать произведение надо с единицы: если начать с нуля, результатом всегда будет ноль." }
+
+- id: inf-9-arr-034
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сумма по условию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 7, 2, 9, 4. Чему равна сумма чётных элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Чётные: 2, 4 (7, 9 — нечётные), их сумма 6. Признак чётности — остаток от деления на 2 равен нулю." }
+
+- id: inf-9-arr-035
+  class: 9
+  topic: "Массивы"
+  subtopic: "Количество по условию"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 7, 2, 9, 4, 6. Сколько элементов больше 5? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Больше 5: 7, 9, 6 — это 3 элемент(ов). Счётчик начинают с нуля и увеличивают только при выполнении условия." }
+
+- id: inf-9-arr-036
+  class: 9
+  topic: "Массивы"
+  subtopic: "Один проход — два результата"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 7, 2, 9, 4, 6. Чему равна разность суммы всех элементов и суммы элементов больше 5? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Сумма всех 28, сумма больших 22, остаток 6. Оба значения считают за один проход по массиву, а не двумя — так быстрее и меньше шансов ошибиться." }
+
+- id: inf-9-arr-037
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сколько ниже среднего"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 3, 5, 9. Среднее равно 5.666666666666667. Сколько элементов строго меньше среднего? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Среднее 5.666666666666667, меньше него: 3, 5 — 2 элемент(а). Элементы, равные среднему, не считаются: условие строгое." }
+
+- id: inf-9-arr-038
+  class: 9
+  topic: "Массивы"
+  subtopic: "Проверка результата"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-02-aggregates
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sum], meta: [plan-actions] }
+  prompt: "Массив: 3, 5, 9, 1. Верно ли, что среднее арифметическое равно сумме, делённой на количество элементов?"
+  student_view: { options: [{ id: B, text: "Нет, среднее считается по максимуму" }, { id: D, text: "Да, но только для чётных массивов" }, { id: A, text: "Да, это определение среднего арифметического" }, { id: C, text: "Нет, среднее равно половине суммы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Среднее арифметическое — это сумма, делённая на количество: 18 / 4 = 4.5. Определение работает для любого массива, чётность ни при чём." }
+
+- id: inf-9-arr-039
+  class: 9
+  topic: "Массивы"
+  subtopic: "Позиция элемента"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. На каком по счёту месте (с единицы) стоит число 2? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "a[2] = 2 — это 3-й элемент при нумерации с единицы и индекс 2 при нумерации с нуля. Разница всегда 1, путаница с нумерацией — типовая ошибка." }
+
+- id: inf-9-arr-040
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сколько сравнений нужно"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько элементов нужно сравнить с числом 7 при линейном поиске, чтобы найти первое совпадение? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "7 стоит на индексе 1, до него включительно 2 сравнени(й). Линейный поиск останавливается на первом совпадении, а не просматривает весь массив." }
+
+- id: inf-9-arr-041
+  class: 9
+  topic: "Массивы"
+  subtopic: "Числа до нужного"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько чисел в массиве стоят левее числа 9? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "9 стоит на индексе 3, левее него 3 элемент(ов): 4, 7, 2." }
+
+- id: inf-9-arr-042
+  class: 9
+  topic: "Массивы"
+  subtopic: "Отсутствие элемента"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько элементов нужно проверить, чтобы убедиться, что числа 5 в массиве нет? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Чтобы доказать отсутствие числа, проверяют весь массив — 4 элемент(ов). Это отличие поиска «есть ли» от поиска «где находится»: во втором случае хватает первого совпадения." }
+
+- id: inf-9-arr-043
+  class: 9
+  topic: "Массивы"
+  subtopic: "Повторяющиеся элементы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9, 7. Число 7 встречается сколько раз? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Счётчик увеличивается на каждом совпадении: 7 встречается 2 раз(а), хотя линейный поиск находит только первое — на индексе 1. Разница между «найти» и «посчитать» здесь и возникает." }
+
+- id: inf-9-arr-044
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сумма до первого совпадения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9, 7. Чему равна сумма элементов, стоящих левее числа 7? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Первое 7 на индексе 1, левее: 4 — сумма 4." }
+
+- id: inf-9-arr-045
+  class: 9
+  topic: "Массивы"
+  subtopic: "Двоичный поиск"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9arr-02-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-search], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Отсортируем его по возрастанию. Сколько шагов потребуется двоичному поиску числа 9 в отсортированном массиве, если каждый раз берётся средний элемент? Запишите только число."
+  student_view: { options: [{ id: A, text: "2" }, { id: B, text: "1" }, { id: D, text: "3" }, { id: C, text: "4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Отсортированный массив: 2, 4, 7, 9. Середина — 4, 9 больше, берём правую половину [7, 9], в ней 9 в середине — второй шаг. Двоичный поиск на массиве из 4 элементов требует не больше 2–3 шагов." }
+
+- id: inf-9-arr-046
+  class: 9
+  topic: "Массивы"
+  subtopic: "Максимум массива"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Чему равен максимум массива? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Максимум — наибольшее значение: 9. При поиске в цикле сравнивают каждый элемент с текущим максимумом, который изначально берут из первого элемента." }
+
+- id: inf-9-arr-047
+  class: 9
+  topic: "Массивы"
+  subtopic: "Минимум массива"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Чему равен минимум массива? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Минимум — наименьшее значение: 2." }
+
+- id: inf-9-arr-048
+  class: 9
+  topic: "Массивы"
+  subtopic: "Индекс максимума"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. На каком по счёту месте (с единицы) стоит максимум? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Максимум 9 стоит на индексе 3, то есть 4-м по счёту." }
+
+- id: inf-9-arr-049
+  class: 9
+  topic: "Массивы"
+  subtopic: "Размах массива"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Размах массива равен 7. Чему он равен? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Размах = максимум − минимум = 9 − 2 = 7. Показывает, насколько значения разбросаны." }
+
+- id: inf-9-arr-050
+  class: 9
+  topic: "Массивы"
+  subtopic: "Второй по величине"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Что будет вторым по величине после удаления одного максимального элемента 9? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Убираем максимум 9, остаётся 4, 7, 2, наибольшее из них 7. Второе по величине находят вторым проходом или сортировкой — одним проходом без запоминания двух максимумов здесь не обойтись." }
+
+- id: inf-9-arr-051
+  class: 9
+  topic: "Массивы"
+  subtopic: "Индексы минимума и максимума"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-03-extremes
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-ext], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Чему равна разность индексов максимума и минимума (индексы с нуля)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Индекс максимума 3, индекс минимума 2, разность 1." }
+
+- id: inf-9-arr-052
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сортировка по возрастанию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Какое число окажется на первом месте после сортировки по возрастанию? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "После сортировки по возрастанию: 2, 4, 7, 9. На первом месте наименьшее число 2." }
+
+- id: inf-9-arr-053
+  class: 9
+  topic: "Массивы"
+  subtopic: "Сортировка по возрастанию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Какое число окажется на последнем месте после сортировки по возрастанию? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Отсортированный массив: 2, 4, 7, 9. Последним идёт наибольшее 9." }
+
+- id: inf-9-arr-054
+  class: 9
+  topic: "Массивы"
+  subtopic: "Обмен элементов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько обменов сделает сортировка выбором, если на каждом шаге меняются местами найденный минимум и элемент на текущей позиции? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Сортировка выбором ищет минимум в остатке и ставит на место: 4, 7, 2, 9 → 2, 4, 7, 9. Обмен происходит там, где минимум стоял не на текущей позиции; таких обменов здесь несколько, их и считают." }
+
+- id: inf-9-arr-055
+  class: 9
+  topic: "Массивы"
+  subtopic: "Проверка результата сортировки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько элементов окажется на своих местах, если отсортировать его по возрастанию? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Отсортированный массив: 2, 4, 7, 9. Совпали позиции у 1 элемент(ов). Проверка «сумма и количество не изменились» — обязательный контроль после сортировки." }
+
+- id: inf-9-arr-056
+  class: 9
+  topic: "Массивы"
+  subtopic: "Максимум после сортировки"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Сколько шагов сортировки выбором нужно, чтобы полностью отсортировать массив из 4 элементов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "На каждом шаге сортировки выбором на место встаёт один элемент, а последний уже стоит верно: 4 − 1 = 3 шагов." }
+
+- id: inf-9-arr-057
+  class: 9
+  topic: "Массивы"
+  subtopic: "Обратный порядок"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9arr-04-sort
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-arr-sort], meta: [plan-actions] }
+  prompt: "Массив: 4, 7, 2, 9. Какое число окажется первым, если отсортировать его по убыванию? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "По убыванию массив выглядит так: 9, 7, 4, 2. Первым идёт наибольшее 9." }

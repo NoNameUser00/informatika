@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Trainer from '../../components/Trainer';
+import bank from '../../data/checks/control-10final-public.json';
+---
+<Layout title="Итоговая контрольная — 10 класс">
+  <Trainer client:load data={bank} forceMode="proverka" title="Итоговая контрольная: 10 класс" />
+</Layout>

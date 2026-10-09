@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
   prompt: "Что хранится в постоянной памяти (ПЗУ)?"
-  student_view: { options: [{ id: A, text: "Программа первоначальной загрузки" }, { id: B, text: "Открытые документы" }, { id: C, text: "Скачанные фильмы" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: B, text: "Открытые документы" }, { id: A, text: "Программа первоначальной загрузки" }, { id: D, text: "Ничего" }, { id: C, text: "Скачанные фильмы" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "ПЗУ не стирается при выключении и грузит компьютер" }
+  teacher_only: { answer: B, explanation: "ПЗУ не стирается при выключении и грузит компьютер" }
 
 - id: inf-7-base-003
   class: 7
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Какое право даёт свободное ПО (лицензия GNU GPL)?"
-  student_view: { options: [{ id: A, text: "Изучать и изменять программу" }, { id: B, text: "Только смотреть рекламу" }, { id: C, text: "Платить каждый месяц" }, { id: D, text: "Скрывать исходный код" }] }
+  student_view: { options: [{ id: B, text: "Только смотреть рекламу" }, { id: D, text: "Скрывать исходный код" }, { id: A, text: "Изучать и изменять программу" }, { id: C, text: "Платить каждый месяц" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Использовать, изучать, копировать, распространять изменения" }
+  teacher_only: { answer: C, explanation: "Использовать, изучать, копировать, распространять изменения" }
 
 - id: inf-7-base-004
   class: 7
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
   prompt: "Зачем упаковывать фотографии в архив перед отправкой?"
-  student_view: { options: [{ id: A, text: "Меньше места и быстрее передать" }, { id: B, text: "Фотографии станут цветными" }, { id: C, text: "Чтобы удалить вирусы" }, { id: D, text: "Чтобы поменять формат" }] }
+  student_view: { options: [{ id: C, text: "Чтобы удалить вирусы" }, { id: B, text: "Фотографии станут цветными" }, { id: A, text: "Меньше места и быстрее передать" }, { id: D, text: "Чтобы поменять формат" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Архив сжимает без потери качества" }
+  teacher_only: { answer: C, explanation: "Архив сжимает без потери качества" }
 
 - id: inf-7-base-006
   class: 7
@@ -97,7 +97,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-format], meta: [plan-actions] }
   prompt: "Что относится к прямому форматированию символов?"
-  student_view: { options: [{ id: A, text: "Жирность и размер шрифта" }, { id: B, text: "Нумерация страниц" }, { id: C, text: "Колонтитулы" }, { id: D, text: "Оглавление" }] }
+  student_view: { options: [{ id: A, text: "Жирность и размер шрифта" }, { id: D, text: "Оглавление" }, { id: C, text: "Колонтитулы" }, { id: B, text: "Нумерация страниц" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Символы — шрифт/размер/начертание; остальное — абзацы и документ" }
 
@@ -114,9 +114,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем структурируют перечисления в документе?"
-  student_view: { options: [{ id: A, text: "Списками и таблицами" }, { id: B, text: "Только картинками" }, { id: C, text: "Только шрифтом" }, { id: D, text: "Колонтитулами" }] }
+  student_view: { options: [{ id: D, text: "Колонтитулами" }, { id: B, text: "Только картинками" }, { id: A, text: "Списками и таблицами" }, { id: C, text: "Только шрифтом" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Списки — для перечислений, таблицы — для сеток данных" }
+  teacher_only: { answer: C, explanation: "Списки — для перечислений, таблицы — для сеток данных" }
 
 - id: inf-7-base-008
   class: 7
@@ -131,9 +131,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-gfx-types], meta: [plan-actions] }
   prompt: "Чем растровое изображение отличается от векторного?"
-  student_view: { options: [{ id: A, text: "Хранит цвет каждого пикселя" }, { id: B, text: "Хранит формулы фигур" }, { id: C, text: "Не имеет размера" }, { id: D, text: "Не хранит цвета" }] }
+  student_view: { options: [{ id: B, text: "Хранит формулы фигур" }, { id: C, text: "Не имеет размера" }, { id: D, text: "Не хранит цвета" }, { id: A, text: "Хранит цвет каждого пикселя" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Растр — сетка пикселей; вектор — формулы" }
+  teacher_only: { answer: D, explanation: "Растр — сетка пикселей; вектор — формулы" }
 
 - id: inf-7-base-009
   class: 7
@@ -182,9 +182,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Поиск ничего не нашёл. Что сделать первым делом?"
-  student_view: { options: [{ id: A, text: "Проверить написание слов" }, { id: B, text: "Выключить компьютер" }, { id: C, text: "Удалить браузер" }, { id: D, text: "Ждать неделю" }] }
+  student_view: { options: [{ id: D, text: "Ждать неделю" }, { id: C, text: "Удалить браузер" }, { id: A, text: "Проверить написание слов" }, { id: B, text: "Выключить компьютер" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Дальше: связки, синонимы, логика запроса, другой поисковик" }
+  teacher_only: { answer: C, explanation: "Дальше: связки, синонимы, логика запроса, другой поисковик" }
 
 - id: inf-7-base-012
   class: 7
@@ -199,9 +199,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "Что защищает от вирусов в первую очередь?"
-  student_view: { options: [{ id: A, text: "Антивирусная программа" }, { id: B, text: "Яркие обои" }, { id: C, text: "Громкий звук" }, { id: D, text: "Быстрый интернет" }] }
+  student_view: { options: [{ id: D, text: "Быстрый интернет" }, { id: C, text: "Громкий звук" }, { id: B, text: "Яркие обои" }, { id: A, text: "Антивирусная программа" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Антивирусы + осторожность с файлами" }
+  teacher_only: { answer: D, explanation: "Антивирусы + осторожность с файлами" }
 
 - id: inf-7-base-013
   class: 7
@@ -216,9 +216,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем показать доли чисел из таблицы документа?"
-  student_view: { options: [{ id: A, text: "Круговой диаграммой" }, { id: B, text: "Жирным шрифтом" }, { id: C, text: "Красной строкой" }, { id: D, text: "Колонтитулом" }] }
+  student_view: { options: [{ id: D, text: "Колонтитулом" }, { id: B, text: "Жирным шрифтом" }, { id: C, text: "Красной строкой" }, { id: A, text: "Круговой диаграммой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Доли — круг; сравнение — столбцы" }
+  teacher_only: { answer: D, explanation: "Доли — круг; сравнение — столбцы" }
 
 - id: inf-7-base-015
   class: 7
@@ -233,7 +233,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
   prompt: "Где стоят пальцы при слепом десятипальцевом методе?"
-  student_view: { options: [{ id: A, text: "ФЫВА — слева, ОЛДЖ — справа" }, { id: B, text: "На цифрах" }, { id: C, text: "Где попало" }, { id: D, text: "На пробеле все" }] }
+  student_view: { options: [{ id: A, text: "ФЫВА — слева, ОЛДЖ — справа" }, { id: C, text: "Где попало" }, { id: D, text: "На пробеле все" }, { id: B, text: "На цифрах" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Основной ряд; глаза в текст" }
 
@@ -250,9 +250,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем нарисовать схему прямо в текстовом процессоре?"
-  student_view: { options: [{ id: A, text: "Фигурами с группировкой" }, { id: B, text: "Скриншотом экрана" }, { id: C, text: "Жирным шрифтом" }, { id: D, text: "Колонтитулом" }] }
+  student_view: { options: [{ id: C, text: "Жирным шрифтом" }, { id: A, text: "Фигурами с группировкой" }, { id: B, text: "Скриншотом экрана" }, { id: D, text: "Колонтитулом" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Фигуры — вектор: тянется без мыла" }
+  teacher_only: { answer: B, explanation: "Фигуры — вектор: тянется без мыла" }
 
 - id: inf-7-base-014
   class: 7
@@ -267,6 +267,1460 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
   prompt: "Какая тенденция развития компьютеров верна?"
-  student_view: { options: [{ id: A, text: "Ядер больше, устройства меньше, счёт в облаках" }, { id: B, text: "Одно ядро навсегда" }, { id: C, text: "Компьютеры растут в размерах" }, { id: D, text: "Облаков не существует" }] }
+  student_view: { options: [{ id: C, text: "Компьютеры растут в размерах" }, { id: B, text: "Одно ядро навсегда" }, { id: A, text: "Ядер больше, устройства меньше, счёт в облаках" }, { id: D, text: "Облаков не существует" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Многоядерность, мобильность, облака" }
+  teacher_only: { answer: C, explanation: "Многоядерность, мобильность, облака" }
+
+# ==== ДОПИСАНО scripts/make-7-bank.mjs — ниже руками не править ====
+# Ответы вычислены кодом (calc/автоматический подбор варианта) и проверены check.mjs.
+
+- id: inf-7-base-017
+  class: 7
+  topic: Компьютер
+  subtopic: Типы компьютеров
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Какой компьютер обслуживает запросы многих пользователей: сайты, почту, общие файлы?"
+  student_view: { options: [{ id: C, text: "Персональный компьютер" }, { id: A, text: "Сервер" }, { id: D, text: "Суперкомпьютер" }, { id: B, text: "Встроенный компьютер" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Сервер обслуживает запросы многих, суперкомпьютер считает, встроенный компьютер — часть прибора." }
+
+- id: inf-7-base-018
+  class: 7
+  topic: Компьютер
+  subtopic: Поколения компьютеров
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Установите соответствие: поколение компьютеров — элементная база."
+  student_view: { left: ["1-е поколение", "2-е поколение", "3-е поколение", "4-е поколение"], right: ["Лампы", "Транзисторы", "Интегральные микросхемы", "Сверхбольшие интегральные схемы"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "1-е поколение": "Лампы", "2-е поколение": "Транзисторы", "3-е поколение": "Интегральные микросхемы", "4-е поколение": "Сверхбольшие интегральные схемы" }, explanation: "Поколения отличаются элементами, из которых собрана машина, а не размером." }
+
+- id: inf-7-base-019
+  class: 7
+  topic: Компьютер
+  subtopic: Сервер и суперкомпьютер
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Чем суперкомпьютер отличается от сервера?"
+  student_view: { options: [{ id: B, text: "Суперкомпьютер — это просто очень большой сервер, разница только в корпусе" }, { id: A, text: "Сервер служит запросам пользователей, а суперкомпьютер состоит из тысяч процессоров и решает научные задачи" }, { id: C, text: "У суперкомпьютера нет процессоров, есть только память" }, { id: D, text: "Сервер всегда встроен в прибор, а суперкомпьютер стоит отдельной машиной" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Сервер отвечает на запросы, суперкомпьютер считает: разные задачи, разное устройство." }
+
+- id: inf-7-base-020
+  class: 7
+  topic: Компьютер
+  subtopic: Ввод и вывод
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-hw], meta: [plan-actions] }
+  prompt: "Установите соответствие: устройство — что оно делает с информацией."
+  student_view: { left: ["Клавиатура", "Монитор", "Сканер", "Принтер"], right: ["Ввод текста и команд", "Вывод изображения на экран", "Ввод изображения с бумаги", "Вывод текста и рисунка на бумагу"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Клавиатура": "Ввод текста и команд", "Монитор": "Вывод изображения на экран", "Сканер": "Ввод изображения с бумаги", "Принтер": "Вывод текста и рисунка на бумагу" }, explanation: "Клавиатура и сканер вводят информацию, монитор и принтер выводят её человеку." }
+
+- id: inf-7-base-021
+  class: 7
+  topic: Компьютер
+  subtopic: Оперативная память
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
+  prompt: "Ученик набрал текст в процессоре, но не сохранил его, и выключил компьютер. Что пропало и почему?"
+  student_view: { options: [{ id: A, text: "Пропал текст из оперативной памяти: при выключении питания она очищается" }, { id: B, text: "Ничего не пропало: диск хранит все данные даже без сохранения" }, { id: C, text: "Пропал только последний абзац: остальное записано на диск автоматически" }, { id: D, text: "Текст остался в ПЗУ, потому что ПЗУ не стирается" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Оперативная память — рабочая область и очищается при выключении, в отличие от ПЗУ и диска." }
+
+- id: inf-7-base-022
+  class: 7
+  topic: Компьютер
+  subtopic: Группы ПО
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "К какой группе программного обеспечения относится операционная система?"
+  student_view: { options: [{ id: B, text: "Прикладное программное обеспечение" }, { id: A, text: "Системное программное обеспечение" }, { id: C, text: "Системы программирования" }, { id: D, text: "Графические редакторы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Операционная система управляет компьютером и устройствами — это системное ПО." }
+
+- id: inf-7-base-023
+  class: 7
+  topic: Компьютер
+  subtopic: Запуск программ
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Ученик дважды щёлкнул по ярлыку программы. Какая системная программа ищет программу в памяти и передаёт ей управление?"
+  student_view: { options: [{ id: D, text: "Программа просмотра изображений" }, { id: C, text: "Архиватор" }, { id: B, text: "Антивирус" }, { id: A, text: "Загрузчик" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "По цепочке: инсталлятор записал программу в список, ярлык запустил системный загрузчик." }
+
+- id: inf-7-base-024
+  class: 7
+  topic: Компьютер
+  subtopic: Бесплатное и свободное
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Программа бесплатна, но её лицензия запрещает изменять исходный код. Как её правильно назвать?"
+  student_view: { options: [{ id: B, text: "Свободная, потому что за неё не платят" }, { id: D, text: "Нелицензионная, потому что лицензия ограничивает копирование" }, { id: C, text: "Свободная, потому что её можно копировать" }, { id: A, text: "Бесплатная, но не свободная" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Свободное ПО даёт четыре свободы, среди которых изменение кода; её отсутствие означает несвободную программу." }
+
+- id: inf-7-base-025
+  class: 7
+  topic: Файлы и защита
+  subtopic: Расширения файлов
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "Установите соответствие: расширение — содержимое файла."
+  student_view: { left: [".docx", ".mp3", ".zip", ".exe"], right: ["текстовый документ", "звуковой файл", "архив", "исполняемый файл программы"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { ".docx": "текстовый документ", ".mp3": "звуковой файл", ".zip": "архив", ".exe": "исполняемый файл программы" }, explanation: "Расширение подсказывает системе, какой программой открыть файл." }
+
+- id: inf-7-base-026
+  class: 7
+  topic: Файлы и защита
+  subtopic: Вирусы и трояны
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
+  prompt: "Чем троян отличается от вируса?"
+  student_view: { options: [{ id: D, text: "Ничем: это два названия одного и того же" }, { id: C, text: "Троян шифрует файлы, а вирус их удаляет" }, { id: B, text: "Троян размножается и заражает файлы, а вирус только маскируется" }, { id: A, text: "Троян не размножается сам, а маскируется под полезную программу" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Вирус внедряется в файлы и размножается, троян лишь притворяется полезной программой." }
+
+- id: inf-7-base-027
+  class: 7
+  topic: Файлы и защита
+  subtopic: Виды вредоносных программ
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
+  prompt: "Установите соответствие: вредоносная программа — её поведение."
+  student_view: { left: ["Вирус", "Троян", "Рекламная программа", "Шпионская программа"], right: ["сам размножается и портит файлы", "выдаёт себя за полезную программу", "показывает баннеры и перенаправляет браузер", "собирает личные данные и отправляет их"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Вирус": "сам размножается и портит файлы", "Троян": "выдаёт себя за полезную программу", "Рекламная программа": "показывает баннеры и перенаправляет браузер", "Шпионская программа": "собирает личные данные и отправляет их" }, explanation: "Вирус размножается, троян маскируется, реклама показывает баннеры, шпион собирает данные." }
+
+- id: inf-7-base-028
+  class: 7
+  topic: Файлы и защита
+  subtopic: Сжатие без потерь
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
+  prompt: "Какой файл архиватор сожмёт сильнее — текст или фотографию — и почему?"
+  student_view: { options: [{ id: A, text: "Текст: в нём много повторов, и они сжимаются в один код" }, { id: B, text: "Фотографию: у неё больше цветов, значит и повторов больше" }, { id: D, text: "Ни один: архиватор только упаковывает, но не сжимает" }, { id: C, text: "Одинаково: архиватор не различает типы файлов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сжатие работает там, где есть повторы: в тексте их гораздо больше, чем в фотографии." }
+
+- id: inf-7-base-029
+  class: 7
+  topic: Графика
+  subtopic: Размер в пикселях
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7gfx-01-graphics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-volume], meta: [plan-actions] }
+  prompt: "Изображение 800 на 600 пикселей, глубина кодирования 24 бита. Чему равен объём в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1440000], answer_text: "1440000", explanation: "K = 800 · 600 = 480 000 пикселей; I = 480 000 · 24 = 11 520 000 бит = 1 440 000 байт." }
+
+- id: inf-7-base-030
+  class: 7
+  topic: Интернет
+  subtopic: Единицы скорости
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-02-speed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
+  prompt: "Сколько Мбит/с в 1 Мбайт/с?"
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "64" }, { id: C, text: "1024" }, { id: D, text: "1" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "1 байт = 8 бит, значит 1 Мбайт/с = 8 Мбит/с." }
+
+- id: inf-7-base-031
+  class: 7
+  topic: Интернет
+  subtopic: Время скачивания
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-02-speed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
+  prompt: "Файл 2 Кбайта скачивается по каналу 2048 бит/с. Сколько секунд идёт загрузка? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Объём в битах: 2 · 1024 · 8 = 16 384 бита; время = 16 384 : 2048 = 8 секунд." }
+
+- id: inf-7-base-032
+  class: 7
+  topic: Интернет
+  subtopic: Средняя скорость
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7net-02-speed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
+  prompt: "Файл 1 Мбайт передан по каналу за 16 секунд. Какова средняя скорость передачи в бит/с? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [524288], answer_text: "524288", explanation: "Скорость ищем обратным ходом: объём 1 · 1024 · 1024 · 8 = 8 388 608 бит, делим на 16 секунд." }
+
+- id: inf-7-base-033
+  class: 7
+  topic: Интернет
+  subtopic: Связки запроса
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Запрос «информатика OR программирование» найдёт документы, в которых…"
+  student_view: { options: [{ id: A, text: "есть хотя бы одно из этих слов" }, { id: B, text: "есть оба слова сразу" }, { id: C, text: "нет ни одного из этих слов" }, { id: D, text: "эти два слова стоят рядом в одной строке" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "OR — логическое «или»: подходит документ с любым из двух слов." }
+
+- id: inf-7-base-034
+  class: 7
+  topic: Интернет
+  subtopic: Порядок поиска
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Поисковый запрос не нашёл ничего. В каком порядке правильно действовать?"
+  student_view: { options: [{ id: A, text: "Проверить написание → проверить связки → подобрать синонимы → изменить логику → сменить поисковик" }, { id: D, text: "Ничего не делать: результаты обновятся сами" }, { id: B, text: "Сменить браузер → переустановить операционную систему → обратиться в сервисный центр" }, { id: C, text: "Сразу поставить новую антивирусную программу → купить другой компьютер" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Алгоритм учебника: написание → связки → синонимы → логика запроса → другой поисковик." }
+
+- id: inf-7-base-035
+  class: 7
+  topic: Интернет
+  subtopic: Домен и путь
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
+  prompt: "В адресе https://school.example.com/info/page.html какая часть указывает доменное имя?"
+  student_view: { options: [{ id: C, text: "/info/page.html" }, { id: B, text: "https" }, { id: A, text: "school.example.com" }, { id: D, text: "page.html" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Домен стоит сразу после протокола, дальше идёт путь внутри сайта." }
+
+- id: inf-7-base-036
+  class: 7
+  topic: Интернет
+  subtopic: Сборка адреса
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
+  prompt: "Адрес собирают из фрагментов https, site, ru, /blog/. В каком порядке их соединяют?"
+  student_view: { options: [{ id: D, text: "Косая черта, протокол, домен, путь" }, { id: C, text: "Путь, косая черта, домен, протокол" }, { id: A, text: "Протокол, домен, косая черта, путь" }, { id: B, text: "Домен, протокол, путь, косая черта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Шаблон адреса: протокол://домен/путь, поэтому косая черта идёт перед путём." }
+
+- id: inf-7-base-037
+  class: 7
+  topic: Интернет
+  subtopic: Части адреса
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
+  prompt: "Установите соответствие: часть адреса — её смысл."
+  student_view: { left: ["https", "www.example.com", "/docs/index.html"], right: ["протокол", "доменное имя", "путь внутри сайта"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "https": "протокол", "www.example.com": "доменное имя", "/docs/index.html": "путь внутри сайта" }, explanation: "Протокол отвечает за способ связи, домен — за адрес сервера, путь — за конкретную страницу." }
+
+- id: inf-7-base-038
+  class: 7
+  topic: Текст
+  subtopic: Стили документа
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-style], meta: [plan-actions] }
+  prompt: "Автор хочет, чтобы все 12 заголовков в документе выглядели одинаково. Что применять?"
+  student_view: { options: [{ id: B, text: "Жирный начертание и размер 16 пт каждому заголовку отдельно" }, { id: A, text: "Стиль «Заголовок 1» ко всем заголовкам" }, { id: C, text: "Выравнивание по центру каждому заголовку" }, { id: D, text: "Копировать первый заголовок и вставлять его копии" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Стиль — именованный набор оформления: поменял один раз, изменились все заголовки." }
+
+- id: inf-7-base-039
+  class: 7
+  topic: Текст
+  subtopic: Диаграмма по таблице
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
+  prompt: "Диаграмма построена по таблице документа. Что произойдёт, если изменить число в одной ячейке?"
+  student_view: { options: [{ id: C, text: "Таблица и диаграмма независимы: это две отдельные картинки" }, { id: B, text: "Ничего: диаграмма сохранит прежние значения" }, { id: A, text: "Столбик на диаграмме перестроится сам, потому что диаграмма связана с таблицей" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Данные диаграммы берутся из таблицы, поэтому изменение числа перестраивает столбик." }
+
+- id: inf-7-base-040
+  class: 7
+  topic: Текст
+  subtopic: Правила набора
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-02-format
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-key], meta: [plan-actions] }
+  prompt: "Чем в текстовом процессоре отделяется один абзац от другого?"
+  student_view: { options: [{ id: D, text: "Знаком точки в конце строки" }, { id: A, text: "Клавишей Enter" }, { id: C, text: "Клавишей Tab" }, { id: B, text: "Пробелами" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Абзац — это отдельный блок текста, поэтому отделяется Enter, а не пробелами." }
+
+- id: inf-7-base-041
+  class: 7
+  topic: Текст
+  subtopic: Десятипальцевый метод
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-02-format
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
+  prompt: "Установите соответствие: группа клавиш — рука при слепом десятипальцевом письме."
+  student_view: { left: ["ФЫВАПРОЛДЖЭ", "ЯЧСМИТЬБЮЩ", "ЦФЫВАПРОЛШДЩ", "ЬХЦЧСВМНГШЩЗК"], right: ["левая рука, основной ряд", "правая рука, основной ряд", "левая рука, верхний ряд", "правая рука, верхний ряд"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "ФЫВАПРОЛДЖЭ": "левая рука, основной ряд", "ЯЧСМИТЬБЮЩ": "правая рука, основной ряд", "ЦФЫВАПРОЛШДЩ": "левая рука, верхний ряд", "ЬХЦЧСВМНГШЩЗК": "правая рука, верхний ряд" }, explanation: "Основной ряд делят между руками, верхний ряд обслуживают те же пальцы, большие пальцы жмут пробел." }
+
+- id: inf-7-base-042
+  class: 7
+  topic: Текст
+  subtopic: Распознавание текста
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-02-format
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-ocr], meta: [plan-actions] }
+  prompt: "Текст распознали со скана, и в слове «Отлично» получилось «Осигнал». Что произошло?"
+  student_view: { options: [{ id: C, text: "Выбрана неверная кодировка, нужно пересохранить файл" }, { id: A, text: "Ошибка распознавания: похожие буквы приняты друг за друга, результат надо вычитать" }, { id: B, text: "Файл повреждён: его придётся набирать заново" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Оптическое распознавание путает похожие буквы, поэтому результат всегда вычитывают." }
+
+- id: inf-7-base-043
+  class: 7
+  topic: Текст
+  subtopic: Поля страницы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-03-styles
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-page], meta: [plan-actions] }
+  prompt: "Какое поле страницы обычно делают шире остальных?"
+  student_view: { options: [{ id: D, text: "Нижнее — под подпись" }, { id: A, text: "Левое — под подшивку" }, { id: C, text: "Правое — под руку" }, { id: B, text: "Верхнее — под шапку документа" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Листы подшивают слева, поэтому левое поле делают шире." }
+
+- id: inf-7-base-044
+  class: 7
+  topic: Текст
+  subtopic: Колонтитулы
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-03-styles
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-page], meta: [plan-actions] }
+  prompt: "Установите соответствие: элемент страницы — его назначение."
+  student_view: { left: ["Верхний колонтитул", "Нижний колонтитул", "Номер страницы", "Ориентация страницы"], right: ["название документа на каждой странице", "номера страниц внизу листа", "поле, которое обновляется само", "книжная или альбомная"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Верхний колонтитул": "название документа на каждой странице", "Нижний колонтитул": "номера страниц внизу листа", "Номер страницы": "поле, которое обновляется само", "Ориентация страницы": "книжная или альбомная" }, explanation: "Колонтитул повторяется на всех страницах, а номер вставляют полем, а не вручную." }
+
+- id: inf-7-base-045
+  class: 7
+  topic: Текст
+  subtopic: Прямое и стилевое
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-03-styles
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-style], meta: [plan-actions] }
+  prompt: "Восемь заголовков оформлены вручную: жирные, 16 пт, по центру. Как правильно переоформить документ?"
+  student_view: { options: [{ id: B, text: "Оставить как есть: прямое форматирование быстрее" }, { id: C, text: "Сделать все заголовки обычным текстом, чтобы оформление было одинаковым" }, { id: A, text: "Применить стиль «Заголовок 1» ко всем заголовкам и убрать ручное оформление" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Стиль меняет всю структуру разом; смешивать стиль и ручное оформление нельзя." }
+
+- id: inf-7-base-046
+  class: 7
+  topic: Текст
+  subtopic: Виды списков
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-04-lists
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-list], meta: [plan-actions] }
+  prompt: "Что выбрать для перечисления шагов алгоритма, где важен порядок?"
+  student_view: { options: [{ id: D, text: "Круговую диаграмму" }, { id: C, text: "Таблицу" }, { id: A, text: "Нумерованный список" }, { id: B, text: "Маркированный список" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Порядок важен — нумерованный список; порядок не важен — маркированный." }
+
+- id: inf-7-base-047
+  class: 7
+  topic: Текст
+  subtopic: Выбор инструмента
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-04-lists
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-list], meta: [plan-actions] }
+  prompt: "Установите соответствие: ситуация — инструмент в документе."
+  student_view: { left: ["Нумерованный список", "Маркированный список", "Таблица", "Круговая диаграмма"], right: ["перечислить шаги, где важен порядок", "перечислить факты, где порядок не важен", "сравнить одни и те же признаки у нескольких объектов", "показать доли целого"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Нумерованный список": "перечислить шаги, где важен порядок", "Маркированный список": "перечислить факты, где порядок не важен", "Таблица": "сравнить одни и те же признаки у нескольких объектов", "Круговая диаграмма": "показать доли целого" }, explanation: "Список перечисляет, таблица сравнивает, круговая диаграмма показывает доли." }
+
+- id: inf-7-base-048
+  class: 7
+  topic: Текст
+  subtopic: Ячейки таблицы
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-04-lists
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-table], meta: [plan-actions] }
+  prompt: "В таблице 4 строки и 5 столбцов. Сколько в ней ячеек? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "Каждая ячейка — пересечение строки и столбца, поэтому ячеек 4 · 5 = 20." }
+
+- id: inf-7-base-049
+  class: 7
+  topic: Текст
+  subtopic: Форматы файлов
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-05-objects
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-file], meta: [plan-actions] }
+  prompt: "В каком расширении LibreOffice Writer сохраняет документ в своём родном формате?"
+  student_view: { options: [{ id: C, text: ".rtf" }, { id: D, text: ".pdf" }, { id: A, text: ".odt" }, { id: B, text: ".docx" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: ".odt — свой формат LibreOffice, а .docx — обменный формат для других программ." }
+
+- id: inf-7-base-050
+  class: 7
+  topic: Текст
+  subtopic: Изображения
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-05-objects
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-image], meta: [plan-actions] }
+  prompt: "Рисунок вставили в документ и растянули за угол: круг превратился в овал. Как надо было вставлять?"
+  student_view: { options: [{ id: A, text: "Задавать размер с сохранением пропорций" }, { id: C, text: "Растягивать только по ширине" }, { id: D, text: "Сначала перевести рисунок в текстовый формат" }, { id: B, text: "Вставлять изображение вообще без указания размера" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Пропорции задаются один раз, иначе рисунок растянется и исказится." }
+
+- id: inf-7-base-051
+  class: 7
+  topic: Текст
+  subtopic: Формулы
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-05-objects
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-formula], meta: [plan-actions] }
+  prompt: "В документе нужна формула с дробями и индексами. Чем её набрать?"
+  student_view: { options: [{ id: D, text: "Растровым рисунком, чтобы вид при печати не менялся" }, { id: B, text: "Обычным текстом с клавиатуры: так быстрее" }, { id: A, text: "Редактором формул: дроби и индексы выравниваются по правилам" }, { id: C, text: "Таблицей из двух ячеек, чтобы написать дробь" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Простую формулу можно набрать текстом, длинные выражения — только в редакторе формул." }
+
+- id: inf-7-base-052
+  class: 7
+  topic: Текст
+  subtopic: Виды ссылок
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-06-citations
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-cite], meta: [plan-actions] }
+  prompt: "Ссылка стоит внизу страницы, под тем абзацем, к которому относится. Как она называется?"
+  student_view: { options: [{ id: C, text: "Гиперссылка" }, { id: D, text: "Примечание автора" }, { id: A, text: "Подстрочная (сноска)" }, { id: B, text: "Затекстовая (концевая)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Сноска стоит внизу страницы, затекстовая ссылка — номером в списке источников в конце работы." }
+
+- id: inf-7-base-053
+  class: 7
+  topic: Текст
+  subtopic: Список источников
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-06-citations
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-cite], meta: [plan-actions] }
+  prompt: "Установите соответствие: запись в списке источников — что нужно указать."
+  student_view: { left: ["Иванов И. Информатика: учебник для 7 класса. — М.: Просвещение, 2020.", "Единая коллекция цифровых образовательных ресурсов. — URL: https://school-collection.edu.ru (дата обращения: 10.03.2025)."], right: ["книга: автор, название, место и год издания", "сайт: название, адрес и дата обращения"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Иванов И. Информатика: учебник для 7 класса. — М.: Просвещение, 2020.": "книга: автор, название, место и год издания", "Единая коллекция цифровых образовательных ресурсов. — URL: https://school-collection.edu.ru (дата обращения: 10.03.2025).": "сайт: название, адрес и дата обращения" }, explanation: "Для книги указывают издательство и год, для сайта — адрес и дату обращения." }
+
+- id: inf-7-base-054
+  class: 7
+  topic: Текст
+  subtopic: Плагиат
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-06-citations
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-plagiat], meta: [plan-actions] }
+  prompt: "Ученик скачал реферат из интернета, переставил абзацы и сдал его как свою работу. Что это?"
+  student_view: { options: [{ id: B, text: "Допустимо: автор не указал, что работу писал он" }, { id: C, text: "Допустимо, если работу не выкладывать в интернет" }, { id: D, text: "Реферат, потому что тема выбрана и развёрнута" }, { id: A, text: "Плагиат: чужая работа выдана за свою" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Перестановка абзацев не делает чужой текст своим: без ссылки это плагиат." }
+
+- id: inf-7-base-055
+  class: 7
+  topic: Графика
+  subtopic: Что такое вектор
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Что хранит векторное изображение?"
+  student_view: { options: [{ id: B, text: "Цвет каждого пикселя" }, { id: D, text: "Текстовый шрифт" }, { id: A, text: "Формулы фигур: линий, кривых и многоугольников" }, { id: C, text: "Набор готовых картинок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Вектор хранит не точки, а формулы фигур — поэтому качество не зависит от размера." }
+
+- id: inf-7-base-056
+  class: 7
+  topic: Графика
+  subtopic: Группировка
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Схема состоит из двенадцати линий, и её нужно передвинуть целиком. Что сделать?"
+  student_view: { options: [{ id: B, text: "Передвинуть каждую линию отдельно" }, { id: C, text: "Скопировать линии и вставить их заново" }, { id: A, text: "Выделить все фигуры и сгруппировать в один объект" }, { id: D, text: "Сохранить схему как картинку и вставить её в документ" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "После группировки набор фигур становится единым объектом: его можно целиком двигать и масштабировать." }
+
+- id: inf-7-base-057
+  class: 7
+  topic: Графика
+  subtopic: Масштабирование
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Группу из пяти линий растянули в три раза по ширине и по высоте. Что будет с толщиной линий?"
+  student_view: { options: [{ id: B, text: "Станет в три раза толще, потому что размер вырос" }, { id: D, text: "Появятся ступеньки, как у растровой картинки" }, { id: A, text: "Не изменится: вектор масштабируется без потерь качества" }, { id: C, text: "Станет в три раза тоньше, потому что длина выросла" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Вектор хранит формулы, поэтому при увеличении пересчитываются формулы, а не точки." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-7-bank2.mjs ====
+# Ответы вычислены кодом (calc/подбор варианта) и проверены check.mjs.
+
+- id: inf-7-base-058
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Встроенные компьютеры"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Где работает встроенный компьютер?"
+  student_view: { options: [{ id: C, text: "В стойке сервера школы, чтобы отвечать на запросы" }, { id: B, text: "На рабочем столе школьника рядом с монитором" }, { id: D, text: "В кармане ученика, чтобы всегда быть под рукой" }, { id: A, text: "Внутри прибора: в стиральной машине, бортовом компьютере автомобиля, домофоне" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Встроенный компьютер — часть прибора и работает по программе прибора, а не как отдельная машина." }
+
+- id: inf-7-base-059
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Универсальность"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Компьютер называют универсальным, потому что…"
+  student_view: { options: [{ id: D, text: "он всегда стоит дороже любого другого устройства" }, { id: A, text: "одна и та же машина выполняет любые задачи, для которых написана программа" }, { id: C, text: "в него можно вставить любую деталь, и он станет другим компьютером" }, { id: B, text: "он умеет только считать, но делает это быстрее всех" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Универсальность обеспечивают программы: сменилась программа — сменилась задача, а машина та же." }
+
+- id: inf-7-base-060
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Облачные вычисления"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Что означает «вычисления в облаке»?"
+  student_view: { options: [{ id: A, text: "тяжёлые вычисления выполняются на сервере в дата-центре, а устройство хранит данные и показывает результат" }, { id: C, text: "компьютер не подключают к сети, чтобы не заразиться вирусом" }, { id: B, text: "программы хранятся в файлах на рабочем столе компьютера" }, { id: D, text: "программа сразу после запуска сама удаляется с диска" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Облако — это вычисления и хранение на стороне дата-центра; связь идёт через интернет." }
+
+- id: inf-7-base-061
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Многоядерность"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "В процессоре 8 ядер. Что это даёт при работе программы?"
+  student_view: { options: [{ id: A, text: "задачи выполняются параллельно, поэтому та же работа делается быстрее" }, { id: B, text: "процессор потребляет в 8 раз меньше электричества" }, { id: D, text: "все файлы на диске автоматически станут в 8 раз меньше" }, { id: C, text: "компьютер может работать без программ вообще" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Ядро — вычислительный блок; несколько ядер делят задачи между собой, но общие программы всё равно нужны." }
+
+- id: inf-7-base-062
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Поколения по порядку"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-03-types
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
+  prompt: "Какое поколение компьютеров первым использовало интегральные микросхемы?"
+  student_view: { options: [{ id: B, text: "2-е" }, { id: D, text: "1-е" }, { id: C, text: "4-е" }, { id: A, text: "3-е" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Идёт 1-е поколение на лампах, 2-е на транзисторах, 3-е на интегральных микросхемах, 4-е на сверхбольших схемах." }
+
+- id: inf-7-base-063
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Характеристики процессора"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
+  prompt: "Установите соответствие: характеристика процессора — что она означает."
+  student_view: { left: ["Ядра", "Тактовая частота", "Разрядность"], right: ["вычислительные блоки процессора", "число тактов в секунду, измеряется в ГГц", "сколько бит процессор обрабатывает за один раз"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Ядра": "вычислительные блоки процессора", "Тактовая частота": "число тактов в секунду, измеряется в ГГц", "Разрядность": "сколько бит процессор обрабатывает за один раз" }, explanation: "Ядер много — работа идёт параллельно; частота показывает темп, а разрядность — сколько бит за раз." }
+
+- id: inf-7-base-064
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Виды памяти"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-01-hardware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид памяти — чем он отличается."
+  student_view: { left: ["ПЗУ", "Оперативная память", "Кэш-память"], right: ["несгораемая память: при выключении питания содержимое остаётся", "рабочая область: при выключении питания очищается", "быстрая память рядом с процессором для часто используемых данных"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "ПЗУ": "несгораемая память: при выключении питания содержимое остаётся", "Оперативная память": "рабочая область: при выключении питания очищается", "Кэш-память": "быстрая память рядом с процессором для часто используемых данных" }, explanation: "ПЗУ хранит программу загрузки, оперативная память — текущую работу, кэш ускоряет обращение процессора." }
+
+- id: inf-7-base-065
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Системы программирования"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "К какой группе программного обеспечения относится среда разработки на Python?"
+  student_view: { options: [{ id: C, text: "Прикладное программное обеспечение" }, { id: D, text: "Служебные утилиты архиватора" }, { id: A, text: "Системы программирования" }, { id: B, text: "Системное программное обеспечение" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Среды разработки создают новые программы, поэтому это системы программирования, а не прикладные программы." }
+
+- id: inf-7-base-066
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Прикладное ПО"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "К какой группе программного обеспечения относится LibreOffice Writer?"
+  student_view: { options: [{ id: D, text: "Драйверы устройств" }, { id: A, text: "Прикладное программное обеспечение" }, { id: B, text: "Системное программное обеспечение" }, { id: C, text: "Системы программирования" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Текстовый процессор решает задачу пользователя — это прикладное ПО; драйверы и операционная система относятся к системному." }
+
+- id: inf-7-base-067
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Утилиты"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Какие программы относятся к утилитам?"
+  student_view: { options: [{ id: B, text: "Текстовый процессор, графический редактор, браузер" }, { id: C, text: "Среды разработки и компиляторы" }, { id: D, text: "Драйверы видеокарты и звуковой карты" }, { id: A, text: "Архиватор, антивирус, дефрагментатор — программы, обслуживающие систему" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Утилиты обслуживают компьютер и его данные, поэтому вместе с операционной системой и драйверами относятся к системному ПО." }
+
+- id: inf-7-base-068
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Роль операционной системы"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Почему компьютер не работает, если операционная система не загрузилась?"
+  student_view: { options: [{ id: A, text: "она загружается первой и распределяет память, даёт процессору команды, работает с устройствами и запускает программы" }, { id: C, text: "она нужна только для вывода картинки на монитор" }, { id: B, text: "она хранит все файлы и без неё компьютер не знает, где их искать" }, { id: D, text: "она сама пишет все программы, которые запускают" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Без ОС некому управлять процессором и памятью и нечем запустить программу: остаётся голое железо." }
+
+- id: inf-7-base-069
+  class: 7
+  topic: "Компьютер"
+  subtopic: "Свободные программы"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-software
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
+  prompt: "Какая из программ распространяется как свободное программное обеспечение?"
+  student_view: { options: [{ id: C, text: "Платная программа без исходников" }, { id: A, text: "LibreOffice" }, { id: B, text: "Архиватор, который запрещает изменять свой код" }, { id: D, text: "Кряк с рекламой на каждом запуске" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Свободное ПО можно использовать, изучать, копировать и изменять; именно такие права даёт лицензия GNU GPL." }
+
+- id: inf-7-base-070
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Расширение файла"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "Что такое расширение файла?"
+  student_view: { options: [{ id: D, text: "Поле в свойствах файла с датой его изменения" }, { id: B, text: "Полное имя файла вместе с именем папки, где он лежит" }, { id: C, text: "Папка, в которой система хранит все файлы одного типа" }, { id: A, text: "Часть имени после точки, по которой система понимает, какой программой его открыть" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Расширение — подсказка для системы; в файле otchet.docx это часть после точки, то есть .docx." }
+
+- id: inf-7-base-071
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Полный путь"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "В пути D:\\Работы\\7 класс\\otchet.docx какая часть является именем файла?"
+  student_view: { options: [{ id: C, text: "Работы\\7 класс" }, { id: B, text: "D:\\Работы\\7 класс" }, { id: A, text: "otchet.docx" }, { id: D, text: "7 класс" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Полный путь состоит из диска, всех папок и в конце — имени файла с расширением." }
+
+- id: inf-7-base-072
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Расширение не гарантия"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "Файл с расширением .jpg при просмотре оказался обычным текстом. О чём это говорит?"
+  student_view: { options: [{ id: A, text: "расширение можно изменить, поэтому о содержимом судят по типу файла, а не по расширению" }, { id: B, text: "файл повреждён и его придётся набирать заново" }, { id: D, text: "в папке слишком много файлов, поэтому они перепутались" }, { id: C, text: "выбрана неверная кодировка, достаточно пересохранить файл" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Расширение — подсказка, а не гарантия: переименованный .jpg внутри оказывается текстом." }
+
+- id: inf-7-base-073
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Элементы файловой системы"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "Установите соответствие: понятие файловой системы — что оно означает."
+  student_view: { left: ["Диск", "Папка", "Корневая папка", "Расширение"], right: ["носитель, на котором записаны данные", "контейнер для файлов и других папок", "папка самого верхнего уровня, от неё строится полный путь", "часть имени после точки, по ней выбирается программа"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Диск": "носитель, на котором записаны данные", "Папка": "контейнер для файлов и других папок", "Корневая папка": "папка самого верхнего уровня, от неё строится полный путь", "Расширение": "часть имени после точки, по ней выбирается программа" }, explanation: "Файловая система задаёт правила хранения: носитель, контейнеры и корневая папка, от которой считается путь." }
+
+- id: inf-7-base-074
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Корзина"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-02-files
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
+  prompt: "Чем удаление мимо корзины опаснее удаления через корзину?"
+  student_view: { options: [{ id: D, text: "разницы нет: корзина нужна только чтобы освободить место" }, { id: B, text: "мимо корзины файл удаляется медленнее, и папка не успевает обновиться" }, { id: C, text: "мимо корзины удаляются только копии, а оригинал остаётся на диске" }, { id: A, text: "после удаления мимо корзины восстановить файл уже нельзя, а из корзины он ещё доступен" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Корзина — временное хранилище: опустошив её, вернуть файл уже нечем." }
+
+- id: inf-7-base-075
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Пути заражения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
+  prompt: "Какой источник вируса самый типичный для школьного компьютера?"
+  student_view: { options: [{ id: C, text: "Справочный материал на школьном сайте" }, { id: B, text: "Файл, который учитель положил на флешку для класса" }, { id: A, text: "Вложение в письме от незнакомого отправителя" }, { id: D, text: "Файл, созданный в текстовом процессоре и сохранённый на рабочем столе" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Вредоносный код часто приходит вложением в письмо, поэтому незнакомые вложения не открывают «просто посмотреть»." }
+
+- id: inf-7-base-076
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Антивирус"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
+  prompt: "Почему антивирусная программа не даёт стопроцентной защиты?"
+  student_view: { options: [{ id: A, text: "новый вирус попадает в базу через несколько дней, пока антивирус о нём ещё не знает" }, { id: C, text: "антивирус работает только в интернете, без сети он молчит" }, { id: B, text: "антивирус проверяет только текстовые файлы, а картинки пропускает" }, { id: D, text: "антивирус заражает компьютер сам, защищая его вирусами" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Защиту дают три средства вместе: антивирус, обновления системы и осторожность пользователя." }
+
+- id: inf-7-base-077
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Архиватор"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
+  prompt: "Зачем нужен архиватор?"
+  student_view: { options: [{ id: C, text: "Зашифровать фотографии от других пользователей компьютера" }, { id: B, text: "Улучшить качество фотографий, положив их в архив" }, { id: D, text: "Превратить фотографию в векторный рисунок" }, { id: A, text: "Упаковать несколько файлов в один, чтобы их было удобнее передать, и уменьшить занимаемое место" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Архиватор только сжимает и упаковывает, качество данных при этом не меняется." }
+
+- id: inf-7-base-078
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Средства защиты"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
+  prompt: "Какое действие надёжнее всего защищает компьютер от вирусов?"
+  student_view: { options: [{ id: A, text: "Не открывать вложения от незнакомцев и не скачивать программы с сомнительных сайтов" }, { id: C, text: "Хранить все файлы в одной папке на рабочем столе" }, { id: D, text: "Удалять все файлы, которые пришли по почте, даже от преподавателя" }, { id: B, text: "Всегда выключать звук на компьютере при работе в интернете" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Антивирус устаревает, а осторожность пользователя остаётся: надёжнее всего не пускать вредоносный код на компьютер." }
+
+- id: inf-7-base-079
+  class: 7
+  topic: "Файлы и защита"
+  subtopic: "Правовая охрана"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7pc-04-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
+  prompt: "Ученик установил копию платной программы без разрешения правообладателя. Чем это нарушение?"
+  student_view: { options: [{ id: D, text: "Просто неаккуратным выбором программы, но не нарушением закона" }, { id: B, text: "Ничем: программа работает и школьному компьютеру дела нет" }, { id: A, text: "Нарушением авторского права на программу: копирование и распространение без разрешения запрещены" }, { id: C, text: "Только нарушением правил сайта, с которого её скачали" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Свободное ПО — исключение: его лицензия разрешает копирование и изменение, у остальных программ такого права нет." }
+
+- id: inf-7-base-080
+  class: 7
+  topic: "Графика"
+  subtopic: "Формат с потерями"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7gfx-01-graphics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-fmt], meta: [plan-actions] }
+  prompt: "Какой графический формат сжимает изображение с потерями, поэтому при увеличении видны блочные артефакты?"
+  student_view: { options: [{ id: C, text: "BMP" }, { id: B, text: "PNG" }, { id: D, text: "SVG" }, { id: A, text: "JPEG" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "JPEG отбрасывает часть данных навсегда; BMP и PNG хранят изображение без потерь, а SVG — вектор." }
+
+- id: inf-7-base-081
+  class: 7
+  topic: "Графика"
+  subtopic: "Разрешение и пиксели"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7gfx-01-graphics
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-gfx-volume], meta: [plan-actions] }
+  prompt: "Рисунок 2 дюйма на 2 дюйма снят с разрешением 300 dpi. Сколько пикселей по одной стороне? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [600], answer_text: "600", explanation: "По стороне в дюймах умножаем на разрешение: K по стороне = 2 · 300 = 600 пикселей, всего 600 · 600." }
+
+- id: inf-7-base-082
+  class: 7
+  topic: "Интернет"
+  subtopic: "Бит и байт"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-02-speed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
+  prompt: "Сколько бит в 1 Мбайте? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8388608], answer_text: "8388608", explanation: "1 Мбайт = 1024 · 1024 = 1 048 576 байт, а каждый байт — это 8 бит: 1 048 576 · 8 = 8 388 608 бит." }
+
+- id: inf-7-base-083
+  class: 7
+  topic: "Интернет"
+  subtopic: "Реальная скорость"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7net-02-speed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
+  prompt: "Почему файл качается дольше, чем показывает расчёт по заявленной скорости?"
+  student_view: { options: [{ id: C, text: "Файлы передаются только по выходным, в будни скорость обнуляется" }, { id: B, text: "Файл всегда весит больше, чем написано в его свойствах" }, { id: D, text: "Чем новее файл, тем ниже скорость его передачи" }, { id: A, text: "Заявленная скорость — это максимум канала, а реальный трафик делят другие пользователи" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Реальная скорость ниже максимума: канал делят другие пользователи, а часть трафика уходит на служебные нужды." }
+
+- id: inf-7-base-084
+  class: 7
+  topic: "Интернет"
+  subtopic: "Связка NOT"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Запрос «информатика NOT игра» найдёт документы, в которых…"
+  student_view: { options: [{ id: B, text: "есть оба слова сразу" }, { id: D, text: "нет ни слова «информатика», ни слова «игра»" }, { id: C, text: "есть только слово «игра»" }, { id: A, text: "есть слово «информатика», но нет слова «игра»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "NOT (минус) убирает из выдачи документы со словом «игра», а «информатика» остаётся обязательным." }
+
+- id: inf-7-base-085
+  class: 7
+  topic: "Интернет"
+  subtopic: "Поиск по картинке"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
+  prompt: "Что делает поиск по картинке?"
+  student_view: { options: [{ id: C, text: "Показывает рекламу с товарами по теме фотографии" }, { id: D, text: "Переводит текст, написанный на картинке, на русский язык" }, { id: A, text: "По загруженному фото находит похожие изображения — так ищут незнакомые объекты" }, { id: B, text: "Определяет автора фотографии и его адрес" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Если слово назвать нечем, объект опознают по фотографии: так находят название растения или модели." }
+
+- id: inf-7-base-086
+  class: 7
+  topic: "Интернет"
+  subtopic: "Проверка источника"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-01-internet
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
+  prompt: "Ученик взял первый результат из выдачи и сдал его как проверенный факт. Какое правило он нарушил?"
+  student_view: { options: [{ id: B, text: "Нужно сначала купить подписку на этот сайт" }, { id: C, text: "Нужно скопировать результат в три разных поисковика" }, { id: D, text: "Нужно выбрать результат, который стоит выше всех в списке" }, { id: A, text: "Нужно проверить факт и надёжность источника, прежде чем использовать его в работе" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Первый результат — не самый верный: автор может ошибаться, поэтому факт сверяют с несколькими независимыми источниками." }
+
+- id: inf-7-base-087
+  class: 7
+  topic: "Интернет"
+  subtopic: "Виды сетей"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
+  prompt: "Чем локальная сеть отличается от глобальной?"
+  student_view: { options: [{ id: A, text: "Локальная соединяет компьютеры в одном здании, глобальная — по всей планете, и Интернет самая большая из них" }, { id: B, text: "Локальная работает без интернета, а глобальная только с интернетом" }, { id: C, text: "Локальная соединяет больше компьютеров, чем глобальная" }, { id: D, text: "Разницы нет: это два названия одного и того же" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Школьная сеть или домашний роутер — локальные; интернет связывает компьютеры по всему миру." }
+
+- id: inf-7-base-088
+  class: 7
+  topic: "Интернет"
+  subtopic: "Страница и сайт"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
+  prompt: "Веб-сайт — это…"
+  student_view: { options: [{ id: B, text: "Отдельный документ в сети с текстом и картинками" }, { id: A, text: "Набор веб-страниц, связанных ссылками и объединённых общим адресом" }, { id: D, text: "Канал, по которому идёт передача данных" }, { id: C, text: "Программа, которая скачивает файлы из сети" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Страница — один документ, сайт — их набор; путать их нельзя, от этого зависит смысл адреса." }
+
+- id: inf-7-base-089
+  class: 7
+  topic: "Интернет"
+  subtopic: "Буквы-подделки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
+  prompt: "В адресе вместо латинской «a» стоит кириллическая «а». О чём это говорит?"
+  student_view: { options: [{ id: A, text: "Об адрес подделали: буквы-подделки так копируют известные сайты, чтобы выманить пароль" }, { id: B, text: "Об адрес набран в другой раскладке, это обычное дело" }, { id: D, text: "Об адрес защищён от копирования, поэтому буквы заменены" }, { id: C, text: "Об адрес написан в кодировке UTF-8, поэтому выглядит необычно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Это приём фишинга: адрес читается как знакомый, а на самом деле ведёт на чужой ресурс." }
+
+- id: inf-7-base-090
+  class: 7
+  topic: "Интернет"
+  subtopic: "Сетевой этикет"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
+  prompt: "Какое правило сетевого этикета нарушил ученик, отправив двадцать одинаковых рекламных писем в классный чат?"
+  student_view: { options: [{ id: A, text: "Запрещено спамить: незнакомым пишут один раз, а не рассылают рекламу" }, { id: B, text: "Запрещено отвечать на сообщения, чтобы не засорять чат" }, { id: C, text: "Запрещено здороваться первым: сначала должен поздороваться взрослый" }, { id: D, text: "Запрещено писать в чат во время урока по расписанию" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Сетевой этикет повторяет обычный: не грубить, не засорять чужие каналы, уважать чужое время." }
+
+- id: inf-7-base-091
+  class: 7
+  topic: "Интернет"
+  subtopic: "Личные данные"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7net-03-safety
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
+  prompt: "Какие данные нельзя выкладывать в социальной сети?"
+  student_view: { options: [{ id: B, text: "Название школьного кружка, в котором ты занимаешься" }, { id: C, text: "Имя любимого автора и название прочитанной книги" }, { id: A, text: "Домашний адрес, телефон, номер банковской карты и фотографии документов" }, { id: D, text: "Свои проекты и фотографии поделок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Личные данные и документы в открытом доступе опасны: ими может воспользоваться посторонний." }
+
+- id: inf-7-base-092
+  class: 7
+  topic: "Текст"
+  subtopic: "Отступ первой строки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7doc-02-format
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
+  prompt: "Почему отступ первой строки задают настройкой абзаца, а не пробелами?"
+  student_view: { options: [{ id: D, text: "Отступ пробелами автоматически превращается в табуляцию" }, { id: C, text: "Настройка абзаца выглядит в документе заметнее, чем пробелы" }, { id: A, text: "При смене шрифта пробелы останутся на месте и текст «поедет», а настройка абзаца работает всегда" }, { id: B, text: "Пробелы нельзя набирать, потому что в текстовом процессоре их нет" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Пробелы — это текст: шрифт изменится и отступ станет неровным; абзацный отступ хранится как параметр." }
+
+- id: inf-7-base-093
+  class: 7
+  topic: "Текст"
+  subtopic: "Размер бумаги"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-03-styles
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-page], meta: [plan-actions] }
+  prompt: "Какой размер бумаги обычно задают для школьного документа?"
+  student_view: { options: [{ id: A, text: "A4" }, { id: B, text: "A3" }, { id: C, text: "A5" }, { id: D, text: "B4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "A4 — стандартный лист для документов; A3 больше, A5 меньше, а B4 не используется в школьных работах." }
+
+- id: inf-7-base-094
+  class: 7
+  topic: "Текст"
+  subtopic: "Шапка таблицы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7doc-04-lists
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-table], meta: [plan-actions] }
+  prompt: "Зачем в таблице нужна шапка?"
+  student_view: { options: [{ id: D, text: "Она уменьшает размер таблицы на экране" }, { id: C, text: "Она вычисляет суммы по столбцам автоматически" }, { id: B, text: "Она делает таблицу красивее при печати" }, { id: A, text: "Она называет столбцы, без неё не понятно, что в них записано" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Первая строка с заголовками — шапка: именно по ней читают, что записано в каждом столбце." }
+
+- id: inf-7-base-095
+  class: 7
+  topic: "Текст"
+  subtopic: "Обтекание текстом"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7doc-05-objects
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-image], meta: [plan-actions] }
+  prompt: "Зачем вставленному рисунку задают обтекание текстом?"
+  student_view: { options: [{ id: B, text: "Чтобы рисунок стал векторным и не занимал места на диске" }, { id: C, text: "Чтобы при печати рисунок растянулся на всю страницу" }, { id: D, text: "Чтобы подпись к рисунку печаталась на каждой странице" }, { id: A, text: "Чтобы текст обтекал рисунок, а не наезжал на него" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Варианты обтекания — «в тексте», «перед текстом», «по контуру» — определяют, как строки располагаются рядом с рисунком." }
+
+- id: inf-7-base-096
+  class: 7
+  topic: "Текст"
+  subtopic: "Дата обращения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7doc-06-citations
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-doc-cite], meta: [plan-actions] }
+  prompt: "Почему для интернет-источника указывают дату обращения?"
+  student_view: { options: [{ id: A, text: "Сайт может измениться или исчезнуть, а дата фиксирует, когда информация была доступна" }, { id: B, text: "Дата обращения нужна, чтобы посчитать объём скачанного текста" }, { id: D, text: "Дата обращения показывает, сколько раз открыли источник" }, { id: C, text: "Дата обращения заменяет адрес сайта в списке источников" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Содержимое сайта меняется без предупреждения, поэтому указывают адрес и дату, когда его смотрели." }
+
+- id: inf-7-base-097
+  class: 7
+  topic: "Графика"
+  subtopic: "Что рисуют вектором"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Какое изображение лучше всего выполнить в векторе?"
+  student_view: { options: [{ id: C, text: "Снимок экрана окна программы" }, { id: B, text: "Фотография заката над морем" }, { id: D, text: "Отпечаток пальца на стекле" }, { id: A, text: "Чертёж или схема с тонкими линиями и подписями" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Вектор хорош там, где важны контуры и чёткость при любом масштабе; фотографию рисуют растром." }
+
+- id: inf-7-base-098
+  class: 7
+  topic: "Графика"
+  subtopic: "Объём векторного файла"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Почему векторный файл того же рисунка обычно меньше растра?"
+  student_view: { options: [{ id: C, text: "Вектор сохраняет не все цвета, поэтому данных меньше" }, { id: B, text: "Вектор сжимает картинку в сто раз сильнее любого архиватора" }, { id: A, text: "Вектор хранит формулы фигур, а растр — цвет каждого пикселя" }, { id: D, text: "Вектор нельзя открыть на компьютере, поэтому файл получается пустым" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Схема из двадцати линий — это двадцать записей с координатами, а растр хранит цвет каждой точки кадра." }
+
+- id: inf-7-base-099
+  class: 7
+  topic: "Графика"
+  subtopic: "Обтекание в документе"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-07-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-vector], meta: [plan-actions] }
+  prompt: "Нарисованная в документе схема наезжает на текст. Что нужно задать?"
+  student_view: { options: [{ id: C, text: "Размер линий: чем они толще, тем меньше схема наезжает" }, { id: A, text: "Обтекание текстом для этой группы фигур" }, { id: B, text: "Цвет текста, чтобы он был виден поверх схемы" }, { id: D, text: "Порядок вставки: схему надо было вставить в самый конец страницы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Обтекание задаётся для объекта: «в тексте», «перед текстом» или «по контуру» — тогда строки его обходят." }
+
+
+# ==== СГЕНЕРИРОВАНО scripts/make-78final-bank3.mjs ====
+
+- id: inf-7-base-100
+  class: 7
+  topic: "Текст"
+  subtopic: "Финальный добор"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-01-text
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: ["inf-7-doc-style"], meta: [plan-actions] }
+  prompt: "Автор хочет, чтобы все абзацы в документе начинались с красной строки. Какой параметр абзаца нужно изменить?"
+  student_view: { options: [{ id: C, text: "Выравнивание по ширине" }, { id: A, text: "Отступ первой строки" }, { id: D, text: "Интервал после абзаца" }, { id: B, text: "Межстрочный интервал" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Красная строка — это отступ первой строки абзаца. Межстрочный интервал меняет расстояние между строками, выравнивание — положение строки по ширине, интервал после абзаца — пустое место до следующего абзаца." }
+
+- id: inf-7-base-101
+  class: 7
+  topic: "Текст"
+  subtopic: "Финальный добор"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7doc-04-lists
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: ["inf-7-doc-style"], meta: [plan-actions] }
+  prompt: "Установите соответствие: действие в таблице — его результат."
+  student_view: { left: ["Объединить ячейки", "Разбить ячейку", "Сортировать данные", "Суммировать столбец"], right: ["шапка на всю ширину таблицы", "многострочная ячейка", "упорядоченные строки", "итог под столбцом"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Объединить ячейки": "шапка на всю ширину таблицы", "Разбить ячейку": "многострочная ячейка", "Сортировать данные": "упорядоченные строки", "Суммировать столбец": "итог под столбцом" }, explanation: "Объединение ячеек даёт шапку на всю ширину, разбиение — многострочную ячейку, сортировка упорядочивает строки, суммирование ставит итог под столбцом." }

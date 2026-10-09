@@ -1,0 +1,2509 @@
+{
+  "test_code": "grade8-final-proverka-v1",
+  "kind": "proverka",
+  "grade": "8",
+  "title": "Проверочная перед итоговой: 8 класс",
+  "instruction": "Отвечайте точно. Код задаётся в поле ответа, запускается кнопкой. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "variant_count": 30,
+  "per_variant": 10,
+  "final": false,
+  "ktp_to": null,
+  "sections": [
+    {
+      "title": "Системы счисления, КТП 1–6",
+      "ktp": [
+        {
+          "from": 1,
+          "to": 6
+        }
+      ],
+      "task_ids": [
+        "inf-8-numsys-011",
+        "inf-8-numsys-039",
+        "inf-8-numsys-005",
+        "inf-8-numsys-019",
+        "inf-8-numsys-035",
+        "inf-8-numsys-081",
+        "inf-8-numsys-083",
+        "inf-8-numsys-023",
+        "inf-8-numsys-007",
+        "inf-8-numsys-055",
+        "inf-8-numsys-060",
+        "inf-8-numsys-089",
+        "inf-8-numsys-093"
+      ]
+    },
+    {
+      "title": "Логика, КТП 7–12",
+      "ktp": [
+        {
+          "from": 7,
+          "to": 12
+        }
+      ],
+      "task_ids": [
+        "inf-8-logic-031",
+        "inf-8-logic-033",
+        "inf-8-logic-008",
+        "inf-8-logic-011",
+        "inf-8-logic-022",
+        "inf-8-logic-047",
+        "inf-8-logic-049",
+        "inf-8-logic-064",
+        "inf-8-logic-056",
+        "inf-8-logic-057",
+        "inf-8-logic-040",
+        "inf-8-logic-041",
+        "inf-8-logic-069"
+      ]
+    },
+    {
+      "title": "Алгоритмы и программирование, КТП 13–29, 31–36",
+      "ktp": [
+        {
+          "from": 13,
+          "to": 29
+        },
+        {
+          "from": 31,
+          "to": 36
+        }
+      ],
+      "task_ids": [
+        "inf-8-algo-001",
+        "inf-8-algo-007",
+        "inf-8-algo-020",
+        "inf-8-algo-029",
+        "inf-8-algo-030",
+        "inf-8-algo-073",
+        "inf-8-algo-011",
+        "inf-8-algo-012",
+        "inf-8-algo-038",
+        "inf-8-algo-042",
+        "inf-8-algo-044",
+        "inf-8-algo-045",
+        "inf-8-algo-057",
+        "inf-8-algo-059",
+        "inf-8-algo-065",
+        "inf-8-algo-060",
+        "inf-8-algo-068",
+        "inf-8-algo-070",
+        "inf-8-code-007",
+        "inf-8-code-008",
+        "inf-8-code-010",
+        "inf-8-algo-049",
+        "inf-8-code-012",
+        "inf-8-algo-016",
+        "inf-8-algo-063",
+        "inf-8-algo-071",
+        "inf-8-algo-027",
+        "inf-8-algo-028",
+        "inf-8-code-019",
+        "inf-8-algo-048",
+        "inf-8-algo-055",
+        "inf-8-code-023",
+        "inf-8-algo-053",
+        "inf-8-algo-054"
+      ]
+    }
+  ],
+  "pool": [
+    {
+      "id": "inf-8-numsys-011",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите 1×2³ + 0×2² + 1×2 + 1. Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
+      "id": "inf-8-numsys-039",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?",
+      "options": [
+        {
+          "id": "C",
+          "text": "XL"
+        },
+        {
+          "id": "D",
+          "text": "MCM"
+        },
+        {
+          "id": "B",
+          "text": "XIV"
+        },
+        {
+          "id": "A",
+          "text": "IIII"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-numsys-005",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько единиц в двоичной записи числа 15₁₀?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-019",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 100111₂ в десятичную систему. Запишите только число.",
+      "base": 10,
+      "expected": 39,
+      "key": "39"
+    },
+    {
+      "id": "inf-8-numsys-035",
+      "lesson": "numsys-02-binary",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько нулей в двоичной записи числа 128₁₀?",
+      "options": [
+        {
+          "id": "D",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "A",
+          "text": "6"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-081",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Разложите число 45₁₀ на степени двойки: 45 = 2⁵ + 2³ + 2² + 2⁰. Запишите это число в двоичной системе. Запишите только число.",
+      "base": 2,
+      "expected": 45,
+      "key": "101101"
+    },
+    {
+      "id": "inf-8-numsys-083",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "У числа 10110₂ разряды слева направо имеют веса 16, 8, 4, 2, 1. Чему равно значение этого числа в десятичной системе? Запишите только число.",
+      "base": 10,
+      "expected": 22,
+      "key": "22"
+    },
+    {
+      "id": "inf-8-numsys-023",
+      "lesson": "numsys-03-octal",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 150₁₀ в восьмеричную систему. Запишите только число.",
+      "base": 8,
+      "expected": 150,
+      "key": "226"
+    },
+    {
+      "id": "inf-8-numsys-007",
+      "lesson": "numsys-05-arith",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите: 1011₂ + 110₂. Ответ дайте в десятичной системе.",
+      "base": 10,
+      "expected": 17,
+      "key": "17"
+    },
+    {
+      "id": "inf-8-numsys-055",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Число F0₁₆ переведите в двоичную, затем подсчитайте количество нулей. Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-numsys-060",
+      "lesson": "numsys-06-review",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Какое из чисел наибольшее?",
+      "options": [
+        {
+          "id": "A",
+          "text": "FF₁₆"
+        },
+        {
+          "id": "C",
+          "text": "11111111₂"
+        },
+        {
+          "id": "D",
+          "text": "1000₁₀"
+        },
+        {
+          "id": "B",
+          "text": "777₈"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-numsys-089",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите: 2A₁₆ − 1F₁₆. Ответ дайте в десятичной системе. Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
+      "id": "inf-8-numsys-093",
+      "lesson": "numsys-06-review",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Переведите число 156₁₀ в шестнадцатеричную систему, а результат — в двоичную. Сколько разрядов в полученной двоичной записи? Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-8-logic-031",
+      "lesson": "logic-01-utterances",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Связка НЕ стоит в середине фразы «Петя решил правильно НЕ все задания» и меняет смысл. Сколько разных высказываний можно получить из этой фразы, поставив НЕ в разные места? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-logic-033",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чем ложное высказывание отличается от предложения, которое высказыванием не является?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Ложное высказывание нельзя проверить, а проверить можно только истинные"
+        },
+        {
+          "id": "D",
+          "text": "Ложное высказывание не содержит чисел и названий"
+        },
+        {
+          "id": "A",
+          "text": "Ложное высказывание всё равно высказывание: у него есть значение 0"
+        },
+        {
+          "id": "B",
+          "text": "Ничем: это одно и то же"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-logic-008",
+      "lesson": "logic-02-operations",
+      "type": "matching",
+      "points": 1,
+      "prompt": "Установите соответствие: операция — её знак.",
+      "left": [
+        "И",
+        "ИЛИ",
+        "НЕ"
+      ],
+      "right": [
+        "¬",
+        "∧",
+        "∨"
+      ],
+      "answerMap": {
+        "И": "∧",
+        "ИЛИ": "∨",
+        "НЕ": "¬"
+      },
+      "key": "И=∧, ИЛИ=∨, НЕ=¬"
+    },
+    {
+      "id": "inf-8-logic-011",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=0, B=0 вычислите ¬A.",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ложь"
+        },
+        {
+          "id": "A",
+          "text": "Истина"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-022",
+      "lesson": "logic-02-operations",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В скольких строках таблицы истинности выражение (A ∨ B) ∧ ¬B равно 1? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-8-logic-047",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для выражения с 4 переменными? Запишите только число.",
+      "base": 10,
+      "expected": 16,
+      "key": "16"
+    },
+    {
+      "id": "inf-8-logic-049",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В скольких строках таблицы истинности для двух переменных выражение A ∨ B равно 1? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-logic-064",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Постройте таблицу истинности для трёх переменных и выясните, в скольких её строках выражение (A ∨ B) ∧ (A ∨ C) равно 1. Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-logic-056",
+      "lesson": "logic-04-elements",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Где на схеме рисуют кружок инверсии у логического элемента?",
+      "options": [
+        {
+          "id": "A",
+          "text": "На выходе элемента — он и означает НЕ"
+        },
+        {
+          "id": "B",
+          "text": "На каждом входе элемента"
+        },
+        {
+          "id": "D",
+          "text": "Кружка нет ни на одном логическом элементе"
+        },
+        {
+          "id": "C",
+          "text": "На корпусе элемента, независимо от входов и выхода"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-logic-057",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Схема: на входы элемента И поданы A = 1 и B = 0, а его выход соединён со входом элемента НЕ. Что будет на выходе схемы? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-8-logic-040",
+      "lesson": "logic-05-expression",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: условие задачи — его запись логическим выражением.",
+      "left": [
+        "«Число x положительное и делится на 5»",
+        "«Число x равно 1 или равно 5»",
+        "«Число x не больше 10»",
+        "«Число x больше 3 и меньше 7»"
+      ],
+      "right": [
+        "x > 0 ∧ (x mod 5 = 0)",
+        "x = 1 ∨ x = 5",
+        "x ≤ 10",
+        "x > 3 ∧ x < 7"
+      ],
+      "answerMap": {
+        "«Число x положительное и делится на 5»": "x > 0 ∧ (x mod 5 = 0)",
+        "«Число x равно 1 или равно 5»": "x = 1 ∨ x = 5",
+        "«Число x не больше 10»": "x ≤ 10",
+        "«Число x больше 3 и меньше 7»": "x > 3 ∧ x < 7"
+      },
+      "key": "«Число x положительное и делится на 5»=x > 0 ∧ (x mod 5 = 0), «Число x равно 1 или равно 5»=x = 1 ∨ x = 5, «Число x не больше 10»=x ≤ 10, «Число x больше 3 и меньше 7»=x > 3 ∧ x < 7"
+    },
+    {
+      "id": "inf-8-logic-041",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чему равно выражение ¬¬A?",
+      "options": [
+        {
+          "id": "B",
+          "text": "¬A"
+        },
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-logic-069",
+      "lesson": "logic-06-laws",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Скобки в конъюнкции из четырёх высказываний A, B, C и D расставляют разными способами. Сколько существует таких расстановок, при которых значение выражения одинаково при любых значениях A, B, C и D? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-001",
+      "lesson": "alg-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько свойств алгоритма выделяют в школьном курсе?",
+      "options": [
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-007",
+      "lesson": "alg-02-notation",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает запись «x := x + 1»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Положить в x старое x плюс 1"
+        },
+        {
+          "id": "D",
+          "text": "Цикл по x"
+        },
+        {
+          "id": "B",
+          "text": "Утверждение, что x равен x + 1"
+        },
+        {
+          "id": "C",
+          "text": "Сравнение x с x + 1"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-020",
+      "lesson": "alg-02-notation",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое трассировочная таблица?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Значения переменных по шагам выполнения"
+        },
+        {
+          "id": "B",
+          "text": "Список учеников"
+        },
+        {
+          "id": "C",
+          "text": "Расписание уроков"
+        },
+        {
+          "id": "D",
+          "text": "Меню столовой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-029",
+      "lesson": "alg-05-sequence",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем следование отличается от ветвления?",
+      "options": [
+        {
+          "id": "B",
+          "text": "В следовании есть условие, которое выбирает следующую команду"
+        },
+        {
+          "id": "C",
+          "text": "В следовании есть цикл, повторяющий команды"
+        },
+        {
+          "id": "D",
+          "text": "В следовании порядок команд можно менять без последствий"
+        },
+        {
+          "id": "A",
+          "text": "В следовании нет ни условия, ни цикла — команды идут строго по порядку"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-030",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Выполните по порядку команды: x := 4; x := x · 2; x := x − 3. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-073",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Выполните по порядку команды: y := 10; y := y / 2; y := y + 7. Какое получилось значение? Запишите только число.",
+      "base": 10,
+      "expected": 12,
+      "key": "12"
+    },
+    {
+      "id": "inf-8-algo-011",
+      "lesson": "alg-07-while",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-012",
+      "lesson": "alg-07-while",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Не проверяется"
+        },
+        {
+          "id": "B",
+          "text": "После выполнения тела"
+        },
+        {
+          "id": "A",
+          "text": "До выполнения тела"
+        },
+        {
+          "id": "C",
+          "text": "В середине тела"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-algo-038",
+      "lesson": "alg-08-until",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Цикл с условием окончания: нц | n := n + 3 | пока n < 10 | кц. При n = 1 чему равно n после выхода из цикла? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-042",
+      "lesson": "alg-10-pr-branching",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Алгоритм подсчёта цифр: нц пока n > 0 | n := n : 10 | k := k + 1 | кц. Сколько цифр в числе 100? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-044",
+      "lesson": "alg-11-design",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Только ветвление"
+        },
+        {
+          "id": "C",
+          "text": "Цикл for и ветвление"
+        },
+        {
+          "id": "A",
+          "text": "Только цикл for"
+        },
+        {
+          "id": "D",
+          "text": "Только цикл с условием окончания"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-045",
+      "lesson": "alg-11-design",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа перебирает числа от 1 до 10 и считает те, что делятся на 2 без остатка. Что она выведет? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-057",
+      "lesson": "algo-01-results",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько различных результатов может дать ветвление с одним условием (две ветки)?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ровно один"
+        },
+        {
+          "id": "D",
+          "text": "Столько, сколько входных данных"
+        },
+        {
+          "id": "C",
+          "text": "Четыре"
+        },
+        {
+          "id": "A",
+          "text": "Не больше двух"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-059",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Сколько различных результатов может дать алгоритм с двумя независимыми полными ветвлениями? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-065",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: если a > 3, то a := a · 2, иначе a := a + 1. При a = 5 чему равен результат? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-060",
+      "lesson": "algo-02-inputs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С чего начинается решение обратной задачи — найти входные данные по известному результату?",
+      "options": [
+        {
+          "id": "D",
+          "text": "С таблицы истинности"
+        },
+        {
+          "id": "A",
+          "text": "С результата: определяем последнюю выполненную команду и решаем уравнение назад"
+        },
+        {
+          "id": "C",
+          "text": "С новой программы, которая делает то же самое"
+        },
+        {
+          "id": "B",
+          "text": "С самого начала программы, выполняя её на всех возможных данных"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-068",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Программа складывает цифры числа. Вывод — 20. Какое наименьшее положительное число даёт такой вывод? Запишите только число.",
+      "base": 10,
+      "expected": 299,
+      "key": "299"
+    },
+    {
+      "id": "inf-8-algo-070",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Программа: y := x · 3; затем, если y делится на 10, выполняется команда y := y : 10. Сколько целых значений x от 1 до 40 дают на выходе y = 6? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-8-code-007",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её.",
+      "template": "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)",
+      "expected": "ababab",
+      "key": "ababab"
+    },
+    {
+      "id": "inf-8-code-008",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи числовой код символа 'A' функцией ord().",
+      "template": "# Допиши код: код символа 'A'\nprint(...)",
+      "expected": "65",
+      "key": "65"
+    },
+    {
+      "id": "inf-8-code-010",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and.",
+      "template": "# Допиши код: проверка отрезка\nx = 0\nprint(...)",
+      "expected": "True",
+      "key": "True"
+    },
+    {
+      "id": "inf-8-algo-049",
+      "lesson": "py-03-loops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как в Python отбросить последнюю цифру целого числа n?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n / 10"
+        },
+        {
+          "id": "C",
+          "text": "n % 10"
+        },
+        {
+          "id": "B",
+          "text": "n // 10"
+        },
+        {
+          "id": "D",
+          "text": "n ** 10"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-code-012",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найди циклом сумму цифр числа 12345 и выведи её.",
+      "template": "# Допиши код: сумма цифр 12345\nn, s = 12345, 0\n...",
+      "expected": "15",
+      "key": "15"
+    },
+    {
+      "id": "inf-8-algo-016",
+      "lesson": "py-04-strings",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: s := 0; для i от 1 до 4: s := s + i. Чему равен s в конце? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-063",
+      "lesson": "py-05-data",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что произойдёт в Python при выполнении a = int('3,5')?",
+      "options": [
+        {
+          "id": "C",
+          "text": "a станет числом 35"
+        },
+        {
+          "id": "B",
+          "text": "a станет числом 3,5"
+        },
+        {
+          "id": "D",
+          "text": "a станет числом 0"
+        },
+        {
+          "id": "A",
+          "text": "Программа остановится с ошибкой: в int() передают точку, а не запятую"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-071",
+      "lesson": "py-05-data",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Дан список оценок marks = [4, 5, 5, 3, 5, 4, 5]. Посчитайте количество пятёрок и выведите f-строкой строку вида «Пятёрок: N из M», где N — количество пятёрок, а M — длина списка.",
+      "template": "marks = [4, 5, 5, 3, 5, 4, 5]\n# найди количество пятёрок в списке\nn = ...\nprint(f\"Пятёрок: {n} из {len(marks)}\")",
+      "expected": "Пятёрок: 4 из 7",
+      "key": "Пятёрок: 4 из 7"
+    },
+    {
+      "id": "inf-8-algo-027",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен остаток от деления 17 на 5 (операция %)? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-8-algo-028",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите выражение (2 + 3) * 2 ** 2. Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-8-code-019",
+      "lesson": "py-06-linear",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Дан прямоугольник со сторонами 12 и 5. Выведи сначала площадь, затем периметр — каждое число с новой строки.",
+      "template": "# Прямоугольник 12 × 5\na, b = 12, 5\ns = a * b\np = ...\nprint(s)\nprint(...)",
+      "expected": "60\n34",
+      "key": "60\n34"
+    },
+    {
+      "id": "inf-8-algo-048",
+      "lesson": "py-07-condition",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что выведет код x = 5; if x > 3: print('да') else: print('нет')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "да"
+        },
+        {
+          "id": "C",
+          "text": "ничего не выведется"
+        },
+        {
+          "id": "B",
+          "text": "нет"
+        },
+        {
+          "id": "D",
+          "text": "Ошибка выполнения"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-055",
+      "lesson": "py-08-strings-2",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что выведет print('10' < '9')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        },
+        {
+          "id": "C",
+          "text": "Ошибку"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-code-023",
+      "lesson": "py-09-linear-pr",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди делением вычитанием частное и остаток от деления 13 на 5 и выведи их одной строкой через пробел.",
+      "template": "# Вычитаем y, пока r не станет меньше y\nx = 13\ny = 5\nr = x\nq = 0\nwhile r >= y:\n    ...\nprint(q, r)",
+      "expected": "2 3",
+      "key": "2 3"
+    },
+    {
+      "id": "inf-8-algo-053",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел от 1 до 10 делятся на 3 без остатка? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-054",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вложенный цикл: для i от 0 до 2, внутри — для j от 0 до 1, в теле вывод. Сколько раз выполнится тело внешнего цикла вместе со всеми прогонами внутреннего? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-8-numsys-035",
+        "inf-8-algo-049",
+        "inf-8-algo-071",
+        "inf-8-logic-031",
+        "inf-8-logic-033",
+        "inf-8-algo-045",
+        "inf-8-algo-063",
+        "inf-8-numsys-093",
+        "inf-8-algo-073",
+        "inf-8-numsys-039"
+      ],
+      "orders": {
+        "inf-8-numsys-035": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-8-algo-001",
+        "inf-8-numsys-083",
+        "inf-8-logic-033",
+        "inf-8-numsys-023",
+        "inf-8-code-010",
+        "inf-8-logic-031",
+        "inf-8-code-012",
+        "inf-8-algo-054",
+        "inf-8-numsys-005",
+        "inf-8-algo-049"
+      ],
+      "orders": {
+        "inf-8-algo-001": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-8-algo-073",
+        "inf-8-numsys-007",
+        "inf-8-numsys-035",
+        "inf-8-logic-047",
+        "inf-8-code-008",
+        "inf-8-numsys-023",
+        "inf-8-logic-057",
+        "inf-8-algo-038",
+        "inf-8-algo-057",
+        "inf-8-algo-045"
+      ],
+      "orders": {
+        "inf-8-numsys-035": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-8-numsys-089",
+        "inf-8-algo-042",
+        "inf-8-numsys-007",
+        "inf-8-logic-057",
+        "inf-8-algo-054",
+        "inf-8-numsys-011",
+        "inf-8-logic-041",
+        "inf-8-algo-063",
+        "inf-8-algo-057",
+        "inf-8-algo-044"
+      ],
+      "orders": {
+        "inf-8-logic-041": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-8-logic-049",
+        "inf-8-algo-048",
+        "inf-8-numsys-093",
+        "inf-8-algo-071",
+        "inf-8-algo-011",
+        "inf-8-logic-056",
+        "inf-8-numsys-039",
+        "inf-8-numsys-023",
+        "inf-8-algo-038",
+        "inf-8-algo-070"
+      ],
+      "orders": {
+        "inf-8-algo-048": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-8-logic-033",
+        "inf-8-algo-016",
+        "inf-8-logic-056",
+        "inf-8-algo-038",
+        "inf-8-numsys-081",
+        "inf-8-algo-073",
+        "inf-8-algo-020",
+        "inf-8-algo-060",
+        "inf-8-numsys-019",
+        "inf-8-numsys-023"
+      ],
+      "orders": {
+        "inf-8-logic-033": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-8-logic-011",
+        "inf-8-algo-065",
+        "inf-8-algo-063",
+        "inf-8-algo-044",
+        "inf-8-algo-029",
+        "inf-8-logic-041",
+        "inf-8-numsys-019",
+        "inf-8-numsys-089",
+        "inf-8-numsys-081",
+        "inf-8-algo-020"
+      ],
+      "orders": {
+        "inf-8-logic-011": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-8-numsys-011",
+        "inf-8-algo-065",
+        "inf-8-logic-057",
+        "inf-8-numsys-005",
+        "inf-8-code-012",
+        "inf-8-algo-020",
+        "inf-8-numsys-083",
+        "inf-8-logic-008",
+        "inf-8-code-007",
+        "inf-8-algo-053"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∧",
+            "∨",
+            "¬"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-8-algo-065",
+        "inf-8-numsys-023",
+        "inf-8-algo-045",
+        "inf-8-algo-044",
+        "inf-8-numsys-081",
+        "inf-8-algo-055",
+        "inf-8-logic-033",
+        "inf-8-numsys-011",
+        "inf-8-logic-041",
+        "inf-8-algo-049"
+      ],
+      "orders": {
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-055": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-8-algo-030",
+        "inf-8-logic-011",
+        "inf-8-numsys-039",
+        "inf-8-logic-008",
+        "inf-8-numsys-083",
+        "inf-8-numsys-089",
+        "inf-8-algo-063",
+        "inf-8-algo-027",
+        "inf-8-algo-060",
+        "inf-8-algo-007"
+      ],
+      "orders": {
+        "inf-8-logic-011": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "¬",
+            "∧",
+            "∨"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-8-logic-047",
+        "inf-8-algo-055",
+        "inf-8-numsys-035",
+        "inf-8-algo-012",
+        "inf-8-numsys-011",
+        "inf-8-algo-045",
+        "inf-8-numsys-083",
+        "inf-8-code-012",
+        "inf-8-logic-033",
+        "inf-8-code-007"
+      ],
+      "orders": {
+        "inf-8-algo-055": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-8-algo-073",
+        "inf-8-algo-011",
+        "inf-8-numsys-005",
+        "inf-8-algo-057",
+        "inf-8-logic-069",
+        "inf-8-logic-011",
+        "inf-8-numsys-011",
+        "inf-8-numsys-081",
+        "inf-8-algo-070",
+        "inf-8-algo-045"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-011": {
+          "options": [
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-8-logic-008",
+        "inf-8-numsys-035",
+        "inf-8-algo-027",
+        "inf-8-algo-071",
+        "inf-8-logic-057",
+        "inf-8-algo-044",
+        "inf-8-numsys-083",
+        "inf-8-algo-063",
+        "inf-8-algo-030",
+        "inf-8-numsys-039"
+      ],
+      "orders": {
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "∧",
+            "¬"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-8-algo-063",
+        "inf-8-code-012",
+        "inf-8-code-008",
+        "inf-8-algo-001",
+        "inf-8-numsys-005",
+        "inf-8-algo-027",
+        "inf-8-numsys-083",
+        "inf-8-logic-064",
+        "inf-8-numsys-039",
+        "inf-8-logic-049"
+      ],
+      "orders": {
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-8-code-008",
+        "inf-8-numsys-005",
+        "inf-8-algo-054",
+        "inf-8-algo-065",
+        "inf-8-logic-031",
+        "inf-8-algo-060",
+        "inf-8-algo-049",
+        "inf-8-logic-011",
+        "inf-8-numsys-083",
+        "inf-8-numsys-039"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-011": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-8-numsys-011",
+        "inf-8-code-008",
+        "inf-8-logic-064",
+        "inf-8-algo-027",
+        "inf-8-logic-057",
+        "inf-8-algo-011",
+        "inf-8-algo-055",
+        "inf-8-numsys-019",
+        "inf-8-algo-063",
+        "inf-8-numsys-083"
+      ],
+      "orders": {
+        "inf-8-algo-055": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-8-algo-049",
+        "inf-8-code-008",
+        "inf-8-algo-054",
+        "inf-8-numsys-035",
+        "inf-8-algo-057",
+        "inf-8-logic-049",
+        "inf-8-logic-069",
+        "inf-8-numsys-093",
+        "inf-8-algo-016",
+        "inf-8-numsys-089"
+      ],
+      "orders": {
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-8-numsys-019",
+        "inf-8-logic-031",
+        "inf-8-numsys-039",
+        "inf-8-algo-016",
+        "inf-8-algo-030",
+        "inf-8-algo-055",
+        "inf-8-numsys-083",
+        "inf-8-algo-027",
+        "inf-8-algo-071",
+        "inf-8-logic-033"
+      ],
+      "orders": {
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-055": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-8-algo-020",
+        "inf-8-numsys-093",
+        "inf-8-algo-053",
+        "inf-8-algo-065",
+        "inf-8-logic-033",
+        "inf-8-algo-038",
+        "inf-8-numsys-011",
+        "inf-8-algo-057",
+        "inf-8-logic-047",
+        "inf-8-numsys-005"
+      ],
+      "orders": {
+        "inf-8-algo-020": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-8-numsys-023",
+        "inf-8-numsys-011",
+        "inf-8-algo-055",
+        "inf-8-logic-064",
+        "inf-8-logic-011",
+        "inf-8-numsys-093",
+        "inf-8-code-010",
+        "inf-8-algo-030",
+        "inf-8-algo-054",
+        "inf-8-algo-001"
+      ],
+      "orders": {
+        "inf-8-algo-055": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-011": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-8-logic-069",
+        "inf-8-algo-029",
+        "inf-8-numsys-081",
+        "inf-8-algo-063",
+        "inf-8-algo-049",
+        "inf-8-algo-044",
+        "inf-8-numsys-011",
+        "inf-8-logic-049",
+        "inf-8-algo-030",
+        "inf-8-numsys-089"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-8-numsys-007",
+        "inf-8-algo-057",
+        "inf-8-numsys-011",
+        "inf-8-code-010",
+        "inf-8-algo-045",
+        "inf-8-algo-053",
+        "inf-8-logic-056",
+        "inf-8-numsys-089",
+        "inf-8-algo-030",
+        "inf-8-logic-049"
+      ],
+      "orders": {
+        "inf-8-algo-057": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-8-numsys-093",
+        "inf-8-algo-011",
+        "inf-8-algo-044",
+        "inf-8-numsys-089",
+        "inf-8-logic-049",
+        "inf-8-algo-038",
+        "inf-8-algo-007",
+        "inf-8-code-007",
+        "inf-8-logic-056",
+        "inf-8-numsys-019"
+      ],
+      "orders": {
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-8-algo-044",
+        "inf-8-logic-011",
+        "inf-8-logic-069",
+        "inf-8-numsys-083",
+        "inf-8-code-007",
+        "inf-8-algo-065",
+        "inf-8-numsys-039",
+        "inf-8-algo-029",
+        "inf-8-numsys-089",
+        "inf-8-algo-028"
+      ],
+      "orders": {
+        "inf-8-algo-044": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-011": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-8-algo-063",
+        "inf-8-code-008",
+        "inf-8-numsys-011",
+        "inf-8-numsys-023",
+        "inf-8-algo-044",
+        "inf-8-code-012",
+        "inf-8-logic-008",
+        "inf-8-logic-011",
+        "inf-8-algo-001",
+        "inf-8-numsys-081"
+      ],
+      "orders": {
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "∧",
+            "¬"
+          ]
+        },
+        "inf-8-logic-011": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-8-algo-055",
+        "inf-8-logic-049",
+        "inf-8-algo-029",
+        "inf-8-algo-007",
+        "inf-8-numsys-035",
+        "inf-8-numsys-083",
+        "inf-8-algo-016",
+        "inf-8-code-012",
+        "inf-8-numsys-089",
+        "inf-8-logic-069"
+      ],
+      "orders": {
+        "inf-8-algo-055": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-8-algo-055",
+        "inf-8-logic-033",
+        "inf-8-algo-063",
+        "inf-8-algo-065",
+        "inf-8-numsys-023",
+        "inf-8-algo-053",
+        "inf-8-numsys-089",
+        "inf-8-algo-071",
+        "inf-8-logic-056",
+        "inf-8-numsys-083"
+      ],
+      "orders": {
+        "inf-8-algo-055": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-8-code-008",
+        "inf-8-algo-007",
+        "inf-8-logic-057",
+        "inf-8-numsys-039",
+        "inf-8-algo-011",
+        "inf-8-algo-049",
+        "inf-8-algo-063",
+        "inf-8-numsys-083",
+        "inf-8-logic-031",
+        "inf-8-numsys-019"
+      ],
+      "orders": {
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-8-algo-070",
+        "inf-8-numsys-011",
+        "inf-8-numsys-089",
+        "inf-8-algo-030",
+        "inf-8-algo-027",
+        "inf-8-numsys-093",
+        "inf-8-logic-033",
+        "inf-8-algo-016",
+        "inf-8-code-007",
+        "inf-8-logic-008"
+      ],
+      "orders": {
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∧",
+            "¬",
+            "∨"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-8-numsys-005",
+        "inf-8-algo-016",
+        "inf-8-logic-064",
+        "inf-8-numsys-083",
+        "inf-8-algo-042",
+        "inf-8-algo-029",
+        "inf-8-numsys-023",
+        "inf-8-algo-001",
+        "inf-8-logic-049",
+        "inf-8-algo-063"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    }
+  ]
+}

@@ -370,9 +370,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Сколько нулей в двоичной записи числа 128₁₀?"
-  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "7" }, { id: C, text: "8" }, { id: D, text: "9" }] }
+  student_view: { options: [{ id: D, text: "9" }, { id: C, text: "8" }, { id: B, text: "7" }, { id: A, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "128 = 10000000_2: один и семь нулей" }
+  teacher_only: { answer: C, explanation: "128 = 10000000_2: один и семь нулей" }
 
 - id: inf-8-numsys-036
   class: 8
@@ -404,7 +404,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 123."
-  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "5" }, { id: C, text: "4" }, { id: D, text: "8" }] }
+  student_view: { options: [{ id: D, text: "8" }, { id: A, text: "3" }, { id: C, text: "4" }, { id: B, text: "5" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: C, explanation: "Старшая цифра 3, основание > 3, минимальное 4" }
 
@@ -421,9 +421,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 506."
-  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "6" }, { id: C, text: "9" }, { id: D, text: "7" }] }
+  student_view: { options: [{ id: C, text: "9" }, { id: D, text: "7" }, { id: A, text: "8" }, { id: B, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Старшая цифра 6, минимальное основание 7" }
+  teacher_only: { answer: B, explanation: "Старшая цифра 6, минимальное основание 7" }
 
 - id: inf-8-numsys-039
   class: 8
@@ -438,9 +438,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?"
-  student_view: { options: [{ id: A, text: "IIII" }, { id: B, text: "XIV" }, { id: C, text: "XL" }, { id: D, text: "MCM" }] }
+  student_view: { options: [{ id: C, text: "XL" }, { id: D, text: "MCM" }, { id: B, text: "XIV" }, { id: A, text: "IIII" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "IIII — четыре I подряд, надо IV" }
+  teacher_only: { answer: D, explanation: "IIII — четыре I подряд, надо IV" }
 
 - id: inf-8-numsys-040
   class: 8
@@ -455,9 +455,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Сколько цифр в алфавите восьмеричной системы счисления?"
-  student_view: { options: [{ id: A, text: "7" }, { id: B, text: "16" }, { id: C, text: "8" }, { id: D, text: "10" }] }
+  student_view: { options: [{ id: D, text: "10" }, { id: B, text: "16" }, { id: A, text: "7" }, { id: C, text: "8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Цифры 0-7, всего 8" }
+  teacher_only: { answer: D, explanation: "Цифры 0-7, всего 8" }
 
 - id: inf-8-numsys-041
   class: 8
@@ -778,7 +778,7 @@
   fgos_element: 1.3
   fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
   prompt: "Какое из чисел наибольшее?"
-  student_view: { options: [{ id: A, text: "10111₂" }, { id: B, text: "1F₁₆" }, { id: C, text: "27₈" }, { id: D, text: "30₈" }] }
+  student_view: { options: [{ id: D, text: "30₈" }, { id: B, text: "1F₁₆" }, { id: A, text: "10111₂" }, { id: C, text: "27₈" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, explanation: "Значения: 10111₂=23, 1F₁₆=31, 27₈=23, 30₈=24" }
 
@@ -795,6 +795,489 @@
   fgos_element: 1.3
   fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
   prompt: "Какое из чисел наибольшее?"
-  student_view: { options: [{ id: A, text: "FF₁₆" }, { id: B, text: "777₈" }, { id: C, text: "11111111₂" }, { id: D, text: "1000₁₀" }] }
+  student_view: { options: [{ id: A, text: "FF₁₆" }, { id: C, text: "11111111₂" }, { id: D, text: "1000₁₀" }, { id: B, text: "777₈" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Значения: FF₁₆=255, 777₈=511, 11111111₂=255, 1000₁₀=1000" }
+  teacher_only: { answer: C, explanation: "Значения: FF₁₆=255, 777₈=511, 11111111₂=255, 1000₁₀=1000" }
+
+- id: inf-8-numsys-066
+  class: 8
+  topic: Системы счисления
+  subtopic: Развёрнутая форма, троичная система
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Число 212 записано в троичной системе счисления. Вычислите его развёрнутую форму 2×3² + 1×3¹ + 2. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [23], answer_text: "23", explanation: "2 · 9 + 1 · 3 + 2 = 23" }
+
+- id: inf-8-numsys-067
+  class: 8
+  topic: Системы счисления
+  subtopic: Алфавит римской системы
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Запишите число 3888 в римской системе счисления и подсчитайте, сколько различных знаков в этой записи. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "3888 = MMMDCCCLXXXVIII: знаки M, D, C, L, X, V, I — семь различных" }
+
+- id: inf-8-numsys-068
+  class: 8
+  topic: Системы счисления
+  subtopic: Число двоичных записей
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Сколько существует различных двоичных записей длиной ровно 5 цифр? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "В каждом из 5 разрядов стоит 0 или 1, поэтому записей 2⁵ = 32" }
+
+- id: inf-8-numsys-069
+  class: 8
+  topic: Системы счисления
+  subtopic: Цепочка 10-8-2
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-03-octal
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [self-control] }
+  prompt: "Число 730₁₀ переведите в восьмеричную систему, затем результат — в двоичную, и подсчитайте количество единиц в двоичной записи. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "730₁₀ = 1332₈ = 1011011010₂, единиц: 6" }
+
+- id: inf-8-numsys-070
+  class: 8
+  topic: Системы счисления
+  subtopic: Арифметика в 16СС
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-04-hex
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Вычислите: A₁₆ + 6₁₆. Ответ дайте в шестнадцатеричной системе. Запишите только число."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "10", explanation: "A = 10, 10 + 6 = 16₁₀, а это в шестнадцатеричной системе 10₁₆" }
+
+- id: inf-8-numsys-071
+  class: 8
+  topic: Системы счисления
+  subtopic: Умножение в двоичной
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Вычислите: 1011₂ × 101₂. Ответ дайте в десятичной системе. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [55], answer_text: "55", explanation: "11 × 5 = 55, в двоичной это 110111₂" }
+
+- id: inf-8-numsys-072
+  class: 8
+  topic: Системы счисления
+  subtopic: Ведущие нули
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 001101₂ в десятичную систему. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [13], answer_text: "13", explanation: "Ведущие нули значения не меняют: 001101₂ = 1101₂ = 13" }
+
+- id: inf-8-numsys-073
+  class: 8
+  topic: Системы счисления
+  subtopic: Триады и тетрады
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число AF₁₆ в восьмеричную систему через двоичную. Запишите только число."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [175], answer_text: "257", explanation: "AF₁₆ = 1010 1111₂, триады справа: 010 101 111 = 257₈" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-bank2.mjs ====
+# Ответы вычислены кодом (перебор наборов, parseInt/toString, локальный Python) и проверены check.mjs.
+
+- id: inf-8-numsys-074
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Вычитание в двоичной, ответ в десятичной"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 11000₂ − 1010₂. Ответ дайте в десятичной системе."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [14], answer_text: "14", explanation: "24 − 10 = 14. В двоичной это 1110₂. Заём единицы из старшего разряда означает две единицы младшего, поэтому единицы не «исчезают»." }
+
+- id: inf-8-numsys-075
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Деление в двоичной системе"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 110110₂ : 110₂. Ответ дайте в двоичной системе."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "1001", explanation: "54 : 6 = 9 — в двоичной это 1001₂, остаток 0. Деление уголком сводится к вычитанию: 54 = 6 · 9 + 0." }
+
+- id: inf-8-numsys-076
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Смешанное выражение в 2СС"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [self-control] }
+  prompt: "Вычислите: 1000000₂ − 11011₂ + 101₂. Ответ дайте в двоичной системе."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [42], answer_text: "101010", explanation: "По порядку действий: 64 − 27 = 37, затем 37 + 5 = 42, а 42 в двоичной системе — 101010₂. Самопроверка: переведите результат в десятичную и повторите вычисление десятичными." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-numsys-bank3.mjs ====
+# Ответы вычислены кодом (перебор разрядов, parseInt/toString, моделирование столбика, локальный Python)
+# и проверены check.mjs. Повторный запуск перезаписывает только этот блок.
+
+- id: inf-8-numsys-077
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Вес разряда"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Число записано в системе счисления с основанием 3 пятью разрядами. Чему равен вес третьего разряда слева? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Вес разряда — это степень основания, а считают веса справа налево: у пятиразрядной записи в системе с основанием 3 это 81, 27, 9, 3, 1. Третий разряд слева — это 3 в степени 2, то есть 3^2 = 9. При переходе на разряд вправо вес всегда уменьшается в 3 раз, а младший разряд весит 1." }
+
+- id: inf-8-numsys-078
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Длина записи и наибольшее число"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид записи — наибольшее число, которое в нём помещается."
+  student_view: { left: ["Запись длиной 4 в системе с основанием 2", "Запись длиной 3 в системе с основанием 8", "Запись длиной 2 в системе с основанием 16", "Запись длиной 5 в системе с основанием 10"], right: ["Наибольшее число в ней — 255₁₆", "Наибольшее число в ней — 99999₁₀", "Наибольшее число в ней — 15₂", "Наибольшее число в ней — 511₈"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Запись длиной 4 в системе с основанием 2": "Наибольшее число в ней — 15₂", "Запись длиной 3 в системе с основанием 8": "Наибольшее число в ней — 511₈", "Запись длиной 2 в системе с основанием 16": "Наибольшее число в ней — 255₁₆", "Запись длиной 5 в системе с основанием 10": "Наибольшее число в ней — 99999₁₀" }, explanation: "Наибольшее число в записи длиной n с основанием q получается, если во всех разрядах стоят старшие цифры алфавита: это qⁿ − 1. Считаем: 2^4 − 1 = 15; 8^3 − 1 = 511; 16^2 − 1 = 255; 10^5 − 1 = 99999. Длина записи и основание вместе определяют диапазон, а внутри диапазона любое число записывается единственным набором цифр." }
+
+- id: inf-8-numsys-079
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Длина записи"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "Число 100000₁₀ перевели в троичную систему счисления. Сколько разрядов (цифр) получилось в этой записи? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Делим число на 3 нацело и считаем шаги: 100000 → 33333 → ... — всего 11 шагов, значит в записи 11 разрядов. Проверка по границам: 3^11 = 177147 > 100000, а 3^10 = 59049 ≤ 100000. Вес старшего разряда как раз и задаёт длину записи." }
+
+- id: inf-8-numsys-080
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Число записей заданной длины"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-01-intro
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Сколько существует чисел, которые в системе счисления с основанием 4 записываются ровно 4 разрядами (старшая цифра не ноль)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [192], answer_text: "192", explanation: "Четыре разряда — это числа от 4^3 = 64 до 4^4 − 1 = 255 включительно, всего 192. Столько же даёт перебор всех чисел этого диапазона — 192, значит границы взяты верно. Ведущий ноль число не меняет, но длину записи меняет: число 64 записывается четырьмя разрядами в системе с основанием 4, а ноль — сразу одной цифрой, поэтому в этот диапазон не входит." }
+
+- id: inf-8-numsys-081
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Перевод 10->2 по степеням двойки"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Разложите число 45₁₀ на степени двойки: 45 = 2⁵ + 2³ + 2² + 2⁰. Запишите это число в двоичной системе. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [45], answer_text: "101101", explanation: "Под каждым разрядом пишут его вес — степень двойки — и отмечают единицей те разряды, которые входят в разложение. Веса от 2⁵ до 2⁰: 32, 16, 8, 4, 2, 1, разложение использует 32, 8, 4 и 1, поэтому запись 101101₂. Проверка сложением весов отмеченных разрядов: 32 + 8 + 4 + 1 = 45, столько же было в условии." }
+
+- id: inf-8-numsys-082
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Двоичный алфавит"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-02-binary
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
+  prompt: "В какой из записей есть цифра, которой нет в двоичной системе счисления?"
+  student_view: { options: [{ id: B, text: "101101₂" }, { id: A, text: "1100101₂" }, { id: C, text: "111100₂" }, { id: D, text: "10211₂" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Алфавит двоичной системы — это цифры 0, 1 и ничего больше. В записи 10211₂ стоит цифра 2, поэтому такой записи в двоичной системе не бывает; остальные варианты состоят только из нулей и единиц и записаны вполне корректно." }
+
+- id: inf-8-numsys-083
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Перевод 2->10 по весам разрядов"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-02-binary
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "У числа 10110₂ разряды слева направо имеют веса 16, 8, 4, 2, 1. Чему равно значение этого числа в десятичной системе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [22], answer_text: "22", explanation: "Умножаем каждую цифру на вес её разряда и складываем: 1·16 + 0·8 + 1·4 + 1·2 + 0·1 = 22. Складывать можно только произведения цифры на вес — складывать сами разряды бессмысленно. Контроль: 10110₂ — это и есть запись числа 22." }
+
+- id: inf-8-numsys-084
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Запись с заданным числом единиц"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: numsys-02-binary
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-8-numsys-represent], meta: [self-control] }
+  prompt: "Двоичная запись числа содержит ровно 8 разрядов, из которых ровно 5 — единицы. Чему равно наибольшее число с такой записью? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [248], answer_text: "248", explanation: "Чтобы число было наибольшим, единицы надо сдвинуть в старшие разряды: веса разрядов убывают слева направо (128, 64, 32, 16, 8, 4, 2, 1), поэтому запись 11111000₂ даёт 248. Таких записей перебор находит 56: это число единиц в 8 разрядах, которое считается по формуле сочетаний. Проверка: сложив веса единиц, получаем ровно 248." }
+
+- id: inf-8-numsys-085
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Сложение двоичных чисел столбиком"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Напишите программу на Python, которая складывает два двоичных числа поразрядно, как это делают в столбик, и выводит сумму в двоичной системе без префикса 0b."
+  student_view: { language: python, template: "# Складываем двоичные числа поразрядно: единицы в сумме 2 и больше дают 0 в этом разряде и единицу в следующий\ndef add_bin(a, b):\n    # строки равной длины, разряды считаем справа налево\n    res = ''\n    carry = 0\n    for i in range(len(a) - 1, -1, -1):\n        # TODO: сложить цифры разрядов вместе с переносом\n        ...\n    return res\n\n\nprint(add_bin('1011', '1101'))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "def add_bin(a, b):\n    res = ''\n    carry = 0\n    for i in range(len(a) - 1, -1, -1):\n        t = int(a[i]) + int(b[i]) + carry\n        res = str(t % 2) + res\n        carry = t // 2\n    if carry:\n        res = str(carry) + res\n    return res\n\n\nprint(add_bin('1011', '1101'))", expected_stdout: "11000", explanation: "Разряды складываются справа налево вместе с переносом: 1 + 1 = 2 → в разряд пишем 0, единицу переносим в следующий. Дальше 1 + 0 + 1 = 2 → снова 0 и перенос, затем 0 + 1 + 1 = 2 → 0 и перенос, и наконец 1 + 1 + 1 = 3 → в разряд 1, перенос 1 в новый старший разряд. Получается 11000₂. Функция bin() дала бы тот же результат, но к строке добавился бы префикс 0b, а здесь вывести надо чистую запись." }
+
+- id: inf-8-numsys-086
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Сложение в 2СС, ответ в 2СС"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 11011₂ + 1011₂. Ответ дайте в двоичной системе. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [38], answer_text: "100110", explanation: "Складываем столбиком: 27 + 11 = 38, а в двоичной системе это 100110₂. Проверка переводом результата обратно в десятичную: 100110₂ = 38₁₀, столько же вышло и в столбике. В двоичной системе 1 + 1 даёт 0 в этом разряде и единицу в следующем — перенос." }
+
+- id: inf-8-numsys-087
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Перенос при сложении"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-05-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "При сложении столбиком в одном разряде сложились две единицы и единица переноса из предыдущего разряда. Что записывают в этот разряд и куда уходит перенос?"
+  student_view: { options: [{ id: A, text: "В разряд записывают 1, а единица переходит в следующий разряд" }, { id: D, text: "В разряд записывают 3, а единица переходит в следующий разряд" }, { id: C, text: "В разряд записывают 2, а единица никуда не переходит" }, { id: B, text: "В разряд записывают 0, а единица переходит в следующий разряд" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Всего в разряде 1 + 1 + 1 = 3. В двоичной системе 3 записывается как 11₂: в разряде стоит 1, а единица уходит в следующий разряд переносом. Ошибка — записать в разряд само число 3: цифрой может быть только 0 или 1, всё остальное переносится на следующий разряд." }
+
+- id: inf-8-numsys-088
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Арифметика в 8СС, ответ в 10СС"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 17₈ + 5₈. Ответ дайте в десятичной системе. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "Переводим в десятичную и считаем: 15 + 5 = 20. В восьмеричной системе тот же результат записывается как 24₈ — в младшем разряде 7 + 5 = 12, а 12 больше 7, поэтому записываем 2 и переносим 1 в следующий разряд. Ошибка — сложить младшие разряды как десятичные и записать 12 прямо в разряд." }
+
+- id: inf-8-numsys-089
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Арифметика в 16СС, ответ в 10СС"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.4
+  fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
+  prompt: "Вычислите: 2A₁₆ − 1F₁₆. Ответ дайте в десятичной системе. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "В шестнадцатеричной системе A = 10, F = 15, поэтому 42 − 31 = 11. В самой системе считают по разрядам: в младшем разряде A − F требует займа из старшего разряда, после займа получается 27, то есть B. Ошибка — не взять заём и записать в младший разряд отрицательное число." }
+
+- id: inf-8-numsys-090
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Цепочка 10->2, счёт разрядов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 64₁₀ в двоичную систему и подсчитайте, сколько нулей оказалось в этой записи. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "64₁₀ — это 2 в шестой степени, поэтому запись получается 1000000₂: единица и 6 нулей. Степень двойки записывается единицей с нулями, и число нулей равно самой степени — это быстрый способ проверить перевод." }
+
+- id: inf-8-numsys-091
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Число и его двоичная запись"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Как записывается число 25₁₀ в двоичной системе счисления?"
+  student_view: { options: [{ id: A, text: "11001₂" }, { id: C, text: "10011₂" }, { id: D, text: "11010₂" }, { id: B, text: "10101₂" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "25 = 16 + 8 + 1 = 2⁴ + 2³ + 2⁰, поэтому запись 11001₂. Остальные варианты дают 21, 19 и 26 — в них перепутаны разряды. Проверка ответа: 16 + 8 + 1 = 25, столько же получилось сложением весов единичных разрядов." }
+
+- id: inf-8-numsys-092
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Число и его запись в другой системе"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Установите соответствие: число в десятичной системе — его запись в указанной системе счисления."
+  student_view: { left: ["30₁₀", "20₁₀", "24₁₀"], right: ["11000₂", "1E₁₆", "24₈"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "30₁₀": "1E₁₆", "20₁₀": "24₈", "24₁₀": "11000₂" }, explanation: "Переводим каждое число в свою систему: 30₁₀ = 1E₁₆; 20₁₀ = 24₈; 24₁₀ = 11000₂. Правый столбец намеренно перемешан, поэтому сначала приходится перевести число, а потом выбрать запись. Обратная проверка: 1E₁₆ → 30₁₀, 24₈ → 20₁₀, 11000₂ → 24₁₀ — каждое число восстановилось, значит соответствие верное." }
+
+- id: inf-8-numsys-093
+  class: 8
+  topic: "Системы счисления"
+  subtopic: "Цепочка 10->16->2, длина записи"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: numsys-06-review
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 156₁₀ в шестнадцатеричную систему, а результат — в двоичную. Сколько разрядов в полученной двоичной записи? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "156₁₀ = 9C₁₆, а каждая шестнадцатеричная цифра заменяется тетрадой из четырёх двоичных разрядов: 9C₁₆ = 1001 1100₂ = 10011100₂. В записи 8 разрядов. Считать можно и сразу в двоичной, но цепочка через 16СС короче и в ней легче заметить пропущенный разряд." }

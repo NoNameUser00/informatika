@@ -1,0 +1,3439 @@
+{
+  "test_code": "grade9-final-v1",
+  "kind": "control",
+  "grade": "9",
+  "title": "Итоговая контрольная работа: 9 класс",
+  "instruction": "Отвечайте точно. Код задаётся в поле ответа, запускается кнопкой. В числовых ответах запишите только число.",
+  "page_size": 5,
+  "variant_count": 30,
+  "per_variant": 20,
+  "final": true,
+  "ktp_to": 27,
+  "sections": [
+    {
+      "title": "Электронные таблицы, КТП 2–11",
+      "ktp": [
+        {
+          "from": 2,
+          "to": 11
+        }
+      ],
+      "task_ids": [
+        "inf-9-sheet-001",
+        "inf-9-sheet-009",
+        "inf-9-sheet-011",
+        "inf-9-sheet-012",
+        "inf-9-sheet-039",
+        "inf-9-sheet-013",
+        "inf-9-sheet-044",
+        "inf-9-sheet-045",
+        "inf-9-sheet-046",
+        "inf-9-sheet-018",
+        "inf-9-sheet-025",
+        "inf-9-sheet-027",
+        "inf-9-sheet-028",
+        "inf-9-sheet-029",
+        "inf-9-sheet-059",
+        "inf-9-sheet-030",
+        "inf-9-sheet-032",
+        "inf-9-sheet-033",
+        "inf-9-sheet-034",
+        "inf-9-sheet-066"
+      ]
+    },
+    {
+      "title": "Программирование, КТП 12–17",
+      "ktp": [
+        {
+          "from": 12,
+          "to": 17
+        }
+      ],
+      "task_ids": [
+        "inf-9-arr-024",
+        "inf-9-arr-025",
+        "inf-9-extra-026",
+        "inf-9-arr-006",
+        "inf-9-arr-009",
+        "inf-9-arr-029",
+        "inf-9-arr-033",
+        "inf-9-arr-034",
+        "inf-9-arr-005",
+        "inf-9-arr-008",
+        "inf-9-arr-016",
+        "inf-9-arr-043",
+        "inf-9-arr-044",
+        "inf-9-arr-049"
+      ]
+    },
+    {
+      "title": "Управление и роботизированные системы, КТП 18–19",
+      "ktp": [
+        {
+          "from": 18,
+          "to": 19
+        }
+      ],
+      "task_ids": [
+        "inf-9-extra-001",
+        "inf-9-extra-002",
+        "inf-9-extra-014",
+        "inf-9-extra-015",
+        "inf-9-extra-063",
+        "inf-9-extra-028",
+        "inf-9-extra-030",
+        "inf-9-extra-065",
+        "inf-9-extra-066"
+      ]
+    },
+    {
+      "title": "Модели, графы и пути, КТП 20–27",
+      "ktp": [
+        {
+          "from": 20,
+          "to": 27
+        }
+      ],
+      "task_ids": [
+        "inf-9-graph-003",
+        "inf-9-graph-005",
+        "inf-9-graph-013",
+        "inf-9-graph-030",
+        "inf-9-graph-035",
+        "inf-9-graph-047",
+        "inf-9-graph-049",
+        "inf-9-graph-050",
+        "inf-9-graph-053",
+        "inf-9-graph-055",
+        "inf-9-graph-060",
+        "inf-9-extra-004",
+        "inf-9-extra-005",
+        "inf-9-extra-032",
+        "inf-9-extra-033",
+        "inf-9-extra-035",
+        "inf-9-extra-068"
+      ]
+    }
+  ],
+  "pool": [
+    {
+      "id": "inf-9-sheet-001",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С какого знака начинается любая формула?",
+      "options": [
+        {
+          "id": "A",
+          "text": "="
+        },
+        {
+          "id": "D",
+          "text": "пробел"
+        },
+        {
+          "id": "C",
+          "text": ";"
+        },
+        {
+          "id": "B",
+          "text": ":"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-009",
+      "lesson": "9sheet-01-base",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что вычислит формула =(2+3)*4? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-9-sheet-011",
+      "lesson": "9sheet-01-base",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В таблице выделен диапазон B2:D10. Сколько в нём ячеек? Запишите только число.",
+      "base": 10,
+      "expected": 27,
+      "key": "27"
+    },
+    {
+      "id": "inf-9-sheet-012",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "В ячейке A1 стоит число 5. В B1 введено =A1^2, в C1 введено =B1+A1. Что покажет C1?",
+      "options": [
+        {
+          "id": "B",
+          "text": "35"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "D",
+          "text": "50"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-sheet-039",
+      "lesson": "9sheet-01-base",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как записывается адрес третьей ячейки в третьей строке таблицы?",
+      "options": [
+        {
+          "id": "B",
+          "text": "3C"
+        },
+        {
+          "id": "D",
+          "text": "Ячейка 3 номер 3"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "A",
+          "text": "C3"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-sheet-013",
+      "lesson": "9sheet-02-data",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "В ячейку ввели число, перед которым стоит пробел. Что окажется в ячейке?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Пустая ячейка"
+        },
+        {
+          "id": "B",
+          "text": "Число без пробела"
+        },
+        {
+          "id": "C",
+          "text": "Ошибка ввода"
+        },
+        {
+          "id": "A",
+          "text": "Текст, а не число"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-sheet-044",
+      "lesson": "9sheet-02-data",
+      "type": "matching",
+      "points": 2,
+      "prompt": "Установите соответствие: тип значения в ячейке — как таблица его обрабатывает.",
+      "left": [
+        "число",
+        "текст",
+        "дата",
+        "время"
+      ],
+      "right": [
+        "считается в формулах",
+        "сортируется как текст, не как число",
+        "участвует в вычислениях как число",
+        "считается как доля суток"
+      ],
+      "answerMap": {
+        "число": "считается в формулах",
+        "текст": "сортируется как текст, не как число",
+        "дата": "участвует в вычислениях как число",
+        "время": "считается как доля суток"
+      },
+      "key": "число=считается в формулах, текст=сортируется как текст, не как число, дата=участвует в вычислениях как число, время=считается как доля суток"
+    },
+    {
+      "id": "inf-9-sheet-045",
+      "lesson": "9sheet-02-refs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что означает запись =$A$1 в формуле?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Ссылка на ячейку A1, которая меняется только по столбцам"
+        },
+        {
+          "id": "B",
+          "text": "Ссылка на столбец A, который не меняется"
+        },
+        {
+          "id": "D",
+          "text": "Сложение ячеек A и 1"
+        },
+        {
+          "id": "A",
+          "text": "Ссылка на ячейку A1, которая не меняется при копировании формулы"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-sheet-046",
+      "lesson": "9sheet-02-refs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В ячейке C1 формула =A1*B1. Формулу скопировали вниз на 3 строки так, что в C3 она ссылается на A3*B3. Сколько строк формула сдвинулась? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-sheet-018",
+      "lesson": "9sheet-03-functions",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В диапазоне B2:B6 стоят 10, 20, 30, 40 и текст «нет данных». Чему равно =СРЗНАЧ(B2:B6)? Запишите только число.",
+      "base": 10,
+      "expected": 25,
+      "key": "25"
+    },
+    {
+      "id": "inf-9-sheet-025",
+      "lesson": "9sheet-05-filter",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В таблице 12 строк данных. Автофильтр по товару оставил видимыми 4 строки. Сколько строк скрыто? Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-9-sheet-027",
+      "lesson": "9sheet-06-charts",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что произойдёт с диаграммой, если изменить число в исходной таблице?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Диаграмма исчезнет"
+        },
+        {
+          "id": "B",
+          "text": "Диаграмма останется прежней"
+        },
+        {
+          "id": "D",
+          "text": "Появится вторая диаграмма"
+        },
+        {
+          "id": "A",
+          "text": "Диаграмма перестроится сама"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-sheet-028",
+      "lesson": "9sheet-06-charts",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Продажи по месяцам: 120, 150, 180 (тыс. руб.). Чему равно =СРЗНАЧ(B2:B4) по этим трём месяцам? Запишите только число.",
+      "base": 10,
+      "expected": 150,
+      "key": "150"
+    },
+    {
+      "id": "inf-9-sheet-029",
+      "lesson": "9sheet-06-charts",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Сравнили площади России, Китая и США и построили круговую диаграмму. Почему это ошибка?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Нужно было взять три цвета вместо одного"
+        },
+        {
+          "id": "B",
+          "text": "Круговая диаграмма не умеет показывать площади"
+        },
+        {
+          "id": "A",
+          "text": "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли"
+        },
+        {
+          "id": "D",
+          "text": "Ошибки нет, круговая подходит любых трёх величин"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-sheet-059",
+      "lesson": "9sheet-06-charts",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какая диаграмма показывает, как менялась величина по месяцам?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Линейная (график)"
+        },
+        {
+          "id": "C",
+          "text": "Диаграмма разброса"
+        },
+        {
+          "id": "B",
+          "text": "Круговая"
+        },
+        {
+          "id": "D",
+          "text": "Гистограмма"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-sheet-030",
+      "lesson": "9sheet-07-model",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Модель тормозного пути: s = v^2/10, скорость v в метрах в секунду. Чему равен путь при v = 10 м/с? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-9-sheet-032",
+      "lesson": "9sheet-07-model",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Модель s = v^2/10. Во сколько раз тормозной путь больше при 40 м/с, чем при 20 м/с? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-sheet-033",
+      "lesson": "9sheet-08-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В B2:B13 баллы 12 учеников: 4, 5, 3, 5, 4, 3, 5, 4, 5, 3, 4, 5. Сколько учеников имеют балл не ниже 4? Запишите только число.",
+      "base": 10,
+      "expected": 9,
+      "key": "9"
+    },
+    {
+      "id": "inf-9-sheet-034",
+      "lesson": "9sheet-08-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В B2:B7 баллы шести учеников: 4, 5, 5, 4, 4, 2. Чему равен =СРЗНАЧ(B2:B7)? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-sheet-066",
+      "lesson": "9sheet-08-tasks",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Товары стоят 100, 200, 300, 400 рублей. Всего на 1000 рублей. Товар продаётся упаковками по 1000 рублей, неполную упаковку продать нельзя. Сколько упаковок нужно? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-arr-024",
+      "lesson": "9algo-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что делает условие в алгоритме с ветвлением?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Останавливает программу"
+        },
+        {
+          "id": "B",
+          "text": "Повторяет действия заданное число раз"
+        },
+        {
+          "id": "C",
+          "text": "Записывает результат в таблицу"
+        },
+        {
+          "id": "A",
+          "text": "Выбирает, какую из двух ветвей выполнять дальше"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-arr-025",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Цикл выполняет действие 5 раз: к переменной, равной 0, каждый раз прибавляют 2. Какое значение получится? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-9-extra-026",
+      "lesson": "9algo-01-performers",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Опиши вспомогательный алгоритм — функцию площадь(a, b), которая возвращает площадь прямоугольника, и выведи площадь для 3 и 4.",
+      "template": "def ploshchad(a, b):\n    return ...\n\nprint(ploshchad(3, 4))",
+      "expected": "12",
+      "key": "12"
+    },
+    {
+      "id": "inf-9-arr-006",
+      "lesson": "9arr-01-basics",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найдите сумму чётных чисел списка [2, 5, 8] и выведите её.",
+      "template": "# Допиши код: сумма чётных [2, 5, 8]\ns = 0\n...",
+      "expected": "10",
+      "key": "10"
+    },
+    {
+      "id": "inf-9-arr-009",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найдите среднее чисел [4, 6, 8]. Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-arr-029",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равен элемент с индексом 2? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-arr-033",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 3, 8, 2, 5. Чему равно произведение элементов? Запишите только число.",
+      "base": 10,
+      "expected": 240,
+      "key": "240"
+    },
+    {
+      "id": "inf-9-arr-034",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 7, 2, 9, 4. Чему равна сумма чётных элементов? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-arr-005",
+      "lesson": "9arr-02-search",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найдите максимум списка [3, 7, 5] циклом (без max) и выведите его.",
+      "template": "# Допиши код: максимум [3, 7, 5]\na = [3, 7, 5]\n...",
+      "expected": "7",
+      "key": "7"
+    },
+    {
+      "id": "inf-9-arr-008",
+      "lesson": "9arr-02-search",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что хранит переменная imax в поиске максимума?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Номер элемента-чемпиона"
+        },
+        {
+          "id": "C",
+          "text": "Длину списка"
+        },
+        {
+          "id": "D",
+          "text": "Сумму"
+        },
+        {
+          "id": "B",
+          "text": "Само число-чемпион"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-arr-016",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Массив из 1000 элементов отсортирован. Сколько шагов потребуется бинарному поиску, чтобы гарантированно найти нужное значение? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-9-arr-043",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9, 7. Число 7 встречается сколько раз? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-9-arr-044",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9, 7. Чему равна сумма элементов, стоящих левее числа 7? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-arr-049",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Размах массива равен 7. Чему он равен? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-9-extra-001",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое обратная связь в управлении?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Выключение питания"
+        },
+        {
+          "id": "B",
+          "text": "Громкий звук робота"
+        },
+        {
+          "id": "A",
+          "text": "Возврат сведений о состоянии объекта в управление"
+        },
+        {
+          "id": "D",
+          "text": "Новая батарейка"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-extra-002",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем роботу датчики?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Красиво выглядеть"
+        },
+        {
+          "id": "C",
+          "text": "Греть моторы"
+        },
+        {
+          "id": "A",
+          "text": "Получать сигналы о мире"
+        },
+        {
+          "id": "D",
+          "text": "Шуметь"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-extra-014",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Процедура «сторона» (вперёд + направо 90) вызвана 4 раза в цикле. Какая фигура получится?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Отрезок"
+        },
+        {
+          "id": "B",
+          "text": "Треугольник"
+        },
+        {
+          "id": "C",
+          "text": "Круг"
+        },
+        {
+          "id": "A",
+          "text": "Квадрат"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-extra-015",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем повторяющийся кусок программы выносить во вспомогательный алгоритм?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Чтобы было длиннее"
+        },
+        {
+          "id": "A",
+          "text": "Одно место для правок вместо копипасты"
+        },
+        {
+          "id": "C",
+          "text": "Чтобы запутать"
+        },
+        {
+          "id": "D",
+          "text": "Так нельзя делать"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-extra-063",
+      "lesson": "9robot-01-control",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Зачем в системе управления с обратной связью датчики?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Чтобы заменить управляющее устройство"
+        },
+        {
+          "id": "B",
+          "text": "Чтобы украсить корпус робота"
+        },
+        {
+          "id": "A",
+          "text": "Чтобы система знала о текущем состоянии объекта и могла скорректировать действие"
+        },
+        {
+          "id": "C",
+          "text": "Чтобы измерять расход электроэнергии"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-extra-028",
+      "lesson": "9robot-02-systems",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько частей входит в роботизированную систему по этому уроку? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-9-extra-030",
+      "lesson": "9robot-02-systems",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Управляющее устройство выполняет цикл «считал датчики — решил — выполнил» 1000 раз в секунду. Сколько раз цикл выполнится за 5 секунд? Запишите только число.",
+      "base": 10,
+      "expected": 5000,
+      "key": "5000"
+    },
+    {
+      "id": "inf-9-extra-065",
+      "lesson": "9robot-02-systems",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой из перечисленных элементов роботизированной системы является исполнительным механизмом?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Программа"
+        },
+        {
+          "id": "C",
+          "text": "Микропроцессор"
+        },
+        {
+          "id": "A",
+          "text": "Привод двигателя"
+        },
+        {
+          "id": "B",
+          "text": "Датчик температуры"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-9-extra-066",
+      "lesson": "9robot-02-systems",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Управляющее устройство выполняет цикл «считал датчики — решил — выполнил» 1000 раз в секунду. Сколько раз за 5 секунд оно выполнит полный цикл? Запишите только число.",
+      "base": 10,
+      "expected": 5000,
+      "key": "5000"
+    },
+    {
+      "id": "inf-9-graph-003",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем дерево отличается от графа?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Ничем"
+        },
+        {
+          "id": "A",
+          "text": "Нет циклов"
+        },
+        {
+          "id": "B",
+          "text": "Нет вершин"
+        },
+        {
+          "id": "C",
+          "text": "Нет рёбер"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-graph-005",
+      "lesson": "9graph-01-graphs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что хранит весовая матрица вместо единиц?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Нули"
+        },
+        {
+          "id": "A",
+          "text": "Веса рёбер"
+        },
+        {
+          "id": "C",
+          "text": "Имена"
+        },
+        {
+          "id": "D",
+          "text": "Цвета"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-9-graph-013",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько листьев в дереве решений, где переставляют числа 1, 2, 3, 4 на четырёх местах? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-9-graph-030",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В задаче выбирается один вариант из трёх: А, Б, В. Сколько всего вариантов выбора? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-graph-035",
+      "lesson": "9graph-02-trees",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В двоичном дереве перебора 7 листьев (по варианту на каждом шаге). Сколько у него внутренних вершин? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-9-graph-047",
+      "lesson": "9graph-03-tasks",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Граф: веса рёбер A–B = 1, A–C = 1, B–D = 5, C–D = 5, B–E = 2, E–D = 2. Чему равен кратчайший путь из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-9-graph-049",
+      "lesson": "9graph-03-tasks",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Граф содержит рёбра A→B, B→C, C→A. Можно ли в таком графе накапливать число путей от начала до конца?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Да, всегда можно"
+        },
+        {
+          "id": "C",
+          "text": "Да, если начать с любой вершины"
+        },
+        {
+          "id": "D",
+          "text": "Нет, потому что рёбер больше, чем вершин"
+        },
+        {
+          "id": "A",
+          "text": "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-graph-050",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-053",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф-цепочка A→B→C→D. Сколько путей ведёт из A в D? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-055",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, C→E. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
+      "id": "inf-9-graph-060",
+      "lesson": "9graph-04-paths",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, A→E, D→E. В вершину-источник A засчитывается 1 путь. Сколько путей ведёт из A в E? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-9-extra-004",
+      "lesson": "9model-01-models",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда модель адекватна?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Она красивая"
+        },
+        {
+          "id": "C",
+          "text": "Она большая"
+        },
+        {
+          "id": "D",
+          "text": "Она старая"
+        },
+        {
+          "id": "A",
+          "text": "Результаты близки к эксперименту"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-9-extra-005",
+      "lesson": "9model-01-models",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Модель тормозного пути: s = v²/10 (v в м/с). Скорость 72 км/ч. Найди s в метрах. Запишите только число.",
+      "base": 10,
+      "expected": 40,
+      "key": "40"
+    },
+    {
+      "id": "inf-9-extra-032",
+      "lesson": "9model-02-math",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Модель s = v^2/10 работает, когда v в метрах в секунду. Сколько метров в секунду составляет скорость 72 км/ч? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-9-extra-033",
+      "lesson": "9model-02-math",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Модель s = v^2/10. Чему равен путь торможения при скорости 30 м/с? Запишите только число.",
+      "base": 10,
+      "expected": 90,
+      "key": "90"
+    },
+    {
+      "id": "inf-9-extra-035",
+      "lesson": "9model-03-mixed",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что показывает график в смешанной модели такого, чего не показывает таблица?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Тенденцию: растёт величина, падает или почти не меняется"
+        },
+        {
+          "id": "C",
+          "text": "Названия объектов модели"
+        },
+        {
+          "id": "D",
+          "text": "Ничего: таблица и график равнозначны"
+        },
+        {
+          "id": "B",
+          "text": "Точные значения всех чисел"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-9-extra-068",
+      "lesson": "9model-03-mixed",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В модели популяции N = N + рождение − смертность. Сейчас N = 100, рождаемость 20 в год, смертность 12 в год. Чему равно N через два года? Запишите только число.",
+      "base": 10,
+      "expected": 116,
+      "key": "116"
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-9-sheet-032",
+        "inf-9-sheet-034",
+        "inf-9-extra-033",
+        "inf-9-extra-015",
+        "inf-9-extra-026",
+        "inf-9-extra-032",
+        "inf-9-arr-024",
+        "inf-9-sheet-012",
+        "inf-9-arr-043",
+        "inf-9-arr-025",
+        "inf-9-graph-035",
+        "inf-9-graph-030",
+        "inf-9-extra-063",
+        "inf-9-sheet-066",
+        "inf-9-extra-030",
+        "inf-9-sheet-018",
+        "inf-9-graph-013",
+        "inf-9-graph-049",
+        "inf-9-sheet-009",
+        "inf-9-arr-006"
+      ],
+      "orders": {
+        "inf-9-extra-015": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-9-graph-053",
+        "inf-9-sheet-029",
+        "inf-9-arr-016",
+        "inf-9-arr-043",
+        "inf-9-arr-009",
+        "inf-9-extra-014",
+        "inf-9-graph-035",
+        "inf-9-arr-044",
+        "inf-9-sheet-025",
+        "inf-9-sheet-001",
+        "inf-9-graph-047",
+        "inf-9-graph-049",
+        "inf-9-graph-050",
+        "inf-9-extra-030",
+        "inf-9-sheet-012",
+        "inf-9-arr-008",
+        "inf-9-sheet-018",
+        "inf-9-extra-001",
+        "inf-9-sheet-045",
+        "inf-9-extra-033"
+      ],
+      "orders": {
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-9-sheet-044",
+        "inf-9-extra-028",
+        "inf-9-arr-024",
+        "inf-9-extra-066",
+        "inf-9-arr-005",
+        "inf-9-sheet-034",
+        "inf-9-extra-035",
+        "inf-9-graph-047",
+        "inf-9-sheet-032",
+        "inf-9-arr-016",
+        "inf-9-graph-049",
+        "inf-9-extra-030",
+        "inf-9-arr-033",
+        "inf-9-sheet-030",
+        "inf-9-arr-043",
+        "inf-9-sheet-009",
+        "inf-9-extra-005",
+        "inf-9-graph-053",
+        "inf-9-graph-035",
+        "inf-9-sheet-029"
+      ],
+      "orders": {
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "считается в формулах",
+            "участвует в вычислениях как число",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-9-arr-044",
+        "inf-9-extra-005",
+        "inf-9-arr-008",
+        "inf-9-arr-016",
+        "inf-9-sheet-009",
+        "inf-9-arr-006",
+        "inf-9-sheet-045",
+        "inf-9-graph-049",
+        "inf-9-arr-033",
+        "inf-9-extra-030",
+        "inf-9-graph-035",
+        "inf-9-graph-060",
+        "inf-9-graph-030",
+        "inf-9-graph-050",
+        "inf-9-sheet-029",
+        "inf-9-extra-001",
+        "inf-9-sheet-034",
+        "inf-9-sheet-025",
+        "inf-9-extra-014",
+        "inf-9-sheet-012"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-9-sheet-039",
+        "inf-9-sheet-044",
+        "inf-9-arr-006",
+        "inf-9-sheet-045",
+        "inf-9-graph-013",
+        "inf-9-graph-035",
+        "inf-9-graph-049",
+        "inf-9-sheet-029",
+        "inf-9-extra-063",
+        "inf-9-sheet-012",
+        "inf-9-extra-001",
+        "inf-9-sheet-025",
+        "inf-9-extra-026",
+        "inf-9-graph-030",
+        "inf-9-arr-029",
+        "inf-9-arr-024",
+        "inf-9-extra-005",
+        "inf-9-graph-050",
+        "inf-9-arr-005",
+        "inf-9-extra-030"
+      ],
+      "orders": {
+        "inf-9-sheet-039": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "считается в формулах",
+            "участвует в вычислениях как число",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-9-graph-049",
+        "inf-9-sheet-034",
+        "inf-9-sheet-029",
+        "inf-9-arr-016",
+        "inf-9-arr-044",
+        "inf-9-arr-025",
+        "inf-9-extra-068",
+        "inf-9-extra-030",
+        "inf-9-graph-003",
+        "inf-9-graph-035",
+        "inf-9-graph-060",
+        "inf-9-sheet-013",
+        "inf-9-extra-005",
+        "inf-9-extra-028",
+        "inf-9-sheet-044",
+        "inf-9-sheet-001",
+        "inf-9-arr-006",
+        "inf-9-arr-009",
+        "inf-9-extra-014",
+        "inf-9-sheet-032"
+      ],
+      "orders": {
+        "inf-9-graph-049": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается в формулах",
+            "сортируется как текст, не как число",
+            "участвует в вычислениях как число",
+            "считается как доля суток"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-9-arr-029",
+        "inf-9-graph-053",
+        "inf-9-sheet-032",
+        "inf-9-graph-030",
+        "inf-9-sheet-018",
+        "inf-9-sheet-011",
+        "inf-9-arr-005",
+        "inf-9-extra-001",
+        "inf-9-extra-014",
+        "inf-9-graph-035",
+        "inf-9-sheet-045",
+        "inf-9-graph-049",
+        "inf-9-arr-044",
+        "inf-9-sheet-029",
+        "inf-9-sheet-046",
+        "inf-9-arr-034",
+        "inf-9-extra-033",
+        "inf-9-extra-030",
+        "inf-9-graph-013",
+        "inf-9-extra-026"
+      ],
+      "orders": {
+        "inf-9-extra-001": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-9-arr-005",
+        "inf-9-graph-013",
+        "inf-9-sheet-028",
+        "inf-9-extra-028",
+        "inf-9-graph-035",
+        "inf-9-extra-030",
+        "inf-9-sheet-027",
+        "inf-9-sheet-001",
+        "inf-9-graph-003",
+        "inf-9-arr-025",
+        "inf-9-extra-063",
+        "inf-9-graph-055",
+        "inf-9-graph-049",
+        "inf-9-arr-008",
+        "inf-9-sheet-029",
+        "inf-9-sheet-012",
+        "inf-9-graph-060",
+        "inf-9-sheet-018",
+        "inf-9-arr-043",
+        "inf-9-arr-016"
+      ],
+      "orders": {
+        "inf-9-sheet-027": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-9-sheet-032",
+        "inf-9-extra-001",
+        "inf-9-graph-035",
+        "inf-9-arr-029",
+        "inf-9-arr-006",
+        "inf-9-arr-044",
+        "inf-9-graph-049",
+        "inf-9-graph-013",
+        "inf-9-sheet-045",
+        "inf-9-sheet-029",
+        "inf-9-sheet-025",
+        "inf-9-extra-030",
+        "inf-9-sheet-011",
+        "inf-9-extra-014",
+        "inf-9-arr-034",
+        "inf-9-extra-026",
+        "inf-9-extra-032",
+        "inf-9-sheet-059",
+        "inf-9-graph-005",
+        "inf-9-graph-047"
+      ],
+      "orders": {
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-059": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-graph-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-9-sheet-028",
+        "inf-9-graph-013",
+        "inf-9-extra-030",
+        "inf-9-extra-004",
+        "inf-9-arr-034",
+        "inf-9-extra-033",
+        "inf-9-sheet-033",
+        "inf-9-sheet-009",
+        "inf-9-extra-001",
+        "inf-9-arr-016",
+        "inf-9-extra-066",
+        "inf-9-sheet-012",
+        "inf-9-arr-044",
+        "inf-9-arr-049",
+        "inf-9-sheet-032",
+        "inf-9-sheet-034",
+        "inf-9-arr-005",
+        "inf-9-graph-049",
+        "inf-9-extra-035",
+        "inf-9-graph-035"
+      ],
+      "orders": {
+        "inf-9-extra-004": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-9-extra-033",
+        "inf-9-sheet-039",
+        "inf-9-extra-030",
+        "inf-9-sheet-029",
+        "inf-9-arr-044",
+        "inf-9-arr-006",
+        "inf-9-graph-035",
+        "inf-9-arr-034",
+        "inf-9-sheet-025",
+        "inf-9-graph-050",
+        "inf-9-extra-065",
+        "inf-9-sheet-028",
+        "inf-9-graph-060",
+        "inf-9-graph-049",
+        "inf-9-extra-066",
+        "inf-9-arr-009",
+        "inf-9-sheet-066",
+        "inf-9-sheet-012",
+        "inf-9-extra-026",
+        "inf-9-graph-053"
+      ],
+      "orders": {
+        "inf-9-sheet-039": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-9-extra-063",
+        "inf-9-sheet-028",
+        "inf-9-arr-049",
+        "inf-9-arr-043",
+        "inf-9-extra-065",
+        "inf-9-sheet-032",
+        "inf-9-extra-026",
+        "inf-9-sheet-012",
+        "inf-9-arr-029",
+        "inf-9-sheet-011",
+        "inf-9-extra-030",
+        "inf-9-graph-047",
+        "inf-9-graph-035",
+        "inf-9-extra-068",
+        "inf-9-graph-049",
+        "inf-9-sheet-009",
+        "inf-9-sheet-046",
+        "inf-9-graph-053",
+        "inf-9-arr-044",
+        "inf-9-graph-013"
+      ],
+      "orders": {
+        "inf-9-extra-063": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-9-graph-003",
+        "inf-9-graph-035",
+        "inf-9-sheet-044",
+        "inf-9-arr-008",
+        "inf-9-extra-063",
+        "inf-9-extra-005",
+        "inf-9-sheet-034",
+        "inf-9-arr-049",
+        "inf-9-sheet-029",
+        "inf-9-extra-002",
+        "inf-9-sheet-045",
+        "inf-9-graph-053",
+        "inf-9-graph-047",
+        "inf-9-arr-044",
+        "inf-9-sheet-032",
+        "inf-9-graph-049",
+        "inf-9-sheet-013",
+        "inf-9-arr-016",
+        "inf-9-arr-043",
+        "inf-9-extra-030"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "участвует в вычислениях как число",
+            "считается в формулах",
+            "сортируется как текст, не как число",
+            "считается как доля суток"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-9-extra-005",
+        "inf-9-extra-030",
+        "inf-9-extra-004",
+        "inf-9-sheet-039",
+        "inf-9-graph-035",
+        "inf-9-extra-063",
+        "inf-9-extra-028",
+        "inf-9-extra-033",
+        "inf-9-extra-068",
+        "inf-9-sheet-018",
+        "inf-9-sheet-028",
+        "inf-9-arr-049",
+        "inf-9-arr-016",
+        "inf-9-arr-005",
+        "inf-9-graph-049",
+        "inf-9-sheet-032",
+        "inf-9-sheet-029",
+        "inf-9-sheet-046",
+        "inf-9-arr-034",
+        "inf-9-arr-044"
+      ],
+      "orders": {
+        "inf-9-extra-004": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-9-sheet-039",
+        "inf-9-graph-049",
+        "inf-9-arr-049",
+        "inf-9-extra-033",
+        "inf-9-extra-030",
+        "inf-9-arr-043",
+        "inf-9-arr-009",
+        "inf-9-extra-014",
+        "inf-9-extra-026",
+        "inf-9-sheet-001",
+        "inf-9-graph-030",
+        "inf-9-sheet-018",
+        "inf-9-graph-035",
+        "inf-9-sheet-032",
+        "inf-9-sheet-029",
+        "inf-9-extra-065",
+        "inf-9-arr-005",
+        "inf-9-extra-005",
+        "inf-9-sheet-028",
+        "inf-9-extra-068"
+      ],
+      "orders": {
+        "inf-9-sheet-039": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-9-sheet-066",
+        "inf-9-graph-049",
+        "inf-9-extra-066",
+        "inf-9-extra-065",
+        "inf-9-extra-030",
+        "inf-9-sheet-032",
+        "inf-9-arr-008",
+        "inf-9-sheet-025",
+        "inf-9-sheet-001",
+        "inf-9-arr-044",
+        "inf-9-graph-047",
+        "inf-9-arr-043",
+        "inf-9-graph-050",
+        "inf-9-sheet-034",
+        "inf-9-graph-035",
+        "inf-9-extra-032",
+        "inf-9-arr-016",
+        "inf-9-graph-060",
+        "inf-9-arr-009",
+        "inf-9-sheet-029"
+      ],
+      "orders": {
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-9-graph-035",
+        "inf-9-extra-033",
+        "inf-9-sheet-012",
+        "inf-9-arr-029",
+        "inf-9-arr-016",
+        "inf-9-graph-013",
+        "inf-9-sheet-029",
+        "inf-9-sheet-030",
+        "inf-9-extra-001",
+        "inf-9-sheet-009",
+        "inf-9-arr-043",
+        "inf-9-sheet-018",
+        "inf-9-graph-049",
+        "inf-9-extra-030",
+        "inf-9-arr-049",
+        "inf-9-arr-006",
+        "inf-9-extra-004",
+        "inf-9-extra-066",
+        "inf-9-extra-035",
+        "inf-9-sheet-028"
+      ],
+      "orders": {
+        "inf-9-sheet-012": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-9-graph-035",
+        "inf-9-extra-030",
+        "inf-9-arr-043",
+        "inf-9-graph-049",
+        "inf-9-extra-015",
+        "inf-9-sheet-011",
+        "inf-9-arr-009",
+        "inf-9-sheet-028",
+        "inf-9-sheet-029",
+        "inf-9-extra-005",
+        "inf-9-graph-030",
+        "inf-9-graph-003",
+        "inf-9-sheet-032",
+        "inf-9-extra-066",
+        "inf-9-arr-006",
+        "inf-9-graph-013",
+        "inf-9-sheet-009",
+        "inf-9-sheet-033",
+        "inf-9-arr-034",
+        "inf-9-arr-016"
+      ],
+      "orders": {
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-9-extra-065",
+        "inf-9-graph-060",
+        "inf-9-extra-005",
+        "inf-9-graph-049",
+        "inf-9-extra-032",
+        "inf-9-graph-035",
+        "inf-9-sheet-044",
+        "inf-9-extra-063",
+        "inf-9-sheet-029",
+        "inf-9-sheet-034",
+        "inf-9-extra-026",
+        "inf-9-sheet-045",
+        "inf-9-extra-035",
+        "inf-9-arr-043",
+        "inf-9-sheet-012",
+        "inf-9-sheet-059",
+        "inf-9-arr-049",
+        "inf-9-arr-025",
+        "inf-9-arr-005",
+        "inf-9-extra-030"
+      ],
+      "orders": {
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается в формулах",
+            "считается как доля суток",
+            "участвует в вычислениях как число",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-059": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-9-sheet-012",
+        "inf-9-sheet-033",
+        "inf-9-sheet-032",
+        "inf-9-graph-035",
+        "inf-9-arr-008",
+        "inf-9-arr-009",
+        "inf-9-arr-006",
+        "inf-9-sheet-027",
+        "inf-9-extra-026",
+        "inf-9-extra-005",
+        "inf-9-extra-033",
+        "inf-9-extra-030",
+        "inf-9-extra-028",
+        "inf-9-graph-005",
+        "inf-9-sheet-025",
+        "inf-9-graph-049",
+        "inf-9-arr-005",
+        "inf-9-extra-014",
+        "inf-9-sheet-028",
+        "inf-9-graph-055"
+      ],
+      "orders": {
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-027": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-graph-005": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-9-sheet-025",
+        "inf-9-extra-066",
+        "inf-9-arr-005",
+        "inf-9-arr-016",
+        "inf-9-graph-049",
+        "inf-9-extra-035",
+        "inf-9-arr-025",
+        "inf-9-extra-068",
+        "inf-9-sheet-029",
+        "inf-9-graph-047",
+        "inf-9-sheet-011",
+        "inf-9-sheet-032",
+        "inf-9-extra-005",
+        "inf-9-arr-009",
+        "inf-9-extra-065",
+        "inf-9-extra-030",
+        "inf-9-graph-035",
+        "inf-9-sheet-013",
+        "inf-9-arr-044",
+        "inf-9-sheet-001"
+      ],
+      "orders": {
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-9-graph-047",
+        "inf-9-extra-065",
+        "inf-9-sheet-009",
+        "inf-9-arr-016",
+        "inf-9-extra-030",
+        "inf-9-arr-049",
+        "inf-9-sheet-034",
+        "inf-9-sheet-011",
+        "inf-9-graph-035",
+        "inf-9-graph-060",
+        "inf-9-arr-025",
+        "inf-9-sheet-013",
+        "inf-9-sheet-029",
+        "inf-9-extra-066",
+        "inf-9-extra-032",
+        "inf-9-graph-049",
+        "inf-9-arr-044",
+        "inf-9-arr-005",
+        "inf-9-sheet-012",
+        "inf-9-graph-055"
+      ],
+      "orders": {
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-9-extra-030",
+        "inf-9-graph-003",
+        "inf-9-graph-049",
+        "inf-9-graph-060",
+        "inf-9-extra-005",
+        "inf-9-arr-049",
+        "inf-9-sheet-030",
+        "inf-9-sheet-044",
+        "inf-9-graph-035",
+        "inf-9-sheet-029",
+        "inf-9-arr-043",
+        "inf-9-sheet-012",
+        "inf-9-extra-066",
+        "inf-9-extra-032",
+        "inf-9-arr-033",
+        "inf-9-arr-006",
+        "inf-9-sheet-039",
+        "inf-9-extra-028",
+        "inf-9-arr-016",
+        "inf-9-sheet-034"
+      ],
+      "orders": {
+        "inf-9-graph-003": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "сортируется как текст, не как число",
+            "считается в формулах",
+            "участвует в вычислениях как число"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-9-graph-047",
+        "inf-9-extra-005",
+        "inf-9-sheet-011",
+        "inf-9-sheet-028",
+        "inf-9-sheet-066",
+        "inf-9-extra-030",
+        "inf-9-arr-009",
+        "inf-9-arr-006",
+        "inf-9-graph-035",
+        "inf-9-extra-063",
+        "inf-9-arr-044",
+        "inf-9-sheet-032",
+        "inf-9-extra-035",
+        "inf-9-extra-026",
+        "inf-9-sheet-029",
+        "inf-9-graph-003",
+        "inf-9-sheet-045",
+        "inf-9-arr-034",
+        "inf-9-graph-049",
+        "inf-9-extra-065"
+      ],
+      "orders": {
+        "inf-9-extra-063": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-9-arr-006",
+        "inf-9-sheet-018",
+        "inf-9-sheet-032",
+        "inf-9-graph-060",
+        "inf-9-extra-030",
+        "inf-9-sheet-033",
+        "inf-9-arr-008",
+        "inf-9-sheet-044",
+        "inf-9-sheet-029",
+        "inf-9-arr-044",
+        "inf-9-arr-029",
+        "inf-9-graph-049",
+        "inf-9-arr-016",
+        "inf-9-graph-035",
+        "inf-9-graph-053",
+        "inf-9-extra-063",
+        "inf-9-sheet-066",
+        "inf-9-extra-032",
+        "inf-9-graph-047",
+        "inf-9-extra-015"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "участвует в вычислениях как число",
+            "считается как доля суток",
+            "считается в формулах",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-9-arr-006",
+        "inf-9-graph-035",
+        "inf-9-graph-005",
+        "inf-9-sheet-029",
+        "inf-9-sheet-012",
+        "inf-9-extra-033",
+        "inf-9-arr-025",
+        "inf-9-extra-066",
+        "inf-9-sheet-039",
+        "inf-9-extra-068",
+        "inf-9-sheet-045",
+        "inf-9-extra-065",
+        "inf-9-sheet-025",
+        "inf-9-extra-030",
+        "inf-9-arr-043",
+        "inf-9-extra-026",
+        "inf-9-arr-008",
+        "inf-9-graph-060",
+        "inf-9-sheet-034",
+        "inf-9-graph-049"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-045": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-9-graph-035",
+        "inf-9-arr-043",
+        "inf-9-extra-030",
+        "inf-9-extra-015",
+        "inf-9-sheet-013",
+        "inf-9-arr-034",
+        "inf-9-sheet-059",
+        "inf-9-arr-016",
+        "inf-9-sheet-044",
+        "inf-9-graph-047",
+        "inf-9-extra-035",
+        "inf-9-graph-013",
+        "inf-9-sheet-029",
+        "inf-9-arr-006",
+        "inf-9-sheet-012",
+        "inf-9-graph-030",
+        "inf-9-arr-033",
+        "inf-9-sheet-018",
+        "inf-9-graph-049",
+        "inf-9-extra-063"
+      ],
+      "orders": {
+        "inf-9-extra-015": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-sheet-059": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "участвует в вычислениях как число",
+            "считается в формулах",
+            "считается как доля суток",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-9-sheet-011",
+        "inf-9-arr-024",
+        "inf-9-extra-026",
+        "inf-9-graph-060",
+        "inf-9-graph-035",
+        "inf-9-graph-055",
+        "inf-9-extra-030",
+        "inf-9-sheet-033",
+        "inf-9-sheet-012",
+        "inf-9-sheet-039",
+        "inf-9-sheet-029",
+        "inf-9-arr-008",
+        "inf-9-graph-030",
+        "inf-9-extra-002",
+        "inf-9-graph-049",
+        "inf-9-arr-043",
+        "inf-9-sheet-028",
+        "inf-9-extra-014",
+        "inf-9-arr-006",
+        "inf-9-extra-033"
+      ],
+      "orders": {
+        "inf-9-arr-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-sheet-029": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-9-arr-005",
+        "inf-9-sheet-034",
+        "inf-9-arr-044",
+        "inf-9-extra-030",
+        "inf-9-graph-035",
+        "inf-9-sheet-028",
+        "inf-9-arr-024",
+        "inf-9-graph-013",
+        "inf-9-arr-008",
+        "inf-9-sheet-030",
+        "inf-9-graph-049",
+        "inf-9-extra-032",
+        "inf-9-extra-066",
+        "inf-9-sheet-039",
+        "inf-9-graph-030",
+        "inf-9-sheet-012",
+        "inf-9-extra-026",
+        "inf-9-extra-005",
+        "inf-9-extra-028",
+        "inf-9-sheet-032"
+      ],
+      "orders": {
+        "inf-9-arr-024": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 39
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-9-arr-043",
+        "inf-9-sheet-025",
+        "inf-9-extra-068",
+        "inf-9-sheet-028",
+        "inf-9-arr-005",
+        "inf-9-extra-066",
+        "inf-9-extra-001",
+        "inf-9-extra-026",
+        "inf-9-arr-033",
+        "inf-9-sheet-032",
+        "inf-9-extra-005",
+        "inf-9-arr-034",
+        "inf-9-extra-030",
+        "inf-9-sheet-033",
+        "inf-9-graph-049",
+        "inf-9-graph-055",
+        "inf-9-sheet-030",
+        "inf-9-graph-047",
+        "inf-9-graph-035",
+        "inf-9-sheet-012"
+      ],
+      "orders": {
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-graph-049": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-sheet-012": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 39
+    }
+  ]
+}

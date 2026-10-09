@@ -12,7 +12,7 @@
   fgos_element: 1.3
   fgos: { subject: [inf-10-ss-frac], meta: [plan-actions] }
   prompt: "Как переводят дробную часть в другую систему?"
-  student_view: { options: [{ id: A, text: "Умножают на основание, забирают целые" }, { id: B, text: "Делят на основание" }, { id: C, text: "Отбрасывают" }, { id: D, text: "Округляют до целых" }] }
+  student_view: { options: [{ id: A, text: "Умножают на основание, забирают целые" }, { id: D, text: "Округляют до целых" }, { id: B, text: "Делят на основание" }, { id: C, text: "Отбрасывают" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Целые части произведений — цифры результата" }
 
@@ -29,7 +29,7 @@
   fgos_element: 1.3
   fgos: { subject: [inf-10-ss-frac], meta: [plan-actions] }
   prompt: "Чему равно 0,625 в двоичной системе?"
-  student_view: { options: [{ id: A, text: "0,101" }, { id: B, text: "0,11" }, { id: C, text: "0,100" }, { id: D, text: "0,011" }] }
+  student_view: { options: [{ id: A, text: "0,101" }, { id: C, text: "0,100" }, { id: B, text: "0,11" }, { id: D, text: "0,011" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "0,625·2=1,25→1; 0,25·2=0,5→0; 0,5·2=1→1" }
 
@@ -46,7 +46,7 @@
   fgos_element: 1.3
   fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
   prompt: "Почему 0,1 + 0,2 ≠ 0,3 на компьютере?"
-  student_view: { options: [{ id: A, text: "Конечная точность вещественных" }, { id: B, text: "Процессор сломан" }, { id: C, text: "Мало памяти" }, { id: D, text: "Вирус" }] }
+  student_view: { options: [{ id: A, text: "Конечная точность вещественных" }, { id: C, text: "Мало памяти" }, { id: B, text: "Процессор сломан" }, { id: D, text: "Вирус" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "0,1 в двоичной бесконечно, хранится приближение" }
 
@@ -80,9 +80,9 @@
   fgos_element: 1.3
   fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
   prompt: "Что общего у переводов в любой P-ичной системе?"
-  student_view: { options: [{ id: A, text: "Веса P^i и деление на P" }, { id: B, text: "Только деление" }, { id: C, text: "Только триады" }, { id: D, text: "Ничего общего" }] }
+  student_view: { options: [{ id: B, text: "Только деление" }, { id: A, text: "Веса P^i и деление на P" }, { id: C, text: "Только триады" }, { id: D, text: "Ничего общего" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Приёмы 8 класса работают при любом основании" }
+  teacher_only: { answer: B, explanation: "Приёмы 8 класса работают при любом основании" }
 
 - id: inf-10-ss-006
   class: 10
@@ -97,6 +97,732 @@
   fgos_element: 1.3
   fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
   prompt: "Как запишется число 25 в двоично-десятичной системе (8421)?"
-  student_view: { options: [{ id: A, text: "0010 0101" }, { id: B, text: "11001" }, { id: C, text: "0010 0100" }, { id: D, text: "2525" }] }
+  student_view: { options: [{ id: B, text: "11001" }, { id: A, text: "0010 0101" }, { id: C, text: "0010 0100" }, { id: D, text: "2525" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "2 → 0010, 5 → 0101; 11001 — это чисто двоичная запись" }
+  teacher_only: { answer: B, explanation: "2 → 0010, 5 → 0101; 11001 — это чисто двоичная запись" }
+# === ДОПИСАНО scripts/make-10-bank.mjs (руками не править) ===
+# Ответы посчитаны кодом (parseBase, popcount, rowsOf, equivalent, dnf, knf, solve)
+# и проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-ss-007 … inf-10-ss-028 (22 заданий).
+- id: inf-10-ss-007
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Разложение по степеням двойки"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-01-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Число 243 записано в двоичной системе счисления. Сколько единиц стоит в этой записи? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "243 = 11110011₂, а единицы стоят на разрядах 2⁷, 2⁶, 2⁵, 2⁴, 2¹ и 2⁰ — всего шесть. Развёрнутая форма: 128 + 64 + 32 + 16 + 2 + 1 = 243." }
+
+- id: inf-10-ss-008
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Перевод целого делением с остатками"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Запишите число 11 в двоичной системе счисления. Запишите только число, без указания основания."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "1011", explanation: "11 : 2 = 5, остаток 1; 5 : 2 = 2, остаток 1; 2 : 2 = 1, остаток 0; 1 : 2 = 0, остаток 1. Остатки читаем снизу вверх: 1011₂. Проверка: 8 + 2 + 1 = 11." }
+
+- id: inf-10-ss-009
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Перевод в шестнадцатеричную"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Запишите число 254 в шестнадцатеричной системе счисления. Запишите только число, без указания основания."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [254], answer_text: "FE", explanation: "254 : 16 = 15, остаток 14 → E; 15 : 16 = 0, остаток 15 → F. Остатки снизу вверх: FE₁₆. Проверка: 15 · 16 + 14 = 254." }
+
+- id: inf-10-ss-010
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Перевод дроби умножением"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Дробь 0,625 записана в двоичной системе счисления. Сколько знаков после запятой будет в этой записи? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Умножаем на 2: 0,625 · 2 = 1,25 → пишем 1; 0,25 · 2 = 0,5 → пишем 0; 0,5 · 2 = 1 → пишем 1. Получилось 0,101₂: после запятой ровно три знака. Проверка: 1/2 + 1/8 = 0,625." }
+
+- id: inf-10-ss-011
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сложение в двоичной системе"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Сложите двоичные числа 1101 и 111. Запишите результат в двоичной системе, без указания основания."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "10100", explanation: "В двоичной системе 1 + 1 = 10, поэтому 13 + 7 = 20, то есть 10100₂. Проверка переводом в десятичную: 10100₂ = 16 + 4 = 20." }
+
+- id: inf-10-ss-012
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Умножение в двоичной системе"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Вычислите произведение двоичных чисел 11 и 101. Запишите результат в двоичной системе, без указания основания."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "1111", explanation: "3 · 5 = 15. В двоичной записи это 1111₂: умножаем как в десятичной, только вместо десятичных цифр пользуемся нулями и единицами. Проверка: 1111₂ = 8 + 4 + 2 + 1 = 15." }
+
+- id: inf-10-ss-013
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Заём в шестнадцатеричной системе"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Вычитают 1A₁₆ − C₁₆. Какую ошибку чаще всего допускают в этом примере?"
+  student_view: { options: [{ id: B, text: "Забывают, что F обозначает 15, и принимают её за 6" }, { id: C, text: "Складывают вместо вычитания, потому что так быстрее" }, { id: D, text: "Читают остатки деления сверху вниз, а не снизу вверх" }, { id: A, text: "Занимают единицу из старшего разряда как 10, хотя в шестнадцатеричной системе это 16" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Правильно 26 − 12 = 14 = E₁₆. Если взять заём равным 10, получится 26 − 10 − 12 = 4, то есть неверный остаток. Занимать надо P единиц младшего разряда, а здесь P = 16." }
+
+- id: inf-10-ss-014
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Мантисса и порядок"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Из чего складывается запись вещественного числа в памяти компьютера?"
+  student_view: { options: [{ id: B, text: "Только из целой и дробной части, записанных через запятую" }, { id: C, text: "Из кода символа и номера разряда" }, { id: D, text: "Из знака и модуля, как целое число" }, { id: A, text: "Из знака, мантиссы (значащих цифр) и порядка — числа в двоичном порядке" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "По сути это двоичная научная запись 1,0101 · 2⁵. Мантисса задаёт значащие цифры, а порядок — на сколько сдвинуть двоичную точку." }
+
+- id: inf-10-ss-015
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Денежные суммы"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Как правильно хранить денежные суммы в программе?"
+  student_view: { options: [{ id: B, text: "Вещественными числами типа double: он хранит 15–16 знаков" }, { id: A, text: "Целыми числами в копейках или в десятичном формате, а не вещественными числами" }, { id: C, text: "Строкой: так точно ничего не потеряется" }, { id: D, text: "Без разницы, вещественные числа хранят любые суммы без погрешности" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "0,1 и 0,2 в двоичной записи бесконечные периодические, поэтому вещественное число хранит лишь приближение. Для денег берут целые копейки или десятичный формат." }
+
+- id: inf-10-ss-016
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Диапазон целого числа"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Сколько различных значений может принимать целое число, занимающее в памяти 32 бита? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4294967296], answer_text: "4294967296", explanation: "Один бит хранит два состояния, значит 32 бита дают 2³² = 4 294 967 296 комбинаций. Со знаком они делятся пополам: примерно от −2 · 10⁹ до 2 · 10⁹." }
+
+- id: inf-10-ss-017
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Однобайтовые кодировки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-05-text
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "Сколько различных символов можно записать в однобайтовой кодировке? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [256], answer_text: "256", explanation: "Один байт — это 8 бит, а значит 2⁸ = 256 комбинаций. ASCII использует 128 символов (7 бит), Windows-1251 — все 256, включая кириллицу." }
+
+- id: inf-10-ss-018
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "UTF-8 против Windows-1251"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-05-text
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "В файле 500 русских букв без пробелов. На сколько байт этот файл больше в UTF-8, чем в однобайтовой кодировке Windows-1251? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [500], answer_text: "500", explanation: "В Windows-1251 русская буква занимает 1 байт: файл весит 500 байт. В UTF-8 кириллица занимает 2 байта: 1000 байт. Разница — 500 байт, ровно в два раза." }
+
+- id: inf-10-ss-019
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Unicode"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-05-text
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "Какую проблему решила таблица Unicode?"
+  student_view: { options: [{ id: D, text: "Она отказалась от латинских символов в пользу кириллицы" }, { id: A, text: "Каждому символу всех письменностей присвоен уникальный код, поэтому одна буква больше не имеет разных номеров в разных таблицах" }, { id: C, text: "Она сделала русский текст в два раза короче в UTF-8" }, { id: B, text: "Она убрала необходимость переводить текст в двоичные сигналы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Раньше для каждого языка делали свою однобайтовую кодировку, и одна и та же буква означала разные числа. Unicode свёл почти миллион символов в одну таблицу." }
+
+- id: inf-10-ss-020
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Глубина цвета в каналах RGB"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-01-image
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-image], meta: [plan-actions] }
+  prompt: "На каждый канал цвета RGB отведено 8 бит. Сколько всего различных цветов даёт такой набор? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16777216], answer_text: "16777216", explanation: "Каналов три, по 8 бит в каждом: 2⁸ · 2⁸ · 2⁸ = 256³ = 16 777 216 цветов. Это и есть режим TrueColor." }
+
+- id: inf-10-ss-021
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём изображения в байтах"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-01-image
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-image], meta: [plan-actions] }
+  prompt: "Изображение 800 × 600 пикселей сохранено с глубиной цвета 24 бита. Сколько байт занимает файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1440000], answer_text: "1440000", explanation: "Пикселей 800 · 600 = 480 000. Объём V = K · i = 480 000 · 24 = 11 520 000 бит, в байтах 11 520 000 : 8 = 1 440 000 байт. На 3 умножать не нужно: 24 бита уже это три канала по 8." }
+
+- id: inf-10-ss-022
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Палитра изображения"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-01-image
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-image], meta: [plan-actions] }
+  prompt: "Чем приходится платить за экономию места при сохранении изображения с палитрой из 256 цветов?"
+  student_view: { options: [{ id: C, text: "Размером самого экрана: он перестаёт показывать картинку" }, { id: B, text: "Скоростью работы компьютера: палитра обрабатывается медленнее" }, { id: A, text: "Точностью цвета: часть оттенков не передаётся, и на градиентах появляются заметные ступеньки" }, { id: D, text: "Ничем: палитра хранит те же цвета, что и режим TrueColor" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Индекс в палитре занимает 1 байт вместо трёх, то есть файл втрое меньше. Но из 16,8 млн цветов остаётся только 256, и плавные переходы превращаются в полосы." }
+
+- id: inf-10-ss-023
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Разрядность и уровни сигнала"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-02-sound
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-sound], meta: [plan-actions] }
+  prompt: "Сколько уровней громкости различает звук, записанный с разрядностью 8 бит? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [256], answer_text: "256", explanation: "Разрядность — это число бит на одно измерение амплитуды. 8 бит дают 2⁸ = 256 уровней, 16 бит — 65 536, 24 бита — 16,8 млн." }
+
+- id: inf-10-ss-024
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём звукового файла"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-02-sound
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-sound], meta: [plan-actions] }
+  prompt: "Звук записан с частотой дискретизации 22050 Гц и разрядностью 16 бит, длительность — 20 секунд. Сколько байт занимает файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [882000], answer_text: "882000", explanation: "V = f · i · t = 22 050 · 16 · 20 = 7 056 000 бит. В байтах 7 056 000 : 8 = 882 000 байт. Частота измеряется в Гц, разрядность — в битах: путать их нельзя." }
+
+- id: inf-10-ss-025
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Теорема Котельникова"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-02-sound
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-sound], meta: [plan-actions] }
+  prompt: "Почему стандартная частота дискретизации равна 44100 Гц, а не ровно 40000 Гц?"
+  student_view: { options: [{ id: B, text: "Потому что чётные числа нельзя использовать в качестве частоты дискретизации" }, { id: A, text: "По теореме Котельникова частота должна быть не меньше удвоенной максимальной частоты в сигнале, а 44100 — ближайшее удобное к ней значение" }, { id: C, text: "Потому что мониторы работают только с частотами, кратными 44100" }, { id: D, text: "Потому что 40000 Гц — это 5000 байт, а объём должен быть кратен 8" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Человек слышит до 20 000 Гц, значит нужно не меньше 40 000 Гц. Берут 44 100 Гц, а также кратные ему 88 200 и 176 400 — так удобнее оцифровывать." }
+
+- id: inf-10-ss-026
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём изображения по формуле"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-06-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-task], meta: [plan-actions] }
+  prompt: "Изображение 1024 × 768 пикселей сохраняют с глубиной цвета 24 бита. Сколько байт займёт файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2359296], answer_text: "2359296", explanation: "K = 1024 · 768 = 786 432 пикселя. V = K · i = 786 432 · 24 = 18 874 368 бит, в байтах 2 359 296, то есть примерно 2,25 Мбайта." }
+
+- id: inf-10-ss-027
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём звука по формуле"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-06-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-task], meta: [plan-actions] }
+  prompt: "Звук длится 30 секунд, частота дискретизации 8000 Гц, разрядность 8 бит. Сколько байт займёт файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [240000], answer_text: "240000", explanation: "V = f · i · t = 8000 · 8 · 30 = 1 920 000 бит. В байтах 1 920 000 : 8 = 240 000 байт, примерно 234 Кбайта. Не забудьте перевести биты в байты." }
+
+- id: inf-10-ss-028
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Время передачи файла"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-06-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-task], meta: [plan-actions] }
+  prompt: "Файл размером 128 Кбайт передаётся по каналу со скоростью 32768 бит в секунду. Сколько секунд займёт передача? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "Объём в битах: 128 · 1024 · 8 = 1 048 576 бит. Время = объём : скорость = 1 048 576 : 32 768 = 32 секунды. Считать время, не переведя объём в биты, — типовая ошибка." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bank2.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, fracBits, rowsOf, evalAt,
+# equivalent, dnf, knf, solve) и проверены assert-ами: если число или формула
+# не сошлись, сборка падает. Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-ss-029 … inf-10-ss-041 (13 заданий).
+- id: inf-10-ss-029
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Перевод делением с остатками"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Запишите число 19 в восьмеричной системе счисления. Запишите только число, без указания основания."
+  student_view: { base: 8, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [19], answer_text: "23", explanation: "19 : 8 = 2, остаток 3; 2 : 8 = 0, остаток 2. Остатки читаем снизу вверх: 23₈. Проверка: 2 · 8 + 3 = 19." }
+
+- id: inf-10-ss-030
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Развёрнутая форма записи"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Число 341 записано в восьмеричной системе счисления. Чему оно равно в десятичной? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [225], answer_text: "225", explanation: "Раскладываем по степеням восьмёрки: 341₈ = 3·8² + 4·8¹ + 1·8⁰ = 192 + 32 + 1 = 225. Ошибка — считать 341 как десятичное число." }
+
+- id: inf-10-ss-031
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Периодическая дробь"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Дробь 0,1 переводится в двоичную систему счисления умножением на 2. Через сколько знаков после запятой начнётся повторение уже встречавшейся части? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Умножаем по очереди на 2 и выписываем целые части: 0,2 → 0; 0,4 → 0; 0,8 → 0; 1,6 → 1; 1,2 → 1; снова 0,2 — тот же остаток, что был вторым шагом. Значит, процесс повторяется: получается 0,001100110011…₂, длина периода 4. Такую дробь округляют до нужного числа разрядов." }
+
+- id: inf-10-ss-032
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сложение в двоичной системе"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Сложите двоичные числа 101 и 11. Запишите результат в двоичной системе, без указания основания."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "1000", explanation: "В двоичной системе 1 + 1 = 10, поэтому 5 + 3 = 8, то есть 1000₂. Проверка переводом в десятичную: 1000₂ = 8." }
+
+- id: inf-10-ss-033
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сложение в шестнадцатеричной системе"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Сложите шестнадцатеричные числа 2F и 14. Запишите результат в шестнадцатеричной системе, без указания основания."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [67], answer_text: "43", explanation: "F = 15, поэтому 2F₁₆ = 47 и 14₁₆ = 20. Сумма 47 + 20 = 67, а это 43₁₆. Проверка: 4 · 16 + 3 = 67." }
+
+- id: inf-10-ss-034
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Заём в системе с основанием 16"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Вычитают 5A₁₆ − 6₁₆. Какую ошибку чаще всего допускают в этом примере?"
+  student_view: { options: [{ id: B, text: "Забывают, что A обозначает 10, и принимают её за 1" }, { id: C, text: "Вычитают младший разряд из старшего, а не наоборот" }, { id: D, text: "Читают остатки деления сверху вниз, а не снизу вверх" }, { id: A, text: "Занимают единицу из старшего разряда как 10, хотя в шестнадцатеричной системе это 16" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Правильно 90 − 6 = 84 = 54₁₆. Если заём взять равным 10, получится 90 − 10 − 6 = 74, то есть неверный остаток. Занимать надо P единиц младшего разряда, а здесь P = 16." }
+
+- id: inf-10-ss-035
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём вещественного числа"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Вещественное число двойной точности занимает 8 байт. Сколько бит оно занимает? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [64], answer_text: "64", explanation: "1 байт — это 8 бит, значит 8 · 8 = 64 бита. Одинарная точность занимает 4 байта (32 бита), двойная — вдвое больше: за счёт этого растёт и диапазон, и точность." }
+
+- id: inf-10-ss-036
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сравнение вещественных чисел"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Почему вещественные числа в программе сравнивают с погрешностью, а не прямым равенством?"
+  student_view: { options: [{ id: A, text: "Потому что 0,1 и 0,2 в двоичной записи бесконечные периодические, компьютер хранит конечное число разрядов и округляет их" }, { id: C, text: "Потому что прямое равенство работает только для целых чисел" }, { id: D, text: "Потому что вещественные числа всегда округляются при вводе с клавиатуры" }, { id: B, text: "Потому что вещественные числа в памяти хранятся в виде текста" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Двоичная запись 0,1 и 0,2 не заканчивается, а в памяти помещается конечное число разрядов мантиссы (около 53 бит, это примерно 16 значащих цифр). Поэтому 0,1 + 0,2 может дать не 0,3, и сравнивают с допуском." }
+
+- id: inf-10-ss-037
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Разряды вещественного числа"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Вещественное число одинарной точности занимает 32 бита: 1 бит под знак, 8 бит под порядок, 23 бита под мантиссу. Какая часть записи отвечает за значащие цифры числа?"
+  student_view: { options: [{ id: C, text: "Знак: он задаёт, на сколько сдвинуть двоичную точку" }, { id: A, text: "Мантисса: она хранит значащие цифры, а порядок задаёт, на сколько сдвинуть двоичную точку" }, { id: D, text: "Все три части вместе равны мантиссе" }, { id: B, text: "Порядок: он хранит значащие цифры числа" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Запись 1,0101 · 2⁵ — это мантисса 1,0101 и порядок 5. Чем больше бит отведено под мантиссу, тем точнее число: в 32 битах их 23, в 64 битах — 52, поэтому у double около 15–16 значащих цифр." }
+
+- id: inf-10-ss-038
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Размер слова в UTF-8"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10ss-05-text
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "Слово «Коля» записано в кодировке UTF-8. Сколько байт оно занимает? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "К — 1 байт, о — 2 байта, л — 2 байта, я — 2 байта: 1 + 2 + 2 + 2 = 8 байт. В Windows-1251 кириллица занимает по одному байту, поэтому там это же слово занимает 5 байта." }
+
+- id: inf-10-ss-039
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём полноэкранного изображения"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-01-image
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-image], meta: [plan-actions] }
+  prompt: "Изображение 1920 × 1080 пикселей сохраняют с глубиной цвета 24 бита. Сколько байт займёт файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6220800], answer_text: "6220800", explanation: "Пикселей 1920 · 1080 = 2073600. Объём V = K · i = 2073600 · 24 = 49766400 бит, в байтах 49766400 : 8 = 6220800 байт, примерно 5,9 Мбайта. На 3 умножать не нужно: 24 бита — это уже три канала по 8." }
+
+- id: inf-10-ss-040
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём разговора за минуту"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-02-sound
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-sound], meta: [plan-actions] }
+  prompt: "Речь длится 60 секунд при частоте дискретизации 8000 Гц и разрядности 8 бит. Сколько байт займёт файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [480000], answer_text: "480000", explanation: "V = f · i · t = 8000 · 8 · 60 = 3840000 бит, в байтах 3840000 : 8 = 480000 байт, примерно 469 Кбайт. Параметры телефонной связи берутся минимальными: этого хватает для разборчивой речи." }
+
+- id: inf-10-ss-041
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Разность в шестнадцатеричной системе"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10ss-06-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-task], meta: [plan-actions] }
+  prompt: "Вычислите FE₁₆ − A₁₆ и запишите результат в шестнадцатеричной системе, без указания основания."
+  student_view: { base: 16, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 16, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [244], answer_text: "F4", explanation: "F = 15, E = 14, значит FE₁₆ = 254. Вычитаем 10: 254 − 10 = 244, а это F4₁₆. Проверка: 15 · 16 + 4 = 244." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bases-bank3.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, bitLen) и проверены assert-ами:
+# если число или формула не сошлись, сборка падает. Эталоны code_run прогоняются
+# локальным Python, expected_stdout взят из реального вывода solution_code.
+# Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-ss-042 … inf-10-ss-048 (7 заданий).
+- id: inf-10-ss-042
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём двух изображений"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-01-image
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-image], meta: [plan-actions] }
+  prompt: "Посчитайте объём (в байтах) двух изображений, сохранённых без сжатия: 640 × 480 пикселей и 1024 × 768 пикселей, оба с глубиной цвета 24 бита. Выведите два объёма через пробел: сначала для первого изображения, затем для второго."
+  student_view: { language: python, template: "# Объём изображения = пиксели * глубина цвета / 8\nsizes = [(640, 480), (1024, 768)]\ndepth = 24\nvolumes = []\nfor w, h in sizes:\n    # соберите объём в байтах для каждого размера\n    ...\nprint(*volumes)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "sizes = [(640, 480), (1024, 768)]\ndepth = 24\nvolumes = []\nfor w, h in sizes:\n    # объём в байтах: пиксели умножаем на глубину и переводим биты в байты\n    volumes.append(w * h * depth // 8)\nprint(*volumes)", expected_stdout: "921600 2359296", explanation: "Объём без сжатия равен числу пикселей, умноженному на глубину цвета. Для 640 · 480 = 307 200 пикселей получаем 921 600 байт, для 1024 · 768 = 786 432 пикселей — 2 359 296 байт. Делить на 8 нужно потому, что глубина задана в битах, а объём считают в байтах. На втором изображении пикселей больше в 2,56 раза, во столько же раз больше и объём." }
+
+- id: inf-10-ss-043
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Число отсчётов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-02-sound
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-gfx-sound], meta: [plan-actions] }
+  prompt: "Звук длится 5 секунд, частота дискретизации 16 000 Гц. Сколько отсчётов будет записано за это время? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [80000], answer_text: "80000", explanation: "Частота дискретизации 16 000 Гц означает 16 000 отсчётов в секунду, за 5 секунд их будет 16 000 · 5 = 80 000. Разрядность на это число не влияет: она определяет, сколько бит занимает каждый отсчёт. Поэтому объём звукового файла считают как число отсчётов, умноженное на разрядность в битах и делённое на 8." }
+
+- id: inf-10-ss-044
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Длина двоичной записи"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-02-transfer
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-base], meta: [plan-actions] }
+  prompt: "Число 45 записано в двоичной системе счисления. Сколько цифр в этой записи, если ведущие нули не записывают? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Перевод делением с остатками даёт запись 101101: 45 = 32 + 8 + 4 + 1, в ней 6 цифр. Число цифр показывает порядок величины: 2^6 = 64 > 45, а 2^5 = 32 < 45, поэтому шестизначная запись здесь минимальна. Запись растёт медленно: число 1 000 000 в двоичной системе занимает всего 20 цифр." }
+
+- id: inf-10-ss-045
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сложение двоичных чисел в столбик"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-03-arith
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-arith], meta: [plan-actions] }
+  prompt: "Сложите двоичные числа 10110 и 1101 столбиком, не переводя их в десятичную систему: складывайте поразрядно с переносом. Выведите результат в двоичной системе счисления, а на следующей строке — его десятичное значение."
+  student_view: { language: python, template: "# Сложение двоичных чисел поразрядно с переносом\na = list('10110')\nb = list('1101')\ni = len(a) - 1\nj = len(b) - 1\ncarry = 0\nres = []\nwhile i >= 0 or j >= 0 or carry > 0:\n    x = 0\n    y = 0\n    # берём текущие разряды, если они ещё не закончились\n    ...\n    # суммируем с переносом, в разряд идёт остаток, перенос уходит дальше\n    ...\nanswer = ''\nprint(answer)\nprint(int(answer, 2))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = list('10110')\nb = list('1101')\ni = len(a) - 1\nj = len(b) - 1\ncarry = 0\nres = []\nwhile i >= 0 or j >= 0 or carry > 0:\n    x = 0\n    y = 0\n    if i >= 0:\n        x = int(a[i])\n        i = i - 1\n    if j >= 0:\n        y = int(b[j])\n        j = j - 1\n    # складываем текущие разряды вместе с переносом\n    s = x + y + carry\n    # в разряд пишем остаток от деления на 2, перенос уходит в старший разряд\n    res.append(str(s % 2))\n    carry = s // 2\nanswer = ''.join(reversed(res))\nprint(answer)\nprint(int(answer, 2))", expected_stdout: "100011\n35", explanation: "Складываем справа налево: 0 + 1 = 1, 1 + 0 = 1, затем 1 + 1 = 10 — в разряд пишем 0, а перенос 1 отдаём в следующий разряд; дальше снова 1 + 1 + 1 = 11, в разряд идёт 1 и перенос 1. В сумме получается 100011₂. Проверка в десятичной системе: 22 + 13 = 35. Переносом может быть только 0 или 1, потому что два двоичных разряда вместе с переносом дают не больше 3." }
+
+- id: inf-10-ss-046
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Число адресов памяти"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-04-memory
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-float], meta: [plan-actions] }
+  prompt: "Адресная шина компьютера имеет 20 разрядов. Сколько различных адресов памяти она позволяет получить? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1048576], answer_text: "1048576", explanation: "Каждый разряд адресной шины принимает два значения — 0 или 1, поэтому число адресов равно 2^20 = 1 048 576. Это тот же приём, что и в формуле 2^i = N: длина записи задаёт число её вариантов. Адрес нужен, чтобы обратиться к нужной ячейке, поэтому реальный объём памяти всегда чуть меньше такой степени двойки." }
+
+- id: inf-10-ss-047
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Сколько символов в Unicode"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-05-text
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-utf], meta: [plan-actions] }
+  prompt: "Символ в таблице Unicode хранится 16 битами. Сколько различных символов в ней помещается?"
+  student_view: { options: [{ id: D, text: "65 535 символов, потому что код 0 не используется" }, { id: C, text: "16 символов: по одному на каждый бит" }, { id: B, text: "256 символов: 16 бит — это 16 · 16" }, { id: A, text: "65 536 символов: 2¹⁶ возможных кодов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Шестнадцать бит дают 2^16 = 65 536 возможных кодов, и каждый отдан одному символу: латинской букве, кириллической, знаку или эмодзи. Поэтому кодировку UTF-16 называют двухбайтовой: один символ занимает ровно 2 байта, независимо от того, кириллица это или символ другого письма." }
+
+- id: inf-10-ss-048
+  class: 10
+  topic: "Системы счисления углублённо"
+  subtopic: "Объём кадра экрана"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10ss-06-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-ss-task], meta: [plan-actions] }
+  prompt: "Один кадр изображения экрана 1280 × 1024 пикселя сохраняется без сжатия с глубиной цвета 32 бита. Сколько мегабайт он занимает? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Сначала объём в байтах: 1280 · 1024 = 1 310 720 пикселей, по 32 бита на пиксель — 5 242 880 байт. Переводим в мегабайты делением на 1024 · 1024 = 1 048 576 и получаем ровно 5 Мбайт. Делить на 8 нужно потому, что глубина задана в битах; вместо двух делений на 1024 можно сразу делить на 2²⁰." }

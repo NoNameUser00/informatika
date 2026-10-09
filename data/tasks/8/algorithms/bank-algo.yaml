@@ -12,9 +12,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-props], meta: [plan-actions] }
   prompt: "Сколько свойств алгоритма выделяют в школьном курсе?"
-  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "4" }, { id: C, text: "5" }, { id: D, text: "6" }] }
+  student_view: { options: [{ id: C, text: "5" }, { id: A, text: "3" }, { id: B, text: "4" }, { id: D, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Дискретность, понятность, определённость, результативность, массовость" }
+  teacher_only: { answer: A, explanation: "Дискретность, понятность, определённость, результативность, массовость" }
 
 - id: inf-8-algo-002
   class: 8
@@ -29,9 +29,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
   prompt: "Что такое формальный исполнитель?"
-  student_view: { options: [{ id: A, text: "Выполняет команды всегда одинаково, не вникая в смысл" }, { id: B, text: "Понимает смысл задачи и рассуждает" }, { id: C, text: "Выполняет только одну команду" }, { id: D, text: "Работает без системы команд" }] }
+  student_view: { options: [{ id: C, text: "Выполняет только одну команду" }, { id: B, text: "Понимает смысл задачи и рассуждает" }, { id: A, text: "Выполняет команды всегда одинаково, не вникая в смысл" }, { id: D, text: "Работает без системы команд" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Одинаковость без понимания смысла — основа автоматизации" }
+  teacher_only: { answer: C, explanation: "Одинаковость без понимания смысла — основа автоматизации" }
 
 - id: inf-8-algo-003
   class: 8
@@ -91,7 +91,7 @@
   type: matching
   difficulty: basic
   cognitive_level: remember
-  points: 2
+  points: 1
   lesson: alg-02-notation
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -114,7 +114,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
   prompt: "Что означает запись «x := x + 1»?"
-  student_view: { options: [{ id: A, text: "Положить в x старое x плюс 1" }, { id: B, text: "Утверждение, что x равен x + 1" }, { id: C, text: "Сравнение x с x + 1" }, { id: D, text: "Цикл по x" }] }
+  student_view: { options: [{ id: A, text: "Положить в x старое x плюс 1" }, { id: D, text: "Цикл по x" }, { id: B, text: "Утверждение, что x равен x + 1" }, { id: C, text: "Сравнение x с x + 1" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: ":= — команда положить, сначала считается правая часть" }
 
@@ -148,9 +148,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
   prompt: "В какой форме ветвления при ложном условии не выполняется ничего?"
-  student_view: { options: [{ id: A, text: "В полной" }, { id: B, text: "В неполной" }, { id: C, text: "В обеих" }, { id: D, text: "Ни в какой" }] }
+  student_view: { options: [{ id: C, text: "В обеих" }, { id: A, text: "В полной" }, { id: D, text: "Ни в какой" }, { id: B, text: "В неполной" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Неполная форма — только «если-то», без «иначе»" }
+  teacher_only: { answer: D, explanation: "Неполная форма — только «если-то», без «иначе»" }
 
 - id: inf-8-algo-010
   class: 8
@@ -165,7 +165,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
   prompt: "Алгоритм: если x чётное, то x := x / 2, иначе x := x + 1. Что будет при x = 7?"
-  student_view: { options: [{ id: A, text: "x = 8" }, { id: B, text: "x = 3" }, { id: C, text: "x = 7" }, { id: D, text: "x = 14" }] }
+  student_view: { options: [{ id: A, text: "x = 8" }, { id: C, text: "x = 7" }, { id: B, text: "x = 3" }, { id: D, text: "x = 14" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "7 нечётное — ветка иначе: 7 + 1 = 8" }
 
@@ -199,9 +199,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
   prompt: "Когда проверяется условие в цикле «нц пока … кц»?"
-  student_view: { options: [{ id: A, text: "До выполнения тела" }, { id: B, text: "После выполнения тела" }, { id: C, text: "В середине тела" }, { id: D, text: "Не проверяется" }] }
+  student_view: { options: [{ id: D, text: "Не проверяется" }, { id: B, text: "После выполнения тела" }, { id: A, text: "До выполнения тела" }, { id: C, text: "В середине тела" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Если условие сразу ложно, тело не выполнится ни разу" }
+  teacher_only: { answer: C, explanation: "Если условие сразу ложно, тело не выполнится ни разу" }
 - id: inf-8-algo-013
   class: 8
   topic: Алгоритмы и исполнители
@@ -232,7 +232,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
   prompt: "Что нарисует Черепаха после «Повтори 2 [Вперёд 10 Направо 90]»?"
-  student_view: { options: [{ id: A, text: "Угол из двух отрезков" }, { id: B, text: "Квадрат" }, { id: C, text: "Треугольник" }, { id: D, text: "Отрезок" }] }
+  student_view: { options: [{ id: A, text: "Угол из двух отрезков" }, { id: C, text: "Треугольник" }, { id: B, text: "Квадрат" }, { id: D, text: "Отрезок" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Два отрезка под 90° — путь не замкнулся" }
 
@@ -249,7 +249,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?"
-  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "10" }, { id: C, text: "5" }, { id: D, text: "8" }] }
+  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "10" }, { id: D, text: "8" }, { id: C, text: "5" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, explanation: "5 > 3 — верхняя ветка: 5 · 2 = 10" }
 
@@ -283,9 +283,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?"
-  student_view: { options: [{ id: A, text: "20" }, { id: B, text: "5" }, { id: C, text: "9" }, { id: D, text: "4" }] }
+  student_view: { options: [{ id: C, text: "9" }, { id: D, text: "4" }, { id: A, text: "20" }, { id: B, text: "5" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
+  teacher_only: { answer: C, explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
 
 - id: inf-8-algo-018
   class: 8
@@ -294,7 +294,7 @@
   type: matching
   difficulty: basic
   cognitive_level: remember
-  points: 2
+  points: 1
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -338,3 +338,913 @@
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Ручной прогон: шаг — значения" }
 
+- id: inf-8-algo-021
+  class: 8
+  topic: Алгоритмы и исполнители
+  subtopic: Вычислитель — длинный алгоритм
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-01-performers
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-performer], meta: [self-control] }
+  prompt: "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 212212 над числом 3. Что получится? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [213], answer_text: "213", explanation: "По порядку команды: ×3, −1, ×3, ×3, −1, ×3 — числа 9, 8, 24, 72, 71, 213" }
+
+- id: inf-8-algo-022
+  class: 8
+  topic: Способы записи алгоритмов
+  subtopic: "Трассировка: цепочка присваиваний"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-02-notation
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
+  prompt: "Было x = 4, y = 9. Выполнили по порядку: x := x + y; y := x − y; x := y · 2. Чему равен x? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Шаг 1: x = 13. Шаг 2: y = 13 − 9 = 4. Шаг 3: x = 4 · 2 = 8" }
+
+- id: inf-8-algo-023
+  class: 8
+  topic: Основы Python
+  subtopic: Система программирования
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-01-basics
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-system], meta: [plan-actions] }
+  prompt: "Какая часть системы программирования переводит текст программы в машинный код, понятный процессору?"
+  student_view: { options: [{ id: C, text: "Трансплятор" }, { id: D, text: "Исполнитель алгоритма" }, { id: A, text: "Редактор" }, { id: B, text: "Отладчик" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Трансплятор (интерпретатор или компилятор) переводит программу в машинный код; отладчик ищет ошибки, редактор нужен для набора текста." }
+
+- id: inf-8-algo-024
+  class: 8
+  topic: Типы данных и ввод
+  subtopic: Типы данных
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-05-data
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
+  prompt: "Какой тип данных у значения '12' в Python?"
+  student_view: { options: [{ id: A, text: "int" }, { id: D, text: "bool" }, { id: B, text: "float" }, { id: C, text: "str" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Кавычки делают запись строкой (str); без кавычек 12 — целое число int." }
+
+- id: inf-8-algo-025
+  class: 8
+  topic: Типы данных и ввод
+  subtopic: Преобразование типов
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-05-data
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
+  prompt: "В программе a = int(' 12 ') + int('3'). Чему равно a? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "int() отбрасывает пробелы вокруг цифр и даёт число: 12 + 3 = 15" }
+
+- id: inf-8-algo-026
+  class: 8
+  topic: Типы данных и ввод
+  subtopic: Типы значений
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-05-data
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-types], meta: [self-control] }
+  prompt: "Установите соответствие: значение — его тип данных в Python."
+  student_view: { left: ["5", "3.14", "'Привет'", "True"], right: ["int", "float", "str", "bool"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "5": "int", "3.14": "float", "'Привет'": "str", "True": "bool" }, explanation: "5 — int, 3.14 — float (точка вместо запятой), 'Привет' — str (кавычки), True — bool" }
+
+- id: inf-8-algo-027
+  class: 8
+  topic: Выражения и линейные алгоритмы
+  subtopic: Остаток от деления
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-06-linear
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [plan-actions] }
+  prompt: "Чему равен остаток от деления 17 на 5 (операция %)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "17 = 5 · 3 + 2, значит 17 % 5 = 2, а целая часть 17 // 5 = 3" }
+
+- id: inf-8-algo-028
+  class: 8
+  topic: Выражения и линейные алгоритмы
+  subtopic: Приоритет операций
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-06-linear
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [plan-actions] }
+  prompt: "Вычислите выражение (2 + 3) * 2 ** 2. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "Сначала скобки: 2 + 3 = 5. Затем степень: 2 ** 2 = 4. Произведение: 5 · 4 = 20" }
+
+- id: inf-8-algo-029
+  class: 8
+  topic: Следование
+  subtopic: Признак следования
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-05-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-sequence], meta: [plan-actions] }
+  prompt: "Чем следование отличается от ветвления?"
+  student_view: { options: [{ id: B, text: "В следовании есть условие, которое выбирает следующую команду" }, { id: C, text: "В следовании есть цикл, повторяющий команды" }, { id: D, text: "В следовании порядок команд можно менять без последствий" }, { id: A, text: "В следовании нет ни условия, ни цикла — команды идут строго по порядку" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Следование — самая простая конструкция: ни ветвления, ни повторения, порядок команд задаёт всё." }
+
+- id: inf-8-algo-030
+  class: 8
+  topic: Следование
+  subtopic: "Следование: порядок команд"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-05-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-sequence], meta: [plan-actions] }
+  prompt: "Выполните по порядку команды: x := 4; x := x · 2; x := x − 3. Чему равен x? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "4 → 8 → 5: каждая команда использует значение x из предыдущего шага" }
+
+- id: inf-8-algo-031
+  class: 8
+  topic: Следование
+  subtopic: Обратная задача
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-05-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-sequence], meta: [self-control] }
+  prompt: "Алгоритм: y := (x + 4) · 2. Известно, что в результате получилось y = 30. Каким было x? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Идём от результата: 30 : 2 = 15, 15 − 4 = 11. Проверка: (11 + 4) · 2 = 30" }
+
+- id: inf-8-algo-032
+  class: 8
+  topic: Ветвление
+  subtopic: Проверка обеих веток
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-03-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [self-control] }
+  prompt: "Алгоритм: если n нечётно, то r := 3 · n + 1, иначе r := n : 2. Выполните его для n = 7, затем для n = 4 и для n = 10. Чему равна сумма трёх результатов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [29], answer_text: "29", explanation: "n = 7: 3 · 7 + 1 = 22; n = 4: 4 : 2 = 2; n = 10: 10 : 2 = 5. Сумма: 22 + 2 + 5 = 29" }
+
+- id: inf-8-algo-033
+  class: 8
+  topic: Ветвление
+  subtopic: Неполная форма
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-06-branching-short
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
+  prompt: "Что происходит, если условие в неполной форме ветвления ложно?"
+  student_view: { options: [{ id: D, text: "Цикл повторяется заново" }, { id: B, text: "Программа идёт дальше, ничего не выполняя" }, { id: A, text: "Выполняется ветка «иначе»" }, { id: C, text: "Программа завершается с ошибкой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "В неполной форме ветка «иначе» отсутствует: при ложном условии тело просто пропускается." }
+
+- id: inf-8-algo-034
+  class: 8
+  topic: Ветвление
+  subtopic: Пополнение баланса
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-06-branching-short
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
+  prompt: "Алгоритм: если balance < 30, то balance := balance + 50. Было balance = 100. Чему равен balance после выполнения? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [100], answer_text: "100", explanation: "100 < 30 ложно, поэтому действие не выполняется и balance остаётся 100" }
+
+- id: inf-8-algo-035
+  class: 8
+  topic: Ветвление
+  subtopic: Два неполных ветвления
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-06-branching-short
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-branch], meta: [self-control] }
+  prompt: "Алгоритм: если x < 0, то y := 0 − x; если x чётно, то y := y + 1. При x = −6 чему равен y? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Первое условие истинно: y = 0 − (−6) = 6. Второе тоже истинно: y = 6 + 1 = 7" }
+
+- id: inf-8-algo-036
+  class: 8
+  topic: Повторение
+  subtopic: Число итераций
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-07-while
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [self-control] }
+  prompt: "Цикл: нц пока n > 0 | n := n : 10 (целая часть) | кц. Сколько раз выполнится тело цикла при n = 500000? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "500000 → 50000 → 5000 → 500 → 50 → 5 → 0: шесть делений, шесть шагов тела" }
+
+- id: inf-8-algo-037
+  class: 8
+  topic: Повторение
+  subtopic: Условие окончания
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-08-until
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Сколько раз минимум выполнится тело цикла с условием окончания?"
+  student_view: { options: [{ id: D, text: "Столько, сколько повторений указано в условии" }, { id: B, text: "1 раз" }, { id: A, text: "0 раз" }, { id: C, text: "2 раза" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Тело стоит до проверки условия, поэтому выполняется хотя бы один раз — в отличие от цикла «пока»." }
+
+- id: inf-8-algo-038
+  class: 8
+  topic: Повторение
+  subtopic: Число итераций
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-08-until
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Цикл с условием окончания: нц | n := n + 3 | пока n < 10 | кц. При n = 1 чему равно n после выхода из цикла? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "1 → 4 → 7 → 10. При n = 10 условие «10 < 10» ложно, и цикл заканчивается" }
+
+- id: inf-8-algo-039
+  class: 8
+  topic: Повторение
+  subtopic: Виды циклов
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-08-until
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [self-control] }
+  prompt: "Установите соответствие: ситуация — вид цикла."
+  student_view: { left: ["«Пока в очереди есть люди»", "«Пока не выучили таблицу»", "«Повторить 5 раз»"], right: ["Условие продолжения", "Условие окончания", "Заданное число повторений"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "«Пока в очереди есть люди»": "Условие продолжения", "«Пока не выучили таблицу»": "Условие окончания", "«Повторить 5 раз»": "Заданное число повторений" }, explanation: "«Пока есть люди» — работаем, пока условие истинно; «пока не выучили» — пока условие ложно; «повторить 5 раз» — счётчик повторений" }
+
+- id: inf-8-algo-040
+  class: 8
+  topic: Повторение
+  subtopic: Границы range
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-09-for
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Сколько чисел содержит range(1, 5) в Python? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Правая граница не входит: range(1, 5) даёт 1, 2, 3, 4 — четыре числа" }
+
+- id: inf-8-algo-041
+  class: 8
+  topic: Повторение
+  subtopic: Шаг range
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-09-for
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Какой вызов range даёт числа 2, 4, 6, 8?"
+  student_view: { options: [{ id: A, text: "range(2, 10, 2)" }, { id: C, text: "range(2, 8, 2)" }, { id: D, text: "range(8, 2, -2)" }, { id: B, text: "range(2, 8)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Начало 2, шаг 2, а правая граница не входит — чтобы дойти до 8, её надо взять равной 10" }
+
+- id: inf-8-algo-042
+  class: 8
+  topic: Повторение
+  subtopic: Цикл с условием продолжения
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: alg-10-pr-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Алгоритм подсчёта цифр: нц пока n > 0 | n := n : 10 | k := k + 1 | кц. Сколько цифр в числе 100? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "100 → 10 → 1 → 0: три шага тела цикла" }
+
+- id: inf-8-algo-043
+  class: 8
+  topic: Повторение
+  subtopic: for и вывод
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-10-pr-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
+  prompt: "Что выведет программа for i in range(3): print(i * 2)? (каждое число — с новой строки)"
+  student_view: { options: [{ id: B, text: "1 3 5" }, { id: C, text: "0 2 4 6" }, { id: D, text: "2 4 6" }, { id: A, text: "0 2 4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "range(3) даёт 0, 1, 2, поэтому печатаются 0, 2 и 4 — по одному числу в строке" }
+
+- id: inf-8-algo-044
+  class: 8
+  topic: Разработка алгоритмов
+  subtopic: Выбор конструкций
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: alg-11-design
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-design], meta: [plan-actions] }
+  prompt: "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?"
+  student_view: { options: [{ id: B, text: "Только ветвление" }, { id: C, text: "Цикл for и ветвление" }, { id: A, text: "Только цикл for" }, { id: D, text: "Только цикл с условием окончания" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "for перебирает числа от 1 до n, а ветвление отбирает из них те, что делятся на 2 без остатка" }
+
+- id: inf-8-algo-045
+  class: 8
+  topic: Разработка алгоритмов
+  subtopic: Проверка на данных
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: alg-11-design
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-design], meta: [plan-actions] }
+  prompt: "Программа перебирает числа от 1 до 10 и считает те, что делятся на 2 без остатка. Что она выведет? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Чётные числа 2, 4, 6, 8, 10 — всего пять" }
+
+- id: inf-8-algo-046
+  class: 8
+  topic: Выражения и линейные алгоритмы
+  subtopic: Последние две цифры
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-09-linear-pr
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [plan-actions] }
+  prompt: "Что выведет print(2024 % 100)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [24], answer_text: "24", explanation: "Остаток от деления на 100 — это последние две цифры числа: 24" }
+
+- id: inf-8-algo-047
+  class: 8
+  topic: Выражения и линейные алгоритмы
+  subtopic: Проверка результата
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-09-linear-pr
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [self-control] }
+  prompt: "Для числа 13 частное q = 13 : 5 = 2, остаток r = 13 % 5 = 3. Чему равно q · 5 + r? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [13], answer_text: "13", explanation: "2 · 5 + 3 = 13 — так проверяют деление с остатком" }
+
+- id: inf-8-algo-048
+  class: 8
+  topic: Условный оператор
+  subtopic: Полная форма
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-07-condition
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-if], meta: [plan-actions] }
+  prompt: "Что выведет код x = 5; if x > 3: print('да') else: print('нет')?"
+  student_view: { options: [{ id: A, text: "да" }, { id: C, text: "ничего не выведется" }, { id: B, text: "нет" }, { id: D, text: "Ошибка выполнения" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "5 > 3 истинно, поэтому выполняется ветка «то» и выводится «да»; ветка «иначе» пропускается" }
+
+- id: inf-8-algo-049
+  class: 8
+  topic: Циклы в Python
+  subtopic: Целая часть
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-03-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-while], meta: [plan-actions] }
+  prompt: "Как в Python отбросить последнюю цифру целого числа n?"
+  student_view: { options: [{ id: A, text: "n / 10" }, { id: C, text: "n % 10" }, { id: B, text: "n // 10" }, { id: D, text: "n ** 10" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "// даёт целую часть от деления (то есть число без последней цифры), / даёт дробь, % даёт саму цифру" }
+
+- id: inf-8-algo-050
+  class: 8
+  topic: Итоговая контрольная работа
+  subtopic: Перевод 10->2
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: ss-30-control
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
+  prompt: "Переведите число 40₁₀ в двоичную систему. Запишите только число."
+  student_view: { base: 2, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 2, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [40], answer_text: "101000", explanation: "40 = 32 + 8, значит в двоичной это 101000₂" }
+
+- id: inf-8-algo-051
+  class: 8
+  topic: Итоговая контрольная работа
+  subtopic: Цикл и ветвление
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: ss-30-control
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-design], meta: [plan-actions] }
+  prompt: "Алгоритм: s := 0; для i от 1 до 9: если i делится на 3, то s := s + i. Чему равен s? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [18], answer_text: "18", explanation: "Суммируются 3, 6 и 9: s = 3 + 6 + 9 = 18" }
+
+- id: inf-8-algo-052
+  class: 8
+  topic: Цикл for
+  subtopic: Факториал
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-10-for-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-for], meta: [plan-actions] }
+  prompt: "Чему равен факториал 4! = 1 · 2 · 3 · 4? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [24], answer_text: "24", explanation: "1 · 2 = 2, 2 · 3 = 6, 6 · 4 = 24" }
+
+- id: inf-8-algo-053
+  class: 8
+  topic: Цикл for
+  subtopic: Счётчик внутри цикла
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-11-for-loops-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-for], meta: [plan-actions] }
+  prompt: "Сколько чисел от 1 до 10 делятся на 3 без остатка? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Это числа 3, 6 и 9 — всего три" }
+
+- id: inf-8-algo-054
+  class: 8
+  topic: Цикл for
+  subtopic: Вложенные циклы
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-11-for-loops-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-for], meta: [plan-actions] }
+  prompt: "Вложенный цикл: для i от 0 до 2, внутри — для j от 0 до 1, в теле вывод. Сколько раз выполнится тело внешнего цикла вместе со всеми прогонами внутреннего? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "У i три значения, у j два, поэтому тело внешнего цикла выполнится 3 · 2 = 6 раз" }
+
+- id: inf-8-algo-055
+  class: 8
+  topic: Работа со строками
+  subtopic: Сравнение строк
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-08-strings-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-str], meta: [plan-actions] }
+  prompt: "Что выведет print('10' < '9')?"
+  student_view: { options: [{ id: A, text: "True" }, { id: B, text: "False" }, { id: D, text: "Ничего" }, { id: C, text: "Ошибку" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Строки сравниваются посимвольно по кодам символов: '1' < '9', поэтому True, хотя как числа 10 больше 9" }
+
+- id: inf-8-algo-056
+  class: 8
+  topic: Работа со строками
+  subtopic: Поиск подстроки
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-08-strings-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-str], meta: [plan-actions] }
+  prompt: "Какой индекс вернёт выражение 'информатика'.find('мат')? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Подстрока 'мат' начинается с пятого символа при нумерации с нуля: 0 — и, 1 — н, 2 — ф, 3 — о, 4 — р, 5 — м" }
+
+- id: inf-8-algo-057
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Число результатов
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Сколько различных результатов может дать ветвление с одним условием (две ветки)?"
+  student_view: { options: [{ id: B, text: "Ровно один" }, { id: D, text: "Столько, сколько входных данных" }, { id: C, text: "Четыре" }, { id: A, text: "Не больше двух" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Каждая ветка даёт свой результат, а условие одно — значит путей два и результатов не больше двух" }
+
+- id: inf-8-algo-058
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Цикл в трассировке
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Программа: s := 0; для i от 1 до 5: s := s + i. Чему равен s после цикла? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "1 + 2 + 3 + 4 + 5 = 15" }
+
+- id: inf-8-algo-059
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Пути в алгоритме
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Сколько различных результатов может дать алгоритм с двумя независимыми полными ветвлениями? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "У каждого ветвления два пути, значит всего 2 · 2 = 4 сочетания — столько же разных результатов" }
+
+- id: inf-8-algo-060
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Метод обратной задачи
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "С чего начинается решение обратной задачи — найти входные данные по известному результату?"
+  student_view: { options: [{ id: D, text: "С таблицы истинности" }, { id: A, text: "С результата: определяем последнюю выполненную команду и решаем уравнение назад" }, { id: C, text: "С новой программы, которая делает то же самое" }, { id: B, text: "С самого начала программы, выполняя её на всех возможных данных" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Идём от результата: находим последнюю команду, решаем уравнение назад и каждый найденный вход проверяем прямым прогоном" }
+
+- id: inf-8-algo-061
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Восстановление входа
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [self-control] }
+  prompt: "Программа: если x чётно, то y := x · 2, иначе y := x + 1. Вывод — 10. Каким было x?"
+  student_view: { options: [{ id: D, text: "4" }, { id: A, text: "5" }, { id: C, text: "20" }, { id: B, text: "9" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Проверяем все варианты: 5 → 6, 9 → 10 (верно), 20 → 40, 4 → 8. Подходит только 9" }
+
+- id: inf-8-algo-062
+  class: 8
+  topic: Анализ алгоритмов
+  subtopic: Сумма цифр
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [self-control] }
+  prompt: "Сколько трёхзначных чисел имеют сумму цифр 26? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Подходят 899, 989 и 998 — всего три числа" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-bank2.mjs ====
+# Ответы вычислены кодом (перебор наборов, parseInt/toString, локальный Python) и проверены check.mjs.
+
+- id: inf-8-algo-063
+  class: 8
+  topic: "Типы данных и ввод"
+  subtopic: "Что понимает int()"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-05-data
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
+  prompt: "Что произойдёт в Python при выполнении a = int('3,5')?"
+  student_view: { options: [{ id: C, text: "a станет числом 35" }, { id: B, text: "a станет числом 3,5" }, { id: D, text: "a станет числом 0" }, { id: A, text: "Программа остановится с ошибкой: в int() передают точку, а не запятую" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "int() понимает только цифры, знак и пробелы вокруг них, поэтому int(' 12 ') работает. Запятая десятичным разделителем в Python не считается — дробные числа вводят через float('3.5') с точкой." }
+
+- id: inf-8-algo-064
+  class: 8
+  topic: "Выражения и линейные алгоритмы"
+  subtopic: "Присваивание и старые значения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-06-linear
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [plan-actions] }
+  prompt: "Было x = 2, y = 5. Затем выполнили команду x = x + y. Чему равен x? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Сначала считается правая часть, и там используются старые значения: 2 + 5 = 7. Только потом 7 кладётся в x, поэтому x = 7. Если бы сначала обновили x, получилось бы совсем другое." }
+
+- id: inf-8-algo-065
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Трассировка ветвления"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Алгоритм: если a > 3, то a := a · 2, иначе a := a + 1. При a = 5 чему равен результат? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Проверяем условие: 5 > 3 истинно, поэтому выполняется верхняя ветка и a = 5 · 2 = 10. Остальные входы дают 1, −3, 4 — результат зависит от входных данных, поэтому проверяют каждую ветку отдельно." }
+
+- id: inf-8-algo-066
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Число различных результатов"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [self-control] }
+  prompt: "Алгоритм: если n чётно, то r := n · 2, иначе r := n + 1. При n = 1, 2, 3, 4 сколько различных значений r получается? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Прогоняем все входы: 1 → 2, 2 → 4, 3 → 4, 4 → 8. Различные результаты — 2, 4, 8, то есть 3 значения: у входов 2 и 3 результат совпал, поэтому значений меньше, чем входов." }
+
+- id: inf-8-algo-067
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Обратная задача с проверкой прогона"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Программа: если x чётно, то y := x : 2, иначе y := x · 2 + 1. Вывод — 10. Каким могло быть x? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "Ветка чётного: x : 2 = 10 → x = 20. Ветка нечётного: x · 2 + 1 = 10 → x = 4,5, а это не целое число, значит нечётным x быть не мог. Проверка прогоном: 20 чётное → 20 : 2 = 10. Ответ единственный: x = 20." }
+
+- id: inf-8-algo-068
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Обратная задача с прикидкой диапазона"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [self-control] }
+  prompt: "Программа складывает цифры числа. Вывод — 20. Какое наименьшее положительное число даёт такой вывод? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [299], answer_text: "299", explanation: "Идём от результата: цифры должны в сумме дать 20. Двух цифр не хватит — их максимум 9 + 9 = 18, значит число трёхзначное. Чтобы число было наименьшим, сотни берём наименьшей возможной: на разряд остаётся 20 − 2 = 18, а это ровно 9 + 9. Получаем 299, и проверяем прямым прогоном: 2 + 9 + 9 = 20." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-logicalgo-bank3.mjs ====
+# Ответы вычислены кодом: логические формулы — перебором всех наборов 0/1,
+# эталоны code_run — реальным запуском локального Python.
+
+- id: inf-8-algo-069
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Значения переменной в цикле с условием"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: algo-01-results
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Программа: n := 1; затем, пока n < 20, выполняется команда n := n · 2. Сколько различных значений примет переменная n за всё время работы программы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Трассируем по шагам: 1 → 2 → 4 → 8 → 16 → 32. Условие проверяется в начале, поэтому значение 32 уже записано в n, и только потом цикл заканчивается — оно тоже считается. Значений 6, и все они различны. Частая ошибка — назвать только последнее значение 32: переменная менялась, а значит, и промежуточные результаты относятся к работе программы." }
+
+- id: inf-8-algo-070
+  class: 8
+  topic: "Анализ алгоритмов"
+  subtopic: "Перебор входов, приводящих к результату"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: algo-02-inputs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
+  prompt: "Программа: y := x · 3; затем, если y делится на 10, выполняется команда y := y : 10. Сколько целых значений x от 1 до 40 дают на выходе y = 6? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Ищем все входы, а не один. Ветка без деления: 3x = 6, откуда x = 2, и 6 на 10 не делится, поэтому y остаётся 6. Ветка с делением: 3x = 60, откуда x = 20, и 60 делится на 10, значит y = 60 : 10 = 6. Проверяем прямым прогоном: x = 2 → y = 6; x = 20 → y = 6. Других целых x нет, поэтому подходящих значений 2." }
+
+- id: inf-8-algo-071
+  class: 8
+  topic: "Типы данных и ввод"
+  subtopic: "Список, подсчёт и f-строка"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-05-data
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
+  prompt: "Дан список оценок marks = [4, 5, 5, 3, 5, 4, 5]. Посчитайте количество пятёрок и выведите f-строкой строку вида «Пятёрок: N из M», где N — количество пятёрок, а M — длина списка."
+  student_view: { language: python, template: "marks = [4, 5, 5, 3, 5, 4, 5]\n# найди количество пятёрок в списке\nn = ...\nprint(f\"Пятёрок: {n} из {len(marks)}\")" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "marks = [4, 5, 5, 3, 5, 4, 5]\nn = marks.count(5)\nprint(f\"Пятёрок: {n} из {len(marks)}\")", expected_stdout: "Пятёрок: 4 из 7", explanation: "Метод count(5) считает, сколько элементов списка равны 5, а len(marks) даёт длину списка — всего оценок 7, из них пятёрок 4. f-строка подставляет оба значения прямо в текст между двоеточием и «из», поэтому готовый вывод читается как обычная фраза. Кавычки в списке не нужны: числа хранятся без них, и сравнение с числом 5 работает сразу." }
+
+- id: inf-8-algo-072
+  class: 8
+  topic: "Выражения и линейные алгоритмы"
+  subtopic: "Обмен значений без третьей переменной"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: py-06-linear
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-py-expr], meta: [plan-actions] }
+  prompt: "В программе a = 3 и b = 7. Требуется поменять их значения местами, не заводя третьей переменной: сначала выполнить a = a + b, затем b = a - b, затем a = a - b. Выполните команды по порядку и выведите a и b через пробел."
+  student_view: { language: python, template: "a = 3\nb = 7\n# поменяй a и b местами, не заводя третью переменную\na = ...\nb = ...\na = ...\nprint(a, b)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = 3\nb = 7\na = a + b\nb = a - b\na = a - b\nprint(a, b)", expected_stdout: "7 3", explanation: "Команды выполняются по порядку, а правая часть вычисляется из текущих значений: a = 10, b = 7, затем a = 10, b = 3, затем a = 7, b = 3. В итоге a = 7 и b = 3 — значения действительно поменялись местами, и в схеме обмена не появилось лишней переменной. Работает такой обмен потому, что во второй команде из уже увеличенной a вычитается b, а в третьей — оставшаяся часть суммы." }
+
+
+# ==== СГЕНЕРИРОВАНО scripts/make-78final-bank3.mjs ====
+
+- id: inf-8-algo-073
+  class: 8
+  topic: "Следование"
+  subtopic: "Финальный добор"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: alg-05-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: ["inf-8-algo-sequence"], meta: [plan-actions] }
+  prompt: "Выполните по порядку команды: y := 10; y := y / 2; y := y + 7. Какое получилось значение? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12], answer_text: "12", explanation: "Следование выполняется строго по порядку: y = 10, затем y = 10 / 2 = 5, затем y = 5 + 7 = 12." }

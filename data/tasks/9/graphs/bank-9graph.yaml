@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
   prompt: "Что означают строка и столбец матрицы смежности?"
-  student_view: { options: [{ id: A, text: "Откуда и куда" }, { id: B, text: "Цену и длину" }, { id: C, text: "Имена вершин" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Имена вершин" }, { id: A, text: "Откуда и куда" }, { id: B, text: "Цену и длину" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Строка — откуда, столбец — куда" }
+  teacher_only: { answer: C, explanation: "Строка — откуда, столбец — куда" }
 
 - id: inf-9-graph-002
   class: 9
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
   prompt: "Чем дерево отличается от графа?"
-  student_view: { options: [{ id: A, text: "Нет циклов" }, { id: B, text: "Нет вершин" }, { id: C, text: "Нет рёбер" }, { id: D, text: "Ничем" }] }
+  student_view: { options: [{ id: D, text: "Ничем" }, { id: A, text: "Нет циклов" }, { id: B, text: "Нет вершин" }, { id: C, text: "Нет рёбер" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Дерево — граф без циклов" }
+  teacher_only: { answer: B, explanation: "Дерево — граф без циклов" }
 
 - id: inf-9-graph-004
   class: 9
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
   prompt: "Что хранит весовая матрица вместо единиц?"
-  student_view: { options: [{ id: A, text: "Веса рёбер" }, { id: B, text: "Нули" }, { id: C, text: "Имена" }, { id: D, text: "Цвета" }] }
+  student_view: { options: [{ id: B, text: "Нули" }, { id: A, text: "Веса рёбер" }, { id: C, text: "Имена" }, { id: D, text: "Цвета" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Вес — расстояние, цена, время" }
+  teacher_only: { answer: B, explanation: "Вес — расстояние, цена, время" }
 
 - id: inf-9-graph-006
   class: 9
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
   prompt: "Что такое ориентированный граф?"
-  student_view: { options: [{ id: A, text: "Граф со стрелками" }, { id: B, text: "Граф без вершин" }, { id: C, text: "Только дерево" }, { id: D, text: "Только цепочка" }] }
+  student_view: { options: [{ id: C, text: "Только дерево" }, { id: D, text: "Только цепочка" }, { id: A, text: "Граф со стрелками" }, { id: B, text: "Граф без вершин" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Направление рёбер имеет значение" }
+  teacher_only: { answer: C, explanation: "Направление рёбер имеет значение" }
 
 - id: inf-9-graph-007
   class: 9
@@ -168,3 +168,872 @@
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Вершин на одну больше" }
 
+# ==== ДОПИСАНО scripts/make-9-bank.mjs (далее руками не править) ====
+- id: inf-9-graph-011
+  class: 9
+  topic: Графы
+  subtopic: "Чтение весовой матрицы"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
+  prompt: "Весовая матрица дорог между A, B, C, D (∞ — ребра нет):\n0 4 2 ∞\n∞ 0 ∞ 5\n∞ 1 0 8\n∞ ∞ ∞ 0\nСколько рёбер в этом графе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Рёбер столько, сколько весов отлично от нуля и от бесконечности: 4, 2, 5, 1, 8 — пять рёбер. Нули стоят на диагонали (петель нет), ∞ означает отсутствие ребра." }
+
+- id: inf-9-graph-012
+  class: 9
+  topic: Графы
+  subtopic: "Дерево перебора"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
+  prompt: "В дереве решений переставляют числа 1, 2, 3 на трёх местах. Сколько листьев в этом дереве? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Для первого элемента 3 выбора, для второго 2, для третьего 1: 3 · 2 · 1 = 6 листьев. Столько же вариантов перестановки." }
+
+- id: inf-9-graph-013
+  class: 9
+  topic: Графы
+  subtopic: "Листья и ветки"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
+  prompt: "Сколько листьев в дереве решений, где переставляют числа 1, 2, 3, 4 на четырёх местах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [24], answer_text: "24", explanation: "Ветка от корня до листа — один вариант: 4 · 3 · 2 · 1 = 24 листа. Считать надо именно листья: промежуточные вершины — это незаконченные варианты." }
+
+- id: inf-9-graph-014
+  class: 9
+  topic: Графы
+  subtopic: "Перебор монет"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
+  prompt: "Имеются монеты 1, 3 и 5 рубля. Сколькими способами можно набрать сумму 7 рублей? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Способы: 1·1 + 2·3 + 0·5; 2·1 + 0·3 + 1·5; 4·1 + 1·3 + 0·5; 7·1 + 0·3 + 0·5 — всего 4. В дереве решений каждая ветка заканчивается таким набором, их и считают." }
+
+- id: inf-9-graph-015
+  class: 9
+  topic: Графы
+  subtopic: "Кратчайший путь"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-shortest], meta: [plan-actions] }
+  prompt: "Чем кратчайший путь отличается от пути с наименьшим числом переходов?"
+  student_view: { options: [{ id: B, text: "Ничем, это одно и то же" }, { id: C, text: "Кратчайший — это путь с наименьшим числом рёбер" }, { id: D, text: "Кратчайший — это всегда прямой путь без промежуточных вершин" }, { id: A, text: "Кратчайший — это путь с минимальной суммой весов, а не с минимальным числом рёбер" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Сумма весов и число рёбер — разные критерии. Путь A → C → B → D может оказаться короче по весу, чем прямой A → B → D." }
+
+- id: inf-9-graph-016
+  class: 9
+  topic: Графы
+  subtopic: "Сумма весов пути"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-graph-shortest], meta: [plan-actions] }
+  prompt: "Дороги: A→B вес 4, A→C вес 2, C→B вес 1, B→D вес 5, C→D вес 8. Чему равна минимальная сумма весов пути из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Пути: A→B→D = 9, A→C→D = 10, A→C→B→D = 8. Минимум 8 — и он идёт через три ребра, то есть рёбер больше, а вес меньше." }
+
+- id: inf-9-graph-017
+  class: 9
+  topic: Графы
+  subtopic: "Перебор всех путей"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-shortest], meta: [plan-actions] }
+  prompt: "Дороги: A→B 7, A→C 3, A→D 12, C→B 2, B→D 4, C→D 9. Найдите минимальную сумму весов пути из A в D перебором всех путей. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Пути и их суммы: A→D = 12, A→B→D = 11, A→C→D = 12, A→C→B→D = 3 + 2 + 4 = 9. Минимум 9, хотя дорога A→D короче по числу переходов и весит больше." }
+
+- id: inf-9-graph-018
+  class: 9
+  topic: Графы
+  subtopic: "Источник"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-graph-dag], meta: [plan-actions] }
+  prompt: "Сколько путей ведёт в вершину-источник направленного ациклического графа? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Всегда 1 — пустой путь: остаться в той же вершине, никуда не двигаясь. Ставить здесь 0 нельзя: тогда все остальные значения получатся в 2 раза меньше." }
+
+- id: inf-9-graph-019
+  class: 9
+  topic: Графы
+  subtopic: "Накопление путей"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-graph-dag], meta: [plan-actions] }
+  prompt: "Граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "A = 1, B = 1, C = 1, D = B + C = 2. Это пути A→B→D и A→C→D. Число путей в вершину равно сумме чисел путей в её предшественников." }
+
+- id: inf-9-graph-020
+  class: 9
+  topic: Графы
+  subtopic: "Сложный DAG"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-dag], meta: [plan-actions] }
+  prompt: "Граф: X→Y, X→Z, Y→W, Z→W, W→V, Y→V. Сколько путей ведёт из X в V? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Считаем накоплением: X = 1, Y = 1, Z = 1, W = Y + Z = 2, V = W + Y = 2 + 1 = 3. Перебором: X→Y→V, X→Y→W→V, X→Z→W→V — тоже три пути." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9-bank2.mjs — руками не править ====
+
+- id: inf-9-graph-021
+  class: 9
+  topic: "Графы"
+  subtopic: "Число вершин"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph], meta: [plan-actions] }
+  prompt: "В графе вершины: A, B, C, D, E. Сколько вершин в графе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Вершины перечислены по одному разу, значит их 5: A, B, C, D, E. Вершины — это объекты, а рёбра — связи между ними." }
+
+- id: inf-9-graph-022
+  class: 9
+  topic: "Графы"
+  subtopic: "Число рёбер"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph], meta: [plan-actions] }
+  prompt: "В графе есть рёбра: A—B, A—C, B—D, C—D, D—E. Сколько рёбер в графе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Рёбра перечислены: A—B, A—C, B—D, C—D, D—E — их 5." }
+
+- id: inf-9-graph-023
+  class: 9
+  topic: "Графы"
+  subtopic: "Степень вершины"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph], meta: [plan-actions] }
+  prompt: "Матрица смежности (строки — «откуда», столбцы — «куда»):\n0 1 1\n0 0 1\n0 0 0\nЧему равна сумма элементов первой строки, то есть сколько рёбер выходит из вершины 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Первая строка 0 1 1: единицы стоят в столбцах 2 и 3, значит из вершины 1 выходит 2 ребра. Единицы в строке считают слева направо — так кодируют выходящие связи." }
+
+- id: inf-9-graph-024
+  class: 9
+  topic: "Графы"
+  subtopic: "Весовая матрица"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-01-graphs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph], meta: [plan-actions] }
+  prompt: "Весовая матрица (веса рёбер, 0 — ребра нет):\n0 4 2\n4 0 1\n2 1 0\nСумма весов всех рёбер сколько? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Каждое ребро записано дважды — в строке и в столбце, поэтому половина суммы: 14 / 2 = 7. Это отличает весовую матрицу от матрицы смежности, где единицы считаются один раз." }
+
+- id: inf-9-graph-025
+  class: 9
+  topic: "Графы"
+  subtopic: "Рёбра дерева"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "В дереве 6 вершин. Сколько в нём рёбер? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "В дереве из 6 вершин ровно 6 − 1 = 5 ребро: между любыми двумя вершинами существует единственный путь, и это свойство как раз даёт формулу." }
+
+- id: inf-9-graph-026
+  class: 9
+  topic: "Графы"
+  subtopic: "Вершины дерева"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "В дереве 9 рёбер. Сколько в нём вершин? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Вершин на одно больше, чем рёбер: 9 + 1 = 10." }
+
+- id: inf-9-graph-027
+  class: 9
+  topic: "Графы"
+  subtopic: "Признак дерева"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Какое свойство отличает дерево от произвольного связного графа?"
+  student_view: { options: [{ id: D, text: "У каждой вершины одинаковая степень" }, { id: A, text: "Между любыми двумя вершинами есть ровно один простой путь" }, { id: B, text: "Все вершины соединены со всеми" }, { id: C, text: "Рёбра направлены от корня" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Отсутствие циклов и связность дают ровно один путь между любой парой вершин. Полный граф — не дерево: там путей между двумя вершинами множество." }
+
+- id: inf-9-graph-028
+  class: 9
+  topic: "Графы"
+  subtopic: "Глубина дерева"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "В дереве выбран корень, и от него до самой глубокой вершины 3 ребра. Какова глубина дерева? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Глубина — это наибольшее число рёбер от корня до листа, здесь 3. Глубину считают именно по рёбрам, а не по вершинам: иначе получится на единицу больше." }
+
+- id: inf-9-graph-029
+  class: 9
+  topic: "Графы"
+  subtopic: "Листья дерева"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "У дерева с 12 вершинами корень один. Сколько рёбер ведёт к листьям — вершинам без потомков? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Из корня выходит 11 рёбер — по одному на каждую следующую вершину, значит всего 11 листьев, если каждая вершина — лист. Листья — вершины, из которых не выходит ни одного ребра." }
+
+- id: inf-9-graph-030
+  class: 9
+  topic: "Графы"
+  subtopic: "Перебор вариантов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "В задаче выбирается один вариант из трёх: А, Б, В. Сколько всего вариантов выбора? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "3 варианта. При двух независимых выборах по три варианта получится дерево на 3 · 3 = 9 листьев — это и есть перебор вариантов с помощью дерева." }
+
+- id: inf-9-graph-031
+  class: 9
+  topic: "Графы"
+  subtopic: "Дерево вариантов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Дерево перебора: первый выбор — 4 вариантов, второй — 3 варианта для каждого. Сколько листьев в дереве? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12], answer_text: "12", explanation: "4 · 3 = 12 листьев. Ветви дерева умножаются: сколько бы ни росло число уровней, вариантов становится быстро много." }
+
+- id: inf-9-graph-032
+  class: 9
+  topic: "Графы"
+  subtopic: "Число комбинаций"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Перебирают пары из монет: 2 руб., 5 руб., 10 руб.. Каждая монета используется один раз, порядок не важен. Сколько всего пар? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Пар из 3 монет без повторов: 3 · 2 / 2 = 6. Порядок не важен, поэтому делим на два — иначе каждую пару посчитаем дважды." }
+
+- id: inf-9-graph-033
+  class: 9
+  topic: "Графы"
+  subtopic: "Минимум в дереве"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Массив 4, 7, 2, 9 представлен деревом: в каждой внутренней вершине хранится меньший из элементов её ветви. Чему равен минимум в корне? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Отсортированный массив: 2, 4, 7, 9, наименьшее 2. В корне дерева всегда минимум — это и позволяет найти его за число сравений, равное числу внутренних вершин." }
+
+- id: inf-9-graph-034
+  class: 9
+  topic: "Графы"
+  subtopic: "Число узлов дерева"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Дерево перебора трёх монет имеет корень, 3 узла второго уровня и столько же листьев. Сколько в нём всего вершин? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "1 (корень) + 3 + 3 = 7. Для трёх монет листьев 2 · 2 · 2 = 8, а вместе с внутренними вершинами дерево больше." }
+
+- id: inf-9-graph-035
+  class: 9
+  topic: "Графы"
+  subtopic: "Внутренние вершины"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "В двоичном дереве перебора 7 листьев (по варианту на каждом шаге). Сколько у него внутренних вершин? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "В полном двоичном дереве число внутренних вершин на единицу меньше числа листьев: 7 − 1 = 6. Это верно для любого полного двоичного дерева." }
+
+- id: inf-9-graph-036
+  class: 9
+  topic: "Графы"
+  subtopic: "Три уровня выбора"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-02-trees
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-tree], meta: [plan-actions] }
+  prompt: "Перебирают тройки из монет: 2 руб., 5 руб., 10 руб., 20 руб., каждая монета используется один раз, порядок не важен. Сколько всего троек? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Троек из 4 монет: 4 · 3 · 2 / 6 = 6. Порядок не важен, поэтому делим на 3 · 2 = 6 — столько перестановок даёт один и тот же набор." }
+
+- id: inf-9-graph-037
+  class: 9
+  topic: "Графы"
+  subtopic: "Кратчайший путь"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Взвешенный граф: рёбра A–B (4), A–C (2), B–D (5), C–D (8). Чему равна длина кратчайшего пути из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Пути и их длины: A→B→D = 4 + 5 = 9, A→C→D = 2 + 8 = 10. Минимум — 9 по пути A→B→D→D. Путь с меньшим числом рёбер не обязательно самый лёгкий." }
+
+- id: inf-9-graph-038
+  class: 9
+  topic: "Графы"
+  subtopic: "Сумма весов длинного пути"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Тот же граф: A–B (4), A–C (2), B–D (5), C–D (8). Чему равна длина пути A→C→D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "2 + 8 = 10, что больше кратчайшего 9. Задачи на кратчайший путь всегда сравнивают все варианты, иначе можно выбрать неоптимальный маршрут." }
+
+- id: inf-9-graph-039
+  class: 9
+  topic: "Графы"
+  subtopic: "Цепочка маршрутов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Граф-цепочка: A→B→C→D. Сколько различных маршрутов ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В цепочке без разветвлений маршрут ровно один: A→B→C→D. Число маршрутов растёт только при наличии развилок, в цепочке их нет." }
+
+- id: inf-9-graph-040
+  class: 9
+  topic: "Графы"
+  subtopic: "Число путей в D"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "В ориентированном ациклическом графе рёбра A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "В B и C по одному пути, в D складываются оба: 1 + 1 = 2. Это пути A→B→D и A→C→D." }
+
+- id: inf-9-graph-041
+  class: 9
+  topic: "Графы"
+  subtopic: "Число маршрутов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "В графе рёбра A→B, A→C, B→D. Сколько маршрутов ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Из A в D ведёт только маршрут A→B→D: пути через C не доходят до D, так как рёбра C→D нет. Считают только маршруты, которые действительно заканчиваются в D." }
+
+- id: inf-9-graph-042
+  class: 9
+  topic: "Графы"
+  subtopic: "Пути в вершину"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в B? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В B путь ровно один: A→B, потому что у B только один предшественник. Пути считают от начала графа: в вершину-источник A идёт один пустой путь, дальше значения только складываются." }
+
+- id: inf-9-graph-043
+  class: 9
+  topic: "Графы"
+  subtopic: "Число рёбер в пути"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Граф-цепочка A→B→C→D. Сколько рёбер в маршруте из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Маршрут A→B→C→D содержит 3 ребра(о) — по одному на каждый переход между соседними вершинами." }
+
+- id: inf-9-graph-044
+  class: 9
+  topic: "Графы"
+  subtopic: "Число рёбер кратчайшего пути"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Граф: веса рёбер A–B = 4, A–C = 2, B–D = 5, C–D = 8. Кратчайший путь из A в D идёт по маршруту A→B→D→D. Сколько рёбер в этом маршруте? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "В маршруте A→B→D→D вершин 4, значит рёбер на одно меньше — 3. Число рёбер и сумма весов — разные характеристики пути, их не путают." }
+
+- id: inf-9-graph-045
+  class: 9
+  topic: "Графы"
+  subtopic: "Граф города"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "В графе города вершины: A, B, C, D, E. Сколько вершин нужно посетить, чтобы обойти все? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Обход посещает все 5 вершин(ы) по одной разе. Задача «обойти все вершины» решается обходом в глубину или в ширину, и результат записывают в виде порядка посещения." }
+
+- id: inf-9-graph-046
+  class: 9
+  topic: "Графы"
+  subtopic: "Накопление путей"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "В ациклическом графе рёбра A→B, A→C, B→D, C→E. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В B — 1 путь, в D — столько же, сколько в B, то есть 1. Пути считают накоплением от начала графа; в вершину-источник засчитывается пустой путь." }
+
+- id: inf-9-graph-047
+  class: 9
+  topic: "Графы"
+  subtopic: "Выбор кратчайшего маршрута"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Граф: веса рёбер A–B = 1, A–C = 1, B–D = 5, C–D = 5, B–E = 2, E–D = 2. Чему равен кратчайший путь из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Путь A→B→E→D: 1 + 2 + 2 = 5, он короче прямых вариантов по 6 и по A→C→D = 1 + 5 = 6. Значит, кратчайший маршрут — A→B→E→D→D с длиной 5." }
+
+- id: inf-9-graph-048
+  class: 9
+  topic: "Графы"
+  subtopic: "Все пути целиком"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D. Сколько всего путей из A в D существует? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Перебором: A→B→D и A→C→D — всего 2. Накопление даёт тот же ответ: 1 + 1. Ответы двух способов обязаны совпадать — это лучшая проверка." }
+
+- id: inf-9-graph-049
+  class: 9
+  topic: "Графы"
+  subtopic: "Цикл в графе"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-03-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
+  prompt: "Граф содержит рёбра A→B, B→C, C→A. Можно ли в таком графе накапливать число путей от начала до конца?"
+  student_view: { options: [{ id: B, text: "Да, всегда можно" }, { id: C, text: "Да, если начать с любой вершины" }, { id: D, text: "Нет, потому что рёбер больше, чем вершин" }, { id: A, text: "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Число путей считают только в ациклических графах. При цикле путь можно продолжать бесконечно, и значение не сойдётся. Поэтому перед подсчётом проверяют, что циклов нет." }
+
+- id: inf-9-graph-050
+  class: 9
+  topic: "Графы"
+  subtopic: "Простой граф"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В C один путь, в E столько же: 1." }
+
+- id: inf-9-graph-051
+  class: 9
+  topic: "Графы"
+  subtopic: "Ветвление и слияние"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "В B — 1, в C — 1, в D складываются: 1 + 1 = 2." }
+
+- id: inf-9-graph-052
+  class: 9
+  topic: "Графы"
+  subtopic: "Три уровня"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D, D→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "В D 2 пути, в E столько же: 2." }
+
+- id: inf-9-graph-053
+  class: 9
+  topic: "Графы"
+  subtopic: "Цепочка"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф-цепочка A→B→C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В цепочке на каждом шаге один предшественник, поэтому путь ровно один: 1." }
+
+- id: inf-9-graph-054
+  class: 9
+  topic: "Графы"
+  subtopic: "Три предшественника"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, A→D, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "В D складываются пути из всех трёх предшественников: A (пустой путь), B и C — 1 + 1 + 1 = 3. Забыть единицу у источника — классическая ошибка, тогда ответ получится вдвое меньше." }
+
+- id: inf-9-graph-055
+  class: 9
+  topic: "Графы"
+  subtopic: "Разные конечные вершины"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D, C→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В E один предшественник C, в C один путь, значит и в E 1." }
+
+- id: inf-9-graph-056
+  class: 9
+  topic: "Графы"
+  subtopic: "Два уровня накопления"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D, B→E, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "В D 2 пути, в E складываются пути из B, C и D: 1 + 1 + 2 = 4." }
+
+- id: inf-9-graph-057
+  class: 9
+  topic: "Графы"
+  subtopic: "Несколько предшественников"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "В B один путь, в C складываются пути из A и B: 1 + 1 = 2, в D — пути из B и C: 1 + 2 = 3." }
+
+- id: inf-9-graph-058
+  class: 9
+  topic: "Графы"
+  subtopic: "Накопление по уровням"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→C, C→D, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "В C 2, в D 2, в E складываются пути из C и D: 2 + 2 = 4." }
+
+- id: inf-9-graph-059
+  class: 9
+  topic: "Графы"
+  subtopic: "Проверка перебором"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→C, B→D, C→D, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Накоплением: в B 1, в C 1 + 1 = 2, в D 1 + 2 = 3, в E 2 + 3 = 5. Проверять ответ стоит перебором всех путей — они должны совпасть." }
+
+- id: inf-9-graph-060
+  class: 9
+  topic: "Графы"
+  subtopic: "Нумерация с нуля"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Ациклический граф: A→B, A→C, B→D, C→D, A→E, D→E. В вершину-источник A засчитывается 1 путь. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "В D 2 пути, в E складываются путь из A (пустой) и пути из D: 1 + 2 = 3. Единица у источника обязательна — иначе ответ занизится вдвое." }
+
+- id: inf-9-graph-061
+  class: 9
+  topic: "Графы"
+  subtopic: "Понятия теории графов"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9graph-04-paths
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-dag], meta: [plan-actions] }
+  prompt: "Установите соответствие: понятие — что оно означает."
+  student_view: { left: ["Вершина", "Ребро", "Путь", "Цикл"], right: ["объект графа", "связь между двумя вершинами", "последовательность вершин и рёбер без повторов", "замкнутый маршрут, начинающийся и заканчивающийся в одной вершине"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Вершина": "объект графа", "Ребро": "связь между двумя вершинами", "Путь": "последовательность вершин и рёбер без повторов", "Цикл": "замкнутый маршрут, начинающийся и заканчивающийся в одной вершине" }, explanation: "Различать эти четыре понятия необходимо, чтобы не путать путь с циклом: путь вершины не повторяет, а цикл возвращается в начало. Отсюда же условие ацикличности для подсчёта путей. Верно: Вершина = объект графа; Ребро = связь между двумя вершинами; Путь = последовательность вершин и рёбер без повторов; Цикл = замкнутый маршрут, начинающийся и заканчивающийся в одной вершине." }

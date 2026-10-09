@@ -19,5 +19,10 @@ material/
 /toc_10_11.txt
 /u8_toc.txt
 /tmp_*/
+# Отчёты планировщика пулов (scripts/plan-pools.ts) и черновики — генерируются заново.
+/tmp/
+# Локальные артефакты OpenCode и MCP — не в репо.
+/.playwright-mcp/
+/.opencode/
 
 # vendor/ edge-функции коммитится намеренно: паритет проверяет CI, деплой — из чистого чекаута

@@ -9,7 +9,7 @@ import { taskCorrect } from './vendor/src/lib/analytics/aggregate.mjs';
 import { percentToMark } from './vendor/src/lib/scoring/check.mjs';
 
 const BANK_DIR = new URL('./vendor/bank/', import.meta.url);
-let bankCache: Record<string, { tasks: BankTask[]; max_score: number }> | null = null;
+let bankCache: Record<string, WorkBank> | null = null;
 
 interface BankTask {
   id: string;
@@ -24,6 +24,25 @@ interface BankTask {
   answerMap?: Record<string, string>;
 }
 
+interface WorkVariant {
+  number: number;
+  task_ids: string[];
+  max_score: number;
+}
+
+/**
+ * Работа приходит файлом с пулом и 30 вариантами. Старый плоский формат
+ * (tasks без variants) тоже поддерживаем: это тренажёры.
+ */
+interface WorkBank {
+  test_code: string;
+  pool: BankTask[];
+  variants: WorkVariant[];
+  /** Плоский формат: у тренажёров и старых работ. */
+  tasks?: BankTask[];
+  max_score?: number;
+}
+
 const payloadSchema = z.object({
   surname: z.string().trim().min(1).max(80),
   firstname: z.string().trim().min(1).max(80),
@@ -36,16 +55,43 @@ const payloadSchema = z.object({
   consent: z.literal(true),
 });
 
-async function loadBank(testCode: string) {
+async function loadBank(testCode: string): Promise<WorkBank | undefined> {
   if (!bankCache) {
     bankCache = {};
     for await (const e of Deno.readDir(BANK_DIR)) {
       if (!e.isFile || !e.name.endsWith('.json')) continue;
       const j = JSON.parse(await Deno.readTextFile(new URL('./' + e.name, BANK_DIR)));
-      bankCache[j.test_code] = { tasks: j.tasks, max_score: j.max_score };
+      // Новый формат: пул + варианты. Старый: плоский tasks.
+      const pool = Array.isArray(j.pool) ? j.pool : (j.tasks ?? []);
+      const variants = Array.isArray(j.variants) && j.variants.length
+        ? j.variants
+        : [{ number: 1, task_ids: pool.map((t: BankTask) => t.id), max_score: j.max_score ?? 0 }];
+      bankCache[j.test_code] = {
+        test_code: j.test_code,
+        pool,
+        variants,
+        tasks: j.tasks,
+        max_score: j.max_score,
+      };
     }
   }
   return bankCache[testCode];
+}
+
+/**
+ * Задания и максимум баллов ВЫБРАННОГО варианта.
+ *
+ * Ключи проверяются только у заданий этого варианта: ученик не может сдать
+ * ответы на задания из других вариантов и «выбрать» себе лёгкий набор —
+ * лишние id просто игнорируются, а max_score считается по его варианту.
+ */
+function variantTasks(bank: WorkBank, variantNumber: number): { tasks: BankTask[]; max_score: number } | null {
+  const v = bank.variants.find((x) => x.number === variantNumber);
+  if (!v) return null;
+  const byId = new Map(bank.pool.map((t) => [t.id, t]));
+  const tasks = v.task_ids.map((id) => byId.get(id)).filter((t): t is BankTask => Boolean(t));
+  const max = v.max_score || tasks.reduce((s, t) => s + t.points, 0);
+  return { tasks, max_score: max };
 }
 
 serve(async (req) => {
@@ -65,7 +111,7 @@ serve(async (req) => {
     const { data: profile } = await sb.from('profiles').select('role').eq('id', user.id).maybeSingle();
     const r = (profile as { role?: string } | null)?.role;
     if (r !== 'teacher' && r !== 'admin') return Response.json({ error: 'teacher only' }, { status: 403 });
-    return Response.json({ test_code: testCode, variant: 'v1', page_size: 5, ...bank });
+    return Response.json({ test_code: testCode, ...bank });
   }
   if (req.method !== 'POST') return new Response('method not allowed', { status: 405 });
   let body: unknown;
@@ -83,15 +129,21 @@ serve(async (req) => {
   const bank = await loadBank(p.test_code);
   if (!bank) return Response.json({ error: 'unknown test_code' }, { status: 400 });
 
+  const variantNumber = Number.parseInt(p.variant, 10);
+  const variant = Number.isInteger(variantNumber) ? variantTasks(bank, variantNumber) : null;
+  if (!variant) {
+    return Response.json({ error: `unknown variant ${p.variant} for ${p.test_code}` }, { status: 400 });
+  }
+
   let total = 0;
   const keys: Record<string, string> = {};
-  for (const t of bank.tasks) {
+  for (const t of variant.tasks) {
     const v = taskCorrect(t as never, p.answers[t.id]);
     if (v) total += t.points;
     keys[t.id] = String((t as BankTask).key ?? '');
   }
   total = Math.round(total * 100) / 100;
-  const percent = Math.round((total / bank.max_score) * 1000) / 10;
+  const percent = Math.round((total / variant.max_score) * 1000) / 10;
   const mark = percentToMark(percent);
 
   const url = Deno.env.get('SUPABASE_URL') ?? '';
@@ -111,7 +163,7 @@ serve(async (req) => {
     answers: p.answers,
     keys,
     auto_score: total,
-    max_score: bank.max_score,
+    max_score: variant.max_score,
     percent,
     proposed_mark: mark,
     student_id: p.student_id ?? null,
@@ -122,5 +174,5 @@ serve(async (req) => {
     return Response.json({ error: 'not saved: ' + insError.message }, { status: 403 });
   }
   // Ученику — только итоги, без ключей и без разбивки по вопросам.
-  return Response.json({ total, max: bank.max_score, percent, mark });
+  return Response.json({ total, max: variant.max_score, percent, mark, variant: variantNumber });
 });

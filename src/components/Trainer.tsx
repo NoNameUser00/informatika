@@ -8,6 +8,7 @@ import {
 import { saveQuietAttempt, saveResult } from '../lib/results';
 import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
 import { WORKS } from '../lib/analytics/works';
+import { resolveWork } from '../lib/variants/resolve.mjs';
 import DragMatch from './DragMatch';
 import CodeRunner from './CodeRunner';
 
@@ -37,6 +38,21 @@ function chunk<T>(arr: T[], size: number): T[][] {
 
 export default function Trainer({ data, title, forceMode }: { data: any; title: string; forceMode?: Mode }) {
   const bank = data;
+  // ФИО нужно для выбора варианта (детерминированно от фамилии), поэтому вариант
+  // пересчитывается при вводе ФИО. Первый рендер — без ФИО, это вариант 1.
+  const [seedName, setSeedName] = useState('');
+  const [requestedVariant] = useState<string | null>(() =>
+    typeof window === 'undefined' ? null : new URLSearchParams(window.location.search).get('v'),
+  );
+  const work = useMemo(() => {
+    if (!bank || !Array.isArray(bank.variants)) return null;
+    return resolveWork(bank, { requested: requestedVariant, seedText: seedName });
+  }, [bank, seedName, requestedVariant]);
+  // Тренажёры и старые работы — плоский список без вариантов.
+  const tasks: any[] = work ? work.tasks : (bank?.tasks ?? []);
+  const variantNumber = work ? work.number : (bank?.variant ?? 'v1');
+  const variantCount = work ? (bank.variant_count ?? bank.variants.length) : 1;
+
   const [mode] = useState<Mode>(() => {
     if (forceMode) return forceMode;
     return typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('mode') === 'proverka'
@@ -55,11 +71,13 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     }
     getRole().then((r) => setRole(r.role));
   }, []);
-  const pages = useMemo<any[][]>(() => chunk((bank as any).tasks, (bank as any).page_size ?? 5), []);
+  const pages = useMemo<any[][]>(() => chunk(tasks, (bank as any).page_size ?? 5), [tasks]);
   const totalPages = pages.length + 1; // + страница с ФИО
   const [step, setStep] = useState(0);
   const [surname, setSurname] = useState('');
   const [firstname, setFirstname] = useState('');
+  // Смена варианта сбрасывает заполненные ответы: они относятся к прежнему набору.
+  useEffect(() => { setAnswers({}); setCodeVerdicts({}); setStep(0); setDone(null); setQuietDone(null); }, [variantNumber]);
   const [classNum, setClassNum] = useState('');
   const [classLetter, setClassLetter] = useState('');
   const [consent, setConsent] = useState(false);
@@ -80,7 +98,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   // Банк проверочной/контрольной (ключи — только на сервере): сдача идёт в Edge Function.
   const serverEligible = typeof (bank as any).test_code === 'string' && (bank as any).test_code in WORKS;
 
-  const max = useMemo(() => (bank as any).tasks.reduce((s: number, t: any) => s + t.points, 0), []);
+  const max = useMemo(() => tasks.reduce((s: number, t: any) => s + t.points, 0), [tasks]);
 
   const setA = (id: string, v: Answer) => {
     setAnswers((a) => ({ ...a, [id]: v }));
@@ -113,7 +131,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   }
 
   // Человеческий номер вопроса в тесте (1-based), вместо технического id.
-  const qNum = (id: string): number => (bank as any).tasks.findIndex((t: any) => t.id === id) + 1;
+  const qNum = (id: string): number => tasks.findIndex((t: any) => t.id === id) + 1;
 
   function next() {
     setError('');
@@ -143,7 +161,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         if (stored?.student_id) studentId = stored.student_id;
       } catch { /* ignore */ }
       const plain: Record<string, string> = {};
-      for (const t of (bank as any).tasks) {
+      for (const t of tasks) {
         const a = answers[t.id];
         plain[t.id] = typeof a === 'string' ? a : JSON.stringify(a);
       }
@@ -161,7 +179,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
           class_name: `${classNum}-${classLetter}`,
           test_type: testCode.includes('control') ? 'control' : 'proverka',
           test_code: testCode,
-          variant: (bank as any).variant,
+          variant: String(variantNumber),
           answers: plain,
           student_id: studentId,
           consent,
@@ -203,8 +221,8 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         className: `${classNum}-${classLetter}`,
         testType: mode === 'proverka' ? 'proverka' : 'trainer',
         testCode: (bank as any).test_code,
-        variant: (bank as any).variant,
-        tasks: (bank as any).tasks,
+        variant: String(variantNumber),
+        tasks,
         answers: answers as Record<string, string | Record<string, string>>,
       });
       setQuietDone(`${status} Без бэкенда баллы не считаются — их выставит учитель.`);
@@ -219,15 +237,15 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         className: `${classNum}-${classLetter}`,
         testType: mode === 'proverka' ? 'proverka' : 'trainer',
         testCode: (bank as any).test_code,
-        variant: (bank as any).variant,
-        tasks: (bank as any).tasks,
+        variant: String(variantNumber),
+        tasks,
         answers: answers as Record<string, string | Record<string, string>>,
       });
       setQuietDone(status);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
-    const per: PerQ[] = (bank as any).tasks.map((t: any) => {
+    const per: PerQ[] = tasks.map((t: any) => {
       const a = answers[t.id];
       if (t.type === 'numeric_base') {
         const r = checkNumericBase(t.expected, String(a), t.base);
@@ -250,9 +268,9 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     const percent = Math.round((total / max) * 1000) / 10;
     const mark = percentToMark(percent);
     const keys: Record<string, string> = {};
-    for (const t of (bank as any).tasks) keys[t.id] = t.key;
+    for (const t of tasks) keys[t.id] = t.key;
     const plainAnswers: Record<string, string> = {};
-    for (const t of (bank as any).tasks) {
+    for (const t of tasks) {
       const a = answers[t.id];
       plainAnswers[t.id] = typeof a === 'string' ? a : JSON.stringify(a);
     }
@@ -264,7 +282,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         class_name: `${classNum}-${classLetter}`,
         test_type: mode === 'proverka' ? 'proverka' : 'trainer',
         test_code: (bank as any).test_code,
-        variant: (bank as any).variant,
+        variant: String(variantNumber),
         answers: plainAnswers,
         keys,
         auto_score: total,
@@ -389,10 +407,19 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         <p className="muted">Тихий режим ученика: отвечай на всё по порядку — «верно/неверно» скажет учитель.</p>
       )}
 
+      {variantCount > 1 && (
+        <p className="muted">
+          Вариант {variantNumber} из {variantCount}.
+          {requestedVariant === null
+            ? ' Номер выбирается по фамилии — у одноклассников варианты разные. Учитель может раздать конкретный: ссылка вида «?v=7».'
+            : ' Номер задан учителем.'}
+        </p>
+      )}
+
       {step === 0 && (
         <div className="card">
           <label htmlFor="surname">ФИО ученика (Фамилия Имя): фамилия *</label>
-          <input id="surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} autoComplete="family-name" />
+          <input id="surname" type="text" value={surname} onChange={(e) => { setSurname(e.target.value); setSeedName(e.target.value); }} autoComplete="family-name" />
           <label htmlFor="firstname">Имя *</label>
           <input id="firstname" type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} autoComplete="given-name" />
           <label htmlFor="klass">Класс *</label>

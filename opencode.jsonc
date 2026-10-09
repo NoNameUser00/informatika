@@ -1,0 +1,37 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Дефолтная модель НЕ меняется. DeepSeek доступен только по явному выбору:
+  // /models -> deepseek/deepseek-chat | deepseek/deepseek-reasoner
+  // или: opencode run --model deepseek/deepseek-chat "..."
+  // Ключ только в окружении (DEEPSEEK_API_KEY), никогда в репозиторий.
+  "providers": {
+    "deepseek": {
+      "name": "DeepSeek (opt-in)",
+      "env": ["DEEPSEEK_API_KEY"],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.deepseek.com/v1"
+      },
+      "models": {
+        "deepseek-chat": {
+          "modelID": "deepseek-chat",
+          "name": "DeepSeek V3 Chat",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "deepseek-reasoner": {
+          "modelID": "deepseek-reasoner",
+          "name": "DeepSeek Reasoner (R1)",
+          "capabilities": {
+            "tools": true,
+            "input": ["text"],
+            "output": ["text"]
+          }
+        }
+      }
+    }
+  }
+}

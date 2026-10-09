@@ -1,0 +1,310 @@
+[
+  {
+    "code": "grade7-proverka-v1",
+    "file": "proverka-7inf",
+    "grade": "7",
+    "kind": "proverka",
+    "title": "Проверочная: Информация и кодирование"
+  },
+  {
+    "code": "grade7-control-v1",
+    "file": "control-7inf",
+    "grade": "7",
+    "kind": "control",
+    "title": "Контрольная: Информация и кодирование"
+  },
+  {
+    "code": "grade7base-proverka-v1",
+    "file": "proverka-7base",
+    "grade": "7",
+    "kind": "proverka",
+    "title": "Проверочная: Компьютер, ПО и сеть"
+  },
+  {
+    "code": "grade7base-control-v1",
+    "file": "control-7base",
+    "grade": "7",
+    "kind": "control",
+    "title": "Контрольная: Компьютер, ПО и сеть"
+  },
+  {
+    "code": "grade7media-proverka-v1",
+    "file": "proverka-7media",
+    "grade": "7",
+    "kind": "proverka",
+    "title": "Проверочная: Документы, презентации, графика"
+  },
+  {
+    "code": "grade7media-control-v1",
+    "file": "control-7media",
+    "grade": "7",
+    "kind": "control",
+    "title": "Контрольная: Документы, презентации, графика"
+  },
+  {
+    "code": "grade7-final-proverka-v1",
+    "file": "proverka-7final",
+    "grade": "7",
+    "kind": "proverka",
+    "title": "Проверочная перед итоговой: 7 класс"
+  },
+  {
+    "code": "grade7-final-v1",
+    "file": "control-7final",
+    "grade": "7",
+    "kind": "control",
+    "title": "Итоговая контрольная работа: 7 класс"
+  },
+  {
+    "code": "numsys-proverka-v1",
+    "file": "proverka-ss",
+    "grade": "8",
+    "kind": "proverka",
+    "title": "Проверочная: Системы счисления"
+  },
+  {
+    "code": "numsys-control-v1",
+    "file": "control-ss",
+    "grade": "8",
+    "kind": "control",
+    "title": "Контрольная: Системы счисления"
+  },
+  {
+    "code": "logic-proverka-v1",
+    "file": "proverka-logic",
+    "grade": "8",
+    "kind": "proverka",
+    "title": "Проверочная: Логика"
+  },
+  {
+    "code": "logic-control-v1",
+    "file": "control-logic",
+    "grade": "8",
+    "kind": "control",
+    "title": "Контрольная: Логика"
+  },
+  {
+    "code": "algo-proverka-v1",
+    "file": "proverka-algo",
+    "grade": "8",
+    "kind": "proverka",
+    "title": "Проверочная: Алгоритмы и программирование"
+  },
+  {
+    "code": "algo-control-v1",
+    "file": "control-algo",
+    "grade": "8",
+    "kind": "control",
+    "title": "Контрольная: Алгоритмы и программирование"
+  },
+  {
+    "code": "grade8-final-proverka-v1",
+    "file": "proverka-8final",
+    "grade": "8",
+    "kind": "proverka",
+    "title": "Проверочная перед итоговой: 8 класс"
+  },
+  {
+    "code": "grade8-final-v1",
+    "file": "control-8final",
+    "grade": "8",
+    "kind": "control",
+    "title": "Итоговая контрольная работа: 8 класс"
+  },
+  {
+    "code": "sheet9-proverka-v1",
+    "file": "proverka-9sheet",
+    "grade": "9",
+    "kind": "proverka",
+    "title": "Проверочная: Электронные таблицы"
+  },
+  {
+    "code": "sheet9-control-v1",
+    "file": "control-9sheet",
+    "grade": "9",
+    "kind": "control",
+    "title": "Контрольная: Электронные таблицы"
+  },
+  {
+    "code": "arr9-proverka-v1",
+    "file": "proverka-9arr",
+    "grade": "9",
+    "kind": "proverka",
+    "title": "Проверочная: Массивы и программирование"
+  },
+  {
+    "code": "arr9-control-v1",
+    "file": "control-9arr",
+    "grade": "9",
+    "kind": "control",
+    "title": "Контрольная: Массивы и программирование"
+  },
+  {
+    "code": "graph9-proverka-v1",
+    "file": "proverka-9graph",
+    "grade": "9",
+    "kind": "proverka",
+    "title": "Проверочная: Графы и пути"
+  },
+  {
+    "code": "graph9-control-v1",
+    "file": "control-9graph",
+    "grade": "9",
+    "kind": "control",
+    "title": "Контрольная: Графы и пути"
+  },
+  {
+    "code": "extra9-proverka-v1",
+    "file": "proverka-9extra",
+    "grade": "9",
+    "kind": "proverka",
+    "title": "Проверочная: Управление, модели и Интернет"
+  },
+  {
+    "code": "extra9-control-v1",
+    "file": "control-9extra",
+    "grade": "9",
+    "kind": "control",
+    "title": "Контрольная: Управление, модели и Интернет"
+  },
+  {
+    "code": "grade9-final-proverka-v1",
+    "file": "proverka-9final",
+    "grade": "9",
+    "kind": "proverka",
+    "title": "Проверочная перед итоговой: 9 класс"
+  },
+  {
+    "code": "grade9-final-v1",
+    "file": "control-9final",
+    "grade": "9",
+    "kind": "control",
+    "title": "Итоговая контрольная работа: 9 класс"
+  },
+  {
+    "code": "base10-proverka-v1",
+    "file": "proverka-10base",
+    "grade": "10",
+    "kind": "proverka",
+    "title": "Проверочная: Железо и информационные процессы"
+  },
+  {
+    "code": "base10-control-v1",
+    "file": "control-10base",
+    "grade": "10",
+    "kind": "control",
+    "title": "Контрольная: Железо и информационные процессы"
+  },
+  {
+    "code": "adv10-proverka-v1",
+    "file": "proverka-10adv",
+    "grade": "10",
+    "kind": "proverka",
+    "title": "Проверочная: Системы счисления и логика"
+  },
+  {
+    "code": "adv10-control-v1",
+    "file": "control-10adv",
+    "grade": "10",
+    "kind": "control",
+    "title": "Контрольная: Системы счисления и логика"
+  },
+  {
+    "code": "media10-proverka-v1",
+    "file": "proverka-10media",
+    "grade": "10",
+    "kind": "proverka",
+    "title": "Проверочная: Текстовый процессор и мультимедиа"
+  },
+  {
+    "code": "media10-control-v1",
+    "file": "control-10media",
+    "grade": "10",
+    "kind": "control",
+    "title": "Контрольная: Текстовый процессор и мультимедиа"
+  },
+  {
+    "code": "grade10-final-proverka-v1",
+    "file": "proverka-10final",
+    "grade": "10",
+    "kind": "proverka",
+    "title": "Проверочная перед итоговой: 10 класс"
+  },
+  {
+    "code": "grade10-final-v1",
+    "file": "control-10final",
+    "grade": "10",
+    "kind": "control",
+    "title": "Итоговая контрольная работа: 10 класс"
+  },
+  {
+    "code": "base11-proverka-v1",
+    "file": "proverka-11base",
+    "grade": "11",
+    "kind": "proverka",
+    "title": "Проверочная: Анализ данных и базы данных"
+  },
+  {
+    "code": "base11-control-v1",
+    "file": "control-11base",
+    "grade": "11",
+    "kind": "control",
+    "title": "Контрольная: Анализ данных и базы данных"
+  },
+  {
+    "code": "algo11-proverka-v1",
+    "file": "proverka-11algo",
+    "grade": "11",
+    "kind": "proverka",
+    "title": "Проверочная: Алгоритмы и программирование"
+  },
+  {
+    "code": "algo11-control-v1",
+    "file": "control-11algo",
+    "grade": "11",
+    "kind": "control",
+    "title": "Контрольная: Алгоритмы и программирование"
+  },
+  {
+    "code": "graph11-proverka-v1",
+    "file": "proverka-11graph",
+    "grade": "11",
+    "kind": "proverka",
+    "title": "Проверочная: Моделирование, графы и игры"
+  },
+  {
+    "code": "graph11-control-v1",
+    "file": "control-11graph",
+    "grade": "11",
+    "kind": "control",
+    "title": "Контрольная: Моделирование, графы и игры"
+  },
+  {
+    "code": "net11-proverka-v1",
+    "file": "proverka-11net",
+    "grade": "11",
+    "kind": "proverka",
+    "title": "Проверочная: Сети и информационная безопасность"
+  },
+  {
+    "code": "net11-control-v1",
+    "file": "control-11net",
+    "grade": "11",
+    "kind": "control",
+    "title": "Контрольная: Сети и информационная безопасность"
+  },
+  {
+    "code": "grade11-final-proverka-v1",
+    "file": "proverka-11final",
+    "grade": "11",
+    "kind": "proverka",
+    "title": "Проверочная перед итоговой: 11 класс"
+  },
+  {
+    "code": "grade11-final-v1",
+    "file": "control-11final",
+    "grade": "11",
+    "kind": "control",
+    "title": "Итоговая контрольная работа: 11 класс"
+  }
+]

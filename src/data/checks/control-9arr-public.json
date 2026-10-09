@@ -1,10 +1,227 @@
 {
   "test_code": "arr9-control-v1",
-  "variant": "v1",
-  "max_score": 16,
-  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "kind": "control",
+  "grade": "9",
+  "title": "Контрольная: Массивы и программирование",
+  "instruction": "Отвечайте точно. Код задаётся в поле ответа, запускается кнопкой. В числовых ответах запишите только число.",
   "page_size": 5,
-  "tasks": [
+  "variant_count": 30,
+  "per_variant": 20,
+  "final": false,
+  "ktp_to": null,
+  "sections": [
+    {
+      "title": "Алгоритмы и структуры данных, КТП 12–13",
+      "ktp": [
+        {
+          "from": 12,
+          "to": 13
+        }
+      ],
+      "task_ids": [
+        "inf-9-arr-023",
+        "inf-9-arr-024",
+        "inf-9-arr-025",
+        "inf-9-arr-026",
+        "inf-9-arr-027",
+        "inf-9-arr-028",
+        "inf-9-extra-024",
+        "inf-9-extra-025",
+        "inf-9-extra-026",
+        "inf-9-arr-001",
+        "inf-9-arr-002",
+        "inf-9-arr-003",
+        "inf-9-arr-006",
+        "inf-9-arr-009",
+        "inf-9-arr-010",
+        "inf-9-arr-011",
+        "inf-9-arr-012",
+        "inf-9-arr-029"
+      ]
+    },
+    {
+      "title": "Сумма, количество, среднее, КТП 14",
+      "ktp": [
+        {
+          "from": 14,
+          "to": 14
+        }
+      ],
+      "task_ids": [
+        "inf-9-arr-013",
+        "inf-9-arr-014",
+        "inf-9-arr-015",
+        "inf-9-arr-030",
+        "inf-9-arr-031",
+        "inf-9-arr-032",
+        "inf-9-arr-033",
+        "inf-9-arr-034",
+        "inf-9-arr-035",
+        "inf-9-arr-036",
+        "inf-9-arr-037",
+        "inf-9-arr-038"
+      ]
+    },
+    {
+      "title": "Линейный поиск, КТП 15",
+      "ktp": [
+        {
+          "from": 15,
+          "to": 15
+        }
+      ],
+      "task_ids": [
+        "inf-9-arr-004",
+        "inf-9-arr-005",
+        "inf-9-arr-007",
+        "inf-9-arr-008",
+        "inf-9-arr-016",
+        "inf-9-arr-039",
+        "inf-9-arr-040",
+        "inf-9-arr-041",
+        "inf-9-arr-042",
+        "inf-9-arr-043",
+        "inf-9-arr-044",
+        "inf-9-arr-045"
+      ]
+    },
+    {
+      "title": "Минимум, максимум, сортировка, КТП 16–17",
+      "ktp": [
+        {
+          "from": 16,
+          "to": 17
+        }
+      ],
+      "task_ids": [
+        "inf-9-arr-017",
+        "inf-9-arr-018",
+        "inf-9-arr-019",
+        "inf-9-arr-046",
+        "inf-9-arr-047",
+        "inf-9-arr-048",
+        "inf-9-arr-049",
+        "inf-9-arr-050",
+        "inf-9-arr-051",
+        "inf-9-arr-020",
+        "inf-9-arr-021",
+        "inf-9-arr-022",
+        "inf-9-arr-052",
+        "inf-9-arr-053",
+        "inf-9-arr-054",
+        "inf-9-arr-055",
+        "inf-9-arr-056",
+        "inf-9-arr-057"
+      ]
+    }
+  ],
+  "pool": [
+    {
+      "id": "inf-9-arr-023",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Алгоритм состоит из 4 шагов: прочитать числа, сложить положительные, сравнить с нулём, вывести результат. Сколько шагов содержит алгоритм? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-024",
+      "lesson": "9algo-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что делает условие в алгоритме с ветвлением?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Останавливает программу"
+        },
+        {
+          "id": "B",
+          "text": "Повторяет действия заданное число раз"
+        },
+        {
+          "id": "C",
+          "text": "Записывает результат в таблицу"
+        },
+        {
+          "id": "A",
+          "text": "Выбирает, какую из двух ветвей выполнять дальше"
+        }
+      ]
+    },
+    {
+      "id": "inf-9-arr-025",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Цикл выполняет действие 5 раз: к переменной, равной 0, каждый раз прибавляют 2. Какое значение получится? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-026",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "В цикле идёт остаток от деления: остаток(7 ; 3). Чему он равен? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-027",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 3, 8, 2. Сколько элементов нужно проверить, чтобы найти первый элемент больше 8? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-028",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм перебирает все пары значений: список из 2 пар, внутри каждой — 2 проверки. Сколько всего проверок? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-extra-024",
+      "lesson": "9algo-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем функции нужен оператор return?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Чтобы вернуть результат вызывающему коду"
+        },
+        {
+          "id": "C",
+          "text": "Чтобы объявить новую переменную"
+        },
+        {
+          "id": "D",
+          "text": "Чтобы прервать программу"
+        },
+        {
+          "id": "B",
+          "text": "Чтобы напечатать результат на экране"
+        }
+      ]
+    },
+    {
+      "id": "inf-9-extra-025",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Дана функция def f(n): return n * n. Что вернёт вызов f(5)? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-extra-026",
+      "lesson": "9algo-01-performers",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Опиши вспомогательный алгоритм — функцию площадь(a, b), которая возвращает площадь прямоугольника, и выведи площадь для 3 и 4.",
+      "template": "def ploshchad(a, b):\n    return ...\n\nprint(ploshchad(3, 4))"
+    },
     {
       "id": "inf-9-arr-001",
       "lesson": "9arr-01-basics",
@@ -17,16 +234,16 @@
           "text": "3"
         },
         {
-          "id": "B",
-          "text": "7"
+          "id": "D",
+          "text": "0"
         },
         {
           "id": "C",
           "text": "5"
         },
         {
-          "id": "D",
-          "text": "0"
+          "id": "B",
+          "text": "7"
         }
       ]
     },
@@ -47,6 +264,184 @@
       "base": 10
     },
     {
+      "id": "inf-9-arr-006",
+      "lesson": "9arr-01-basics",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найдите сумму чётных чисел списка [2, 5, 8] и выведите её.",
+      "template": "# Допиши код: сумма чётных [2, 5, 8]\ns = 0\n..."
+    },
+    {
+      "id": "inf-9-arr-009",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найдите среднее чисел [4, 6, 8]. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-010",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен len([1, 2, 3])? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-011",
+      "lesson": "9arr-01-basics",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что получится в списке после [i*i for i in range(5)]?",
+      "options": [
+        {
+          "id": "A",
+          "text": "[0, 1, 4, 9, 16]"
+        },
+        {
+          "id": "C",
+          "text": "[0, 1, 2, 3, 4]"
+        },
+        {
+          "id": "D",
+          "text": "[5, 5, 5, 5, 5]"
+        },
+        {
+          "id": "B",
+          "text": "[1, 4, 9, 16, 25]"
+        }
+      ]
+    },
+    {
+      "id": "inf-9-arr-012",
+      "lesson": "9arr-01-basics",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Заполни список пятью первыми нечётными числами по формуле (append в цикле) и выведи их через пробел.",
+      "template": "c = []\nfor i in range(5):\n    c.append(...)"
+    },
+    {
+      "id": "inf-9-arr-029",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равен элемент с индексом 2? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-013",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Найдите сумму элементов списка [12, 7, 25, 3, 18, 9]. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-014",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Сколько чисел в списке [12, 7, 25, 3, 18, 9] больше 10? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-015",
+      "lesson": "9arr-02-aggregates",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "За один проход по списку [-3, 5, -1, 8, 0] найди сумму положительных чисел и их количество. Выведи сумму и количество через пробел.",
+      "template": "a = [-3, 5, -1, 8, 0]\ns = 0\nk = 0\nfor x in a:\n    if x > 0:\n        ...\nprint(s, k)"
+    },
+    {
+      "id": "inf-9-arr-030",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 3, 8, 2, 5. Чему равна сумма элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-031",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 3, 8, 2, 5. Сколько в нём элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-032",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 2, 4, 6. Чему равно среднее арифметическое? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-033",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 3, 8, 2, 5. Чему равно произведение элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-034",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 7, 2, 9, 4. Чему равна сумма чётных элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-035",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 7, 2, 9, 4, 6. Сколько элементов больше 5? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-036",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 7, 2, 9, 4, 6. Чему равна разность суммы всех элементов и суммы элементов больше 5? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-037",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 3, 5, 9. Среднее равно 5.666666666666667. Сколько элементов строго меньше среднего? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-038",
+      "lesson": "9arr-02-aggregates",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Массив: 3, 5, 9, 1. Верно ли, что среднее арифметическое равно сумме, делённой на количество элементов?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Нет, среднее считается по максимуму"
+        },
+        {
+          "id": "D",
+          "text": "Да, но только для чётных массивов"
+        },
+        {
+          "id": "A",
+          "text": "Да, это определение среднего арифметического"
+        },
+        {
+          "id": "C",
+          "text": "Нет, среднее равно половине суммы"
+        }
+      ]
+    },
+    {
       "id": "inf-9-arr-004",
       "lesson": "9arr-02-search",
       "type": "single_choice",
@@ -54,20 +449,20 @@
       "prompt": "С чего начинаем поиск максимума (чемпион)?",
       "options": [
         {
-          "id": "A",
-          "text": "С первого элемента"
-        },
-        {
-          "id": "B",
-          "text": "С нуля"
+          "id": "D",
+          "text": "Со ста"
         },
         {
           "id": "C",
           "text": "С последнего"
         },
         {
-          "id": "D",
-          "text": "Со ста"
+          "id": "B",
+          "text": "С нуля"
+        },
+        {
+          "id": "A",
+          "text": "С первого элемента"
         }
       ]
     },
@@ -75,17 +470,9 @@
       "id": "inf-9-arr-005",
       "lesson": "9arr-02-search",
       "type": "code_run",
-      "points": 3,
+      "points": 2,
       "prompt": "Найдите максимум списка [3, 7, 5] циклом (без max) и выведите его.",
       "template": "# Допиши код: максимум [3, 7, 5]\na = [3, 7, 5]\n..."
-    },
-    {
-      "id": "inf-9-arr-006",
-      "lesson": "9arr-01-basics",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Найдите сумму чётных чисел списка [2, 5, 8] и выведите её.",
-      "template": "# Допиши код: сумма чётных [2, 5, 8]\ns = 0\n..."
     },
     {
       "id": "inf-9-arr-007",
@@ -107,34 +494,1652 @@
           "text": "Номер элемента-чемпиона"
         },
         {
-          "id": "B",
-          "text": "Само число-чемпион"
-        },
-        {
           "id": "C",
           "text": "Длину списка"
         },
         {
           "id": "D",
           "text": "Сумму"
+        },
+        {
+          "id": "B",
+          "text": "Само число-чемпион"
         }
       ]
     },
     {
-      "id": "inf-9-arr-009",
-      "lesson": "9arr-01-basics",
+      "id": "inf-9-arr-016",
+      "lesson": "9arr-02-search",
       "type": "numeric_base",
-      "points": 1,
-      "prompt": "Найдите среднее чисел [4, 6, 8]. Запишите только число.",
+      "points": 3,
+      "prompt": "Массив из 1000 элементов отсортирован. Сколько шагов потребуется бинарному поиску, чтобы гарантированно найти нужное значение? Запишите только число.",
       "base": 10
     },
     {
-      "id": "inf-9-arr-010",
-      "lesson": "9arr-01-basics",
+      "id": "inf-9-arr-039",
+      "lesson": "9arr-02-search",
       "type": "numeric_base",
       "points": 1,
-      "prompt": "Чему равен len([1, 2, 3])? Запишите только число.",
+      "prompt": "Массив: 4, 7, 2, 9. На каком по счёту месте (с единицы) стоит число 2? Запишите только число.",
       "base": 10
+    },
+    {
+      "id": "inf-9-arr-040",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько элементов нужно сравнить с числом 7 при линейном поиске, чтобы найти первое совпадение? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-041",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько чисел в массиве стоят левее числа 9? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-042",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько элементов нужно проверить, чтобы убедиться, что числа 5 в массиве нет? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-043",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9, 7. Число 7 встречается сколько раз? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-044",
+      "lesson": "9arr-02-search",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9, 7. Чему равна сумма элементов, стоящих левее числа 7? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-045",
+      "lesson": "9arr-02-search",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Массив: 4, 7, 2, 9. Отсортируем его по возрастанию. Сколько шагов потребуется двоичному поиску числа 9 в отсортированном массиве, если каждый раз берётся средний элемент? Запишите только число.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        }
+      ]
+    },
+    {
+      "id": "inf-9-arr-017",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен максимум списка [12, -5, 23, -1, 8]? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-018",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В списке [12, -5, 23, -1, 8] на каком индексе (с нуля) находится максимум? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-019",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Программа ищет максимум списка [-5, -2, -9], но чемпион задан числом m = 0. Что она выведет? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-046",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равен максимум массива? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-047",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равен минимум массива? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-048",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. На каком по счёту месте (с единицы) стоит максимум? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-049",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Размах массива равен 7. Чему он равен? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-050",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9. Что будет вторым по величине после удаления одного максимального элемента 9? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-051",
+      "lesson": "9arr-03-extremes",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равна разность индексов максимума и минимума (индексы с нуля)? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-020",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько сравнений сделает сортировка выбором для массива из 8 элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-021",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Какое число в списке [5, 2, 8, 1] является вторым по величине? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-022",
+      "lesson": "9arr-04-sort",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Отсортируй список [5, 2, 8] по возрастанию сортировкой выбором (два вложенных цикла, без sorted) и выведи результат.",
+      "template": "a = [5, 2, 8]\nfor i in range(len(a)):\n    imin = i\n    for j in range(i + 1, len(a)):\n        ...\nprint(a)"
+    },
+    {
+      "id": "inf-9-arr-052",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Какое число окажется на первом месте после сортировки по возрастанию? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-053",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Какое число окажется на последнем месте после сортировки по возрастанию? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-054",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько обменов сделает сортировка выбором, если на каждом шаге меняются местами найденный минимум и элемент на текущей позиции? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-055",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько элементов окажется на своих местах, если отсортировать его по возрастанию? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-056",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9. Сколько шагов сортировки выбором нужно, чтобы полностью отсортировать массив из 4 элементов? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-057",
+      "lesson": "9arr-04-sort",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Массив: 4, 7, 2, 9. Какое число окажется первым, если отсортировать его по убыванию? Запишите только число.",
+      "base": 10
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-9-arr-019",
+        "inf-9-arr-008",
+        "inf-9-extra-024",
+        "inf-9-arr-027",
+        "inf-9-arr-032",
+        "inf-9-arr-021",
+        "inf-9-arr-020",
+        "inf-9-arr-007",
+        "inf-9-arr-042",
+        "inf-9-arr-002",
+        "inf-9-arr-016",
+        "inf-9-arr-033",
+        "inf-9-extra-026",
+        "inf-9-arr-006",
+        "inf-9-arr-012",
+        "inf-9-arr-018",
+        "inf-9-arr-054",
+        "inf-9-arr-022",
+        "inf-9-arr-038",
+        "inf-9-arr-036"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-024": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-9-arr-012",
+        "inf-9-extra-026",
+        "inf-9-arr-028",
+        "inf-9-arr-005",
+        "inf-9-arr-015",
+        "inf-9-arr-050",
+        "inf-9-arr-045",
+        "inf-9-arr-022",
+        "inf-9-arr-003",
+        "inf-9-arr-020",
+        "inf-9-arr-021",
+        "inf-9-arr-010",
+        "inf-9-arr-049",
+        "inf-9-arr-031",
+        "inf-9-arr-029",
+        "inf-9-arr-042",
+        "inf-9-arr-035",
+        "inf-9-arr-040",
+        "inf-9-arr-033",
+        "inf-9-arr-019"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-9-arr-045",
+        "inf-9-arr-032",
+        "inf-9-arr-013",
+        "inf-9-arr-019",
+        "inf-9-arr-044",
+        "inf-9-arr-002",
+        "inf-9-arr-015",
+        "inf-9-extra-026",
+        "inf-9-extra-025",
+        "inf-9-arr-011",
+        "inf-9-arr-009",
+        "inf-9-arr-053",
+        "inf-9-arr-057",
+        "inf-9-arr-012",
+        "inf-9-arr-020",
+        "inf-9-arr-036",
+        "inf-9-arr-040",
+        "inf-9-arr-022",
+        "inf-9-arr-039",
+        "inf-9-arr-018"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-011": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-9-arr-041",
+        "inf-9-arr-016",
+        "inf-9-arr-057",
+        "inf-9-arr-018",
+        "inf-9-arr-022",
+        "inf-9-extra-025",
+        "inf-9-arr-012",
+        "inf-9-arr-043",
+        "inf-9-arr-031",
+        "inf-9-arr-008",
+        "inf-9-arr-054",
+        "inf-9-arr-032",
+        "inf-9-arr-025",
+        "inf-9-arr-009",
+        "inf-9-arr-006",
+        "inf-9-arr-015",
+        "inf-9-arr-053",
+        "inf-9-arr-019",
+        "inf-9-extra-026",
+        "inf-9-arr-014"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-9-arr-045",
+        "inf-9-arr-054",
+        "inf-9-arr-030",
+        "inf-9-arr-048",
+        "inf-9-extra-025",
+        "inf-9-arr-008",
+        "inf-9-arr-036",
+        "inf-9-arr-015",
+        "inf-9-arr-005",
+        "inf-9-arr-012",
+        "inf-9-arr-023",
+        "inf-9-arr-006",
+        "inf-9-extra-026",
+        "inf-9-arr-056",
+        "inf-9-arr-033",
+        "inf-9-arr-022",
+        "inf-9-arr-019",
+        "inf-9-arr-004",
+        "inf-9-arr-051",
+        "inf-9-arr-024"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-arr-004": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-9-arr-022",
+        "inf-9-arr-002",
+        "inf-9-arr-012",
+        "inf-9-arr-036",
+        "inf-9-arr-046",
+        "inf-9-arr-041",
+        "inf-9-arr-013",
+        "inf-9-arr-001",
+        "inf-9-arr-047",
+        "inf-9-arr-019",
+        "inf-9-arr-034",
+        "inf-9-extra-026",
+        "inf-9-arr-050",
+        "inf-9-arr-039",
+        "inf-9-arr-005",
+        "inf-9-arr-011",
+        "inf-9-arr-015",
+        "inf-9-extra-025",
+        "inf-9-arr-056",
+        "inf-9-arr-045"
+      ],
+      "orders": {
+        "inf-9-arr-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-arr-011": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-9-arr-003",
+        "inf-9-extra-026",
+        "inf-9-arr-019",
+        "inf-9-arr-015",
+        "inf-9-arr-006",
+        "inf-9-arr-034",
+        "inf-9-arr-001",
+        "inf-9-arr-052",
+        "inf-9-arr-005",
+        "inf-9-arr-047",
+        "inf-9-arr-041",
+        "inf-9-arr-037",
+        "inf-9-arr-050",
+        "inf-9-arr-051",
+        "inf-9-extra-024",
+        "inf-9-arr-045",
+        "inf-9-arr-012",
+        "inf-9-arr-022",
+        "inf-9-arr-040",
+        "inf-9-arr-033"
+      ],
+      "orders": {
+        "inf-9-arr-001": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-024": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-9-arr-015",
+        "inf-9-arr-014",
+        "inf-9-extra-025",
+        "inf-9-arr-019",
+        "inf-9-arr-008",
+        "inf-9-extra-026",
+        "inf-9-arr-045",
+        "inf-9-arr-052",
+        "inf-9-arr-012",
+        "inf-9-arr-005",
+        "inf-9-arr-022",
+        "inf-9-arr-010",
+        "inf-9-arr-027",
+        "inf-9-arr-001",
+        "inf-9-arr-033",
+        "inf-9-arr-042",
+        "inf-9-arr-017",
+        "inf-9-arr-013",
+        "inf-9-arr-057",
+        "inf-9-arr-056"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-9-arr-039",
+        "inf-9-arr-008",
+        "inf-9-arr-028",
+        "inf-9-arr-022",
+        "inf-9-arr-012",
+        "inf-9-arr-057",
+        "inf-9-arr-027",
+        "inf-9-arr-047",
+        "inf-9-arr-050",
+        "inf-9-arr-038",
+        "inf-9-extra-026",
+        "inf-9-arr-007",
+        "inf-9-arr-019",
+        "inf-9-arr-037",
+        "inf-9-arr-016",
+        "inf-9-arr-025",
+        "inf-9-arr-030",
+        "inf-9-arr-023",
+        "inf-9-arr-013",
+        "inf-9-arr-055"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-9-arr-014",
+        "inf-9-arr-015",
+        "inf-9-arr-039",
+        "inf-9-arr-026",
+        "inf-9-arr-034",
+        "inf-9-arr-022",
+        "inf-9-arr-028",
+        "inf-9-arr-012",
+        "inf-9-arr-040",
+        "inf-9-arr-021",
+        "inf-9-extra-026",
+        "inf-9-arr-043",
+        "inf-9-arr-020",
+        "inf-9-arr-016",
+        "inf-9-arr-006",
+        "inf-9-arr-050",
+        "inf-9-arr-031",
+        "inf-9-arr-019",
+        "inf-9-arr-046",
+        "inf-9-arr-024"
+      ],
+      "orders": {
+        "inf-9-arr-024": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-9-arr-049",
+        "inf-9-arr-042",
+        "inf-9-arr-045",
+        "inf-9-arr-017",
+        "inf-9-arr-039",
+        "inf-9-arr-031",
+        "inf-9-arr-024",
+        "inf-9-arr-005",
+        "inf-9-arr-050",
+        "inf-9-arr-033",
+        "inf-9-arr-019",
+        "inf-9-arr-051",
+        "inf-9-arr-036",
+        "inf-9-arr-002",
+        "inf-9-arr-006",
+        "inf-9-arr-028",
+        "inf-9-extra-026",
+        "inf-9-arr-012",
+        "inf-9-arr-022",
+        "inf-9-arr-015"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-9-arr-016",
+        "inf-9-arr-043",
+        "inf-9-arr-021",
+        "inf-9-arr-018",
+        "inf-9-arr-049",
+        "inf-9-arr-042",
+        "inf-9-arr-026",
+        "inf-9-arr-032",
+        "inf-9-arr-038",
+        "inf-9-arr-028",
+        "inf-9-arr-022",
+        "inf-9-arr-046",
+        "inf-9-arr-019",
+        "inf-9-arr-030",
+        "inf-9-arr-012",
+        "inf-9-arr-041",
+        "inf-9-arr-037",
+        "inf-9-arr-027",
+        "inf-9-arr-010",
+        "inf-9-extra-026"
+      ],
+      "orders": {
+        "inf-9-arr-038": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-9-arr-039",
+        "inf-9-arr-034",
+        "inf-9-arr-054",
+        "inf-9-arr-012",
+        "inf-9-extra-024",
+        "inf-9-arr-016",
+        "inf-9-arr-026",
+        "inf-9-arr-036",
+        "inf-9-extra-026",
+        "inf-9-arr-028",
+        "inf-9-arr-033",
+        "inf-9-arr-022",
+        "inf-9-arr-050",
+        "inf-9-arr-019",
+        "inf-9-arr-056",
+        "inf-9-arr-003",
+        "inf-9-arr-015",
+        "inf-9-arr-044",
+        "inf-9-arr-008",
+        "inf-9-arr-049"
+      ],
+      "orders": {
+        "inf-9-extra-024": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-9-arr-012",
+        "inf-9-arr-046",
+        "inf-9-arr-034",
+        "inf-9-arr-039",
+        "inf-9-extra-026",
+        "inf-9-arr-015",
+        "inf-9-arr-022",
+        "inf-9-arr-004",
+        "inf-9-arr-018",
+        "inf-9-arr-006",
+        "inf-9-arr-053",
+        "inf-9-arr-037",
+        "inf-9-arr-013",
+        "inf-9-arr-050",
+        "inf-9-arr-045",
+        "inf-9-arr-007",
+        "inf-9-arr-025",
+        "inf-9-extra-025",
+        "inf-9-arr-019",
+        "inf-9-arr-026"
+      ],
+      "orders": {
+        "inf-9-arr-004": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-9-arr-019",
+        "inf-9-arr-022",
+        "inf-9-arr-007",
+        "inf-9-arr-018",
+        "inf-9-arr-042",
+        "inf-9-arr-010",
+        "inf-9-arr-009",
+        "inf-9-arr-012",
+        "inf-9-extra-025",
+        "inf-9-arr-016",
+        "inf-9-arr-015",
+        "inf-9-extra-026",
+        "inf-9-arr-031",
+        "inf-9-arr-003",
+        "inf-9-arr-048",
+        "inf-9-arr-014",
+        "inf-9-arr-041",
+        "inf-9-arr-047",
+        "inf-9-arr-033",
+        "inf-9-arr-021"
+      ],
+      "orders": {},
+      "max_score": 38
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-9-arr-016",
+        "inf-9-arr-046",
+        "inf-9-arr-003",
+        "inf-9-arr-051",
+        "inf-9-arr-042",
+        "inf-9-arr-026",
+        "inf-9-arr-034",
+        "inf-9-arr-012",
+        "inf-9-arr-022",
+        "inf-9-arr-005",
+        "inf-9-arr-052",
+        "inf-9-arr-015",
+        "inf-9-arr-039",
+        "inf-9-arr-001",
+        "inf-9-arr-014",
+        "inf-9-arr-030",
+        "inf-9-extra-026",
+        "inf-9-arr-019",
+        "inf-9-extra-025",
+        "inf-9-arr-021"
+      ],
+      "orders": {
+        "inf-9-arr-001": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-9-arr-012",
+        "inf-9-arr-028",
+        "inf-9-arr-019",
+        "inf-9-arr-043",
+        "inf-9-arr-025",
+        "inf-9-arr-042",
+        "inf-9-arr-013",
+        "inf-9-arr-026",
+        "inf-9-arr-036",
+        "inf-9-arr-047",
+        "inf-9-arr-027",
+        "inf-9-arr-031",
+        "inf-9-arr-057",
+        "inf-9-arr-022",
+        "inf-9-arr-004",
+        "inf-9-arr-038",
+        "inf-9-arr-016",
+        "inf-9-extra-026",
+        "inf-9-arr-050",
+        "inf-9-arr-053"
+      ],
+      "orders": {
+        "inf-9-arr-004": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-9-extra-024",
+        "inf-9-arr-031",
+        "inf-9-arr-016",
+        "inf-9-arr-040",
+        "inf-9-arr-042",
+        "inf-9-arr-013",
+        "inf-9-arr-015",
+        "inf-9-arr-012",
+        "inf-9-arr-049",
+        "inf-9-arr-056",
+        "inf-9-arr-003",
+        "inf-9-arr-022",
+        "inf-9-arr-019",
+        "inf-9-arr-023",
+        "inf-9-extra-026",
+        "inf-9-arr-014",
+        "inf-9-extra-025",
+        "inf-9-arr-048",
+        "inf-9-arr-050",
+        "inf-9-arr-043"
+      ],
+      "orders": {
+        "inf-9-extra-024": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-9-arr-055",
+        "inf-9-arr-016",
+        "inf-9-extra-026",
+        "inf-9-arr-011",
+        "inf-9-arr-005",
+        "inf-9-arr-002",
+        "inf-9-arr-021",
+        "inf-9-arr-024",
+        "inf-9-arr-053",
+        "inf-9-arr-032",
+        "inf-9-arr-042",
+        "inf-9-arr-012",
+        "inf-9-arr-027",
+        "inf-9-arr-008",
+        "inf-9-arr-013",
+        "inf-9-arr-019",
+        "inf-9-arr-056",
+        "inf-9-arr-038",
+        "inf-9-arr-022",
+        "inf-9-arr-035"
+      ],
+      "orders": {
+        "inf-9-arr-011": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-9-arr-011",
+        "inf-9-extra-026",
+        "inf-9-arr-045",
+        "inf-9-arr-002",
+        "inf-9-arr-042",
+        "inf-9-arr-022",
+        "inf-9-arr-029",
+        "inf-9-arr-056",
+        "inf-9-arr-053",
+        "inf-9-arr-019",
+        "inf-9-arr-057",
+        "inf-9-arr-030",
+        "inf-9-arr-043",
+        "inf-9-arr-012",
+        "inf-9-arr-037",
+        "inf-9-arr-032",
+        "inf-9-arr-041",
+        "inf-9-arr-054",
+        "inf-9-arr-038",
+        "inf-9-arr-006"
+      ],
+      "orders": {
+        "inf-9-arr-011": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-9-arr-046",
+        "inf-9-arr-019",
+        "inf-9-arr-011",
+        "inf-9-arr-015",
+        "inf-9-arr-050",
+        "inf-9-extra-026",
+        "inf-9-arr-045",
+        "inf-9-arr-004",
+        "inf-9-arr-013",
+        "inf-9-arr-022",
+        "inf-9-arr-018",
+        "inf-9-arr-007",
+        "inf-9-arr-035",
+        "inf-9-arr-012",
+        "inf-9-arr-024",
+        "inf-9-arr-048",
+        "inf-9-extra-025",
+        "inf-9-arr-032",
+        "inf-9-arr-040",
+        "inf-9-arr-010"
+      ],
+      "orders": {
+        "inf-9-arr-011": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-004": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-9-extra-025",
+        "inf-9-arr-038",
+        "inf-9-arr-005",
+        "inf-9-arr-003",
+        "inf-9-arr-040",
+        "inf-9-arr-045",
+        "inf-9-arr-023",
+        "inf-9-arr-035",
+        "inf-9-arr-033",
+        "inf-9-arr-056",
+        "inf-9-arr-012",
+        "inf-9-arr-041",
+        "inf-9-arr-026",
+        "inf-9-arr-013",
+        "inf-9-arr-019",
+        "inf-9-arr-022",
+        "inf-9-arr-047",
+        "inf-9-arr-057",
+        "inf-9-arr-052",
+        "inf-9-extra-026"
+      ],
+      "orders": {
+        "inf-9-arr-038": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-9-arr-004",
+        "inf-9-arr-009",
+        "inf-9-arr-048",
+        "inf-9-arr-019",
+        "inf-9-arr-021",
+        "inf-9-arr-032",
+        "inf-9-arr-022",
+        "inf-9-arr-024",
+        "inf-9-arr-038",
+        "inf-9-arr-052",
+        "inf-9-arr-003",
+        "inf-9-extra-026",
+        "inf-9-arr-016",
+        "inf-9-arr-044",
+        "inf-9-arr-056",
+        "inf-9-arr-042",
+        "inf-9-arr-031",
+        "inf-9-arr-035",
+        "inf-9-extra-025",
+        "inf-9-arr-012"
+      ],
+      "orders": {
+        "inf-9-arr-004": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-9-arr-049",
+        "inf-9-arr-032",
+        "inf-9-arr-022",
+        "inf-9-arr-012",
+        "inf-9-arr-056",
+        "inf-9-arr-004",
+        "inf-9-arr-042",
+        "inf-9-extra-026",
+        "inf-9-arr-019",
+        "inf-9-arr-045",
+        "inf-9-arr-006",
+        "inf-9-arr-038",
+        "inf-9-arr-002",
+        "inf-9-arr-033",
+        "inf-9-arr-024",
+        "inf-9-arr-044",
+        "inf-9-arr-052",
+        "inf-9-arr-037",
+        "inf-9-arr-011",
+        "inf-9-arr-018"
+      ],
+      "orders": {
+        "inf-9-arr-004": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-011": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-9-arr-051",
+        "inf-9-arr-036",
+        "inf-9-arr-039",
+        "inf-9-arr-057",
+        "inf-9-arr-022",
+        "inf-9-arr-002",
+        "inf-9-arr-030",
+        "inf-9-arr-003",
+        "inf-9-arr-044",
+        "inf-9-extra-026",
+        "inf-9-arr-028",
+        "inf-9-arr-012",
+        "inf-9-arr-032",
+        "inf-9-arr-016",
+        "inf-9-arr-038",
+        "inf-9-arr-052",
+        "inf-9-arr-010",
+        "inf-9-arr-046",
+        "inf-9-arr-019",
+        "inf-9-arr-042"
+      ],
+      "orders": {
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-9-arr-017",
+        "inf-9-arr-008",
+        "inf-9-extra-026",
+        "inf-9-arr-031",
+        "inf-9-arr-039",
+        "inf-9-arr-055",
+        "inf-9-arr-003",
+        "inf-9-arr-029",
+        "inf-9-arr-019",
+        "inf-9-arr-036",
+        "inf-9-arr-028",
+        "inf-9-arr-012",
+        "inf-9-arr-038",
+        "inf-9-arr-056",
+        "inf-9-arr-022",
+        "inf-9-arr-044",
+        "inf-9-arr-034",
+        "inf-9-arr-016",
+        "inf-9-arr-010",
+        "inf-9-arr-057"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-9-arr-018",
+        "inf-9-arr-012",
+        "inf-9-arr-050",
+        "inf-9-arr-007",
+        "inf-9-extra-026",
+        "inf-9-arr-045",
+        "inf-9-arr-022",
+        "inf-9-arr-054",
+        "inf-9-arr-024",
+        "inf-9-arr-002",
+        "inf-9-extra-025",
+        "inf-9-arr-042",
+        "inf-9-arr-006",
+        "inf-9-arr-036",
+        "inf-9-arr-019",
+        "inf-9-arr-004",
+        "inf-9-arr-032",
+        "inf-9-arr-031",
+        "inf-9-arr-049",
+        "inf-9-arr-015"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-004": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-9-extra-026",
+        "inf-9-arr-018",
+        "inf-9-arr-040",
+        "inf-9-arr-054",
+        "inf-9-arr-052",
+        "inf-9-arr-038",
+        "inf-9-arr-056",
+        "inf-9-arr-003",
+        "inf-9-arr-030",
+        "inf-9-arr-010",
+        "inf-9-arr-019",
+        "inf-9-arr-012",
+        "inf-9-arr-026",
+        "inf-9-arr-008",
+        "inf-9-arr-045",
+        "inf-9-arr-043",
+        "inf-9-arr-028",
+        "inf-9-arr-037",
+        "inf-9-arr-032",
+        "inf-9-arr-022"
+      ],
+      "orders": {
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-045": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-9-arr-050",
+        "inf-9-arr-034",
+        "inf-9-arr-044",
+        "inf-9-arr-051",
+        "inf-9-extra-024",
+        "inf-9-arr-049",
+        "inf-9-arr-024",
+        "inf-9-arr-012",
+        "inf-9-arr-006",
+        "inf-9-arr-022",
+        "inf-9-extra-025",
+        "inf-9-extra-026",
+        "inf-9-arr-019",
+        "inf-9-arr-041",
+        "inf-9-arr-033",
+        "inf-9-arr-042",
+        "inf-9-arr-035",
+        "inf-9-arr-038",
+        "inf-9-arr-055",
+        "inf-9-arr-016"
+      ],
+      "orders": {
+        "inf-9-extra-024": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-9-arr-045",
+        "inf-9-arr-019",
+        "inf-9-arr-022",
+        "inf-9-arr-033",
+        "inf-9-extra-025",
+        "inf-9-arr-010",
+        "inf-9-arr-008",
+        "inf-9-arr-001",
+        "inf-9-arr-003",
+        "inf-9-arr-021",
+        "inf-9-arr-052",
+        "inf-9-arr-056",
+        "inf-9-arr-039",
+        "inf-9-extra-026",
+        "inf-9-arr-038",
+        "inf-9-arr-017",
+        "inf-9-arr-043",
+        "inf-9-arr-012",
+        "inf-9-arr-032",
+        "inf-9-arr-036"
+      ],
+      "orders": {
+        "inf-9-arr-045": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-arr-001": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-arr-038": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
     }
   ]
 }

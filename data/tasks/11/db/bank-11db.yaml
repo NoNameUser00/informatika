@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-keys], meta: [plan-actions] }
   prompt: "Что годится в первичные ключи таблицы учеников?"
-  student_view: { options: [{ id: A, text: "Номер личного дела" }, { id: B, text: "Имя" }, { id: C, text: "Рост" }, { id: D, text: "Любимый цвет" }] }
+  student_view: { options: [{ id: D, text: "Любимый цвет" }, { id: B, text: "Имя" }, { id: C, text: "Рост" }, { id: A, text: "Номер личного дела" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Уникален и неизменен" }
+  teacher_only: { answer: D, explanation: "Уникален и неизменен" }
 
 - id: inf-11-db-002
   class: 11
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
   prompt: "Как связать «Ученики» и «Классы» без дублей?"
-  student_view: { options: [{ id: A, text: "Внешним ключом на справочник" }, { id: B, text: "Копировать всё в каждую строку" }, { id: C, text: "Удалить классы" }, { id: D, text: "Никак" }] }
+  student_view: { options: [{ id: D, text: "Никак" }, { id: C, text: "Удалить классы" }, { id: A, text: "Внешним ключом на справочник" }, { id: B, text: "Копировать всё в каждую строку" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Ссылка вместо копипасты" }
+  teacher_only: { answer: C, explanation: "Ссылка вместо копипасты" }
 
 - id: inf-11-db-004
   class: 11
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
   prompt: "Нужны фамилии всех с баллом выше 80. Что это?"
-  student_view: { options: [{ id: A, text: "Запрос на выборку" }, { id: B, text: "Удаление таблицы" }, { id: C, text: "Смена пароля" }, { id: D, text: "Архивация" }] }
+  student_view: { options: [{ id: B, text: "Удаление таблицы" }, { id: C, text: "Смена пароля" }, { id: A, text: "Запрос на выборку" }, { id: D, text: "Архивация" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Выборка: поля + условие" }
+  teacher_only: { answer: C, explanation: "Выборка: поля + условие" }
 
 - id: inf-11-db-005
   class: 11
@@ -80,6 +80,267 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
   prompt: "Чем опасна сортировка одного столбца?"
-  student_view: { options: [{ id: A, text: "Строки разъедутся" }, { id: B, text: "Ничем" }, { id: C, text: "Удалит данные" }, { id: D, text: "Сломает монитор" }] }
+  student_view: { options: [{ id: A, text: "Строки разъедутся" }, { id: C, text: "Удалит данные" }, { id: D, text: "Сломает монитор" }, { id: B, text: "Ничем" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Сортировать весь диапазон" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
+
+- id: inf-11-db-006
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Нормальные формы"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-normal], meta: [plan-actions] }
+  prompt: "Установите соответствие: нормальная форма — её требование."
+  student_view: { left: ["Первая нормальная форма", "Вторая нормальная форма", "Третья нормальная форма"], right: ["в одной ячейке одно значение, нет повторяющихся групп", "каждое неключевое поле зависит только от всего ключа, а не от его части", "нет транзитивных зависимостей: неключевые поля зависят только от ключа"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Первая нормальная форма": "в одной ячейке одно значение, нет повторяющихся групп", "Вторая нормальная форма": "каждое неключевое поле зависит только от всего ключа, а не от его части", "Третья нормальная форма": "нет транзитивных зависимостей: неключевые поля зависят только от ключа" }, explanation: "Нормализация устраняет повторы: факты должны зависеть только от ключа. Первая нормальная форма = в одной ячейке одно значение, нет повторяющихся групп; Вторая нормальная форма = каждое неключевое поле зависит только от всего ключа, а не от его части; Третья нормальная форма = нет транзитивных зависимостей: неключевые поля зависят только от ключа" }
+
+- id: inf-11-db-007
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Сортировка в SQL"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Какое ключевое слово SQL сортирует результат запроса?"
+  student_view: { options: [{ id: A, text: "ORDER BY" }, { id: C, text: "FROM" }, { id: B, text: "WHERE" }, { id: D, text: "SELECT" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "ORDER BY сортирует строки результата (ASC — по возрастанию, DESC — по убыванию); WHERE задаёт условие отбора, а SELECT и FROM выбирают столбцы и таблицу." }
+
+- id: inf-11-db-008
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Число строк выборки"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Ученики» (№, фамилия, класс, балл): 1 Мария 11А 85; 2 Пётр 11А 74; 3 Света 10Б 91; 4 Коля 11А 68; 5 Аня 11Б 83. Сколько строк вернёт запрос SELECT * FROM Ученики WHERE класс = '11А' AND балл > 70? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Условию удовлетворяют Мария (85) и Пётр (74): у Коли класс подходит, но балл 68 не больше 70." }
+
+- id: inf-11-db-009
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Запрос с JOIN"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Блюда»: код 1 — Борщ, код 2 — Котлета, код 3 — Каша. Таблица «Поставки»: (№ дела 1, код 1, 2 шт), (№ дела 1, код 2, 1 шт), (№ дела 2, код 3, 5 шт), (№ дела 2, код 1, 3 шт). Сколько строк вернёт запрос SELECT ученики.фамилия, блюда.название FROM поставки JOIN блюда ON поставки.код = блюда.код WHERE поставки.количество > 1? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Соединение по внешнему ключу «код» даёт 4 строки — все коды найдены; условие «количество > 1» оставляет 3 из них." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank2.mjs ====
+
+- id: inf-11-db-010
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Группировка строк"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Нужно узнать, сколько записей у каждого класса. Какое ключевое слово группирует строки так, чтобы для каждой группы можно было применить COUNT или SUM?"
+  student_view: { options: [{ id: B, text: "GROUP BY — группирует строки по значениям поля, чтобы посчитать для каждой группы" }, { id: A, text: "ORDER BY — группирует строки по значениям поля" }, { id: D, text: "FROM — группирует строки по значениям поля" }, { id: C, text: "WHERE — группирует строки по значениям поля" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "GROUP BY собирает строки с одинаковым значением поля в группу, после чего COUNT или SUM считают по каждой группе отдельно. ORDER BY только меняет порядок строк, а WHERE и вовсе ничего не группирует." }
+
+- id: inf-11-db-011
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Число строк по условию"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Оценки» (№ ученика, предмет, балл): 1 Математика 85; 1 Физика 74; 2 Математика 91; 2 Физика 68; 3 Математика 77; 3 Физика 88; 4 Математика 64; 4 Физика 95. Сколько строк вернёт запрос SELECT * FROM Оценки WHERE балл >= 80? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Условию «балл >= 80» удовлетворяют строки № 1, Математика — 85; № 2, Математика — 91; № 3, Физика — 88; № 4, Физика — 95 — всего 4. Сравнение нестрогое: 80 входит, а 64, 68 и 74 отпадают." }
+
+- id: inf-11-db-012
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Сумма по условию"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Склад» (код, название, количество): 1 Тетрадь 120; 2 Ручка 300; 3 Тетрадь 80; 4 Карандаш 250. Чему равен результат запроса SELECT SUM(количество) FROM Склад WHERE количество >= 100? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [670], answer_text: "670", explanation: "WHERE отбирает строки с количеством не меньше 100: Тетрадь — 120; Ручка — 300; Карандаш — 250. Сумма: 120 + 300 + 250 = 670. Порядок работы такой: сначала условие WHERE отбирает строки, потом SUM считает только по ним." }
+
+- id: inf-11-db-013
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Соединение с двумя условиями"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Блюда»: код 1 — Борщ, код 2 — Котлета, код 3 — Каша. Таблица «Поставки»: (ученик 1, код 1, 2 шт); (ученик 1, код 2, 1 шт); (ученик 2, код 3, 5 шт); (ученик 2, код 1, 3 шт); (ученик 3, код 1, 4 шт); (ученик 3, код 2, 2 шт). Сколько строк вернёт запрос SELECT * FROM Поставки JOIN Блюда ON Поставки.код = Блюда.код WHERE Поставки.количество > 2 AND Блюда.код < 3? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Соединение по внешнему ключу «код» находит блюдо для каждой из 6 строк поставок — все коды есть в справочнике. Дальше работают оба условия: количество больше 2 и код меньше 3. Подходят строки ученик 2, Борщ, 3 шт; ученик 3, Борщ, 4 шт — это 2 строки. Условия в WHERE соединяют словом AND, а не запятой." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-algodb-bank3.mjs ====
+
+- id: inf-11-db-014
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Тип связи между таблицами"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
+  prompt: "В школе каждый ученик состоит ровно в одном классе, а в классе учатся несколько учеников. Какой тип связи описывает таблица «Ученики» со справочником «Классы»?"
+  student_view: { options: [{ id: D, text: "Связи нет: две таблицы просто стоят рядом и никак не зависят друг от друга" }, { id: C, text: "Один к одному: каждому ученику соответствует ровно один класс, и наоборот" }, { id: B, text: "Многие ко многим: ученик может состоять сразу в нескольких классах, а класс — включать много учеников" }, { id: A, text: "Один ко многим: каждому ученику соответствует ровно один класс, а в классе может быть много учеников" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Это связь «один ко многим»: со стороны ученика поле «код класса» хранит ссылку на одну строку справочника, а на один класс ссылаются многие строки таблицы учеников. Такой столбец называется внешним ключом. Связь «многие ко многим» потребовала бы отдельной таблицы-перекрёстка, а «один к одному» здесь просто противоречит жизни." }
+
+- id: inf-11-db-015
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Элементы реляционной модели"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-design], meta: [plan-actions] }
+  prompt: "Установите соответствие: элемент реляционной модели — как он устроен на примере школьной базы."
+  student_view: { left: ["Сущность", "Атрибут", "Связь", "Первичный ключ"], right: ["признак, который однозначно выделяет одну строку среди всех остальных строк таблицы", "объект предметной области, которому соответствует строка таблицы: ученик, класс, блюдо", "свойство объекта: номер личного дела, фамилия, код класса", "отношение между сущностями: ученик состоит в классе"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Сущность": "объект предметной области, которому соответствует строка таблицы: ученик, класс, блюдо", "Атрибут": "свойство объекта: номер личного дела, фамилия, код класса", "Связь": "отношение между сущностями: ученик состоит в классе", "Первичный ключ": "признак, который однозначно выделяет одну строку среди всех остальных строк таблицы" }, explanation: "Сущность отвечает на вопрос «что описываем» и превращается в таблицу, атрибут — на вопрос «что о нём знаем» и превращается в столбец. Первичный ключ выделяет строку среди остальных: его значения не повторяются и не меняются. Связь показывает, как таблицы зависят друг от друга, и реализуется внешним ключом. Верно: Сущность = объект предметной области, которому соответствует строка таблицы: ученик, класс, блюдо; Атрибут = свойство объекта: номер личного дела, фамилия, код класса; Связь = отношение между сущностями: ученик состоит в классе; Первичный ключ = признак, который однозначно выделяет одну строку среди всех остальных строк таблицы." }
+
+- id: inf-11-db-016
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Число строк после двух соединений"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
+  prompt: "Таблица «Классы»: код 1 — 11А, код 2 — 11Б, всего 2 строки. Таблица «Ученики»: 30 строк, первые 15 учеников относятся к коду 1, остальные 15 — к коду 2. Таблица «Поставки»: 90 строк, у каждого ученика ровно 3 записи. Сколько строк вернёт запрос SELECT * FROM Классы JOIN Ученики ON Классы.код = Ученики.код_класса JOIN Поставки ON Ученики.номер_дела = Поставки.ученик? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [90], answer_text: "90", explanation: "Первое соединение даёт 30 строк: каждый ученик попадает ровно в одну строку справочника «Классы», дублей не возникает. Второе соединение берёт для каждого ученика все его записи из «Поставок» — по 3, то есть 30 · 3 = 90. Строки не теряются: соединение отбрасывает запись только тогда, когда в справочнике нет подходящего ключа." }
+
+- id: inf-11-db-017
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Составной ключ"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11db-01-databases
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-keys], meta: [plan-actions] }
+  prompt: "Таблица «Посещения» хранит тройки (№ ученика, предмет, дата): (1, «Математика», «02.09»); (1, «Математика», «02.09»); (1, «Физика», «03.09»); (2, «Математика», «02.09»); (2, «Физика», «05.09»); (2, «Физика», «05.09»). Составной первичный ключ образуют все три поля вместе: (№ ученика, предмет, дата). Выведите через пробел два числа: сколько различных составных ключей осталось в таблице и сколько строк-полных повторов пришлось удалить."
+  student_view: { language: python, template: "# Соберите множество составных ключей\nrows = [\n    (1, 'Математика', '02.09'),\n    (1, 'Математика', '02.09'),\n    (1, 'Физика', '03.09'),\n    (2, 'Математика', '02.09'),\n    (2, 'Физика', '05.09'),\n    (2, 'Физика', '05.09'),\n]\nkeys = []\ndups = 0\nfor row in rows:\n    # полный повтор уже встречался?\n    ...\nprint(len(keys), dups)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "rows = [\n    (1, 'Математика', '02.09'),\n    (1, 'Математика', '02.09'),\n    (1, 'Физика', '03.09'),\n    (2, 'Математика', '02.09'),\n    (2, 'Физика', '05.09'),\n    (2, 'Физика', '05.09'),\n]\nkeys = []\ndups = 0\nfor row in rows:\n    if row in keys:\n        dups = dups + 1\n    else:\n        keys.append(row)\nprint(len(keys), dups)", expected_stdout: "4 2", explanation: "По отдельности ни номер ученика, ни предмет, ни дата не дают уникальности: ученик 1 был и на математике, и на физике. Уникальной становится только тройка целиком, поэтому составной ключ даёт 4 различных значений, а 2 полных повтора — это строки, которые база не приняла бы при вставке." }
+
+- id: inf-11-db-018
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Убираем повторы в результате"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Блюдо «Борщ» заказывали четыре раза, и в результате запроса его название встретилось четыре раза подряд. Какое ключевое слово оставит в результате только одно название?"
+  student_view: { options: [{ id: C, text: "GROUP BY: оставляет в результате только различные значения выбранного поля" }, { id: D, text: "COUNT: оставляет в результате только различные значения выбранного поля" }, { id: B, text: "ORDER BY: оставляет в результате только различные значения выбранного поля" }, { id: A, text: "DISTINCT: оставляет в результате только различные значения выбранного поля" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "DISTINCT убирает одинаковые значения выбранного поля: SELECT DISTINCT название FROM Поставки вернёт «Борщ» один раз. ORDER BY только меняет порядок строк, GROUP BY собирает строки в группы для подсчёта, а COUNT считает их количество — ни одно из этих слов повторы в результате не удаляет." }
+
+- id: inf-11-db-019
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Сортировка по убыванию"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Нужно вывести записи о работах так, чтобы они шли от самой высокой оценки к самой низкой. Как закончится запрос?"
+  student_view: { options: [{ id: B, text: "ORDER BY балл ASC" }, { id: D, text: "WHERE балл DESC" }, { id: A, text: "ORDER BY балл DESC" }, { id: C, text: "GROUP BY балл DESC" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "ORDER BY задаёт порядок строк результата, а DESC означает «по убыванию». По умолчанию сортировка и так идёт по возрастанию, поэтому ASC можно не писать, но для читаемости его часто оставляют. GROUP BY не сортирует строки, а объединяет одинаковые значения в группы, а DESC в WHERE не существует вовсе." }
+
+- id: inf-11-db-020
+  class: 11
+  topic: "Базы данных"
+  subtopic: "Наибольшее значение поля"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11db-02-queries
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
+  prompt: "Таблица «Работы» (№, тема, балл): 1 Программа 72; 2 Проект 91; 3 Тест 64; 4 Эссе 88. Чему равен результат запроса SELECT MAX(балл) FROM Работы? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [91], answer_text: "91", explanation: "Баллы в таблице: Программа — 72; Проект — 91; Тест — 64; Эссе — 88. Наибольший из них 91, он у работы «Проект». Функция MAX возвращает само значение, а не строку: чтобы узнать, чья это работа, добавляют ORDER BY балл DESC LIMIT 1 либо ищут строку с баллом, равным результату." }

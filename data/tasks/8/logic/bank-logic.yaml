@@ -12,9 +12,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
   prompt: "Что из перечисленного является высказыванием?"
-  student_view: { options: [{ id: A, text: "«Который час?»" }, { id: B, text: "«Закрой окно!»" }, { id: C, text: "«2 + 2 = 5»" }, { id: D, text: "«Ура!»" }] }
+  student_view: { options: [{ id: C, text: "«2 + 2 = 5»" }, { id: A, text: "«Который час?»" }, { id: D, text: "«Ура!»" }, { id: B, text: "«Закрой окно!»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
+  teacher_only: { answer: A, explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
 
 - id: inf-8-logic-002
   class: 8
@@ -29,9 +29,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
   prompt: "Какие значения может принимать логическое высказывание?"
-  student_view: { options: [{ id: A, text: "Только истину" }, { id: B, text: "Истину или ложь" }, { id: C, text: "Любое число" }, { id: D, text: "Да, нет или неизвестно" }] }
+  student_view: { options: [{ id: B, text: "Истину или ложь" }, { id: D, text: "Да, нет или неизвестно" }, { id: A, text: "Только истину" }, { id: C, text: "Любое число" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Третьего не дано: истина (1) или ложь (0)" }
+  teacher_only: { answer: A, explanation: "Третьего не дано: истина (1) или ложь (0)" }
 
 - id: inf-8-logic-003
   class: 8
@@ -46,9 +46,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
   prompt: "Какое высказывание составное?"
-  student_view: { options: [{ id: A, text: "«Идет дождь»" }, { id: B, text: "«Идет дождь и дует ветер»" }, { id: C, text: "«Закрой окно»" }, { id: D, text: "«2 × 2»" }] }
+  student_view: { options: [{ id: A, text: "«Идет дождь»" }, { id: D, text: "«2 × 2»" }, { id: B, text: "«Идет дождь и дует ветер»" }, { id: C, text: "«Закрой окно»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Два простых соединены связкой И" }
+  teacher_only: { answer: C, explanation: "Два простых соединены связкой И" }
 
 - id: inf-8-logic-004
   class: 8
@@ -63,9 +63,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
   prompt: "Какой знак обозначает конъюнкцию (И)?"
-  student_view: { options: [{ id: A, text: "∨" }, { id: B, text: "¬" }, { id: C, text: "∧" }, { id: D, text: "=" }] }
+  student_view: { options: [{ id: C, text: "∧" }, { id: A, text: "∨" }, { id: B, text: "¬" }, { id: D, text: "=" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
+  teacher_only: { answer: A, explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
 
 - id: inf-8-logic-005
   class: 8
@@ -80,9 +80,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
   prompt: "Какой знак обозначает отрицание (НЕ)?"
-  student_view: { options: [{ id: A, text: "∧" }, { id: B, text: "∨" }, { id: C, text: "¬" }, { id: D, text: "≠" }] }
+  student_view: { options: [{ id: A, text: "∧" }, { id: C, text: "¬" }, { id: B, text: "∨" }, { id: D, text: "≠" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "¬ — НЕ" }
+  teacher_only: { answer: B, explanation: "¬ — НЕ" }
 
 - id: inf-8-logic-006
   class: 8
@@ -148,9 +148,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
   prompt: "При A=1, B=0 вычислите A ∧ B."
-  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  student_view: { options: [{ id: B, text: "Ложь" }, { id: A, text: "Истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+  teacher_only: { answer: A, explanation: "Подстановка даёт 0" }
 
 - id: inf-8-logic-010
   class: 8
@@ -182,9 +182,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
   prompt: "При A=0, B=0 вычислите ¬A."
-  student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
+  student_view: { options: [{ id: B, text: "Ложь" }, { id: A, text: "Истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Подстановка даёт 1" }
+  teacher_only: { answer: B, explanation: "Подстановка даёт 1" }
 
 - id: inf-8-logic-012
   class: 8
@@ -233,9 +233,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
   prompt: "Какая операция выполняется первой в выражении A ∨ ¬B ∧ C?"
-  student_view: { options: [{ id: A, text: "ИЛИ" }, { id: B, text: "И" }, { id: C, text: "НЕ" }, { id: D, text: "Все одновременно" }] }
+  student_view: { options: [{ id: B, text: "И" }, { id: C, text: "НЕ" }, { id: D, text: "Все одновременно" }, { id: A, text: "ИЛИ" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Сначала НЕ, потом И, потом ИЛИ" }
+  teacher_only: { answer: B, explanation: "Сначала НЕ, потом И, потом ИЛИ" }
 
 - id: inf-8-logic-015
   class: 8
@@ -250,9 +250,9 @@
   fgos_element: 1.7
   fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
   prompt: "Чему равносильно выражение A ∨ (A ∧ B)?"
-  student_view: { options: [{ id: A, text: "A" }, { id: B, text: "B" }, { id: C, text: "A ∧ B" }, { id: D, text: "0" }] }
+  student_view: { options: [{ id: B, text: "B" }, { id: A, text: "A" }, { id: D, text: "0" }, { id: C, text: "A ∧ B" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Поглощение: при A=1 всегда 1, при A=0 всегда 0" }
+  teacher_only: { answer: B, explanation: "Поглощение: при A=1 всегда 1, при A=0 всегда 0" }
 
 - id: inf-8-logic-016
   class: 8
@@ -321,3 +321,877 @@
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "ИЛИ неисключающее: достаточно одной единицы" }
+
+- id: inf-8-logic-020
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Область истинности формы
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "В высказывание «x — чётное число» вместо x подставили число 4. Истинно ли это высказывание?"
+  student_view: { options: [{ id: D, text: "Это не высказывание" }, { id: B, text: "Ложь" }, { id: C, text: "Пока нельзя определить" }, { id: A, text: "Истина" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "4 делится на 2 без остатка, поэтому форма даёт истину. Область истинности — все чётные значения x." }
+
+- id: inf-8-logic-021
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Проверка истинности
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [self-control] }
+  prompt: "Установите соответствие: высказывание — как его проверяют вычислением."
+  student_view: { left: ["15 делится на 5", "2² = 5", "10 делится на 4", "2³ = 8"], right: ["10 : 4 = 2, остаток 2", "2² = 4, а не 5", "15 : 5 = 3, делится нацело", "2³ = 2 · 2 · 2 = 8"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "15 делится на 5": "15 : 5 = 3, делится нацело", "2² = 5": "2² = 4, а не 5", "10 делится на 4": "10 : 4 = 2, остаток 2", "2³ = 8": "2³ = 2 · 2 · 2 = 8" }, explanation: "Истинность высказывания проверяют вычислением, а не «на глаз». 15 : 5 = 3 без остатка — истинно; 2² = 4, а не 5 — ложно; 10 : 4 = 2 с остатком 2 — ложно; 2³ = 2 · 2 · 2 = 8 — истинно." }
+
+- id: inf-8-logic-022
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Подсчёт строк в таблице
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-02-operations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [self-control] }
+  prompt: "В скольких строках таблицы истинности выражение (A ∨ B) ∧ ¬B равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Единица получается только при A = 1, B = 0 — одна строка из четырёх" }
+
+- id: inf-8-logic-023
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Запись условия
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: logic-05-expression
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Запишите выражением условие «a больше 2 и a чётное»."
+  student_view: { options: [{ id: B, text: "a > 2 ∨ (a mod 2 = 0)" }, { id: A, text: "a > 2 ∧ (a mod 2 = 0)" }, { id: D, text: "¬(a > 2) ∨ (a mod 2 = 0)" }, { id: C, text: "(a > 2) ∧ (a > 0)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Оба условия должны выполняться одновременно — связка И. Проверка при a = 4: подходит только первый вариант." }
+
+- id: inf-8-logic-024
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Упрощение выражения
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Упростите выражение (A ∨ 1) ∧ 0 и укажите, чему оно равно при любом значении A. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "По тождеству A ∨ 1 = 1, а 1 ∧ 0 = 0. Значение не зависит от A." }
+
+- id: inf-8-logic-025
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Область истинности
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Установите соответствие: выражение — сколько целых значений x (от −5 до 5) делают его истинным."
+  student_view: { left: ["x = 1 ∨ x = 5", "x = 1 ∧ x = 5", "x > 0 ∧ x < 5"], right: ["2", "0", "4"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "x = 1 ∨ x = 5": "2", "x = 1 ∧ x = 5": "0", "x > 0 ∧ x < 5": "4" }, explanation: "x = 1 или x = 5 — два значения; x = 1 и x = 5 — ни одного; 0 < x < 5 — четыре значения (1, 2, 3, 4)" }
+
+- id: inf-8-logic-026
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Закон противоречия
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Чему равно выражение A ∧ ¬A при любом значении A? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Закон противоречия: A ∧ ¬A = 0. Проверка — при A = 1 получаем 1 ∧ 0 = 0, при A = 0 тоже 0." }
+
+- id: inf-8-logic-027
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Закон де Моргана
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Чему равносильно выражение ¬(A ∨ B)?"
+  student_view: { options: [{ id: B, text: "¬A ∨ ¬B" }, { id: D, text: "¬(A ∧ B)" }, { id: A, text: "¬A ∧ ¬B" }, { id: C, text: "A ∧ B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Закон де Моргана: отрицание дизъюнкции — конъюнкция отрицаний. Проверка при A = 1, B = 0: слева ¬1 = 0, справа 0 ∧ 1 = 0." }
+
+- id: inf-8-logic-028
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Закон исключённого среднего
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [self-control] }
+  prompt: "Сколько различных значений принимает выражение A ∨ ¬A при всех возможных значениях A? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "По закону исключённого среднего A ∨ ¬A всегда равно 1, значит различных значений ровно одно." }
+
+- id: inf-8-logic-029
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Логические элементы
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "У какого логического элемента один вход?"
+  student_view: { options: [{ id: A, text: "И (конъюнктор)" }, { id: C, text: "НЕ (инвертор)" }, { id: D, text: "Повторитель сигнала" }, { id: B, text: "ИЛИ (дизъюнктор)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "У инвертора один вход и кружок инверсии на выходе; у И и ИЛИ входов два и больше." }
+
+- id: inf-8-logic-030
+  class: 8
+  topic: Элементы математической логики
+  subtopic: Конъюнктор
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "На входы логического элемента И поданы сигналы 1, 1 и 0. Что будет на выходе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Конъюнктор даёт 1, только если на всех входах единицы; здесь один вход 0 — значит выход 0." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-bank2.mjs ====
+# Ответы вычислены кодом (перебор наборов, parseInt/toString, локальный Python) и проверены check.mjs.
+
+- id: inf-8-logic-031
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Место связки НЕ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Связка НЕ стоит в середине фразы «Петя решил правильно НЕ все задания» и меняет смысл. Сколько разных высказываний можно получить из этой фразы, поставив НЕ в разные места? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Место НЕ меняет высказывание: «Петя НЕ решил все задания», «Петя решил НЕправильно все» и «Петя решил правильно НЕ все» — это три разных высказывания, и у каждого своя истинность." }
+
+- id: inf-8-logic-032
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Область истинности, подсчёт значений"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "В высказывание «x делится на 5» вместо x подставляют целые числа от 1 до 20. Сколько подстановок делают высказывание истинным? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "x делится на 5, когда оканчивается на 0 или на 5: из 1..20 это 5, 10, 15, 20 — всего 4 значения. Остальные значения дают ложь: область истинности формы — только эти числа." }
+
+- id: inf-8-logic-033
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Ложь — это значение"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Чем ложное высказывание отличается от предложения, которое высказыванием не является?"
+  student_view: { options: [{ id: C, text: "Ложное высказывание нельзя проверить, а проверить можно только истинные" }, { id: D, text: "Ложное высказывание не содержит чисел и названий" }, { id: A, text: "Ложное высказывание всё равно высказывание: у него есть значение 0" }, { id: B, text: "Ничем: это одно и то же" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "«2 + 2 = 5» — высказывание, и оно ложно: значение 0 у него есть. А вот «Какой будет результат?» — вопрос, истинности у него нет вовсе, поэтому это не высказывание." }
+
+- id: inf-8-logic-034
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Простое и составное"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [self-control] }
+  prompt: "Установите соответствие: высказывание — его вид."
+  student_view: { left: ["«7 — простое число»", "«На улице идёт дождь и дует ветер»", "«Поезд придёт вовремя или придёт с опозданием»", "«Ни один ученик не опоздал на урок»"], right: ["простое высказывание", "составное высказывание со связкой И", "составное высказывание со связкой ИЛИ", "составное высказывание со связкой НЕ"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "«7 — простое число»": "простое высказывание", "«На улице идёт дождь и дует ветер»": "составное высказывание со связкой И", "«Поезд придёт вовремя или придёт с опозданием»": "составное высказывание со связкой ИЛИ", "«Ни один ученик не опоздал на урок»": "составное высказывание со связкой НЕ" }, explanation: "Простое высказывание описывает одно свойство или отношение, составное собрано из простых связками: «и», «или», «не». В составном высказывании связка всегда видна прямо в тексте." }
+
+- id: inf-8-logic-035
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Тождество A ∧ 1 = A"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Чему равно выражение A ∧ 1 при любом значении A?"
+  student_view: { options: [{ id: B, text: "1" }, { id: C, text: "0" }, { id: D, text: "Значение зависит от A и его нельзя назвать заранее" }, { id: A, text: "A" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Единичный операнд ничего не меняет: при A = 1 получаем 1 ∧ 1 = 1, при A = 0 — 0 ∧ 1 = 0. Единица сохраняет значение другого операнда, поэтому выражение равно A." }
+
+- id: inf-8-logic-036
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Тождество A ∨ 0 = A"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Сколько различных значений принимает выражение A ∨ 0 при всех возможных значениях A? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Нулевой операнд не меняет другой операнд: A ∨ 0 = A. Перебор даёт при A = 0 значение 0, при A = 1 значение 1 — различных значений два." }
+
+- id: inf-8-logic-037
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Область действия НЕ"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Как правильно читается выражение ¬A ∧ B?"
+  student_view: { options: [{ id: C, text: "как (¬A) ∧ (¬B) — отрицаются обе переменные" }, { id: D, text: "как ¬A, а B к нему отношения не имеет" }, { id: B, text: "как ¬(A ∧ B) — отрицается всё выражение" }, { id: A, text: "как (¬A) ∧ B — отрицается только A" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Операция НЕ меняет только следующую за ней конструкцию, поэтому ¬A ∧ B = (¬A) ∧ B. Чтобы отрицать всё выражение, нужны скобки: ¬(A ∧ B) — это уже другое выражение." }
+
+- id: inf-8-logic-038
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Подстановка значений"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Вычислите значение выражения (¬A) ∧ B при A = 0 и B = 1. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "A = 0, значит ¬A = 1. Затем 1 ∧ 1 = 1. Если считать ¬(A ∧ B), результат получился бы другим, поэтому скобки в записи обязательны." }
+
+- id: inf-8-logic-039
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Упрощение по законам"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "По закону поглощения A ∨ (A ∧ B) = A. В скольких строках таблицы истинности для двух переменных это выражение равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "После упрощения остаётся A, а A = 1 ровно в двух строках из четырёх: 10 и 11. Это и есть смысл законов: вместо громоздкой таблицы получаем одно значение." }
+
+- id: inf-8-logic-040
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "От условия к формуле"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [self-control] }
+  prompt: "Установите соответствие: условие задачи — его запись логическим выражением."
+  student_view: { left: ["«Число x положительное и делится на 5»", "«Число x равно 1 или равно 5»", "«Число x не больше 10»", "«Число x больше 3 и меньше 7»"], right: ["x > 0 ∧ (x mod 5 = 0)", "x = 1 ∨ x = 5", "x ≤ 10", "x > 3 ∧ x < 7"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "«Число x положительное и делится на 5»": "x > 0 ∧ (x mod 5 = 0)", "«Число x равно 1 или равно 5»": "x = 1 ∨ x = 5", "«Число x не больше 10»": "x ≤ 10", "«Число x больше 3 и меньше 7»": "x > 3 ∧ x < 7" }, explanation: "Порядок такой: выписать условия отдельными строками, найти связку между ними, заменить слова операциями и расставить скобки. «Не больше» — это ≤, а «и» всегда даёт конъюнкцию ∧." }
+
+- id: inf-8-logic-041
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Закон двойного отрицания"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Чему равно выражение ¬¬A?"
+  student_view: { options: [{ id: B, text: "¬A" }, { id: A, text: "A" }, { id: C, text: "1" }, { id: D, text: "0" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Два отрицания подряд отменяют друг друга: при A = 1 получаем ¬1 = 0, потом ¬0 = 1; при A = 0 наоборот, результат 0. Значит ¬¬A = A при любом значении." }
+
+- id: inf-8-logic-042
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Проверка поглощения перебором"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Проверьте закон поглощения A ∧ (A ∨ B) = A перебором: сколько различных значений принимает левая часть? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Перебор всех четырёх наборов даёт при A = 0 всегда 0, при A = 1 всегда 1 — то есть ровно те же два значения, что и у A. Совпадение значений и есть доказательство закона." }
+
+- id: inf-8-logic-043
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Де Морган для конъюнкции"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Чему равносильно выражение ¬(A ∧ B)?"
+  student_view: { options: [{ id: B, text: "¬A ∧ ¬B" }, { id: A, text: "¬A ∨ ¬B" }, { id: D, text: "¬(A ∨ B)" }, { id: C, text: "A ∨ B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Закон де Моргана: отрицание конъюнкции — это дизъюнкция отрицаний. Проверка при A = 0, B = 0: слева ¬0 = 1, справа 1 ∨ 1 = 1; при A = 1, B = 1: слева 0, справа 0 ∨ 0 = 0." }
+
+- id: inf-8-logic-044
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Закон распределительности"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Чему равно A ∧ (B ∨ C)?"
+  student_view: { options: [{ id: A, text: "(A ∧ B) ∨ (A ∧ C)" }, { id: C, text: "(A ∨ B) ∧ C" }, { id: B, text: "(A ∧ B) ∨ C" }, { id: D, text: "A ∧ B ∧ C" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Закон распределительности разносит A внутрь скобок с дизъюнкцией. Проверка при A = 0: слева 0, справа 0 ∨ 0 = 0; при A = 1 и B = 1, C = 0: слева 1, справа 1 ∨ 0 = 1. Ошибка — потерять скобку и записать (A ∧ B) ∨ C." }
+
+- id: inf-8-logic-045
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Проверка закона подстановкой"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [self-control] }
+  prompt: "Закон проверяется подстановкой всех наборов значений. Сколько наборов из двух (A = 0 и A = 1) дают разные значения у выражений ¬¬A и A? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Подставляем оба значения: A = 0 даёт 0 и 0, A = 1 даёт 1 и 1. Расхождений нет ни в одном наборе, значит равенство держится всегда и это действительно закон." }
+
+- id: inf-8-logic-046
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Соответствие закона и его записи"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [self-control] }
+  prompt: "Установите соответствие: название закона алгебры логики — его запись."
+  student_view: { left: ["Закон исключённого среднего", "Закон противоречия", "Закон двойного отрицания", "Закон поглощения"], right: ["A ∨ ¬A = 1", "A ∧ ¬A = 0", "¬¬A = A", "A ∧ (A ∨ B) = A"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Закон исключённого среднего": "A ∨ ¬A = 1", "Закон противоречия": "A ∧ ¬A = 0", "Закон двойного отрицания": "¬¬A = A", "Закон поглощения": "A ∧ (A ∨ B) = A" }, explanation: "Исключённое среднее всегда истинно, противоречие всегда ложно, двойное отрицание снимается, а поглощение убирает лишний кусок схемы. Каждая запись верна при любых значениях букв." }
+
+- id: inf-8-logic-047
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Число строк для 4 переменных"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "Сколько строк (без шапки) в таблице истинности для выражения с 4 переменными? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "Для n переменных строк всегда 2ⁿ, шапка не считается: 2⁴ = 16. Все наборы нулей и единиц перебираются полностью, ничего не пропускается." }
+
+- id: inf-8-logic-048
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Порядок наборов"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "В таблице истинности для двух переменных наборы записывают как двоичные числа от 0 до 3. Какая строка (без шапки) соответствует набору A = 1, B = 0?"
+  student_view: { options: [{ id: D, text: "Четвёртая" }, { id: B, text: "Вторая" }, { id: A, text: "Третья" }, { id: C, text: "Первая" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Порядок наборов: 00, 01, 10, 11. Значит A = 1, B = 0 — это третья строка. Начинать таблицу с 01 нельзя: строка 00 тоже нужна, иначе один набор потеряется." }
+
+- id: inf-8-logic-049
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Подсчёт строк"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "В скольких строках таблицы истинности для двух переменных выражение A ∨ B равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Дизъюнкция истинна, если хотя бы одна переменная равна 1: это наборы 01, 10 и 11 — 3 строки из четырёх. Ложной остаётся только строка 00." }
+
+- id: inf-8-logic-050
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Вычисление значения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "Вычислите значение выражения (A ∨ B) ∧ ¬C при A = 1, B = 0, C = 0. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Сначала промежуточные столбцы: A ∨ B = 1 ∨ 0 = 1, ¬C = ¬0 = 1. Затем результат: 1 ∧ 1 = 1. Порядок именно такой: сначала НЕ, потом И, потом ИЛИ." }
+
+- id: inf-8-logic-051
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Анализ таблицы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "В скольких строках таблицы истинности для трёх переменных выражение F = (A ∨ B) ∧ ¬C равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Единица получается там, где C = 0 и хотя бы одна из A, B равна 1: это строки 010, 100, 110 — всего 3 из восьми. Столбцы считаем по приоритету: сначала ¬C, потом A ∨ B, потом результат." }
+
+- id: inf-8-logic-052
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Разбор готовой таблицы"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [self-control] }
+  prompt: "В скольких строках таблицы истинности для трёх переменных выражение A ∧ B ∧ C равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Конъюнкция трёх переменных истинна только там, где все три равны 1, то есть в наборе 111. Такая строка одна из восьми, поэтому ответ 1." }
+
+- id: inf-8-logic-053
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Чтение столбца"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [self-control] }
+  prompt: "В готовой таблице истинности для двух переменных в наборе A = 0, B = 1 вычисляется выражение ¬A ∨ B. Какое значение стоит в этом столбце?"
+  student_view: { options: [{ id: B, text: "0" }, { id: A, text: "1" }, { id: C, text: "Значение зависит от того, как расположены столбцы" }, { id: D, text: "Вычислять нужно только после НЕ, иначе таблица неверна" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Считаем по промежуточным столбцам: ¬A = ¬0 = 1, затем 1 ∨ 1 = 1. Порядок столбцов не влияет на результат вычисления — влияет только на то, в какой колонке стоит число." }
+
+- id: inf-8-logic-054
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Инвертор"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "На вход инвертора (элемента НЕ) подали сигнал 1. Что будет на выходе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Инвертор меняет сигнал на противоположный: вход 1 даёт выход 0. Кружок инверсии на схеме стоит именно на выходе этого элемента." }
+
+- id: inf-8-logic-055
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Дизъюнктор"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "На входы логического элемента ИЛИ (дизъюнктора) поданы сигналы 0 и 0. Что будет на выходе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Дизъюнктор даёт 0, только когда на всех входах нули, поэтому 0 ∨ 0 = 0. Стоит появиться хотя бы одной единице, и выход станет 1." }
+
+- id: inf-8-logic-056
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Кружок инверсии"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "Где на схеме рисуют кружок инверсии у логического элемента?"
+  student_view: { options: [{ id: A, text: "На выходе элемента — он и означает НЕ" }, { id: B, text: "На каждом входе элемента" }, { id: D, text: "Кружка нет ни на одном логическом элементе" }, { id: C, text: "На корпусе элемента, независимо от входов и выхода" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Кружок на выходе превращает обычный элемент в инвертор: сигнал на выходе берётся с противоположным значением. На входах кружков нет — там просто приходят сигналы." }
+
+- id: inf-8-logic-057
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Комбинация элементов"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "Схема: на входы элемента И поданы A = 1 и B = 0, а его выход соединён со входом элемента НЕ. Что будет на выходе схемы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Сначала конъюнктор: 1 ∧ 0 = 0. Потом инвертор меняет этот сигнал на противоположный: 1. Схема из двух элементов работает как выражение ¬(A ∧ B)." }
+
+- id: inf-8-logic-058
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Дизъюнктор даёт единицу"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "На входы логического элемента ИЛИ поданы сигналы 1 и 0. Что будет на выходе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Дизъюнктору достаточно хотя бы одной единицы: 1 ∨ 0 = 1. Проверка по правилу: ноль получается только когда на всех входах нули, а здесь не все входы нулевые." }
+
+- id: inf-8-logic-059
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Два конъюнктора подряд"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "Схема из двух элементов И, соединённых последовательно: на входы первого поданы 1 и 1, на входы второго — 0 и 1. Что будет на выходе схемы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Первый конъюнктор даёт 1 ∧ 1 = 1, второй — 0 ∧ 1 = 0. Выход схемы равен их конъюнкции: 1 ∧ 0 = 0. Результат нельзя угадать по одному входу — считают по порядку, начиная с первого элемента." }
+
+- id: inf-8-logic-060
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Правила работы элементов"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [self-control] }
+  prompt: "Установите соответствие: логический элемент — правило его работы."
+  student_view: { left: ["Элемент И (конъюнктор)", "Элемент ИЛИ (дизъюнктор)", "Элемент НЕ (инвертор)"], right: ["на выходе 1 только тогда, когда на всех входах единицы", "на выходе 0 только тогда, когда на всех входах нули", "на выходе значение, противоположное входному"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Элемент И (конъюнктор)": "на выходе 1 только тогда, когда на всех входах единицы", "Элемент ИЛИ (дизъюнктор)": "на выходе 0 только тогда, когда на всех входах нули", "Элемент НЕ (инвертор)": "на выходе значение, противоположное входному" }, explanation: "Проверка перебором наборов: конъюнктор даёт единицу только на наборе 11 и ноль в остальных трёх наборах, дизъюнктор даёт ноль только на наборе 00, а инвертор на каждом наборе выдаёт противоположное значение." }
+
+- id: inf-8-logic-061
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Упрощение схемы по поглощению"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [self-control] }
+  prompt: "Инженер собрал схему по выражению A ∧ (A ∨ B): элемент ИЛИ на входах A и B, его выход — на вход элемента И вместе с A. Он применил закон поглощения и упростил схему. Сколько элементов осталось в схеме? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "До упрощения в схеме 2 элемента (И и ИЛИ). По поглощению A ∧ (A ∨ B) = A, поэтому остаётся вычисление самого A — это один элемент И. Лишний кусок схемы убрали: элементов стало 1, схема дешевле и работает быстрее." }
+
+- id: inf-8-logic-062
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Элемент НЕ после ИЛИ"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [self-control] }
+  prompt: "Схема: три входа элемента ИЛИ (A, B, C), его выход соединён со входом элемента НЕ. На входы поданы 0, 0 и 1. Что будет на выходе схемы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Дизъюнктор из трёх входов даёт единицу, если хотя бы на одном входе есть 1: 0 ∨ 0 ∨ 1 = 1. Инвертор меняет этот сигнал на противоположный, поэтому выход схемы 0. По таблице истинности выражение ¬(A ∨ B ∨ C) истинно в одной строке из восьми — там, где все три входа нули." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-8-logicalgo-bank3.mjs ====
+# Ответы вычислены кодом: логические формулы — перебором всех наборов 0/1,
+# эталоны code_run — реальным запуском локального Python.
+
+- id: inf-8-logic-063
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Высказывание и его отрицание"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-01-utterances
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
+  prompt: "Установите соответствие: высказывание — его отрицание."
+  student_view: { left: ["«9 делится на 5»", "«2² = 4»", "«В треугольнике четыре стороны»", "«13 больше 20»"], right: ["«13 не больше 20»", "«9 не делится на 5»", "«В треугольнике не четыре стороны»", "«2² ≠ 4»"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "«9 делится на 5»": "«9 не делится на 5»", "«2² = 4»": "«2² ≠ 4»", "«В треугольнике четыре стороны»": "«В треугольнике не четыре стороны»", "«13 больше 20»": "«13 не больше 20»" }, explanation: "Отрицание меняет утверждение на противоположное по смыслу и потому всегда имеет противоположную истинность: в каждой паре истинно ровно одно высказывание. «9 делится на 5» ложно, значит «9 не делится на 5» истинно, а «2² = 4» истинно, значит «2² ≠ 4» ложно. В отрицании меняют сам знак отношения, а не только слово: «не больше» — это «меньше или равно»." }
+
+- id: inf-8-logic-064
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Полное исследование формулы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-03-truth-tables
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-8-logic-tables], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности для трёх переменных и выясните, в скольких её строках выражение (A ∨ B) ∧ (A ∨ C) равно 1. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Перебираем все 8 наборов: единица получается в строках 011, 100, 101, 110, 111. При A = 1 обе скобки истинны, поэтому выражение истинно во всех четырёх таких строках; при A = 0 остаётся B ∧ C, и это единица только в строке 011. Итого 5. Проверка: по закону распределительности (A ∨ B) ∧ (A ∨ C) = A ∨ (B ∧ C) — таблица совпадает." }
+
+- id: inf-8-logic-065
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Элемент исключающее ИЛИ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "На входы логического элемента исключающее ИЛИ (его называют также «неравнозначность») поданы сигналы 1 и 1. Что будет на выходе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Исключающее ИЛИ даёт единицу тогда и только тогда, когда сигналы на входах РАЗНЫЕ: по таблице это строки 01 и 10, а в строках 00 и 11 на выходе ноль. Поэтому на сигналах 1 и 1, которые одинаковы, выход равен 0. Обычный ИЛИ на тех же сигналах дал бы 1 — элементы похожи по названию, но работают по-разному." }
+
+- id: inf-8-logic-066
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Два инвертора подряд"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-04-elements
+  fgos_requirement: 1.4
+  fgos_element: 1.7
+  fgos: { subject: [inf-8-logic-elements], meta: [plan-actions] }
+  prompt: "Схема: выход элемента НЕ соединён со входом второго элемента НЕ. На вход схемы подали сигнал 1. Что будет на выходе схемы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Считаем по порядку, начиная с первого элемента: первый инвертор даёт 1 → 0, второй инвертор меняет этот сигнал на противоположный: 0 → 1. Два отрицания подряд отменяют друг друга, поэтому такая пара работает как провод, и сигнал на выходе совпадает с сигналом на входе. Лишнюю пару инверторов из схемы убирают — она ничего не меняет, но занимает место." }
+
+- id: inf-8-logic-067
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Приоритет операций в записи"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Вычислите значение выражения A ∨ B ∧ C при A = 1, B = 1, C = 0. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "Сначала выполняется И — оно старше ИЛИ по приоритету: B ∧ C = 1 ∧ 0 = 0. Затем A ∨ 0 = 1 ∨ 0 = 1. Если же прочитать запись как (A ∨ B) ∧ C, получится 1 ∧ 0 = 0 — другой ответ, поэтому в записи важны скобки." }
+
+- id: inf-8-logic-068
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Ровно одно из двух"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-05-expression
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-ops], meta: [plan-actions] }
+  prompt: "Запишите логическое выражение из двух высказываний A и B, которое истинно тогда и только тогда, когда ровно одно из них истинно."
+  student_view: { options: [{ id: C, text: "A ∨ B" }, { id: D, text: "(A ∧ ¬B) ∧ (¬A ∧ B)" }, { id: A, text: "(A ∧ ¬B) ∨ (¬A ∧ B)" }, { id: B, text: "A ∧ B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Формула «ровно одно» разбирается на два случая: A истинно, B ложно — или наоборот. Это две конъюнкции (A ∧ ¬B) и (¬A ∧ B), соединённые ИЛИ, то есть (A ∧ ¬B) ∨ (¬A ∧ B). Проверка перебором всех четырёх наборов: эта запись истинна в строках 01 и 10. Вариант A ∧ B истинна только при обоих единицах, вариант A ∨ B — ещё и при 11, а двойное И вообще всегда ложно." }
+
+- id: inf-8-logic-069
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Закон ассоциативности"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Скобки в конъюнкции из четырёх высказываний A, B, C и D расставляют разными способами. Сколько существует таких расстановок, при которых значение выражения одинаково при любых значениях A, B, C и D? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Расстановок скобок в цепочке из четырёх высказываний пять: (A ∧ (B ∧ (C ∧ D))); (A ∧ ((B ∧ C) ∧ D)); ((A ∧ B) ∧ (C ∧ D)); ((A ∧ (B ∧ C)) ∧ D); (((A ∧ B) ∧ C) ∧ D). Закон ассоциативности (A ∧ B) ∧ C = A ∧ (B ∧ C) говорит, что переносить скобки можно свободно, поэтому совпадают значения всех пяти записей — это проверяется перебором всех 16 наборов значений. Для дизъюнкции дело обстоит так же, а вот для смеси ∧ и ∨ закон не действует: там скобки обязательны." }
+
+- id: inf-8-logic-070
+  class: 8
+  topic: "Элементы математической логики"
+  subtopic: "Название закона по записи"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: logic-06-laws
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
+  prompt: "Какой закон алгебры логики записывается равенством A ∨ B = B ∨ A?"
+  student_view: { options: [{ id: A, text: "закон коммутативности" }, { id: D, text: "закон де Моргана" }, { id: B, text: "закон ассоциативности" }, { id: C, text: "закон дистрибутивности" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Коммутативность — переставимость операндов: от перестановки A и B ∨ значение не меняется, поэтому в записи оба слагаемых меняются местами. Ассоциативность переставляет не операнды, а скобки: (A ∨ B) ∨ C = A ∨ (B ∨ C). Дистрибутивность разносит множитель в скобки: A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C). Закон де Моргана отрицание переносит внутрь: ¬(A ∨ B) = ¬A ∧ ¬B." }

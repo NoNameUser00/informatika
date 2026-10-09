@@ -7,7 +7,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: numsys-02-binary
   fgos_requirement: 1.2
   fgos_element: 1.3
@@ -29,7 +29,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: numsys-04-hex
   fgos_requirement: 1.2
   fgos_element: 1.3
@@ -51,7 +51,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: numsys-02-binary
   fgos_requirement: 1.2
   fgos_element: 1.3
@@ -73,7 +73,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: numsys-02-binary
   fgos_requirement: 1.2
   fgos_element: 1.3
@@ -117,7 +117,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: py-03-loops
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -139,7 +139,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-01-basics
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -161,7 +161,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-01-basics
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -183,7 +183,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: py-02-branching
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -205,7 +205,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-02-branching
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -227,7 +227,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: py-03-loops
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -249,7 +249,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: py-03-loops
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -271,7 +271,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -293,7 +293,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -315,7 +315,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -337,7 +337,7 @@
   type: code_run
   difficulty: intermediate
   cognitive_level: apply
-  points: 3
+  points: 2
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -359,7 +359,7 @@
   type: code_run
   difficulty: basic
   cognitive_level: apply
-  points: 2
+  points: 1
   lesson: py-04-strings
   fgos_requirement: 1.4
   fgos_element: 1.5
@@ -373,3 +373,311 @@
     solution_code: "print(chr(66))"
     expected_stdout: "B"
     explanation: "chr — обратная к ord: 66 это 'B'"
+
+- id: inf-8-code-018
+  class: 8
+  topic: Код в тренажёре
+  subtopic: print и повторение строки
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-01-basics
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Выведи треугольник из решёток: в первой строке одна решётка, во второй — три, в третьей — пять."
+  student_view:
+    language: python
+    template: "# Решётки строятся умножением строки на число\nfor i in range(3):\n    print(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "for i in range(3):\n    print('#' * (2 * i + 1))"
+    expected_stdout: "#\n###\n#####"
+    explanation: "Умножение строки на число повторяет её: 1 · 1, 1 · 3 и 1 · 5 символов"
+
+- id: inf-8-code-019
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Площадь и периметр
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-06-linear
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-expr], meta: [plan-actions] }
+  prompt: "Дан прямоугольник со сторонами 12 и 5. Выведи сначала площадь, затем периметр — каждое число с новой строки."
+  student_view:
+    language: python
+    template: "# Прямоугольник 12 × 5\na, b = 12, 5\ns = a * b\np = ...\nprint(s)\nprint(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "a, b = 12, 5\ns = a * b\np = 2 * (a + b)\nprint(s)\nprint(p)"
+    expected_stdout: "60\n34"
+    explanation: "Площадь 12 · 5 = 60, периметр 2 · (12 + 5) = 34"
+
+- id: inf-8-code-020
+  class: 8
+  topic: Код в тренажёре
+  subtopic: for и range
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-09-for
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Выведи числа от 1 до 5 и их квадраты: сначала само число, через пробел — его квадрат."
+  student_view:
+    language: python
+    template: "# Квадраты чисел от 1 до 5\nfor i in range(1, 6):\n    print(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "for i in range(1, 6):\n    print(i, i * i)"
+    expected_stdout: "1 1\n2 4\n3 9\n4 16\n5 25"
+    explanation: "range(1, 6) даёт числа 1..5, а квадраты считаются умножением i * i"
+
+- id: inf-8-code-021
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Подсчёт цифр
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-10-pr-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-while], meta: [plan-actions] }
+  prompt: "Циклом while посчитай количество цифр в числе 98765 и выведи его."
+  student_view:
+    language: python
+    template: "# Число укорачивается на одну цифру за шаг\nn, k = 98765, 0\nwhile n > 0:\n    n = ...\n    k = ...\nprint(k)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n, k = 98765, 0\nwhile n > 0:\n    n = n // 10\n    k = k + 1\nprint(k)"
+    expected_stdout: "5"
+    explanation: "98765 → 9876 → 987 → 98 → 9 → 0: пять шагов тела цикла"
+
+- id: inf-8-code-022
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Перебор с проверкой
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: alg-11-design
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Посчитай, сколько чисел от 1 до 100 не делится на 7, и выведи результат."
+  student_view:
+    language: python
+    template: "# Перебор чисел и проверка делимости\nn = 100\nk = 0\nfor i in range(1, n + 1):\n    if i % 7 ...:\n        k = k + 1\nprint(k)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n = 100\nk = 0\nfor i in range(1, n + 1):\n    if i % 7 != 0:\n        k = k + 1\nprint(k)"
+    expected_stdout: "86"
+    explanation: "На 7 делятся 14 чисел (7, 14, …, 98), значит не делятся 100 − 14 = 86"
+
+- id: inf-8-code-023
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Деление вычитанием
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-09-linear-pr
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Найди делением вычитанием частное и остаток от деления 13 на 5 и выведи их одной строкой через пробел."
+  student_view:
+    language: python
+    template: "# Вычитаем y, пока r не станет меньше y\nx = 13\ny = 5\nr = x\nq = 0\nwhile r >= y:\n    ...\nprint(q, r)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "x = 13\ny = 5\nr = x\nq = 0\nwhile r >= y:\n    r = r - y\n    q = q + 1\nprint(q, r)"
+    expected_stdout: "2 3"
+    explanation: "13 − 5 = 8, затем 8 − 5 = 3: частное 2, остаток 3"
+
+- id: inf-8-code-024
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Максимум и минимум
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-02-branching
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-if], meta: [plan-actions] }
+  prompt: "Найди наибольшее и наименьшее из чисел 12, 4, 19 неполными if (без max и min) и выведи их одной строкой через пробел: сначала максимум, потом минимум."
+  student_view:
+    language: python
+    template: "# Четыре неполных ветвления: два на максимум, два на минимум\na, b, c = 12, 4, 19\nmx = a\n..."
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "a, b, c = 12, 4, 19\nmx = a\nif b > mx:\n    mx = b\nif c > mx:\n    mx = c\nmn = a\nif b < mn:\n    mn = b\nif c < mn:\n    mn = c\nprint(mx, mn)"
+    expected_stdout: "19 4"
+    explanation: "Каждый кандидат сравнивается с текущим чемпионом: в итоге максимум 19, минимум 4"
+
+- id: inf-8-code-025
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Сложное условие
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-07-condition
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-if], meta: [plan-actions] }
+  prompt: "Проверь условием «x внутри отрезка [0; 10]», чему равно x = 20, и вывери слово «внутри» или «снаружи»."
+  student_view:
+    language: python
+    template: "# Полная форма: if / else и связка and\nx = 20\nif x >= 0 and x <= 10:\n    print('внутри')\nelse:\n    print(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "x = 20\nif x >= 0 and x <= 10:\n    print('внутри')\nelse:\n    print('снаружи')"
+    expected_stdout: "снаружи"
+    explanation: "Второе сравнение 20 <= 10 ложно, поэтому конъюнкция ложна и выполняется ветка «снаружи»"
+
+- id: inf-8-code-026
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Цепочка elif
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-07-condition
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-if], meta: [plan-actions] }
+  prompt: "Проверь x = 40 по цепочке условий: больше 100, от 51 до 100, от 11 до 50, не больше 10. Вывери подходящий вариант."
+  student_view:
+    language: python
+    template: "# Проверки идут сверху вниз, срабатывает первая подходящая\nx = 40\nif x > 100:\n    print('больше 100')\nelif x > 50:\n    print('от 51 до 100')\nelif x > 10:\n    print(...)\nelse:\n    print('не больше 10')"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "x = 40\nif x > 100:\n    print('больше 100')\nelif x > 50:\n    print('от 51 до 100')\nelif x > 10:\n    print('от 11 до 50')\nelse:\n    print('не больше 10')"
+    expected_stdout: "от 11 до 50"
+    explanation: "Условия x > 100 и x > 50 ложны, а x > 10 истинно — срабатывает первое подходящее"
+
+- id: inf-8-code-027
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Цикл и ветвление
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: ss-30-control
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Выведи все числа от 1 до 10, которые делятся на 3 без остатка, каждое с новой строки."
+  student_view:
+    language: python
+    template: "# Перебор чисел и проверка остатка\nfor i in range(1, 11):\n    if i % 3 == 0:\n        print(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "for i in range(1, 11):\n    if i % 3 == 0:\n        print(i)"
+    expected_stdout: "3\n6\n9"
+    explanation: "Из чисел от 1 до 10 на 3 делятся только 3, 6 и 9"
+
+- id: inf-8-code-028
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Шаг в range
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: py-10-for-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Выведи все чётные числа до 7 включительно, каждое с новой строки (используй шаг в range)."
+  student_view:
+    language: python
+    template: "# Шаг 2 в range перебирает сразу чётные числа\nn = 7\nfor i in range(2, n + 1, 2):\n    print(i)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n = 7\nfor i in range(2, n + 1, 2):\n    print(i)"
+    expected_stdout: "2\n4\n6"
+    explanation: "range(2, 8, 2) даёт 2, 4, 6 — а n + 1 нужно, чтобы включить само n"
+
+- id: inf-8-code-029
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Факториал
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-10-for-loops
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Найди циклом for факториал 5! и выведи его."
+  student_view:
+    language: python
+    template: "# Факториал: произведение чисел от 1 до n\nn = 5\nf = 1\nfor i in range(1, n + 1):\n    f = ...\nprint(f)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n = 5\nf = 1\nfor i in range(1, n + 1):\n    f = f * i\nprint(f)"
+    expected_stdout: "120"
+    explanation: "5! = 1 · 2 · 3 · 4 · 5 = 120"
+
+- id: inf-8-code-030
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Делители числа
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-11-for-loops-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-loop], meta: [plan-actions] }
+  prompt: "Выведи все делители числа 12 (без остатка), каждый с новой строки."
+  student_view:
+    language: python
+    template: "# Проверяем делимость каждого числа от 1 до n\nn = 12\nfor i in range(1, n + 1):\n    if n % i == 0:\n        print(...)"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "n = 12\nfor i in range(1, n + 1):\n    if n % i == 0:\n        print(i)"
+    expected_stdout: "1\n2\n3\n4\n6\n12"
+    explanation: "12 делится без остатка на 1, 2, 3, 4, 6 и 12 — других делителей нет"
+
+- id: inf-8-code-031
+  class: 8
+  topic: Код в тренажёре
+  subtopic: Разворот строки
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: py-08-strings-2
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-8-code-str], meta: [plan-actions] }
+  prompt: "Разверни строку 'Python' срезом s[::-1] и выведи разворот и его длину одной строкой через пробел."
+  student_view:
+    language: python
+    template: "# Срез с шагом −1 читает строку с конца\ns = 'Python'\nb = s[::-1]\nprint(b, len(...))"
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only:
+    solution_code: "s = 'Python'\nb = s[::-1]\nprint(b, len(b))"
+    expected_stdout: "nohtyP 6"
+    explanation: "Срез s[::-1] даёт nohtyP, длина строки равна 6 символам"

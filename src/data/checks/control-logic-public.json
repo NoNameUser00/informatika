@@ -1,10 +1,121 @@
 {
   "test_code": "logic-control-v1",
-  "variant": "v1",
-  "max_score": 16,
+  "kind": "control",
+  "grade": "8",
+  "title": "Контрольная: Логика",
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
-  "tasks": [
+  "variant_count": 30,
+  "per_variant": 20,
+  "final": false,
+  "ktp_to": null,
+  "sections": [
+    {
+      "title": "Высказывания и операции, КТП 7–8",
+      "ktp": [
+        {
+          "from": 7,
+          "to": 8
+        }
+      ],
+      "task_ids": [
+        "inf-8-logic-001",
+        "inf-8-logic-002",
+        "inf-8-logic-003",
+        "inf-8-logic-020",
+        "inf-8-logic-031",
+        "inf-8-logic-032",
+        "inf-8-logic-033",
+        "inf-8-logic-034",
+        "inf-8-logic-063",
+        "inf-8-logic-004",
+        "inf-8-logic-005",
+        "inf-8-logic-008",
+        "inf-8-logic-009",
+        "inf-8-logic-010",
+        "inf-8-logic-014",
+        "inf-8-logic-017",
+        "inf-8-logic-019",
+        "inf-8-logic-022"
+      ]
+    },
+    {
+      "title": "Логические выражения и законы, КТП 9–10",
+      "ktp": [
+        {
+          "from": 9,
+          "to": 10
+        }
+      ],
+      "task_ids": [
+        "inf-8-logic-023",
+        "inf-8-logic-024",
+        "inf-8-logic-035",
+        "inf-8-logic-036",
+        "inf-8-logic-037",
+        "inf-8-logic-038",
+        "inf-8-logic-039",
+        "inf-8-logic-040",
+        "inf-8-logic-067",
+        "inf-8-logic-068",
+        "inf-8-logic-026",
+        "inf-8-logic-027",
+        "inf-8-logic-041",
+        "inf-8-logic-042",
+        "inf-8-logic-043",
+        "inf-8-logic-044",
+        "inf-8-logic-069",
+        "inf-8-logic-070"
+      ]
+    },
+    {
+      "title": "Таблицы истинности, КТП 11",
+      "ktp": [
+        {
+          "from": 11,
+          "to": 11
+        }
+      ],
+      "task_ids": [
+        "inf-8-logic-006",
+        "inf-8-logic-007",
+        "inf-8-logic-013",
+        "inf-8-logic-016",
+        "inf-8-logic-018",
+        "inf-8-logic-047",
+        "inf-8-logic-048",
+        "inf-8-logic-049",
+        "inf-8-logic-050",
+        "inf-8-logic-051",
+        "inf-8-logic-052",
+        "inf-8-logic-064"
+      ]
+    },
+    {
+      "title": "Логические элементы, КТП 12",
+      "ktp": [
+        {
+          "from": 12,
+          "to": 12
+        }
+      ],
+      "task_ids": [
+        "inf-8-logic-029",
+        "inf-8-logic-030",
+        "inf-8-logic-054",
+        "inf-8-logic-055",
+        "inf-8-logic-056",
+        "inf-8-logic-057",
+        "inf-8-logic-058",
+        "inf-8-logic-059",
+        "inf-8-logic-060",
+        "inf-8-logic-062",
+        "inf-8-logic-065",
+        "inf-8-logic-066"
+      ]
+    }
+  ],
+  "pool": [
     {
       "id": "inf-8-logic-001",
       "lesson": "logic-01-utterances",
@@ -13,20 +124,20 @@
       "prompt": "Что из перечисленного является высказыванием?",
       "options": [
         {
-          "id": "A",
-          "text": "«Который час?»"
-        },
-        {
-          "id": "B",
-          "text": "«Закрой окно!»"
-        },
-        {
           "id": "C",
           "text": "«2 + 2 = 5»"
         },
         {
+          "id": "A",
+          "text": "«Который час?»"
+        },
+        {
           "id": "D",
           "text": "«Ура!»"
+        },
+        {
+          "id": "B",
+          "text": "«Закрой окно!»"
         }
       ]
     },
@@ -38,20 +149,20 @@
       "prompt": "Какие значения может принимать логическое высказывание?",
       "options": [
         {
-          "id": "A",
-          "text": "Только истину"
-        },
-        {
           "id": "B",
           "text": "Истину или ложь"
         },
         {
-          "id": "C",
-          "text": "Любое число"
-        },
-        {
           "id": "D",
           "text": "Да, нет или неизвестно"
+        },
+        {
+          "id": "A",
+          "text": "Только истину"
+        },
+        {
+          "id": "C",
+          "text": "Любое число"
         }
       ]
     },
@@ -67,17 +178,121 @@
           "text": "«Идет дождь»"
         },
         {
+          "id": "D",
+          "text": "«2 × 2»"
+        },
+        {
           "id": "B",
           "text": "«Идет дождь и дует ветер»"
         },
         {
           "id": "C",
           "text": "«Закрой окно»"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-020",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "В высказывание «x — чётное число» вместо x подставили число 4. Истинно ли это высказывание?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Это не высказывание"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        },
+        {
+          "id": "C",
+          "text": "Пока нельзя определить"
+        },
+        {
+          "id": "A",
+          "text": "Истина"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-031",
+      "lesson": "logic-01-utterances",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Связка НЕ стоит в середине фразы «Петя решил правильно НЕ все задания» и меняет смысл. Сколько разных высказываний можно получить из этой фразы, поставив НЕ в разные места? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-032",
+      "lesson": "logic-01-utterances",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В высказывание «x делится на 5» вместо x подставляют целые числа от 1 до 20. Сколько подстановок делают высказывание истинным? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-033",
+      "lesson": "logic-01-utterances",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чем ложное высказывание отличается от предложения, которое высказыванием не является?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Ложное высказывание нельзя проверить, а проверить можно только истинные"
         },
         {
           "id": "D",
-          "text": "«2 × 2»"
+          "text": "Ложное высказывание не содержит чисел и названий"
+        },
+        {
+          "id": "A",
+          "text": "Ложное высказывание всё равно высказывание: у него есть значение 0"
+        },
+        {
+          "id": "B",
+          "text": "Ничем: это одно и то же"
         }
+      ]
+    },
+    {
+      "id": "inf-8-logic-034",
+      "lesson": "logic-01-utterances",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: высказывание — его вид.",
+      "left": [
+        "«7 — простое число»",
+        "«На улице идёт дождь и дует ветер»",
+        "«Поезд придёт вовремя или придёт с опозданием»",
+        "«Ни один ученик не опоздал на урок»"
+      ],
+      "right": [
+        "простое высказывание",
+        "составное высказывание со связкой И",
+        "составное высказывание со связкой ИЛИ",
+        "составное высказывание со связкой НЕ"
+      ]
+    },
+    {
+      "id": "inf-8-logic-063",
+      "lesson": "logic-01-utterances",
+      "type": "matching",
+      "points": 1,
+      "prompt": "Установите соответствие: высказывание — его отрицание.",
+      "left": [
+        "«9 делится на 5»",
+        "«2² = 4»",
+        "«В треугольнике четыре стороны»",
+        "«13 больше 20»"
+      ],
+      "right": [
+        "«13 не больше 20»",
+        "«9 не делится на 5»",
+        "«В треугольнике не четыре стороны»",
+        "«2² ≠ 4»"
       ]
     },
     {
@@ -88,16 +303,16 @@
       "prompt": "Какой знак обозначает конъюнкцию (И)?",
       "options": [
         {
+          "id": "C",
+          "text": "∧"
+        },
+        {
           "id": "A",
           "text": "∨"
         },
         {
           "id": "B",
           "text": "¬"
-        },
-        {
-          "id": "C",
-          "text": "∧"
         },
         {
           "id": "D",
@@ -117,12 +332,12 @@
           "text": "∧"
         },
         {
-          "id": "B",
-          "text": "∨"
-        },
-        {
           "id": "C",
           "text": "¬"
+        },
+        {
+          "id": "B",
+          "text": "∨"
         },
         {
           "id": "D",
@@ -131,11 +346,45 @@
       ]
     },
     {
+      "id": "inf-8-logic-008",
+      "lesson": "logic-02-operations",
+      "type": "matching",
+      "points": 1,
+      "prompt": "Установите соответствие: операция — её знак.",
+      "left": [
+        "И",
+        "ИЛИ",
+        "НЕ"
+      ],
+      "right": [
+        "¬",
+        "∧",
+        "∨"
+      ]
+    },
+    {
       "id": "inf-8-logic-009",
       "lesson": "logic-02-operations",
       "type": "single_choice",
       "points": 2,
       "prompt": "При A=1, B=0 вычислите A ∧ B.",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ложь"
+        },
+        {
+          "id": "A",
+          "text": "Истина"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-010",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=0, B=0 вычислите A ∨ B.",
       "options": [
         {
           "id": "A",
@@ -148,11 +397,402 @@
       ]
     },
     {
-      "id": "inf-8-logic-012",
+      "id": "inf-8-logic-014",
       "lesson": "logic-02-operations",
       "type": "single_choice",
       "points": 2,
-      "prompt": "При A=1, B=1 вычислите A ∧ ¬B.",
+      "prompt": "Какая операция выполняется первой в выражении A ∨ ¬B ∧ C?",
+      "options": [
+        {
+          "id": "B",
+          "text": "И"
+        },
+        {
+          "id": "C",
+          "text": "НЕ"
+        },
+        {
+          "id": "D",
+          "text": "Все одновременно"
+        },
+        {
+          "id": "A",
+          "text": "ИЛИ"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-017",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "При A=1 вычислите отрицание ¬A.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-019",
+      "lesson": "logic-02-operations",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Вычислите 1 ∨ 1.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Истина"
+        },
+        {
+          "id": "B",
+          "text": "Ложь"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-022",
+      "lesson": "logic-02-operations",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В скольких строках таблицы истинности выражение (A ∨ B) ∧ ¬B равно 1? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-023",
+      "lesson": "logic-05-expression",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Запишите выражением условие «a больше 2 и a чётное».",
+      "options": [
+        {
+          "id": "B",
+          "text": "a > 2 ∨ (a mod 2 = 0)"
+        },
+        {
+          "id": "A",
+          "text": "a > 2 ∧ (a mod 2 = 0)"
+        },
+        {
+          "id": "D",
+          "text": "¬(a > 2) ∨ (a mod 2 = 0)"
+        },
+        {
+          "id": "C",
+          "text": "(a > 2) ∧ (a > 0)"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-024",
+      "lesson": "logic-05-expression",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Упростите выражение (A ∨ 1) ∧ 0 и укажите, чему оно равно при любом значении A. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-035",
+      "lesson": "logic-05-expression",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чему равно выражение A ∧ 1 при любом значении A?",
+      "options": [
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "0"
+        },
+        {
+          "id": "D",
+          "text": "Значение зависит от A и его нельзя назвать заранее"
+        },
+        {
+          "id": "A",
+          "text": "A"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-036",
+      "lesson": "logic-05-expression",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько различных значений принимает выражение A ∨ 0 при всех возможных значениях A? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-037",
+      "lesson": "logic-05-expression",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Как правильно читается выражение ¬A ∧ B?",
+      "options": [
+        {
+          "id": "C",
+          "text": "как (¬A) ∧ (¬B) — отрицаются обе переменные"
+        },
+        {
+          "id": "D",
+          "text": "как ¬A, а B к нему отношения не имеет"
+        },
+        {
+          "id": "B",
+          "text": "как ¬(A ∧ B) — отрицается всё выражение"
+        },
+        {
+          "id": "A",
+          "text": "как (¬A) ∧ B — отрицается только A"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-038",
+      "lesson": "logic-05-expression",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите значение выражения (¬A) ∧ B при A = 0 и B = 1. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-039",
+      "lesson": "logic-05-expression",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "По закону поглощения A ∨ (A ∧ B) = A. В скольких строках таблицы истинности для двух переменных это выражение равно 1? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-040",
+      "lesson": "logic-05-expression",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: условие задачи — его запись логическим выражением.",
+      "left": [
+        "«Число x положительное и делится на 5»",
+        "«Число x равно 1 или равно 5»",
+        "«Число x не больше 10»",
+        "«Число x больше 3 и меньше 7»"
+      ],
+      "right": [
+        "x > 0 ∧ (x mod 5 = 0)",
+        "x = 1 ∨ x = 5",
+        "x ≤ 10",
+        "x > 3 ∧ x < 7"
+      ]
+    },
+    {
+      "id": "inf-8-logic-067",
+      "lesson": "logic-05-expression",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите значение выражения A ∨ B ∧ C при A = 1, B = 1, C = 0. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-068",
+      "lesson": "logic-05-expression",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Запишите логическое выражение из двух высказываний A и B, которое истинно тогда и только тогда, когда ровно одно из них истинно.",
+      "options": [
+        {
+          "id": "C",
+          "text": "A ∨ B"
+        },
+        {
+          "id": "D",
+          "text": "(A ∧ ¬B) ∧ (¬A ∧ B)"
+        },
+        {
+          "id": "A",
+          "text": "(A ∧ ¬B) ∨ (¬A ∧ B)"
+        },
+        {
+          "id": "B",
+          "text": "A ∧ B"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-026",
+      "lesson": "logic-06-laws",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равно выражение A ∧ ¬A при любом значении A? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-027",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чему равносильно выражение ¬(A ∨ B)?",
+      "options": [
+        {
+          "id": "B",
+          "text": "¬A ∨ ¬B"
+        },
+        {
+          "id": "D",
+          "text": "¬(A ∧ B)"
+        },
+        {
+          "id": "A",
+          "text": "¬A ∧ ¬B"
+        },
+        {
+          "id": "C",
+          "text": "A ∧ B"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-041",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чему равно выражение ¬¬A?",
+      "options": [
+        {
+          "id": "B",
+          "text": "¬A"
+        },
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-042",
+      "lesson": "logic-06-laws",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Проверьте закон поглощения A ∧ (A ∨ B) = A перебором: сколько различных значений принимает левая часть? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-043",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чему равносильно выражение ¬(A ∧ B)?",
+      "options": [
+        {
+          "id": "B",
+          "text": "¬A ∧ ¬B"
+        },
+        {
+          "id": "A",
+          "text": "¬A ∨ ¬B"
+        },
+        {
+          "id": "D",
+          "text": "¬(A ∨ B)"
+        },
+        {
+          "id": "C",
+          "text": "A ∨ B"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-044",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чему равно A ∧ (B ∨ C)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A ∧ B) ∨ (A ∧ C)"
+        },
+        {
+          "id": "C",
+          "text": "(A ∨ B) ∧ C"
+        },
+        {
+          "id": "B",
+          "text": "(A ∧ B) ∨ C"
+        },
+        {
+          "id": "D",
+          "text": "A ∧ B ∧ C"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-069",
+      "lesson": "logic-06-laws",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Скобки в конъюнкции из четырёх высказываний A, B, C и D расставляют разными способами. Сколько существует таких расстановок, при которых значение выражения одинаково при любых значениях A, B, C и D? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-070",
+      "lesson": "logic-06-laws",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой закон алгебры логики записывается равенством A ∨ B = B ∨ A?",
+      "options": [
+        {
+          "id": "A",
+          "text": "закон коммутативности"
+        },
+        {
+          "id": "D",
+          "text": "закон де Моргана"
+        },
+        {
+          "id": "B",
+          "text": "закон ассоциативности"
+        },
+        {
+          "id": "C",
+          "text": "закон дистрибутивности"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-006",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для 2 переменных? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-007",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для 3 переменных? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-013",
+      "lesson": "logic-03-truth-tables",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "При A=0, B=1 вычислите ¬(A ∨ B).",
       "options": [
         {
           "id": "A",
@@ -173,38 +813,3222 @@
       "base": 10
     },
     {
-      "id": "inf-8-logic-011",
-      "lesson": "logic-02-operations",
+      "id": "inf-8-logic-018",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для 1 переменной? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-047",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько строк (без шапки) в таблице истинности для выражения с 4 переменными? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-048",
+      "lesson": "logic-03-truth-tables",
       "type": "single_choice",
-      "points": 2,
-      "prompt": "При A=0, B=0 вычислите ¬A.",
+      "points": 1,
+      "prompt": "В таблице истинности для двух переменных наборы записывают как двоичные числа от 0 до 3. Какая строка (без шапки) соответствует набору A = 1, B = 0?",
       "options": [
         {
-          "id": "A",
-          "text": "Истина"
+          "id": "D",
+          "text": "Четвёртая"
         },
         {
           "id": "B",
-          "text": "Ложь"
+          "text": "Вторая"
+        },
+        {
+          "id": "A",
+          "text": "Третья"
+        },
+        {
+          "id": "C",
+          "text": "Первая"
         }
       ]
     },
     {
-      "id": "inf-8-logic-013",
+      "id": "inf-8-logic-049",
       "lesson": "logic-03-truth-tables",
-      "type": "single_choice",
+      "type": "numeric_base",
       "points": 2,
-      "prompt": "При A=0, B=1 вычислите ¬(A ∨ B).",
+      "prompt": "В скольких строках таблицы истинности для двух переменных выражение A ∨ B равно 1? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-050",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите значение выражения (A ∨ B) ∧ ¬C при A = 1, B = 0, C = 0. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-051",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В скольких строках таблицы истинности для трёх переменных выражение F = (A ∨ B) ∧ ¬C равно 1? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-052",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В скольких строках таблицы истинности для трёх переменных выражение A ∧ B ∧ C равно 1? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-064",
+      "lesson": "logic-03-truth-tables",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Постройте таблицу истинности для трёх переменных и выясните, в скольких её строках выражение (A ∨ B) ∧ (A ∨ C) равно 1. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-029",
+      "lesson": "logic-04-elements",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "У какого логического элемента один вход?",
       "options": [
         {
           "id": "A",
-          "text": "Истина"
+          "text": "И (конъюнктор)"
+        },
+        {
+          "id": "C",
+          "text": "НЕ (инвертор)"
+        },
+        {
+          "id": "D",
+          "text": "Повторитель сигнала"
         },
         {
           "id": "B",
-          "text": "Ложь"
+          "text": "ИЛИ (дизъюнктор)"
         }
       ]
+    },
+    {
+      "id": "inf-8-logic-030",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "На входы логического элемента И поданы сигналы 1, 1 и 0. Что будет на выходе? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-054",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "На вход инвертора (элемента НЕ) подали сигнал 1. Что будет на выходе? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-055",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "На входы логического элемента ИЛИ (дизъюнктора) поданы сигналы 0 и 0. Что будет на выходе? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-056",
+      "lesson": "logic-04-elements",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Где на схеме рисуют кружок инверсии у логического элемента?",
+      "options": [
+        {
+          "id": "A",
+          "text": "На выходе элемента — он и означает НЕ"
+        },
+        {
+          "id": "B",
+          "text": "На каждом входе элемента"
+        },
+        {
+          "id": "D",
+          "text": "Кружка нет ни на одном логическом элементе"
+        },
+        {
+          "id": "C",
+          "text": "На корпусе элемента, независимо от входов и выхода"
+        }
+      ]
+    },
+    {
+      "id": "inf-8-logic-057",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Схема: на входы элемента И поданы A = 1 и B = 0, а его выход соединён со входом элемента НЕ. Что будет на выходе схемы? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-058",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "На входы логического элемента ИЛИ поданы сигналы 1 и 0. Что будет на выходе? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-059",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Схема из двух элементов И, соединённых последовательно: на входы первого поданы 1 и 1, на входы второго — 0 и 1. Что будет на выходе схемы? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-060",
+      "lesson": "logic-04-elements",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: логический элемент — правило его работы.",
+      "left": [
+        "Элемент И (конъюнктор)",
+        "Элемент ИЛИ (дизъюнктор)",
+        "Элемент НЕ (инвертор)"
+      ],
+      "right": [
+        "на выходе 1 только тогда, когда на всех входах единицы",
+        "на выходе 0 только тогда, когда на всех входах нули",
+        "на выходе значение, противоположное входному"
+      ]
+    },
+    {
+      "id": "inf-8-logic-062",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Схема: три входа элемента ИЛИ (A, B, C), его выход соединён со входом элемента НЕ. На входы поданы 0, 0 и 1. Что будет на выходе схемы? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-065",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "На входы логического элемента исключающее ИЛИ (его называют также «неравнозначность») поданы сигналы 1 и 1. Что будет на выходе? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-logic-066",
+      "lesson": "logic-04-elements",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Схема: выход элемента НЕ соединён со входом второго элемента НЕ. На вход схемы подали сигнал 1. Что будет на выходе схемы? Запишите только число.",
+      "base": 10
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-8-logic-010",
+        "inf-8-logic-044",
+        "inf-8-logic-039",
+        "inf-8-logic-042",
+        "inf-8-logic-013",
+        "inf-8-logic-007",
+        "inf-8-logic-070",
+        "inf-8-logic-001",
+        "inf-8-logic-040",
+        "inf-8-logic-060",
+        "inf-8-logic-016",
+        "inf-8-logic-064",
+        "inf-8-logic-065",
+        "inf-8-logic-022",
+        "inf-8-logic-029",
+        "inf-8-logic-034",
+        "inf-8-logic-057",
+        "inf-8-logic-031",
+        "inf-8-logic-009",
+        "inf-8-logic-037"
+      ],
+      "orders": {
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-8-logic-032",
+        "inf-8-logic-024",
+        "inf-8-logic-064",
+        "inf-8-logic-063",
+        "inf-8-logic-051",
+        "inf-8-logic-030",
+        "inf-8-logic-035",
+        "inf-8-logic-039",
+        "inf-8-logic-023",
+        "inf-8-logic-052",
+        "inf-8-logic-022",
+        "inf-8-logic-060",
+        "inf-8-logic-009",
+        "inf-8-logic-005",
+        "inf-8-logic-044",
+        "inf-8-logic-066",
+        "inf-8-logic-055",
+        "inf-8-logic-007",
+        "inf-8-logic-040",
+        "inf-8-logic-034"
+      ],
+      "orders": {
+        "inf-8-logic-063": {
+          "right": [
+            "«9 не делится на 5»",
+            "«13 не больше 20»",
+            "«2² ≠ 4»",
+            "«В треугольнике не четыре стороны»"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-023": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-8-logic-034",
+        "inf-8-logic-048",
+        "inf-8-logic-064",
+        "inf-8-logic-003",
+        "inf-8-logic-037",
+        "inf-8-logic-066",
+        "inf-8-logic-041",
+        "inf-8-logic-063",
+        "inf-8-logic-013",
+        "inf-8-logic-022",
+        "inf-8-logic-069",
+        "inf-8-logic-040",
+        "inf-8-logic-062",
+        "inf-8-logic-057",
+        "inf-8-logic-033",
+        "inf-8-logic-016",
+        "inf-8-logic-043",
+        "inf-8-logic-055",
+        "inf-8-logic-032",
+        "inf-8-logic-039"
+      ],
+      "orders": {
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«2² ≠ 4»",
+            "«В треугольнике не четыре стороны»",
+            "«9 не делится на 5»",
+            "«13 не больше 20»"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x ≤ 10",
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-043": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-8-logic-043",
+        "inf-8-logic-014",
+        "inf-8-logic-017",
+        "inf-8-logic-016",
+        "inf-8-logic-042",
+        "inf-8-logic-009",
+        "inf-8-logic-044",
+        "inf-8-logic-007",
+        "inf-8-logic-054",
+        "inf-8-logic-034",
+        "inf-8-logic-040",
+        "inf-8-logic-022",
+        "inf-8-logic-039",
+        "inf-8-logic-004",
+        "inf-8-logic-006",
+        "inf-8-logic-049",
+        "inf-8-logic-065",
+        "inf-8-logic-062",
+        "inf-8-logic-030",
+        "inf-8-logic-070"
+      ],
+      "orders": {
+        "inf-8-logic-043": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-8-logic-033",
+        "inf-8-logic-022",
+        "inf-8-logic-039",
+        "inf-8-logic-029",
+        "inf-8-logic-049",
+        "inf-8-logic-059",
+        "inf-8-logic-019",
+        "inf-8-logic-027",
+        "inf-8-logic-065",
+        "inf-8-logic-024",
+        "inf-8-logic-009",
+        "inf-8-logic-008",
+        "inf-8-logic-041",
+        "inf-8-logic-048",
+        "inf-8-logic-062",
+        "inf-8-logic-016",
+        "inf-8-logic-070",
+        "inf-8-logic-040",
+        "inf-8-logic-006",
+        "inf-8-logic-034"
+      ],
+      "orders": {
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∧",
+            "∨",
+            "¬"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-8-logic-026",
+        "inf-8-logic-022",
+        "inf-8-logic-044",
+        "inf-8-logic-034",
+        "inf-8-logic-065",
+        "inf-8-logic-001",
+        "inf-8-logic-047",
+        "inf-8-logic-042",
+        "inf-8-logic-018",
+        "inf-8-logic-003",
+        "inf-8-logic-054",
+        "inf-8-logic-049",
+        "inf-8-logic-059",
+        "inf-8-logic-027",
+        "inf-8-logic-010",
+        "inf-8-logic-016",
+        "inf-8-logic-039",
+        "inf-8-logic-040",
+        "inf-8-logic-062",
+        "inf-8-logic-033"
+      ],
+      "orders": {
+        "inf-8-logic-044": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-8-logic-031",
+        "inf-8-logic-052",
+        "inf-8-logic-036",
+        "inf-8-logic-010",
+        "inf-8-logic-040",
+        "inf-8-logic-059",
+        "inf-8-logic-039",
+        "inf-8-logic-034",
+        "inf-8-logic-013",
+        "inf-8-logic-018",
+        "inf-8-logic-027",
+        "inf-8-logic-002",
+        "inf-8-logic-055",
+        "inf-8-logic-024",
+        "inf-8-logic-062",
+        "inf-8-logic-009",
+        "inf-8-logic-056",
+        "inf-8-logic-042",
+        "inf-8-logic-022",
+        "inf-8-logic-064"
+      ],
+      "orders": {
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-8-logic-067",
+        "inf-8-logic-013",
+        "inf-8-logic-055",
+        "inf-8-logic-039",
+        "inf-8-logic-060",
+        "inf-8-logic-018",
+        "inf-8-logic-017",
+        "inf-8-logic-006",
+        "inf-8-logic-043",
+        "inf-8-logic-014",
+        "inf-8-logic-016",
+        "inf-8-logic-024",
+        "inf-8-logic-059",
+        "inf-8-logic-001",
+        "inf-8-logic-029",
+        "inf-8-logic-022",
+        "inf-8-logic-040",
+        "inf-8-logic-032",
+        "inf-8-logic-034",
+        "inf-8-logic-042"
+      ],
+      "orders": {
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-043": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-8-logic-058",
+        "inf-8-logic-066",
+        "inf-8-logic-042",
+        "inf-8-logic-007",
+        "inf-8-logic-040",
+        "inf-8-logic-003",
+        "inf-8-logic-039",
+        "inf-8-logic-013",
+        "inf-8-logic-062",
+        "inf-8-logic-043",
+        "inf-8-logic-010",
+        "inf-8-logic-052",
+        "inf-8-logic-067",
+        "inf-8-logic-034",
+        "inf-8-logic-029",
+        "inf-8-logic-033",
+        "inf-8-logic-064",
+        "inf-8-logic-044",
+        "inf-8-logic-022",
+        "inf-8-logic-017"
+      ],
+      "orders": {
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-043": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-8-logic-022",
+        "inf-8-logic-056",
+        "inf-8-logic-040",
+        "inf-8-logic-039",
+        "inf-8-logic-017",
+        "inf-8-logic-020",
+        "inf-8-logic-007",
+        "inf-8-logic-044",
+        "inf-8-logic-027",
+        "inf-8-logic-049",
+        "inf-8-logic-034",
+        "inf-8-logic-064",
+        "inf-8-logic-055",
+        "inf-8-logic-052",
+        "inf-8-logic-001",
+        "inf-8-logic-042",
+        "inf-8-logic-032",
+        "inf-8-logic-062",
+        "inf-8-logic-036",
+        "inf-8-logic-057"
+      ],
+      "orders": {
+        "inf-8-logic-056": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-8-logic-014",
+        "inf-8-logic-057",
+        "inf-8-logic-040",
+        "inf-8-logic-049",
+        "inf-8-logic-067",
+        "inf-8-logic-036",
+        "inf-8-logic-063",
+        "inf-8-logic-037",
+        "inf-8-logic-034",
+        "inf-8-logic-017",
+        "inf-8-logic-006",
+        "inf-8-logic-052",
+        "inf-8-logic-055",
+        "inf-8-logic-039",
+        "inf-8-logic-027",
+        "inf-8-logic-009",
+        "inf-8-logic-064",
+        "inf-8-logic-022",
+        "inf-8-logic-065",
+        "inf-8-logic-060"
+      ],
+      "orders": {
+        "inf-8-logic-014": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«2² ≠ 4»",
+            "«В треугольнике не четыре стороны»",
+            "«9 не делится на 5»",
+            "«13 не больше 20»"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-8-logic-035",
+        "inf-8-logic-030",
+        "inf-8-logic-024",
+        "inf-8-logic-060",
+        "inf-8-logic-014",
+        "inf-8-logic-038",
+        "inf-8-logic-003",
+        "inf-8-logic-050",
+        "inf-8-logic-016",
+        "inf-8-logic-065",
+        "inf-8-logic-007",
+        "inf-8-logic-034",
+        "inf-8-logic-039",
+        "inf-8-logic-036",
+        "inf-8-logic-056",
+        "inf-8-logic-004",
+        "inf-8-logic-032",
+        "inf-8-logic-022",
+        "inf-8-logic-047",
+        "inf-8-logic-040"
+      ],
+      "orders": {
+        "inf-8-logic-035": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе значение, противоположное входному",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-8-logic-051",
+        "inf-8-logic-040",
+        "inf-8-logic-038",
+        "inf-8-logic-066",
+        "inf-8-logic-019",
+        "inf-8-logic-069",
+        "inf-8-logic-024",
+        "inf-8-logic-039",
+        "inf-8-logic-022",
+        "inf-8-logic-018",
+        "inf-8-logic-010",
+        "inf-8-logic-003",
+        "inf-8-logic-026",
+        "inf-8-logic-014",
+        "inf-8-logic-056",
+        "inf-8-logic-034",
+        "inf-8-logic-006",
+        "inf-8-logic-060",
+        "inf-8-logic-052",
+        "inf-8-logic-059"
+      ],
+      "orders": {
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-8-logic-056",
+        "inf-8-logic-018",
+        "inf-8-logic-038",
+        "inf-8-logic-048",
+        "inf-8-logic-023",
+        "inf-8-logic-031",
+        "inf-8-logic-040",
+        "inf-8-logic-032",
+        "inf-8-logic-016",
+        "inf-8-logic-044",
+        "inf-8-logic-039",
+        "inf-8-logic-010",
+        "inf-8-logic-034",
+        "inf-8-logic-059",
+        "inf-8-logic-060",
+        "inf-8-logic-035",
+        "inf-8-logic-004",
+        "inf-8-logic-050",
+        "inf-8-logic-022",
+        "inf-8-logic-055"
+      ],
+      "orders": {
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-023": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-8-logic-056",
+        "inf-8-logic-036",
+        "inf-8-logic-059",
+        "inf-8-logic-040",
+        "inf-8-logic-062",
+        "inf-8-logic-054",
+        "inf-8-logic-022",
+        "inf-8-logic-052",
+        "inf-8-logic-027",
+        "inf-8-logic-005",
+        "inf-8-logic-002",
+        "inf-8-logic-013",
+        "inf-8-logic-034",
+        "inf-8-logic-043",
+        "inf-8-logic-023",
+        "inf-8-logic-033",
+        "inf-8-logic-039",
+        "inf-8-logic-048",
+        "inf-8-logic-006",
+        "inf-8-logic-032"
+      ],
+      "orders": {
+        "inf-8-logic-056": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-043": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-023": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-8-logic-052",
+        "inf-8-logic-066",
+        "inf-8-logic-069",
+        "inf-8-logic-029",
+        "inf-8-logic-059",
+        "inf-8-logic-039",
+        "inf-8-logic-047",
+        "inf-8-logic-062",
+        "inf-8-logic-034",
+        "inf-8-logic-019",
+        "inf-8-logic-022",
+        "inf-8-logic-014",
+        "inf-8-logic-018",
+        "inf-8-logic-027",
+        "inf-8-logic-070",
+        "inf-8-logic-005",
+        "inf-8-logic-050",
+        "inf-8-logic-040",
+        "inf-8-logic-037",
+        "inf-8-logic-032"
+      ],
+      "orders": {
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-8-logic-043",
+        "inf-8-logic-022",
+        "inf-8-logic-039",
+        "inf-8-logic-034",
+        "inf-8-logic-051",
+        "inf-8-logic-044",
+        "inf-8-logic-016",
+        "inf-8-logic-006",
+        "inf-8-logic-066",
+        "inf-8-logic-029",
+        "inf-8-logic-020",
+        "inf-8-logic-040",
+        "inf-8-logic-007",
+        "inf-8-logic-058",
+        "inf-8-logic-010",
+        "inf-8-logic-069",
+        "inf-8-logic-031",
+        "inf-8-logic-005",
+        "inf-8-logic-062",
+        "inf-8-logic-042"
+      ],
+      "orders": {
+        "inf-8-logic-043": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-8-logic-035",
+        "inf-8-logic-006",
+        "inf-8-logic-042",
+        "inf-8-logic-027",
+        "inf-8-logic-033",
+        "inf-8-logic-034",
+        "inf-8-logic-024",
+        "inf-8-logic-060",
+        "inf-8-logic-055",
+        "inf-8-logic-057",
+        "inf-8-logic-009",
+        "inf-8-logic-056",
+        "inf-8-logic-022",
+        "inf-8-logic-052",
+        "inf-8-logic-004",
+        "inf-8-logic-049",
+        "inf-8-logic-039",
+        "inf-8-logic-007",
+        "inf-8-logic-040",
+        "inf-8-logic-002"
+      ],
+      "orders": {
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x ≤ 10",
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-8-logic-004",
+        "inf-8-logic-065",
+        "inf-8-logic-013",
+        "inf-8-logic-060",
+        "inf-8-logic-003",
+        "inf-8-logic-027",
+        "inf-8-logic-016",
+        "inf-8-logic-034",
+        "inf-8-logic-040",
+        "inf-8-logic-067",
+        "inf-8-logic-033",
+        "inf-8-logic-022",
+        "inf-8-logic-057",
+        "inf-8-logic-066",
+        "inf-8-logic-039",
+        "inf-8-logic-032",
+        "inf-8-logic-043",
+        "inf-8-logic-047",
+        "inf-8-logic-048",
+        "inf-8-logic-069"
+      ],
+      "orders": {
+        "inf-8-logic-004": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе значение, противоположное входному",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-043": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-8-logic-016",
+        "inf-8-logic-040",
+        "inf-8-logic-034",
+        "inf-8-logic-038",
+        "inf-8-logic-055",
+        "inf-8-logic-062",
+        "inf-8-logic-014",
+        "inf-8-logic-002",
+        "inf-8-logic-064",
+        "inf-8-logic-022",
+        "inf-8-logic-032",
+        "inf-8-logic-056",
+        "inf-8-logic-005",
+        "inf-8-logic-018",
+        "inf-8-logic-049",
+        "inf-8-logic-059",
+        "inf-8-logic-069",
+        "inf-8-logic-067",
+        "inf-8-logic-037",
+        "inf-8-logic-039"
+      ],
+      "orders": {
+        "inf-8-logic-040": {
+          "right": [
+            "x ≤ 10",
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-8-logic-037",
+        "inf-8-logic-010",
+        "inf-8-logic-008",
+        "inf-8-logic-030",
+        "inf-8-logic-049",
+        "inf-8-logic-040",
+        "inf-8-logic-063",
+        "inf-8-logic-029",
+        "inf-8-logic-060",
+        "inf-8-logic-047",
+        "inf-8-logic-009",
+        "inf-8-logic-035",
+        "inf-8-logic-039",
+        "inf-8-logic-044",
+        "inf-8-logic-034",
+        "inf-8-logic-007",
+        "inf-8-logic-022",
+        "inf-8-logic-054",
+        "inf-8-logic-016",
+        "inf-8-logic-070"
+      ],
+      "orders": {
+        "inf-8-logic-037": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "¬",
+            "∧"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x = 1 ∨ x = 5"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«13 не больше 20»",
+            "«2² ≠ 4»",
+            "«В треугольнике не четыре стороны»",
+            "«9 не делится на 5»"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе значение, противоположное входному",
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе 1 только тогда, когда на всех входах единицы"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-8-logic-009",
+        "inf-8-logic-022",
+        "inf-8-logic-054",
+        "inf-8-logic-019",
+        "inf-8-logic-037",
+        "inf-8-logic-034",
+        "inf-8-logic-020",
+        "inf-8-logic-027",
+        "inf-8-logic-070",
+        "inf-8-logic-039",
+        "inf-8-logic-029",
+        "inf-8-logic-016",
+        "inf-8-logic-059",
+        "inf-8-logic-026",
+        "inf-8-logic-008",
+        "inf-8-logic-060",
+        "inf-8-logic-018",
+        "inf-8-logic-050",
+        "inf-8-logic-040",
+        "inf-8-logic-006"
+      ],
+      "orders": {
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой И",
+            "простое высказывание"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "¬",
+            "∧"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7",
+            "x = 1 ∨ x = 5",
+            "x ≤ 10"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-8-logic-022",
+        "inf-8-logic-037",
+        "inf-8-logic-040",
+        "inf-8-logic-048",
+        "inf-8-logic-002",
+        "inf-8-logic-066",
+        "inf-8-logic-026",
+        "inf-8-logic-044",
+        "inf-8-logic-014",
+        "inf-8-logic-039",
+        "inf-8-logic-052",
+        "inf-8-logic-034",
+        "inf-8-logic-010",
+        "inf-8-logic-042",
+        "inf-8-logic-065",
+        "inf-8-logic-060",
+        "inf-8-logic-050",
+        "inf-8-logic-003",
+        "inf-8-logic-047",
+        "inf-8-logic-058"
+      ],
+      "orders": {
+        "inf-8-logic-037": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-010": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы",
+            "на выходе 0 только тогда, когда на всех входах нули"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-8-logic-038",
+        "inf-8-logic-010",
+        "inf-8-logic-040",
+        "inf-8-logic-039",
+        "inf-8-logic-022",
+        "inf-8-logic-006",
+        "inf-8-logic-054",
+        "inf-8-logic-034",
+        "inf-8-logic-031",
+        "inf-8-logic-020",
+        "inf-8-logic-048",
+        "inf-8-logic-026",
+        "inf-8-logic-062",
+        "inf-8-logic-037",
+        "inf-8-logic-035",
+        "inf-8-logic-016",
+        "inf-8-logic-013",
+        "inf-8-logic-056",
+        "inf-8-logic-057",
+        "inf-8-logic-004"
+      ],
+      "orders": {
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x > 3 ∧ x < 7",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-8-logic-037",
+        "inf-8-logic-035",
+        "inf-8-logic-057",
+        "inf-8-logic-063",
+        "inf-8-logic-068",
+        "inf-8-logic-022",
+        "inf-8-logic-039",
+        "inf-8-logic-009",
+        "inf-8-logic-052",
+        "inf-8-logic-034",
+        "inf-8-logic-027",
+        "inf-8-logic-047",
+        "inf-8-logic-013",
+        "inf-8-logic-029",
+        "inf-8-logic-060",
+        "inf-8-logic-019",
+        "inf-8-logic-056",
+        "inf-8-logic-032",
+        "inf-8-logic-018",
+        "inf-8-logic-040"
+      ],
+      "orders": {
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«13 не больше 20»",
+            "«9 не делится на 5»",
+            "«В треугольнике не четыре стороны»",
+            "«2² ≠ 4»"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-060": {
+          "right": [
+            "на выходе 0 только тогда, когда на всех входах нули",
+            "на выходе значение, противоположное входному",
+            "на выходе 1 только тогда, когда на всех входах единицы"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x = 1 ∨ x = 5",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-8-logic-016",
+        "inf-8-logic-027",
+        "inf-8-logic-009",
+        "inf-8-logic-022",
+        "inf-8-logic-040",
+        "inf-8-logic-047",
+        "inf-8-logic-007",
+        "inf-8-logic-054",
+        "inf-8-logic-063",
+        "inf-8-logic-068",
+        "inf-8-logic-057",
+        "inf-8-logic-002",
+        "inf-8-logic-062",
+        "inf-8-logic-049",
+        "inf-8-logic-067",
+        "inf-8-logic-014",
+        "inf-8-logic-034",
+        "inf-8-logic-024",
+        "inf-8-logic-039",
+        "inf-8-logic-066"
+      ],
+      "orders": {
+        "inf-8-logic-027": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7",
+            "x ≤ 10"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«13 не больше 20»",
+            "«9 не делится на 5»",
+            "«В треугольнике не четыре стороны»",
+            "«2² ≠ 4»"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой И"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-8-logic-022",
+        "inf-8-logic-017",
+        "inf-8-logic-037",
+        "inf-8-logic-040",
+        "inf-8-logic-016",
+        "inf-8-logic-034",
+        "inf-8-logic-029",
+        "inf-8-logic-062",
+        "inf-8-logic-020",
+        "inf-8-logic-007",
+        "inf-8-logic-033",
+        "inf-8-logic-051",
+        "inf-8-logic-035",
+        "inf-8-logic-047",
+        "inf-8-logic-027",
+        "inf-8-logic-004",
+        "inf-8-logic-067",
+        "inf-8-logic-030",
+        "inf-8-logic-039",
+        "inf-8-logic-056"
+      ],
+      "orders": {
+        "inf-8-logic-017": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "простое высказывание",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-8-logic-034",
+        "inf-8-logic-064",
+        "inf-8-logic-007",
+        "inf-8-logic-039",
+        "inf-8-logic-067",
+        "inf-8-logic-066",
+        "inf-8-logic-040",
+        "inf-8-logic-022",
+        "inf-8-logic-002",
+        "inf-8-logic-030",
+        "inf-8-logic-001",
+        "inf-8-logic-024",
+        "inf-8-logic-009",
+        "inf-8-logic-014",
+        "inf-8-logic-038",
+        "inf-8-logic-062",
+        "inf-8-logic-016",
+        "inf-8-logic-054",
+        "inf-8-logic-013",
+        "inf-8-logic-035"
+      ],
+      "orders": {
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой НЕ",
+            "составное высказывание со связкой ИЛИ",
+            "простое высказывание",
+            "составное высказывание со связкой И"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x ≤ 10",
+            "x > 3 ∧ x < 7",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-8-logic-007",
+        "inf-8-logic-049",
+        "inf-8-logic-022",
+        "inf-8-logic-010",
+        "inf-8-logic-039",
+        "inf-8-logic-055",
+        "inf-8-logic-009",
+        "inf-8-logic-026",
+        "inf-8-logic-016",
+        "inf-8-logic-030",
+        "inf-8-logic-040",
+        "inf-8-logic-056",
+        "inf-8-logic-048",
+        "inf-8-logic-063",
+        "inf-8-logic-038",
+        "inf-8-logic-005",
+        "inf-8-logic-034",
+        "inf-8-logic-069",
+        "inf-8-logic-062",
+        "inf-8-logic-024"
+      ],
+      "orders": {
+        "inf-8-logic-010": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-040": {
+          "right": [
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)",
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«9 не делится на 5»",
+            "«В треугольнике не четыре стороны»",
+            "«13 не больше 20»",
+            "«2² ≠ 4»"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой ИЛИ",
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-8-logic-040",
+        "inf-8-logic-027",
+        "inf-8-logic-033",
+        "inf-8-logic-048",
+        "inf-8-logic-029",
+        "inf-8-logic-069",
+        "inf-8-logic-062",
+        "inf-8-logic-006",
+        "inf-8-logic-059",
+        "inf-8-logic-032",
+        "inf-8-logic-016",
+        "inf-8-logic-022",
+        "inf-8-logic-001",
+        "inf-8-logic-013",
+        "inf-8-logic-034",
+        "inf-8-logic-039",
+        "inf-8-logic-066",
+        "inf-8-logic-067",
+        "inf-8-logic-004",
+        "inf-8-logic-024"
+      ],
+      "orders": {
+        "inf-8-logic-040": {
+          "right": [
+            "x = 1 ∨ x = 5",
+            "x > 3 ∧ x < 7",
+            "x ≤ 10",
+            "x > 0 ∧ (x mod 5 = 0)"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-034": {
+          "right": [
+            "составное высказывание со связкой И",
+            "составное высказывание со связкой НЕ",
+            "простое высказывание",
+            "составное высказывание со связкой ИЛИ"
+          ]
+        },
+        "inf-8-logic-004": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
     }
   ]
 }

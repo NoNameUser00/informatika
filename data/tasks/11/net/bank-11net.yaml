@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-topo], meta: [plan-actions] }
   prompt: "Какая топология умирает от одного обрыва?"
-  student_view: { options: [{ id: A, text: "Шина" }, { id: B, text: "Звезда" }, { id: C, text: "Дерево" }, { id: D, text: "Полносвязная" }] }
+  student_view: { options: [{ id: B, text: "Звезда" }, { id: D, text: "Полносвязная" }, { id: A, text: "Шина" }, { id: C, text: "Дерево" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Общий кабель — общая беда" }
+  teacher_only: { answer: C, explanation: "Общий кабель — общая беда" }
 
 - id: inf-11-net-003
   class: 11
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-tcp], meta: [plan-actions] }
   prompt: "Что делает маршрутизатор с потерянным пакетом?"
-  student_view: { options: [{ id: A, text: "Отправляет повторно/в обход" }, { id: B, text: "Удаляет всё сообщение" }, { id: C, text: "Выключает сеть" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Выключает сеть" }, { id: B, text: "Удаляет всё сообщение" }, { id: A, text: "Отправляет повторно/в обход" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Надёжность — повтор и обход" }
+  teacher_only: { answer: D, explanation: "Надёжность — повтор и обход" }
 
 - id: inf-11-net-004
   class: 11
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-dns], meta: [plan-actions] }
   prompt: "Что делает DNS?"
-  student_view: { options: [{ id: A, text: "Переводит имена в IP" }, { id: B, text: "Рисует сайты" }, { id: C, text: "Пишет вирусы" }, { id: D, text: "Гасит свет" }] }
+  student_view: { options: [{ id: C, text: "Пишет вирусы" }, { id: D, text: "Гасит свет" }, { id: A, text: "Переводит имена в IP" }, { id: B, text: "Рисует сайты" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Телефонная книга интернета" }
+  teacher_only: { answer: C, explanation: "Телефонная книга интернета" }
 
 - id: inf-11-net-006
   class: 11
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-safe-layers], meta: [plan-actions] }
   prompt: "Что НЕ относится к защите данных?"
-  student_view: { options: [{ id: A, text: "Один пароль везде" }, { id: B, text: "Антивирус" }, { id: C, text: "Резервные копии" }, { id: D, text: "Шифрование" }] }
+  student_view: { options: [{ id: D, text: "Шифрование" }, { id: A, text: "Один пароль везде" }, { id: B, text: "Антивирус" }, { id: C, text: "Резервные копии" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Один пароль — одна утечка на всё" }
+  teacher_only: { answer: B, explanation: "Один пароль — одна утечка на всё" }
 
 - id: inf-11-net-007
   class: 11
@@ -131,9 +131,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-safe-ai], meta: [plan-actions] }
   prompt: "Почему ответ ИИ надо проверять?"
-  student_view: { options: [{ id: A, text: "Уверенно ошибается в фактах" }, { id: B, text: "Всегда прав" }, { id: C, text: "Медленный" }, { id: D, text: "Дорогой" }] }
+  student_view: { options: [{ id: C, text: "Медленный" }, { id: A, text: "Уверенно ошибается в фактах" }, { id: B, text: "Всегда прав" }, { id: D, text: "Дорогой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "ИИ — инструмент с проверкой" }
+  teacher_only: { answer: B, explanation: "ИИ — инструмент с проверкой" }
 - id: inf-11-net-009
   class: 11
   topic: Сети
@@ -164,9 +164,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-dns], meta: [plan-actions] }
   prompt: "Что такое фишинг?"
-  student_view: { options: [{ id: A, text: "Поддельные письма и сайты для кражи данных" }, { id: B, text: "Вид рыбы" }, { id: C, text: "Антивирусная программа" }, { id: D, text: "Протокол сети" }] }
+  student_view: { options: [{ id: B, text: "Вид рыбы" }, { id: D, text: "Протокол сети" }, { id: C, text: "Антивирусная программа" }, { id: A, text: "Поддельные письма и сайты для кражи данных" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Подделка под настоящее" }
+  teacher_only: { answer: D, explanation: "Подделка под настоящее" }
 
 - id: inf-11-net-011
   class: 11
@@ -181,9 +181,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
   prompt: "Чем геоинформационная система отличается от картинки карты?"
-  student_view: { options: [{ id: A, text: "Карта + привязанные данные слоями" }, { id: B, text: "Ничем" }, { id: C, text: "Только ценой" }, { id: D, text: "Размером файла" }] }
+  student_view: { options: [{ id: D, text: "Размером файла" }, { id: B, text: "Ничем" }, { id: C, text: "Только ценой" }, { id: A, text: "Карта + привязанные данные слоями" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Слои: дороги, дома, пробки поверх карты" }
+  teacher_only: { answer: D, explanation: "Слои: дороги, дома, пробки поверх карты" }
 
 - id: inf-11-net-012
   class: 11
@@ -198,9 +198,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
   prompt: "Что нужно для получения значимых госуслуг онлайн?"
-  student_view: { options: [{ id: A, text: "Подтверждённая учётная запись" }, { id: B, text: "Только браузер" }, { id: C, text: "Принтер" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: C, text: "Принтер" }, { id: D, text: "Ничего" }, { id: B, text: "Только браузер" }, { id: A, text: "Подтверждённая учётная запись" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Личность должна быть проверена" }
+  teacher_only: { answer: D, explanation: "Личность должна быть проверена" }
 
 - id: inf-11-net-013
   class: 11
@@ -215,6 +215,983 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
   prompt: "Что проверяют для подлинности новости?"
-  student_view: { options: [{ id: A, text: "Источник, дату и автора" }, { id: B, text: "Число лайков" }, { id: C, text: "Красоту картинки" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Красоту картинки" }, { id: B, text: "Число лайков" }, { id: A, text: "Источник, дату и автора" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Кто сказал, откуда взял, что если врёт" }
+  teacher_only: { answer: D, explanation: "Кто сказал, откуда взял, что если врёт" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
+
+- id: inf-11-net-014
+  class: 11
+  topic: "Сети"
+  subtopic: "Сетевое оборудование"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-dev], meta: [plan-actions] }
+  prompt: "Установите соответствие: устройство — его назначение в сети."
+  student_view: { left: ["Сетевой адаптер", "Коммутатор", "Маршрутизатор", "Точка доступа"], right: ["подключает компьютер к сети", "соединяет устройства внутри одной сети", "соединяет разные сети и выбирает маршрут пакета", "обеспечивает беспроводной доступ"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Сетевой адаптер": "подключает компьютер к сети", "Коммутатор": "соединяет устройства внутри одной сети", "Маршрутизатор": "соединяет разные сети и выбирает маршрут пакета", "Точка доступа": "обеспечивает беспроводной доступ" }, explanation: "Коммутатор соединяет устройства внутри сети, маршрутизатор — разные сети; их путают чаще всего. Сетевой адаптер = подключает компьютер к сети; Коммутатор = соединяет устройства внутри одной сети; Маршрутизатор = соединяет разные сети и выбирает маршрут пакета; Точка доступа = обеспечивает беспроводной доступ" }
+
+- id: inf-11-net-015
+  class: 11
+  topic: "Сети"
+  subtopic: "Разрядность IPv4"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-ip], meta: [plan-actions] }
+  prompt: "Сколько бит содержится в адресе протокола IPv4? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "IPv4 — четыре числа по 8 бит, то есть 4 · 8 = 32 бита; в IPv6 их 128." }
+
+- id: inf-11-net-016
+  class: 11
+  topic: "Сети"
+  subtopic: "Число адресов узлов"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-mask], meta: [plan-actions] }
+  prompt: "Сеть задана маской /24 (255.255.255.0): адрес сети заканчивается октетом 0, широковещательный — октетом 255. Сколько адресов узлов доступно в такой сети? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [254], answer_text: "254", explanation: "Последний октет принимает 2⁸ = 256 значений, из них 0 — вся сеть и 255 — все узлы, поэтому остаётся 256 − 2 = 254." }
+
+- id: inf-11-net-017
+  class: 11
+  topic: "Сети"
+  subtopic: "Зарещённые октеты"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-mask], meta: [plan-actions] }
+  prompt: "Почему адресу узла нельзя назначить октет 0 или октет 255?"
+  student_view: { options: [{ id: B, text: "Эти октеты зарезервированы для серверов провайдера" }, { id: C, text: "Они не помещаются в восемь бит" }, { id: A, text: "Октет 0 обозначает всю сеть, а 255 — все узлы сети (широковещательный адрес)" }, { id: D, text: "С ними не работает DNS" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Поэтому в сети /24 остаётся 254 адреса узла, а не 256: эти два значения заняты под сеть и широковещание." }
+
+- id: inf-11-net-018
+  class: 11
+  topic: "Сети"
+  subtopic: "Кодировка страницы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "Зачем в раздел <head> страницы пишут <meta charset=\"utf-8\">?"
+  student_view: { options: [{ id: C, text: "Чтобы задать текст заголовка вкладки браузера" }, { id: B, text: "Чтобы страница загружалась заметно быстрее" }, { id: A, text: "Чтобы русский текст не показывался «кракозябрами»" }, { id: D, text: "Чтобы браузер не закрывал страницу при ошибке разметки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Заголовок вкладки задаёт тег <title>, а кодировку — именно <meta charset>; без неё русские буквы превращаются в мусор." }
+
+- id: inf-11-net-019
+  class: 11
+  topic: "Сети"
+  subtopic: "Изображение и alt"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "Какой код вставит на страницу картинку pic.jpg с её описанием для тех, кто не видит изображение?"
+  student_view: { options: [{ id: A, text: "<img src=\"pic.jpg\" alt=\"Рисунок\">" }, { id: D, text: "<a href=\"pic.jpg\" alt=\"Рисунок\">" }, { id: B, text: "<img src=\"pic.jpg\">" }, { id: C, text: "<picture alt=\"Рисунок\">" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Адрес файла пишут в атрибуте src, а описание — в alt; без alt страница недоступна для незвуковых пользователей." }
+
+- id: inf-11-net-020
+  class: 11
+  topic: "Сети"
+  subtopic: "Основные теги"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "Установите соответствие: тег HTML — что он размечает."
+  student_view: { left: ["<h1>", "<p>", "<ul>", "<a>", "<img>"], right: ["ссылка", "изображение", "абзац текста", "заголовок первого уровня", "маркированный список"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "<h1>": "заголовок первого уровня", "<p>": "абзац текста", "<ul>": "маркированный список", "<a>": "ссылка", "<img>": "изображение" }, explanation: "Пункты списка лежат внутри <ul> в тегах <li>; почти у каждого тега есть закрывающая пара. <h1> = заголовок первого уровня; <p> = абзац текста; <ul> = маркированный список; <a> = ссылка; <img> = изображение" }
+
+- id: inf-11-net-021
+  class: 11
+  topic: "Сети"
+  subtopic: "Выбор сервиса"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Какой сервис нужен, чтобы построить маршрут от дома до школы?"
+  student_view: { options: [{ id: D, text: "Онлайн-таблица" }, { id: B, text: "Электронная почта" }, { id: C, text: "Видеохостинг" }, { id: A, text: "Карты и навигатор — геоинформационная система" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "ГИС собирает, хранит и отображает данные о местоположении объектов — на них и строят маршрут." }
+
+- id: inf-11-net-022
+  class: 11
+  topic: "Сети"
+  subtopic: "Двухфакторная аутентификация"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Зачем при входе на портал государственных услуг нужен код подтверждения с телефона, если пароль уже введён?"
+  student_view: { options: [{ id: B, text: "Чтобы код занимал меньше символов, чем пароль" }, { id: D, text: "Чтобы не нужно было запоминать пароль" }, { id: A, text: "Украденный пароль сам по себе не даст доступа к учётной записи" }, { id: C, text: "Чтобы сайт открывался быстрее" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Двухфакторная аутентификация требует и пароль, и подтверждение: по одному паролю вход не выполняется." }
+
+- id: inf-11-net-023
+  class: 11
+  topic: "Сети"
+  subtopic: "Задача и сервис"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Установите соответствие: задача пользователя — сервис Интернета, который её решает."
+  student_view: { left: ["Поиск информации", "Общение", "Работа с документами", "Покупки"], right: ["маркетплейс", "мессенджеры и электронная почта", "поисковики и электронные библиотеки", "онлайн-офис и облачный диск"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Поиск информации": "поисковики и электронные библиотеки", "Общение": "мессенджеры и электронная почта", "Работа с документами": "онлайн-офис и облачный диск", "Покупки": "маркетплейс" }, explanation: "Сервис выбирают под задачу: универсального «сервиса для всего» нет. Поиск информации = поисковики и электронные библиотеки; Общение = мессенджеры и электронная почта; Работа с документами = онлайн-офис и облачный диск; Покупки = маркетплейс" }
+
+- id: inf-11-net-024
+  class: 11
+  topic: "Сети"
+  subtopic: "Оператор минус"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-search], meta: [plan-actions] }
+  prompt: "Что делает оператор «-» (минус перед словом) в поисковом запросе?"
+  student_view: { options: [{ id: B, text: "Требует, чтобы это слово обязательно было на странице" }, { id: D, text: "Ограничивает поиск по дате публикации" }, { id: A, text: "Исключает из выдачи документы, в которых встречается это слово" }, { id: C, text: "Ищет только внутри одного сайта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Минус убирает нежелательные совпадения: запрос «Python -джава» ищет Python без упоминания джавы." }
+
+- id: inf-11-net-025
+  class: 11
+  topic: "Сети"
+  subtopic: "Признаки фейка"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-fake], meta: [plan-actions] }
+  prompt: "Сообщение: «СРОЧНО! ВСЕ ДОЛЖНЫ перейти по ссылке и переслать друзьям, иначе будет поздно». Какие признаки недостоверной информации здесь есть?"
+  student_view: { options: [{ id: D, text: "Только отсутствие автора" }, { id: A, text: "Срочность, категоричность, требование сразу распространить и отсутствие источника" }, { id: C, text: "Только требование распространить" }, { id: B, text: "Признаков нет: сообщение слишком короткое" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Фейк давит чувством срочности и страха и просит переслать; проверить такое сообщение можно только по источнику и дате." }
+
+- id: inf-11-net-026
+  class: 11
+  topic: "Сети"
+  subtopic: "Операторы поиска"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-search], meta: [plan-actions] }
+  prompt: "Установите соответствие: оператор поискового запроса — что он делает."
+  student_view: { left: ["AND", "OR", "минус перед словом", "кавычки \"...\"", "site:"], right: ["исключает документы с этим словом", "требует наличия обоих слов", "достаточно хотя бы одного из слов", "ищет в документах сайта, указанного после оператора", "ищет точную фразу"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "AND": "требует наличия обоих слов", "OR": "достаточно хотя бы одного из слов", "минус перед словом": "исключает документы с этим словом", "кавычки \"...\"": "ищет точную фразу", "site:": "ищет в документах сайта, указанного после оператора" }, explanation: "Операторы работают как логика: AND, OR, отрицание и точная фраза сужают выдачу. AND = требует наличия обоих слов; OR = достаточно хотя бы одного из слов; минус перед словом = исключает документы с этим словом; кавычки \"...\" = ищет точную фразу; site: = ищет в документах сайта, указанного после оператора" }
+
+- id: inf-11-net-027
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Триада CIA"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-triad], meta: [plan-actions] }
+  prompt: "Установите соответствие: задача информационной безопасности — как выглядит её нарушение."
+  student_view: { left: ["Конфиденциальность", "Целостность", "Доступность"], right: ["утечка", "подмена", "отказ в обслуживании"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Конфиденциальность": "утечка", "Целостность": "подмена", "Доступность": "отказ в обслуживании" }, explanation: "Три задачи: конфиденциальность, целостность, доступность — и типичные нарушения для каждой. Конфиденциальность = утечка; Целостность = подмена; Доступность = отказ в обслуживании" }
+
+- id: inf-11-net-028
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Хеш и подпись"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-sign], meta: [plan-actions] }
+  prompt: "Почему при усиленной электронной подписи подписывают хеш документа, а не сам документ?"
+  student_view: { options: [{ id: C, text: "Хеш шифрует документ и хранит его в зашифрованном виде" }, { id: A, text: "Хеш короткий, а любое изменение документа меняет хеш, и подпись перестаёт совпадать" }, { id: D, text: "Чтобы подпись можно было прочитать без закрытого ключа" }, { id: B, text: "Документ слишком большой, чтобы подписать его целиком" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Хеш — короткий отпечаток документа; изменили хоть один символ — хеш стал другим, и подпись уже не подтверждает подлинность." }
+
+- id: inf-11-net-029
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Признаки заражения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-02-malware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-mal], meta: [plan-actions] }
+  prompt: "Компьютер стал работать заметно медленнее, а в списке подключений появился незнакомый постоянный сетевой трафик. Что сделать в первую очередь?"
+  student_view: { options: [{ id: D, text: "Ничего не делать: так бывает всегда" }, { id: B, text: "Переустановить систему с флешки" }, { id: A, text: "Запустить полную проверку антивирусом и обновить его базы" }, { id: C, text: "Отключить антивирус, чтобы компьютер не тормозил" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Медленная работа и лишний сетевой трафик — признаки заражения; их чаще всего вызывают программы, которые сами себя не показывают." }
+
+- id: inf-11-net-030
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Виды вредоносного ПО"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-02-malware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-mal], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид вредоносной программы — как она действует."
+  student_view: { left: ["Вирус", "Червь", "Троян", "Вирус-вымогатель"], right: ["шифрует файлы и требует выкуп", "встраивается в файл и размножается при запуске", "маскируется под полезную программу", "распространяется сам по сети через уязвимости"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Вирус": "встраивается в файл и размножается при запуске", "Червь": "распространяется сам по сети через уязвимости", "Троян": "маскируется под полезную программу", "Вирус-вымогатель": "шифрует файлы и требует выкуп" }, explanation: "Вирусу нужен запуск файла, червь распространяется сам, троян маскируется, вымогатель шифрует данные. Вирус = встраивается в файл и размножается при запуске; Червь = распространяется сам по сети через уязвимости; Троян = маскируется под полезную программу; Вирус-вымогатель = шифрует файлы и требует выкуп" }
+
+- id: inf-11-net-031
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Ложное срабатывание"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11safe-02-malware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-mal], meta: [plan-actions] }
+  prompt: "Антивирус сообщил об угрозе в файле, который вы точно установили сами из официального источника. Что правильно сделать?"
+  student_view: { options: [{ id: B, text: "Сразу отключить антивирус, чтобы он не мешал работе" }, { id: D, text: "Ничего не менять и больше не включать компьютер" }, { id: A, text: "Проверить файл и добавить его в исключения осознанно, не отключая защиту целиком" }, { id: C, text: "Удалить все файлы, на которые он ругается" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Ложное срабатывание бывает; исключение добавляют точечно и осознанно — отключение защиты открывает компьютер настоящим угрозам." }
+
+- id: inf-11-net-032
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Правило трёх копий"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-03-archive
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-archive], meta: [plan-actions] }
+  prompt: "Из чего состоит правило трёх копий?"
+  student_view: { options: [{ id: D, text: "Три архиватора, установленных подряд" }, { id: B, text: "Три копии на одном диске с разными именами" }, { id: A, text: "Оригинал, копия на другом носителе и копия в другом месте" }, { id: C, text: "Оригинал и две копии в облаке" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Три копии защищают от отказа носителя и от кражи или пожара в одном помещении." }
+
+- id: inf-11-net-033
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Шифрование и пароль"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-03-archive
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-crypt], meta: [plan-actions] }
+  prompt: "Чем шифрование отличается от пароля на архив?"
+  student_view: { options: [{ id: C, text: "Пароль не защищает файл, а шифрование защищает" }, { id: B, text: "Шифрование только дольше открывает файл, а пароль ничего не делает" }, { id: A, text: "При шифровании данные математически изменяются, и без ключа их не восстановить даже вычислительными средствами" }, { id: D, text: "Разницы нет: это одно и то же" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Пароль просто спрашивается, а при шифровании содержимое преобразовано по ключу; потерянный ключ означает потерянные данные." }
+
+- id: inf-11-net-034
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Правила архива"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11safe-03-archive
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-archive], meta: [plan-actions] }
+  prompt: "Установите соответствие: элемент архива — какое требование к нему предъявляется."
+  student_view: { left: ["Имя файла", "Структура папок", "Пароль от архива", "Резервная копия"], right: ["в другом месте, лучше в другом здании", "записывается отдельно от архива", "понятное, а не «Документ1»", "по темам, а не всё в одной папке"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Имя файла": "понятное, а не «Документ1»", "Структура папок": "по темам, а не всё в одной папке", "Пароль от архива": "записывается отдельно от архива", "Резервная копия": "в другом месте, лучше в другом здании" }, explanation: "Архив работает, когда имена понятны, папки разложены по темам, пароль хранится отдельно, а копия лежит в другом месте. Имя файла = понятное, а не «Документ1»; Структура папок = по темам, а не всё в одной папке; Пароль от архива = записывается отдельно от архива; Резервная копия = в другом месте, лучше в другом здании" }
+
+- id: inf-11-net-035
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Машинное обучение"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11ai-01-intel
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-ml], meta: [plan-actions] }
+  prompt: "Чем машинное обучение отличается от обычной программы?"
+  student_view: { options: [{ id: A, text: "Правила не пишет человек: модель выводит закономерности из данных" }, { id: C, text: "Ему не нужны данные, только текст задачи" }, { id: D, text: "Всегда выдаёт правильный ответ" }, { id: B, text: "Работает медленнее любой обычной программы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "В обычной программе правила записаны человеком, а в машинном обучении модель подбирает внутренние параметры по примерам." }
+
+- id: inf-11-net-036
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Виды обучения"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11ai-01-intel
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-ml], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид машинного обучения — что ему нужно."
+  student_view: { left: ["Обучение с учителем", "Обучение без учителя", "Обучение с подкреплением"], right: ["только данные, без готовых ответов", "примеры с готовыми ответами", "награда за верные действия"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Обучение с учителем": "примеры с готовыми ответами", "Обучение без учителя": "только данные, без готовых ответов", "Обучение с подкреплением": "награда за верные действия" }, explanation: "Фильтр спама учится на примерах с пометками «спам / не спам», группировка покупателей — без ответов, робот — по награде. Обучение с учителем = примеры с готовыми ответами; Обучение без учителя = только данные, без готовых ответов; Обучение с подкреплением = награда за верные действия" }
+
+- id: inf-11-net-037
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Предвзятость данных"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11ai-01-intel
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-risk], meta: [plan-actions] }
+  prompt: "Модель ИИ для отбора резюме систематически отклоняет кандидатов без опыта работы в конкретной сфере. Что это иллюстрирует?"
+  student_view: { options: [{ id: B, text: "«Чёрный ящик»: непонятно, как именно модель считает" }, { id: A, text: "Предвзятость: модель наследует и усиливает перекосы обучающих данных" }, { id: D, text: "То, что ИИ не понимает смысл текста" }, { id: C, text: "Дипфейк: подделка изображения" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Модель повторяет закономерности обучающей выборки, включая её перекосы, — это и есть предвзятость." }
+
+- id: inf-11-net-038
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Ошибки перевода"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11ai-02-pr
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-check], meta: [plan-actions] }
+  prompt: "При переводе фраза «проверка не выполняется» превратилась в «проверка выполняется». Что это за типичная ошибка ИИ-сервиса?"
+  student_view: { options: [{ id: A, text: "Потеря отрицания: смысл фразы изменился на противоположный" }, { id: D, text: "Придуманный источник" }, { id: B, text: "Искажение числа" }, { id: C, text: "Неверный перевод термина" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Отрицания, числа и имена проверяют в первую очередь: ошибка в них меняет смысл высказывания полностью." }
+
+- id: inf-11-net-039
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Постановка задачи"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11ai-02-pr
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-prompt], meta: [plan-actions] }
+  prompt: "Какой запрос к ИИ-сервису лучше сформулирован для подготовки реферата?"
+  student_view: { options: [{ id: C, text: "ИИ" }, { id: B, text: "Реферат про ИИ" }, { id: D, text: "Напиши как можно больше текста про ИИ" }, { id: A, text: "Сделай план реферата из пяти разделов об искусственном интеллекте в школе для 11 класса" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Чёткая постановка важнее длины запроса: указаны вид работы, объём, тема и адресат." }
+
+- id: inf-11-net-040
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Что и как проверять"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11ai-02-pr
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-check], meta: [plan-actions] }
+  prompt: "Установите соответствие: что проверяют в результате ИИ — как именно проверяют."
+  student_view: { left: ["Факты", "Термины", "Числа и формулы", "Логика"], right: ["вручную, пересчётом", "по отраслевому словарю", "смысловая проверка на противоречия", "по учебнику или первоисточнику"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Факты": "по учебнику или первоисточнику", "Термины": "по отраслевому словарю", "Числа и формулы": "вручную, пересчётом", "Логика": "смысловая проверка на противоречия" }, explanation: "Эти четыре проверки обязательны: результат ИИ сдавать без них нельзя. Факты = по учебнику или первоисточнику; Термины = по отраслевому словарю; Числа и формулы = вручную, пересчётом; Логика = смысловая проверка на противоречия" }
+
+- id: inf-11-net-041
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Распознавание лиц"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11ai-05-pr2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-face], meta: [plan-actions] }
+  prompt: "Чем распознавание лиц отличается от распознавания изображений?"
+  student_view: { options: [{ id: C, text: "Распознавание лиц работает только с фотографиями людей" }, { id: D, text: "Распознавание лиц не использует машинное обучение" }, { id: B, text: "Ничем не отличаются: это одно и то же" }, { id: A, text: "Распознавание лиц отвечает на вопрос «кто изображён», а распознавание изображений — «что изображено»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Распознавание лиц — частный случай: не «что изображено», а «кто изображён»." }
+
+- id: inf-11-net-042
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Артефакты дипфейка"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11ai-05-pr2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-deepfake], meta: [plan-actions] }
+  prompt: "Установите соответствие: что наблюдаем в поддельном видео — как это выглядит на экране."
+  student_view: { left: ["Мигание и движения головы", "Рассинхронизация губ и звука", "Артефакты на кистях рук"], right: ["лишние или размытые пальцы", "«плавающие» пиксели при движении", "задержка звука относительно речи"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Мигание и движения головы": "«плавающие» пиксели при движении", "Рассинхронизация губ и звука": "задержка звука относительно речи", "Артефакты на кистях рук": "лишние или размытые пальцы" }, explanation: "Дипфейк выдают артефакты: «плавающие» пиксели, лишние пальцы, рассинхрон звука и губ. Мигание и движения головы = «плавающие» пиксели при движении; Рассинхронизация губ и звука = задержка звука относительно речи; Артефакты на кистях рук = лишние или размытые пальцы" }
+
+- id: inf-11-net-043
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Персональные данные"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11ai-05-pr2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-privacy], meta: [plan-actions] }
+  prompt: "Сервис распознавания лиц работает без согласия людей, сохраняет их данные и передаёт их третьим лицам. Какое правило нарушено?"
+  student_view: { options: [{ id: C, text: "Нельзя хранить данные на сервере вообще" }, { id: A, text: "Личные данные — только с согласия человека и в объёме, необходимом для задачи" }, { id: D, text: "Нарушения нет: сервис публичный" }, { id: B, text: "Данные нужно шифровать, а это не сделано" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Согласие и минимизация объёма — базовые правила работы с персональными данными; их нарушают чаще всего." }
+
+- id: inf-11-net-044
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Обязательный этап"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11ai-04-pr3
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-project], meta: [plan-actions] }
+  prompt: "Какая часть проектной работы обязательна, даже если всё остальное сделано хорошо?"
+  student_view: { options: [{ id: D, text: "Скриншоты «невероятных» результатов" }, { id: C, text: "Презентация ровно на двадцать слайдов" }, { id: A, text: "Проверка результата по фактам, терминам, числам и логике" }, { id: B, text: "Титульный лист с красивым шрифтом" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Работа без проверки результата — главная потеря баллов: её нельзя заменить оформлением." }
+
+- id: inf-11-net-045
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Ценность работы"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11ai-04-pr3
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-project], meta: [plan-actions] }
+  prompt: "Что в проектной работе по ИИ-сервисам приводится в первую очередь?"
+  student_view: { options: [{ id: D, text: "Список всех сервисов без разбора результата" }, { id: A, text: "Конкретные примеры ошибок сервиса с объяснением, почему они возникли" }, { id: C, text: "Скриншоты с самыми красивыми ответами" }, { id: B, text: "Полный текст, сгенерированный ИИ целиком" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Главная ценность такой работы — найденные конкретные ошибки: по ним видно, где ИИ не справляется." }
+
+- id: inf-11-net-046
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Критерии оценки"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11ai-04-pr3
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-project], meta: [plan-actions] }
+  prompt: "Установите соответствие: критерий оценки проектной работы — что по нему оценивается."
+  student_view: { left: ["Постановка задачи", "Корректность применения", "Проверка результата", "Анализ ошибок"], right: ["проверка выполнена по пунктам, а не «на глаз»", "инструмент выбран обоснованно", "задача сформулирована явно", "найдены конкретные ошибки"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Постановка задачи": "задача сформулирована явно", "Корректность применения": "инструмент выбран обоснованно", "Проверка результата": "проверка выполнена по пунктам, а не «на глаз»", "Анализ ошибок": "найдены конкретные ошибки" }, explanation: "Выводы должны следовать из работы: поэтому важны и проверка по пунктам, и конкретные найденные ошибки. Постановка задачи = задача сформулирована явно; Корректность применения = инструмент выбран обоснованно; Проверка результата = проверка выполнена по пунктам, а не «на глаз»; Анализ ошибок = найдены конкретные ошибки" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank2.mjs ====
+
+- id: inf-11-net-047
+  class: 11
+  topic: "Сети"
+  subtopic: "Разрядность IPv6"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-ip], meta: [plan-actions] }
+  prompt: "Сколько бит содержится в адресе протокола IPv6? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [128], answer_text: "128", explanation: "IPv6 записывается восемью группами по 16 бит, то есть 8 · 16 = 128 бит. У IPv4 адрес короче вчетверо — 32 бита, поэтому адресов IPv4 хватает на всех, а IPv6 даёт практически неисчерпаемый запас." }
+
+- id: inf-11-net-048
+  class: 11
+  topic: "Сети"
+  subtopic: "Вложенность тегов"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "Нужно разметить абзац, в котором слово «жирный» выделено полужирным начертанием. Какой код верен?"
+  student_view: { options: [{ id: B, text: "<b><p>жирный</b> текст</p>" }, { id: D, text: "<p>жирный <b> текст</b></p>" }, { id: C, text: "<p><b>жирный</b> текст</p>" }, { id: A, text: "<p><b>жирный текст</p></b>" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Вложенный тег закрывают раньше внешнего: сначала </b>, потом </p>. В варианте со скрещёнными тегами браузер попытается исправить разметку сам, и результат окажется непредсказуемым. Порядок открытия — как в порядке закрытия, только наоборот." }
+
+- id: inf-11-net-049
+  class: 11
+  topic: "Сети"
+  subtopic: "Погрешность геолокации"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-gis], meta: [plan-actions] }
+  prompt: "Навигатор показывает, что точность определения местоположения составляет 12 метров. Как это следует понимать при работе с геоинформационной системой?"
+  student_view: { options: [{ id: D, text: "Геолокация вообще не измеряет, а берёт данные из записной книжки телефона" }, { id: C, text: "Положение определяется приблизительно: у геолокации всегда есть погрешность" }, { id: A, text: "Положение определяется точно, вплоть до сантиметров, поэтому ошибок быть не может" }, { id: B, text: "Точность зависит только от количества спутников, а о погрешности можно не думать" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Геолокация определяет положение по сигналам башен связи, спутникам и точкам Wi-Fi, поэтому у результата всегда есть погрешность. В ГИС эту точность указывают явно, и выводы делают с её учётом: судить по карте можно о том, где что находится, но не о расстоянии в пару метров." }
+
+- id: inf-11-net-050
+  class: 11
+  topic: "Сети"
+  subtopic: "Оператор filetype"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-search], meta: [plan-actions] }
+  prompt: "Что делает оператор filetype: в поисковом запросе?"
+  student_view: { options: [{ id: A, text: "Ищет только документы определённого типа: методичка filetype:pdf — методички в формате PDF" }, { id: B, text: "Ограничивает поиск одним сайтом, как оператор site:" }, { id: C, text: "Требует, чтобы запрос был точным выражением, как кавычки в поисковой строке" }, { id: D, text: "Исключает из выдачи документы со словом «методичка», как оператор «минус»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Оператор filetype: оставляет в выдаче только файлы нужного типа: методичка filetype:pdf найдёт методички в формате PDF. Запомнить его проще всего рядом с другими: site: ищет внутри сайта, кавычки — точную фразу, минус убирает лишнее." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-net-bank3.mjs ====
+
+- id: inf-11-net-051
+  class: 11
+  topic: "Сети"
+  subtopic: "Адреса узлов в нескольких подсетях"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-01-networks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-mask], meta: [plan-actions] }
+  prompt: "Локальная сеть разделена на четыре подсети с масками /26, /27, /28, /26. Адрес сети и широковещательный адрес узлам не назначают. Сколько всего адресов узлов во всех четырёх подсетях? Выведите одно число."
+  student_view: { language: python, template: "# Для каждой маски посчитайте число адресов узлов\nprefixes = [26, 27, 28, 26]\ntotal = 0\nfor p in prefixes:\n    # 2 ** (32 - p) значений, из них два заняты: сеть и все узлы\n    hosts = ...\n    total = total + hosts\nprint(total)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "prefixes = [26, 27, 28, 26]\ntotal = 0\nfor p in prefixes:\n    hosts = 2 ** (32 - p) - 2\n    total = total + hosts\nprint(total)", expected_stdout: "168", explanation: "Подсчёт по маскам: /26 → 2^6 − 2 = 62; /27 → 2^5 − 2 = 30; /28 → 2^4 − 2 = 14; /26 → 2^6 − 2 = 62. Сумма: 62 + 30 + 14 + 62 = 168. Чем короче префикс, тем больше адресов: в /26 их 62, в /27 — уже 30. Забыть про два зарезервированных адреса — самая частая ошибка: без неё получилось бы 176. Такой же расчёт в LibreOffice Calc делается формулой =2^(32−p)−2." }
+
+- id: inf-11-net-052
+  class: 11
+  topic: "Сети"
+  subtopic: "Атрибут href"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "У ссылки задан атрибут href=\"docs/lesson.html\". Что он задаёт?"
+  student_view: { options: [{ id: A, text: "Задаёт текст, который показывается при наведении мыши" }, { id: C, text: "Задаёт цвет текста ссылки" }, { id: B, text: "Задаёт адрес, который откроется при переходе по ссылке" }, { id: D, text: "Задаёт имя файла, в который браузер сохранит страницу" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Адрес, который откроется по ссылке, пишут в атрибуте href тега <a>. Текст подсказки при наведении задают отдельно — атрибутом title, а цвет ссылки меняет стиль, а не атрибут у ссылки. Если href забыть, ссылка останется просто текстом." }
+
+- id: inf-11-net-053
+  class: 11
+  topic: "Сети"
+  subtopic: "Подпись поля формы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "В форме есть поле для фамилии и подпись «Фамилия». Как её связать с полем, чтобы форма осталась доступной?"
+  student_view: { options: [{ id: D, text: "Подпись скрывает поле, чтобы его нельзя было заполнить" }, { id: A, text: "Подпись не связана с полем: её нужно продублировать вручную рядом с полем" }, { id: B, text: "Подпись связана с нужным полем ввода: при щелчке по ней фокус переходит в поле, а экранные читалки читают её как имя поля" }, { id: C, text: "Подпись отправляется на сервер вместе со значением поля в виде отдельного пункта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Связь делают атрибутом for у тега <label> и таким же значением id у поля: <label for=\"fam\">Фамилия</label><input id=\"fam\">. Без этой связи экранная читалка читает поле безымянным, а пользователь, работающий с клавиатуры, вынужден нажимать на сам input. Доступность формы начинается с имён её полей." }
+
+- id: inf-11-net-054
+  class: 11
+  topic: "Сети"
+  subtopic: "Проверка вложенности стеком"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-02-html
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-html], meta: [plan-actions] }
+  prompt: "Разметка страницы задана потоком тегов без содержимого: html, head, title, /title, /head, body, ul, li, p, b, /p, /li, /b, /ul, /body, /html. Закрывающий тег должен закрывать последний открытый. Проверьте разметку стеком: закрывающий тег снимает вершину стека, и если имя не совпало — засчитайте одно несовпадение и всё равно снимите вершину. Выведите сначала число несовпадений, затем итоговый размер стека — через пробел."
+  student_view: { language: python, template: "# Разбор потока тегов стеком\nstream = ['html', 'head', 'title', '/title', '/head', 'body', 'ul', 'li', 'p', 'b',\n          '/p', '/li', '/b', '/ul', '/body', '/html']\nstack = []\nbad = 0\nfor t in stream:\n    if t.startswith('/'):\n        # снимаем вершину и сверяем имена\n        ...\n    else:\n        stack.append(t)\nprint(bad, len(stack))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "stream = ['html', 'head', 'title', '/title', '/head', 'body', 'ul', 'li', 'p', 'b',\n          '/p', '/li', '/b', '/ul', '/body', '/html']\nstack = []\nbad = 0\nfor t in stream:\n    if t.startswith('/'):\n        top = stack.pop()\n        if top != t[1:]:\n            bad = bad + 1\n    else:\n        stack.append(t)\nprint(bad, len(stack))", expected_stdout: "3 0", explanation: "Стек разбирает поток так: /title, /head, /body и /ul закрывают то, что открыли, — несовпадений там нет. Дальше пошло скрещение тегов: /p пытается закрыть b, /li — p, /b — li, поэтому набралось 3 несовпадения, а стек в конце пуст (размер 0): все закрывающие теги на месте, но стоят не в том порядке. Браузер такое исправит молча и покажет не то, что задумано, поэтому проверять разметку стеком стоит до открытия страницы." }
+
+- id: inf-11-net-055
+  class: 11
+  topic: "Сети"
+  subtopic: "Открытие документа в LibreOffice"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Учитель прислал отчёт об учебной практике в формате .odt. В какой программе его удобно открыть и исправить?"
+  student_view: { options: [{ id: A, text: "LibreOffice Writer — он открывает и редактирует текстовые документы формата .odt" }, { id: D, text: "Просмотр изображений — он открывает и редактирует текстовые документы формата .odt" }, { id: C, text: "Веб-браузер — он открывает и редактирует текстовые документы формата .odt" }, { id: B, text: "LibreOffice Impress — он открывает и редактирует текстовые документы формата .odt" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Расширение .odt — формат текстовых документов LibreOffice, и открывает его LibreOffice Writer. Impress отвечает за презентации, а браузер и просмотр изображений такие файлы просто не откроют. Формат .odt выбран ещё и потому, что такой файл можно бесплатно открыть на любом компьютере." }
+
+- id: inf-11-net-056
+  class: 11
+  topic: "Сети"
+  subtopic: "Общий доступ к файлу"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "Отчёт лежит в облачном диске. Учитель с другого компьютера должен его посмотреть. Как передать доступ правильно?"
+  student_view: { options: [{ id: B, text: "Скопировать файл себе, изменить имя и загрузить второй файл поверх первого" }, { id: A, text: "Передать сам файл письмом и дописать пароль от архива в сообщении" }, { id: C, text: "Отправить ссылку с доступом на просмотр: пароль от учётной записи учителю передавать не нужно" }, { id: D, text: "Распечатать файл на бумаге и передать её лично" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "В облачном диске доступ выдают ссылкой с нужными правами — часто только на просмотр, без возможности редактирования. Файл при этом остаётся один, а учителю не приходится передавать свой пароль, который мог бы увидеть кто-то ещё. Копирование файла «поверх» старого не решает задачу: права всё равно придётся раздавать заново." }
+
+- id: inf-11-net-057
+  class: 11
+  topic: "Сети"
+  subtopic: "Время загрузки файлов"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-03-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-services], meta: [plan-actions] }
+  prompt: "В облако последовательно загружают три файла: 41 МБ, 64 МБ, 35 МБ. Скорость загрузки — 6 МБ в секунду и не меняется. Через сколько секунд загрузятся все три файла? Дробные секунды округляйте вверх. Выведите одно целое число."
+  student_view: { language: python, template: "# Сложите объём файлов и разделите на скорость, округлив вверх\nimport math\n\nsizes = [41, 64, 35]\nspeed = 6\ntotal = 0\nfor s in sizes:\n    # накапливаем общий объём в мегабайтах\n    ...\n# остаток секунды не считается за завершённую загрузку\nprint(math.ceil(total / speed))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "import math\n\nsizes = [41, 64, 35]\nspeed = 6\ntotal = 0\nfor s in sizes:\n    total = total + s\nprint(math.ceil(total / speed))", expected_stdout: "24", explanation: "Общий объём: 41 + 64 + 35 = 140 МБ. Деление на скорость даёт 140 / 6 = 23 с остатком, а загрузка не закончится раньше, чем придёт последний байт: округляем вверх и получаем 24. Делить каждый файл на скорость отдельно и складывать округлённые значения нельзя — остатки накапливаются и ответ завышается." }
+
+- id: inf-11-net-058
+  class: 11
+  topic: "Сети"
+  subtopic: "Фильтр содержимого"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-dev], meta: [plan-actions] }
+  prompt: "Что нужно сделать, чтобы в результатах поиска не появлялись сайты с неподходящим содержимым?"
+  student_view: { options: [{ id: C, text: "Отключить интернет до конца урока — фильтр не работает при отключённой сети" }, { id: D, text: "Удалить из выдачи все сайты, кроме одного, который нравится" }, { id: B, text: "Ничего: фильтры влияют только на рекламу, а содержимое сайтов остаётся прежним" }, { id: A, text: "Включить безопасный поиск в настройках поисковика и запретить показ сайтов для взрослых" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Фильтрация настраивается самим поисковиком: у него есть безопасный поиск, который не отдаёт в выдаче страницы для взрослых и с сомнительным содержанием. Ограничение живёт на стороне поисковика, а не на вашем компьютере, поэтому отключение интернета или правка настроек браузера его не отменяет. Раз родители выбрали режим «Детский», под фильтр попадает всё содержимое, а не одно название." }
+
+- id: inf-11-net-059
+  class: 11
+  topic: "Сети"
+  subtopic: "Адрес узла по номеру"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-mask], meta: [plan-actions] }
+  prompt: "Подсеть с адресом сети 192.168.4.64 и маской /27: адреса узлов идут подряд с 65 по 94. Какой последний октет будет у 20-го узла этой подсети? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [84], answer_text: "84", explanation: "Маска /27 оставляет 5 бит под адрес узла, то есть 32 адресов: 64 — сама сеть, 95 — все узлы сразу, а узлам принадлежат 65 … 94 (всего 30). Отсчёт ведём с единицы, поэтому 20-й узел стоит на 19 адрес дальше первого: 65 + (20 − 1) = 84. Если забыть про адрес сети, ответ сдвинется на единицу — к 83, которого узлу не принадлежит." }
+
+- id: inf-11-net-060
+  class: 11
+  topic: "Сети"
+  subtopic: "Отбор адресов по подсетям"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-04-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-mask], meta: [plan-actions] }
+  prompt: "Список адресов узлов: 192.168.10.1, 192.168.10.65, 192.168.11.5, 192.168.10.200, 10.0.0.1. Определите, сколько из них принадлежат подсети 192.168.10.0/24, а сколько — более узкой подсети 192.168.10.64/26. Переведите каждый адрес в одно число и отсеките хостовую часть маской. Выведите два числа через пробел: сначала для /24, затем для /26."
+  student_view: { language: python, template: "# Переведите адрес в число и примените маску побитово\naddrs = ['192.168.10.1', '192.168.10.65', '192.168.11.5', '192.168.10.200', '10.0.0.1']\n\ndef to_num(s):\n    n = 0\n    for part in s.split('.'):\n        n = n * 256 + int(part)\n    return n\n\ndef mask(prefix):\n    return (2 ** 32 - 1) ^ (2 ** (32 - prefix) - 1)\n\nn24 = 0\nn26 = 0\nfor s in addrs:\n    a = to_num(s)\n    # сравниваем с адресом сети после отсечения хостовой части\n    ...\nprint(n24, n26)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "addrs = ['192.168.10.1', '192.168.10.65', '192.168.11.5', '192.168.10.200', '10.0.0.1']\n\ndef to_num(s):\n    n = 0\n    for part in s.split('.'):\n        n = n * 256 + int(part)\n    return n\n\ndef mask(prefix):\n    return (2 ** 32 - 1) ^ (2 ** (32 - prefix) - 1)\n\nn24 = 0\nn26 = 0\nfor s in addrs:\n    a = to_num(s)\n    if (a & mask(24)) == to_num('192.168.10.0'):\n        n24 = n24 + 1\n    if (a & mask(26)) == to_num('192.168.10.64'):\n        n26 = n26 + 1\nprint(n24, n26)", expected_stdout: "3 1", explanation: "Переводим адрес в одно число октет за октетом, а маску строим как 2³² − 1 минус единицы в хвостовых битах. Побитовое И отсекает хостовую часть: в подсети 192.168.10.0/24 остались 192.168.10.1, 192.168.10.65, 192.168.10.200 — всего 3, а адрес 192.168.11.5 отпал уже по третьему октету. Подсеть /26 — это 192.168.10.64–192.168.10.127, из неё подходит только 192.168.10.65: у 192.168.10.200 третий байт после маски равен 192, а не 64. Обратите внимание: 192.168.10.200 входит в /24 и не входит в /26 — подсети вложены, и это нормально." }
+
+- id: inf-11-net-061
+  class: 11
+  topic: "Сети"
+  subtopic: "Оценка сайта-источника"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-fake], meta: [plan-actions] }
+  prompt: "На странице нет ни автора, ни даты обновления, ни ссылок на первоисточники, зато есть форма запроса персональных данных. Как такой источник оценить?"
+  student_view: { options: [{ id: C, text: "Источник надёжный: в нём есть регистрация и счётчик посещений" }, { id: B, text: "Источник надёжный: сайт работает и открывается без ошибок" }, { id: A, text: "На источник опираться нельзя: не указаны автор, дата обновления и первоисточники" }, { id: D, text: "Источник надёжный: текст написан грамотно и без ошибок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Работающий сайт, грамотный текст и счётчик посещений ничего не говорят о достоверности. Критерии строгие: автор, дата, возможность перепроверить факт по первоисточнику и понятные условия работы с данными. Их отсутствие — повод не ссылаться на такой источник в работе, тем более когда страница требует персональные данные." }
+
+- id: inf-11-net-062
+  class: 11
+  topic: "Сети"
+  subtopic: "Признаки надёжного источника"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-fake], meta: [plan-actions] }
+  prompt: "Установите соответствие: что смотрят на сайте — какой это признак надёжного источника."
+  student_view: { left: ["Автор и его контакты", "Дата публикации и обновления", "Ссылки на первоисточники", "Условия работы с данными"], right: ["кто и на каком основании это утверждает", "когда информация перестала быть актуальной", "можно ли перепроверить сам факт", "что сервис сделает с введёнными данными"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Автор и его контакты": "кто и на каком основании это утверждает", "Дата публикации и обновления": "когда информация перестала быть актуальной", "Ссылки на первоисточники": "можно ли перепроверить сам факт", "Условия работы с данными": "что сервис сделает с введёнными данными" }, explanation: "Четыре проверки независимы, и проверить надо каждую: подпись сайта есть, а автора нет — источник всё равно слабый. Самая недооценённая — последняя: если правила обработки данных непонятны, отправлять форму с персональными данными такому сайту не стоит. Верно: Автор и его контакты = кто и на каком основании это утверждает; Дата публикации и обновления = когда информация перестала быть актуальной; Ссылки на первоисточники = можно ли перепроверить сам факт; Условия работы с данными = что сервис сделает с введёнными данными." }
+
+- id: inf-11-net-063
+  class: 11
+  topic: "Сети"
+  subtopic: "Отбор заголовков по ключевым словам"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11net-05-etiquette
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-net-search], meta: [plan-actions] }
+  prompt: "Заголовки из поисковой выдачи: «Основы Python: переменные и циклы», «Python для начинающих: первый проект», «История и будущее Python», «Алгоритмы на Python: сортировка», «Основы сетей и протоколов TCP», «Основы Python: файлы и данные». Запрос содержит два ключевых слова: python и основы. Считайте подходящими только те заголовки, в которых есть оба слова (регистр не учитывается). Выведите одно число — сколько таких заголовков."
+  student_view: { language: python, template: "# Отберите заголовки, где есть все ключевые слова\ntitles = [\n    'Основы Python: переменные и циклы',\n    'Python для начинающих: первый проект',\n    'История и будущее Python',\n    'Алгоритмы на Python: сортировка',\n    'Основы сетей и протоколов TCP',\n    'Основы Python: файлы и данные',\n]\nwords = ['python', 'основы']\ngood = 0\nfor t in titles:\n    low = t.lower()\n    ok = True\n    for w in words:\n        # проверяем наличие каждого слова и сбрасываем признак при неудаче\n        ...\n    if ok:\n        good = good + 1\nprint(good)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "titles = [\n    'Основы Python: переменные и циклы',\n    'Python для начинающих: первый проект',\n    'История и будущее Python',\n    'Алгоритмы на Python: сортировка',\n    'Основы сетей и протоколов TCP',\n    'Основы Python: файлы и данные',\n]\nwords = ['python', 'основы']\ngood = 0\nfor t in titles:\n    low = t.lower()\n    ok = True\n    for w in words:\n        if w not in low:\n            ok = False\n    if ok:\n        good = good + 1\nprint(good)", expected_stdout: "2", explanation: "Условие «оба слова» — это логическое И: заголовок подходит, только если ни одно слово не потерялось. Подошли 2 заголовка — «Основы Python: переменные и циклы» и «Основы Python: файлы и данные». «Python для начинающих» содержит одно слово из двух, а «Основы сетей и протоколов TCP» — другое. В реальном поиске то же делает запрос со знаком AND: без него выдача шире и в неё попадают страницы «про Python», в которых нужной темы нет." }
+
+- id: inf-11-net-064
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Надёжный пароль"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-layers], meta: [plan-actions] }
+  prompt: "Какой из этих паролей разумно выбрать для учётной записи на школьном портале?"
+  student_view: { options: [{ id: B, text: "Дата рождения, чтобы её было легко вспомнить" }, { id: D, text: "Один и тот же надёжный пароль на все сайты, чтобы не путаться" }, { id: A, text: "Короткая фраза из нескольких несвязанных слов, не используемая в других сервисах" }, { id: C, text: "Имя класса и год выпуска — их знают все одноклассники" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Надёжность пароля определяется длиной и непредсказуемостью, а не экзотическими символами. Фраза из четырёх несвязанных слов, не связанных ни с вами, ни со школой, запоминается легко, а подобрать перебором почти невозможно. Дата рождения и класс не подходят: их знают посторонние, а один пароль на все сайты опасен — утечка на любом из них открывает остальные. Запоминать длинные пароли помогает диспетчер паролей: он хранит пароли и подставляет их на нужных сайтах." }
+
+- id: inf-11-net-065
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Хеш документа и его правки"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11safe-01-security
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-sign], meta: [plan-actions] }
+  prompt: "Электронная подпись считается по хешу документа. Возьмите фразу «Отчёт по лабораторной работе», вычислите её хеш SHA-256 и выведите первые 8 символов. Затем замените в фразе последний символ на «ы» и вычислите хеш снова — выведите первые 8 символов второго хеша. Оба значения выведите через пробел."
+  student_view: { language: python, template: "# SHA-256 даёт строку из 16 шестнадцатеричных цифр\nimport hashlib\n\ndoc = 'Отчёт по лабораторной работе'\nh1 = hashlib.sha256(doc.encode('utf-8')).hexdigest()\nchanged = doc[:-1] + 'ы'\n# вычисляем хеш изменённой фразы и берём от обоих по 8 символов\n...\nprint(h1[:8], h2[:8])" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "import hashlib\n\ndoc = 'Отчёт по лабораторной работе'\nh1 = hashlib.sha256(doc.encode('utf-8')).hexdigest()\nchanged = doc[:-1] + 'ы'\nh2 = hashlib.sha256(changed.encode('utf-8')).hexdigest()\nprint(h1[:8], h2[:8])", expected_stdout: "388b0c88 a5365986", explanation: "Хеш — короткий отпечаток документа: изменился один символ, и отпечаток стал другим полностью. Именно поэтому подпись считают по хешу: при попытке подменить документ подпись просто перестанет совпадать. Заодно видно и второе свойство хеша — по нему нельзя восстановить исходный текст, поэтому хеш и называют односторонним. Никакой длины пароля тут не понадобилось: подпись защищает содержимое, а не тайну входа." }
+
+- id: inf-11-net-066
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Исполняемый файл в архиве"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-02-malware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-mal], meta: [plan-actions] }
+  prompt: "В «объявлении об олимпиаде» пришёл архив, а внутри файл setup.exe. Почему такая находка подозрительна?"
+  student_view: { options: [{ id: D, text: "Так делают антивирусные проверки, поэтому файл нужно запустить прямо из архива" }, { id: A, text: "Так выглядит фишинг: под видом документа присылают программу, которая запустится сама" }, { id: C, text: "Так передают большие файлы — исполняемый файл просто не открывается" }, { id: B, text: "Ничего: в архиве не может быть опасных файлов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Исполняемый файл в архиве, присланном без предупреждения, — типовая удочка фишинга: документ обещают, а присылают программу, которая запускается и ищет данные. Архив используют, чтобы обойти почтовую проверку: вложение не видно без распаковки. Программу из непроверенного письма не запускают — сначала проверяют антивирусом и смотрят, кто отправитель." }
+
+- id: inf-11-net-067
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Признак заражения и проверка"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-02-malware
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-mal], meta: [plan-actions] }
+  prompt: "Установите соответствие: что наблюдается на компьютере — как это проверяют."
+  student_view: { left: ["Компьютер стал заметно медленнее", "Появился незнакомый сетевой трафик", "Файлы пропали, а их имена стали странными", "Браузер открывает не те страницы"], right: ["открыть диспетчер задач и посмотреть, какой процесс грузит процессор", "сравнить список подключений с программами, которые запущены сейчас", "проверить компьютер антивирусом и не выполнять требования о выкупе", "отключить расширения браузера и проверить настройки прокси"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Компьютер стал заметно медленнее": "открыть диспетчер задач и посмотреть, какой процесс грузит процессор", "Появился незнакомый сетевой трафик": "сравнить список подключений с программами, которые запущены сейчас", "Файлы пропали, а их имена стали странными": "проверить компьютер антивирусом и не выполнять требования о выкупе", "Браузер открывает не те страницы": "отключить расширения браузера и проверить настройки прокси" }, explanation: "Каждому симптому соответствует своя проверка, и они независимы: антивирус не покажет, какой процесс грузит процессор, а диспетчер задач не увидит подменённые настройки прокси. При вымогательстве главное — не выполнять требование, потому что оплата гарантии не даёт, а уничтожает ключ расшифровки. Верно: Компьютер стал заметно медленнее = открыть диспетчер задач и посмотреть, какой процесс грузит процессор; Появился незнакомый сетевой трафик = сравнить список подключений с программами, которые запущены сейчас; Файлы пропали, а их имена стали странными = проверить компьютер антивирусом и не выполнять требования о выкупе; Браузер открывает не те страницы = отключить расширения браузера и проверить настройки прокси." }
+
+- id: inf-11-net-068
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Что даёт архивирование"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11safe-03-archive
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-archive], meta: [plan-actions] }
+  prompt: "Что реально происходит, когда папку с документами сжимают в архив?"
+  student_view: { options: [{ id: C, text: "Файлы копируются на сервер, поэтому они больше не занимают место на компьютере" }, { id: A, text: "Файлы собираются в один файл, повторяющиеся данные сжимаются, а случайно удалить файл из архива нельзя" }, { id: B, text: "Файлы шифруются паролем, поэтому их нельзя прочитать без него" }, { id: D, text: "Файлы переводятся в другой формат, чтобы их нельзя было открыть" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Архив решает три задачи: файлы лежат в одном месте, размер уменьшается за счёт повторяющихся данных, а удалить один файл из архива случайно нельзя — он лежит внутри. Шифрование здесь ни при чём: пароль в архиве не обязателен. Уменьшить размер удаётся не всегда: фотографии, видео и архивы уже сжаты, и упаковка увеличит их размер на пару процентов." }
+
+- id: inf-11-net-069
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Размер архива по типам файлов"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11safe-03-archive
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-safe-archive], meta: [plan-actions] }
+  prompt: "В папке лежат три группы файлов: 12 МБ (текстовый документ), 8 МБ (PDF с картинками), 24 МБ (фотографии и видео). В архиве текст сжимается в 5 раз, PDF с картинками — примерно к 90 % от исходного размера, а фотографии и видео не сжимаются вовсе. Сколько мегабайт займёт архив? Выведите целое число (округление до ближайшего целого)."
+  student_view: { language: python, template: "# Умножьте размер каждой группы на коэффициент сжатия и сложите\nsizes = [12, 8, 24]\nratios = [0.2, 0.9, 1.0]\ntotal = 0.0\nfor i in range(len(sizes)):\n    # доля файла после сжатия\n    part = ...\n    total = total + part\nprint(round(total))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "sizes = [12, 8, 24]\nratios = [0.2, 0.9, 1.0]\ntotal = 0.0\nfor i in range(len(sizes)):\n    # доля файла после сжатия\n    part = sizes[i] * ratios[i]\n    total = total + part\nprint(round(total))", expected_stdout: "34", explanation: "Считаем по частям: 12 · 0.2 = 2.4, 8 · 0.9 = 7.2, 24 · 1 = 24. Сумма 2.4 + 7.2 + 24 = 33.6 МБ, округляем до 34. Вывод здесь важнее арифметики: из 44 МБ исходных данных почти не сжались 24 МБ фотографий и видео — они уже в сжатом виде, и повторное сжатие лишь добавляет проценты. Ради одних фотографий архив и не делают." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11final-bank3.mjs ====
+
+- id: inf-11-net-070
+  class: 11
+  topic: "Безопасность и ИИ"
+  subtopic: "Виды ИИ"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11ai-01-intel
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-ai-ml], meta: [plan-actions] }
+  prompt: "Какой вид ИИ справляется с задачей распознавания изображений?"
+  student_view: { options: [{ id: C, text: "Робототехника" }, { id: A, text: "Компьютерное зрение" }, { id: B, text: "Обработка естественного языка" }, { id: D, text: "Базы данных" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Компьютерное зрение — это область ИИ, которая занимается распознаванием изображений и видео. Обработка естественного языка работает с текстом и речью, робототехника — с физическими устройствами, а базы данных — это хранение информации." }

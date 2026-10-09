@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
   prompt: "Что такое обратная связь в управлении?"
-  student_view: { options: [{ id: A, text: "Возврат сведений о состоянии объекта в управление" }, { id: B, text: "Громкий звук робота" }, { id: C, text: "Выключение питания" }, { id: D, text: "Новая батарейка" }] }
+  student_view: { options: [{ id: C, text: "Выключение питания" }, { id: B, text: "Громкий звук робота" }, { id: A, text: "Возврат сведений о состоянии объекта в управление" }, { id: D, text: "Новая батарейка" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Без связи система слепая" }
+  teacher_only: { answer: C, explanation: "Без связи система слепая" }
 
 - id: inf-9-extra-002
   class: 9
@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
   prompt: "Зачем роботу датчики?"
-  student_view: { options: [{ id: A, text: "Получать сигналы о мире" }, { id: B, text: "Красиво выглядеть" }, { id: C, text: "Греть моторы" }, { id: D, text: "Шуметь" }] }
+  student_view: { options: [{ id: B, text: "Красиво выглядеть" }, { id: C, text: "Греть моторы" }, { id: A, text: "Получать сигналы о мире" }, { id: D, text: "Шуметь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Датчики — глаза робота" }
+  teacher_only: { answer: C, explanation: "Датчики — глаза робота" }
 
 - id: inf-9-extra-014
   class: 9
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
   prompt: "Процедура «сторона» (вперёд + направо 90) вызвана 4 раза в цикле. Какая фигура получится?"
-  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: D, text: "Отрезок" }] }
+  student_view: { options: [{ id: D, text: "Отрезок" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: A, text: "Квадрат" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "4 поворота по 90° замыкают квадрат; процедура переиспользована" }
+  teacher_only: { answer: D, explanation: "4 поворота по 90° замыкают квадрат; процедура переиспользована" }
 
 - id: inf-9-extra-015
   class: 9
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
   prompt: "Зачем повторяющийся кусок программы выносить во вспомогательный алгоритм?"
-  student_view: { options: [{ id: A, text: "Одно место для правок вместо копипасты" }, { id: B, text: "Чтобы было длиннее" }, { id: C, text: "Чтобы запутать" }, { id: D, text: "Так нельзя делать" }] }
+  student_view: { options: [{ id: B, text: "Чтобы было длиннее" }, { id: A, text: "Одно место для правок вместо копипасты" }, { id: C, text: "Чтобы запутать" }, { id: D, text: "Так нельзя делать" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Написал раз — вызвал много; правишь в одном месте" }
+  teacher_only: { answer: B, explanation: "Написал раз — вызвал много; правишь в одном месте" }
 
 - id: inf-9-extra-016
   class: 9
@@ -80,7 +80,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Что считает компьютерное зрение в умном городе?"
-  student_view: { options: [{ id: A, text: "Потоки машин и объекты на камерах" }, { id: B, text: "Деньги в бюджете" }, { id: C, text: "Оценки учеников" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: A, text: "Потоки машин и объекты на камерах" }, { id: D, text: "Ничего" }, { id: C, text: "Оценки учеников" }, { id: B, text: "Деньги в бюджете" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Камеры + анализ: потоки, пробки, объекты" }
 
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Чем анализ больших данных похож на работу с таблицами?"
-  student_view: { options: [{ id: A, text: "Сначала вопрос, потом картинка под него" }, { id: B, text: "Ничем" }, { id: C, text: "Всё хранится в одной ячейке" }, { id: D, text: "Диаграммы запрещены" }] }
+  student_view: { options: [{ id: D, text: "Диаграммы запрещены" }, { id: A, text: "Сначала вопрос, потом картинка под него" }, { id: C, text: "Всё хранится в одной ячейке" }, { id: B, text: "Ничем" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Без вопроса утонешь в цифрах" }
+  teacher_only: { answer: B, explanation: "Без вопроса утонешь в цифрах" }
 
 - id: inf-9-extra-020
   class: 9
@@ -114,9 +114,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Что делает минус в поисковом запросе «робот -игрушка»?"
-  student_view: { options: [{ id: A, text: "Убирает страницы про игрушки" }, { id: B, text: "Ищет дефис" }, { id: C, text: "Удваивает выдачу" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: B, text: "Ищет дефис" }, { id: C, text: "Удваивает выдачу" }, { id: A, text: "Убирает страницы про игрушки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Минус — вычитание мусора" }
+  teacher_only: { answer: D, explanation: "Минус — вычитание мусора" }
 
 - id: inf-9-extra-003
   class: 9
@@ -131,9 +131,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
   prompt: "Что отражает модель?"
-  student_view: { options: [{ id: A, text: "Существенные для цели признаки" }, { id: B, text: "Абсолютно всё" }, { id: C, text: "Только цвет" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: B, text: "Абсолютно всё" }, { id: C, text: "Только цвет" }, { id: D, text: "Ничего" }, { id: A, text: "Существенные для цели признаки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Цель решает, что существенно" }
+  teacher_only: { answer: D, explanation: "Цель решает, что существенно" }
 
 - id: inf-9-extra-004
   class: 9
@@ -148,9 +148,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
   prompt: "Когда модель адекватна?"
-  student_view: { options: [{ id: A, text: "Результаты близки к эксперименту" }, { id: B, text: "Она красивая" }, { id: C, text: "Она большая" }, { id: D, text: "Она старая" }] }
+  student_view: { options: [{ id: B, text: "Она красивая" }, { id: C, text: "Она большая" }, { id: D, text: "Она старая" }, { id: A, text: "Результаты близки к эксперименту" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Сверка с опытом — критерий" }
+  teacher_only: { answer: D, explanation: "Сверка с опытом — критерий" }
 
 - id: inf-9-extra-005
   class: 9
@@ -182,9 +182,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Из чего состоит IP-адрес?"
-  student_view: { options: [{ id: A, text: "4 числа от 0 до 255" }, { id: B, text: "3 буквы" }, { id: C, text: "10 цифр подряд" }, { id: D, text: "Имя сайта" }] }
+  student_view: { options: [{ id: B, text: "3 буквы" }, { id: D, text: "Имя сайта" }, { id: C, text: "10 цифр подряд" }, { id: A, text: "4 числа от 0 до 255" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Всего 32 бита" }
+  teacher_only: { answer: D, explanation: "Всего 32 бита" }
 
 - id: inf-9-extra-007
   class: 9
@@ -216,9 +216,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Какая последовательность НЕ может быть IP-адресом?"
-  student_view: { options: [{ id: A, text: "10.55.0.225" }, { id: B, text: "113.256.0.138" }, { id: C, text: "22.4.13.73" }, { id: D, text: "1.2.3.4" }] }
+  student_view: { options: [{ id: B, text: "113.256.0.138" }, { id: C, text: "22.4.13.73" }, { id: D, text: "1.2.3.4" }, { id: A, text: "10.55.0.225" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "256 больше максимума 255" }
+  teacher_only: { answer: A, explanation: "256 больше максимума 255" }
 
 - id: inf-9-extra-009
   class: 9
@@ -233,9 +233,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?"
-  student_view: { options: [{ id: A, text: "224.133.133.73" }, { id: B, text: "3.133.22.4.13.73" }, { id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }] }
+  student_view: { options: [{ id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }, { id: A, text: "224.133.133.73" }, { id: B, text: "3.133.22.4.13.73" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Единственная склейка с четырьмя числами 0–255: Б-Г-А-В. Остальные дают 5 групп или числа >255" }
+  teacher_only: { answer: C, explanation: "Единственная склейка с четырьмя числами 0–255: Б-Г-А-В. Остальные дают 5 групп или числа >255" }
 
 - id: inf-9-extra-010
   class: 9
@@ -250,9 +250,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Зачем нужен DNS?"
-  student_view: { options: [{ id: A, text: "Переводить имена в IP-адреса" }, { id: B, text: "Рисовать сайты" }, { id: C, text: "Писать вирусы" }, { id: D, text: "Выключать интернет" }] }
+  student_view: { options: [{ id: C, text: "Писать вирусы" }, { id: A, text: "Переводить имена в IP-адреса" }, { id: B, text: "Рисовать сайты" }, { id: D, text: "Выключать интернет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Телефонная книга интернета" }
+  teacher_only: { answer: B, explanation: "Телефонная книга интернета" }
 
 - id: inf-9-extra-011
   class: 9
@@ -267,9 +267,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Каким тегом вставляется картинка на веб-страницу?"
-  student_view: { options: [{ id: A, text: "<img>" }, { id: B, text: "<p>" }, { id: C, text: "<a>" }, { id: D, text: "<table>" }] }
+  student_view: { options: [{ id: D, text: "<table>" }, { id: A, text: "<img>" }, { id: B, text: "<p>" }, { id: C, text: "<a>" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "<p> — абзац, <a> — ссылка, <table> — таблица" }
+  teacher_only: { answer: B, explanation: "<p> — абзац, <a> — ссылка, <table> — таблица" }
 
 - id: inf-9-extra-012
   class: 9
@@ -284,9 +284,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
   prompt: "Что такое онлайн-офис как веб-сервис?"
-  student_view: { options: [{ id: A, text: "Редактирование документов в браузере без установки программ" }, { id: B, text: "Ускорение процессора через интернет" }, { id: C, text: "Замена антивируса" }, { id: D, text: "Печать без принтера" }] }
+  student_view: { options: [{ id: B, text: "Ускорение процессора через интернет" }, { id: C, text: "Замена антивируса" }, { id: A, text: "Редактирование документов в браузере без установки программ" }, { id: D, text: "Печать без принтера" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Программа живёт в сети: открыл ссылку — и работаешь, можно вместе" }
+  teacher_only: { answer: C, explanation: "Программа живёт в сети: открыл ссылку — и работаешь, можно вместе" }
 
 - id: inf-9-extra-013
   class: 9
@@ -318,9 +318,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
   prompt: "Модель погоды: таблица температур, график, карта, формула. Какая она?"
-  student_view: { options: [{ id: A, text: "Смешанная" }, { id: B, text: "Только табличная" }, { id: C, text: "Только словесная" }, { id: D, text: "Не модель" }] }
+  student_view: { options: [{ id: D, text: "Не модель" }, { id: B, text: "Только табличная" }, { id: C, text: "Только словесная" }, { id: A, text: "Смешанная" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Языки описания соединены" }
+  teacher_only: { answer: D, explanation: "Языки описания соединены" }
 
 - id: inf-9-extra-019
   class: 9
@@ -335,6 +335,1020 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
   prompt: "База «Ученики»: поля Фамилия/Класс/Рост. Что такое запись?"
-  student_view: { options: [{ id: A, text: "Строка — один ученик" }, { id: B, text: "Столбец" }, { id: C, text: "Название базы" }, { id: D, text: "Пароль" }] }
+  student_view: { options: [{ id: C, text: "Название базы" }, { id: D, text: "Пароль" }, { id: A, text: "Строка — один ученик" }, { id: B, text: "Столбец" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Поля — свойства, записи — экземпляры" }
+  teacher_only: { answer: C, explanation: "Поля — свойства, записи — экземпляры" }
+
+# ==== ДОПИСАНО scripts/make-9-bank.mjs (далее руками не править) ====
+- id: inf-9-extra-021
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Открытые ресурсы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9intro-01-professions
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-career], meta: [plan-actions] }
+  prompt: "Что из перечисленного является открытым образовательным ресурсом?"
+  student_view: { options: [{ id: A, text: "Учебные материалы, свободно используемые по лицензии с указанием автора" }, { id: B, text: "Любой материал, найденный в интернете" }, { id: C, text: "Материалы только сайта school-collection.edu.ru" }, { id: D, text: "Любой учебник из типографии" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Открытый ресурс должен быть бесплатным и иметь свободную лицензию с указанием автора. Материал в сети сам по себе открытым не становится." }
+
+- id: inf-9-extra-022
+  class: 9
+  topic: Управление и роботы
+  subtopic: "ИТ и профессия"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9intro-01-professions
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-career], meta: [plan-actions] }
+  prompt: "Что произошло с работой экономиста после появления информационных технологий?"
+  student_view: { options: [{ id: A, text: "Инструмент изменил работу, но профессию не отменил" }, { id: B, text: "Профессия исчезла полностью" }, { id: C, text: "Ничего не изменилось" }, { id: D, text: "Все экономисты стали программистами" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Технологии автоматизируют рутину и ускоряют решения, но решение и ответственность остаются за человеком. Это типичная ошибка — считать, что ИТ отменяют профессию." }
+
+- id: inf-9-extra-023
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Каналы влияния ИТ"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9intro-01-professions
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-career], meta: [plan-actions] }
+  prompt: "Установите соответствие: канал влияния ИТ на экономику — пример."
+  student_view: { left: ["Производительность", "Новые отрасли", "Скорость решений"], right: ["автоматизация бухгалтерии и учёта", "доставка еды и онлайн-торговля", "экономические данные собираются минутами"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Производительность": "автоматизация бухгалтерии и учёта", "Новые отрасли": "доставка еды и онлайн-торговля", "Скорость решений": "экономические данные собираются минутами" }, explanation: "Три канала: производительность, новые отрасли, скорость решений. Каждый пример относится ровно к своему каналу." }
+
+- id: inf-9-extra-024
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Возврат значения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-algo], meta: [plan-actions] }
+  prompt: "Зачем функции нужен оператор return?"
+  student_view: { options: [{ id: A, text: "Чтобы вернуть результат вызывающему коду" }, { id: C, text: "Чтобы объявить новую переменную" }, { id: D, text: "Чтобы прервать программу" }, { id: B, text: "Чтобы напечатать результат на экране" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Функция получает данные (параметры) и возвращает результат. Печать — дело вызывающего кода, иначе функцию нельзя переиспользовать." }
+
+- id: inf-9-extra-025
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Параметры функции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-algo], meta: [plan-actions] }
+  prompt: "Дана функция def f(n): return n * n. Что вернёт вызов f(5)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [25], answer_text: "25", explanation: "Функция получает на вход 5, возвращает квадрат: 5 · 5 = 25. Один вход — один выход, поэтому результат предсказуем." }
+
+- id: inf-9-extra-026
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Вспомогательный алгоритм"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9algo-01-performers
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-algo], meta: [plan-actions] }
+  prompt: "Опиши вспомогательный алгоритм — функцию площадь(a, b), которая возвращает площадь прямоугольника, и выведи площадь для 3 и 4."
+  student_view: {
+    language: python,
+    template: "def ploshchad(a, b):\n    return ...\n\nprint(ploshchad(3, 4))"
+  }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: 
+    solution_code: "def ploshchad(a, b):\n    return a * b\n\nprint(ploshchad(3, 4))"
+    expected_stdout: "12"
+    explanation: "Функция возвращает a * b, а печатает вызывающий код: 3 · 4 = 12. Написал один раз — вызвал много, правишь в одном месте."
+
+- id: inf-9-extra-027
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Цикл управления"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9robot-01-control
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-control], meta: [plan-actions] }
+  prompt: "Почему алгоритм управления движущимся роботом пишут циклом, а не одной командой «вперёд»?"
+  student_view: { options: [{ id: B, text: "Цикл нужен только для красоты программы" }, { id: D, text: "Робот не понимает команд без цикла" }, { id: A, text: "Пока задача не выполнена, надо снова читать датчики и решать, ехать ли дальше" }, { id: C, text: "Одна команда не помещается на экране" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Управление с обратной связью — это повторяющийся цикл: получить сигналы датчиков, сравнить с условием, выполнить действие, вернуться к началу. Одна команда выполнится один раз." }
+
+- id: inf-9-extra-028
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Состав системы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-robot], meta: [plan-actions] }
+  prompt: "Сколько частей входит в роботизированную систему по этому уроку? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Датчики, управляющее устройство, исполнительные механизмы и программа — четыре части. Без любой из них схема не работает." }
+
+- id: inf-9-extra-029
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Открытое и закрытое управление"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-robot], meta: [plan-actions] }
+  prompt: "Чем закрытое управление отличается от открытого?"
+  student_view: { options: [{ id: C, text: "Открытое точнее, потому что не зависит от состояния объекта" }, { id: B, text: "Закрытое работает без датчиков" }, { id: D, text: "Ничем: это два названия одного и того же" }, { id: A, text: "Закрытое учитывает обратную связь и останавливается по сигналу датчика" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Пресс, отработавший 10 секунд вслепую, — открытое управление. Тот же пресс, остановившийся по сигналу «деталь готова», — закрытое." }
+
+- id: inf-9-extra-030
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Цикл контроллера"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-robot], meta: [plan-actions] }
+  prompt: "Управляющее устройство выполняет цикл «считал датчики — решил — выполнил» 1000 раз в секунду. Сколько раз цикл выполнится за 5 секунд? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5000], answer_text: "5000", explanation: "1000 · 5 = 5000 циклов. Человек за это время успевает только изменить программу — сама система работает по циклу постоянно." }
+
+- id: inf-9-extra-031
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Сверка с оригиналом"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9model-01-models
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-model], meta: [plan-actions] }
+  prompt: "Модель тормозного пути не совпала с измерением на мокром асфальте. Что нужно делать?"
+  student_view: { options: [{ id: A, text: "Исправлять модель: в неё не входит поправка на мокрое покрытие" }, { id: B, text: "Считать измерение ошибочным" }, { id: C, text: "Ничего не делать: допущения модели не важны" }, { id: D, text: "Удалить модель и больше её не строить" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Не сошлось с опытом — значит, модель неполна: чиним модель, а не мир. Обычно виноваты упрощения, которые мы не учли, например сухое покрытие." }
+
+- id: inf-9-extra-032
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Единицы скорости"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-02-math
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-mathmodel], meta: [plan-actions] }
+  prompt: "Модель s = v^2/10 работает, когда v в метрах в секунду. Сколько метров в секунду составляет скорость 72 км/ч? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "72 · 1000 / 60 / 60 = 20 м/с. Забыть про единицы — самая частая ошибка: подставив 72, получим путь в 13 раз больше." }
+
+- id: inf-9-extra-033
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Проверка модели"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9model-02-math
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-mathmodel], meta: [plan-actions] }
+  prompt: "Модель s = v^2/10. Чему равен путь торможения при скорости 30 м/с? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [90], answer_text: "90", explanation: "s = 30 · 30 / 10 = 90 метров. Такой тест обязателен: если для заведомо известного случая формула не даёт верного ответа, то ошибочна либо формула, либо код." }
+
+- id: inf-9-extra-034
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Обратная задача модели"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9model-02-math
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-mathmodel], meta: [plan-actions] }
+  prompt: "Модель s = v^2/10. При какой скорости в метрах в секунду путь торможения равен 160 м? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [40], answer_text: "40", explanation: "Обратная задача решается через ту же формулу: v^2 = 160 · 10 = 1600, откуда v = 40 м/с. Модель работает в обе стороны, пока выполняются допущения." }
+
+- id: inf-9-extra-035
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Части модели"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-03-mixed
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-mixed], meta: [plan-actions] }
+  prompt: "Что показывает график в смешанной модели такого, чего не показывает таблица?"
+  student_view: { options: [{ id: A, text: "Тенденцию: растёт величина, падает или почти не меняется" }, { id: C, text: "Названия объектов модели" }, { id: D, text: "Ничего: таблица и график равнозначны" }, { id: B, text: "Точные значения всех чисел" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Таблица даёт точные числа, график — наглядную тенденцию. Ни одна часть не заменяет остальные, поэтому в смешанной модели их соединяют." }
+
+- id: inf-9-extra-036
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Модель популяции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9model-03-mixed
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-mixed], meta: [plan-actions] }
+  prompt: "В модели популяции N = N + рождение − смертность. Сейчас N = 100, рождаемость 20 в год, смертность 12 в год. Чему равна численность через 2 года? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [116], answer_text: "116", explanation: "За год прибавляется 20 − 12 = 8. Через два года: 100 + 8 · 2 = 116. Разность положительная — популяция растёт." }
+
+- id: inf-9-extra-037
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Исследование модели"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9model-03-mixed
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-mixed], meta: [plan-actions] }
+  prompt: "Модель популяции: N = N + 20 − 12 каждый год, сейчас N = 100. Через сколько лет численность впервые превысит 150? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [156], answer_text: "156", explanation: "По годам: 100, 108, 116, 124, 132, 140, 148, 156. Значение больше 150 появляется на восьмом шаге, то есть через 7 лет. Один запуск модели ничего не доказывает — нужен ряд значений." }
+
+- id: inf-9-extra-038
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Ключ записи"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9model-04-table
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-db], meta: [plan-actions] }
+  prompt: "Почему фамилия ненадёжный ключ в базе «Ученики»?"
+  student_view: { options: [{ id: D, text: "Фамилия слишком длинная" }, { id: C, text: "Фамилия — текст, а ключ должен быть числом" }, { id: B, text: "Фамилии пишутся с буквой «ё» или «е»" }, { id: A, text: "В одном классе могут быть ученики с одинаковой фамилией" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Ключ должен быть уникален для каждой записи. Надёжнее составной ключ «Фамилия + Класс» или отдельное поле «Номер личного дела»." }
+
+- id: inf-9-extra-039
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Поиск по условию"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9model-04-table
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-db], meta: [plan-actions] }
+  prompt: "В базе «Ученики» 12 записей, рост: 165, 172, 168, 180, 171, 169, 175, 173, 166, 178, 170, 164. Сколько учеников выше 170? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Выше 170: 172, 180, 171, 175, 173, 178 — шесть записей. Поиск по условию — это фильтрация записей базы, а не перебор вручную." }
+
+- id: inf-9-extra-040
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Операции над базой"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9model-04-table
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-db], meta: [plan-actions] }
+  prompt: "Установите соответствие: операция над табличной моделью — что она делает."
+  student_view: { left: ["Поиск", "Сортировка", "Фильтрация"], right: ["отвечает на вопрос по условию", "переставляет записи по выбранному полю", "оставляет только подходящие записи"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Поиск": "отвечает на вопрос по условию", "Сортировка": "переставляет записи по выбранному полю", "Фильтрация": "оставляет только подходящие записи" }, explanation: "Поиск отвечает на вопрос, сортировка упорядочивает записи, фильтрация оставляет подходящие. Это те же инструменты, что и в табличном процессоре, но над записями." }
+
+- id: inf-9-extra-041
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Объём адресного пространства"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-01-internet
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-net], meta: [plan-actions] }
+  prompt: "В IPv4-адресе каждое из четырёх чисел принимает значения от 0 до 255, то есть 256 вариантов. Сколько всего таких адресов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4294967296], answer_text: "4294967296", explanation: "256 · 256 · 256 · 256 = 4 294 967 296, примерно 4,3 миллиарда — больше, чем устройств в мире, поэтому перешли на IPv6 (128 бит)." }
+
+- id: inf-9-extra-042
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Изображения на странице"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-02-web
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-web], meta: [plan-actions] }
+  prompt: "Почему страница «ломается», если перенести только файл HTML без папки с картинками?"
+  student_view: { options: [{ id: D, text: "Текст и картинки хранятся в одном файле, поэтому ничего не теряется" }, { id: C, text: "HTML-файл без картинок не открывается вовсе" }, { id: B, text: "Без картинок браузер не покажет текст" }, { id: A, text: "Изображения хранятся отдельными файлами, на которые страница только ссылается" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "В теге <img> записан адрес файла, а не сама картинка. Перенесли HTML один — ссылки на изображения перестали работать." }
+
+- id: inf-9-extra-043
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Графика страницы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-02-web
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-web], meta: [plan-actions] }
+  prompt: "На странице 5 изображений, каждое весит 150 КБ. Сколько килобайт занимают все изображения вместе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [750], answer_text: "750", explanation: "5 · 150 = 750 КБ. Всё это — отдельные файлы, которые надо хранить рядом с HTML: перенесёшь только разметку — картинки не откроются." }
+
+- id: inf-9-extra-044
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Проверка перед сдачей"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-02-web
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-web], meta: [plan-actions] }
+  prompt: "Страницу нужно открыть с телефона. Что важнее всего проверить перед сдачей?"
+  student_view: { options: [{ id: C, text: "Наличие отступов в исходном коде" }, { id: B, text: "Цвет фона страницы" }, { id: A, text: "Читаемость: нет длинных строк и огромных картинок, ссылки и картинки работают" }, { id: D, text: "Имя файла на латинице" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "На узком экране перенос строк ломает вёрстку, а большие картинки уезжают за край. Плюс обычная проверка: картинки на месте, ссылки кликаются, нет ошибок в тексте." }
+
+- id: inf-9-extra-045
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Фишинг"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-03-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-safe], meta: [plan-actions] }
+  prompt: "Что такое фишинг?"
+  student_view: { options: [{ id: C, text: "Способ ускорить интернет" }, { id: B, text: "Программа, которая шифрует файлы и требует оплату" }, { id: D, text: "Протокол шифрования данных в браузере" }, { id: A, text: "Поддельный сайт или письмо, которое выманивает логин и пароль" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Фишинг маскируется под знакомый сервис: похожий домен, буквы-подделки, требование «срочно войти». Признаки — адрес сайта, срочность и неожиданная просьба." }
+
+- id: inf-9-extra-046
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Двухфакторная аутентификация"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-03-safe
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-safe], meta: [plan-actions] }
+  prompt: "Почему двухфакторная аутентификация надёжнее одного пароля?"
+  student_view: { options: [{ id: B, text: "Она запоминает пароль вместо пользователя" }, { id: D, text: "Она отменяет пароль совсем" }, { id: C, text: "Она шифрует пароль необратимо" }, { id: A, text: "Нужен ещё доступ к телефону: украденного пароля самого по себе недостаточно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Пароль плюс код из СМС или приложения — два разных фактора. Злоумышленнику, даже получив пароль, нужен ещё и доступ к телефону." }
+
+- id: inf-9-extra-047
+  class: 9
+  topic: Управление и роботы
+  subtopic: "HTTPS и безопасность"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-03-safe
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-safe], meta: [plan-actions] }
+  prompt: "Почему HTTPS нельзя считать полной гарантией безопасности?"
+  student_view: { options: [{ id: C, text: "Он работает только на мобильных устройствах" }, { id: B, text: "Он шифрует данные ненадёжно" }, { id: D, text: "Он не защищает данные, которые уже введены в форму" }, { id: A, text: "Он защищает канал передачи, но не спасает от вас самих: пароль, отправленный на поддельный сайт, всё равно украдут" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "HTTPS отвечает за канал «браузер — сервер». Если вы вводите пароль на фишинговом сайте, канал шифруется, а данные всё равно уходят злоумышленнику." }
+
+- id: inf-9-extra-048
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Облачное хранилище"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-04-services
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-cloud], meta: [plan-actions] }
+  prompt: "Чем облачное хранилище отличается от обычной папки на диске компьютера?"
+  student_view: { options: [{ id: D, text: "Облако автоматически удаляет старые файлы" }, { id: A, text: "Файлы лежат на сервере и доступны с любого устройства, где есть интернет" }, { id: B, text: "Файлы хранятся только на телефоне" }, { id: C, text: "Облако работает без интернета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Данные лежат у владельца сервиса, поэтому нужна локальная копия важных файлов. Зато файл не потеряется вместе с флешкой и виден с любого устройства." }
+
+- id: inf-9-extra-049
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Объём данных"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-04-services
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-cloud], meta: [plan-actions] }
+  prompt: "В облачной папке 12 файлов по 25 МБ каждый. Сколько мегабайт они занимают вместе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [300], answer_text: "300", explanation: "12 · 25 = 300 МБ. Бесплатный тариф часто ограничен по размеру, а важные файлы надо всё равно хранить локально." }
+
+- id: inf-9-extra-050
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Локальная копия"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-04-services
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-cloud], meta: [plan-actions] }
+  prompt: "Почему сданную работу надо скачать из облака локально, даже если сервис работает?"
+  student_view: { options: [{ id: C, text: "Чтобы отправить только ссылку вместо файла" }, { id: D, text: "Чтобы убрать из файла права доступа" }, { id: A, text: "Чтобы работа не зависела от того, работает ли сервис в момент сдачи" }, { id: B, text: "Чтобы файл стал больше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Сервис могут закрыть, срок доступа может истечь, интернет может не работать. Скачанный файл — это независимая копия." }
+
+- id: inf-9-extra-051
+  class: 9
+  topic: Управление и роботы
+  subtopic: "История версий"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-05-collab
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-collab], meta: [plan-actions] }
+  prompt: "Что даёт история версий в облачном документе?"
+  student_view: { options: [{ id: D, text: "Копии файла не нужны вовсе" }, { id: A, text: "Можно посмотреть, кто и что менял, и вернуть предыдущую версию" }, { id: B, text: "Файл автоматически становится больше" }, { id: C, text: "Документ защищается паролем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "История помнит каждое изменение и его автора. Испортил файл — вернул предыдущую версию, это дешевле, чем переделывать всё заново." }
+
+- id: inf-9-extra-052
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Одновременная правка"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-05-collab
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-collab], meta: [plan-actions] }
+  prompt: "Что произойдёт, если двое одновременно правят один и тот же абзац?"
+  student_view: { options: [{ id: A, text: "Изменения перезапишут друг друга, часть правок потеряется" }, { id: C, text: "Документ автоматически удвоится" }, { id: D, text: "Система заблокирует весь документ навсегда" }, { id: B, text: "Абзац превратится в картинку" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Поэтому договариваются о структуре заранее и не редактируют один абзац вдвоём: замечания оставляют комментариями, а не переписывают чужой текст." }
+
+- id: inf-9-extra-053
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Права доступа"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-05-collab
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-collab], meta: [plan-actions] }
+  prompt: "Установите соответствие: уровень доступа к облачному документу — что он позволяет."
+  student_view: { left: ["Владение", "Редактирование", "Просмотр"], right: ["управлять доступом", "менять содержимое", "только читать"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Владение": "управлять доступом", "Редактирование": "менять содержимое", "Просмотр": "только читать" }, explanation: "Права выстраиваются по нарастающей: просмотр, комментирование, редактирование, владение. Выдавай минимальные права: для контрольной работы — только просмотр." }
+
+- id: inf-9-extra-054
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Оператор site:"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-06-search
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-search], meta: [plan-actions] }
+  prompt: "Что делает оператор site: в поисковом запросе?"
+  student_view: { options: [{ id: C, text: "Ищет только PDF-файлы" }, { id: D, text: "Убирает из выдачи страницы-мусор" }, { id: B, text: "Ищет по картинке" }, { id: A, text: "Ограничивает поиск сайтом, который указан после оператора" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Запрос вида site:edu.ru теория вероятностей ищет только внутри edu.ru. Минус, наоборот, убирает ненужное: робот -игрушка." }
+
+- id: inf-9-extra-055
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Оператор «минус»"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-06-search
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-search], meta: [plan-actions] }
+  prompt: "По запросу «робот» найдено 50 страниц, слово «робот» есть на 30 из них, а 12 из этих 30 — про игрушки. Сколько страниц покажет запрос «робот -игрушка»? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [18], answer_text: "18", explanation: "Минус — вычитание множеств: из 30 страниц со словом «робот» убираем 12 про игрушки, остаётся 30 − 12 = 18 страниц." }
+
+- id: inf-9-extra-056
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Оценка источников"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-06-search
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-search], meta: [plan-actions] }
+  prompt: "Пять сайтов повторяют одну и ту же ошибку в статье. Что это значит?"
+  student_view: { options: [{ id: A, text: "Источники не независимы: это перепечатка одного материала" }, { id: C, text: "Нужно выбрать любой из пяти сайтов" }, { id: D, text: "Поисковик специально показывает неверные страницы" }, { id: B, text: "Ошибка точно верна, раз её повторяют пять раз" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Проверяют не количество, а независимость источников и наличие автора с датой. Копии одного текста не подтверждают друг друга." }
+
+- id: inf-9-extra-057
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Где живёт файл"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-07-onlineoffice
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-weboffice], meta: [plan-actions] }
+  prompt: "Где хранится файл, созданный в онлайн-офисе?"
+  student_view: { options: [{ id: A, text: "На сервере сервиса, а не на диске компьютера" }, { id: C, text: "На флешке, подключённой к ноутбуку" }, { id: B, text: "В памяти браузера и после закрытия вкладки пропадает" }, { id: D, text: "В оперативной памяти процессора" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Программа не устанавливается — она работает в браузере, а данные лежат у владельца сервиса. Поэтому перед сдачей файл скачивают локально." }
+
+- id: inf-9-extra-058
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Ограничения сервиса"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-07-onlineoffice
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-weboffice], meta: [plan-actions] }
+  prompt: "Что из перечисленного — ограничение онлайн-офиса по сравнению с настольной программой?"
+  student_view: { options: [{ id: D, text: "Файлы сохраняются только в текстовом формате" }, { id: C, text: "Не нужна учётная запись" }, { id: B, text: "Работает быстрее, чем настольная программа" }, { id: A, text: "Нужен постоянный интернет, а части функций может не быть" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Сервис работает через сеть и не содержит всех возможностей настольной версии, оформление при открытии в другой программе может немного отличаться." }
+
+- id: inf-9-extra-059
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Файл или ссылка"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-07-onlineoffice
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-weboffice], meta: [plan-actions] }
+  prompt: "Почему учителю нельзя отправлять только ссылку на документ в облаке?"
+  student_view: { options: [{ id: A, text: "Срок действия ссылки может истечь, и учитель не откроет работу" }, { id: C, text: "По ссылке не видно, кто автор" }, { id: B, text: "Ссылка не работает на телефоне" }, { id: D, text: "Ссылка не позволяет скачать файл в исходном формате" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Файл не зависит от сервиса и срока доступа. Ссылка — только дополнение: показываешь, что работа лежит в облаке, но сдаёшь сам файл (.odt или .docx)." }
+
+- id: inf-9-extra-060
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Состав проекта"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-08-onlineoffice2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-extra-project], meta: [plan-actions] }
+  prompt: "Из чего состоит проект, который готовится в онлайн-офисе по этому уроку?"
+  student_view: { options: [{ id: A, text: "Текстовый документ, таблица с диаграммами и презентация" }, { id: B, text: "Только презентация" }, { id: C, text: "Только таблица с формулами" }, { id: D, text: "Один текстовый файл со всеми данными" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Проект = текст + таблица с диаграммами + презентация. Все три файла скачивают локально, а ссылка идёт как дополнение." }
+
+- id: inf-9-extra-061
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Диаграммы проекта"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-08-onlineoffice2
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-extra-project], meta: [plan-actions] }
+  prompt: "Какую диаграмму построить, чтобы показать, как менялось количество мусора по годам?"
+  student_view: { options: [{ id: D, text: "Трёхмерную гистограмму" }, { id: A, text: "Линейчатую (график) — изменение по времени" }, { id: B, text: "Круговую — доли одного целого" }, { id: C, text: "Лепестковую" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "График показывает изменение по времени, круговая — доли одного целого. Для динамики по годам нужен график, для доли переработанного — круговая." }
+
+- id: inf-9-extra-062
+  class: 9
+  topic: Управление и роботы
+  subtopic: "Доли в таблице проекта"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9net-08-onlineoffice2
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-extra-project], meta: [plan-actions] }
+  prompt: "В таблице проекта по годам: 2019 — всего 1000 кг, переработано 400; 2020 — 1200 и 600; 2021 — 1500 и 900. В каком году доля переработанного максимальна? Запишите только номер года."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2021], answer_text: "2021", explanation: "Доли: 40 %, 50 %, 60 %. Максимум в 2021 году. Доли считаются формулами от своих ячеек, поэтому при исправлении исходных чисел они пересчитаются сами." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9-bank2.mjs — руками не править ====
+
+- id: inf-9-extra-063
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Обратная связь"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9robot-01-control
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-robot], meta: [plan-actions] }
+  prompt: "Зачем в системе управления с обратной связью датчики?"
+  student_view: { options: [{ id: D, text: "Чтобы заменить управляющее устройство" }, { id: B, text: "Чтобы украсить корпус робота" }, { id: A, text: "Чтобы система знала о текущем состоянии объекта и могла скорректировать действие" }, { id: C, text: "Чтобы измерять расход электроэнергии" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Обратная связь — это сигнал от объекта к управляющему устройству. Без датчиков система действует вслепую: одна команда выполняется один раз и не зависит от того, что произошло." }
+
+- id: inf-9-extra-064
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Состав системы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-robot], meta: [plan-actions] }
+  prompt: "Роботизированная система состоит из: датчики, управляющее устройство, исполнительные механизмы, программа. Сколько частей входит в её состав? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "4 части: 1) датчики; 2) управляющее устройство; 3) исполнительные механизмы; 4) программа. Без любой из них схема не работает: без датчиков нет обратной связи, без программы никто не скажет, что делать." }
+
+- id: inf-9-extra-065
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Исполнительные механизмы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-robot], meta: [plan-actions] }
+  prompt: "Какой из перечисленных элементов роботизированной системы является исполнительным механизмом?"
+  student_view: { options: [{ id: D, text: "Программа" }, { id: C, text: "Микропроцессор" }, { id: A, text: "Привод двигателя" }, { id: B, text: "Датчик температуры" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Исполнительные механизмы непосредственно воздействуют на объект: привод, сервопривод, захват. Датчик только измеряет, микропроцессор и программа — управляющая часть." }
+
+- id: inf-9-extra-066
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Цикл управления"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9robot-02-systems
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-robot], meta: [plan-actions] }
+  prompt: "Управляющее устройство выполняет цикл «считал датчики — решил — выполнил» 1000 раз в секунду. Сколько раз за 5 секунд оно выполнит полный цикл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5000], answer_text: "5000", explanation: "1000 · 5 = 5000 циклов. За одну секунду устройство успевает тысячу раз считать показания и скорректировать действие — это и есть работа в реальном времени." }
+
+- id: inf-9-extra-067
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Перевод единиц в модели"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9model-02-math
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-mathmodel], meta: [plan-actions] }
+  prompt: "Модель s = v² / 10 работает, когда скорость v задана в метрах в секунду. Скорость 72 км/ч. Чему равна она в метрах в секунду? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [20], answer_text: "20", explanation: "72 км/ч — это 72 · 1000 / 60 / 60 = 20 м/с. Забыть про перевод единиц — самая частая ошибка: подставив в модель 72, получают завышенный результат в 4 раз." }
+
+- id: inf-9-extra-068
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Модель популяции"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9model-03-mixed
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-mixed], meta: [plan-actions] }
+  prompt: "В модели популяции N = N + рождение − смертность. Сейчас N = 100, рождаемость 20 в год, смертность 12 в год. Чему равно N через два года? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [116], answer_text: "116", explanation: "За год прибавляется 20 − 12 = 8, через два года: 100 + 8 · 2 = 116. Разность положительная, значит популяция растёт." }
+
+- id: inf-9-extra-069
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Табличная модель"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9model-04-table
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-db], meta: [plan-actions] }
+  prompt: "В таблице товаров есть строки: Тетрадь, 250; Ручка, 150; Тетрадь, 180. Сколько строк относятся к тетрадям? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Тетради указаны 2 раз(а). Табличная модель хранит данные в строках и столбцах, а связи между ними задаются именами столбцов." }
+
+- id: inf-9-extra-070
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Создание веб-страницы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-02-web
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-project], meta: [plan-actions] }
+  prompt: "Что является обязательной частью любой веб-страницы?"
+  student_view: { options: [{ id: D, text: "База данных" }, { id: A, text: "Тело страницы с содержимым" }, { id: C, text: "Скрипт на JavaScript" }, { id: B, text: "Таблица стилей" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Страница без тела и содержимого не покажет ничего. Стили и скрипты подключают по желанию, база данных — тем более." }
+
+- id: inf-9-extra-071
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Блоки страницы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-02-web
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-project], meta: [plan-actions] }
+  prompt: "Страница состоит из 3 блоков: шапка, содержание, подвал. Сколько блоков размечено? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Блоков 3: шапка, содержание, подвал. Такой разбор страницы на блоки — основа вёрстки: каждый блок отвечает за свою часть экрана." }
+
+- id: inf-9-extra-072
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "HTTPS"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-03-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-safe], meta: [plan-actions] }
+  prompt: "Что означает буква S в адресе https://?"
+  student_view: { options: [{ id: D, text: "Сайт с картинками" }, { id: C, text: "Сайт государственный" }, { id: A, text: "Соединение защищено: данные передаются в зашифрованном виде" }, { id: B, text: "Сайт быстрый" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "HTTPS — это HTTP поверх шифрования: пароль и номер карты перехватить нельзя. Но https не делает сайт честным: мошеннический сайт бывает с ним. Нужно смотреть и на домен." }
+
+- id: inf-9-extra-073
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Пароль"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-03-safe
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-safe], meta: [plan-actions] }
+  prompt: "Какой пароль надёжнее?"
+  student_view: { options: [{ id: B, text: "Короткий из цифр: его легко перебрать" }, { id: D, text: "Кличка питомца: она видна в профиле" }, { id: C, text: "Дата рождения: её легко узнать" }, { id: A, text: "Длинный и не похожий на словарь: 12–16 символов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Надёжность определяется длиной и не предсказуемостью. Перебор идёт сначала по коротким и частым сочетаниям, поэтому «qwerty123» ломается за секунды, а длинная случайная строка — очень долго." }
+
+- id: inf-9-extra-074
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Виды деятельности в сети"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-04-services
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-onlineoffice], meta: [plan-actions] }
+  prompt: "В сети есть виды деятельности: поисковый, карточный, видео. Сколько их перечислено? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "3 вида: поисковый, карточный, видео. Виды деятельности в сети определяют, какие сервисы и программы нужны: поиск, обучение, общение, работа." }
+
+- id: inf-9-extra-075
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Совместная работа"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-05-collab
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-onlineoffice], meta: [plan-actions] }
+  prompt: "Над документом одновременно работают 3 человека. Каждый сохраняет свою версию в своём файле. Сколько версий файла получится? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "3 человека · по одной версии = 3 версии. Для совместной работы нужен общий документ в облаке: версии хранятся в одном месте, иначе придётся сливать их вручную." }
+
+- id: inf-9-extra-076
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Операторы поиска"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-06-search
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-onlineoffice], meta: [plan-actions] }
+  prompt: "Как найти документы, где есть слова «алгоритм» и «граф» одновременно?"
+  student_view: { options: [{ id: A, text: "Запрос «алгоритм AND граф»" }, { id: C, text: "Запрос «алгоритм»" }, { id: D, text: "Запрос с кавычками: \"алгоритм граф\"" }, { id: B, text: "Запрос «алгоритм OR граф»" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "AND требует присутствия обоих слов — выдача точная. OR даст страницы где есть что-то одно, а кавычки ищут точную фразу целиком. Проверять надо и источник: первый результат выдачи не значит достоверный." }
+
+- id: inf-9-extra-077
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Программы как веб-сервисы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9net-07-onlineoffice
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-onlineoffice], meta: [plan-actions] }
+  prompt: "Чем веб-сервис отличается от программы, установленной на компьютере?"
+  student_view: { options: [{ id: B, text: "Работает быстрее любой программы" }, { id: A, text: "Работает через браузер, данные хранятся на сервере" }, { id: D, text: "Содержит больше функций" }, { id: C, text: "Не требует интернета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Веб-сервис открывают в браузере, а данные лежат на сервере: работать можно с разных устройств без установки. Обратная сторона — без интернета сервис недоступен, и данные зависят от чужого сервера." }
+
+- id: inf-9-extra-078
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Совместное редактирование"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9net-08-onlineoffice2
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-onlineoffice], meta: [plan-actions] }
+  prompt: "В общем документе ученик выполнил 3 действия: исправил опечатку, добавил таблицу, вставил картинку. Сколько действий отслеживает журнал изменений? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Журнал изменений фиксирует каждое действие — их 3. Он нужен, чтобы можно было отменить правку и увидеть, кто и что менял." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9final-bank3.mjs ====
+
+- id: inf-9-extra-079
+  class: 9
+  topic: "Управление, моделирование и Интернет"
+  subtopic: "Сервис и вид деятельности"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9net-04-services
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-extra-cloud], meta: [plan-actions] }
+  prompt: "Установите соответствие: интернет-сервис — для какой деятельности он нужен."
+  student_view: { left: ["Поисковая система", "Электронная почта", "Форум", "Облачный диск", "Геоинформационная система", "Онлайн-офис"], right: ["искать информацию", "переписываться", "обсуждать вопросы на тему", "хранить и передавать файлы", "работать с картами и координатами", "создавать документы и таблицы"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Поисковая система": "искать информацию", "Электронная почта": "переписываться", "Форум": "обсуждать вопросы на тему", "Облачный диск": "хранить и передавать файлы", "Геоинформационная система": "работать с картами и координатами", "Онлайн-офис": "создавать документы и таблицы" }, explanation: "Каждый сервис закрывает свой вид деятельности: поиск ищет информацию, почта переписывается, форум собирает обсуждения, облако хранит файлы, ГИС работает с картами, онлайн-офис создаёт документы. Программа установлена на конкретный компьютер, а сервис работает через сеть: открыл сайт — и работаешь. Верно: Поисковая система = искать информацию; Электронная почта = переписываться; Форум = обсуждать вопросы на тему; Облачный диск = хранить и передавать файлы; Геоинформационная система = работать с картами и координатами; Онлайн-офис = создавать документы и таблицы." }

@@ -1,10 +1,180 @@
 {
   "test_code": "code-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 41,
+  "max_score": 64,
   "instruction": "Напиши код, запусти его кнопкой и добейся совпадения вывода с ожидаемым.",
   "page_size": 5,
   "tasks": [
+    {
+      "id": "inf-8-code-001",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи двоичную запись числа 13 функцией bin().",
+      "template": "# Допиши код: выведи bin(13)\nprint(...)",
+      "expected": "0b1101",
+      "key": "0b1101"
+    },
+    {
+      "id": "inf-8-code-003",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи десятичное значение двоичной строки '101101' через int().",
+      "template": "# Допиши код: переведи '101101' из двоичной\nprint(...)",
+      "expected": "45",
+      "key": "45"
+    },
+    {
+      "id": "inf-8-code-004",
+      "lesson": "numsys-02-binary",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Циклом выведи числа 1, 2, 3 и их двоичные записи (каждое с новой строки: число, пробел, bin).",
+      "template": "# Допиши цикл\nfor i in range(1, 4):\n    ...",
+      "expected": "1 0b1\n2 0b10\n3 0b11",
+      "key": "1 0b1\n2 0b10\n3 0b11"
+    },
+    {
+      "id": "inf-8-code-002",
+      "lesson": "numsys-04-hex",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи шестнадцатеричную запись числа 175 функцией hex().",
+      "template": "# Допиши код: выведи hex(175)\nprint(...)",
+      "expected": "0xaf",
+      "key": "0xaf"
+    },
+    {
+      "id": "inf-8-code-007",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её.",
+      "template": "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)",
+      "expected": "ababab",
+      "key": "ababab"
+    },
+    {
+      "id": "inf-8-code-008",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи числовой код символа 'A' функцией ord().",
+      "template": "# Допиши код: код символа 'A'\nprint(...)",
+      "expected": "65",
+      "key": "65"
+    },
+    {
+      "id": "inf-8-code-018",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи треугольник из решёток: в первой строке одна решётка, во второй — три, в третьей — пять.",
+      "template": "# Решётки строятся умножением строки на число\nfor i in range(3):\n    print(...)",
+      "expected": "#\n###\n#####",
+      "key": "#\n###\n#####"
+    },
+    {
+      "id": "inf-8-code-019",
+      "lesson": "py-06-linear",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Дан прямоугольник со сторонами 12 и 5. Выведи сначала площадь, затем периметр — каждое число с новой строки.",
+      "template": "# Прямоугольник 12 × 5\na, b = 12, 5\ns = a * b\np = ...\nprint(s)\nprint(...)",
+      "expected": "60\n34",
+      "key": "60\n34"
+    },
+    {
+      "id": "inf-8-code-020",
+      "lesson": "alg-09-for",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи числа от 1 до 5 и их квадраты: сначала само число, через пробел — его квадрат.",
+      "template": "# Квадраты чисел от 1 до 5\nfor i in range(1, 6):\n    print(...)",
+      "expected": "1 1\n2 4\n3 9\n4 16\n5 25",
+      "key": "1 1\n2 4\n3 9\n4 16\n5 25"
+    },
+    {
+      "id": "inf-8-code-021",
+      "lesson": "alg-10-pr-branching",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Циклом while посчитай количество цифр в числе 98765 и выведи его.",
+      "template": "# Число укорачивается на одну цифру за шаг\nn, k = 98765, 0\nwhile n > 0:\n    n = ...\n    k = ...\nprint(k)",
+      "expected": "5",
+      "key": "5"
+    },
+    {
+      "id": "inf-8-code-022",
+      "lesson": "alg-11-design",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Посчитай, сколько чисел от 1 до 100 не делится на 7, и выведи результат.",
+      "template": "# Перебор чисел и проверка делимости\nn = 100\nk = 0\nfor i in range(1, n + 1):\n    if i % 7 ...:\n        k = k + 1\nprint(k)",
+      "expected": "86",
+      "key": "86"
+    },
+    {
+      "id": "inf-8-code-023",
+      "lesson": "py-09-linear-pr",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди делением вычитанием частное и остаток от деления 13 на 5 и выведи их одной строкой через пробел.",
+      "template": "# Вычитаем y, пока r не станет меньше y\nx = 13\ny = 5\nr = x\nq = 0\nwhile r >= y:\n    ...\nprint(q, r)",
+      "expected": "2 3",
+      "key": "2 3"
+    },
+    {
+      "id": "inf-8-code-009",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его.",
+      "template": "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n...",
+      "expected": "7",
+      "key": "7"
+    },
+    {
+      "id": "inf-8-code-010",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and.",
+      "template": "# Допиши код: проверка отрезка\nx = 0\nprint(...)",
+      "expected": "True",
+      "key": "True"
+    },
+    {
+      "id": "inf-8-code-024",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди наибольшее и наименьшее из чисел 12, 4, 19 неполными if (без max и min) и выведи их одной строкой через пробел: сначала максимум, потом минимум.",
+      "template": "# Четыре неполных ветвления: два на максимум, два на минимум\na, b, c = 12, 4, 19\nmx = a\n...",
+      "expected": "19 4",
+      "key": "19 4"
+    },
+    {
+      "id": "inf-8-code-025",
+      "lesson": "py-07-condition",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Проверь условием «x внутри отрезка [0; 10]», чему равно x = 20, и вывери слово «внутри» или «снаружи».",
+      "template": "# Полная форма: if / else и связка and\nx = 20\nif x >= 0 and x <= 10:\n    print('внутри')\nelse:\n    print(...)",
+      "expected": "снаружи",
+      "key": "снаружи"
+    },
+    {
+      "id": "inf-8-code-026",
+      "lesson": "py-07-condition",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Проверь x = 40 по цепочке условий: больше 100, от 51 до 100, от 11 до 50, не больше 10. Вывери подходящий вариант.",
+      "template": "# Проверки идут сверху вниз, срабатывает первая подходящая\nx = 40\nif x > 100:\n    print('больше 100')\nelif x > 50:\n    print('от 51 до 100')\nelif x > 10:\n    print(...)\nelse:\n    print('не больше 10')",
+      "expected": "от 11 до 50",
+      "key": "от 11 до 50"
+    },
     {
       "id": "inf-8-code-005",
       "lesson": "py-03-loops",
@@ -19,57 +189,17 @@
       "id": "inf-8-code-006",
       "lesson": "py-03-loops",
       "type": "code_run",
-      "points": 3,
+      "points": 2,
       "prompt": "Выведи сумму всех чётных чисел от 1 до 10 включительно.",
       "template": "# Допиши код: сумма чётных 1..10\nprint(...)",
       "expected": "30",
       "key": "30"
     },
     {
-      "id": "inf-8-code-007",
-      "lesson": "py-01-basics",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её.",
-      "template": "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)",
-      "expected": "ababab",
-      "key": "ababab"
-    },
-    {
-      "id": "inf-8-code-008",
-      "lesson": "py-01-basics",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Выведи числовой код символа 'A' функцией ord().",
-      "template": "# Допиши код: код символа 'A'\nprint(...)",
-      "expected": "65",
-      "key": "65"
-    },
-    {
-      "id": "inf-8-code-009",
-      "lesson": "py-02-branching",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его.",
-      "template": "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n...",
-      "expected": "7",
-      "key": "7"
-    },
-    {
-      "id": "inf-8-code-010",
-      "lesson": "py-02-branching",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and.",
-      "template": "# Допиши код: проверка отрезка\nx = 0\nprint(...)",
-      "expected": "True",
-      "key": "True"
-    },
-    {
       "id": "inf-8-code-011",
       "lesson": "py-03-loops",
       "type": "code_run",
-      "points": 3,
+      "points": 2,
       "prompt": "Посчитай циклом while количество цифр в числе 9876 и выведи его.",
       "template": "# Допиши код: счётчик цифр 9876\nn, k = 9876, 0\n...",
       "expected": "4",
@@ -79,17 +209,57 @@
       "id": "inf-8-code-012",
       "lesson": "py-03-loops",
       "type": "code_run",
-      "points": 3,
+      "points": 2,
       "prompt": "Найди циклом сумму цифр числа 12345 и выведи её.",
       "template": "# Допиши код: сумма цифр 12345\nn, s = 12345, 0\n...",
       "expected": "15",
       "key": "15"
     },
     {
+      "id": "inf-8-code-027",
+      "lesson": "ss-30-control",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи все числа от 1 до 10, которые делятся на 3 без остатка, каждое с новой строки.",
+      "template": "# Перебор чисел и проверка остатка\nfor i in range(1, 11):\n    if i % 3 == 0:\n        print(...)",
+      "expected": "3\n6\n9",
+      "key": "3\n6\n9"
+    },
+    {
+      "id": "inf-8-code-028",
+      "lesson": "py-10-for-loops",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи все чётные числа до 7 включительно, каждое с новой строки (используй шаг в range).",
+      "template": "# Шаг 2 в range перебирает сразу чётные числа\nn = 7\nfor i in range(2, n + 1, 2):\n    print(i)",
+      "expected": "2\n4\n6",
+      "key": "2\n4\n6"
+    },
+    {
+      "id": "inf-8-code-029",
+      "lesson": "py-10-for-loops",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди циклом for факториал 5! и выведи его.",
+      "template": "# Факториал: произведение чисел от 1 до n\nn = 5\nf = 1\nfor i in range(1, n + 1):\n    f = ...\nprint(f)",
+      "expected": "120",
+      "key": "120"
+    },
+    {
+      "id": "inf-8-code-030",
+      "lesson": "py-11-for-loops-2",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи все делители числа 12 (без остатка), каждый с новой строки.",
+      "template": "# Проверяем делимость каждого числа от 1 до n\nn = 12\nfor i in range(1, n + 1):\n    if n % i == 0:\n        print(...)",
+      "expected": "1\n2\n3\n4\n6\n12",
+      "key": "1\n2\n3\n4\n6\n12"
+    },
+    {
       "id": "inf-8-code-013",
       "lesson": "py-04-strings",
       "type": "code_run",
-      "points": 2,
+      "points": 1,
       "prompt": "Выведи длину слова 'информатика' функцией len().",
       "template": "# Допиши код: длина слова 'информатика'\nprint(...)",
       "expected": "11",
@@ -99,7 +269,7 @@
       "id": "inf-8-code-014",
       "lesson": "py-04-strings",
       "type": "code_run",
-      "points": 2,
+      "points": 1,
       "prompt": "Строка s = 'Python'. Выведи её первый и последний символы одной строкой (без пробела).",
       "template": "# Допиши код: первый и последний символы\ns = 'Python'\nprint(...)",
       "expected": "Pn",
@@ -109,7 +279,7 @@
       "id": "inf-8-code-015",
       "lesson": "py-04-strings",
       "type": "code_run",
-      "points": 2,
+      "points": 1,
       "prompt": "Проверь оператором in, есть ли подстрока 'yth' в строке 'Python', и выведи результат.",
       "template": "# Допиши код: поиск подстроки\ns = 'Python'\nprint(...)",
       "expected": "True",
@@ -119,7 +289,7 @@
       "id": "inf-8-code-016",
       "lesson": "py-04-strings",
       "type": "code_run",
-      "points": 3,
+      "points": 2,
       "prompt": "Посчитай циклом for, сколько раз буква 'а' встречается в слове 'барабан', и выведи счётчик.",
       "template": "# Допиши код: счётчик буквы 'а'\nw = 'барабан'\nk = 0\n...",
       "expected": "3",
@@ -129,51 +299,21 @@
       "id": "inf-8-code-017",
       "lesson": "py-04-strings",
       "type": "code_run",
-      "points": 2,
+      "points": 1,
       "prompt": "Выведи символ с кодом 66 функцией chr().",
       "template": "# Допиши код: символ с кодом 66\nprint(...)",
       "expected": "B",
       "key": "B"
     },
     {
-      "id": "inf-8-code-001",
-      "lesson": "numsys-02-binary",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Выведи двоичную запись числа 13 функцией bin().",
-      "template": "# Допиши код: выведи bin(13)\nprint(...)",
-      "expected": "0b1101",
-      "key": "0b1101"
-    },
-    {
-      "id": "inf-8-code-003",
-      "lesson": "numsys-02-binary",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Выведи десятичное значение двоичной строки '101101' через int().",
-      "template": "# Допиши код: переведи '101101' из двоичной\nprint(...)",
-      "expected": "45",
-      "key": "45"
-    },
-    {
-      "id": "inf-8-code-004",
-      "lesson": "numsys-02-binary",
+      "id": "inf-8-code-031",
+      "lesson": "py-08-strings-2",
       "type": "code_run",
       "points": 3,
-      "prompt": "Циклом выведи числа 1, 2, 3 и их двоичные записи (каждое с новой строки: число, пробел, bin).",
-      "template": "# Допиши цикл\nfor i in range(1, 4):\n    ...",
-      "expected": "1 0b1\n2 0b10\n3 0b11",
-      "key": "1 0b1\n2 0b10\n3 0b11"
-    },
-    {
-      "id": "inf-8-code-002",
-      "lesson": "numsys-04-hex",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Выведи шестнадцатеричную запись числа 175 функцией hex().",
-      "template": "# Допиши код: выведи hex(175)\nprint(...)",
-      "expected": "0xaf",
-      "key": "0xaf"
+      "prompt": "Разверни строку 'Python' срезом s[::-1] и выведи разворот и его длину одной строкой через пробел.",
+      "template": "# Срез с шагом −1 читает строку с конца\ns = 'Python'\nb = s[::-1]\nprint(b, len(...))",
+      "expected": "nohtyP 6",
+      "key": "nohtyP 6"
     }
   ]
 }

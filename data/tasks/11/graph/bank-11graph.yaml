@@ -12,9 +12,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-trees], meta: [plan-actions] }
   prompt: "Что такое дерево в теории графов?"
-  student_view: { options: [{ id: A, text: "Связный граф без циклов" }, { id: B, text: "Граф с ровно одним циклом" }, { id: C, text: "Несвязный граф" }, { id: D, text: "Полный граф" }] }
+  student_view: { options: [{ id: C, text: "Несвязный граф" }, { id: B, text: "Граф с ровно одним циклом" }, { id: D, text: "Полный граф" }, { id: A, text: "Связный граф без циклов" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Связность + нет циклов: между вершинами ровно один путь" }
+  teacher_only: { answer: D, explanation: "Связность + нет циклов: между вершинами ровно один путь" }
 
 - id: inf-11-graph-002
   class: 11
@@ -80,9 +80,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
   prompt: "Строка матрицы смежности вершины 2: 0 0 1 1. С какими вершинами она смежна?"
-  student_view: { options: [{ id: A, text: "3 и 4" }, { id: B, text: "1 и 2" }, { id: C, text: "2 и 3" }, { id: D, text: "Только 4" }] }
+  student_view: { options: [{ id: D, text: "Только 4" }, { id: A, text: "3 и 4" }, { id: C, text: "2 и 3" }, { id: B, text: "1 и 2" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Единицы в столбцах 3 и 4; строка — «откуда»" }
+  teacher_only: { answer: B, explanation: "Единицы в столбцах 3 и 4; строка — «откуда»" }
 
 - id: inf-11-graph-006
   class: 11
@@ -97,9 +97,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
   prompt: "Что означает «игра с полной информацией»?"
-  student_view: { options: [{ id: A, text: "Оба игрока видят позицию и все ходы" }, { id: B, text: "Ходы делаются одновременно" }, { id: C, text: "Часть ходов скрыта" }, { id: D, text: "Игрок один" }] }
+  student_view: { options: [{ id: B, text: "Ходы делаются одновременно" }, { id: D, text: "Игрок один" }, { id: A, text: "Оба игрока видят позицию и все ходы" }, { id: C, text: "Часть ходов скрыта" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Всё на столе: побеждает тот, кто дальше посчитал" }
+  teacher_only: { answer: C, explanation: "Всё на столе: побеждает тот, кто дальше посчитал" }
 
 - id: inf-11-graph-007
   class: 11
@@ -114,9 +114,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
   prompt: "Куча 7 камней, ходы +1/+2, выигрыш при 11+. Какой первый ход ведёт к победе?"
-  student_view: { options: [{ id: A, text: "+1 (в 8)" }, { id: B, text: "+2 (в 9)" }, { id: C, text: "Оба хода равноценны" }, { id: D, text: "Выигрыша нет" }] }
+  student_view: { options: [{ id: D, text: "Выигрыша нет" }, { id: A, text: "+1 (в 8)" }, { id: C, text: "Оба хода равноценны" }, { id: B, text: "+2 (в 9)" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "8 — L-позиция для соперника; из 9 он выигрывает сразу (9 + 2 = 11)" }
+  teacher_only: { answer: B, explanation: "8 — L-позиция для соперника; из 9 он выигрывает сразу (9 + 2 = 11)" }
 
 - id: inf-11-graph-008
   class: 11
@@ -131,9 +131,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
   prompt: "Куча, ходы +1/+2, цель 11+. Какая позиция проигрышна для того, чей ход?"
-  student_view: { options: [{ id: A, text: "7" }, { id: B, text: "8" }, { id: C, text: "9" }, { id: D, text: "10" }] }
+  student_view: { options: [{ id: C, text: "9" }, { id: D, text: "10" }, { id: A, text: "7" }, { id: B, text: "8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Из 8 все ходы — в W (9 и 10); 7, 9, 10 — W-позиции" }
+  teacher_only: { answer: D, explanation: "Из 8 все ходы — в W (9 и 10); 7, 9, 10 — W-позиции" }
 
 - id: inf-11-graph-009
   class: 11
@@ -165,6 +165,692 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
   prompt: "Куча 7 камней, ходы +1/+2, цель 11+. За сколько своих ходов выиграет первый при лучшей игре обоих?"
-  student_view: { options: [{ id: A, text: "1" }, { id: B, text: "2" }, { id: C, text: "3" }, { id: D, text: "Не выиграет" }] }
+  student_view: { options: [{ id: B, text: "2" }, { id: A, text: "1" }, { id: C, text: "3" }, { id: D, text: "Не выиграет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "7 → 8, затем 9 → 11 или 10 → 11: победа на 2-м ходу при любом ответе" }
+  teacher_only: { answer: A, explanation: "7 → 8, затем 9 → 11 или 10 → 11: победа на 2-м ходу при любом ответе" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
+
+- id: inf-11-graph-011
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число путей в ациклическом графе"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-dag], meta: [plan-actions] }
+  prompt: "В ориентированном ациклическом графе есть рёбра A→B, A→C, B→D, C→D. Сколько путей ведёт из A в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Пути считают накоплением от начала: в B попадает 1 путь, в C тоже 1, а в D складываются пути из обоих предшественников — 1 + 1 = 2. Это пути A→B→D и A→C→D; в вершину-источник засчитывается пустой путь." }
+
+- id: inf-11-graph-012
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Кратчайший путь по весам"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-weight], meta: [plan-actions] }
+  prompt: "Взвешенный граф: веса рёбер A–B = 4, A–C = 2, C–B = 1, B–D = 5, C–D = 8. Чему равна длина кратчайшего пути из A в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Складываем веса вдоль каждого пути: A→B→D = 9, A→C→D = 10, A→C→B→D = A→C→B→D→D = 2 + 1 + 5 = 8. Путь с наименьшим числом рёбер не обязательно самый лёгкий, поэтому сравнивают суммы весов." }
+
+- id: inf-11-graph-013
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Величины и что они считают"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-weight], meta: [plan-actions] }
+  prompt: "Установите соответствие: величина в задачах о графах — как её получают."
+  student_view: { left: ["Кратчайший путь", "Число путей в ациклическом графе", "Весовая матрица", "Матрица смежности"], right: ["минимальная из сумм весов вдоль путей", "сумма чисел путей по всем предшественникам", "вес ребра, а если ребра нет — ноль", "единица, если ребро есть, и ноль, если нет"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Кратчайший путь": "минимальная из сумм весов вдоль путей", "Число путей в ациклическом графе": "сумма чисел путей по всем предшественникам", "Весовая матрица": "вес ребра, а если ребра нет — ноль", "Матрица смежности": "единица, если ребро есть, и ноль, если нет" }, explanation: "Смысл у всех четырёх разный: длину сравнивают, число путей накапливают, а матрицы только хранят рёбра. Путать их опасно — считают не то. Кратчайший путь = минимальная из сумм весов вдоль путей; Число путей в ациклическом графе = сумма чисел путей по всем предшественникам; Весовая матрица = вес ребра, а если ребра нет — ноль; Матрица смежности = единица, если ребро есть, и ноль, если нет" }
+
+- id: inf-11-graph-014
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Число проигрышных позиций"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-game], meta: [plan-actions] }
+  prompt: "В игре куча камней: за ход прибавляют 1 или 2 камня, выигрывает тот, кто первым сделает сумму не меньше 11. Позиции размечают от 10 вниз. Сколько проигрышных позиций среди 1, 2, …, 10? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Позиция проигрышная, когда любой ход отдаёт сопернику выигрышную позицию. Разметка от 10 вниз даёт проигрышные позиции 2, 5, 8 — их 3. Проверка: из 8 ходы ведут в 9 и 10, а обе позиции выигрышные." }
+
+- id: inf-11-graph-015
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Разметка таблицы стратегии"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-game], meta: [plan-actions] }
+  prompt: "В таблице стратегии позиции отмечают буквами W и L. Что означает отметка L у позиции?"
+  student_view: { options: [{ id: D, text: "Позиция выиграна игроком, который сейчас ходит" }, { id: B, text: "Из этой позиции есть ход в проигрышную (L)" }, { id: C, text: "Позиция стоит в конце игры, ходов из неё нет" }, { id: A, text: "Любой ход из этой позиции передаёт сопернику выигрышную (W)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Позиция проигрышная именно тогда, когда все ходы ведут в выигрышные для соперника позиции. Отметка W означает обратное — есть хотя бы один ход в проигрышную." }
+
+- id: inf-11-graph-016
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Длина выигрышной стратегии"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-game], meta: [plan-actions] }
+  prompt: "В игре куча камней за ход прибавляют 1 или 2, выигрывает тот, кто сделает сумму не меньше 11. Первый игрок начинает с 7 и ходит по выигрышной стратегии: оставляет сопернику проигрышную позицию. Сколько своих ходов он сделает до конца партии при любом ответе соперника? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Первый ход: 7 + 1 = 8 — сопернику достаётся проигрышная позиция. Соперник вынужден отдать 9 или 10, и оба ответа добьюются вторым ходом: 9 + 2 = 11 или 10 + 1 = 11. Значит своих ходов всегда 2, независимо от ответа." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank2.mjs ====
+
+- id: inf-11-graph-017
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Обход в ширину и в глубину"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-bfs], meta: [plan-actions] }
+  prompt: "Чем обход в ширину (BFS) отличается от обхода в глубину (DFS)?"
+  student_view: { options: [{ id: D, text: "Обход в ширину находит самый дешёвый путь по весам рёбер" }, { id: C, text: "Обход в ширину идёт по одной ветви до конца, а потом возвращается — это обход в глубину" }, { id: A, text: "Обход в ширину и обход в глубину дают один и тот же порядок посещения вершин" }, { id: B, text: "Обход в ширину идёт по уровням: сначала все вершины на расстоянии 1, потом на расстоянии 2" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "BFS обрабатывает вершины по расстоянию от стартовой, поэтому находит кратчайшие пути по числу рёбер. DFS идёт по одной ветви до конца и только потом возвращается — он находит, например, путь до вершины, но не обязательно самый короткий. Путать их опасно: от выбора обхода зависит ответ задачи." }
+
+- id: inf-11-graph-018
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число рёбер по матрице смежности"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Матрица смежности графа из четырёх вершин (строки — «откуда», столбцы — «куда»):\n0 1 1 0\n1 0 1 1\n1 1 0 0\n0 1 0 0\nСколько рёбер в этом графе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Сумма всех элементов матрицы равна 8, но каждое ребро записано дважды: один раз в строке откуда, второй — в столбце куда. Поэтому число рёбер равно половине суммы: 8 / 2 = 4. По строкам видно степени вершин: 2, 3, 2, 1 — их сумма тоже 8, то есть вдвое больше рёбер." }
+
+- id: inf-11-graph-019
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Обход в ширину кодом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-bfs], meta: [plan-actions] }
+  prompt: "Граф задан списком смежности: 1 → 2, 3; 2 → 4; 3 → 4, 5; 4 → 6; 5 → 6; 6 → ничего. Выполните обход в ширину из вершины 1 (сначала все вершины на расстоянии 1, потом на расстоянии 2 и так далее) и выведите порядок посещения через пробел."
+  student_view: { language: python, template: "# Допиши обход в ширину\nadj = {1: [2, 3], 2: [4], 3: [4, 5], 4: [6], 5: [6], 6: []}\nseen = [1]\nqueue = [1]\nwhile ...:\n    # забираем вершину из очереди, смотрим её соседей\n    ...\nprint(*seen)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "adj = {1: [2, 3], 2: [4], 3: [4, 5], 4: [6], 5: [6], 6: []}\nseen = [1]\nqueue = [1]\nwhile len(queue) > 0:\n    v = queue.pop(0)\n    for u in adj[v]:\n        if u not in seen:\n            seen.append(u)\n            queue.append(u)\nprint(*seen)", expected_stdout: "1 2 3 4 5 6", explanation: "Обход идёт по уровням: сначала 1, потом её соседи 2 и 3, потом вершины на расстоянии 2 — 4 и 5, потом 6. Порядок 1 2 3 4 5 6 разный по сравнению с обходом в глубину, который пошёл бы 1 → 2 → 4 → 6. Отметки о посещении нужны, чтобы не зациклиться." }
+
+- id: inf-11-graph-020
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Накопление в две ступени"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-dag], meta: [plan-actions] }
+  prompt: "В ориентированном ациклическом графе рёбра A→B, A→C, B→C, C→D, C→E, D→E. Сколько путей ведёт из A в E? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Считаем накоплением в топологическом порядке: в B — 1 путь, в C складываются пути из A и B: 1 + 1 = 2, в D столько же, сколько в C, — 2, а в E складываются пути из C и D: 2 + 2 = 4. Проверка перебором: A→B→C→D→E; A→B→C→E; A→C→D→E; A→C→E — тоже 4." }
+
+- id: inf-11-graph-021
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Пустой путь в источнике"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-dag], meta: [plan-actions] }
+  prompt: "При подсчёте числа путей в вершину-источник A, у которой нет входящих рёбер, сколько путей в неё засчитывают? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "В вершину-источник засчитывают один пустой путь — тот, что состоит из самой вершины и ничего не содержит. Если поставить 0, все остальные значения тоже станут нулевыми: например, в D было бы 0 + 0 = 0 вместо 2. Это главная ловушка накопления, поэтому её проверяют отдельно." }
+
+- id: inf-11-graph-022
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Кратчайший путь перебором"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-weight], meta: [plan-actions] }
+  prompt: "Взвешенный граф: веса рёбер A–B = 5, A–C = 1, C–B = 2, B–D = 3, C–D = 10. Чему равна длина кратчайшего пути из A в D? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Выписываем все пути с суммами: A→B→C→D = 17; A→B→D = 8; A→C→B→D = 6; A→C→D = 11. Минимум — 6. Прямой путь A→B→D стоит 8, а через C выходит дешевле: 1 + 2 + 3 = 6. Путь с меньшим числом рёбер не значит более дешёвый, поэтому сравнивают суммы весов, а не длины маршрутов." }
+
+- id: inf-11-graph-023
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Минимальная стоимость до вершины"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-weight], meta: [plan-actions] }
+  prompt: "В ациклическом графе рёбра A→B (4), A→C (2), B→C (1), B→D (5), C→D (1), C→E (6), D→E (2). Сколько стоит самый дешёвый путь из A в E, если стоимость вершины равна минимуму по предшественникам плюс вес ребра? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Считаем по вершинам: стоимость(A) = 0; стоимость(B) = 0 + 4 = 4; стоимость(C) = min(0 + 2; 4 + 1) = min(2; 5) = 2; стоимость(D) = min(4 + 5; 2 + 1) = 3; стоимость(E) = min(2 + 6; 3 + 2) = 5. Важно брать минимум по каждому предшественнику отдельно: в C входят сразу два ребра с разными весами." }
+
+- id: inf-11-graph-024
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число путей в семи вершин"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-dag], meta: [plan-actions] }
+  prompt: "В ориентированном ациклическом графе семь вершин и рёбра A→B, A→C, B→D, C→D, C→E, D→E, D→F, E→F, E→G, F→G. Сколько путей ведёт из A в G? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Накопление по порядку: A = 1, B = 1, C = 1, D = 1 + 1 = 2, E = 1 + 2 = 3, F = 2 + 3 = 5, G = 3 + 5 = 8. Значение растёт быстро: каждый новый уровень складывает уже накопленные числа, поэтому у последней вершины путей заметно больше, чем у первой." }
+
+- id: inf-11-graph-025
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число кратчайших путей"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-weight], meta: [plan-actions] }
+  prompt: "Взвешенный граф: веса рёбер A–B = 2, A–C = 2, B–C = 1, B–D = 5, C–D = 5, A–D = 7. Сколько различных путей из A в D имеют минимальную сумму весов, если эта минимальная сумма равна 7? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Все пути с суммами: A→B→C→D = 8; A→B→D = 7; A→C→B→D = 8; A→C→D = 7; A→D = 7. Минимальная сумма 7 достигается 3 способами: A→B→D; A→C→D; A→D. Длинный путь A→B→C→D стоит 8 и не подходит, хотя ребер в нём больше всех. Ответы «длина» и «число способов» считают отдельно." }
+
+- id: inf-11-graph-026
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число путей в DAG кодом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-dag], meta: [plan-actions] }
+  prompt: "Граф: рёбра A→B, A→C, B→D, C→D, C→E, D→E, D→F, E→F. Посчитайте число путей из A в F накоплением в топологическом порядке: число путей в вершину равно сумме чисел путей во всех её предшественников, а в вершину-источник A засчитывается один пустой путь. Выведите число путей в A и число путей в F через пробел."
+  student_view: { language: python, template: "# Допиши накопление по топологическому порядку\npred = {\n    'A': [],\n    'B': ['A'],\n    'C': ['A'],\n    'D': ['B', 'C'],\n    'E': ['C', 'D'],\n    'F': ['D', 'E'],\n}\norder = ['A', 'B', 'C', 'D', 'E', 'F']\nways = {}\nfor v in order:\n    # суммируем по предшественникам, а у источника — 1\n    ...\nprint(ways['A'], ways['F'])" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "pred = {\n    'A': [],\n    'B': ['A'],\n    'C': ['A'],\n    'D': ['B', 'C'],\n    'E': ['C', 'D'],\n    'F': ['D', 'E'],\n}\norder = ['A', 'B', 'C', 'D', 'E', 'F']\nways = {}\nfor v in order:\n    if len(pred[v]) == 0:\n        ways[v] = 1\n    else:\n        ways[v] = 0\n        for p in pred[v]:\n            ways[v] = ways[v] + ways[p]\nprint(ways['A'], ways['F'])", expected_stdout: "1 5", explanation: "Порядок обхода — топологический: каждая вершина идёт после всех своих предшественников, иначе нужное значение ещё не посчитано. В A — пустой путь, дальше B = 1, C = 1, D = 1 + 1 = 2, E = 1 + 2 = 3, F = 2 + 3 = 5. Ошибка «поставить 0 в источник» уменьшила бы все значения вдвое." }
+
+- id: inf-11-graph-027
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Выигрышные позиции"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "В игре куча камней: за ход прибавляют 1 или 2 камня, выигрывает тот, кто первым сделает сумму не меньше 11. Позиции размечают от 10 вниз, помечая проигрышные буквой L. Сколько позиций среди 1, 2, …, 10 окажутся выигрышными? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Разметка даёт проигрышные позиции 2, 5, 8: из каждой из них любой ход ведёт в выигрышную, поэтому их 3. Остальные 7 позиций выигрышные — из них есть ход в проигрышную. Проверка: из 8 ходы ведут в 9 и 10, а обе выигрышные, значит 8 проигрышная." }
+
+- id: inf-11-graph-028
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Число проигрышных позиций"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: analyze
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-table], meta: [plan-actions] }
+  prompt: "В игре из кучи камней за ход берут 1 или 3 камня, а проигрывает тот, кто взял последний камень. Старт — 21 камень. Позиции размечают от 1 вверх. Сколько проигрышных позиций среди 1, 2, …, 21? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Таблица заполняется снизу вверх: позиция 1 проигрышная (единственный ход забирает последний камень), 2 и 3 — выигрышные (можно оставить сопернику 1), дальше правило повторяется. Проигрышными оказались позиции 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21 — их 11. Заметьте: сюда попала и стартовая позиция 21." }
+
+- id: inf-11-graph-029
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Порядок заполнения таблицы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-table], meta: [plan-actions] }
+  prompt: "В каком порядке заполняют таблицу игры, размечая позиции буквами W и L?"
+  student_view: { options: [{ id: C, text: "В случайном порядке: результат от порядка не зависит" }, { id: B, text: "Снизу вверх: от терминальных позиций, ходы из которых уже размечены" }, { id: A, text: "Сверху вниз: сначала позиции, которые встречаются в первых ходах" }, { id: D, text: "Сверху вниз, но только по позициям одного игрока" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "Отметка позиции зависит только от отметок тех позиций, в которые из неё ведут ходы, а те дальше по числу камней. Поэтому таблицу заполняют снизу вверх: сначала терминальные позиции, у которых ходов нет или они проигрышны, потом остальные. Разметка сверху вниз даёт неверные отметки почти везде." }
+
+- id: inf-11-graph-030
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Выигрышные ходы из позиции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-table], meta: [plan-actions] }
+  prompt: "В игре берут 1 или 3 камня, проигрывает взявший последний. Позиция 20 камней. Сколько ходов из неё ведут в проигрышную позицию? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Из 20 можно взять 1 камня или 3 камня: останется 19 или 17, а обе позиции проигрышные. Значит ходов в L столько же — 2. Стратегия выбирает любой из них, но проверяют оба: против хода соперника должен быть ответ." }
+
+- id: inf-11-graph-031
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Длина партии по таблице"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-table], meta: [plan-actions] }
+  prompt: "В игре берут 1 или 3 камня, проигрывает взявший последний, старт — 21. Первый игрок всегда берёт 3 камня, второй отвечает по стратегии: оставляет сопернику проигрышную (нечётную) позицию. Сколько ходов сделает второй игрок до конца партии? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Партия по таблице: 21 →(3) 18 →(1) 17 →(3) 14 →(1) 13 →(3) 10 →(1) 9 →(3) 6 →(1) 5 →(3) 2 →(1) 1. Второй игрок сделал 5 ходов, первый столько же, а последний камень остался первому — он и проиграл. Разметка показывает стратегию целиком: против любого хода соперника есть ответ, ведущий в проигрышную позицию." }
+
+- id: inf-11-graph-032
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Таблица игры кодом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-table], meta: [plan-actions] }
+  prompt: "Разметьте позиции игры: куча камней, за ход берут 1 или 3 камня, проигрывает тот, кто взял последний камень. Позиция проигрышная, если ни один ход не ведёт в проигрышную позицию соперника; ход, забирающий весь остаток, проигрывает сразу. Выведите все проигрышные позиции от 1 до 21, каждую с новой строки."
+  student_view: { language: python, template: "# Допиши разметку снизу вверх\nmoves = [1, 3]\nlimit = 21\nwin = {}\nfor s in range(1, limit + 1):\n    # позиция выигрышная, если есть ход в проигрышную\n    ...\nfor s in range(1, limit + 1):\n    if not win[s]:\n        print(s)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "moves = [1, 3]\nlimit = 21\nwin = {}\nfor s in range(1, limit + 1):\n    win[s] = False\n    for k in moves:\n        # ход, забирающий все камни, сразу проигрывает\n        if k < s and not win[s - k]:\n            win[s] = True\nfor s in range(1, limit + 1):\n    if not win[s]:\n        print(s)", expected_stdout: "1\n3\n5\n7\n9\n11\n13\n15\n17\n19\n21", explanation: "Разметка идёт от малых позиций к большим: результат позиции зависит только от меньших. Ход, забирающий весь остаток (k == s), сразу проигрывает, поэтому его в проверке пропускают — условие k < s. Проигрышными вышли нечётные позиции 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, значит от стартовой позиции 21 выигрывает второй игрок." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-graph-bank3.mjs ====
+
+- id: inf-11-graph-033
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Степень вершины"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-degree], meta: [plan-actions] }
+  prompt: "Неориентированный граф задан списками смежности: 1 → 2, 3, 4; 2 → 1, 5; 3 → 1, 4, 6; 4 → 1, 3, 5; 5 → 2, 4, 6; 6 → 3, 5. Чему равна степень вершины 4? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Степень вершины — это число рёбер, выходящих из неё, то есть длина её строки в списке смежности. У вершины 4 три соседа: 1, 3 и 5, поэтому степень равна 3. Степени всех вершин: 1: 3, 2: 2, 3: 3, 4: 3, 5: 3, 6: 2. Проверка: сложив их, получим 16, а это вдвое больше числа рёбер — каждое ребро посчитано у обоих своих концов." }
+
+- id: inf-11-graph-034
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число рёбер по степеням"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-degree], meta: [plan-actions] }
+  prompt: "Неориентированный граф задан списками смежности: 1 → 2, 3; 2 → 1, 3, 4; 3 → 1, 2; 4 → 2, 5; 5 → 4, 6, 7; 6 → 5; 7 → 5, 8; 8 → 7. Сколько рёбер в этом графе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Степени вершин: 1 — 2, 2 — 3, 3 — 2, 4 — 2, 5 — 3, 6 — 1, 7 — 2, 8 — 1. Их сумма равна 16, но каждое ребро посчитано дважды — один раз в списке каждого из своих концов. Поэтому число рёбер равно половине суммы степеней: 16 / 2 = 8. Это и есть лемма о рукопожатиях: сумма степеней вершин неориентированного графа всегда чётна." }
+
+- id: inf-11-graph-035
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Изоморфизм графов"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-iso], meta: [plan-actions] }
+  prompt: "Два графа имеют одинаковое число вершин и одинаковое число рёбер. Можно ли утверждать, что они изоморфны?"
+  student_view: { options: [{ id: C, text: "Да: графы изоморфны, если оба связны" }, { id: D, text: "Нет: для этого обязательно нарисовать оба графа и сравнить рисунки" }, { id: B, text: "Да: число вершин и число рёбер полностью определяют граф" }, { id: A, text: "Нет: этого недостаточно, нужно ещё совпадение степеней вершин" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Изоморфизм требует переименования вершин, при котором рёбра сохраняются, а одинаковые числа вершин и рёбер этому не гарантируют: вершины могут сильно различаться по степеням. Даже совпадение степеней — лишь необходимое условие. Проверяют изоморфизм перебором переименований или сравнением списков смежности после упорядочивания." }
+
+- id: inf-11-graph-036
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число рёбер орграфа"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-degree], meta: [plan-actions] }
+  prompt: "Ориентированный граф задан списками смежности: 1 → 2, 3; 2 → 4; 3 → 2, 5; 4 → 6; 5 → 4; 6 → никуда. Сколько рёбер (дуг) в этом графе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Складываем длины всех списков смежности: 2 + 1 + 2 + 1 + 1 + 0 = 7. Делить пополам здесь не нужно: в неориентированном графе ребро посчитано у обоих концов, а здесь каждое ориентированное ребро записано ровно один раз. Для проверки посчитаем входящие степени (сколько рёбер ведёт в каждую вершину): 1 — 0, 2 — 2, 3 — 1, 4 — 2, 5 — 1, 6 — 1; их сумма тоже равна 7, потому что каждая дуга входит ровно в одну вершину." }
+
+- id: inf-11-graph-037
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Способы записи графа"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-01-graphs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-adjlist], meta: [plan-actions] }
+  prompt: "Установите соответствие: способ записи графа — что в нём хранится."
+  student_view: { left: ["Матрица смежности", "Список смежности", "Список рёбер", "Матрица весов"], right: ["таблица: в строке i единицы стоят у всех вершин, смежных с i", "у каждой вершины выписан перечень её соседей", "каждое ребро записано отдельной парой вершин", "таблица: вместо единицы в клетке стоит длина ребра"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Матрица смежности": "таблица: в строке i единицы стоят у всех вершин, смежных с i", "Список смежности": "у каждой вершины выписан перечень её соседей", "Список рёбер": "каждое ребро записано отдельной парой вершин", "Матрица весов": "таблица: вместо единицы в клетке стоит длина ребра" }, explanation: "Все четыре записи описывают один и тот же граф, но по-разному. Матрица смежности удобна для проверок и обходов по строкам, список смежности экономнее по памяти на разреженных графах, список рёбер записывает каждое ребро ровно один раз, а матрица весов дополнительно хранит длины. Выбор записи зависит от того, какие операции с графом будут выполняться. Верно: Матрица смежности = таблица: в строке i единицы стоят у всех вершин, смежных с i; Список смежности = у каждой вершины выписан перечень её соседей; Список рёбер = каждое ребро записано отдельной парой вершин; Матрица весов = таблица: вместо единицы в клетке стоит длина ребра." }
+
+- id: inf-11-graph-038
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число компонент связности"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-components], meta: [plan-actions] }
+  prompt: "Неориентированный граф задан списками смежности: 1 → 2, 3; 2 → 1, 3, 4; 3 → 1, 2; 4 → 3; 5 → 6; 6 → 5, 7; 7 → 6; 8 → никуда. Сколько в графе компонент связности? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Компонента — это группа вершин, между которыми можно пройти по рёбрам. Обход из вершины 1 находит 4 вершины: 1, 2, 3, 4. Обход из 5 находит 3: 5, 6, 7. Вершина 8 не соединена ни с кем, поэтому она отдельная компонента. Компоненты получились такие: {1, 2, 3, 4}, {5, 6, 7}, {8} — всего 3, и граф несвязный." }
+
+- id: inf-11-graph-039
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Расстояние в рёбрах"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-bfs], meta: [plan-actions] }
+  prompt: "Неориентированный граф без весов задан списками смежности: 1 → 2, 3; 2 → 1, 4, 6; 3 → 1, 4; 4 → 2, 3, 5; 5 → 4, 6; 6 → 2, 5. Каково расстояние от вершины 1 до вершины 5, то есть наименьшее число рёбер в пути между ними? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Обход в ширину из вершины 1 даёт расстояния: 1 — 0, 2 — 1, 3 — 1, 4 — 2, 5 — 3, 6 — 2. Путь длины 1 не существует: вершины 1 и 5 не соединены ребром. Длины 2 тоже нет: у вершины 1 только соседи 2 и 3, а ни один из них не соединён с 5. Короче всего 1 → 2 → 4 → 5 или 1 → 3 → 4 → 5 — это 3 ребра, а вершин в таком пути на одну больше." }
+
+- id: inf-11-graph-040
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Число гамильтоновых путей"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-hamilton], meta: [plan-actions] }
+  prompt: "Неориентированный граф на пяти вершинах: A–B, A–C, B–C, B–D, C–D, C–E, D–E. Сколько существует гамильтоновых путей из A в E, то есть проходящих по каждой из пяти вершин ровно один раз? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Гамильтонов путь обязан посетить все пять вершин и не повторять их, поэтому перебираем все простые пути длины 4 и оставляем только те, что заканчиваются в E. Подходят ровно три: A→B→C→D→E; A→B→D→C→E; A→C→B→D→E. Проверить удобно с конца: перед E может стоять только C или D, а из каждого из них до E доходят все продолжения, которые не повторяют уже пройденные вершины. Порядок важен — A → B → C → D → E и A → C → B → D → E посещают один и тот же набор вершин, но считаются разными путями." }
+
+- id: inf-11-graph-041
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Сколько рёбер до эйлерова цикла"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-paths
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-euler], meta: [plan-actions] }
+  prompt: "Связный неориентированный граф задан списками смежности: 1 → 2, 6; 2 → 1, 3, 7; 3 → 2, 4; 4 → 3, 5, 8; 5 → 4, 6; 6 → 5, 1; 7 → 2; 8 → 4. Сколько рёбер нужно добавить, чтобы в графе существовал эйлеров цикл? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Эйлеров цикл проходит по каждому ребру ровно один раз, поэтому в каждую вершину он приходит столько раз, сколько рёбер из неё выходит, и возвращается в начало: все степени должны быть чётными. Сейчас нечётные степени у вершин 2, 4, 7, 8 — их 4. Добавленное ребро меняет чётность степеней ровно у двух своих концов, поэтому понадобится 4 / 2 = 2 ребра: например, ребро 7–8 и ребро 2–4 (его в графе нет), и тогда все степени станут чётными. Меньше нельзя: одно ребро устраняет только две нечётные степени." }
+
+- id: inf-11-graph-042
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Число партий"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "В игре куча из 8 камней, за ход берут 2 или 3 камня, а партия заканчивается, когда камней не осталось. Сколько различных партий возможно, если считать разными партии с разным порядком ходов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Партия — это любая последовательность двоек и троек с суммой 8: 2+2+2+2; 2+3+3; 3+2+3; 3+3+2. Всего 4 партии. Партии 2+3+3 и 3+2+3 считаются разными: перед вторым ходом в одной из них в куче 6 камней, а в другой 5, и это разные позиции с разными продолжениями. Такое дерево игры растёт очень быстро, поэтому партии удобнее считать рекурсией: сколько партий из позиции s равно сумме партий из позиций s − 2 и s − 3." }
+
+- id: inf-11-graph-043
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Партии заданной длины"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "В игре куча из 7 камней, за ход берут 2 или 3 камня. Партия заканчивается, когда камней не осталось. Сколько партий заканчиваются ровно за три хода? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Нужно разложить 7 на три слагаемых, каждое из которых равно 2 или 3. Подходят только разложения 2+2+3; 2+3+2; 3+2+2 — всего 3. Разложение 2+3+3 даёт 8, а 3+3+3 даёт 9, поэтому они не подходят: партия в них длилась бы дольше. Здесь ответ случайно совпал с общим числом партий из 7 камней — оно тоже равно 3, ведь любая партия из двоек и троек с такой суммой состоит ровно из трёх ходов." }
+
+- id: inf-11-graph-044
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Зачем нужна динамика"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "Что даёт разметка позиций методом динамического программирования по сравнению с перебором всех партий?"
+  student_view: { options: [{ id: C, text: "График зависимости числа ходов от числа камней" }, { id: B, text: "Полный список всех партий от начала до конца" }, { id: D, text: "Ничего: разметка таблицы идёт перебором партий" }, { id: A, text: "Ответ для каждой позиции сразу, без повторного перебора всей партии" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Перебор партий строит всё дерево игры целиком, а оно растёт очень быстро: число партий примерно удваивается с каждым новым ходом. Динамика считает один раз отметку для каждой позиции и запоминает её, а ответ для позиции получается сложением уже посчитанных значений по ходам. Поэтому на больших позициях перебор просто не заканчивается, а динамика работает за время, пропорциональное числу позиций." }
+
+- id: inf-11-graph-045
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Разметка при ходах 2 и 3"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-games], meta: [plan-actions] }
+  prompt: "В игре из кучи камней за ход берут 2 или 3 камня, а проигрывает тот, кто взял последний камень. Позиции размечают от 1 вверх: позиция проигрышная, если ни один ход не ведёт в проигрышную позицию. Сколько проигрышных позиций среди 1, 2, …, 25? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Позиции 1 и 2 проигрышные: из них нельзя взять ни 2, ни 3 камня, не забрав всё сразу, а такой ход проигрывает. Дальше правило повторяется: 3, 4, 5 выигрышные (можно оставить сопернику 1 или 2), а 6 и 7 снова проигрышные. Проигрышными оказались позиции 1, 2, 6, 7, 11, 12, 16, 17, 21, 22 — их 10. Заметьте закономерность: проигрышные позиции идут парами через каждые 5, ведь за два хода соперник «съедает» ровно 2 + 3 = 5 камней." }
+
+- id: inf-11-graph-046
+  class: 11
+  topic: "Выигрышные стратегии"
+  subtopic: "Игра на графе кодом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11graph-02-games
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-game-graph], meta: [plan-actions] }
+  prompt: "Фишка стоит в вершине ориентированного графа. Игроки ходят по очереди, за ход переводя фишку по ребру вперёд; тот, кому некуда идти, проигрывает. Рёбра: A→B, A→C, B→D, C→D, C→E, D→F, E→F. Разметьте позиции-вершины и выведите сначала число проигрышных вершин, а на новой строке — отметку стартовой вершины A: W, если она выигрышная, и L иначе."
+  student_view: { language: python, template: "# Разметьте вершины графа: ход — переход по ребру, нет хода — проигрыш\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['D', 'E'],\n    'D': ['F'],\n    'E': ['F'],\n    'F': [],\n}\n# порядок разбора: из каждой вершины рёбра ведут только в уже разобранные\norder = ['F', 'D', 'E', 'B', 'C', 'A']\nwin = {}\nfor v in order:\n    # отметка позиции зависит только от позиций, в которые ведут её ходы\n    ...\nlosing = [v for v in order if not win[v]]\nprint(len(losing))\nprint('W' if win['A'] else 'L')" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "# вершина -> вершины, в которые можно перейти за один ход\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['D', 'E'],\n    'D': ['F'],\n    'E': ['F'],\n    'F': [],\n}\n# вершины идут в топологическом порядке: из каждой рёбра ведут только в разобранные\norder = ['F', 'D', 'E', 'B', 'C', 'A']\nwin = {}\nfor v in order:\n    # выигрышная позиция, если из неё есть ход в проигрышную\n    win[v] = False\n    for u in graph[v]:\n        if not win[u]:\n            win[v] = True\nlosing = [v for v in order if not win[v]]\nprint(len(losing))\nprint('W' if win['A'] else 'L')", expected_stdout: "3\nW", explanation: "Здесь игру решают динамикой по вершинам, а не по числу камней. Вершины разбираются в топологическом порядке F, D, E, B, C, A: из каждой рёбра ведут только в уже разобранные, поэтому нужные отметки уже известны. Из F ходов нет, значит она проигрышная (L); D и E могут перейти в F, поэтому выигрышные; из B и C любой ход ведёт в выигрышную позицию, значит обе проигрышные; из A есть ход в B, поэтому A выигрышная. Проигрышных вершин 3: F, B, C." }
+
+- id: inf-11-graph-047
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Вершины без входящих рёбер"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Ориентированный граф задан матрицей смежности (строки — «откуда», столбцы — «куда»):\n0 0 0 1 1 0 0 0\n0 0 0 1 0 0 0 0\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1 1 0\n0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 0\nСколько вершин не имеют ни одного входящего ребра? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Входящие степени вершин — это суммы столбцов матрицы: A — 0, B — 0, C — 0, D — 2, E — 2, F — 2, G — 1, H — 2. Нулевой столбец означает, что в вершину не ведёт ни одного ребра, то есть это вершина-источник. Таких вершин 3: A, B, C. При этом строки A, B и C непустые — из них ходы есть, поэтому в граф они попали как начала рёбер, а не как их концы. Обратите внимание на вершину G: в неё ведёт одно ребро из D, поэтому источником она не считается." }
+
+- id: inf-11-graph-048
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Достижимые вершины по матрице"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Ориентированный граф задан матрицей смежности (строки — «откуда», столбцы — «куда»):\n0 0 0 1 1 0 0 0\n0 0 0 1 0 0 0 0\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1 1 0\n0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 0\nОбходом в глубину из вершины A найдите все достижимые вершины, кроме самой A. Сколько их? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Обход идёт по рёбрам, записанным в строке текущей вершины. Из A доступны D и E (строка A). Из D — F и G, из E — F, из F — H, из G — H. Собралось D, E, F, G, H — 5 вершины, и на этом обход заканчивается, потому что из H рёбер нет. Вершины B и C остались непосещёнными: в A ведут рёбра, но из A до них добраться нельзя." }
+
+- id: inf-11-graph-049
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Как прочитать матрицу"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Как по матрице смежности восстановить список смежности вершины i?"
+  student_view: { options: [{ id: C, text: "Сложить все единицы матрицы и вычесть единицы на диагонали" }, { id: B, text: "Взять столбец i и выписать номера строк, где стоит единица" }, { id: A, text: "Взять строку i и выписать номера столбцов, где стоит единица" }, { id: D, text: "Взять только диагональные элементы матрицы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Строка матрицы соответствует вершине, из которой идут рёбра, а столбцы — вершинам, в которые они ведут. Поэтому список смежности вершины i получают из строки i: выписывают номера тех столбцов, где стоит единица. Столбец i даёт входящие степени — по нему находят вершины-источники, но это не список смежности." }
+
+- id: inf-11-graph-050
+  class: 11
+  topic: "Графы и деревья"
+  subtopic: "Второй уровень обхода"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11graph-03-table
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-graph-matrix], meta: [plan-actions] }
+  prompt: "Ориентированный граф задан матрицей смежности (строки — «откуда», столбцы — «куда»):\n0 0 0 1 1 0 0 0\n0 0 0 1 0 0 0 0\n0 0 0 0 1 0 0 0\n0 0 0 0 0 1 1 0\n0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 0\nОбходом в ширину из вершины A найдите вершины, лежащие на расстоянии ровно 2 от неё. Сколько таких вершин? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Обход в ширину идёт по уровням, расстояния от A получаются такие: A — 0, D — 1, E — 1, F — 2, G — 2, H — 3. На расстоянии 1 стоят D и E, на расстоянии 2 — F, G: до F можно дойти и через D, и через E, но засчитывается вершина один раз, а не два. Вершина H лежит на расстоянии 3, поэтому в ответ она не входит: важно именно «ровно 2», а не «не дальше 2»." }

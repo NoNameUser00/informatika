@@ -12,7 +12,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "С какого знака начинается любая формула?"
-  student_view: { options: [{ id: A, text: "=" }, { id: B, text: ":" }, { id: C, text: ";" }, { id: D, text: "пробел" }] }
+  student_view: { options: [{ id: A, text: "=" }, { id: D, text: "пробел" }, { id: C, text: ";" }, { id: B, text: ":" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Без = ячейка хранит текст" }
 
@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "Что видно в режиме отображения формул?"
-  student_view: { options: [{ id: A, text: "Сами формулы" }, { id: B, text: "Только результаты" }, { id: C, text: "Только адреса" }, { id: D, text: "Пустые ячейки" }] }
+  student_view: { options: [{ id: B, text: "Только результаты" }, { id: A, text: "Сами формулы" }, { id: C, text: "Только адреса" }, { id: D, text: "Пустые ячейки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Режим формул — для проверки логики" }
+  teacher_only: { answer: B, explanation: "Режим формул — для проверки логики" }
 
 - id: inf-9-sheet-003
   class: 9
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Формула =A1^2 из ячейки A2 скопирована в A3. Что теперь в A3?"
-  student_view: { options: [{ id: A, text: "=A2^2" }, { id: B, text: "=A1^2" }, { id: C, text: "=B1^2" }, { id: D, text: "=A1^3" }] }
+  student_view: { options: [{ id: C, text: "=B1^2" }, { id: D, text: "=A1^3" }, { id: A, text: "=A2^2" }, { id: B, text: "=A1^2" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Относительная ссылка сдвинулась на строку вниз" }
+  teacher_only: { answer: C, explanation: "Относительная ссылка сдвинулась на строку вниз" }
 
 - id: inf-9-sheet-004
   class: 9
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Какая ссылка не меняется при копировании?"
-  student_view: { options: [{ id: A, text: "$A$1" }, { id: B, text: "A1" }, { id: C, text: "$A1" }, { id: D, text: "A$1" }] }
+  student_view: { options: [{ id: B, text: "A1" }, { id: D, text: "A$1" }, { id: C, text: "$A1" }, { id: A, text: "$A$1" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Два доллара — полное закрепление" }
+  teacher_only: { answer: D, explanation: "Два доллара — полное закрепление" }
 
 - id: inf-9-sheet-005
   class: 9
@@ -97,7 +97,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
   prompt: "Чем СЧЁТЕСЛИ отличается от СУММЕСЛИ?"
-  student_view: { options: [{ id: A, text: "Считает штуки, а не сумму" }, { id: B, text: "Считает сумму, а не штуки" }, { id: C, text: "Работает без условия" }, { id: D, text: "Ничем" }] }
+  student_view: { options: [{ id: A, text: "Считает штуки, а не сумму" }, { id: C, text: "Работает без условия" }, { id: D, text: "Ничем" }, { id: B, text: "Считает сумму, а не штуки" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "СЧЁТ — количество, СУММ — сумма подходящих" }
 
@@ -114,7 +114,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "Какая диаграмма показывает доли целого?"
-  student_view: { options: [{ id: A, text: "Круговая" }, { id: B, text: "Столбчатая" }, { id: C, text: "Точечная" }, { id: D, text: "Лепестковая" }] }
+  student_view: { options: [{ id: A, text: "Круговая" }, { id: B, text: "Столбчатая" }, { id: D, text: "Лепестковая" }, { id: C, text: "Точечная" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Круг — доли, столбцы — сравнение" }
 
@@ -131,7 +131,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-sort], meta: [plan-actions] }
   prompt: "Что сломается, если отсортировать только столбец баллов?"
-  student_view: { options: [{ id: A, text: "Строки разъедутся: баллы оторвутся от учеников" }, { id: B, text: "Ничего" }, { id: C, text: "Удалятся формулы" }, { id: D, text: "Пропадёт шапка" }] }
+  student_view: { options: [{ id: A, text: "Строки разъедутся: баллы оторвутся от учеников" }, { id: B, text: "Ничего" }, { id: D, text: "Пропадёт шапка" }, { id: C, text: "Удалятся формулы" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Сортировать надо весь диапазон строк" }
 
@@ -168,3 +168,1011 @@
   student_view: { left: ["СУММ", "МИН", "МАКС"], right: ["минимум", "сумма", "максимум"] }
   auto_check: { method: matching }
   teacher_only: { answer_map: {"СУММ": "сумма", "МИН": "минимум", "МАКС": "максимум"}, explanation: "Три базовые агрегатные функции" }
+
+# ==== ДОПИСАНО scripts/make-9-bank.mjs (далее руками не править) ====
+- id: inf-9-sheet-011
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Диапазон ячеек"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "В таблице выделен диапазон B2:D10. Сколько в нём ячеек? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [27], answer_text: "27", explanation: "Столбцов B, C, D — три; строк со 2-й по 10-ю — девять. 3 · 9 = 27 ячеек." }
+
+- id: inf-9-sheet-012
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Цепочка формул"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "В ячейке A1 стоит число 5. В B1 введено =A1^2, в C1 введено =B1+A1. Что покажет C1?"
+  student_view: { options: [{ id: B, text: "35" }, { id: C, text: "10" }, { id: A, text: "30" }, { id: D, text: "50" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "B1 = 5 · 5 = 25, затем C1 = 25 + 5 = 30. Формулы считаются по порядку: в C1 берётся уже вычисленное значение B1." }
+
+- id: inf-9-sheet-013
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Ввод данных"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "В ячейку ввели число, перед которым стоит пробел. Что окажется в ячейке?"
+  student_view: { options: [{ id: D, text: "Пустая ячейка" }, { id: B, text: "Число без пробела" }, { id: C, text: "Ошибка ввода" }, { id: A, text: "Текст, а не число" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Пробел в начале LibreOffice Calc воспринимает как признак начала текста. Такое значение потом не участвует в вычислениях и сортируется как текст." }
+
+- id: inf-9-sheet-014
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Шапка и данные"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "В строке 1 стоит шапка, данные введены в строки со 2-й по 13-ю. Сколько строк данных в диапазоне B2:B13? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12], answer_text: "12", explanation: "Диапазон включает строки с обеими границами: 13 − 2 + 1 = 12 строк. Шапка в диапазон не входит, поэтому её вычитать не нужно." }
+
+- id: inf-9-sheet-015
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Типы данных при вводе"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "Установите соответствие: что введено в ячейку — что получится."
+  student_view: { left: ["число 125", "дата 01.03.2025", "телефон, введённый числом", "текст с пробелом в начале"], right: ["число", "дата", "теряет ведущие нули", "становится текстом"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "число 125": "число", "дата 01.03.2025": "дата", "телефон, введённый числом": "теряет ведущие нули", "текст с пробелом в начале": "становится текстом" }, explanation: "Тип значения задаёт сама таблица: число остаётся числом, дата — датой, телефон числом теряет ведущие нули, пробел в начале делает значение текстом." }
+
+- id: inf-9-sheet-016
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Сдвиг относительной ссылки"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
+  prompt: "Формула =A1^2 из ячейки B3 скопирована в ячейку C4. Что теперь в C4?"
+  student_view: { options: [{ id: A, text: "=B2^2" }, { id: D, text: "=A2^2" }, { id: B, text: "=A1^2" }, { id: C, text: "=B1^2" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Относительная ссылка сдвигается вместе с формулой: строка 1 -> 2, столбец A -> B. Получается =B2^2." }
+
+- id: inf-9-sheet-017
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Функция МИН"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "Что вернёт формула =МИН(8; 3; 6)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "МИН берёт наименьшее из аргументов: из 8, 3 и 6 это 3." }
+
+- id: inf-9-sheet-018
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "СРЗНАЧ и текст"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне B2:B6 стоят 10, 20, 30, 40 и текст «нет данных». Чему равно =СРЗНАЧ(B2:B6)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [25], answer_text: "25", explanation: "СРЗНАЧ берёт только числа: (10 + 20 + 30 + 40) / 4 = 100 / 4 = 25. Текст и пустые ячейки делитель не увеличивают." }
+
+- id: inf-9-sheet-019
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Размах"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне стоят числа 12, 7, 25, 3, 18, 9. Чему равно =МАКС(B2:B7)-МИН(B2:B7)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [22], answer_text: "22", explanation: "МАКС = 25, МИН = 3, размах = 25 − 3 = 22. Так одним выражением показывают разброс данных." }
+
+- id: inf-9-sheet-020
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "ЕСЛИ: условие"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
+  prompt: "В ячейке B2 стоит 7. Что вернёт =ЕСЛИ(B2>10;\"много\";\"мало\")?"
+  student_view: { options: [{ id: A, text: "мало" }, { id: B, text: "много" }, { id: C, text: "10" }, { id: D, text: "7" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "7 больше 10? Нет, поэтому выполняется ветка «нет» — «мало»." }
+
+- id: inf-9-sheet-021
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "ЕСЛИ со скидкой"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
+  prompt: "В ячейке C2 стоит 1500. Что покажет =ЕСЛИ(C2>1000;C2*0,9;C2)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1350], answer_text: "1350", explanation: "1500 больше 1000, поэтому берётся скидка 10%: 1500 · 0,9 = 1350." }
+
+- id: inf-9-sheet-022
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Вложенный ЕСЛИ"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
+  prompt: "В ячейке C2 стоит 2500. Что покажет =ЕСЛИ(C2>2000;C2*0,8;ЕСЛИ(C2>1000;C2*0,9;C2))? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2000], answer_text: "2000", explanation: "Самое крупное условие проверяется первым: 2500 > 2000, значит скидка 20%: 2500 · 0,8 = 2000. Если бы условие 1000 проверялось первым, получилось бы 2250." }
+
+- id: inf-9-sheet-023
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "СЧЁТЕСЛИ"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
+  prompt: "В диапазоне B2:B11 стоят баллы десяти учеников: 3, 4, 5, 4, 5, 3, 4, 5, 4, 3. Сколько учеников набрали не меньше 4 (=СЧЁТЕСЛИ(B2:B11;\">=4\"))? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Под условию >=4 подходят 4, 5, 4, 5, 4, 5, 4 — семь ячеек из десяти. Остальные три балла ниже 4." }
+
+- id: inf-9-sheet-024
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Фильтр и сортировка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "Чем фильтрация отличается от сортировки?"
+  student_view: { options: [{ id: D, text: "Ничем, это одно и то же" }, { id: B, text: "Фильтр переставляет строки по значениям столбца" }, { id: C, text: "Фильтр красит ячейки по условию" }, { id: A, text: "Фильтр прячет строки, но не удаляет и не меняет порядок остальных" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Сортировка меняет расположение строк, фильтрация меняет только видимость. Снял фильтр — все строки на месте." }
+
+- id: inf-9-sheet-025
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Автофильтр"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "В таблице 12 строк данных. Автофильтр по товару оставил видимыми 4 строки. Сколько строк скрыто? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Скрыто 12 − 4 = 8 строк. Они не удалены: после снятия фильтра вернутся все 12." }
+
+- id: inf-9-sheet-026
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Три инструмента анализа"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "Установите соответствие: инструмент анализа данных — что он делает."
+  student_view: { left: ["Сортировка", "Фильтрация", "Условное форматирование"], right: ["переставляет строки целиком", "прячет строки, не удаляя их", "красит ячейки по условию"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Сортировка": "переставляет строки целиком", "Фильтрация": "прячет строки, не удаляя их", "Условное форматирование": "красит ячейки по условию" }, explanation: "Сортировка меняет порядок строк, фильтрация — видимость, условное форматирование — цвет ячеек. Ничего из этого не удаляет данные." }
+
+- id: inf-9-sheet-027
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Связь с таблицей"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Что произойдёт с диаграммой, если изменить число в исходной таблице?"
+  student_view: { options: [{ id: C, text: "Диаграмма исчезнет" }, { id: B, text: "Диаграмма останется прежней" }, { id: D, text: "Появится вторая диаграмма" }, { id: A, text: "Диаграмма перестроится сама" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Диаграмма связана с диапазоном ячеек: изменил таблицу — изменилось и изображение." }
+
+- id: inf-9-sheet-028
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Среднее для сравнения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Продажи по месяцам: 120, 150, 180 (тыс. руб.). Чему равно =СРЗНАЧ(B2:B4) по этим трём месяцам? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [150], answer_text: "150", explanation: "(120 + 150 + 180) / 3 = 450 / 3 = 150. Средняя линия на графике показывает общий уровень — по ней видно, выше или ниже месяц." }
+
+- id: inf-9-sheet-029
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Ошибка выбора диаграммы"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Сравнили площади России, Китая и США и построили круговую диаграмму. Почему это ошибка?"
+  student_view: { options: [{ id: C, text: "Нужно было взять три цвета вместо одного" }, { id: B, text: "Круговая диаграмма не умеет показывать площади" }, { id: A, text: "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли" }, { id: D, text: "Ошибки нет, круговая подходит любых трёх величин" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Круговая диаграмма годится только для долей одного целого. Площади стран не составляют 100 %, поэтому доли получаются бессмысленными — нужна столбчатая." }
+
+- id: inf-9-sheet-030
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Модель s = v^2/10"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "Модель тормозного пути: s = v^2/10, скорость v в метрах в секунду. Чему равен путь при v = 10 м/с? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "s = 10 · 10 / 10 = 10 метров. Это опорная точка модели, на ней модель проверяют вручную." }
+
+- id: inf-9-sheet-031
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Перевод единиц"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "В столбце A2 таблицы модели стоит скорость 25 м/с, а в столбце B стоит формула =A2*3,6. Что покажет B2? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [90], answer_text: "90", explanation: "25 · 3,6 = 90: скорость в километрах в час. Модель обязана работать в тех единицах, которые указаны в формуле." }
+
+- id: inf-9-sheet-032
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Закон роста пути"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "Модель s = v^2/10. Во сколько раз тормозной путь больше при 40 м/с, чем при 20 м/с? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "При 40 м/с путь 160 м, при 20 м/с — 40 м, отношение 160 : 40 = 4. Путь растёт не пропорционально скорости, а квадратично." }
+
+- id: inf-9-sheet-033
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "СЧЁТЕСЛИ по баллам"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-task], meta: [plan-actions] }
+  prompt: "В B2:B13 баллы 12 учеников: 4, 5, 3, 5, 4, 3, 5, 4, 5, 3, 4, 5. Сколько учеников имеют балл не ниже 4? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Не меньше 4 — это 4 и 5. Таких ячеек девять из двенадцати: =СЧЁТЕСЛИ(B2:B13;\">=4\")." }
+
+- id: inf-9-sheet-034
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "СРЗНАЧ по баллам"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-task], meta: [plan-actions] }
+  prompt: "В B2:B7 баллы шести учеников: 4, 5, 5, 4, 4, 2. Чему равен =СРЗНАЧ(B2:B7)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Сумма 24, учеников 6: 24 / 6 = 4. Среднее считается только по числам, шапку в диапазон включать нельзя." }
+
+- id: inf-9-sheet-035
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "СУММЕСЛИ"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-task], meta: [plan-actions] }
+  prompt: "Столбец B — товар, столбец C — выручка. Строки: Тетрадь 250, Ручка 150, Тетрадь 180, Ручка 90. Сколько выручки принесли продажи тетрадей (=СУММЕСЛИ(C2:C5;B2:B5;\"Тетрадь\"))? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [430], answer_text: "430", explanation: "Суммируются строки, где в столбце с товаром стоит «Тетрадь»: 250 + 180 = 430. Первый диапазон — что суммируем, второй — где смотрим условие, третий — условие." }
+
+- id: inf-9-sheet-036
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Разделитель аргументов"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-09-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-9-sheet-review], meta: [plan-actions] }
+  prompt: "Какой разделитель аргументов используется в русской локали LibreOffice Calc?"
+  student_view: { options: [{ id: B, text: "запятая" }, { id: A, text: "точка с запятой" }, { id: C, text: "двоеточие" }, { id: D, text: "пробел" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "В русской локали Calc аргументы разделяют точкой с запятой. Запятая в такой формуле не распознаётся." }
+
+- id: inf-9-sheet-037
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Вложенные функции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-09-control
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-9-sheet-review], meta: [plan-actions] }
+  prompt: "В B2, B3, B4 стоят 10, 4, 7. Чему равно =СУММ(B2:B4)+МИН(B2:B4)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [25], answer_text: "25", explanation: "СУММ = 21, МИН = 4, вместе 25. Вложенные функции вычисляются независимо, обе берут один и тот же диапазон." }
+
+- id: inf-9-sheet-038
+  class: 9
+  topic: Электронные таблицы
+  subtopic: "Логическое И"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 9sheet-09-control
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-9-sheet-review], meta: [plan-actions] }
+  prompt: "В B2 стоит 5, в C2 — 3. Что вернёт =ЕСЛИ(И(B2>=4;C2>=4);\"да\";\"нет\")?"
+  student_view: { options: [{ id: B, text: "да" }, { id: A, text: "нет" }, { id: C, text: "3" }, { id: D, text: "4" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "И требует, чтобы оба условия были верны. 5 >= 4 верно, но 3 >= 4 ложно, поэтому выбирается ветка «нет»." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9-bank2.mjs — руками не править ====
+
+- id: inf-9-sheet-039
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Адрес ячейки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "Как записывается адрес третьей ячейки в третьей строке таблицы?"
+  student_view: { options: [{ id: B, text: "3C" }, { id: D, text: "Ячейка 3 номер 3" }, { id: C, text: "C" }, { id: A, text: "C3" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Сначала столбец, потом строка: столбец C — третий по алфавиту, строка 3. Запись 3C перепутана, а C без номера строки не указывает ни на одну ячейку." }
+
+- id: inf-9-sheet-040
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Диапазон ячеек"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-01-base
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
+  prompt: "В столбце A значения от 20 до 28 идут подряд. Сколько всего значений в столбце? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "20, 21, …, 28: количество = 28 − 20 + 1 = 9. Прибавляем единицу, потому что включаются оба конца. Ошибка — забыть про +1." }
+
+- id: inf-9-sheet-041
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Число или текст"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "В ячейки ввели: 10, 0,5, 1 200, 2:30, 15%, -7, текст, 1000. Сколько из них таблица воспримет как текст, а не как число? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Текстом станут 0,5, 2:30, 15%, текст: в русской записи десятичная запятая, двоеточие во времени, процент и буквы не являются числовым форматом. Остальные значения — числа: ввод с точкой, пробелом-разделителем и знаком минус числовой." }
+
+- id: inf-9-sheet-042
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Ошибка при вводе"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "Почему после ввода значения 1 200 (с пробелом) таблица восприняла его как текст?"
+  student_view: { options: [{ id: D, text: "Значение слишком большое" }, { id: B, text: "Пробелы нельзя вводить в таблицу" }, { id: C, text: "Числа нельзя вводить с разделителями" }, { id: A, text: "В русском формате разделителем тысяч служит не пробел, а неразрывный пробел или точка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Обычный пробел таблица считает началом текста. Чтобы число с разделителем распозналось как число, разделитель должен быть неразрывным пробелом либо настройкой локали. Проще вводить 1200." }
+
+- id: inf-9-sheet-043
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Формат ячейки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "В 4 ячейках записана цена 250 рублей. Сколько всего рублей в этих ячейках? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1000], answer_text: "1000", explanation: "4 · 250 = 1000. Проверка простая: сложить ту же цену 4 раз. Так удобно проверять результат формулы — сначала руками на маленьком числе." }
+
+- id: inf-9-sheet-044
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Тип значения и его поведение"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9sheet-02-data
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
+  prompt: "Установите соответствие: тип значения в ячейке — как таблица его обрабатывает."
+  student_view: { left: ["число", "текст", "дата", "время"], right: ["считается в формулах", "сортируется как текст, не как число", "участвует в вычислениях как число", "считается как доля суток"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "число": "считается в формулах", "текст": "сортируется как текст, не как число", "дата": "участвует в вычислениях как число", "время": "считается как доля суток" }, explanation: "Тип значения определяет всё: текст не участвует в вычислениях и сортируется по буквам, а числа, даты и время считаются числами. Ошибка в типе значения портит формулу, поэтому тип проверяют при вводе. Верно: число = считается в формулах; текст = сортируется как текст, не как число; дата = участвует в вычислениях как число; время = считается как доля суток." }
+
+- id: inf-9-sheet-045
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Относительные и абсолютные ссылки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
+  prompt: "Что означает запись =$A$1 в формуле?"
+  student_view: { options: [{ id: C, text: "Ссылка на ячейку A1, которая меняется только по столбцам" }, { id: B, text: "Ссылка на столбец A, который не меняется" }, { id: D, text: "Сложение ячеек A и 1" }, { id: A, text: "Ссылка на ячейку A1, которая не меняется при копировании формулы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Доллары фиксируют и столбец, и строку — такая ссылка абсолютная. Без долларов ссылка относительная и при копировании сдвигается на столько же строк и столбцов." }
+
+- id: inf-9-sheet-046
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Копирование формулы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-02-refs
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
+  prompt: "В ячейке C1 формула =A1*B1. Формулу скопировали вниз на 3 строки так, что в C3 она ссылается на A3*B3. Сколько строк формула сдвинулась? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Из строки 1 в строку 3 — сдвиг на 3 − 1 = 2 строки, и на столько же столбцов сдвинулись бы ссылки без долларов. Именно поэтому, чтобы ссылка стояла на месте, пишут =$A$1." }
+
+- id: inf-9-sheet-047
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "СРЗНАЧ, МАКС, МИН"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне значения 4, 9, 2, 7. Чему равен результат =МИН(A1:A4)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "МИН берёт наименьшее из диапазона: 2. Считать МАКС и МИН вручную — обычная ошибка: их легко перепутать, поэтому проверяют на маленьком наборе." }
+
+- id: inf-9-sheet-048
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "СРЗНАЧ, МАКС, МИН"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне значения 4, 9, 2, 7. Чему равен результат =МАКС(A1:A4)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "МАКС берёт наибольшее: 9. Значения перечислены по возрастанию не по порядку, поэтому «последнее» и «наибольшее» — разные числа." }
+
+- id: inf-9-sheet-049
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "СУММ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне значения 4, 9, 2, 7. Чему равен результат =СУММ(A1:A4)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [22], answer_text: "22", explanation: "4 + 9 + 2 + 7 = 22. Сумма считается сложением всех ячеек диапазона, включая те, что выглядят «пустыми» с точки зрения текста, но содержат числа." }
+
+- id: inf-9-sheet-050
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "СРЗНАЧ"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-03-functions
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-func], meta: [plan-actions] }
+  prompt: "В диапазоне значения 2, 4, 6, 8. Чему равен результат =СРЗНАЧ(A1:A4)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Сумма 20, значений 4, значит 20 / 4 = 5. Русская таблица показывает десятичную запятую, поэтому в таких задачах берут наборы, где среднее целое." }
+
+- id: inf-9-sheet-051
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Функция ЕСЛИ"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
+  prompt: "В B1 стоит 3, в B2 — 4. Чему равен результат =ЕСЛИ(B1<B2;\"меньше\";\"не меньше\")?"
+  student_view: { options: [{ id: D, text: "истина" }, { id: C, text: "0" }, { id: A, text: "меньше" }, { id: B, text: "не меньше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "3 < 4 — условие истинно, значит берётся первый текст «меньше». Второй вариант «не меньше» сработал бы, если бы условие было ложным." }
+
+- id: inf-9-sheet-052
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Функция ЕСЛИ"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
+  prompt: "В B1 стоит 5, в B2 — 4. Чему равен результат =ЕСЛИ(B1<B2;\"меньше\";\"не меньше\")?"
+  student_view: { options: [{ id: A, text: "не меньше" }, { id: B, text: "меньше" }, { id: C, text: "ложь" }, { id: D, text: "больше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "5 < 4 — условие ложно (5 больше), поэтому берётся второй вариант «не меньше». Ошибка — считать, что ЕСЛИ всегда берёт первое значение." }
+
+- id: inf-9-sheet-053
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Вложенный ЕСЛИ"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
+  prompt: "Оценка вычисляется формулой =ЕСЛИ(B1>=80;\"отлично\";ЕСЛИ(B1>=70;\"хорошо\";\"удовлетворительно\")). Что покажет формула, если в B1 стоит 85?"
+  student_view: { options: [{ id: D, text: "ошибку" }, { id: A, text: "отлично" }, { id: C, text: "удовлетворительно" }, { id: B, text: "хорошо" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "85 >= 80 — внешнее условие истинно, формула сразу возвращает «отлично», до внутреннего ЕСЛИ дело не доходит. Вложенные ЕСЛИ читаются слева направо и останавливаются на первом истинном условии." }
+
+- id: inf-9-sheet-054
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Сортировка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-analysis], meta: [plan-actions] }
+  prompt: "Данные: Аня — 4; Боря — 7; Вера — 5; Глеб — 9. Как будет выглядеть первая строка после сортировки по столбцу с оценками по возрастанию?"
+  student_view: { options: [{ id: D, text: "Вера — 5" }, { id: B, text: "Аня — 4" }, { id: A, text: "Боря — 4" }, { id: C, text: "Глеб — 9" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Наименьшая оценка 4, она у Бори. При сортировке по возрастанию первая строка — с минимальным значением, и вместе с оценкой переносится вся строка, а не только ячейка." }
+
+- id: inf-9-sheet-055
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Медиана"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-03-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-analysis], meta: [plan-actions] }
+  prompt: "Оценки: 4, 7, 5, 9. Чему равна медиана этого набора? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "После упорядочивания: 4, 5, 7, 9. Значений чётное число, поэтому медиана — среднее двух средних: (5 + 7) / 2 = 6. Медиана устойчива к выбросам, в отличие от среднего." }
+
+- id: inf-9-sheet-056
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Условие фильтра"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "Рост учеников: 165, 172, 168, 180, 171, 169, 175, 173, 166, 178, 170, 164. Сколько учеников выше 170 см? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Строго больше 170: 172, 180, 171, 175, 173, 178 — это 6 учеников. Ключевое слово «строго»: если условие «170 и выше», то к ним добавятся и те, у кого ровно 170." }
+
+- id: inf-9-sheet-057
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Подсчёт по условию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "Баллы класса: 4, 5, 5, 4, 4, 2. Сколько учеников получили 5? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Пятёрки стоят у 2 учеников. Фильтр по значению «5» оставит только их; сравнение «>4» дало бы тот же результат, а вот «>=5» проверит уже не то." }
+
+- id: inf-9-sheet-058
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Фильтр по тексту"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 9sheet-05-filter
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
+  prompt: "В таблице 3 строки учеников: Ученик 1, класс 9А, баллы 15; Ученик 2, класс 9Б, баллы 18; Ученик 3, класс 9А, баллы 20. Сколько строк относятся к 9А? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Класс 9А у Ученик 1, Ученик 3 — это 2 строки. Фильтр сравнивает текст посимвольно, поэтому «9А» и «9а» будут разными значениями." }
+
+- id: inf-9-sheet-059
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Выбор диаграммы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Какая диаграмма показывает, как менялась величина по месяцам?"
+  student_view: { options: [{ id: A, text: "Линейная (график)" }, { id: C, text: "Диаграмма разброса" }, { id: B, text: "Круговая" }, { id: D, text: "Гистограмма" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Линейный график показывает изменение величины по оси времени. Круговая — доли целого, разброса — связь двух величин, гистограмма — распределение значений по интервалам." }
+
+- id: inf-9-sheet-060
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Доли для круговой"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Доли категорий: 40 %, 35 %, 25 %. Сколько процентов приходится на две первые категории вместе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [75], answer_text: "75", explanation: "40 + 35 = 75 %. Круговая диаграмма годится, только когда доли в сумме дают 100 %, поэтому проверяют сумму перед построением." }
+
+- id: inf-9-sheet-061
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Читаем график"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "Продажи по месяцам: 12, 15, 14, 20. На сколько единиц выросли продажи с первого месяца до последнего? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Последний месяц 20, первый 12: 20 − 12 = 8. Разность показывает изменение, а отношение — темп роста." }
+
+- id: inf-9-sheet-062
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Модель пути"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "Модель тормозного пути: s = v² / 10, где v — скорость в м/с, s — путь в метрах. Чему равен путь при скорости 30 м/с? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [90], answer_text: "90", explanation: "s = 30² / 10 = 900 / 10 = 90 м. Порядок действий важен: сначала возводим скорость в квадрат, потом делим. Считать (v / 10)² — типичная ошибка, потому что меняется скобка." }
+
+- id: inf-9-sheet-063
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Обратная задача модели"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "Модель s = v² / 10. При какой скорости в м/с путь торможения равен 160 м? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [40], answer_text: "40", explanation: "Обратная задача: v² = 160 · 10 = 1600, значит v = √1600 = 40 м/с. В таблице это делается функцией КОРЕНЬ, а не угадыванием: модель обязана проверяться на известном значении." }
+
+- id: inf-9-sheet-064
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Доли в модели"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9sheet-07-model
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-model], meta: [plan-actions] }
+  prompt: "В проекте переработано сырья: 2019 — 400 из 1000 кг; 2020 — 600 из 1200 кг. На сколько процентных пунктов выросла доля переработанного во втором году по сравнению с первым? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Доли: 2019 — 40 %; 2020 — 50 %. Изменение доли: 50 − 40 = 10 процентных пункта. Важно: это процентные пункты, а не проценты, поэтому делить дополнительно не нужно." }
+
+- id: inf-9-sheet-065
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "СУММЕСЛИ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-tasks], meta: [plan-actions] }
+  prompt: "Столбец B — товар, столбец C — выручка: Тетрадь 250, Ручка 150, Тетрадь 180, Ручка 90. Сколько выручки принесли продажи тетрадей (=СУММЕСЛИ(C2:C5;B2:B5;\"Тетрадь\"))? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [430], answer_text: "430", explanation: "Суммируются строки, где в столбце товара стоит «Тетрадь»: 250 + 180 = 430. Первый диапазон — что суммируем, второй — где ищем условие, третий — само условие." }
+
+- id: inf-9-sheet-066
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Округление вверх"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-tasks], meta: [plan-actions] }
+  prompt: "Товары стоят 100, 200, 300, 400 рублей. Всего на 1000 рублей. Товар продаётся упаковками по 1000 рублей, неполную упаковку продать нельзя. Сколько упаковок нужно? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "1000 ÷ 1000 = 1.0 — округляем вверх до 1, потому что неполную упаковку продать нельзя. Функция ОКРУПЛВВЕРХ делает это автоматически." }
+
+- id: inf-9-sheet-067
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Средний балл и количество"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 9sheet-08-tasks
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-tasks], meta: [plan-actions] }
+  prompt: "Оценки класса: 4, 5, 4, 5, 5, 4, 5, 4, 5, 4. На сколько пятёрок больше, чем четвёрок? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Пятёрок 5, четвёрок 5, разница по модулю 0. Формула =СЧЁТЕСЛИ(...;\"5\")-СЧЁТЕСЛИ(...;\"4\") даёт разность со знаком, поэтому берут модуль, когда нужен размер различия." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-9final-bank3.mjs ====
+
+- id: inf-9-sheet-068
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Функция СЧЁТ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-04-logic
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
+  prompt: "В диапазоне A1:A6 стоят: 12, текст «нет», 7, пустая ячейка, 9, текст «нет». Сколько ячеек содержат числа (=СЧЁТ(A1:A6))? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "СЧЁТ считает только числа: 12, 7, 9 — 3 ячейки. Текст «нет» и пустая ячейка в подсчёт не идут. Если нужно посчитать числа по условию, берут СЧЁТЕСЛИ." }
+
+- id: inf-9-sheet-069
+  class: 9
+  topic: "Электронные таблицы"
+  subtopic: "Элементы диаграммы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 9sheet-06-charts
+  fgos_requirement: 1.1
+  fgos_element: 1.2
+  fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
+  prompt: "На диаграмме несколько рядов данных, каждый нарисован своим цветом. Какой элемент диаграммы объясняет, что означает каждый цвет?"
+  student_view: { options: [{ id: A, text: "Легенда" }, { id: C, text: "Подпись оси" }, { id: B, text: "Заголовок" }, { id: D, text: "Линия сетки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Легенда расшифровывает цвета и ряды: какой столбик или какая линия чему соответствует. Заголовок отвечает на вопрос «о чём диаграмма», подпись оси — «в каких единицах», а сетка просто помогает считывать значения." }

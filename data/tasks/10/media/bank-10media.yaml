@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
   prompt: "Зачем нужны стили в текстовом процессоре?"
-  student_view: { options: [{ id: A, text: "Менять всё разом и собирать оглавление" }, { id: B, text: "Рисовать картинки" }, { id: C, text: "Играть музыку" }, { id: D, text: "Не нужны" }] }
+  student_view: { options: [{ id: C, text: "Играть музыку" }, { id: B, text: "Рисовать картинки" }, { id: A, text: "Менять всё разом и собирать оглавление" }, { id: D, text: "Не нужны" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Стиль — именованный набор, оглавление собирается само" }
+  teacher_only: { answer: C, explanation: "Стиль — именованный набор, оглавление собирается само" }
 
 - id: inf-10-media-002
   class: 10
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-3d], meta: [plan-actions] }
   prompt: "Из чего строятся 3D-модели?"
-  student_view: { options: [{ id: A, text: "Из примитивов с рендером" }, { id: B, text: "Из текста" }, { id: C, text: "Из звука" }, { id: D, text: "Из ничего" }] }
+  student_view: { options: [{ id: C, text: "Из звука" }, { id: D, text: "Из ничего" }, { id: A, text: "Из примитивов с рендером" }, { id: B, text: "Из текста" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Примитивы → сцена → рендер" }
+  teacher_only: { answer: C, explanation: "Примитивы → сцена → рендер" }
 
 - id: inf-10-media-004
   class: 10
@@ -63,7 +63,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
   prompt: "Что должно быть на слайде?"
-  student_view: { options: [{ id: A, text: "Один смысл крупно" }, { id: B, text: "Стена мелкого текста" }, { id: C, text: "Всё сразу" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: A, text: "Один смысл крупно" }, { id: D, text: "Ничего" }, { id: C, text: "Всё сразу" }, { id: B, text: "Стена мелкого текста" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Один слайд — один смысл" }
 
@@ -80,7 +80,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
   prompt: "Что дают инструменты рецензирования?"
-  student_view: { options: [{ id: A, text: "Правки, комментарии и версии" }, { id: B, text: "Новые шрифты" }, { id: C, text: "Музыку" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: A, text: "Правки, комментарии и версии" }, { id: C, text: "Музыку" }, { id: B, text: "Новые шрифты" }, { id: D, text: "Ничего" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Совместная работа с историей" }
 
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
   prompt: "Чем набирать формулы в документе?"
-  student_view: { options: [{ id: A, text: "Специальным редактором формул" }, { id: B, text: "Надстрочными костылями" }, { id: C, text: "Картинками из чата" }, { id: D, text: "Ничем" }] }
+  student_view: { options: [{ id: C, text: "Картинками из чата" }, { id: A, text: "Специальным редактором формул" }, { id: D, text: "Ничем" }, { id: B, text: "Надстрочными костылями" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Формулы — редактором, иначе разъедутся" }
+  teacher_only: { answer: B, explanation: "Формулы — редактором, иначе разъедутся" }
 - id: inf-10-media-007
   class: 10
   topic: Документы и мультимедиа
@@ -130,7 +130,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-fmt], meta: [plan-actions] }
   prompt: "В каком формате сохранить скриншот с текстом?"
-  student_view: { options: [{ id: A, text: "PNG" }, { id: B, text: "JPEG" }, { id: C, text: "MP3" }, { id: D, text: "AVI" }] }
+  student_view: { options: [{ id: A, text: "PNG" }, { id: B, text: "JPEG" }, { id: D, text: "AVI" }, { id: C, text: "MP3" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Текст чёткий только без потерь" }
 
@@ -147,9 +147,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-3d], meta: [plan-actions] }
   prompt: "Чем виртуальная реальность отличается от дополненной?"
-  student_view: { options: [{ id: A, text: "VR погружает, AR дополняет мир" }, { id: B, text: "Ничем" }, { id: C, text: "AR дороже" }, { id: D, text: "VR — это монитор" }] }
+  student_view: { options: [{ id: D, text: "VR — это монитор" }, { id: C, text: "AR дороже" }, { id: A, text: "VR погружает, AR дополняет мир" }, { id: B, text: "Ничем" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Погружение против наложения" }
+  teacher_only: { answer: C, explanation: "Погружение против наложения" }
 
 - id: inf-10-media-010
   class: 10
@@ -181,6 +181,1208 @@
   fgos_element: 1.1
   fgos: { subject: [inf-10-media-slides], meta: [plan-actions] }
   prompt: "Где собирать проектную презентацию вместе с классом?"
-  student_view: { options: [{ id: A, text: "В онлайн-сервисе с совместным доступом" }, { id: B, text: "На одном листке" }, { id: C, text: "По телефону без файла" }, { id: D, text: "Нигде" }] }
+  student_view: { options: [{ id: B, text: "На одном листке" }, { id: D, text: "Нигде" }, { id: A, text: "В онлайн-сервисе с совместным доступом" }, { id: C, text: "По телефону без файла" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Общий документ + комментарии" }
+  teacher_only: { answer: C, explanation: "Общий документ + комментарии" }
+# === ДОПИСАНО scripts/make-10-bank.mjs (руками не править) ===
+# Ответы посчитаны кодом (parseBase, popcount, rowsOf, equivalent, dnf, knf, solve)
+# и проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-media-012 … inf-10-media-033 (22 заданий).
+- id: inf-10-media-012
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Сборка оглавления"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-01-docs
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-style], meta: [plan-actions] }
+  prompt: "В LibreOffice Writer документ оформлен стилями: 5 абзацев со стилем «Заголовок 1», 8 абзацев со стилем «Заголовок 2» и 40 абзацев со стилем «Обычный». Сколько абзацев попадёт в оглавление? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [13], answer_text: "13", explanation: "В LibreOffice Writer оглавление собирается из стилей заголовков, поэтому в него попадут только 5 + 8 = 13 абзацев. Обычный текст в оглавление не включается. Если разделы оформлены прямым форматированием, оглавление получится пустым." }
+
+- id: inf-10-media-013
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Комментарий и правка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "В LibreOffice Writer одноклассник прислал документ с правкой в режиме рецензирования. Чем эта правка отличается от обычного комментария на полях?"
+  student_view: { options: [{ id: D, text: "Правку можно удалить, а комментарий — нет" }, { id: C, text: "Ничем: это два названия одного и того же действия" }, { id: B, text: "Комментарий меняет текст, а правка остаётся на полях" }, { id: A, text: "Правка сразу изменяет текст и видна автору, а комментарий остаётся примечанием и исходный текст не трогает" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Комментарий привязан к месту в тексте, исходный текст остаётся нетронутым. Правка в режиме рецензирования выделяется, и автор видит, что именно изменилось." }
+
+- id: inf-10-media-014
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Список литературы"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид источника — какие данные указывают в списке литературы."
+  student_view: { left: ["Книга", "Статья в журнале", "Сайт"], right: ["автор, название, город, издательство, год и страницы", "автор, название статьи, журнал, год, номер и страницы", "название сайта, адрес и дата обращения"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Книга": "автор, название, город, издательство, год и страницы", "Статья в журнале": "автор, название статьи, журнал, год, номер и страницы", "Сайт": "название сайта, адрес и дата обращения" }, explanation: "У каждого вида источника свой набор данных. В список литературы вносят только те источники, которые действительно использовали, а для сайта обязательно указывают дату обращения." }
+
+- id: inf-10-media-015
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Права доступа"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Почему перед сдачей контрольной работы учителю выдают доступ «только просмотр»?"
+  student_view: { options: [{ id: D, text: "Чтобы доступ был быстрее, чем на редактирование" }, { id: B, text: "Чтобы учитель не смог проверить работу" }, { id: A, text: "Чтобы работу нельзя было изменить или удалить и чтобы права были минимальными" }, { id: C, text: "Чтобы файл нельзя было скачать" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Правило — выдавать минимальные права: просмотр, комментирование, редактирование, владение. Для контрольной работы достаточно просмотра, а сам файл лучше скачать локально, потому что ссылка может перестать работать." }
+
+- id: inf-10-media-016
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Поля и полоса набора"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "У листа формата А4 ширина 21 см. Левое поле сделали 3 см, правое — 2 см. Какой ширины получится полоса набора? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "Ширина листа 21 см, поля слева и справа вместе занимают 3 + 2 = 5 см, значит полоса набора 21 − 5 = 16 см. Верхнее и нижнее поля на ширину полосы не влияют." }
+
+- id: inf-10-media-017
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Редактор формул"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "В документе LibreOffice Writer нужно записать дробь с многочленом в числителе и знаменателе. Чем это делают?"
+  student_view: { options: [{ id: A, text: "Через редактор формул: дробь записывается структурой и выравнивается по правилам" }, { id: B, text: "Набирают символом «/» и подчёркиванием с клавиатуры" }, { id: D, text: "Переносом строк и пробелами, чтобы дробь выглядела как в учебнике" }, { id: C, text: "Вставляют картинку формулы из интернета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Простые формулы вроде a² + b² = c² набираются с клавиатуры надстрочными индексами. Дроби, интегралы и матрицы — только объектом редактора формул LibreOffice Writer, иначе знаки разъедутся." }
+
+- id: inf-10-media-018
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Приёмы вёрстки"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Установите соответствие: приём вёрстки — зачем он нужен."
+  student_view: { left: ["Две колонки", "«Не отрывать от следующего абзаца»", "Обтекание текстом для иллюстрации", "Левое поле шире правого"], right: ["экономит место в словарях и газетах, текст читается по колонкам", "заголовок не остаётся один внизу страницы без своего текста", "картинка занимает часть полосы, а текст обходит её и не накрывается", "страница подшивается в папку, и полоса не перекрывается краем"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Две колонки": "экономит место в словарях и газетах, текст читается по колонкам", "«Не отрывать от следующего абзаца»": "заголовок не остаётся один внизу страницы без своего текста", "Обтекание текстом для иллюстрации": "картинка занимает часть полосы, а текст обходит её и не накрывается", "Левое поле шире правого": "страница подшивается в папку, и полоса не перекрывается краем" }, explanation: "Вёрстка отвечает за страницу целиком: поля, колонки, баланс белого пространства и поведение иллюстраций. Отдельно важно не верстать страницы вручную, а задавать оформление стилями." }
+
+- id: inf-10-media-019
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Объём растрового файла"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Фотография 400 × 300 пикселей сохраняется в растровом формате с глубиной цвета 24 бита. Сколько байт займёт файл? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [360000], answer_text: "360000", explanation: "Пикселей 400 · 300 = 120 000. Объём V = K · i = 120 000 · 24 = 2 880 000 бит, в байтах 2 880 000 : 8 = 360 000 байт. На 3 умножать не нужно: 24 бита уже это три канала по 8." }
+
+- id: inf-10-media-020
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Сжатие с потерями"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Почему фотографию в формате JPEG при сильном увеличении видно «блоками»?"
+  student_view: { options: [{ id: A, text: "JPEG сжимает с потерями: часть данных отбрасывается, и на увеличенных квадратах видны границы блоков" }, { id: B, text: "JPEG не умеет хранить фотографии и всегда превращает их в схемы" }, { id: C, text: "Формат JPEG хранит изображение целиком, а блоки появляются из-за монитора" }, { id: D, text: "Блоки появляются, потому что фотография была сделана на старом фотоаппарате" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Форматы PNG и BMP хранят изображение без потерь, а JPEG экономит место в десятки раз ценой качества. Увеличенный JPEG показывает блочные артефакты, а PNG в том же масштабе остаётся чётким." }
+
+- id: inf-10-media-021
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Операции растрового редактора"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Установите соответствие: операция — что она делает."
+  student_view: { left: ["Выделение", "Слои", "Кадрирование", "Ретушь «лечащей кистью»"], right: ["задаёт область, к которой применятся следующие действия", "прозрачные листы, верхний закрывает нижний", "обрезает лишнее по краям кадра", "убирает мелкие дефекты изображения"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Выделение": "задаёт область, к которой применятся следующие действия", "Слои": "прозрачные листы, верхний закрывает нижний", "Кадрирование": "обрезает лишнее по краям кадра", "Ретушь «лечащей кистью»": "убирает мелкие дефекты изображения" }, explanation: "Выделение — обязательный шаг перед действием, иначе оно применится ко всему слою. Рисовать всё на одном слое тоже не стоит: исправить потом нельзя." }
+
+- id: inf-10-media-022
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Заливка и обводка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Чем заливка отличается от обводки у векторной фигуры?"
+  student_view: { options: [{ id: D, text: "Обводка бывает только у прямых линий, а заливка только у многоугольников" }, { id: C, text: "Ничем: это два названия одного параметра" }, { id: B, text: "Заливка задаёт толщину контура, а обводка — цвет внутри фигуры" }, { id: A, text: "Заливка — это то, что внутри фигуры, а обводка — линия по её контуру" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Это независимые параметры: фигуру можно залить и не обводить и наоборот. Заливка бывает цветом, градиентом, узором или текстурой, обводка — цветом, толщиной и пунктиром." }
+
+- id: inf-10-media-023
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Группировка фигур"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Что даёт группировка собранной схемы в векторном редакторе?"
+  student_view: { options: [{ id: C, text: "Схема автоматически выравнивается по сетке" }, { id: B, text: "Фигуры превращаются в один растровый рисунок и больше не редактируются" }, { id: A, text: "Фигуры двигаются, масштабируются и заливаются как один объект, поэтому не разъезжаются" }, { id: D, text: "Файл схемы становится в несколько раз меньше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Без группировки каждая фигура двигается сама по себе, и при переносе схемы детали расходятся. Растягивать группу по одной оси тоже нельзя — фигуры искажатся." }
+
+- id: inf-10-media-024
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Узлы кривых"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "В схеме 8 фигур, у каждой по 4 узла, задающих форму кривой. Сколько всего узлов в схеме? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "Узлы определяют форму кривой, а маркеры управления тянут её в нужную сторону. 8 · 4 = 32 узла. Чтобы дуга получилась ровной, узлы ставят по краям, а маркеры тянут перпендикулярно линии." }
+
+- id: inf-10-media-025
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Устройство 3D-модели"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Сколько основных элементов перечисляют в описании трёхмерной модели? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Три: вершины — точки в пространстве, рёбра — отрезки между ними, грани — плоские поверхности между рёбрами. Части модели, которые двигаются вместе, собирают в объекты и группы." }
+
+- id: inf-10-media-026
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Boolean-операции"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Зачем в 3D-редакторе нужны Boolean-операции?"
+  student_view: { options: [{ id: B, text: "Чтобы покрасить модель в разные цвета" }, { id: C, text: "Чтобы пересчитать файл в растровый формат" }, { id: A, text: "Чтобы вырезать отверстие или полость вычитанием и сварить детали в целое объединением" }, { id: D, text: "Чтобы модель стала легче при экспорте" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Boolean-операции — это объединение, вычитание и пересечение. Именно они позволяют из простых деталей собрать сложный объект, например вырезать в стене окно." }
+
+- id: inf-10-media-027
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Принципы моделирования"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Почему 3D-модель собирают из простых деталей, а не моделируют одним сложным объектом?"
+  student_view: { options: [{ id: C, text: "Сложный объект нельзя экспортировать в STL" }, { id: B, text: "Программа не умеет работать со сложными объектами" }, { id: A, text: "Так проще редактировать: детали стыкуются общими гранями, а пропорции видны сразу" }, { id: D, text: "Сложный объект нельзя покрасить в разные цвета" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Объект должен быть простым, детали должны стыковаться, а пропорции важнее мелких деталей — характер предмета задаётся именно ими." }
+
+- id: inf-10-media-028
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Структура проектной презентации"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Сколько слайдов должно быть в структуре проектной презентации по этому уроку? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Семь: титульный слайд, план, проблема, данные, методы, результаты и заключение. На слайде допускается не больше шести строк: слайд — опора для рассказа, а не документ." }
+
+- id: inf-10-media-029
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Анимация в презентации"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Зачем в презентации нужна анимация?"
+  student_view: { options: [{ id: A, text: "Чтобы показать порядок появления объектов и направить внимание зрителя" }, { id: D, text: "Чтобы презентация занимала больше файлов на диске" }, { id: C, text: "Чтобы заполнить пустое место на слайде" }, { id: B, text: "Чтобы слайд выглядел более празднично" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Анимация показывает последовательность, а не украшает. Если поставить её на каждый объект, зритель перестаёт следить за смыслом доклада." }
+
+- id: inf-10-media-030
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Правило шести строк"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Презентация состоит из 7 слайдов. На каждом разрешено не больше шести строк текста. Какое наибольшее число строк текста допустимо во всей презентации? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [42], answer_text: "42", explanation: "7 · 6 = 42 строки. Если текста больше, зритель не успевает прочитать его во время показа, а остальное уходит в устный рассказ." }
+
+- id: inf-10-media-031
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Объём презентации"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Сколько слайдов должна содержать готовая презентация по заданию этого урока?"
+  student_view: { options: [{ id: D, text: "Ровно 20 слайдов" }, { id: A, text: "От 8 до 10 слайдов" }, { id: B, text: "Ровно 3 слайда" }, { id: C, text: "Не менее 25 слайдов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Восемь–десять слайдов: титульный, содержательные слайды с изображениями и графиками, хотя бы одна вставка видео, озвучка и выводы на последнем слайде." }
+
+- id: inf-10-media-032
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Встраивание видео"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Почему видео встраивают в файл презентации, а не оставляют внешнюю ссылку?"
+  student_view: { options: [{ id: B, text: "Внешние ссылки на видео запрещены правилами школьного сайта" }, { id: C, text: "Встроенное видео автоматически сжимается и занимает меньше места" }, { id: A, text: "Внешняя ссылка может не сработать на чужом компьютере и без интернета, а встроенный файл работает всегда" }, { id: D, text: "Внешний файл нельзя запустить во время показа" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Ролик выбирают короткий, 30–60 секунд, проверяют кодек и встраивают в файл с запуском по щелчку. Перед сдачей показ обязательно проверяют на том компьютере, с которого будешь выступать." }
+
+- id: inf-10-media-033
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Кадры видео"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Видеоролик длится 40 секунд при 25 кадрах в секунду. Сколько кадров содержится в ролике? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1000], answer_text: "1000", explanation: "Кадров в секунду умножаем на время: 40 · 25 = 1000 кадров. Каждый кадр — это отдельный растр со своим объёмом, поэтому видео сжимают." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bank2.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, fracBits, rowsOf, evalAt,
+# equivalent, dnf, knf, solve) и проверены assert-ами: если число или формула
+# не сошлись, сборка падает. Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-media-034 … inf-10-media-067 (34 заданий).
+- id: inf-10-media-034
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Как писать комментарий"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Как правильно написать комментарий к чужому тексту?"
+  student_view: { options: [{ id: D, text: "Оставить комментарий на первой странице, а не на месте ошибки" }, { id: A, text: "Указать, что именно стоит исправить и как: «после слова \"который\" лучше поставить запятую, так читается легче»" }, { id: C, text: "Исправить текст молча, не оставляя комментария" }, { id: B, text: "Написать «неправильно»: этого достаточно, чтобы автор всё понял" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Автор не должен гадать, что имел в виду рецензент. Комментарий должен быть конкретным и доброжелательным: что исправить и почему." }
+
+- id: inf-10-media-035
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Состав делового письма"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Требования к оформлению делового письма перечисляют так: точный заголовок по теме письма; обращение на «Вы» с заглавной буквы; краткое вводное предложение: о чём письмо; суть по существу, без воды; конкретная просьба или предложение; подпись и контактные данные. Сколько таких требований перечислено? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "6 требований: 1) точный заголовок по теме письма; 2) обращение на «Вы» с заглавной буквы; 3) краткое вводное предложение: о чём письмо; 4) суть по существу, без воды; 5) конкретная просьба или предложение; 6) подпись и контактные данные. Деловое письмо отличается от личного нейтральным тоном, чёткой структурой и отсутствием сокращений в деловой части." }
+
+- id: inf-10-media-036
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Требования к цитированию"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Установите соответствие: правило цитирования — как его соблюдают."
+  student_view: { left: ["Книга", "Статья в журнале", "Сайт"], right: ["автор, название, город, издательство, год и страницы", "автор, название статьи, журнал, год, номер и страницы", "название сайта, адрес и дата обращения"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Книга": "автор, название, город, издательство, год и страницы", "Статья в журнале": "автор, название статьи, журнал, год, номер и страницы", "Сайт": "название сайта, адрес и дата обращения" }, explanation: "Пересказ чужой мысли делают своими словами, точную цитату берут в кавычки и снабжают ссылкой. В список литературы вносят только те источники, которые действительно использовали, и для сайта обязательно указывают дату обращения." }
+
+- id: inf-10-media-037
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "История версий"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "В облачном документе над проектом работали 4 человек, и сервис хранит историю из 3 версий. Зачем нужна эта история?"
+  student_view: { options: [{ id: C, text: "Чтобы запретить редактирование документа после сдачи" }, { id: A, text: "Чтобы можно было посмотреть, кто и что менял, и вернуться к предыдущей версии, если правка испортила документ" }, { id: D, text: "История версий нужна только для печати: она готовит документ к выводу" }, { id: B, text: "Чтобы документ занимал на диске больше места и его было сложнее потерять" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "При 4 авторах и 3 версиях легко потерять чужую правку. История версий показывает, кто что менял, и позволяет откатить неудачное изменение — это и делает совместную работу безопасной." }
+
+- id: inf-10-media-038
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Понятие вёрстки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Что входит в понятие вёрстки?"
+  student_view: { options: [{ id: A, text: "Размещение текста, заголовков, иллюстраций, колонтитулов и сносок на странице так, чтобы документ читался легко" }, { id: B, text: "Только выбор шрифта и размера букв" }, { id: C, text: "Только выравнивание текста по ширине" }, { id: D, text: "Вставка картинок в документ" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Вёрстка отличается от простого форматирования тем, что важна страница целиком: поля, колонки, баланс белого пространства, поведение иллюстраций." }
+
+- id: inf-10-media-039
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Ширина полосы набора"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "У листа формата А4 ширина 21 см. И левое, и правое поле сделали по 2 см. Какой ширины получится полоса набора? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [17], answer_text: "17", explanation: "Поля слева и справа вместе занимают 2 + 2 = 4 см, значит полоса набора 21 − 4 = 17 см. Верхнее и нижнее поля на ширину полосы не влияют: они задают только высоту." }
+
+- id: inf-10-media-040
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Вёрстка брошюры"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Брошюра вёрстана в 2 колонки, на каждой странице помещается 3000 знаков в колонке, а страниц всего 800. Сколько знаков в брошюре? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4800000], answer_text: "4800000", explanation: "На странице 2 · 3000 = 6000 знаков, за 800 страниц получится 6000 · 800 = 4800000 знаков. Колонки помогают сэкономить место в словарях и газетах, но текст в них читают по очереди." }
+
+- id: inf-10-media-041
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Подпись и обтекание"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Зачем иллюстрации в документе нужны подпись и обтекание текстом?"
+  student_view: { options: [{ id: A, text: "Подпись объясняет, что изображено, а обтекание позволяет картинке занять часть полосы, не накрывая текст" }, { id: B, text: "Подпись и обтекание нужны только для печати на принтере" }, { id: D, text: "Обтекание увеличивает размер изображения при вёрстке" }, { id: C, text: "Подпись заменяет ссылку на источник изображения в списке литературы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Без подписи непонятно, что на рисунке. Без обтекания текст окажется под картинкой или поверх неё. Оба приёма входят в правила оформления иллюстраций." }
+
+- id: inf-10-media-042
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Элементы оформления"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Установите соответствие: элемент документа — как его правильно оформляют."
+  student_view: { left: ["Простая формула в строке", "Дробь или интеграл", "Заголовок раздела", "Подпись к рисунку"], right: ["набирается с клавиатуры надстрочными индексами", "только объектом редактора формул", "оформляется стилем «Заголовок», чтобы попасть в оглавление", "оформляется отдельным стилем подписи"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Простая формула в строке": "набирается с клавиатуры надстрочными индексами", "Дробь или интеграл": "только объектом редактора формул", "Заголовок раздела": "оформляется стилем «Заголовок», чтобы попасть в оглавление", "Подпись к рисунку": "оформляется отдельным стилем подписи" }, explanation: "Правильное оформление — через набор стилей, а не прямой разметкой: тогда документ переоформляется одним действием. Простые формулы набирают с клавиатуры, сложные — только редактором формул." }
+
+- id: inf-10-media-043
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Колонки и баланс"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Документ вёрстят в 4 колонки, в каждой помещается по 6 строк. Какой объём текста это позволяет разместить на одной странице?"
+  student_view: { options: [{ id: A, text: "24 строк, но читать такой текст неудобно: колонки уместнее в словарях и газетах, а учебный текст лучше вести в одну полосу" }, { id: D, text: "4 строк: столько, сколько колонок на странице" }, { id: B, text: "6 строк: остальные колонки переносятся на следующую страницу" }, { id: C, text: "24 строк, и учебный текст в таком виде читается легче, чем в одну полосу" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "4 · 6 = 24 строк. Колонки действительно экономят место, но переключение взгляда между колонками утомляет, поэтому учебный текст верстают в одну полосу, а колонки оставляют для справочных изданий." }
+
+- id: inf-10-media-044
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Ссылки в документе"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "В документе 3 страниц, 6 иллюстраций и 4 перекрёстных ссылок на них. Сколько ссылок на иллюстрации всего размещено в документе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "6 иллюстраций плюс 4 перекрёстных ссылки — всего 10 ссылок на иллюстрации. Закладки и перекрёстные ссылки нужны для навигации: при вставке нового рисунка нумерация обновится сама." }
+
+- id: inf-10-media-045
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Растр и вектор"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Чем растровое изображение отличается от векторного?"
+  student_view: { options: [{ id: A, text: "Растр хранит изображение как сетку пикселей, а вектор — как формулы фигур и кривых" }, { id: C, text: "Различия нет: это два названия одного и того же формата" }, { id: D, text: "Растр масштабируется без потерь, а вектор — нет" }, { id: B, text: "Растр хранит формулы фигур, а вектор — как сетку пикселей" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Растр даёт точную цветопередачу фотографии, но при увеличении появляются «ступеньки». Вектор масштабируется без потерь, но фотографию в векторе не рисуют." }
+
+- id: inf-10-media-046
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Форматы графики"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Установите соответствие: формат файла — какие у него свойства."
+  student_view: { left: ["BMP", "PNG", "JPEG", "GIF", "SVG"], right: ["без сжатия, прозрачности нет", "сжимает без потерь и поддерживает прозрачность", "сжимает с потерями, поэтому фотографии показывают блоками при увеличении", "256 цветов с прозрачностью и анимация", "векторный, масштабируется без потерь и открывается браузером"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "BMP": "без сжатия, прозрачности нет", "PNG": "сжимает без потерь и поддерживает прозрачность", "JPEG": "сжимает с потерями, поэтому фотографии показывают блоками при увеличении", "GIF": "256 цветов с прозрачностью и анимация", "SVG": "векторный, масштабируется без потерь и открывается браузером" }, explanation: "Формат выбирают по задаче: PNG и BMP хранят качество, JPEG экономит место ценой точности, GIF рассчитан на анимацию из 256 цветов, SVG остаётся чётким при любом увеличении." }
+
+- id: inf-10-media-047
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Палитра против TrueColor"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Изображение 640 × 480 пикселей сохранили сначала с палитрой из 256 цветов (8 бит на пиксель), затем в режиме TrueColor (24 бита на пиксель). Во сколько раз второй файл больше первого? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Палитра: 640 · 480 = 307200 пикселей по 1 байту — 307200 байт. TrueColor: те же пиксели по 3 байта — 921600 байт. Разница в три раза: индекс палитры занимает 1 байт вместо трёх, зато часть оттенков теряется." }
+
+- id: inf-10-media-048
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Выбор формата по задаче"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Логотип компании рисуют в векторном редакторе и вставляют в документ, который будут печатать в большом размере. В каком формате сохранить исходник?"
+  student_view: { options: [{ id: D, text: "В BMP: без сжатия качество всегда выше" }, { id: A, text: "В SVG: логотип хранится формулами, поэтому при печати любого размера линии останутся чёткими" }, { id: C, text: "В GIF: у GIF есть прозрачность, которой нет у других форматов" }, { id: B, text: "В JPEG: этот формат экономит место, а качество на логотипе не заметно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Логотип состоит из прямых линий и кривых, поэтому хранить его как набор пикселей не нужно. Растр для печати большого размера даст «ступеньки», а SVG пересчитается точно в любом масштабе." }
+
+- id: inf-10-media-049
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Кривая Безье"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Чем кривая Безье отличается от свободной линии?"
+  student_view: { options: [{ id: C, text: "Различия нет: это два названия одного инструмента" }, { id: B, text: "Кривая Безье рисуется от руки, а свободная линия задаётся узлами" }, { id: A, text: "Кривая Безье задаётся узлами и маркерами управления, поэтому её форму можно точно исправить" }, { id: D, text: "Свободная линия не может быть отредактирована, а кривая Безье может" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Узлы держат кривую, а маркеры управления тянут её в нужную сторону. Чтобы дуга получилась ровной, узлы ставят по краям, а маркеры тянут перпендикулярно линии." }
+
+- id: inf-10-media-050
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Узлы и группы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "В схеме 6 кривых, у каждой по 2 узла. Сколько всего узлов в схеме? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12], answer_text: "12", explanation: "6 · 2 = 12 узлов. Каждый узел вместе с маркерами управления задаёт форму одной кривой, поэтому при добавлении деталей число узлов считают умножением." }
+
+- id: inf-10-media-051
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Приёмы работы со схемой"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Установите соответствие: приём работы в векторном редакторе — зачем он нужен."
+  student_view: { left: ["Группировка", "Обводка", "Экспорт в SVG", "Выравнивание по сетке"], right: ["объединяет фигуры в один объект, который двигается и масштабируется целиком", "задаёт линию по контуру: цвет, толщину, пунктир", "сохраняет рисунок в векторном формате, масштабируемом без потерь", "расставляет элементы схемы так, чтобы они не перекрывались"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Группировка": "объединяет фигуры в один объект, который двигается и масштабируется целиком", "Обводка": "задаёт линию по контуру: цвет, толщину, пунктир", "Экспорт в SVG": "сохраняет рисунок в векторном формате, масштабируемом без потерь", "Выравнивание по сетке": "расставляет элементы схемы так, чтобы они не перекрывались" }, explanation: "Без группировки детали схемы разъезжаются при перемещении, а растягивать группу по одной оси нельзя — фигуры искажатся. Готовую схему сохраняют в SVG, чтобы она не «поплыла» при увеличении." }
+
+- id: inf-10-media-052
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Масштабирование без потерь"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Векторный рисунок увеличили в 10 раз. Что произойдёт с его качеством и почему?"
+  student_view: { options: [{ id: B, text: "Качество ухудшится: при увеличении пиксели всё равно растягиваются" }, { id: A, text: "Качество не изменится: рисунок хранит формулы фигур, а не пиксели, поэтому масштаб вычисляется заново" }, { id: D, text: "Рисунок придётся перерисовать, потому что вектор не масштабируется" }, { id: C, text: "Качество не изменится, но файл станет в 100 раз больше" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Это главное свойство векторной графики и причина выбирать её для схем, логотипов и чертежей. Увеличивая в 10 раз, мы меняем координаты, а не количество пикселей, поэтому линии остаются тонкими и чёткими." }
+
+- id: inf-10-media-053
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Элементы 3D-модели"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Установите соответствие: элемент трёхмерной модели — что он собой представляет."
+  student_view: { left: ["Вершины", "Рёбра", "Грани", "Объекты и группы"], right: ["точки в пространстве", "отрезки, соединяющие вершины", "плоские поверхности между рёбрами", "части модели, которые двигаются вместе"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Вершины": "точки в пространстве", "Рёбра": "отрезки, соединяющие вершины", "Грани": "плоские поверхности между рёбрами", "Объекты и группы": "части модели, которые двигаются вместе" }, explanation: "Модель собирается из точек, отрезков и поверхностей, а движущиеся вместе части объединяют в объекты и группы. Принципы те же, что и в векторной графике." }
+
+- id: inf-10-media-054
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "VR и AR"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Приложение с камерой накладывает на комнату изображение будущего ремонта. Это виртуальная или дополненная реальность?"
+  student_view: { options: [{ id: A, text: "Дополненная: цифровые объекты накладываются на реальный мир, который остаётся видимым" }, { id: D, text: "Обе реальности сразу: и виртуальная, и дополненная" }, { id: B, text: "Виртуальная: человек полностью погружается в искусственную среду" }, { id: C, text: "Это обычная видеоигра без погружения" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "VR заменяет реальность искусственной средой, а AR дополняет её. Приложение с камерой не убирает комнату из обзора, поэтому это дополненная реальность." }
+
+- id: inf-10-media-055
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Слои 3D-печати"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "3D-принтер печатает деталь послойно. Высота детали 60 мм, а всего в модели 30 слоёв. Какова толщина одного слоя? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "60 : 30 = 2 мм на слой. 3D-печать идёт послойно: сначала модель делится на слои, каждый печатается отдельно, а затем слои склеиваются или сплавляются." }
+
+- id: inf-10-media-056
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Boolean-операции"
+  type: matching
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Установите соответствие: Boolean-операция — что она делает с деталями."
+  student_view: { left: ["Объединение", "Вычитание", "Пересечение"], right: ["сваривает две детали в одно целое", "вырезает отверстие или полость", "оставляет только ту часть, которая общая у двух объёмов"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Объединение": "сваривает две детали в одно целое", "Вычитание": "вырезает отверстие или полость", "Пересечение": "оставляет только ту часть, которая общая у двух объёмов" }, explanation: "Именно Boolean-операции позволяют из простых деталей собрать сложный объект: вычитанием вырезают окно, объединением сваривают стены. Из мировоззрения «деталь должна быть простой» это следует напрямую." }
+
+- id: inf-10-media-057
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Объём детали"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Деталь имеет размеры 80 × 60 × 40 см. Каков её объём? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [192000], answer_text: "192000", explanation: "80 · 60 · 40 = 192000 кубических сантиметров. Объём считается по размерам модели — именно это отличает САПР от простого графического редактора: он считает по чертежу, а не только рисует." }
+
+- id: inf-10-media-058
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "3D-принтер и масштаб"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Почему перед 3D-печатью важно проверить масштаб модели и параметры печати?"
+  student_view: { options: [{ id: C, text: "Потому что масштаб модели определяет цвет детали" }, { id: A, text: "Потому что файл модели хранит форму, но не размер: без правильного масштаба деталь напечатается не того размера, который нужен" }, { id: D, text: "Потому что при неправильном масштабе печать всегда идёт в обратную сторону" }, { id: B, text: "Потому что принтер не умеет менять масштаб после начала печати" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Модель описывает пропорции и соотношения деталей, а физический размер задаёт уже принтер. Поэтому масштаб и параметры печати проверяют заранее — иначе получится правильная по форме, но не такая по размеру деталь." }
+
+- id: inf-10-media-059
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Применение 3D-печати"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Где 3D-печать применяется НЕ по назначению, а как быстрое изготовление детали по цифровой модели?"
+  student_view: { options: [{ id: D, text: "При отправке электронной почты" }, { id: A, text: "При ремонте: деталь печатают по модели, когда нужной запчасти уже нет в продаже" }, { id: B, text: "При изучении школьного курса информатики" }, { id: C, text: "При проверке текста на опечатки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Типичные области применения: прототипы для инженерии, протезы, импланты и модели органов, ремонт деталей, которых уже нет в продаже, архитектурные макеты зданий. Главное преимущество 3D-печати — не нужен цех с оборудованием, нужна только модель и принтер, поэтому ремонт редкой детали перестаёт быть проблемой." }
+
+- id: inf-10-media-060
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Виды мультимедийной информации"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид мультимедийной информации — чем он создаётся и как с ним работают."
+  student_view: { left: ["Текст", "Графика", "Звук", "Видео"], right: ["создаётся с клавиатуры или распознаванием речи, легко правится", "создаётся редакторами, сканером или камерой; бывает растровой и векторной", "создаётся микрофоном или синтезатором, записывается и монтируется", "создаётся видеокамерой, затем сжимается для экономии места"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Текст": "создаётся с клавиатуры или распознаванием речи, легко правится", "Графика": "создаётся редакторами, сканером или камерой; бывает растровой и векторной", "Звук": "создаётся микрофоном или синтезатором, записывается и монтируется", "Видео": "создаётся видеокамерой, затем сжимается для экономии места" }, explanation: "Мультимедиа — это совместное использование текста, графики, звука, видео и анимации. Мультимедийный продукт воспринимается целостнее, чем текст отдельно: картинка показывает то, что слова описывают долго." }
+
+- id: inf-10-media-061
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Мультимедийное наполнение"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Как правильно вставить звук в презентацию?"
+  student_view: { options: [{ id: A, text: "Тихо и только на 1–2 слайдах: звук должен быть со смыслом, а не фоном под весь доклад" }, { id: D, text: "Не вставлять звук вовсе: он всегда отвлекает" }, { id: C, text: "Фоновой музыкой на весь показ, чтобы зрители не скучали" }, { id: B, text: "На максимальной громкости на всех слайдах, чтобы доклад не потерялся" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Фоновая музыка мешает докладчику и зрителям, а громкий звук перебивает голос. Короткий звуковой комментарий к ключевому слайду уместен, а звук на всех слайдах — нет." }
+
+- id: inf-10-media-062
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Онлайн-сервисы для презентаций"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Какие минусы у онлайн-сервиса для подготовки презентации?"
+  student_view: { options: [{ id: C, text: "Нельзя экспортировать результат в другие форматы" }, { id: B, text: "Нельзя работать совместно с одноклассниками" }, { id: A, text: "Нужен интернет, часть функций может быть недоступна, а работа зависит от чужого сервиса" }, { id: D, text: "Презентация обязательно получится строго по шаблону" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Плюсы очевидны: работа в браузере без установки, совместное редактирование, шаблоны. Минусы — интернет и зависимость от сервиса, поэтому готовый файл сохраняют локально." }
+
+- id: inf-10-media-063
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Правило шести строк"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "В структуре проектной презентации 7 слайдов: титульный слайд, план, проблема, данные, методы, результаты, заключение. На каждом из них допустимо не больше шести строк текста. Какое наибольшее число строк допустимо во всей презентации? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [42], answer_text: "42", explanation: "7 · 6 = 42 строк. Из них 5 слайдов содержательные, остальные — титульный, план и заключение. Слайд — опора для рассказа, а не документ: всё, что не помещается, уходит в устную речь." }
+
+- id: inf-10-media-064
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Проверка показа"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Почему показ презентации проверяют на том же компьютере, с которого планируют выступать?"
+  student_view: { options: [{ id: B, text: "Чтобы презентация выглядела одинаково на всех экранах" }, { id: D, text: "Чтобы другой компьютер не смог открыть файл" }, { id: A, text: "Чтобы заранее убедиться, что шрифты, видеокодеки и звук поддерживаются и файл открывается без интернета" }, { id: C, text: "Чтобы проверить, что презентация не переписывается сама" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Файл сохранён локально, но чужой компьютер может не иметь нужного кодека или шрифта. Проверка показа заранее избавляет от сюрпризов во время выступления." }
+
+- id: inf-10-media-065
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Кадры и размер кадра"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Ролик длится 45 секунд при 30 кадрах в секунду, а каждый кадр — изображение 640 × 360 пикселей с глубиной цвета 24 бита. Сколько байт займёт один кадр? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [691200], answer_text: "691200", explanation: "Пикселей 640 · 360 = 230400. Объём кадра V = K · i = 230400 · 24 = 5529600 бит, в байтах 5529600 : 8 = 691200. Всего в ролике 1350 кадров, поэтому видео обязательно сжимают." }
+
+- id: inf-10-media-066
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Сжатие видео"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Видео — это кадры и звук. Почему видео обязательно сжимают перед тем, как вставлять в презентацию?"
+  student_view: { options: [{ id: A, text: "Без сжатия кадры следуют подряд, и даже короткий ролик весит десятки мегабайт, а минута фильма — десятки гигабайт" }, { id: C, text: "Потому что сжатие убирает звук и оставляет только изображение" }, { id: D, text: "Потому что сжатие делает видео чётче" }, { id: B, text: "Потому что без сжатия видео невозможно проиграть" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Кадр 1280 × 720 при глубине 16 бит занимает 1843200 байт, а при 30 кадрах в секунду получается 55296000 байт в секунду. Сжатие с потерями уменьшает размер в десятки раз — поэтому ролик для презентации берут коротким, 30–60 секунд." }
+
+- id: inf-10-media-067
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Читаемость с расстояния"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Почему текст на слайде нельзя делать мелким «чтобы влезло побольше»?"
+  student_view: { options: [{ id: C, text: "Потому что мелкий текст нельзя выделить цветом" }, { id: D, text: "Потому что при мелком шрифте презентация не сохраняется" }, { id: A, text: "Потому что слайд читают с расстояния 2–3 метра: мелкий текст зритель просто не разглядит, а всё лишнее должно уйти в устный рассказ" }, { id: B, text: "Потому что мелкий шрифт в презентации технически не поддерживается" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Слайд — опора для рассказа, а не документ. Если текст не виден с расстояния, зритель перестаёт следить за слайдом и слушает только докладчика — а весь смысл показа в том, чтобы смотреть на данные вместе с ним." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-medialogic-bank3.mjs ====
+# Ответы посчитаны кодом (арифметика по размерам файлов, L() — разбор логических
+# выражений, truthOnes() и solveEq() — перебор всех наборов значений переменных,
+# equivalent() — равносильность подстановкой, питон — прогон эталона code_run) и
+# проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-media-068 … inf-10-media-081 (14 заданий).
+- id: inf-10-media-068
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Печать и разрешение"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "Фотографию 2400 × 1800 пикселей печатают с разрешением 300 точек на дюйм. Сколько дюймов она займёт по ширине? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Ширина в дюймах равна числу пикселей, делённому на разрешение: 2400 / 300 = 8. Разрешение показывает, сколько пикселей приходится на один дюйм. Чем оно выше, тем меньше физический размер при том же числе пикселей, и наоборот: для печати крупного плана разрешение поднимают, добавляя пиксели." }
+
+- id: inf-10-media-069
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Пипетка и цвет"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-03-editor
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-editor], meta: [plan-actions] }
+  prompt: "В растровом редакторе цвет для заливки взяли пипеткой прямо с фотографии. Почему так надёжнее, чем подбирать цвет вручную в палитре?"
+  student_view: { options: [{ id: B, text: "Пипетка запоминает цвет и сразу применяет его ко всем слоям изображения" }, { id: C, text: "Пипетка выравнивает яркость и контраст всего изображения" }, { id: A, text: "Оттенок совпадает с образцом, поэтому заливка выглядит частью той же фотографии" }, { id: D, text: "Пипетка уменьшает размер файла, потому что цвета становятся однообразными" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Пипетка считывает значения каналов прямо с пикселя, поэтому попадает в тот самый оттенок, который уже есть в изображении. Подбор вручную почти всегда даёт близкий, но не совпадающий цвет, и закрашенная область заметно выделяется на снимке.", common_errors: ["Пипетка нужна только для выбора чёрного или белого цвета"] }
+
+- id: inf-10-media-070
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Примитивы вектора"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Установите соответствие: примитив векторного редактора — какой фигурой он является."
+  student_view: { left: ["Прямоугольник", "Эллипс", "Многоугольник", "Звёздочка"], right: ["четыре прямые стороны под прямыми углами", "замкнутая кривая, у которой расстояние от центра до любой точки одинаково", "замкнутая ломаная из трёх и более отрезков", "фигура из чередующихся входящих и исходящих лучей"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Прямоугольник": "четыре прямые стороны под прямыми углами", "Эллипс": "замкнутая кривая, у которой расстояние от центра до любой точки одинаково", "Многоугольник": "замкнутая ломаная из трёх и более отрезков", "Звёздочка": "фигура из чередующихся входящих и исходящих лучей" }, explanation: "В векторном редакторе сложную схему собирают из готовых примитивов: прямоугольник и эллипс задаются положением сторон или радиусами, многоугольник — списком вершин, а звёздочка расставляется по чередующимся лучам. Плюс всех примитивов в том, что их можно объединять, группировать и менять размер без потери формы." }
+
+- id: inf-10-media-071
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Масштаб и площадь"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-04-vector
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-vector], meta: [plan-actions] }
+  prompt: "Векторный рисунок уменьшили в 3 раза по каждой стороне. Во сколько раз уменьшилась площадь его фигур? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "По стороне размер изменился в 3 раза, а площадь растёт как квадрат размера: 3 · 3 = 9. Именно поэтому в векторе можно менять размер сколько угодно и качество не падает: координаты пересчитываются по формуле, а картинка не перерисовывается попиксельно." }
+
+- id: inf-10-media-072
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Приёмы моделирования"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Установите соответствие: приём работы в 3D-редакторе — что он делает."
+  student_view: { left: ["Примитив", "Вытягивание", "Тело вращения", "Рендер"], right: ["простое тело — куб, цилиндр, сфера, из которого собирают остальные детали", "профиль, протянутый вдоль прямой, даёт объёмное тело", "профиль, повёрнутый вокруг оси, даёт симметричное тело вращения", "расчёт изображения сцены с учётом материала, освещения и теней"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Примитив": "простое тело — куб, цилиндр, сфера, из которого собирают остальные детали", "Вытягивание": "профиль, протянутый вдоль прямой, даёт объёмное тело", "Тело вращения": "профиль, повёрнутый вокруг оси, даёт симметричное тело вращения", "Рендер": "расчёт изображения сцены с учётом материала, освещения и теней" }, explanation: "Модель почти никогда не лепят с нуля: сначала берут примитив, потом получают форму вытягиванием профиля вдоль прямой или вращением его вокруг оси. Готовая сцена становится картинкой только после рендера — расчёта, который учитывает материал и свет." }
+
+- id: inf-10-media-073
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Вершины и грани модели"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10gfx-05-3d
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-gfx-3d], meta: [plan-actions] }
+  prompt: "Поверхность детали в 3D-редакторе разбита на 250 треугольников, у каждого по 3 вершины, но каждая вершина принадлежит сразу 2 треугольникам. Сколько уникальных вершин у модели? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [375], answer_text: "375", explanation: "Если сложить вершины всех граней, получится 250 · 3 = 750, но каждая вершина посчитана 2 раза — по разу для каждого из двух треугольников, которые её используют. Поэтому делим на 2: 750 / 2 = 375. Именно так счётчики вершин и работают в 3D-редакторе при импорте моделей из игр." }
+
+- id: inf-10-media-074
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Понятия блока"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "Установите соответствие: понятие блока «графика и мультимедиа» — какой признак за ним стоит."
+  student_view: { left: ["Растровое изображение", "Векторное изображение", "Трёхмерная модель", "Мультимедийный объект"], right: ["хранит цвет каждого пикселя, поэтому при увеличении появляются блоки", "хранит форму фигур, поэтому масштабируется без потерь качества", "состоит из вершин, рёбер и граней и показывается с любого ракурса", "объединяет несколько видов информации: текст, графику, звук и видео"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Растровое изображение": "хранит цвет каждого пикселя, поэтому при увеличении появляются блоки", "Векторное изображение": "хранит форму фигур, поэтому масштабируется без потерь качества", "Трёхмерная модель": "состоит из вершин, рёбер и граней и показывается с любого ракурса", "Мультимедийный объект": "объединяет несколько видов информации: текст, графику, звук и видео" }, explanation: "Четыре понятия различаются именно тем, что хранится в файле. Растр хранит пиксели, вектор — форму, 3D-модель — вершины и грани, а мультимедийный объект — несколько видов информации сразу. Путать их опасно: от того, что именно хранится, зависит, можно ли увеличить рисунок и переживёт ли файл перенос на другой компьютер." }
+
+- id: inf-10-media-075
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Порядок работы над документом"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-02-review
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-review], meta: [plan-actions] }
+  prompt: "В каком порядке готовят документ со стилями, оглавлением и списком иллюстраций?"
+  student_view: { options: [{ id: C, text: "набрать текст → сохранить документ → вставить иллюстрации → оформить заголовки стилями" }, { id: A, text: "набрать текст и расставить заголовки стилями → вставить иллюстрации, добавить подписи и ссылки → проверить оглавление и номера страниц → сохранить готовый документ и его копию в PDF" }, { id: B, text: "вставить все иллюстрации → набрать текст → проставить номера страниц вручную → сохранить документ" }, { id: D, text: "оформить заголовки стилями → вставить иллюстрации → набрать текст → сохранить документ" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Сначала создают структуру — текст и заголовки стилями, и только потом наполняют её иллюстрациями и подписями. Дальше проверяют то, что зависит от структуры: оглавление, перекрёстные ссылки и номера страниц. Иначе ссылки разъезжаются, а в оглавлении появляются пустые и неверные строки." }
+
+- id: inf-10-media-076
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Объём таблицы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "В документе таблица из 4 строк и 3 столбцов. В каждой ячейке в среднем 8 символов. Сколько символов помещается во всей таблице? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [96], answer_text: "96", explanation: "Сначала число ячеек: 4 · 3 = 12. Потом символы по всем ячейкам: 12 · 8 = 96. В LibreOffice Writer то же даёт подсчёт слов и знаков при выделенном диапазоне таблицы." }
+
+- id: inf-10-media-077
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Стиль списка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-03-typeset
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-typeset], meta: [plan-actions] }
+  prompt: "Почему нумерованный список в документе оформляют стилем списка, а не проставляют номера вручную?"
+  student_view: { options: [{ id: C, text: "Стиль списка не позволяет менять отступы, поэтому список приходится набирать вручную" }, { id: A, text: "Нумерация пересчитается сама при вставке пункта, а при наборе вручную придётся исправлять весь список" }, { id: B, text: "Ручные номера видно сразу, а автоматические номера не видны в тексте" }, { id: D, text: "Стиль списка нельзя применить к уже набранному тексту, поэтому его пишут от руки" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Стиль списка хранит не сами номера, а правило их построения. Если в середину списка вставить пункт, номера пересчитаются сами; если номера набраны вручную, придётся править их до конца списка. Тот же приём работает для заголовков: стиль «Заголовок» сам попадает в оглавление.", common_errors: ["Ручные номера не видны, а стиль списка их подставляет"] }
+
+- id: inf-10-media-078
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Размер звукового файла"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Звук записан с частотой дискретизации 8000 Гц, глубиной звука 16 бит, в двух каналах (стерео), длительностью 5 секунд. Сколько байт займёт файл без сжатия? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [160000], answer_text: "160000", explanation: "Размер равен произведению частоты, глубины, числа каналов и времени: 8000 · 16 · 2 · 5 = 1280000 бит. Один байт — это 8 бит, поэтому делим на 8 и получаем 160000 байт. В презентацию такой файл вставляют как объект, а не как ссылку, иначе он не заработает без исходника." }
+
+- id: inf-10-media-079
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Совместимость видео"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-04-multimedia
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-mm], meta: [plan-actions] }
+  prompt: "Ролик вставлен в презентацию в том формате, который школьный компьютер не воспроизводит. Что нужно сделать до защиты?"
+  student_view: { options: [{ id: D, text: "Ничего не делать: любой видеофайл воспроизводится на любом компьютере" }, { id: B, text: "Переименовать файл видео, чтобы расширение совпадало с расширением презентации" }, { id: A, text: "Перекодировать ролик в универсальный формат и встроить его в файл презентации" }, { id: C, text: "Отправить ролик отдельным письмом и оставить в презентации только ссылку на него" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Формат контейнера и кодек внутри него знают не все проигрыватели, поэтому запись может не открыться на чужом компьютере. Надёжный способ — сжать и перекодировать ролик в распространённый формат, встроить его в файл презентации и проверить показ на том же компьютере, с которого планируют выступать.", common_errors: ["Достаточно переименовать файл видео в то же расширение, что у презентации"] }
+
+- id: inf-10-media-080
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Кадры и объём ролика"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Ролик длится 30 секунд при 25 кадрах в секунду, каждый кадр — изображение 320 × 240 пикселей с глубиной цвета 24 бита. Напишите программу, которая посчитает общее число кадров и объём ролика без сжатия в байтах. Выведите два числа через пробел: сначала число кадров, затем объём в байтах."
+  student_view: { language: python, template: "# Посчитай кадры и объём ролика без сжатия\nsec = 30\nfps = 25\nw = 320\nh = 240\nbits = 24\n\n# кадр — это w * h пикселей, на каждый пиксель приходится bits // 8 байт\nframe_bytes = ...\n# число кадров — это sec умножить на fps\nframes = ...\n\n# выведи сначала число кадров, затем объём всего ролика\nprint(frames, frames * frame_bytes)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "sec = 30\nfps = 25\nw = 320\nh = 240\nbits = 24\n\nframe_bytes = w * h * (bits // 8)\nframes = sec * fps\n\nprint(frames, frames * frame_bytes)", expected_stdout: "750 172800000", explanation: "Число кадров равно времени, умноженному на частоту кадров: 30 · 25 = 750. Объём одного кадра — это 320 · 240 = 76800 пикселей по 3 байта (RGB), то есть 230400 байт. Весь ролик без сжатия занял бы 750 · 230400 = 172800000 байт — это примерно 164,8 Мбайт, поэтому видео обязательно сжимают перед тем, как вставлять в презентацию." }
+
+- id: inf-10-media-081
+  class: 10
+  topic: "Документы и мультимедиа"
+  subtopic: "Переходы и анимация"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10media-05-presentation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-10-media-pres], meta: [plan-actions] }
+  prompt: "Чем переход между слайдами отличается от анимации объекта на слайде?"
+  student_view: { options: [{ id: C, text: "Анимация нужна для смены слайдов, а переход — для появления текста на одном слайде" }, { id: A, text: "Переход задаёт, как один слайд сменяет другой, а анимация — как появляется или исчезает объект внутри слайда" }, { id: D, text: "Переходы применяют только к текстовым слайдам, анимацию — только к рисункам" }, { id: B, text: "Переход и анимация делают одно и то же, поэтому в презентации достаточно только переходов" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Переход отвечает за момент смены слайдов: жёлтый, «влево», «шахматная доска» и так далее. Анимация отвечает за поведение содержимого внутри слайда — как выезжает заголовок или исчезает старая картинка. И то и другое должно быть сдержанным: показ без лишних эффектов читается лучше." }

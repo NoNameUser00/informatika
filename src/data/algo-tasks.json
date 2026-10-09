@@ -1,137 +1,10 @@
 {
   "test_code": "algo-pilot-v1",
   "variant": "trainer-v1",
-  "max_score": 33,
+  "max_score": 128,
   "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
   "page_size": 5,
   "tasks": [
-    {
-      "id": "inf-8-algo-011",
-      "lesson": "alg-07-while",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число.",
-      "base": 10,
-      "expected": 3,
-      "key": "3"
-    },
-    {
-      "id": "inf-8-algo-012",
-      "lesson": "alg-07-while",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
-      "options": [
-        {
-          "id": "A",
-          "text": "До выполнения тела"
-        },
-        {
-          "id": "B",
-          "text": "После выполнения тела"
-        },
-        {
-          "id": "C",
-          "text": "В середине тела"
-        },
-        {
-          "id": "D",
-          "text": "Не проверяется"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-8-algo-015",
-      "lesson": "py-04-strings",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?",
-      "options": [
-        {
-          "id": "A",
-          "text": "6"
-        },
-        {
-          "id": "B",
-          "text": "10"
-        },
-        {
-          "id": "C",
-          "text": "5"
-        },
-        {
-          "id": "D",
-          "text": "8"
-        }
-      ],
-      "correct": "B",
-      "key": "B"
-    },
-    {
-      "id": "inf-8-algo-016",
-      "lesson": "py-04-strings",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Алгоритм: s := 0; для i от 1 до 4: s := s + i. Чему равен s в конце? Запишите только число.",
-      "base": 10,
-      "expected": 10,
-      "key": "10"
-    },
-    {
-      "id": "inf-8-algo-017",
-      "lesson": "py-04-strings",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?",
-      "options": [
-        {
-          "id": "A",
-          "text": "20"
-        },
-        {
-          "id": "B",
-          "text": "5"
-        },
-        {
-          "id": "C",
-          "text": "9"
-        },
-        {
-          "id": "D",
-          "text": "4"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-8-algo-018",
-      "lesson": "py-04-strings",
-      "type": "matching",
-      "points": 2,
-      "prompt": "Установите соответствие для s = 'Python'.",
-      "left": [
-        "len(s)",
-        "s[0]",
-        "s[1:4]",
-        "'on' in s"
-      ],
-      "right": [
-        "'P'",
-        "'yth'",
-        "6",
-        "True"
-      ],
-      "answerMap": {
-        "len(s)": "6",
-        "s[0]": "'P'",
-        "s[1:4]": "'yth'",
-        "'on' in s": "True"
-      },
-      "key": "len(s)=6, s[0]='P', s[1:4]='yth', 'on' in s=True"
-    },
     {
       "id": "inf-8-algo-001",
       "lesson": "alg-01-performers",
@@ -139,6 +12,10 @@
       "points": 1,
       "prompt": "Сколько свойств алгоритма выделяют в школьном курсе?",
       "options": [
+        {
+          "id": "C",
+          "text": "5"
+        },
         {
           "id": "A",
           "text": "3"
@@ -148,16 +25,12 @@
           "text": "4"
         },
         {
-          "id": "C",
-          "text": "5"
-        },
-        {
           "id": "D",
           "text": "6"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-002",
@@ -167,24 +40,24 @@
       "prompt": "Что такое формальный исполнитель?",
       "options": [
         {
-          "id": "A",
-          "text": "Выполняет команды всегда одинаково, не вникая в смысл"
+          "id": "C",
+          "text": "Выполняет только одну команду"
         },
         {
           "id": "B",
           "text": "Понимает смысл задачи и рассуждает"
         },
         {
-          "id": "C",
-          "text": "Выполняет только одну команду"
+          "id": "A",
+          "text": "Выполняет команды всегда одинаково, не вникая в смысл"
         },
         {
           "id": "D",
           "text": "Работает без системы команд"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-algo-003",
@@ -255,12 +128,12 @@
           "text": "Угол из двух отрезков"
         },
         {
-          "id": "B",
-          "text": "Квадрат"
-        },
-        {
           "id": "C",
           "text": "Треугольник"
+        },
+        {
+          "id": "B",
+          "text": "Квадрат"
         },
         {
           "id": "D",
@@ -271,10 +144,20 @@
       "key": "A"
     },
     {
+      "id": "inf-8-algo-021",
+      "lesson": "alg-01-performers",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 212212 над числом 3. Что получится? Запишите только число.",
+      "base": 10,
+      "expected": 213,
+      "key": "213"
+    },
+    {
       "id": "inf-8-algo-006",
       "lesson": "alg-02-notation",
       "type": "matching",
-      "points": 2,
+      "points": 1,
       "prompt": "Установите соответствие: фигура блок-схемы — её назначение.",
       "left": [
         "Овал",
@@ -308,16 +191,16 @@
           "text": "Положить в x старое x плюс 1"
         },
         {
+          "id": "D",
+          "text": "Цикл по x"
+        },
+        {
           "id": "B",
           "text": "Утверждение, что x равен x + 1"
         },
         {
           "id": "C",
           "text": "Сравнение x с x + 1"
-        },
-        {
-          "id": "D",
-          "text": "Цикл по x"
         }
       ],
       "correct": "A",
@@ -371,6 +254,240 @@
       "key": "A"
     },
     {
+      "id": "inf-8-algo-022",
+      "lesson": "alg-02-notation",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Было x = 4, y = 9. Выполнили по порядку: x := x + y; y := x − y; x := y · 2. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 8,
+      "key": "8"
+    },
+    {
+      "id": "inf-8-algo-023",
+      "lesson": "py-01-basics",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какая часть системы программирования переводит текст программы в машинный код, понятный процессору?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Трансплятор"
+        },
+        {
+          "id": "D",
+          "text": "Исполнитель алгоритма"
+        },
+        {
+          "id": "A",
+          "text": "Редактор"
+        },
+        {
+          "id": "B",
+          "text": "Отладчик"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-024",
+      "lesson": "py-05-data",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой тип данных у значения '12' в Python?",
+      "options": [
+        {
+          "id": "A",
+          "text": "int"
+        },
+        {
+          "id": "D",
+          "text": "bool"
+        },
+        {
+          "id": "B",
+          "text": "float"
+        },
+        {
+          "id": "C",
+          "text": "str"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-025",
+      "lesson": "py-05-data",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В программе a = int(' 12 ') + int('3'). Чему равно a? Запишите только число.",
+      "base": 10,
+      "expected": 15,
+      "key": "15"
+    },
+    {
+      "id": "inf-8-algo-026",
+      "lesson": "py-05-data",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: значение — его тип данных в Python.",
+      "left": [
+        "5",
+        "3.14",
+        "'Привет'",
+        "True"
+      ],
+      "right": [
+        "int",
+        "float",
+        "str",
+        "bool"
+      ],
+      "answerMap": {
+        "5": "int",
+        "3.14": "float",
+        "'Привет'": "str",
+        "True": "bool"
+      },
+      "key": "5=int, 3.14=float, 'Привет'=str, True=bool"
+    },
+    {
+      "id": "inf-8-algo-063",
+      "lesson": "py-05-data",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что произойдёт в Python при выполнении a = int('3,5')?",
+      "options": [
+        {
+          "id": "C",
+          "text": "a станет числом 35"
+        },
+        {
+          "id": "B",
+          "text": "a станет числом 3,5"
+        },
+        {
+          "id": "D",
+          "text": "a станет числом 0"
+        },
+        {
+          "id": "A",
+          "text": "Программа остановится с ошибкой: в int() передают точку, а не запятую"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-071",
+      "lesson": "py-05-data",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Дан список оценок marks = [4, 5, 5, 3, 5, 4, 5]. Посчитайте количество пятёрок и выведите f-строкой строку вида «Пятёрок: N из M», где N — количество пятёрок, а M — длина списка.",
+      "template": "marks = [4, 5, 5, 3, 5, 4, 5]\n# найди количество пятёрок в списке\nn = ...\nprint(f\"Пятёрок: {n} из {len(marks)}\")",
+      "expected": "Пятёрок: 4 из 7",
+      "key": "Пятёрок: 4 из 7"
+    },
+    {
+      "id": "inf-8-algo-027",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен остаток от деления 17 на 5 (операция %)? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-8-algo-028",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите выражение (2 + 3) * 2 ** 2. Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-8-algo-064",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Было x = 2, y = 5. Затем выполнили команду x = x + y. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-8-algo-072",
+      "lesson": "py-06-linear",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "В программе a = 3 и b = 7. Требуется поменять их значения местами, не заводя третьей переменной: сначала выполнить a = a + b, затем b = a - b, затем a = a - b. Выполните команды по порядку и выведите a и b через пробел.",
+      "template": "a = 3\nb = 7\n# поменяй a и b местами, не заводя третью переменную\na = ...\nb = ...\na = ...\nprint(a, b)",
+      "expected": "7 3",
+      "key": "7 3"
+    },
+    {
+      "id": "inf-8-algo-029",
+      "lesson": "alg-05-sequence",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем следование отличается от ветвления?",
+      "options": [
+        {
+          "id": "B",
+          "text": "В следовании есть условие, которое выбирает следующую команду"
+        },
+        {
+          "id": "C",
+          "text": "В следовании есть цикл, повторяющий команды"
+        },
+        {
+          "id": "D",
+          "text": "В следовании порядок команд можно менять без последствий"
+        },
+        {
+          "id": "A",
+          "text": "В следовании нет ни условия, ни цикла — команды идут строго по порядку"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-030",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Выполните по порядку команды: x := 4; x := x · 2; x := x − 3. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-031",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: y := (x + 4) · 2. Известно, что в результате получилось y = 30. Каким было x? Запишите только число.",
+      "base": 10,
+      "expected": 11,
+      "key": "11"
+    },
+    {
+      "id": "inf-8-algo-073",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Выполните по порядку команды: y := 10; y := y / 2; y := y + 7. Какое получилось значение? Запишите только число.",
+      "base": 10,
+      "expected": 12,
+      "key": "12"
+    },
+    {
       "id": "inf-8-algo-009",
       "lesson": "alg-03-branching",
       "type": "single_choice",
@@ -378,24 +495,24 @@
       "prompt": "В какой форме ветвления при ложном условии не выполняется ничего?",
       "options": [
         {
-          "id": "A",
-          "text": "В полной"
-        },
-        {
-          "id": "B",
-          "text": "В неполной"
-        },
-        {
           "id": "C",
           "text": "В обеих"
         },
         {
+          "id": "A",
+          "text": "В полной"
+        },
+        {
           "id": "D",
           "text": "Ни в какой"
+        },
+        {
+          "id": "B",
+          "text": "В неполной"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "D",
+      "key": "D"
     },
     {
       "id": "inf-8-algo-010",
@@ -409,12 +526,12 @@
           "text": "x = 8"
         },
         {
-          "id": "B",
-          "text": "x = 3"
-        },
-        {
           "id": "C",
           "text": "x = 7"
+        },
+        {
+          "id": "B",
+          "text": "x = 3"
         },
         {
           "id": "D",
@@ -423,6 +540,703 @@
       ],
       "correct": "A",
       "key": "A"
+    },
+    {
+      "id": "inf-8-algo-032",
+      "lesson": "alg-03-branching",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: если n нечётно, то r := 3 · n + 1, иначе r := n : 2. Выполните его для n = 7, затем для n = 4 и для n = 10. Чему равна сумма трёх результатов? Запишите только число.",
+      "base": 10,
+      "expected": 29,
+      "key": "29"
+    },
+    {
+      "id": "inf-8-algo-033",
+      "lesson": "alg-06-branching-short",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что происходит, если условие в неполной форме ветвления ложно?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Цикл повторяется заново"
+        },
+        {
+          "id": "B",
+          "text": "Программа идёт дальше, ничего не выполняя"
+        },
+        {
+          "id": "A",
+          "text": "Выполняется ветка «иначе»"
+        },
+        {
+          "id": "C",
+          "text": "Программа завершается с ошибкой"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-034",
+      "lesson": "alg-06-branching-short",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: если balance < 30, то balance := balance + 50. Было balance = 100. Чему равен balance после выполнения? Запишите только число.",
+      "base": 10,
+      "expected": 100,
+      "key": "100"
+    },
+    {
+      "id": "inf-8-algo-035",
+      "lesson": "alg-06-branching-short",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: если x < 0, то y := 0 − x; если x чётно, то y := y + 1. При x = −6 чему равен y? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-8-algo-011",
+      "lesson": "alg-07-while",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-012",
+      "lesson": "alg-07-while",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Не проверяется"
+        },
+        {
+          "id": "B",
+          "text": "После выполнения тела"
+        },
+        {
+          "id": "A",
+          "text": "До выполнения тела"
+        },
+        {
+          "id": "C",
+          "text": "В середине тела"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-algo-036",
+      "lesson": "alg-07-while",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Цикл: нц пока n > 0 | n := n : 10 (целая часть) | кц. Сколько раз выполнится тело цикла при n = 500000? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-algo-037",
+      "lesson": "alg-08-until",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько раз минимум выполнится тело цикла с условием окончания?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Столько, сколько повторений указано в условии"
+        },
+        {
+          "id": "B",
+          "text": "1 раз"
+        },
+        {
+          "id": "A",
+          "text": "0 раз"
+        },
+        {
+          "id": "C",
+          "text": "2 раза"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-038",
+      "lesson": "alg-08-until",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Цикл с условием окончания: нц | n := n + 3 | пока n < 10 | кц. При n = 1 чему равно n после выхода из цикла? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-039",
+      "lesson": "alg-08-until",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: ситуация — вид цикла.",
+      "left": [
+        "«Пока в очереди есть люди»",
+        "«Пока не выучили таблицу»",
+        "«Повторить 5 раз»"
+      ],
+      "right": [
+        "Условие продолжения",
+        "Условие окончания",
+        "Заданное число повторений"
+      ],
+      "answerMap": {
+        "«Пока в очереди есть люди»": "Условие продолжения",
+        "«Пока не выучили таблицу»": "Условие окончания",
+        "«Повторить 5 раз»": "Заданное число повторений"
+      },
+      "key": "«Пока в очереди есть люди»=Условие продолжения, «Пока не выучили таблицу»=Условие окончания, «Повторить 5 раз»=Заданное число повторений"
+    },
+    {
+      "id": "inf-8-algo-040",
+      "lesson": "alg-09-for",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел содержит range(1, 5) в Python? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-041",
+      "lesson": "alg-09-for",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какой вызов range даёт числа 2, 4, 6, 8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "range(2, 10, 2)"
+        },
+        {
+          "id": "C",
+          "text": "range(2, 8, 2)"
+        },
+        {
+          "id": "D",
+          "text": "range(8, 2, -2)"
+        },
+        {
+          "id": "B",
+          "text": "range(2, 8)"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-042",
+      "lesson": "alg-10-pr-branching",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Алгоритм подсчёта цифр: нц пока n > 0 | n := n : 10 | k := k + 1 | кц. Сколько цифр в числе 100? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-043",
+      "lesson": "alg-10-pr-branching",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что выведет программа for i in range(3): print(i * 2)? (каждое число — с новой строки)",
+      "options": [
+        {
+          "id": "B",
+          "text": "1 3 5"
+        },
+        {
+          "id": "C",
+          "text": "0 2 4 6"
+        },
+        {
+          "id": "D",
+          "text": "2 4 6"
+        },
+        {
+          "id": "A",
+          "text": "0 2 4"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-044",
+      "lesson": "alg-11-design",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Только ветвление"
+        },
+        {
+          "id": "C",
+          "text": "Цикл for и ветвление"
+        },
+        {
+          "id": "A",
+          "text": "Только цикл for"
+        },
+        {
+          "id": "D",
+          "text": "Только цикл с условием окончания"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-045",
+      "lesson": "alg-11-design",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа перебирает числа от 1 до 10 и считает те, что делятся на 2 без остатка. Что она выведет? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-046",
+      "lesson": "py-09-linear-pr",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что выведет print(2024 % 100)? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-8-algo-047",
+      "lesson": "py-09-linear-pr",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Для числа 13 частное q = 13 : 5 = 2, остаток r = 13 % 5 = 3. Чему равно q · 5 + r? Запишите только число.",
+      "base": 10,
+      "expected": 13,
+      "key": "13"
+    },
+    {
+      "id": "inf-8-algo-048",
+      "lesson": "py-07-condition",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что выведет код x = 5; if x > 3: print('да') else: print('нет')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "да"
+        },
+        {
+          "id": "C",
+          "text": "ничего не выведется"
+        },
+        {
+          "id": "B",
+          "text": "нет"
+        },
+        {
+          "id": "D",
+          "text": "Ошибка выполнения"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-049",
+      "lesson": "py-03-loops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как в Python отбросить последнюю цифру целого числа n?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n / 10"
+        },
+        {
+          "id": "C",
+          "text": "n % 10"
+        },
+        {
+          "id": "B",
+          "text": "n // 10"
+        },
+        {
+          "id": "D",
+          "text": "n ** 10"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-algo-050",
+      "lesson": "ss-30-control",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 40₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 40,
+      "key": "101000"
+    },
+    {
+      "id": "inf-8-algo-051",
+      "lesson": "ss-30-control",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: s := 0; для i от 1 до 9: если i делится на 3, то s := s + i. Чему равен s? Запишите только число.",
+      "base": 10,
+      "expected": 18,
+      "key": "18"
+    },
+    {
+      "id": "inf-8-algo-052",
+      "lesson": "py-10-for-loops",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен факториал 4! = 1 · 2 · 3 · 4? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-8-algo-053",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел от 1 до 10 делятся на 3 без остатка? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-054",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вложенный цикл: для i от 0 до 2, внутри — для j от 0 до 1, в теле вывод. Сколько раз выполнится тело внешнего цикла вместе со всеми прогонами внутреннего? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-algo-015",
+      "lesson": "py-04-strings",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-016",
+      "lesson": "py-04-strings",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: s := 0; для i от 1 до 4: s := s + i. Чему равен s в конце? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-017",
+      "lesson": "py-04-strings",
+      "type": "single_choice",
+      "points": 3,
+      "prompt": "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?",
+      "options": [
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        },
+        {
+          "id": "A",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-algo-018",
+      "lesson": "py-04-strings",
+      "type": "matching",
+      "points": 1,
+      "prompt": "Установите соответствие для s = 'Python'.",
+      "left": [
+        "len(s)",
+        "s[0]",
+        "s[1:4]",
+        "'on' in s"
+      ],
+      "right": [
+        "'P'",
+        "'yth'",
+        "6",
+        "True"
+      ],
+      "answerMap": {
+        "len(s)": "6",
+        "s[0]": "'P'",
+        "s[1:4]": "'yth'",
+        "'on' in s": "True"
+      },
+      "key": "len(s)=6, s[0]='P', s[1:4]='yth', 'on' in s=True"
+    },
+    {
+      "id": "inf-8-algo-055",
+      "lesson": "py-08-strings-2",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что выведет print('10' < '9')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        },
+        {
+          "id": "D",
+          "text": "Ничего"
+        },
+        {
+          "id": "C",
+          "text": "Ошибку"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-056",
+      "lesson": "py-08-strings-2",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Какой индекс вернёт выражение 'информатика'.find('мат')? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-057",
+      "lesson": "algo-01-results",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько различных результатов может дать ветвление с одним условием (две ветки)?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ровно один"
+        },
+        {
+          "id": "D",
+          "text": "Столько, сколько входных данных"
+        },
+        {
+          "id": "C",
+          "text": "Четыре"
+        },
+        {
+          "id": "A",
+          "text": "Не больше двух"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-058",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа: s := 0; для i от 1 до 5: s := s + i. Чему равен s после цикла? Запишите только число.",
+      "base": 10,
+      "expected": 15,
+      "key": "15"
+    },
+    {
+      "id": "inf-8-algo-059",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Сколько различных результатов может дать алгоритм с двумя независимыми полными ветвлениями? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-065",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: если a > 3, то a := a · 2, иначе a := a + 1. При a = 5 чему равен результат? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-066",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: если n чётно, то r := n · 2, иначе r := n + 1. При n = 1, 2, 3, 4 сколько различных значений r получается? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-069",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Программа: n := 1; затем, пока n < 20, выполняется команда n := n · 2. Сколько различных значений примет переменная n за всё время работы программы? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-algo-060",
+      "lesson": "algo-02-inputs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С чего начинается решение обратной задачи — найти входные данные по известному результату?",
+      "options": [
+        {
+          "id": "D",
+          "text": "С таблицы истинности"
+        },
+        {
+          "id": "A",
+          "text": "С результата: определяем последнюю выполненную команду и решаем уравнение назад"
+        },
+        {
+          "id": "C",
+          "text": "С новой программы, которая делает то же самое"
+        },
+        {
+          "id": "B",
+          "text": "С самого начала программы, выполняя её на всех возможных данных"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-061",
+      "lesson": "algo-02-inputs",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Программа: если x чётно, то y := x · 2, иначе y := x + 1. Вывод — 10. Каким было x?",
+      "options": [
+        {
+          "id": "D",
+          "text": "4"
+        },
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "20"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-062",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Сколько трёхзначных чисел имеют сумму цифр 26? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-067",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа: если x чётно, то y := x : 2, иначе y := x · 2 + 1. Вывод — 10. Каким могло быть x? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-8-algo-068",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Программа складывает цифры числа. Вывод — 20. Какое наименьшее положительное число даёт такой вывод? Запишите только число.",
+      "base": 10,
+      "expected": 299,
+      "key": "299"
+    },
+    {
+      "id": "inf-8-algo-070",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Программа: y := x · 3; затем, если y делится на 10, выполняется команда y := y : 10. Сколько целых значений x от 1 до 40 дают на выходе y = 6? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
     }
   ]
 }

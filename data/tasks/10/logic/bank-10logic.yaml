@@ -12,9 +12,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
   prompt: "Вычислите 1 → 0."
-  student_view: { options: [{ id: A, text: "Ложь" }, { id: B, text: "Истина" }] }
+  student_view: { options: [{ id: B, text: "Истина" }, { id: A, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Импликация ложна только как 1→0" }
+  teacher_only: { answer: B, explanation: "Импликация ложна только как 1→0" }
 
 - id: inf-10-logic-002
   class: 10
@@ -46,9 +46,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-10-logic-pred], meta: [plan-actions] }
   prompt: "Что такое предикат?"
-  student_view: { options: [{ id: A, text: "Утверждение с переменными" }, { id: B, text: "Готовая истина" }, { id: C, text: "Вопрос" }, { id: D, text: "Число" }] }
+  student_view: { options: [{ id: D, text: "Число" }, { id: A, text: "Утверждение с переменными" }, { id: C, text: "Вопрос" }, { id: B, text: "Готовая истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Подставил значения — получил высказывание" }
+  teacher_only: { answer: B, explanation: "Подставил значения — получил высказывание" }
 
 - id: inf-10-logic-004
   class: 10
@@ -63,9 +63,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
   prompt: "Решите уравнение A → B = 0."
-  student_view: { options: [{ id: A, text: "A=1, B=0" }, { id: B, text: "A=0, B=1" }, { id: C, text: "A=0, B=0" }, { id: D, text: "A=1, B=1" }] }
+  student_view: { options: [{ id: C, text: "A=0, B=0" }, { id: A, text: "A=1, B=0" }, { id: D, text: "A=1, B=1" }, { id: B, text: "A=0, B=1" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Единственный ноль импликации — из истины ложь" }
+  teacher_only: { answer: B, explanation: "Единственный ноль импликации — из истины ложь" }
 
 - id: inf-10-logic-005
   class: 10
@@ -80,9 +80,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
   prompt: "Что собирает ДНФ?"
-  student_view: { options: [{ id: A, text: "Строки, где функция истинна" }, { id: B, text: "Строки, где функция ложна" }, { id: C, text: "Только шапку" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: A, text: "Строки, где функция истинна" }, { id: B, text: "Строки, где функция ложна" }, { id: C, text: "Только шапку" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Дизъюнкция конъюнкций по единицам" }
+  teacher_only: { answer: B, explanation: "Дизъюнкция конъюнкций по единицам" }
 
 - id: inf-10-logic-006
   class: 10
@@ -97,9 +97,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
   prompt: "Что показывает пересечение кругов Эйлера?"
-  student_view: { options: [{ id: A, text: "Логическое И" }, { id: B, text: "Логическое ИЛИ" }, { id: C, text: "Отрицание" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: C, text: "Отрицание" }, { id: B, text: "Логическое ИЛИ" }, { id: D, text: "Ничего" }, { id: A, text: "Логическое И" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Пересечение — общие элементы, как И" }
+  teacher_only: { answer: D, explanation: "Пересечение — общие элементы, как И" }
 
 - id: inf-10-logic-007
   class: 10
@@ -114,7 +114,7 @@
   fgos_element: 1.6
   fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
   prompt: "Полусумматор: A = 1, B = 1. Чему равны сумма S и перенос P?"
-  student_view: { options: [{ id: A, text: "S = 0, P = 1" }, { id: B, text: "S = 1, P = 0" }, { id: C, text: "S = 1, P = 1" }, { id: D, text: "S = 0, P = 0" }] }
+  student_view: { options: [{ id: A, text: "S = 0, P = 1" }, { id: C, text: "S = 1, P = 1" }, { id: D, text: "S = 0, P = 0" }, { id: B, text: "S = 1, P = 0" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "S = 1 xor 1 = 0, P = 1 and 1 = 1 (в сумме двоичное 10)" }
 
@@ -131,9 +131,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
   prompt: "Какая комбинация входов запрещена для RS-триггера?"
-  student_view: { options: [{ id: A, text: "R = 1, S = 1" }, { id: B, text: "R = 0, S = 0" }, { id: C, text: "R = 1, S = 0" }, { id: D, text: "R = 0, S = 1" }] }
+  student_view: { options: [{ id: D, text: "R = 0, S = 1" }, { id: B, text: "R = 0, S = 0" }, { id: A, text: "R = 1, S = 1" }, { id: C, text: "R = 1, S = 0" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Обе команды сразу — итог не определён; 0,0 хранит старое" }
+  teacher_only: { answer: C, explanation: "Обе команды сразу — итог не определён; 0,0 хранит старое" }
 
 - id: inf-10-logic-009
   class: 10
@@ -148,6 +148,715 @@
   fgos_element: 1.5
   fgos: { subject: [inf-10-logic-pred], meta: [plan-actions] }
   prompt: "Истинно ли высказывание ∀x (x > 5) на числах?"
-  student_view: { options: [{ id: A, text: "Нет, контрпример x = 3" }, { id: B, text: "Да, всегда" }, { id: C, text: "Да, если x = 6" }, { id: D, text: "Нельзя оценить" }] }
+  student_view: { options: [{ id: B, text: "Да, всегда" }, { id: C, text: "Да, если x = 6" }, { id: D, text: "Нельзя оценить" }, { id: A, text: "Нет, контрпример x = 3" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "∀ требует всех значений; 3 > 5 ложно" }
+  teacher_only: { answer: D, explanation: "∀ требует всех значений; 3 > 5 ложно" }
+# === ДОПИСАНО scripts/make-10-bank.mjs (руками не править) ===
+# Ответы посчитаны кодом (parseBase, popcount, rowsOf, equivalent, dnf, knf, solve)
+# и проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-logic-010 … inf-10-logic-032 (23 заданий).
+- id: inf-10-logic-010
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Сколько операций в наборе"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
+  prompt: "Сколько операций входит в полный набор логических операций школьной алгебры логики? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Их шесть: ¬, ∧, ∨, ⊕, →, ↔. В восьмом классе разбирали только три (НЕ, И, ИЛИ), а полный набор включает ещё исключающее ИЛИ, импликацию и эквиваленцию. Считать пять — самая частая ошибка." }
+
+- id: inf-10-logic-011
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Число строк таблицы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Сколько строк содержит таблица истинности выражения, в котором четыре буквы? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "n букв дают 2ⁿ строк, а не 2n: для четырёх букв это 16 строк. Последняя буква в порядке строк меняется быстрее." }
+
+- id: inf-10-logic-012
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Единицы в последнем столбце"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения (A ∧ B) ∨ ¬C. В скольких строках из восьми значение выражения равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Идём по строкам от 000 до 111 и считаем единицы: выражение истинно при A = 0, B = 0, C = 0; при C = 0 и A = 1, B = 1; при A = 1, B = 1, C = 1 — всего пять строк." }
+
+- id: inf-10-logic-013
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Тождественно истинное выражение"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Что называется тождественно истинным выражением?"
+  student_view: { options: [{ id: B, text: "Выражение, истинное хотя бы в одной строке таблицы" }, { id: C, text: "Выражение, у которого все буквы встречаются одинаковое число раз" }, { id: D, text: "Выражение, в котором есть буква A и буква ¬A" }, { id: A, text: "Выражение, истинное при любых значениях букв: в последнем столбце таблицы стоят только единицы" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Проверяют построением таблицы: если все восемь строк дают 1 — выражение тождественно истинное, если все 0 — тождественно ложное. Примеры: A ∨ ¬A = 1 и A ∧ ¬A = 0." }
+
+- id: inf-10-logic-014
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Законы логики"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-02-transform
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-laws], meta: [plan-actions] }
+  prompt: "Установите соответствие: выражение — равносильная ему форма."
+  student_view: { left: ["A ∨ ¬A", "A ∧ ¬A", "¬(A ∧ B)", "A → B"], right: ["1", "0", "¬A ∨ ¬B", "¬A ∨ B"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "A ∨ ¬A": "1", "A ∧ ¬A": "0", "¬(A ∧ B)": "¬A ∨ ¬B", "A → B": "¬A ∨ B" }, explanation: "A ∨ ¬A = 1 (исключённого среднего), A ∧ ¬A = 0 (противоречия), ¬(A ∧ B) = ¬A ∨ ¬B (закон де Моргана), A → B = ¬A ∨ B. Каждое равенство проверяется подстановкой всех наборов значений." }
+
+- id: inf-10-logic-015
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Число членов ДНФ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-04-normal
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения A → B. Сколько конъюнкций будет в его ДНФ? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "ДНФ собирает строки, где значение равно 1. Импликация ложна только в строке A = 1, B = 0, значит единиц три — столько же и конъюнкций в ДНФ." }
+
+- id: inf-10-logic-016
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Число членов КНФ"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-04-normal
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения A ∨ (B ∧ C). Сколько членов будет в его КНФ? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "КНФ собирает строки со значением 0. Выражение ложно при A = 0 и B ∧ C = 0, то есть в трёх строках из восьми. Столько же дизъюнкций войдёт в КНФ." }
+
+- id: inf-10-logic-017
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Построение ДНФ"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-04-normal
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Выражение истинно только при A = 1, B = 0. Чему равно его ДНФ?"
+  student_view: { options: [{ id: C, text: "A ∨ ¬B" }, { id: D, text: "(¬A ∨ B) ∧ (A ∨ B)" }, { id: B, text: "¬A ∧ B" }, { id: A, text: "A ∧ ¬B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Единственная строка, где значение равно 1, — это A = 1, B = 0. В ДНФ буква, равная 1, берётся как есть, а буква, равная 0, — с отрицанием: A ∧ ¬B. Последний вариант — это КНФ того же выражения." }
+
+- id: inf-10-logic-018
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Число решений уравнения"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-05-equations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Сколько решений имеет уравнение A ∨ B = 1, где A и B — высказывания? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Дизъюнкция равна 1, если хотя бы одно значение равно 1. Подходят пары (0, 1), (1, 0) и (1, 1) — всего три. Такие уравнения решают таблицей истинности." }
+
+- id: inf-10-logic-019
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Уравнение с дизъюнкцией"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-05-equations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Решите уравнение (A → C) ∨ ((B ∨ C) ∧ A) ∨ D = 0."
+  student_view: { options: [{ id: B, text: "A = 1, B = 1, C = 0, D = 0" }, { id: C, text: "A = 0, B = 0, C = 0, D = 0" }, { id: D, text: "A = 1, B = 0, C = 1, D = 0" }, { id: A, text: "A = 1, B = 0, C = 0, D = 0" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Дизъюнкция равна 0, только если каждая часть равна 0. Из A → C = 0 получаем A = 1 и C = 0. Подставляем: (B ∨ 0) ∧ 1 = B = 0, значит B = 0. И D = 0. Проверка: (1 → 0) ∨ (0 ∧ 1) ∨ 0 = 0." }
+
+- id: inf-10-logic-020
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Сколько решений у уравнения"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-05-equations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Установите соответствие: уравнение — сколько у него решений."
+  student_view: { left: ["A ∧ B = 1", "A ⊕ B = 1", "A ∨ B = 1", "(A → B) ∨ (A ∧ ¬B) = 1"], right: ["одно решение", "два решения", "три решения", "четыре решения"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "A ∧ B = 1": "одно решение", "A ⊕ B = 1": "два решения", "A ∨ B = 1": "три решения", "(A → B) ∨ (A ∧ ¬B) = 1": "четыре решения" }, explanation: "Считаем перебором всех наборов значений: A ∧ B = 1 даёт пару (1, 1); A ⊕ B = 1 — пары (0, 1) и (1, 0); A ∨ B = 1 — три пары; выражение (A → B) ∨ (A ∧ ¬B) истинно при любых A и B, поэтому решений четыре." }
+
+- id: inf-10-logic-021
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Только один вид спорта"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "В классе 30 человек. Футбол любят 20, баскетбол — 12, и то и другое — 5. Сколько человек любят только футбол? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "Область «только футбол» — это A ∧ ¬B, то есть из 20 вычитаем 5: 20 − 5 = 15 человек. Забыть вычесть пересечение — самая частая ошибка на диаграмме." }
+
+- id: inf-10-logic-022
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Вне обоих множеств"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "В классе 30 человек. Футбол любят 20, баскетбол — 12, и то и другое — 5. Сколько человек не любят ни футбол, ни баскетбол? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Области диаграммы: только футбол 15, только баскетбол 12 − 5 = 7, оба 5. В сумме 15 + 7 + 5 = 27, значит не любят ничего 30 − 27 = 3 человека. Проверка: сумма областей даёт общее число." }
+
+- id: inf-10-logic-023
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Область на диаграмме"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "Что обозначает область A ∧ ¬B на диаграмме Эйлера-Венна?"
+  student_view: { options: [{ id: A, text: "Объекты, которые входят в круг A, но не входят в круг B" }, { id: C, text: "Объекты, которые не входят ни в один из кругов" }, { id: B, text: "Объекты, которые входят в оба круга" }, { id: D, text: "Объекты, которые входят в круг B, но не входят в круг A" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Четыре области: A ∧ B — пересечение, A ∧ ¬B — только в A, ¬A ∧ B — только в B, ¬A ∧ ¬B — вне обоих кругов." }
+
+- id: inf-10-logic-024
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Входы RS-триггера"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "У RS-триггера два входа: S (установить) и R (сбросить). Сколько существует комбинаций значений на этих входах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Два входа по два значения дают 2 · 2 = 4 комбинации: 00, 01, 10, 11. Комбинация 00 хранит прежнее значение, а 11 запрещена: оба требования противоречат друг другу." }
+
+- id: inf-10-logic-025
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Полный сумматор"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "На входы полного сумматора поданы A = 1, B = 1, C = 1. Чему равна сумма S (значение младшего разряда)? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "S = A ⊕ B ⊕ C = 1 ⊕ 1 ⊕ 1 = 1. Перенос P = 1, поэтому полная сумма получается 11₂: единица в младший разряд и единица в следующий." }
+
+- id: inf-10-logic-026
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Из чего собрана память"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Из каких элементов собрана память компьютера?"
+  student_view: { options: [{ id: D, text: "Из магнитных пластин: они и есть оперативная память" }, { id: A, text: "Из триггеров: каждый хранит один бит, а из триггеров собираются регистры и вся память" }, { id: B, text: "Из инверторов: каждый инвертор хранит один бит" }, { id: C, text: "Из процессора: память является частью процессора" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Триггер — элемент с памятью, он хранит один бит и не теряет его без записи. Регистры собираются из цепочек триггеров, а из регистров — вся оперативная память." }
+
+- id: inf-10-logic-027
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Шесть логических операций"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-08-control
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-review], meta: [plan-actions] }
+  prompt: "Сколько логических операций разбирали в 10 классе? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Шесть: ¬, ∧, ∨, ⊕, →, ↔. Считать, что операций пять, — самая частая ошибка на контрольной: забывают либо исключающее ИЛИ, либо эквиваленцию." }
+
+- id: inf-10-logic-028
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Время передачи файла"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-08-control
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-review], meta: [plan-actions] }
+  prompt: "Файл размером 4 Кбайта передаётся по каналу со скоростью 2048 бит в секунду. Сколько секунд займёт передача? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "Объём в битах: 4 · 1024 · 8 = 32 768 бит. Время = 32 768 : 2048 = 16 секунд. Считать, не переведя объём в биты, — самая частая ошибка на контрольной." }
+
+- id: inf-10-logic-029
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Типичная ошибка контрольной"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-08-control
+  fgos_requirement: 1.2
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-review], meta: [plan-actions] }
+  prompt: "Ученик посчитал объём изображения при глубине цвета 24 бита и умножил результат ещё на 3. В чём его ошибка?"
+  student_view: { options: [{ id: B, text: "Ошибки нет: для RGB всегда нужно умножать на количество каналов" }, { id: C, text: "Нужно было умножить ещё и на 8, потому что 24 бита надо перевести в байты" }, { id: D, text: "Нужно было разделить на 3, потому что каналы RGB одинаковые" }, { id: A, text: "24 бита — это уже три канала RGB по 8 бит, лишнее умножение завышает объём втрое" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Глубина 24 бита уже означает по 8 бит на красный, зелёный и синий каналы. Умножать на 3 второй раз нельзя: объём получится втрое больше правильного." }
+
+- id: inf-10-logic-030
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Типы ошибок"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-09-errors
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-errors], meta: [plan-actions] }
+  prompt: "Сколько типов ошибок разбирают при работе над ошибками? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Пять: не знал правило, ошибся в вычислении, невнимательность, ошибка в единицах и не проверил ответ. Они лечатся по-разному, поэтому важно определить тип, а не просто посчитать ошибки." }
+
+- id: inf-10-logic-031
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Разбор результатов контрольной"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-09-errors
+  fgos_requirement: 1.3
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-errors], meta: [plan-actions] }
+  prompt: "В контрольной было 12 заданий, ученик ошибся в 5. Сколько заданий решено верно? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "12 − 5 = 7 заданий без ошибок. Разбор полезнее самой оценки: в первую очередь смотрят, в каких заданиях ошибки повторились." }
+
+- id: inf-10-logic-032
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Проверка печатного ответа"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-09-errors
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-errors], meta: [plan-actions] }
+  prompt: "Ответ в учебнике не сошёлся при проверке подстановкой. Что нужно сделать?"
+  student_view: { options: [{ id: D, text: "Подобрать такие значения букв, при которых ответ учебника подходит" }, { id: A, text: "Найти опечатку в условии или в ответе и исправить её, записав проверку подстановкой" }, { id: C, text: "Оставить задачу без ответа и перейти к следующей" }, { id: B, text: "Выписать ответ учебника без изменений: печатному ответу доверяют больше своего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "В задачах бывают опечатки, и это обнаруживает как раз проверка подстановкой. Правильный ход — проверить и исправить, а не принять на веру и не подгонять значения под ответ." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-bank2.mjs ====
+# Ответы посчитаны кодом (parseBase, toBase, fracBits, rowsOf, evalAt,
+# equivalent, dnf, knf, solve) и проверены assert-ами: если число или формула
+# не сошлись, сборка падает. Блок перезаписывается целиком при каждом запуске.
+# Новые id: inf-10-logic-033 … inf-10-logic-044 (12 заданий).
+- id: inf-10-logic-033
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Единицы в таблице истинности"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения (A ∨ B) ∧ C. В скольких строках из восьми значение выражения равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Выражение истинно, только когда C = 1 и хотя бы одна из букв A, B равна 1. Таких строк три: 0 1 1, 1 0 1, 1 1 1. Идём по строкам и считаем единицы в последнем столбце." }
+
+- id: inf-10-logic-034
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Проверка таблицей"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения ¬(A ∧ B). В скольких строках из четырёх значение выражения равно 1? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Конъюнкция A ∧ B истинна только при A = 1, B = 0? Нет: только при A = 1 и B = 1, то есть в одной строке из четырёх. В остальных трёх строках отрицание даёт 1." }
+
+- id: inf-10-logic-035
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Тождественно истинное выражение"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Выражение A ∨ (B ∧ A) тождественно истинно?"
+  student_view: { options: [{ id: A, text: "Нет: выражение равносильно A, поэтому при A = 0 и B = 1 оно ложно" }, { id: B, text: "Да: дизъюнкция всегда истинна, если в ней есть хотя бы одно высказывание" }, { id: D, text: "Нет: выражение всегда ложно, так как содержит конъюнкцию" }, { id: C, text: "Да: конъюнкция B ∧ A входит в состав дизъюнкции, поэтому выражение всегда истинно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Проверяем подстановкой. Если A = 1, выражение истинно при любом B. Если A = 0, то B ∧ 0 = 0 и 0 ∨ 0 = 0 — выражение ложно. Значит, оно равно просто A и тождественно истинным не является." }
+
+- id: inf-10-logic-036
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Построение КНФ"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-04-normal
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Выражение (A ∨ B) ∧ ¬C истинно при A = 0, B = 0, C = 0 и при A = 1, B = 0, C = 0. Что верно о его КНФ?"
+  student_view: { options: [{ id: D, text: "В КНФ войдёт один член, потому что выражение ложно во всех строках с C = 1" }, { id: C, text: "КНФ совпадает с ДНФ, потому что обе формы строятся по одним и тем же строкам" }, { id: A, text: "В КНФ войдут члены для всех ложных строк, то есть ровно 5 членов, соединённых конъюнкцией" }, { id: B, text: "В КНФ войдут только два члена — по числу истинных строк" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "КНФ собирает строки со значением 0, а ДНФ — со значением 1. В таблице восемь строк, из них две истинные, значит ложных 5. В каждом члене КНФ буквы со значением 0 берутся как есть, а со значением 1 — с отрицанием, и члены соединяются конъюнкцией." }
+
+- id: inf-10-logic-037
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Проверка решения подстановкой"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-05-equations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Решите уравнение (A ∨ B) ∧ C = 1. Сколько у него решений?"
+  student_view: { options: [{ id: A, text: "Три" }, { id: C, text: "Два" }, { id: D, text: "Четыре" }, { id: B, text: "Одно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Конъюнкция равна 1, только если каждая её часть равна 1: значит C = 1 и A ∨ B = 1. Дизъюнкция равна 1 при трёх парах: (0, 1), (1, 0), (1, 1). Ответ проверяем подстановкой — все три дают 1." }
+
+- id: inf-10-logic-038
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Поглощение и упрощение"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.2
+  fgos_element: 1.3
+  fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
+  prompt: "Какое выражение равносильно (A ∨ B) ∧ ¬A?"
+  student_view: { options: [{ id: C, text: "¬A ∨ B" }, { id: D, text: "A → B" }, { id: A, text: "¬A ∧ B" }, { id: B, text: "A ∧ B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Чтобы (A ∨ B) ∧ ¬A было истинно, нужно одновременно ¬A и B: раз ¬A уже выполнено, из скобки остаётся только B. Значит выражение равносильно ¬A ∧ B. Частая ошибка — принять ответ A ∧ B: при A = 1 всё выражение ложно, а A ∧ B истинно, значит они не равносильны. Проверяют равенство перебором всех наборов значений переменных." }
+
+- id: inf-10-logic-039
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Операции и области"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "Что обозначает область ¬A ∧ ¬B на диаграмме Эйлера-Венна?"
+  student_view: { options: [{ id: D, text: "Объекты, которые входят в круг B, но не входят в круг A" }, { id: C, text: "Объекты, которые входят в круг A, но не входят в круг B" }, { id: B, text: "Объекты, которые входят в оба круга" }, { id: A, text: "Объекты, которые не входят ни в круг A, ни в круг B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Четыре области строятся знаками: A ∧ B — пересечение, A ∧ ¬B — только в A, ¬A ∧ B — только в B, ¬A ∧ ¬B — вне обоих кругов." }
+
+- id: inf-10-logic-040
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Объединение множеств"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "В классе 4 человека. Футбол любят 2, баскетбол — 2, и то и другое — 1. Сколько человек любят хотя бы один из двух видов спорта? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Объединение A ∨ B — это всё в A плюс всё в B, но без двойного счёта пересечения. Только футбол: 1, только баскетбол: 1, оба: 1. Складываем 1 + 1 + 1 = 3." }
+
+- id: inf-10-logic-041
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Проверка суммой областей"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "В классе 30 человек. Только футбол любят 15, только баскетбол — 7, и то и другое — 5. Сколько человек любят только баскетбол?"
+  student_view: { options: [{ id: B, text: "5 человек: это область A ∧ B" }, { id: D, text: "10 человек: это область вне обоих кругов" }, { id: A, text: "7 человек: это область ¬A ∧ B, её считают вычитанием пересечения из общего числа баскетболистов" }, { id: C, text: "15 человек: это область A ∧ ¬B" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Всего баскетбол любят 7 + 5 = 12 человек, из них 5 любят ещё и футбол. Только баскетбол — это 12 − 5 = 7. Проверка суммой областей: 15 + 7 + 5 = 27, а вне обоих кругов остаётся 3 человек." }
+
+- id: inf-10-logic-042
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Запрещённая комбинация"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Какая комбинация значений на входах S и R RS-триггера запрещена?"
+  student_view: { options: [{ id: B, text: "S = 0, R = 0: не задано, какое значение хранить" }, { id: C, text: "S = 1, R = 0: это команда установить единицу" }, { id: A, text: "S = 1, R = 1: оба требования противоречат друг другу, результат не определён" }, { id: D, text: "S = 0, R = 1: это команда сбросить значение" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Из 4 комбинаций три задают состояние триггера, а одна запрещена: при S = 1 и R = 1 триггеру одновременно велено установить и сбросить значение. Такую комбинацию на входы не подают." }
+
+- id: inf-10-logic-043
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Перенос полного сумматора"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "На входы полного сумматора поданы A = 1, B = 1, C = 1. Чему равен перенос P? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1], answer_text: "1", explanation: "P = (A ∧ B) ∨ ((A ⊕ B) ∧ C). Первая часть уже равна 1, поэтому перенос P = 1. Проверка: S = A ⊕ B ⊕ C = 1, и S + 2·P = 1 + 2 = 3, столько же, сколько 1 + 1 + 1." }
+
+- id: inf-10-logic-044
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Регистр из триггеров"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Сколько триггеров нужно, чтобы собрать регистр, хранящий 8-битное число?"
+  student_view: { options: [{ id: B, text: "Один: триггер умеет хранить целое число любой разрядности" }, { id: D, text: "Шестьдесят четыре: регистр хранит и мантиссу, и порядок" }, { id: A, text: "Восемь: каждый триггер хранит один бит, поэтому регистр на 8 бит собирается из 8 триггеров" }, { id: C, text: "Тридцать два: нужно по четыре триггера на каждый бит" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Один триггер — это один бит состояния. Значит, регистр на 8 бит требует ровно 8 триггеров, а вся память компьютера собирается из таких регистров, соединённых в ячейки." }
+# ==== СГЕНЕРИРОВАНО scripts/make-10-medialogic-bank3.mjs ====
+# Ответы посчитаны кодом (арифметика по размерам файлов, L() — разбор логических
+# выражений, truthOnes() и solveEq() — перебор всех наборов значений переменных,
+# equivalent() — равносильность подстановкой, питон — прогон эталона code_run) и
+# проверены assert-ами: если число или формула не сошлись, сборка падает.
+# Новые id: inf-10-logic-045 … inf-10-logic-050 (6 заданий).
+- id: inf-10-logic-045
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Вычисление выражения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-01-ops
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-ops], meta: [plan-actions] }
+  prompt: "Вычислите значение выражения ¬(1 ∧ 1) ∨ (1 ⊕ 0). Здесь 1 — истина, 0 — ложь."
+  student_view: { options: [{ id: B, text: "0" }, { id: C, text: "Вычислить нельзя: выражение записано не в базисе И, ИЛИ и НЕ" }, { id: A, text: "1" }, { id: D, text: "Значение зависит от того, в каком порядке выполнить операции" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Сначала конъюнкция: 1 ∧ 1 = 1, поэтому ¬1 = 0. Затем исключающее ИЛИ: 1 ⊕ 0 = 1, потому что значения различаются. И наконец дизъюнкция: 0 ∨ 1 = 1. Порядок операций менять нельзя: сначала отрицание и связки внутри скобок, потом связки между ними. Формулу можно проверить перебором всех наборов значений переменных — здесь переменных нет, поэтому набор всего один.", common_errors: ["«Значение зависит от порядка операций»: порядок выполнения в выражении задан скобками"] }
+
+- id: inf-10-logic-046
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Условие и следствие"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-03-truth
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-truth], meta: [plan-actions] }
+  prompt: "Из истинного условия A → B что следует?"
+  student_view: { options: [{ id: C, text: "A всегда истинно, иначе импликация была бы ложной" }, { id: B, text: "Если B истинно, то A обязательно истинно" }, { id: A, text: "Если A истинно, то B обязательно истинно" }, { id: D, text: "A и B не могут быть одновременно истинны" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Импликация A → B ложна только в одной строке таблицы: A = 1, B = 0. Во всех остальных строках, а их 3 из 4, она истинна. Поэтому из условия следует, что при истинном A значение B обязательно истинно — это прямое утверждение импликации. Обратное («из B следует A») неверно: при A = 0, B = 1 условие истинно, а B → A ложно, поэтому равносильными они не являются." }
+
+- id: inf-10-logic-047
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Строки с единицей и ДНФ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-04-normal
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-nf], meta: [plan-actions] }
+  prompt: "Постройте таблицу истинности выражения (A ∨ B) ∧ C. Сколько конъюнкций (строк, где значение равно 1) войдёт в его совершенную ДНФ? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Строка даёт единицу, только если C = 1 и при этом хотя бы одно из A и B истинно. Таких строк 3: A = 0, B = 1, C = 1; A = 1, B = 0, C = 1; A = 1, B = 1, C = 1. Каждой такой строке соответствует одна конъюнкция совершенной ДНФ, поэтому конъюнкций тоже 3. Дальше выражение упрощают до C ∧ (A ∨ B), и конъюнкций станет две, но у совершенной ДНФ лишние скобки не сокращают: её считают по строкам таблицы." }
+
+- id: inf-10-logic-048
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Уравнение с исключающим ИЛИ"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-05-equations
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-eq], meta: [plan-actions] }
+  prompt: "Сколько решений имеет уравнение A ⊕ B ⊕ C = 0, где A, B и C — высказывания? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Перебираем все 8 наборов значений. Выражение A ⊕ B ⊕ C равно нулю тогда и только тогда, когда истинных высказываний среди A, B и C чётное число. Решений 4: A = 0, B = 0, C = 0; A = 0, B = 1, C = 1; A = 1, B = 0, C = 1; A = 1, B = 1, C = 0. Строк с единицей тоже 4, поэтому если бы в правой части стояла единица, решений было бы столько же." }
+
+- id: inf-10-logic-049
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Вне обоих множеств"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-06-venn
+  fgos_requirement: 1.4
+  fgos_element: 1.6
+  fgos: { subject: [inf-10-logic-venn], meta: [plan-actions] }
+  prompt: "В классе 28 человек. Хоккей любят 16, футбол — 13, и то и другое — 7. Сколько человек не любят ни хоккей, ни футбол? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "По формуле включений-исключений хотя бы один вид спорта любят 16 + 13 − 7 = 22 человек: тех, кто любит оба, пришлось вычесть один раз, иначе они посчитаны дважды. Значит, не любят ни того, ни другого 28 − 22 = 6 человек — это область вне обоих кругов на диаграмме Венна." }
+
+- id: inf-10-logic-050
+  class: 10
+  topic: "Алгебра логики"
+  subtopic: "Схема «ИЛИ-НЕ» перебором"
+  type: code_run
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 10logic-07-scheme
+  fgos_requirement: 1.3
+  fgos_element: 1.5
+  fgos: { subject: [inf-10-logic-gates], meta: [plan-actions] }
+  prompt: "Логическая схема имеет три входа A, B, C и выход Y = (A ∨ B) ∧ ¬C. Напишите программу, которая переберёт все 8 наборов значений входов и выведет два числа через пробел: сколько наборов дают Y = 1 и сколько — Y = 0."
+  student_view: { language: python, template: "# Перебери все наборы значений трёх входов\ncount1 = 0\ncount0 = 0\nfor a in range(2):\n    for b in range(2):\n        for c in range(2):\n            # вычисли значение схемы и посчитай, сколько раз получилась 1 и сколько 0\n            ...\nprint(count1, count0)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "count1 = 0\ncount0 = 0\nfor a in range(2):\n    for b in range(2):\n        for c in range(2):\n            y = 1 if (a == 1 or b == 1) and c == 0 else 0\n            if y == 1:\n                count1 += 1\n            else:\n                count0 += 1\nprint(count1, count0)", expected_stdout: "3 5", explanation: "Схема срабатывает, когда на вход C подаётся 0, а на A или B — хотя бы единица. Перебор всех наборов: 0 0 0 — 0; 0 0 1 — 0; 0 1 0 — 1; 0 1 1 — 0; 1 0 0 — 1; 1 0 1 — 0; 1 1 0 — 1; 1 1 1 — 0. Единиц получается 3, нулей — 5, всего 8. Проверять схему перебором надёжнее, чем «на глаз»: ошибку в одном элементе сразу видно по подсчёту строк." }

@@ -23,8 +23,24 @@ interface BankTask {
 
 interface BankFile {
   test_code: string;
-  max_score: number;
-  tasks: BankTask[];
+  max_score?: number;
+  /** Плоский формат: тренажёры и старые работы. */
+  tasks?: BankTask[];
+  /** Новый формат работы: пул заданий + варианты. */
+  pool?: BankTask[];
+  variants?: Array<{ number: number; task_ids: string[]; max_score: number }>;
+  page_size?: number;
+  title?: string;
+  grade?: string;
+}
+
+/**
+ * Все задания работы в одном списке — для аналитики нужен полный набор,
+ * а не набор одного варианта: сводка по темам считается по всему пулу.
+ */
+function allTasks(bank: BankFile): BankTask[] {
+  if (bank.pool?.length) return bank.pool;
+  return bank.tasks ?? [];
 }
 
 export interface AnalyticsRow {
@@ -43,10 +59,19 @@ const LOCAL_MODS = import.meta.glob('../data/checks/*.json', { eager: true }) as
 // import.meta.env.DEV вырезается на сборке вместе с веткой).
 const LOCAL_BANKS: Record<string, BankFile> = {};
 if (import.meta.env.DEV) {
+  // Банки из checks-JSON — только в dev: в прод-бандл они не попадают.
   for (const [p, m] of Object.entries(LOCAL_MODS)) {
     if (p.endsWith('-public.json')) continue; // публичные копии без ключей — для страниц, не для аналитики
     LOCAL_BANKS[m.test_code] = m;
   }
+}
+
+/** Коды работ для фильтра: реестр + локальные банки + демо. */
+function workCodes(): string[] {
+  const out = new Set<string>(Object.keys(WORKS));
+  for (const c of Object.keys(LOCAL_BANKS)) out.add(c);
+  out.add(DEMO_BANK.test_code);
+  return [...out];
 }
 
 // Фейковый мини-банк для демо-режима: настоящих ключей не содержит.
@@ -105,17 +130,19 @@ function markFor(pct: number): number {
 /** Демо-класс: 12 учеников на фейковом мини-банке (настоящих ключей нет). */
 function buildDemo(): AnalyticsRow[] {
   const bank = DEMO_BANK;
+  const demoTasks = allTasks(bank);
+  const max = bank.max_score ?? demoTasks.reduce((s, t) => s + t.points, 0);
   return Array.from({ length: 12 }, (_, si) => {
     const answers: Record<string, string> = {};
     let score = 0;
-    for (const t of bank.tasks) {
+    for (const t of demoTasks) {
       // Демо-слабость: «восьмеричная» тема (q2) хромает у второй половины класса.
       const bad = t.id === 'demo-q2' ? si >= 5 : si >= 10;
       const a = bad ? 'B' === t.key ? 'A' : 'B' : String(t.key ?? '');
       answers[t.id] = a;
       if (!bad) score += t.points;
     }
-    const percent = Math.round((score / bank.max_score) * 1000) / 10;
+    const percent = Math.round((score / max) * 1000) / 10;
     return {
       surname: `student_${String(si + 1).padStart(3, '0')}`, firstname: 'демо',
       class_name: '8А', test_code: DEMO_BANK.test_code, variant: 'demo',
@@ -150,9 +177,11 @@ export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
   const [cls, setCls] = useState('all');
 
   const all = useMemo(() => (demo ? buildDemo() : rows), [demo, rows]);
+  // Фильтр работ: коды из ЖУРНАЛА (что реально сдавали), а не из локальных файлов.
+  // Прежний вариант требовал наличия checks-JSON на машине — в проде список был пуст.
   const codes = useMemo(
     () => [...new Set(all.map((r) => r.test_code))].filter(
-      (c) => (LOCAL_BANKS[c] || c === DEMO_BANK.test_code) && (WORKS[c] || c === DEMO_BANK.test_code),
+      (c) => WORKS[c] || c === DEMO_BANK.test_code,
     ),
     [all],
   );
@@ -171,7 +200,7 @@ export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
     () => all.filter((r) => r.test_code === cur && (cls === 'all' || (r.class_name ?? '—') === cls)),
     [all, cur, cls],
   );
-  const st = useMemo(() => (bank ? statsForWork(sel, bank.tasks) : undefined), [sel, bank]);
+  const st = useMemo(() => (bank ? statsForWork(sel, allTasks(bank)) : undefined), [sel, bank]);
   const sum = useMemo(() => summary(sel), [sel]);
   const review = useMemo(
     () => (meta ? ERROR_REVIEW.find((e) => e.slug === meta.slug.replace('proverka', 'control')) : undefined),

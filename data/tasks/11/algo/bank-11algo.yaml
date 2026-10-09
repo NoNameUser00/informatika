@@ -29,9 +29,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-auto], meta: [plan-actions] }
   prompt: "Какое число МОЖЕТ быть результатом Автомата?"
-  student_view: { options: [{ id: A, text: "1610" }, { id: B, text: "1010" }, { id: C, text: "1019" }, { id: D, text: "2000" }] }
+  student_view: { options: [{ id: C, text: "1019" }, { id: A, text: "1610" }, { id: D, text: "2000" }, { id: B, text: "1010" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "1010 из 1910 (пары 10, 10, 1); 16/19/20 невозможны (сумма ≤ 18, порядок неубывающий)" }
+  teacher_only: { answer: D, explanation: "1010 из 1910 (пары 10, 10, 1); 16/19/20 невозможны (сумма ≤ 18, порядок неубывающий)" }
 
 - id: inf-11-algo-003
   class: 11
@@ -46,9 +46,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "От чего сложность зависит сильнее всего?"
-  student_view: { options: [{ id: A, text: "От размера данных" }, { id: B, text: "От цвета монитора" }, { id: C, text: "От дня недели" }, { id: D, text: "Ни от чего" }] }
+  student_view: { options: [{ id: B, text: "От цвета монитора" }, { id: A, text: "От размера данных" }, { id: C, text: "От дня недели" }, { id: D, text: "Ни от чего" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Рост операций с ростом n" }
+  teacher_only: { answer: B, explanation: "Рост операций с ростом n" }
 
 - id: inf-11-algo-004
   class: 11
@@ -63,7 +63,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
   prompt: "Как работает сортировка выбором?"
-  student_view: { options: [{ id: A, text: "Минимум из остатка — на своё место" }, { id: B, text: "Всё перемешать" }, { id: C, text: "Удалить половину" }, { id: D, text: "Никак" }] }
+  student_view: { options: [{ id: A, text: "Минимум из остатка — на своё место" }, { id: C, text: "Удалить половину" }, { id: D, text: "Никак" }, { id: B, text: "Всё перемешать" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Тот же чемпион, что в максимуме" }
 
@@ -80,9 +80,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
   prompt: "Что означает a[1][2]?"
-  student_view: { options: [{ id: A, text: "Строка 1, столбец 2" }, { id: B, text: "Строка 2, столбец 1" }, { id: C, text: "Число 12" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Число 12" }, { id: B, text: "Строка 2, столбец 1" }, { id: A, text: "Строка 1, столбец 2" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Первый индекс — строка" }
+  teacher_only: { answer: D, explanation: "Первый индекс — строка" }
 
 - id: inf-11-algo-006
   class: 11
@@ -97,7 +97,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
   prompt: "Что обязательно в рекурсии?"
-  student_view: { options: [{ id: A, text: "Базовый случай-выход" }, { id: B, text: "Громкий звук" }, { id: C, text: "Интернет" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: A, text: "Базовый случай-выход" }, { id: D, text: "Ничего" }, { id: C, text: "Интернет" }, { id: B, text: "Громкий звук" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Без базы — бесконечность" }
 
@@ -164,9 +164,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "Что такое инвариант цикла?"
-  student_view: { options: [{ id: A, text: "Утверждение, верное до и после каждого прохода" }, { id: B, text: "Счётчик цикла" }, { id: C, text: "Условие выхода" }, { id: D, text: "Тело цикла" }] }
+  student_view: { options: [{ id: C, text: "Условие выхода" }, { id: B, text: "Счётчик цикла" }, { id: A, text: "Утверждение, верное до и после каждого прохода" }, { id: D, text: "Тело цикла" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Инвариант доказывает правильность" }
+  teacher_only: { answer: C, explanation: "Инвариант доказывает правильность" }
 
 - id: inf-11-algo-011
   class: 11
@@ -181,9 +181,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Что такое трассировка при отладке?"
-  student_view: { options: [{ id: A, text: "Отслеживание значений по шагам выполнения" }, { id: B, text: "Удаление программы" }, { id: C, text: "Ускорение компьютера" }, { id: D, text: "Печать учебника" }] }
+  student_view: { options: [{ id: D, text: "Печать учебника" }, { id: B, text: "Удаление программы" }, { id: C, text: "Ускорение компьютера" }, { id: A, text: "Отслеживание значений по шагам выполнения" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Видишь, где значения свернули не туда" }
+  teacher_only: { answer: D, explanation: "Видишь, где значения свернули не туда" }
 
 - id: inf-11-algo-012
   class: 11
@@ -198,7 +198,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Программа делит числа. Какой набор тестов — граничные значения?"
-  student_view: { options: [{ id: A, text: "Деление на ноль и отрицательные" }, { id: B, text: "Только 10 / 2" }, { id: C, text: "Только большие числа" }, { id: D, text: "Тесты не нужны" }] }
+  student_view: { options: [{ id: A, text: "Деление на ноль и отрицательные" }, { id: D, text: "Тесты не нужны" }, { id: B, text: "Только 10 / 2" }, { id: C, text: "Только большие числа" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Границы (ноль!) ломают чаще всего" }
 
@@ -215,9 +215,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
   prompt: "Что делает строка import math в программе?"
-  student_view: { options: [{ id: A, text: "Подключает библиотеку математических подпрограмм" }, { id: B, text: "Рисует графики" }, { id: C, text: "Удаляет числа" }, { id: D, text: "Выключает компьютер" }] }
+  student_view: { options: [{ id: B, text: "Рисует графики" }, { id: D, text: "Выключает компьютер" }, { id: A, text: "Подключает библиотеку математических подпрограмм" }, { id: C, text: "Удаляет числа" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Готовое и проверенное — подключай, а не пиши заново" }
+  teacher_only: { answer: C, explanation: "Готовое и проверенное — подключай, а не пиши заново" }
 
 - id: inf-11-algo-014
   class: 11
@@ -232,7 +232,949 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
   prompt: "Где хранить свои переиспользуемые подпрограммы?"
-  student_view: { options: [{ id: A, text: "В отдельном файле-модуле" }, { id: B, text: "В комментариях" }, { id: C, text: "В имени файла" }, { id: D, text: "Нигде" }] }
+  student_view: { options: [{ id: A, text: "В отдельном файле-модуле" }, { id: D, text: "Нигде" }, { id: C, text: "В имени файла" }, { id: B, text: "В комментариях" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Модуль подключается import, как стандартный" }
 
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
+
+- id: inf-11-algo-015
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Рассуждение без прогона"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11algo-01-analysis
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-auto], meta: [plan-actions] }
+  prompt: "Установите соответствие: приём анализа алгоритма — что он делает."
+  student_view: { left: ["Проследить структуру", "Восстановить предпоследний шаг", "Отсечь невозможное", "Проверить прямым прогоном"], right: ["что делает последний шаг и какие у него условия", "от результата — каким он мог получиться", "по ограничениям самого алгоритма", "найденные варианты — подставить в алгоритм"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Проследить структуру": "что делает последний шаг и какие у него условия", "Восстановить предпоследний шаг": "от результата — каким он мог получиться", "Отсечь невозможное": "по ограничениям самого алгоритма", "Проверить прямым прогоном": "найденные варианты — подставить в алгоритм" }, explanation: "Обратную задачу решают от результата к предыдущим шагам и обязательно проверяют прямым прогоном. Проследить структуру = что делает последний шаг и какие у него условия; Восстановить предпоследний шаг = от результата — каким он мог получиться; Отсечь невозможное = по ограничениям самого алгоритма; Проверить прямым прогоном = найденные варианты — подставить в алгоритм" }
+
+- id: inf-11-algo-016
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Негативный тест"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Что проверяет негативный тест?"
+  student_view: { options: [{ id: A, text: "Что на некорректных данных (пусто, ноль, текст вместо числа) программа сообщает об ошибке, а не выдаёт мусор" }, { id: B, text: "Что программа работает быстрее всех остальных" }, { id: D, text: "Что код программы написан аккуратно" }, { id: C, text: "Что результат программы всегда положительный" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Позитивные тесты проверяют верный результат, негативные — поведение при недопустимых данных." }
+
+- id: inf-11-algo-017
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Среднее и границы"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Дан список a = [2, 4, 6, 8]. Найдите среднее арифметическое элементов списка и количество элементов. Выведите два числа через пробел: сначала среднее, затем количество."
+  student_view: { language: python, template: "# Допиши код\n# a = [2, 4, 6, 8]\n# s = 0\n# for x in a:\n#     ...\nprint(среднее, количество)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [2, 4, 6, 8]\ns = 0\nfor x in a:\n    s = s + x\nprint(s // len(a), len(a))", expected_stdout: "5 4", explanation: "Сумма 20 делится на 4 элемента без остатка: 20 // 4 = 5, элементов 4." }
+
+- id: inf-11-algo-018
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Методы отладки"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Установите соответствие: метод отладки — что он делает."
+  student_view: { left: ["Трассировка", "Отладочный вывод", "Точка останова", "Тестирование границ"], right: ["таблица «шаг → значения переменных»", "печать промежуточных значений прямо в программу", "остановка программы на нужном шаге", "проверка крайних допустимых значений"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Трассировка": "таблица «шаг → значения переменных»", "Отладочный вывод": "печать промежуточных значений прямо в программу", "Точка останова": "остановка программы на нужном шаге", "Тестирование границ": "проверка крайних допустимых значений" }, explanation: "Отладка показывает, где именно значения свернули не туда. Трассировка = таблица «шаг → значения переменных»; Отладочный вывод = печать промежуточных значений прямо в программу; Точка останова = остановка программы на нужном шаге; Тестирование границ = проверка крайних допустимых значений" }
+
+- id: inf-11-algo-019
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Сумма цифр"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-03-digits
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-digits], meta: [plan-actions] }
+  prompt: "Найдите сумму цифр числа 9575. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [26], answer_text: "26", explanation: "Остатки 5, 7, 5, 9 от деления на 10 дают 5 → 12 → 17 → 26." }
+
+- id: inf-11-algo-020
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Перевод в систему с основанием P"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-03-digits
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-digits], meta: [plan-actions] }
+  prompt: "Переведите число 100 в восьмеричную систему счисления. Запишите только число (без подстрочных индексов)."
+  student_view: { base: 8 }
+  auto_check: { method: numeric_base, base: 8, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [100], answer_text: "144", explanation: "100 % 8 = 4, 100 // 8 = 12; 12 % 8 = 4, 12 // 8 = 1, 1 % 8 = 1. Читаем с конца: 144₈ = 64 + 32 + 4 = 100." }
+
+- id: inf-11-algo-021
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Двоичная запись циклом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-03-digits
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-digits], meta: [plan-actions] }
+  prompt: "Число n = 9575. Получите его двоичную запись последовательным делением: остаток n % 2 — очередная цифра, затем делим n на 2 целочисленно. Выведите полученную строку."
+  student_view: { language: python, template: "# Допиши цикл\nn = 9575\ndigits = ''\nwhile ...:\n    # digits — накапливаем в начало\n    ...\nprint(digits)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "n = 9575\ndigits = ''\nwhile n > 0:\n    digits = str(n % 2) + digits\n    n = n // 2\nprint(digits)", expected_stdout: "10010101100111", explanation: "9575 = 8192 + 1024 + 256 + 64 + 32 + 4 + 2 + 1, поэтому запись состоит из единиц и нулей в этих разрядах." }
+
+- id: inf-11-algo-022
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Сумма элементов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-04-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-seq], meta: [plan-actions] }
+  prompt: "Найдите сумму элементов последовательности 3, 7, 5, 2. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [17], answer_text: "17", explanation: "Накопитель начинаем с 0: 0 + 3 = 3, + 7 = 10, + 5 = 15, + 2 = 17." }
+
+- id: inf-11-algo-023
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Произведение элементов"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-04-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-seq], meta: [plan-actions] }
+  prompt: "Найдите произведение элементов последовательности 3, 7, 5, 2. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [210], answer_text: "210", explanation: "Накопитель произведения начинают с 1, а не с 0: 1 · 3 = 3, · 7 = 21, · 5 = 105, · 2 = 210." }
+
+- id: inf-11-algo-024
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Один проход, две величины"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-04-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-seq], meta: [plan-actions] }
+  prompt: "Дан список a = [3, -7, 5, -2, 0, 8]. За один проход найдите сумму всех элементов и количество положительных элементов. Выведите два числа через пробел: сначала сумму, затем количество."
+  student_view: { language: python, template: "# Допиши код\n# a = [3, -7, 5, -2, 0, 8]\n# s = 0\n# k = 0\nprint(s, k)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [3, -7, 5, -2, 0, 8]\ns = 0\nk = 0\nfor x in a:\n    s = s + x\n    if x > 0:\n        k = k + 1\nprint(s, k)", expected_stdout: "7 3", explanation: "Сумма 3 − 7 + 5 − 2 + 0 + 8 = 7, положительных элементов три: 3, 5 и 8. Оба результата — за один проход." }
+
+- id: inf-11-algo-025
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Перебор значений"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-05-enumeration
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-enum], meta: [plan-actions] }
+  prompt: "Сколько целых значений x в диапазоне от −20 до 20 обращают в ноль выражение x² − 5x + 6? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "Перебор даёт два корня: x = 2 и x = 3 (2 · 3 = 6, 2 + 3 = 5)." }
+
+- id: inf-11-algo-026
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Оценка числа проверок"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-05-enumeration
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-enum], meta: [plan-actions] }
+  prompt: "Перебираются сочетания двух величин: первая принимает 100 значений, вторая — 50. Сколько сочетаний проверит цикл с двумя вложенными циклами? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5000], answer_text: "5000", explanation: "Вложенные циклы проверяют n · m = 100 · 50 = 5000 сочетаний; при тысячах значений такой перебор уже недопустим." }
+
+- id: inf-11-algo-027
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Перебор цифр числа"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-05-enumeration
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-enum], meta: [plan-actions] }
+  prompt: "Найдите все трёхзначные числа, у которых третья цифра равна сумме первых двух (сумма не больше 9). Выведите каждое число с новой строки."
+  student_view: { language: python, template: "# Допиши вложенные циклы\nfor a in range(1, 10):\n    for b in range(10):\n        c = ...\n        if c <= 9:\n            print(100 * a + 10 * b + c)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "for a in range(1, 10):\n    for b in range(10):\n        c = a + b\n        if c <= 9:\n            print(100 * a + 10 * b + c)", expected_stdout: "101\n112\n123\n134\n145\n156\n167\n178\n189\n202\n213\n224\n235\n246\n257\n268\n279\n303\n314\n325\n336\n347\n358\n369\n404\n415\n426\n437\n448\n459\n505\n516\n527\n538\n549\n606\n617\n628\n639\n707\n718\n729\n808\n819\n909", explanation: "Для первой цифры a подходит 10 − a вариантов второй цифры, всего 9 + 8 + … + 1 = 45 чисел — перебор их и находит." }
+
+- id: inf-11-algo-028
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Число сравнений"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Сколько сравнений делает сортировка выбором для списка из 20 элементов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [190], answer_text: "190", explanation: "Сортировка выбором всегда делает n(n − 1)/2 = 20 · 19 / 2 = 190 сравнений — независимо от исходных данных." }
+
+- id: inf-11-algo-029
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сортировка выбором кодом"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Отсортируйте список [5, 3, 8, 1, 4] сортировкой выбором: на каждом шаге найдите минимум в остатке и поставьте на своё место, считая каждое сравнение элементов. Выведите сначала отсортированный список через пробел, затем на новой строке — число сравнений."
+  student_view: { language: python, template: "# Допиши сортировку выбором\n# a = [5, 3, 8, 1, 4]\n# n = len(a)\n# cmp = 0\nprint(*a)\nprint(cmp)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [5, 3, 8, 1, 4]\nn = len(a)\ncmp = 0\nfor i in range(n - 1):\n    m = i\n    for j in range(i + 1, n):\n        cmp = cmp + 1\n        if a[j] < a[m]:\n            m = j\n    a[i], a[m] = a[m], a[i]\nprint(*a)\nprint(cmp)", expected_stdout: "1 3 4 5 8\n10", explanation: "Сортировка выбором всегда делает n(n − 1)/2 = 5 · 4 / 2 = 10 сравнений, независимо от того, как расположены элементы." }
+
+- id: inf-11-algo-030
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Главная диагональ"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Дана матрица 3 × 3: 1 2 3; 4 5 6; 7 8 9. Найдите сумму элементов главной диагонали. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "У главной диагонали индексы равны: a[0][0] + a[1][1] + a[2][2] = 1 + 5 + 9 = 15." }
+
+- id: inf-11-algo-031
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Обе диагонали"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Дана матрица 3 × 3: [[2, 7, 1], [8, 5, 3], [4, 9, 6]]. Выведите сумму главной диагонали и сумму вторичной диагонали через пробел: сначала главную, затем вторичную."
+  student_view: { language: python, template: "# Допиши код\n# a = [[2, 7, 1], [8, 5, 3], [4, 9, 6]]\n# n = len(a)\n# s1 = 0\n# s2 = 0\nprint(s1, s2)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [[2, 7, 1], [8, 5, 3], [4, 9, 6]]\nn = len(a)\ns1 = 0\ns2 = 0\nfor i in range(n):\n    s1 = s1 + a[i][i]\n    s2 = s2 + a[i][n - 1 - i]\nprint(s1, s2)", expected_stdout: "13 10", explanation: "Главная диагональ: 2 + 5 + 6 = 13. Вторичная: 1 + 5 + 4 = 10 — у неё сумма индексов равна n − 1." }
+
+- id: inf-11-algo-032
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Длина строки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-str], meta: [plan-actions] }
+  prompt: "Сколько символов в слове «информатика»? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Функция len() считает символы строки: в слове «информатика» их 11." }
+
+- id: inf-11-algo-033
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Подсчёт символа"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-str], meta: [plan-actions] }
+  prompt: "Сколько раз буква «а» встречается в слове «барабан»? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Перебираем строку посимвольно и увеличиваем счётчик на втором, четвёртом и шестом символах — всего 3 раза." }
+
+- id: inf-11-algo-034
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Палиндромы"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-str], meta: [plan-actions] }
+  prompt: "Дан список слов: [\"довод\", \"компьютер\", \"шалаш\", \"питон\"]. Выведите те слова, которые читаются одинаково в обе стороны, каждое с новой строки. Сравнивайте слово с его разворотом s[::-1]."
+  student_view: { language: python, template: "# Допиши код\nwords = [\"довод\", \"компьютер\", \"шалаш\", \"питон\"]\nfor w in words:\n    if w == w[::-1]:\n        print(w)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "words = [\"довод\", \"компьютер\", \"шалаш\", \"питон\"]\nfor w in words:\n    if w == w[::-1]:\n        print(w)", expected_stdout: "довод\nшалаш", explanation: "Разворот s[::-1] даёт «довод» и «шалаш» — только эти слова совпадают с исходным; «компьютер» и «питон» — нет." }
+
+- id: inf-11-algo-035
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Поиск подстроки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-edit], meta: [plan-actions] }
+  prompt: "В слове «информатика» найдите позицию первого вхождения подстроки «мат» (индексы считаются с нуля). Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Подстрока начинается с шестой буквы, её индекс равен 5: и-н-ф-о-р-м, значит s[5:8] = «мат»." }
+
+- id: inf-11-algo-036
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Замена символа"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-edit], meta: [plan-actions] }
+  prompt: "В строке \"a-b-c-d\" замените все дефисы на плюсы и выведите результат. Строку соберите посимвольно: в цикле добавляйте к результату нужный символ."
+  student_view: { language: python, template: "# Допиши код\ns = 'a-b-c-d'\nres = ''\nfor ch in s:\n    if ch == '-':\n        res = ...\n    else:\n        res = res + ch\nprint(res)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "s = 'a-b-c-d'\nres = ''\nfor ch in s:\n    if ch == '-':\n        res = res + '+'\n    else:\n        res = res + ch\nprint(res)", expected_stdout: "a+b+c+d", explanation: "Строка в Python неизменяема, поэтому новую собирают в отдельной переменной res: дефисы заменяются плюсами, остальные символы переносятся как есть." }
+
+- id: inf-11-algo-037
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Все вхождения"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-edit], meta: [plan-actions] }
+  prompt: "Найдите все позиции буквы «а» в слове «ананас» и выведите их через пробел. Индексы считаются с нуля."
+  student_view: { language: python, template: "# Допиши код\ns = 'ананас'\npos = []\nfor i in range(len(s)):\n    if s[i] == ...:\n        pos.append(i)\nprint(*pos)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "s = 'ананас'\npos = []\nfor i in range(len(s)):\n    if s[i] == 'а':\n        pos.append(i)\nprint(*pos)", expected_stdout: "0 2 4", explanation: "Сравниваем каждый символ с образцом и запоминаем его индекс: буква «а» стоит на позициях 0, 2 и 4." }
+
+- id: inf-11-algo-038
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сумма цифр рекурсивно"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: apply
+  points: 3
+  lesson: 11algo-10-subs
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
+  prompt: "Напишите рекурсивную функцию суммы цифр: для n = 0 вернуть 0, иначе вернуть n % 10 плюс сумму цифр от n // 10. Вызовите её для числа 9575 и выведите результат."
+  student_view: { language: python, template: "# Допиши рекурсивную функцию\ndef сумма_цифр(n):\n    if n == 0:\n        return 0\n    return n % 10 + сумма_цифр(n // 10)\n\n\nprint(сумма_цифр(9575))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "def сумма_цифр(n):\n    if n == 0:\n        return 0\n    return n % 10 + сумма_цифр(n // 10)\n\n\nprint(сумма_цифр(9575))", expected_stdout: "26", explanation: "Базовый случай обязателен: без него рекурсия не остановится. 5 + 7 + 5 + 9 = 26." }
+
+- id: inf-11-algo-039
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Сложность поиска"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-11-complexity
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Какая сложность у линейного поиска элемента в неотсортированном массиве?"
+  student_view: { options: [{ id: B, text: "O(log n)" }, { id: C, text: "O(1)" }, { id: A, text: "O(n)" }, { id: D, text: "O(n²)" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Линейный поиск просматривает элементы подряд, поэтому растёт вместе с n; O(log n) — это бинарный поиск по отсортированному массиву." }
+
+- id: inf-11-algo-040
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Рост вложенных циклов"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11algo-11-complexity
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Сколько раз выполнится тело двух вложенных циклов, каждый из которых проходит по 1000 элементов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1000000], answer_text: "1000000", explanation: "Внутренний цикл выполняется целиком для каждого значения внешнего: 1000 · 1000 = 1 000 000 — это рост O(n²)." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank2.mjs ====
+
+- id: inf-11-algo-041
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Число обменов"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Список: 7, 2, 9, 4, 1, 8. Сколько обменов сделает сортировка выбором, если на каждом шаге найденный минимум остатка меняется местами с элементом на текущей позиции? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Сортировка выбором: 7, 2, 9, 4, 1, 8 → 1, 2, 4, 7, 8, 9. Обмен происходит только там, где минимум стоял не на текущей позиции: таких обменов 4. Сравнений же она делает всегда n(n − 1)/2 = 15 — сравнений и обменов путать нельзя, это разные величины." }
+
+- id: inf-11-algo-042
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сортировка слиянием"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Слейте два отсортированных списка 1, 4, 7, 9 и 2, 3, 8 в один отсортированный список и посчитайте число сравнений при слиянии. Сравнивайте текущие элементы и берйте меньший, пока оба списка не кончатся. Выведите сначала слитый список через пробел, затем на новой строке — число сравнений."
+  student_view: { language: python, template: "# Допиши слияние с подсчётом сравнений\nleft = [1, 4, 7, 9]\nright = [2, 3, 8]\nres = []\ni = 0\nj = 0\ncmp = 0\nwhile ...:\n    # сравниваем текущие элементы\n    ...\nprint(*res)\nprint(cmp)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "left = [1, 4, 7, 9]\nright = [2, 3, 8]\nres = []\ni = 0\nj = 0\ncmp = 0\nwhile i < len(left) and j < len(right):\n    cmp = cmp + 1\n    if left[i] <= right[j]:\n        res.append(left[i])\n        i = i + 1\n    else:\n        res.append(right[j])\n        j = j + 1\nwhile i < len(left):\n    res.append(left[i])\n    i = i + 1\nwhile j < len(right):\n    res.append(right[j])\n    j = j + 1\nprint(*res)\nprint(cmp)", expected_stdout: "1 2 3 4 7 8 9\n6", explanation: "Слияние даёт 1, 2, 3, 4, 7, 8, 9 за 6 сравнений. Когда один список кончился, оставшиеся элементы другого просто дописывают — сравнений для них не нужно, поэтому счётчик не растёт. Сортировка слиянием всегда работает примерно за n log n сравнений, но требует дополнительной памяти для промежуточного массива." }
+
+- id: inf-11-algo-043
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сумма столбца"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Матрица 3 × 3:\n3 1 4\n5 9 2\n8 6 7\nНайдите сумму элементов второго столбца. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16], answer_text: "16", explanation: "Второй столбец — это 1, 9, 6 (индекс 1 в каждой строке): 1 + 9 + 6 = 16. Столбец обходят внешним циклом по номеру столбца j и вложенным — по номеру строки i, то есть наоборот, чем строку." }
+
+- id: inf-11-algo-044
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Максимум и его позиция"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Дана матрица a = [[3, 8, 2], [7, 4, 9], [5, 1, 6]]. Найдите наибольший элемент и номер его строки и столбца. Выведите три числа через пробел: сначала сам элемент, затем номер строки и номер столбца (нумерация с единицы)."
+  student_view: { language: python, template: "# Допиши поиск максимума с запоминанием индексов\na = [[3, 8, 2], [7, 4, 9], [5, 1, 6]]\nbest = a[0][0]\nbi = 0\nbj = 0\nfor i in range(len(a)):\n    for j in range(len(a[i])):\n        # сравниваем с текущим максимумом\n        ...\nprint(best, bi + 1, bj + 1)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [[3, 8, 2], [7, 4, 9], [5, 1, 6]]\nbest = a[0][0]\nbi = 0\nbj = 0\nfor i in range(len(a)):\n    for j in range(len(a[i])):\n        if a[i][j] > best:\n            best = a[i][j]\n            bi = i\n            bj = j\nprint(best, bi + 1, bj + 1)", expected_stdout: "9 2 3", explanation: "Максимум нашли двойным циклом: при новом большем значении запоминаем не только его, но и оба индекса. Индексы при этом нумеруются с нуля, поэтому для вывода с единицы прибавляют 1: a[1][2] — это вторая строка, третий столбец, значение 9." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-algodb-bank3.mjs ====
+
+- id: inf-11-algo-045
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Выход за границу списка"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Программа ищет наибольший элемент списка из 5 чисел так: for i in range(len(a)): если a[i + 1] > best, best = a[i + 1]. Что произойдёт?"
+  student_view: { options: [{ id: D, text: "Программа зациклится и будет обращаться к a[5], a[6], a[7] и дальше" }, { id: C, text: "Программа выведет 0: несуществующий элемент считается нулём" }, { id: B, text: "Программа выведет правильный максимум: лишний шаг цикла ничего не меняет" }, { id: A, text: "Программа завершится с ошибкой: при i = 4 обращение к a[5] выходит за границу списка" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Обращение идёт к элементу с индексом i + 1, а цикл доходит до i = 4. Тогда программа просит a[5], а такого элемента нет — Python сообщает IndexError. Классическая ошибка на единицу: либо цикл строят от 0 до n − 2, либо последний элемент обрабатывают отдельно." }
+
+- id: inf-11-algo-046
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Ошибка начального значения"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Программа ищет наибольший элемент списка a = [-5, -3, -8], но сначала присваивает best = 0, а затем сравнивает с ним каждый элемент. Какое значение она выведет? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [0], answer_text: "0", explanation: "Правильный ответ — -3, но ни один отрицательный элемент не больше нуля, поэтому best так и останется равным 0. Защита простая: первым берут сам элемент (best = a[0]) либо отдельно проверяют, что список не пуст. Тест из одних отрицательных чисел этот случай ловит сразу." }
+
+- id: inf-11-algo-047
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Трассировка до остановки"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-02-debug
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
+  prompt: "Дан список a = [8, 15, 3, 22, 9, 30]. Программа накапливает сумму и останавливается, как только сумма превысила 50. Выполните её и выведите через пробел номер шага, на котором произошла остановка, и сумму на этом шаге."
+  student_view: { language: python, template: "# Считайте сумму и остановитесь, как только она стала больше 50\na = [8, 15, 3, 22, 9, 30]\ns = 0\nstep = 0\nfor x in a:\n    s = ...\n    step = ...\n    if s > 50:\n        break\nprint(step, s)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [8, 15, 3, 22, 9, 30]\ns = 0\nstep = 0\nfor x in a:\n    s = s + x\n    step = step + 1\n    if s > 50:\n        break\nprint(step, s)", expected_stdout: "5 57", explanation: "Промежуточные суммы: 1: 8; 2: 23; 3: 26; 4: 48; 5: 57. Порог 50 превышен только на пятом шаге — до этого сумма была 48. Прерывание цикла командой break выводит программу из цикла сразу, а счётчик шагов при этом уже увеличен." }
+
+- id: inf-11-algo-048
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Произведение ненулевых цифр"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-03-digits
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-digits], meta: [plan-actions] }
+  prompt: "В числе 5074 найдите произведение его ненулевых цифр. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [140], answer_text: "140", explanation: "Цифры числа: 5, 0, 7, 4. Нулевые цифры в произведение не входят — иначе результат сразу стал бы нулём, поэтому их пропускают. Остальные перемножают: 5 · 7 · 4 = 140." }
+
+- id: inf-11-algo-049
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Член арифметической прогрессии"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-04-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-seq], meta: [plan-actions] }
+  prompt: "Арифметическая прогрессия начинается с 7, а её разность равна 4. Чему равен сотый член прогрессии? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [403], answer_text: "403", explanation: "Общий член арифметической прогрессии: aₙ = a₁ + (n − 1) · d. Для сотого члена это a₁ + 99 · d = 7 + 99 · 4 = 403. Множитель именно 99, а не 100: между первым и сотым членом всего 99 шагов." }
+
+- id: inf-11-algo-050
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Перебор с условием на цифры"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-05-enumeration
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-enum], meta: [plan-actions] }
+  prompt: "Сколько существует трёхзначных чисел, у которых все три цифры различны? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [648], answer_text: "648", explanation: "Перебор трёх вложенных циклов даёт 648. Проверка формулой: первую цифру выбираем 9 способами (1–9), вторую — 9 способами (0–9, кроме первой цифры), третью — 8 способами. Итого 9 · 9 · 8 = 648. Ноль первой цифрой быть не может — иначе число окажется двузначным." }
+
+- id: inf-11-algo-051
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Один проход пузырьковой сортировки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "За один полный проход пузырьковой сортировки по списку из 10 элементов сколько раз сравниваются соседние элементы? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Соседних пар в списке из 10 элементов ровно на одну меньше, чем элементов: 10 − 1 = 9 (пары 0–1, 1–2, …, 8–9). Именно столько сравнений делает внутренний цикл за один проход, а за весь алгоритм — не больше n(n − 1)/2." }
+
+- id: inf-11-algo-052
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сортировка подсчётом"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Чем отличается сортировка подсчётом от остальных способов сортировки?"
+  student_view: { options: [{ id: C, text: "Сортирует только числа, а строки оставляет в исходном порядке" }, { id: D, text: "Удаляет из списка повторяющиеся элементы" }, { id: B, text: "Считает число сравнений и печатает его в конце работы" }, { id: A, text: "Выстраивает элементы по количеству их значений, не сравнивая элементы попарно" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Сортировка подсчётом сначала подсчитывает, сколько раз встречается каждое значение, а затем выкладывает элементы по этим частотам. Сравнения элементов между собой при этом не нужны совсем, поэтому она работает за O(n + k), где k — число различных значений. Побочная сторона: значения должны быть небольшими целыми числами." }
+
+- id: inf-11-algo-053
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сортировка вставками"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Отсортируйте список [5,2,8,1,9] сортировкой вставками: просматривайте элементы слева направо и вставляйте каждый в уже отсортированную часть, сдвигая элементы вправо. Сравнением считайте каждое срабатывание условия «элемент больше вставляемого». Выведите сначала отсортированный список через пробел, затем на новой строке — число сравнений."
+  student_view: { language: python, template: "# Сортировка вставками со счётом сравнений\na = [5,2,8,1,9]\nn = len(a)\ncmp = 0\nfor i in range(1, n):\n    key = a[i]\n    j = i - 1\n    while ...:\n        # сдвигаем элемент вправо и считаем сравнение\n        ...\n    a[j + 1] = key\nprint(*a)\nprint(cmp)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [5, 2, 8, 1, 9]\nn = len(a)\ncmp = 0\nfor i in range(1, n):\n    key = a[i]\n    j = i - 1\n    while j >= 0 and a[j] > key:\n        a[j + 1] = a[j]\n        j = j - 1\n        cmp = cmp + 1\n    a[j + 1] = key\nprint(*a)\nprint(cmp)", expected_stdout: "1 2 5 8 9\n4", explanation: "Сортировка вставками дала 1, 2, 5, 8, 9 всего за 4 сравнения, а не 10: элемент 2 встал на место после одного сдвига, 8 — без единого сравнения, а 1 сдвинул за собой три элемента. В худшем случае (обратный порядок) сравнений будет n(n − 1)/2 = 10, то есть столько же, сколько у сортировки выбором." }
+
+- id: inf-11-algo-054
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сортировка по ключу"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-06-sorting
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
+  prompt: "Даны пары (№ работы, балл): (1, 70), (2, 90), (3, 70), (4, 50). Отсортируйте их пузырьковой сортировкой по убыванию балла: меняйте местами соседние пары, только если балл слева меньше балла справа. Выведите пары построчно — сначала номер, затем балл, — в полученном порядке, а на последней строке — число обменов."
+  student_view: { language: python, template: "# Сортировка пар по второму элементу — по убыванию\nitems = [(1, 70), (2, 90), (3, 70), (4, 50)]\nn = len(items)\nswaps = 0\nfor i in range(n - 1):\n    for j in range(0, n - 1 - i):\n        # сравниваем баллы, а не номера\n        ...\nfor it in items:\n    print(it[0], it[1])\nprint(swaps)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "items = [(1, 70), (2, 90), (3, 70), (4, 50)]\nn = len(items)\nswaps = 0\nfor i in range(n - 1):\n    for j in range(0, n - 1 - i):\n        # слева меньше балл, чем справа — меняем пары местами\n        if items[j][1] < items[j + 1][1]:\n            items[j], items[j + 1] = items[j + 1], items[j]\n            swaps = swaps + 1\nfor it in items:\n    print(it[0], it[1])\nprint(swaps)", expected_stdout: "2 90\n1 70\n3 70\n4 50\n1", explanation: "Первый же проход ставит на место пару (2, 90), дальше обменов нет — всего 1 обмен. Важная деталь: пары (1, 70) и (3, 70) не поменялись местами, потому что мы меняем элементы только при строгом неравенстве. Именно поэтому пузырьковая сортировка устойчива: элементы с равными ключами сохраняют взаимный порядок." }
+
+- id: inf-11-algo-055
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Номер элемента при построчном обходе"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Матрица 4 × 3 обходится построчно: сначала целиком первая строка, затем вторая и так далее, а внутри строки элементы идут слева направо. Какой номер получит элемент в третьей строке второго столбца, если нумерация начинается с 1? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Перед третьей строкой уже пройдено (3 − 1) · 3 = 6 элементов, а внутри строки до второго столбца добавляются ещё 2. Итого 6 + 2 = 8. Формула работает именно для построчного обхода: при обходе по столбцам роли строки и столбца меняются местами." }
+
+- id: inf-11-algo-056
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Число элементов под диагональю"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "В матрице 5 × 5 сколько элементов расположено строго ниже главной диагонали? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "Всего элементов 25, из них 5 лежат на главной диагонали. Остальные делятся поровну между областями выше и ниже диагонали: (25 − 5) / 2 = 10. Проверка построчно: под диагональю в строках 2, 3, 4, 5 лежит соответственно 1, 2, 3, 4 элемента, а 1 + 2 + 3 + 4 = 10." }
+
+- id: inf-11-algo-057
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сумма вне главной диагонали"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Сумма всех элементов матрицы 4 × 4 равна 36, а на главной диагонали стоят числа 1, 2, 3, 4. Чему равна сумма элементов, расположенных вне главной диагонали? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [26], answer_text: "26", explanation: "На главной диагонали сумма 1 + 2 + 3 + 4 = 10. Всего элементов 36, поэтому вне диагонали остаётся 36 − 10 = 26. Так считают быстрее, чем обходя матрицу заново: известную часть вычитают." }
+
+- id: inf-11-algo-058
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Строка с наибольшей суммой"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-07-matrix
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
+  prompt: "Дана матрица a = [[1, 2, 3], [9, 8, 7], [4, 4, 4], [2, 3, 4]]. Найдите строку с наибольшей суммой элементов. Выведите номер этой строки (нумерация с единицы) и её сумму через пробел."
+  student_view: { language: python, template: "# Найдите строку с наибольшей суммой элементов\na = [[1, 2, 3], [9, 8, 7], [4, 4, 4], [2, 3, 4]]\nbest_i = 0\nbest_s = -1\nfor i in range(len(a)):\n    s = 0\n    for j in range(len(a[i])):\n        # накапливаем сумму строки\n        ...\n    if s > best_s:\n        best_s = ...\n        best_i = ...\nprint(best_i + 1, best_s)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "a = [[1, 2, 3], [9, 8, 7], [4, 4, 4], [2, 3, 4]]\nbest_i = 0\nbest_s = -1\nfor i in range(len(a)):\n    s = 0\n    for j in range(len(a[i])):\n        s = s + a[i][j]\n    if s > best_s:\n        best_s = s\n        best_i = i\nprint(best_i + 1, best_s)", expected_stdout: "2 24", explanation: "Суммы строк: строка 1 — 6; строка 2 — 24; строка 3 — 12; строка 4 — 9. Наибольшая у второй строки, поэтому ответ 2 и 24. Начальное значение best_s взяли равным −1, а не 0: иначе матрица из одних нулей или отрицательных чисел осталась бы нерассмотренной." }
+
+- id: inf-11-algo-059
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Длина строки из f-строки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-strings], meta: [plan-actions] }
+  prompt: "В программе заданы имя «Олег» и возраст 17, а строка собирается так: f'Имя: {name}, возраст: {age}'. Сколько символов окажется в полученной строке? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [22], answer_text: "22", explanation: "Подстановка в f-строку даёт «Имя: Олег, возраст: 17». Считаем: «Имя: » — 5 символов, «Олег» — 4, запятая — 1, пробел — 1, «возраст:» — 8, пробел — 1, «17» — 2. Всего 22 символа с учётом пробелов и знаков препинания — функция len() считает и их тоже." }
+
+- id: inf-11-algo-060
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Подсчёт без учёта регистра"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-strings], meta: [plan-actions] }
+  prompt: "В строке «Объектно-ориентированное программирование» сколько раз встречается буква «о» в любом регистре — строчная «о» и прописная «О» вместе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "Чтобы не считать дважды, строку сначала приводят к одному регистру: s = s.lower(). После этого буква «о» встречается 7 раз. Прямое сравнение s[i] == 'о' на исходном тексте нашло бы только строчные буквы, а заглавная «О» в начале слова потерялась бы." }
+
+- id: inf-11-algo-061
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сборка строки через f-строку"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-08-strings
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-strings], meta: [plan-actions] }
+  prompt: "Дано слово word = «информатика». Соберите строку вида «<слово> (<количество символов> символов)» с помощью f-строки и выведите её."
+  student_view: { language: python, template: "# Соберите строку через f-строку\nword = 'информатика'\ntext = ...\nprint(text)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "word = 'информатика'\ntext = f'{word} ({len(word)} символов)'\nprint(text)", expected_stdout: "информатика (11 символов)", explanation: "Внутри фигурных скобок f-строки можно писать любое выражение — здесь вызов len(word). Так строка собирается без склейки через плюс и без отдельной переменной для длины. Пробелы вокруг скобок пишут прямо в шаблоне строки." }
+
+- id: inf-11-algo-062
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Подсчёт буквы в строке"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-text], meta: [plan-actions] }
+  prompt: "В строке «ООО Ромашка» сколько раз встречается буква «о» — строчная и прописная вместе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Приводим строку к нижнему регистру и считаем: три «о» в начале плюс одно «о» в слове «ромашка» — всего 4. Отдельный подсчёт по регистрам дал бы другое число, поэтому для такого вопроса регистр всегда нормализуют." }
+
+- id: inf-11-algo-063
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Удаление символов по условию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-text], meta: [plan-actions] }
+  prompt: "Из строки «питон-2019» удалили все цифры. Сколько символов осталось в строке? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Удаляются цифры 2, 0, 1, 9 — это 4 символа из 10. Остаётся «питон-», то есть 6 символов. Длина строки не равна числу слов: считаются все символы, включая дефис." }
+
+- id: inf-11-algo-064
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Замена всех вхождений"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-09-text-edit
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-text], meta: [plan-actions] }
+  prompt: "В строке «мама мыла раму, мама помогала» замените все вхождения слова «мама» на слово «мать» и выведите полученную строку, а на новой строке — число сделанных замен."
+  student_view: { language: python, template: "# Замените все вхождения и посчитайте их количество\ns = 'мама мыла раму, мама помогала'\n# число вхождений подстроки\ncnt = ...\n# замена всех вхождений сразу\nprint(...)\nprint(cnt)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "s = 'мама мыла раму, мама помогала'\ncnt = s.count('мама')\nprint(s.replace('мама', 'мать'))\nprint(cnt)", expected_stdout: "мать мыла раму, мать помогала\n2", explanation: "Метод replace заменяет сразу все вхождения, а count заранее говорит, сколько их было: 2. Результат нужно присвоить или напечатать — строки в Python неизменяемы, и просто вызвав replace без присваивания, мы потеряли бы правки." }
+
+- id: inf-11-algo-065
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сложность двоичного поиска"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-11-complexity
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Какая сложность у двоичного (бинарного) поиска в отсортированном массиве?"
+  student_view: { options: [{ id: B, text: "O(n): просматриваются все элементы подряд" }, { id: C, text: "O(n²): проверяются все пары элементов" }, { id: D, text: "O(1): поиск занимает ровно одно действие" }, { id: A, text: "O(log n): на каждом шаге отбрасывается половина диапазона" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Двоичный поиск сравнивает элемент с серединой диапазона и отбрасывает половину: 1000 элементов превращаются в 500, 250 и так далее. Диапазон падает вдвое на каждом шаге, поэтому время растёт как O(log n). Линейный поиск, который просматривает элементы подряд, требует O(n) сравнений." }
+
+- id: inf-11-algo-066
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Сравнения в худшем случае"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-11-complexity
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Сколько сравнений соседних элементов сделает пузырьковая сортировка в худшем случае для списка из 50 элементов, расположенных в обратном порядке? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1225], answer_text: "1225", explanation: "В обратном порядке обмен происходит на каждом сравнении, поэтому делается максимум: n(n − 1)/2 = 50 · 49 / 2 = 1225. Это рост O(n²) — при 5000 элементах сравнений стало бы уже около пяти миллионов, поэтому большие массивы сортируют слиянием или быстрой сортировкой." }
+
+- id: inf-11-algo-067
+  class: 11
+  topic: "Сортировки и структуры"
+  subtopic: "Как растёт работа вложенного цикла"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-11-complexity
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
+  prompt: "Вложенный цикл считает пары: внешний проходит по n значениям, внутренний — тоже по n. Выполните его для n = 10, 20, 40 и выведите для каждого значения через пробел само n и число выполнений тела цикла (строка на каждое значение)."
+  student_view: { language: python, template: "# Измерьте работу вложенного цикла\nfor n in [10, 20, 40]:\n    cnt = 0\n    for i in range(n):\n        for j in range(n):\n            # одно выполнение тела цикла\n            ...\n    print(n, cnt)" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "for n in [10, 20, 40]:\n    cnt = 0\n    for i in range(n):\n        for j in range(n):\n            cnt = cnt + 1\n    print(n, cnt)", expected_stdout: "10 100\n20 400\n40 1600", explanation: "Получилось 10 → 20 → 40 элементов работы: 100 → 400 → 1600. При каждом удвоении n число операций увеличивается вчетверо — это и есть признак роста O(n²). Линейный алгоритм на тех же данных дал бы 10 → 20 → 40." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11final-bank3.mjs ====
+
+- id: inf-11-algo-068
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Наибольшая цифра числа"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11algo-03-digits
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-digits], meta: [plan-actions] }
+  prompt: "Найдите наибольшую цифру числа 7395. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Цифры числа 7395: 7, 3, 9, 5. Наибольшая из них — 9." }
+
+- id: inf-11-algo-069
+  class: 11
+  topic: "Анализ алгоритмов"
+  subtopic: "Первый член с условием"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11algo-04-sequence
+  fgos_requirement: 1.4
+  fgos_element: 1.5
+  fgos: { subject: [inf-11-algo-seq], meta: [plan-actions] }
+  prompt: "Дана последовательность: 3, 7, 12, 18, 25, 33. Найдите номер первого члена, который больше 20. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Проверяем члены по порядку: 3, 7, 12, 18 — все не больше 20, а 25 > 20. Первый член, больший 20, — 5-й." }

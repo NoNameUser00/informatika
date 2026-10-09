@@ -1,19 +1,185 @@
 {
   "test_code": "algo-control-v1",
-  "variant": "v1",
-  "max_score": 16,
-  "instruction": "Отвечайте точно. В числовых ответах запишите только число.",
+  "kind": "control",
+  "grade": "8",
+  "title": "Контрольная: Алгоритмы и программирование",
+  "instruction": "Отвечайте точно. Код задаётся в поле ответа, запускается кнопкой. В числовых ответах запишите только число.",
   "page_size": 5,
-  "tasks": [
+  "variant_count": 30,
+  "per_variant": 20,
+  "final": false,
+  "ktp_to": null,
+  "sections": [
     {
-      "id": "inf-8-algo-003",
+      "title": "Алгоритмы и исполнители, КТП 13–14",
+      "ktp": [
+        {
+          "from": 13,
+          "to": 14
+        }
+      ],
+      "task_ids": [
+        "inf-8-algo-001",
+        "inf-8-algo-002",
+        "inf-8-algo-004",
+        "inf-8-algo-005",
+        "inf-8-algo-021",
+        "inf-8-algo-006",
+        "inf-8-algo-007",
+        "inf-8-algo-019",
+        "inf-8-algo-020"
+      ]
+    },
+    {
+      "title": "Основы языка программирования, КТП 15–17",
+      "ktp": [
+        {
+          "from": 15,
+          "to": 17
+        }
+      ],
+      "task_ids": [
+        "inf-8-code-007",
+        "inf-8-code-008",
+        "inf-8-code-018",
+        "inf-8-algo-024",
+        "inf-8-algo-063",
+        "inf-8-algo-071",
+        "inf-8-algo-028",
+        "inf-8-algo-064",
+        "inf-8-algo-072",
+        "inf-8-code-019"
+      ]
+    },
+    {
+      "title": "Следование, ветвление, циклы, КТП 18–25",
+      "ktp": [
+        {
+          "from": 18,
+          "to": 25
+        }
+      ],
+      "task_ids": [
+        "inf-8-algo-009",
+        "inf-8-algo-010",
+        "inf-8-algo-032",
+        "inf-8-algo-029",
+        "inf-8-algo-030",
+        "inf-8-algo-073",
+        "inf-8-algo-033",
+        "inf-8-algo-012",
+        "inf-8-algo-037",
+        "inf-8-algo-040",
+        "inf-8-algo-041",
+        "inf-8-algo-042",
+        "inf-8-algo-043",
+        "inf-8-algo-044",
+        "inf-8-algo-045",
+        "inf-8-code-022"
+      ]
+    },
+    {
+      "title": "Программирование циклов и строк, КТП 26–34",
+      "ktp": [
+        {
+          "from": 26,
+          "to": 34
+        }
+      ],
+      "task_ids": [
+        "inf-8-code-009",
+        "inf-8-code-010",
+        "inf-8-algo-049",
+        "inf-8-code-006",
+        "inf-8-code-011",
+        "inf-8-algo-018",
+        "inf-8-code-013",
+        "inf-8-code-017",
+        "inf-8-algo-048",
+        "inf-8-algo-056",
+        "inf-8-code-031",
+        "inf-8-algo-046",
+        "inf-8-code-023",
+        "inf-8-algo-052",
+        "inf-8-algo-053",
+        "inf-8-algo-054",
+        "inf-8-algo-050"
+      ]
+    },
+    {
+      "title": "Анализ результатов алгоритма, КТП 35–36",
+      "ktp": [
+        {
+          "from": 35,
+          "to": 36
+        }
+      ],
+      "task_ids": [
+        "inf-8-algo-057",
+        "inf-8-algo-058",
+        "inf-8-algo-059",
+        "inf-8-algo-065",
+        "inf-8-algo-069",
+        "inf-8-algo-060",
+        "inf-8-algo-067",
+        "inf-8-algo-070"
+      ]
+    }
+  ],
+  "pool": [
+    {
+      "id": "inf-8-algo-001",
       "lesson": "alg-01-performers",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 21212 над числом 1. Что получится? Запишите только число.",
-      "base": 10,
-      "expected": 15,
-      "key": "15"
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько свойств алгоритма выделяют в школьном курсе?",
+      "options": [
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-002",
+      "lesson": "alg-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое формальный исполнитель?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Выполняет только одну команду"
+        },
+        {
+          "id": "B",
+          "text": "Понимает смысл задачи и рассуждает"
+        },
+        {
+          "id": "A",
+          "text": "Выполняет команды всегда одинаково, не вникая в смысл"
+        },
+        {
+          "id": "D",
+          "text": "Работает без системы команд"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-algo-004",
@@ -53,10 +219,20 @@
       "key": "A"
     },
     {
+      "id": "inf-8-algo-021",
+      "lesson": "alg-01-performers",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет алгоритм 212212 над числом 3. Что получится? Запишите только число.",
+      "base": 10,
+      "expected": 213,
+      "key": "213"
+    },
+    {
       "id": "inf-8-algo-006",
       "lesson": "alg-02-notation",
       "type": "matching",
-      "points": 2,
+      "points": 1,
       "prompt": "Установите соответствие: фигура блок-схемы — её назначение.",
       "left": [
         "Овал",
@@ -79,124 +255,6 @@
       "key": "Овал=начало и конец, Параллелограмм=ввод и вывод, Прямоугольник=действие, Ромб=условие"
     },
     {
-      "id": "inf-8-algo-010",
-      "lesson": "alg-03-branching",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Алгоритм: если x чётное, то x := x / 2, иначе x := x + 1. Что будет при x = 7?",
-      "options": [
-        {
-          "id": "A",
-          "text": "x = 8"
-        },
-        {
-          "id": "B",
-          "text": "x = 3"
-        },
-        {
-          "id": "C",
-          "text": "x = 7"
-        },
-        {
-          "id": "D",
-          "text": "x = 14"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-8-algo-011",
-      "lesson": "alg-07-while",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Делением вычитанием найдите частное q от деления 20 на 6. Запишите только число.",
-      "base": 10,
-      "expected": 3,
-      "key": "3"
-    },
-    {
-      "id": "inf-8-algo-002",
-      "lesson": "alg-01-performers",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "Что такое формальный исполнитель?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Выполняет команды всегда одинаково, не вникая в смысл"
-        },
-        {
-          "id": "B",
-          "text": "Понимает смысл задачи и рассуждает"
-        },
-        {
-          "id": "C",
-          "text": "Выполняет только одну команду"
-        },
-        {
-          "id": "D",
-          "text": "Работает без системы команд"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-8-algo-012",
-      "lesson": "alg-07-while",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
-      "options": [
-        {
-          "id": "A",
-          "text": "До выполнения тела"
-        },
-        {
-          "id": "B",
-          "text": "После выполнения тела"
-        },
-        {
-          "id": "C",
-          "text": "В середине тела"
-        },
-        {
-          "id": "D",
-          "text": "Не проверяется"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-8-algo-009",
-      "lesson": "alg-03-branching",
-      "type": "single_choice",
-      "points": 1,
-      "prompt": "В какой форме ветвления при ложном условии не выполняется ничего?",
-      "options": [
-        {
-          "id": "A",
-          "text": "В полной"
-        },
-        {
-          "id": "B",
-          "text": "В неполной"
-        },
-        {
-          "id": "C",
-          "text": "В обеих"
-        },
-        {
-          "id": "D",
-          "text": "Ни в какой"
-        }
-      ],
-      "correct": "B",
-      "key": "B"
-    },
-    {
       "id": "inf-8-algo-007",
       "lesson": "alg-02-notation",
       "type": "single_choice",
@@ -208,20 +266,2984 @@
           "text": "Положить в x старое x плюс 1"
         },
         {
+          "id": "D",
+          "text": "Цикл по x"
+        },
+        {
           "id": "B",
           "text": "Утверждение, что x равен x + 1"
         },
         {
           "id": "C",
           "text": "Сравнение x с x + 1"
-        },
-        {
-          "id": "D",
-          "text": "Цикл по x"
         }
       ],
       "correct": "A",
       "key": "A"
+    },
+    {
+      "id": "inf-8-algo-019",
+      "lesson": "alg-02-notation",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Было x = 2, y = 5. Выполнили «x := x + y; y := x − y». Чему равен y? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    },
+    {
+      "id": "inf-8-algo-020",
+      "lesson": "alg-02-notation",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое трассировочная таблица?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Значения переменных по шагам выполнения"
+        },
+        {
+          "id": "B",
+          "text": "Список учеников"
+        },
+        {
+          "id": "C",
+          "text": "Расписание уроков"
+        },
+        {
+          "id": "D",
+          "text": "Меню столовой"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-code-007",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Строка 'ab', повторённая 3 раза через умножение, даст 'ababab'. Выведи её.",
+      "template": "# Допиши код: выведи 'ab' трижды\ns = 'ab'\nprint(...)",
+      "expected": "ababab",
+      "key": "ababab"
+    },
+    {
+      "id": "inf-8-code-008",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи числовой код символа 'A' функцией ord().",
+      "template": "# Допиши код: код символа 'A'\nprint(...)",
+      "expected": "65",
+      "key": "65"
+    },
+    {
+      "id": "inf-8-code-018",
+      "lesson": "py-01-basics",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Выведи треугольник из решёток: в первой строке одна решётка, во второй — три, в третьей — пять.",
+      "template": "# Решётки строятся умножением строки на число\nfor i in range(3):\n    print(...)",
+      "expected": "#\n###\n#####",
+      "key": "#\n###\n#####"
+    },
+    {
+      "id": "inf-8-algo-024",
+      "lesson": "py-05-data",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какой тип данных у значения '12' в Python?",
+      "options": [
+        {
+          "id": "A",
+          "text": "int"
+        },
+        {
+          "id": "D",
+          "text": "bool"
+        },
+        {
+          "id": "B",
+          "text": "float"
+        },
+        {
+          "id": "C",
+          "text": "str"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-063",
+      "lesson": "py-05-data",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что произойдёт в Python при выполнении a = int('3,5')?",
+      "options": [
+        {
+          "id": "C",
+          "text": "a станет числом 35"
+        },
+        {
+          "id": "B",
+          "text": "a станет числом 3,5"
+        },
+        {
+          "id": "D",
+          "text": "a станет числом 0"
+        },
+        {
+          "id": "A",
+          "text": "Программа остановится с ошибкой: в int() передают точку, а не запятую"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-071",
+      "lesson": "py-05-data",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Дан список оценок marks = [4, 5, 5, 3, 5, 4, 5]. Посчитайте количество пятёрок и выведите f-строкой строку вида «Пятёрок: N из M», где N — количество пятёрок, а M — длина списка.",
+      "template": "marks = [4, 5, 5, 3, 5, 4, 5]\n# найди количество пятёрок в списке\nn = ...\nprint(f\"Пятёрок: {n} из {len(marks)}\")",
+      "expected": "Пятёрок: 4 из 7",
+      "key": "Пятёрок: 4 из 7"
+    },
+    {
+      "id": "inf-8-algo-028",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вычислите выражение (2 + 3) * 2 ** 2. Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-8-algo-064",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Было x = 2, y = 5. Затем выполнили команду x = x + y. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 7,
+      "key": "7"
+    },
+    {
+      "id": "inf-8-algo-072",
+      "lesson": "py-06-linear",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "В программе a = 3 и b = 7. Требуется поменять их значения местами, не заводя третьей переменной: сначала выполнить a = a + b, затем b = a - b, затем a = a - b. Выполните команды по порядку и выведите a и b через пробел.",
+      "template": "a = 3\nb = 7\n# поменяй a и b местами, не заводя третью переменную\na = ...\nb = ...\na = ...\nprint(a, b)",
+      "expected": "7 3",
+      "key": "7 3"
+    },
+    {
+      "id": "inf-8-code-019",
+      "lesson": "py-06-linear",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Дан прямоугольник со сторонами 12 и 5. Выведи сначала площадь, затем периметр — каждое число с новой строки.",
+      "template": "# Прямоугольник 12 × 5\na, b = 12, 5\ns = a * b\np = ...\nprint(s)\nprint(...)",
+      "expected": "60\n34",
+      "key": "60\n34"
+    },
+    {
+      "id": "inf-8-algo-009",
+      "lesson": "alg-03-branching",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "В какой форме ветвления при ложном условии не выполняется ничего?",
+      "options": [
+        {
+          "id": "C",
+          "text": "В обеих"
+        },
+        {
+          "id": "A",
+          "text": "В полной"
+        },
+        {
+          "id": "D",
+          "text": "Ни в какой"
+        },
+        {
+          "id": "B",
+          "text": "В неполной"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-010",
+      "lesson": "alg-03-branching",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Алгоритм: если x чётное, то x := x / 2, иначе x := x + 1. Что будет при x = 7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "x = 8"
+        },
+        {
+          "id": "C",
+          "text": "x = 7"
+        },
+        {
+          "id": "B",
+          "text": "x = 3"
+        },
+        {
+          "id": "D",
+          "text": "x = 14"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-032",
+      "lesson": "alg-03-branching",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Алгоритм: если n нечётно, то r := 3 · n + 1, иначе r := n : 2. Выполните его для n = 7, затем для n = 4 и для n = 10. Чему равна сумма трёх результатов? Запишите только число.",
+      "base": 10,
+      "expected": 29,
+      "key": "29"
+    },
+    {
+      "id": "inf-8-algo-029",
+      "lesson": "alg-05-sequence",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем следование отличается от ветвления?",
+      "options": [
+        {
+          "id": "B",
+          "text": "В следовании есть условие, которое выбирает следующую команду"
+        },
+        {
+          "id": "C",
+          "text": "В следовании есть цикл, повторяющий команды"
+        },
+        {
+          "id": "D",
+          "text": "В следовании порядок команд можно менять без последствий"
+        },
+        {
+          "id": "A",
+          "text": "В следовании нет ни условия, ни цикла — команды идут строго по порядку"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-030",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Выполните по порядку команды: x := 4; x := x · 2; x := x − 3. Чему равен x? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-algo-073",
+      "lesson": "alg-05-sequence",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Выполните по порядку команды: y := 10; y := y / 2; y := y + 7. Какое получилось значение? Запишите только число.",
+      "base": 10,
+      "expected": 12,
+      "key": "12"
+    },
+    {
+      "id": "inf-8-algo-033",
+      "lesson": "alg-06-branching-short",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что происходит, если условие в неполной форме ветвления ложно?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Цикл повторяется заново"
+        },
+        {
+          "id": "B",
+          "text": "Программа идёт дальше, ничего не выполняя"
+        },
+        {
+          "id": "A",
+          "text": "Выполняется ветка «иначе»"
+        },
+        {
+          "id": "C",
+          "text": "Программа завершается с ошибкой"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-012",
+      "lesson": "alg-07-while",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Когда проверяется условие в цикле «нц пока … кц»?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Не проверяется"
+        },
+        {
+          "id": "B",
+          "text": "После выполнения тела"
+        },
+        {
+          "id": "A",
+          "text": "До выполнения тела"
+        },
+        {
+          "id": "C",
+          "text": "В середине тела"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-algo-037",
+      "lesson": "alg-08-until",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько раз минимум выполнится тело цикла с условием окончания?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Столько, сколько повторений указано в условии"
+        },
+        {
+          "id": "B",
+          "text": "1 раз"
+        },
+        {
+          "id": "A",
+          "text": "0 раз"
+        },
+        {
+          "id": "C",
+          "text": "2 раза"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-040",
+      "lesson": "alg-09-for",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел содержит range(1, 5) в Python? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-041",
+      "lesson": "alg-09-for",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Какой вызов range даёт числа 2, 4, 6, 8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "range(2, 10, 2)"
+        },
+        {
+          "id": "C",
+          "text": "range(2, 8, 2)"
+        },
+        {
+          "id": "D",
+          "text": "range(8, 2, -2)"
+        },
+        {
+          "id": "B",
+          "text": "range(2, 8)"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-042",
+      "lesson": "alg-10-pr-branching",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Алгоритм подсчёта цифр: нц пока n > 0 | n := n : 10 | k := k + 1 | кц. Сколько цифр в числе 100? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-043",
+      "lesson": "alg-10-pr-branching",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Что выведет программа for i in range(3): print(i * 2)? (каждое число — с новой строки)",
+      "options": [
+        {
+          "id": "B",
+          "text": "1 3 5"
+        },
+        {
+          "id": "C",
+          "text": "0 2 4 6"
+        },
+        {
+          "id": "D",
+          "text": "2 4 6"
+        },
+        {
+          "id": "A",
+          "text": "0 2 4"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-044",
+      "lesson": "alg-11-design",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Только ветвление"
+        },
+        {
+          "id": "C",
+          "text": "Цикл for и ветвление"
+        },
+        {
+          "id": "A",
+          "text": "Только цикл for"
+        },
+        {
+          "id": "D",
+          "text": "Только цикл с условием окончания"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-045",
+      "lesson": "alg-11-design",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа перебирает числа от 1 до 10 и считает те, что делятся на 2 без остатка. Что она выведет? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-code-022",
+      "lesson": "alg-11-design",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Посчитай, сколько чисел от 1 до 100 не делится на 7, и выведи результат.",
+      "template": "# Перебор чисел и проверка делимости\nn = 100\nk = 0\nfor i in range(1, n + 1):\n    if i % 7 ...:\n        k = k + 1\nprint(k)",
+      "expected": "86",
+      "key": "86"
+    },
+    {
+      "id": "inf-8-code-009",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его.",
+      "template": "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n...",
+      "expected": "7",
+      "key": "7"
+    },
+    {
+      "id": "inf-8-code-010",
+      "lesson": "py-02-branching",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Проверь, лежит ли x = 0 на отрезке [0, 1], и выведи True/False выражением с and.",
+      "template": "# Допиши код: проверка отрезка\nx = 0\nprint(...)",
+      "expected": "True",
+      "key": "True"
+    },
+    {
+      "id": "inf-8-algo-049",
+      "lesson": "py-03-loops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как в Python отбросить последнюю цифру целого числа n?",
+      "options": [
+        {
+          "id": "A",
+          "text": "n / 10"
+        },
+        {
+          "id": "C",
+          "text": "n % 10"
+        },
+        {
+          "id": "B",
+          "text": "n // 10"
+        },
+        {
+          "id": "D",
+          "text": "n ** 10"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
+    },
+    {
+      "id": "inf-8-code-006",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Выведи сумму всех чётных чисел от 1 до 10 включительно.",
+      "template": "# Допиши код: сумма чётных 1..10\nprint(...)",
+      "expected": "30",
+      "key": "30"
+    },
+    {
+      "id": "inf-8-code-011",
+      "lesson": "py-03-loops",
+      "type": "code_run",
+      "points": 2,
+      "prompt": "Посчитай циклом while количество цифр в числе 9876 и выведи его.",
+      "template": "# Допиши код: счётчик цифр 9876\nn, k = 9876, 0\n...",
+      "expected": "4",
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-018",
+      "lesson": "py-04-strings",
+      "type": "matching",
+      "points": 1,
+      "prompt": "Установите соответствие для s = 'Python'.",
+      "left": [
+        "len(s)",
+        "s[0]",
+        "s[1:4]",
+        "'on' in s"
+      ],
+      "right": [
+        "'P'",
+        "'yth'",
+        "6",
+        "True"
+      ],
+      "answerMap": {
+        "len(s)": "6",
+        "s[0]": "'P'",
+        "s[1:4]": "'yth'",
+        "'on' in s": "True"
+      },
+      "key": "len(s)=6, s[0]='P', s[1:4]='yth', 'on' in s=True"
+    },
+    {
+      "id": "inf-8-code-013",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи длину слова 'информатика' функцией len().",
+      "template": "# Допиши код: длина слова 'информатика'\nprint(...)",
+      "expected": "11",
+      "key": "11"
+    },
+    {
+      "id": "inf-8-code-017",
+      "lesson": "py-04-strings",
+      "type": "code_run",
+      "points": 1,
+      "prompt": "Выведи символ с кодом 66 функцией chr().",
+      "template": "# Допиши код: символ с кодом 66\nprint(...)",
+      "expected": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-048",
+      "lesson": "py-07-condition",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что выведет код x = 5; if x > 3: print('да') else: print('нет')?",
+      "options": [
+        {
+          "id": "A",
+          "text": "да"
+        },
+        {
+          "id": "C",
+          "text": "ничего не выведется"
+        },
+        {
+          "id": "B",
+          "text": "нет"
+        },
+        {
+          "id": "D",
+          "text": "Ошибка выполнения"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
+    },
+    {
+      "id": "inf-8-algo-056",
+      "lesson": "py-08-strings-2",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Какой индекс вернёт выражение 'информатика'.find('мат')? Запишите только число.",
+      "base": 10,
+      "expected": 5,
+      "key": "5"
+    },
+    {
+      "id": "inf-8-code-031",
+      "lesson": "py-08-strings-2",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Разверни строку 'Python' срезом s[::-1] и выведи разворот и его длину одной строкой через пробел.",
+      "template": "# Срез с шагом −1 читает строку с конца\ns = 'Python'\nb = s[::-1]\nprint(b, len(...))",
+      "expected": "nohtyP 6",
+      "key": "nohtyP 6"
+    },
+    {
+      "id": "inf-8-algo-046",
+      "lesson": "py-09-linear-pr",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Что выведет print(2024 % 100)? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-8-code-023",
+      "lesson": "py-09-linear-pr",
+      "type": "code_run",
+      "points": 3,
+      "prompt": "Найди делением вычитанием частное и остаток от деления 13 на 5 и выведи их одной строкой через пробел.",
+      "template": "# Вычитаем y, пока r не станет меньше y\nx = 13\ny = 5\nr = x\nq = 0\nwhile r >= y:\n    ...\nprint(q, r)",
+      "expected": "2 3",
+      "key": "2 3"
+    },
+    {
+      "id": "inf-8-algo-052",
+      "lesson": "py-10-for-loops",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен факториал 4! = 1 · 2 · 3 · 4? Запишите только число.",
+      "base": 10,
+      "expected": 24,
+      "key": "24"
+    },
+    {
+      "id": "inf-8-algo-053",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько чисел от 1 до 10 делятся на 3 без остатка? Запишите только число.",
+      "base": 10,
+      "expected": 3,
+      "key": "3"
+    },
+    {
+      "id": "inf-8-algo-054",
+      "lesson": "py-11-for-loops-2",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Вложенный цикл: для i от 0 до 2, внутри — для j от 0 до 1, в теле вывод. Сколько раз выполнится тело внешнего цикла вместе со всеми прогонами внутреннего? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-algo-050",
+      "lesson": "ss-30-control",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 40₁₀ в двоичную систему. Запишите только число.",
+      "base": 2,
+      "expected": 40,
+      "key": "101000"
+    },
+    {
+      "id": "inf-8-algo-057",
+      "lesson": "algo-01-results",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Сколько различных результатов может дать ветвление с одним условием (две ветки)?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ровно один"
+        },
+        {
+          "id": "D",
+          "text": "Столько, сколько входных данных"
+        },
+        {
+          "id": "C",
+          "text": "Четыре"
+        },
+        {
+          "id": "A",
+          "text": "Не больше двух"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
+      "id": "inf-8-algo-058",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа: s := 0; для i от 1 до 5: s := s + i. Чему равен s после цикла? Запишите только число.",
+      "base": 10,
+      "expected": 15,
+      "key": "15"
+    },
+    {
+      "id": "inf-8-algo-059",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Сколько различных результатов может дать алгоритм с двумя независимыми полными ветвлениями? Запишите только число.",
+      "base": 10,
+      "expected": 4,
+      "key": "4"
+    },
+    {
+      "id": "inf-8-algo-065",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Алгоритм: если a > 3, то a := a · 2, иначе a := a + 1. При a = 5 чему равен результат? Запишите только число.",
+      "base": 10,
+      "expected": 10,
+      "key": "10"
+    },
+    {
+      "id": "inf-8-algo-069",
+      "lesson": "algo-01-results",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Программа: n := 1; затем, пока n < 20, выполняется команда n := n · 2. Сколько различных значений примет переменная n за всё время работы программы? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-8-algo-060",
+      "lesson": "algo-02-inputs",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "С чего начинается решение обратной задачи — найти входные данные по известному результату?",
+      "options": [
+        {
+          "id": "D",
+          "text": "С таблицы истинности"
+        },
+        {
+          "id": "A",
+          "text": "С результата: определяем последнюю выполненную команду и решаем уравнение назад"
+        },
+        {
+          "id": "C",
+          "text": "С новой программы, которая делает то же самое"
+        },
+        {
+          "id": "B",
+          "text": "С самого начала программы, выполняя её на всех возможных данных"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-8-algo-067",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Программа: если x чётно, то y := x : 2, иначе y := x · 2 + 1. Вывод — 10. Каким могло быть x? Запишите только число.",
+      "base": 10,
+      "expected": 20,
+      "key": "20"
+    },
+    {
+      "id": "inf-8-algo-070",
+      "lesson": "algo-02-inputs",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Программа: y := x · 3; затем, если y делится на 10, выполняется команда y := y : 10. Сколько целых значений x от 1 до 40 дают на выходе y = 6? Запишите только число.",
+      "base": 10,
+      "expected": 2,
+      "key": "2"
+    }
+  ],
+  "variants": [
+    {
+      "number": 1,
+      "task_ids": [
+        "inf-8-code-009",
+        "inf-8-algo-059",
+        "inf-8-algo-028",
+        "inf-8-algo-073",
+        "inf-8-algo-065",
+        "inf-8-algo-019",
+        "inf-8-algo-021",
+        "inf-8-algo-033",
+        "inf-8-code-022",
+        "inf-8-algo-048",
+        "inf-8-algo-043",
+        "inf-8-algo-007",
+        "inf-8-code-019",
+        "inf-8-code-023",
+        "inf-8-algo-060",
+        "inf-8-algo-054",
+        "inf-8-code-008",
+        "inf-8-algo-072",
+        "inf-8-algo-030",
+        "inf-8-code-013"
+      ],
+      "orders": {
+        "inf-8-algo-033": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-8-algo-005",
+        "inf-8-algo-072",
+        "inf-8-algo-043",
+        "inf-8-code-019",
+        "inf-8-algo-056",
+        "inf-8-algo-069",
+        "inf-8-algo-020",
+        "inf-8-algo-009",
+        "inf-8-algo-059",
+        "inf-8-algo-021",
+        "inf-8-code-031",
+        "inf-8-algo-067",
+        "inf-8-algo-032",
+        "inf-8-algo-064",
+        "inf-8-algo-040",
+        "inf-8-algo-049",
+        "inf-8-algo-024",
+        "inf-8-algo-018",
+        "inf-8-algo-054",
+        "inf-8-algo-041"
+      ],
+      "orders": {
+        "inf-8-algo-005": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "6",
+            "'P'",
+            "'yth'"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-8-algo-019",
+        "inf-8-algo-041",
+        "inf-8-algo-072",
+        "inf-8-code-018",
+        "inf-8-code-031",
+        "inf-8-code-009",
+        "inf-8-algo-028",
+        "inf-8-algo-021",
+        "inf-8-algo-071",
+        "inf-8-code-011",
+        "inf-8-algo-040",
+        "inf-8-code-022",
+        "inf-8-algo-049",
+        "inf-8-algo-052",
+        "inf-8-algo-059",
+        "inf-8-algo-030",
+        "inf-8-algo-065",
+        "inf-8-algo-037",
+        "inf-8-algo-006",
+        "inf-8-algo-057"
+      ],
+      "orders": {
+        "inf-8-algo-041": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "ввод и вывод",
+            "начало и конец",
+            "действие",
+            "условие"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-8-code-008",
+        "inf-8-algo-073",
+        "inf-8-code-031",
+        "inf-8-algo-049",
+        "inf-8-algo-059",
+        "inf-8-algo-058",
+        "inf-8-algo-029",
+        "inf-8-algo-028",
+        "inf-8-algo-057",
+        "inf-8-algo-030",
+        "inf-8-algo-072",
+        "inf-8-algo-021",
+        "inf-8-algo-005",
+        "inf-8-code-010",
+        "inf-8-code-011",
+        "inf-8-algo-043",
+        "inf-8-algo-056",
+        "inf-8-algo-032",
+        "inf-8-algo-006",
+        "inf-8-code-018"
+      ],
+      "orders": {
+        "inf-8-algo-049": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "начало и конец",
+            "условие",
+            "действие",
+            "ввод и вывод"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-8-algo-059",
+        "inf-8-algo-030",
+        "inf-8-algo-045",
+        "inf-8-algo-020",
+        "inf-8-algo-069",
+        "inf-8-algo-049",
+        "inf-8-algo-040",
+        "inf-8-algo-021",
+        "inf-8-code-007",
+        "inf-8-algo-019",
+        "inf-8-code-023",
+        "inf-8-code-019",
+        "inf-8-algo-032",
+        "inf-8-algo-029",
+        "inf-8-code-008",
+        "inf-8-algo-050",
+        "inf-8-code-009",
+        "inf-8-code-011",
+        "inf-8-algo-063",
+        "inf-8-algo-067"
+      ],
+      "orders": {
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-8-algo-054",
+        "inf-8-algo-021",
+        "inf-8-algo-019",
+        "inf-8-code-007",
+        "inf-8-code-006",
+        "inf-8-algo-044",
+        "inf-8-algo-028",
+        "inf-8-algo-059",
+        "inf-8-code-023",
+        "inf-8-code-022",
+        "inf-8-algo-070",
+        "inf-8-algo-048",
+        "inf-8-algo-010",
+        "inf-8-algo-033",
+        "inf-8-code-019",
+        "inf-8-algo-007",
+        "inf-8-algo-058",
+        "inf-8-algo-049",
+        "inf-8-code-008",
+        "inf-8-algo-030"
+      ],
+      "orders": {
+        "inf-8-algo-044": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-8-algo-070",
+        "inf-8-code-009",
+        "inf-8-algo-043",
+        "inf-8-algo-056",
+        "inf-8-algo-033",
+        "inf-8-algo-042",
+        "inf-8-algo-071",
+        "inf-8-algo-065",
+        "inf-8-code-023",
+        "inf-8-algo-052",
+        "inf-8-algo-072",
+        "inf-8-code-018",
+        "inf-8-algo-050",
+        "inf-8-algo-059",
+        "inf-8-algo-021",
+        "inf-8-code-022",
+        "inf-8-algo-019",
+        "inf-8-algo-007",
+        "inf-8-algo-028",
+        "inf-8-algo-030"
+      ],
+      "orders": {
+        "inf-8-algo-043": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-8-algo-004",
+        "inf-8-algo-059",
+        "inf-8-algo-045",
+        "inf-8-code-013",
+        "inf-8-code-007",
+        "inf-8-algo-021",
+        "inf-8-algo-029",
+        "inf-8-code-009",
+        "inf-8-code-006",
+        "inf-8-code-019",
+        "inf-8-algo-041",
+        "inf-8-algo-018",
+        "inf-8-algo-033",
+        "inf-8-code-022",
+        "inf-8-algo-058",
+        "inf-8-code-023",
+        "inf-8-algo-024",
+        "inf-8-algo-069",
+        "inf-8-algo-001",
+        "inf-8-algo-064"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "6",
+            "'P'",
+            "'yth'"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-8-algo-024",
+        "inf-8-algo-063",
+        "inf-8-algo-037",
+        "inf-8-algo-002",
+        "inf-8-algo-004",
+        "inf-8-algo-021",
+        "inf-8-algo-059",
+        "inf-8-algo-032",
+        "inf-8-algo-045",
+        "inf-8-code-009",
+        "inf-8-code-019",
+        "inf-8-algo-043",
+        "inf-8-algo-058",
+        "inf-8-algo-053",
+        "inf-8-algo-056",
+        "inf-8-code-023",
+        "inf-8-algo-070",
+        "inf-8-code-017",
+        "inf-8-algo-029",
+        "inf-8-code-007"
+      ],
+      "orders": {
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-8-algo-058",
+        "inf-8-algo-024",
+        "inf-8-algo-059",
+        "inf-8-algo-053",
+        "inf-8-algo-044",
+        "inf-8-algo-054",
+        "inf-8-code-007",
+        "inf-8-algo-041",
+        "inf-8-algo-018",
+        "inf-8-algo-042",
+        "inf-8-algo-045",
+        "inf-8-algo-006",
+        "inf-8-algo-064",
+        "inf-8-algo-070",
+        "inf-8-algo-021",
+        "inf-8-code-023",
+        "inf-8-algo-005",
+        "inf-8-code-011",
+        "inf-8-code-019",
+        "inf-8-code-022"
+      ],
+      "orders": {
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "'yth'",
+            "6",
+            "'P'"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "условие",
+            "действие",
+            "начало и конец",
+            "ввод и вывод"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-8-algo-050",
+        "inf-8-algo-059",
+        "inf-8-code-018",
+        "inf-8-code-022",
+        "inf-8-algo-045",
+        "inf-8-code-007",
+        "inf-8-code-011",
+        "inf-8-algo-019",
+        "inf-8-algo-063",
+        "inf-8-algo-021",
+        "inf-8-code-023",
+        "inf-8-algo-040",
+        "inf-8-algo-044",
+        "inf-8-code-017",
+        "inf-8-code-008",
+        "inf-8-algo-056",
+        "inf-8-algo-067",
+        "inf-8-algo-002",
+        "inf-8-algo-057",
+        "inf-8-algo-041"
+      ],
+      "orders": {
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-8-algo-059",
+        "inf-8-algo-030",
+        "inf-8-code-011",
+        "inf-8-algo-065",
+        "inf-8-algo-073",
+        "inf-8-algo-004",
+        "inf-8-algo-033",
+        "inf-8-algo-060",
+        "inf-8-code-010",
+        "inf-8-code-018",
+        "inf-8-code-007",
+        "inf-8-algo-041",
+        "inf-8-algo-072",
+        "inf-8-code-006",
+        "inf-8-algo-021",
+        "inf-8-algo-064",
+        "inf-8-code-031",
+        "inf-8-algo-050",
+        "inf-8-algo-032",
+        "inf-8-algo-007"
+      ],
+      "orders": {
+        "inf-8-algo-033": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-8-algo-010",
+        "inf-8-code-022",
+        "inf-8-algo-044",
+        "inf-8-algo-001",
+        "inf-8-algo-067",
+        "inf-8-code-006",
+        "inf-8-algo-072",
+        "inf-8-algo-060",
+        "inf-8-algo-073",
+        "inf-8-code-007",
+        "inf-8-algo-059",
+        "inf-8-algo-030",
+        "inf-8-code-018",
+        "inf-8-algo-063",
+        "inf-8-code-023",
+        "inf-8-algo-046",
+        "inf-8-algo-054",
+        "inf-8-algo-005",
+        "inf-8-code-017",
+        "inf-8-algo-021"
+      ],
+      "orders": {
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-8-code-008",
+        "inf-8-code-022",
+        "inf-8-algo-029",
+        "inf-8-code-009",
+        "inf-8-code-023",
+        "inf-8-algo-030",
+        "inf-8-code-019",
+        "inf-8-algo-021",
+        "inf-8-algo-049",
+        "inf-8-algo-065",
+        "inf-8-algo-071",
+        "inf-8-algo-019",
+        "inf-8-algo-007",
+        "inf-8-algo-043",
+        "inf-8-algo-059",
+        "inf-8-code-011",
+        "inf-8-algo-040",
+        "inf-8-algo-052",
+        "inf-8-algo-069",
+        "inf-8-algo-063"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-8-code-007",
+        "inf-8-code-008",
+        "inf-8-algo-056",
+        "inf-8-algo-040",
+        "inf-8-algo-021",
+        "inf-8-algo-059",
+        "inf-8-code-019",
+        "inf-8-algo-005",
+        "inf-8-algo-049",
+        "inf-8-algo-018",
+        "inf-8-code-031",
+        "inf-8-algo-041",
+        "inf-8-algo-044",
+        "inf-8-code-022",
+        "inf-8-algo-054",
+        "inf-8-algo-070",
+        "inf-8-algo-001",
+        "inf-8-algo-045",
+        "inf-8-algo-028",
+        "inf-8-algo-065"
+      ],
+      "orders": {
+        "inf-8-algo-005": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "'yth'",
+            "'P'",
+            "6"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-8-code-013",
+        "inf-8-code-006",
+        "inf-8-algo-019",
+        "inf-8-code-018",
+        "inf-8-algo-010",
+        "inf-8-algo-021",
+        "inf-8-algo-054",
+        "inf-8-code-022",
+        "inf-8-algo-059",
+        "inf-8-code-023",
+        "inf-8-algo-029",
+        "inf-8-algo-007",
+        "inf-8-algo-065",
+        "inf-8-algo-018",
+        "inf-8-algo-041",
+        "inf-8-algo-070",
+        "inf-8-algo-040",
+        "inf-8-algo-072",
+        "inf-8-algo-071",
+        "inf-8-algo-028"
+      ],
+      "orders": {
+        "inf-8-algo-010": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "'P'",
+            "'yth'",
+            "6",
+            "True"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-8-algo-065",
+        "inf-8-algo-021",
+        "inf-8-code-022",
+        "inf-8-algo-019",
+        "inf-8-algo-043",
+        "inf-8-algo-045",
+        "inf-8-algo-009",
+        "inf-8-code-009",
+        "inf-8-algo-063",
+        "inf-8-algo-059",
+        "inf-8-algo-071",
+        "inf-8-algo-050",
+        "inf-8-algo-007",
+        "inf-8-code-023",
+        "inf-8-code-010",
+        "inf-8-code-019",
+        "inf-8-algo-033",
+        "inf-8-algo-070",
+        "inf-8-code-011",
+        "inf-8-code-007"
+      ],
+      "orders": {
+        "inf-8-algo-043": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-8-algo-050",
+        "inf-8-algo-033",
+        "inf-8-algo-054",
+        "inf-8-algo-060",
+        "inf-8-algo-043",
+        "inf-8-algo-030",
+        "inf-8-algo-021",
+        "inf-8-algo-063",
+        "inf-8-algo-007",
+        "inf-8-code-006",
+        "inf-8-algo-065",
+        "inf-8-algo-024",
+        "inf-8-algo-059",
+        "inf-8-code-017",
+        "inf-8-algo-044",
+        "inf-8-algo-004",
+        "inf-8-code-007",
+        "inf-8-code-031",
+        "inf-8-code-019",
+        "inf-8-algo-032"
+      ],
+      "orders": {
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-8-algo-020",
+        "inf-8-code-023",
+        "inf-8-code-022",
+        "inf-8-code-009",
+        "inf-8-algo-024",
+        "inf-8-algo-030",
+        "inf-8-algo-004",
+        "inf-8-code-019",
+        "inf-8-algo-072",
+        "inf-8-algo-021",
+        "inf-8-algo-069",
+        "inf-8-algo-009",
+        "inf-8-algo-063",
+        "inf-8-algo-043",
+        "inf-8-code-011",
+        "inf-8-algo-049",
+        "inf-8-algo-033",
+        "inf-8-algo-059",
+        "inf-8-algo-065",
+        "inf-8-algo-048"
+      ],
+      "orders": {
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-8-code-006",
+        "inf-8-algo-070",
+        "inf-8-algo-020",
+        "inf-8-algo-058",
+        "inf-8-algo-050",
+        "inf-8-code-007",
+        "inf-8-algo-042",
+        "inf-8-algo-028",
+        "inf-8-algo-059",
+        "inf-8-algo-041",
+        "inf-8-code-031",
+        "inf-8-code-019",
+        "inf-8-code-022",
+        "inf-8-algo-010",
+        "inf-8-algo-021",
+        "inf-8-algo-072",
+        "inf-8-algo-049",
+        "inf-8-code-011",
+        "inf-8-algo-005",
+        "inf-8-algo-040"
+      ],
+      "orders": {
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-8-code-006",
+        "inf-8-code-019",
+        "inf-8-algo-057",
+        "inf-8-algo-030",
+        "inf-8-algo-050",
+        "inf-8-code-008",
+        "inf-8-algo-001",
+        "inf-8-algo-064",
+        "inf-8-code-022",
+        "inf-8-code-010",
+        "inf-8-algo-005",
+        "inf-8-code-023",
+        "inf-8-algo-072",
+        "inf-8-algo-058",
+        "inf-8-algo-044",
+        "inf-8-algo-045",
+        "inf-8-code-011",
+        "inf-8-algo-037",
+        "inf-8-algo-021",
+        "inf-8-algo-059"
+      ],
+      "orders": {
+        "inf-8-algo-057": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-8-code-019",
+        "inf-8-code-011",
+        "inf-8-algo-007",
+        "inf-8-code-031",
+        "inf-8-algo-032",
+        "inf-8-algo-043",
+        "inf-8-code-007",
+        "inf-8-algo-049",
+        "inf-8-code-008",
+        "inf-8-algo-010",
+        "inf-8-algo-058",
+        "inf-8-algo-033",
+        "inf-8-algo-004",
+        "inf-8-algo-060",
+        "inf-8-algo-059",
+        "inf-8-code-009",
+        "inf-8-algo-021",
+        "inf-8-algo-028",
+        "inf-8-algo-053",
+        "inf-8-algo-012"
+      ],
+      "orders": {
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-8-algo-020",
+        "inf-8-algo-010",
+        "inf-8-algo-021",
+        "inf-8-algo-054",
+        "inf-8-code-019",
+        "inf-8-algo-044",
+        "inf-8-code-031",
+        "inf-8-algo-059",
+        "inf-8-algo-005",
+        "inf-8-algo-070",
+        "inf-8-algo-046",
+        "inf-8-code-022",
+        "inf-8-algo-064",
+        "inf-8-algo-052",
+        "inf-8-algo-012",
+        "inf-8-algo-067",
+        "inf-8-algo-030",
+        "inf-8-algo-056",
+        "inf-8-code-008",
+        "inf-8-algo-071"
+      ],
+      "orders": {
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-8-algo-030",
+        "inf-8-algo-029",
+        "inf-8-algo-072",
+        "inf-8-algo-028",
+        "inf-8-algo-059",
+        "inf-8-algo-007",
+        "inf-8-algo-041",
+        "inf-8-code-018",
+        "inf-8-algo-070",
+        "inf-8-algo-004",
+        "inf-8-algo-053",
+        "inf-8-algo-065",
+        "inf-8-algo-040",
+        "inf-8-code-007",
+        "inf-8-code-022",
+        "inf-8-algo-021",
+        "inf-8-code-023",
+        "inf-8-algo-054",
+        "inf-8-algo-049",
+        "inf-8-code-006"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-8-code-023",
+        "inf-8-algo-065",
+        "inf-8-algo-056",
+        "inf-8-algo-024",
+        "inf-8-algo-001",
+        "inf-8-algo-059",
+        "inf-8-algo-010",
+        "inf-8-code-018",
+        "inf-8-algo-021",
+        "inf-8-code-009",
+        "inf-8-code-022",
+        "inf-8-algo-018",
+        "inf-8-algo-044",
+        "inf-8-algo-019",
+        "inf-8-algo-049",
+        "inf-8-algo-033",
+        "inf-8-algo-069",
+        "inf-8-algo-063",
+        "inf-8-algo-043",
+        "inf-8-algo-072"
+      ],
+      "orders": {
+        "inf-8-algo-024": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "6",
+            "'P'",
+            "'yth'",
+            "True"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-043": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-8-code-011",
+        "inf-8-algo-065",
+        "inf-8-algo-045",
+        "inf-8-code-007",
+        "inf-8-algo-069",
+        "inf-8-algo-028",
+        "inf-8-algo-021",
+        "inf-8-algo-043",
+        "inf-8-code-018",
+        "inf-8-algo-042",
+        "inf-8-algo-020",
+        "inf-8-algo-012",
+        "inf-8-algo-054",
+        "inf-8-code-031",
+        "inf-8-algo-004",
+        "inf-8-algo-072",
+        "inf-8-algo-046",
+        "inf-8-algo-049",
+        "inf-8-algo-059",
+        "inf-8-algo-032"
+      ],
+      "orders": {
+        "inf-8-algo-043": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-8-algo-059",
+        "inf-8-code-023",
+        "inf-8-algo-009",
+        "inf-8-algo-073",
+        "inf-8-algo-020",
+        "inf-8-algo-052",
+        "inf-8-algo-030",
+        "inf-8-code-019",
+        "inf-8-algo-041",
+        "inf-8-algo-057",
+        "inf-8-algo-021",
+        "inf-8-code-008",
+        "inf-8-algo-067",
+        "inf-8-algo-056",
+        "inf-8-code-011",
+        "inf-8-algo-032",
+        "inf-8-algo-028",
+        "inf-8-algo-004",
+        "inf-8-code-013",
+        "inf-8-code-007"
+      ],
+      "orders": {
+        "inf-8-algo-009": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-8-code-022",
+        "inf-8-algo-041",
+        "inf-8-algo-063",
+        "inf-8-algo-002",
+        "inf-8-algo-029",
+        "inf-8-algo-019",
+        "inf-8-algo-021",
+        "inf-8-algo-072",
+        "inf-8-algo-033",
+        "inf-8-algo-050",
+        "inf-8-algo-065",
+        "inf-8-algo-059",
+        "inf-8-algo-060",
+        "inf-8-code-031",
+        "inf-8-code-019",
+        "inf-8-algo-054",
+        "inf-8-algo-049",
+        "inf-8-algo-045",
+        "inf-8-algo-071",
+        "inf-8-algo-056"
+      ],
+      "orders": {
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-8-code-011",
+        "inf-8-algo-029",
+        "inf-8-code-008",
+        "inf-8-code-031",
+        "inf-8-algo-052",
+        "inf-8-algo-045",
+        "inf-8-algo-021",
+        "inf-8-algo-058",
+        "inf-8-code-018",
+        "inf-8-algo-053",
+        "inf-8-algo-010",
+        "inf-8-algo-071",
+        "inf-8-algo-070",
+        "inf-8-algo-032",
+        "inf-8-algo-019",
+        "inf-8-algo-007",
+        "inf-8-algo-059",
+        "inf-8-algo-028",
+        "inf-8-algo-009",
+        "inf-8-code-009"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-8-code-023",
+        "inf-8-algo-070",
+        "inf-8-code-018",
+        "inf-8-algo-028",
+        "inf-8-algo-050",
+        "inf-8-algo-012",
+        "inf-8-algo-071",
+        "inf-8-algo-021",
+        "inf-8-algo-030",
+        "inf-8-algo-067",
+        "inf-8-algo-045",
+        "inf-8-algo-056",
+        "inf-8-algo-019",
+        "inf-8-code-017",
+        "inf-8-code-009",
+        "inf-8-code-007",
+        "inf-8-algo-059",
+        "inf-8-algo-032",
+        "inf-8-algo-044",
+        "inf-8-algo-001"
+      ],
+      "orders": {
+        "inf-8-algo-012": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 37
     }
   ]
 }

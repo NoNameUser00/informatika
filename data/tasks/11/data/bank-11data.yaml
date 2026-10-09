@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
   prompt: "Коэффициент корреляции −0,9. Что это значит?"
-  student_view: { options: [{ id: A, text: "Сильная обратная связь" }, { id: B, text: "Сильная прямая связь" }, { id: C, text: "Связи нет" }, { id: D, text: "Ошибка" }] }
+  student_view: { options: [{ id: B, text: "Сильная прямая связь" }, { id: C, text: "Связи нет" }, { id: A, text: "Сильная обратная связь" }, { id: D, text: "Ошибка" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Близко к −1 — растут врозь" }
+  teacher_only: { answer: C, explanation: "Близко к −1 — растут врозь" }
 
 - id: inf-11-data-003
   class: 11
@@ -46,7 +46,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
   prompt: "Продажи мороженого и утопления коррелируют. Вывод?"
-  student_view: { options: [{ id: A, text: "Общая причина — жара, не причинность" }, { id: B, text: "Мороженое топит людей" }, { id: C, text: "Купание продаёт мороженое" }, { id: D, text: "Данные неверны" }] }
+  student_view: { options: [{ id: A, text: "Общая причина — жара, не причинность" }, { id: C, text: "Купание продаёт мороженое" }, { id: B, text: "Мороженое топит людей" }, { id: D, text: "Данные неверны" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Корреляция ≠ причина" }
 
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
   prompt: "Что ищет подбор параметра?"
-  student_view: { options: [{ id: A, text: "Вход, дающий нужный выход" }, { id: B, text: "Ошибки в тексте" }, { id: C, text: "Вирусы" }, { id: D, text: "Ничего" }] }
+  student_view: { options: [{ id: C, text: "Вирусы" }, { id: D, text: "Ничего" }, { id: A, text: "Вход, дающий нужный выход" }, { id: B, text: "Ошибки в тексте" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Обратная задача: ответ известен, ищем вход" }
+  teacher_only: { answer: C, explanation: "Обратная задача: ответ известен, ищем вход" }
 
 - id: inf-11-data-005
   class: 11
@@ -80,7 +80,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-steps], meta: [plan-actions] }
   prompt: "Что идёт первым: чистка данных или выводы?"
-  student_view: { options: [{ id: A, text: "Чистка, потом выводы" }, { id: B, text: "Сначала выводы" }, { id: C, text: "Чистка не нужна" }, { id: D, text: "Всё равно" }] }
+  student_view: { options: [{ id: A, text: "Чистка, потом выводы" }, { id: D, text: "Всё равно" }, { id: C, text: "Чистка не нужна" }, { id: B, text: "Сначала выводы" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, explanation: "Мусор на входе — мусор на выходе" }
 
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
   prompt: "Чем показать динамику за 5 лет?"
-  student_view: { options: [{ id: A, text: "Линейной диаграммой" }, { id: B, text: "Круговой" }, { id: C, text: "Таблицей без сортировки" }, { id: D, text: "Ничем" }] }
+  student_view: { options: [{ id: D, text: "Ничем" }, { id: B, text: "Круговой" }, { id: C, text: "Таблицей без сортировки" }, { id: A, text: "Линейной диаграммой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Динамика — линии во времени" }
+  teacher_only: { answer: D, explanation: "Динамика — линии во времени" }
 
 - id: inf-11-data-007
   class: 11
@@ -114,9 +114,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
   prompt: "Что такое формализация прикладной задачи?"
-  student_view: { options: [{ id: A, text: "Перевод на точный язык: переменные, цель, ограничения" }, { id: B, text: "Украшение отчёта" }, { id: C, text: "Удаление данных" }, { id: D, text: "Печать графиков" }] }
+  student_view: { options: [{ id: B, text: "Украшение отчёта" }, { id: A, text: "Перевод на точный язык: переменные, цель, ограничения" }, { id: C, text: "Удаление данных" }, { id: D, text: "Печать графиков" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Сначала модель — потом вычисления" }
+  teacher_only: { answer: B, explanation: "Сначала модель — потом вычисления" }
 
 - id: inf-11-data-008
   class: 11
@@ -131,6 +131,896 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
   prompt: "Сеть дорог с расстояниями между городами. Какая модель уместна?"
-  student_view: { options: [{ id: A, text: "Взвешенный граф" }, { id: B, text: "Круговая диаграмма" }, { id: C, text: "Таблица умножения" }, { id: D, text: "Текстовый абзац" }] }
+  student_view: { options: [{ id: B, text: "Круговая диаграмма" }, { id: D, text: "Текстовый абзац" }, { id: C, text: "Таблица умножения" }, { id: A, text: "Взвешенный граф" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Вершины — города, веса — расстояния" }
+  teacher_only: { answer: D, explanation: "Вершины — города, веса — расстояния" }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
+
+- id: inf-11-data-009
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Задачи анализа"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-01-analysis
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-tasks], meta: [plan-actions] }
+  prompt: "Установите соответствие: задача анализа данных — что она требует от данных."
+  student_view: { left: ["Описать", "Найти закономерность", "Прогнозировать", "Оптимизировать"], right: ["среднее, разброс, доля", "что с чем связано", "что будет дальше", "как получить лучший результат"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Описать": "среднее, разброс, доля", "Найти закономерность": "что с чем связано", "Прогнозировать": "что будет дальше", "Оптимизировать": "как получить лучший результат" }, explanation: "Четыре задачи анализа данных. Описать = среднее, разброс, доля; Найти закономерность = что с чем связано; Прогнозировать = что будет дальше; Оптимизировать = как получить лучший результат" }
+
+- id: inf-11-data-010
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Медиана"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Оценки класса за четверть: 4, 5, 5, 3, 5, 4, 3. Найдите медиану оценок. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Упорядочили: 3, 3, 4, 4, 5, 5, 5 — седьмой элемент (середина ряда) равен 4." }
+
+- id: inf-11-data-011
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Относительный прирост"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Продажи выросли с 400 до 500 единиц за месяц. Найдите относительный прирост в процентах. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [25], answer_text: "25", explanation: "(500 − 400) / 400 · 100 % = 25 %. Абсолютный прирост здесь 100 единиц, а относительный показывает, во сколько раз." }
+
+- id: inf-11-data-012
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Функции Calc"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Установите соответствие: функция LibreOffice Calc — что она вычисляет."
+  student_view: { left: ["СРЗНАЧ", "МЕДИАНА", "РЕЖИМ", "МАКС"], right: ["среднее арифметическое", "середина упорядоченного ряда", "самое частое значение", "наибольшее значение"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "СРЗНАЧ": "среднее арифметическое", "МЕДИАНА": "середина упорядоченного ряда", "РЕЖИМ": "самое частое значение", "МАКС": "наибольшее значение" }, explanation: "Функции статистической обработки в редакторе таблиц. СРЗНАЧ = среднее арифметическое; МЕДИАНА = середина упорядоченного ряда; РЕЖИМ = самое частое значение; МАКС = наибольшее значение" }
+
+- id: inf-11-data-013
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Диаграмма долей"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Доли категорий: 40 %, 35 %, 25 % — в сумме дают 100 %. Какую диаграмму выбрать для их сравнения?"
+  student_view: { options: [{ id: D, text: "Линейчатую с обрезанной осью: так разница кажется заметнее" }, { id: C, text: "Диаграмму разброса: она показывает связь двух величин" }, { id: A, text: "Круговую: она показывает доли целого, сумма которых 100 %" }, { id: B, text: "Линейную: по ней видно изменение показателя по месяцам" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Доли целого со знаменателем 100 % — это круговая диаграмма; линейная нужна для времени, разброса — для связи двух величин." }
+
+- id: inf-11-data-014
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Максимум на графике"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Продажи по месяцам (единиц): январь — 12, февраль — 15, март — 14, апрель — 20. В каком месяце продажи максимальны? Запишите номер месяца."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "20 единиц — максимум, это апрель, 4-й месяц; график показывает пик нагляднее таблицы." }
+
+- id: inf-11-data-015
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Искажение масштаба"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "График строят по значениям от 90 до 100, и ось Y начинают с 90, а не с нуля. К чему это приводит?"
+  student_view: { options: [{ id: A, text: "Небольшая разница выглядит резким ростом, хотя на самом деле она невелика" }, { id: B, text: "График становится точнее: масштаб добавляет точность данным" }, { id: D, text: "Ось обязана начинаться с единицы, иначе диаграмма не строится" }, { id: C, text: "Ни к чему: масштаб оси не влияет на сами значения" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Для сравнения величин ось начинают с нуля: иначе график искажает данные — этот приём руками настраивается в диаграмме." }
+
+- id: inf-11-data-016
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Нулевая корреляция"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Коэффициент корреляции Пирсона r = 0. Что это означает?"
+  student_view: { options: [{ id: D, text: "Данные посчитаны неверно: r не бывает нулём" }, { id: C, text: "Связь идеальная: точки лежат на одной прямой" }, { id: B, text: "Связи нет вообще никакой" }, { id: A, text: "Линейной связи нет, но нелинейная связь при этом возможна" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "r = 0 говорит только об отсутствии ЛИНЕЙНОЙ связи; например, радиус и площадь круга связаны нелинейно." }
+
+- id: inf-11-data-017
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Прогноз по регрессии"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Продажи Y росли при значениях X = 1, 2, 3, 4, 5 как 12, 15, 18, 21, 24. Постройте линию тренда y = kx + b и предскажите Y при X = 8. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [33], answer_text: "33", explanation: "Линия тренда y = 3x + 9: k = 3 — на 3 единицы продаж в месяц, b = 9; при X = 8 получаем 33." }
+
+- id: inf-11-data-018
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Вид связи"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Установите соответствие: вид связи между величинами — пример такой связи."
+  student_view: { left: ["Прямая", "Обратная", "Нулевая", "Нелинейная"], right: ["рост и размер обуви", "цена и спрос", "номер автобуса и скорость", "радиус и площадь круга"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Прямая": "рост и размер обуви", "Обратная": "цена и спрос", "Нулевая": "номер автобуса и скорость", "Нелинейная": "радиус и площадь круга" }, explanation: "Вид связи определяется тем, как меняется Y при росте X; нелинейная связь есть, но r её не показывает. Прямая = рост и размер обуви; Обратная = цена и спрос; Нулевая = номер автобуса и скорость; Нелинейная = радиус и площадь круга" }
+
+- id: inf-11-data-019
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Первый шаг метода"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Уравнение x³ − 2x − 5 = 0 нельзя решить формулой. С чего начинается численное решение подбором параметра?"
+  student_view: { options: [{ id: D, text: "Берут середину заданного отрезка, не проверяя знаки функции" }, { id: C, text: "Подставляют в формулу корни и выбирают подходящий" }, { id: A, text: "Проверяют, что корень существует: строят график и смотрят, пересекает ли функция ось X" }, { id: B, text: "Сразу записывают ответ с пятью знаками после запятой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Численный метод даёт приближение, а корень может и не существовать: сначала график, потом отрезок и перебор." }
+
+- id: inf-11-data-020
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Итерации бисекции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Метод бисекции сужает отрезок вдвое за каждую итерацию. Отрезок [1; 3] имеет длину 2. Сколько итераций нужно, чтобы длина отрезка стала не больше 0,25? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Длина уменьшается так: 2 → 1 → 0,5 → 0,25, то есть три итерации; точность растёт, а формулы для корня так и нет." }
+
+- id: inf-11-data-021
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Шаги подбора"
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Установите соответствие: шаг численного метода — что на этом шаге делают."
+  student_view: { left: ["Шаг 1", "Шаг 2", "Шаг 3", "Шаг 4"], right: ["построить график и проверить, что корень есть", "задать начальный отрезок", "найти точку, где значение меняет знак", "сузить отрезок вокруг неё"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Шаг 1": "построить график и проверить, что корень есть", "Шаг 2": "задать начальный отрезок", "Шаг 3": "найти точку, где значение меняет знак", "Шаг 4": "сузить отрезок вокруг неё" }, explanation: "Порядок подбора параметра: график → отрезок → смена знака → сужение отрезка. Шаг 1 = построить график и проверить, что корень есть; Шаг 2 = задать начальный отрезок; Шаг 3 = найти точку, где значение меняет знак; Шаг 4 = сузить отрезок вокруг неё" }
+
+- id: inf-11-data-022
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Поиск экстремума"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "В LibreOffice Calc прибыль посчитана формулами в столбце из 101 строки. Как найти наибольшее значение без ручного просмотра?"
+  student_view: { options: [{ id: D, text: "Только вручную: таблица не умеет искать максимум" }, { id: C, text: "Функцией МИН по диапазону столбца" }, { id: A, text: "Функцией МАКС по диапазону столбца" }, { id: B, text: "Функцией СРЗНАЧ по диапазону столбца" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "МАКС находит наибольшее значение диапазона; среднее и минимум дают другие величины, а без функции пришлось бы просматривать вручную." }
+
+- id: inf-11-data-023
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Максимальная прибыль"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "Цена товара 1000, себестоимость 600. Спрос зависит от скидки: без скидки берут 10 штук, при скидке 10 % — 20, при 20 % — 40, при 30 % — 45. Найдите максимальную прибыль (выручка минус затраты по себестоимости). Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8000], answer_text: "8000", explanation: "0 %: 10000 − 6000 = 4000; 10 %: 18000 − 12000 = 6000; 20 %: 32000 − 24000 = 8000; 30 %: 31500 − 27000 = 4500. Максимум — 8 000." }
+
+- id: inf-11-data-024
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Выполнимость оптимума"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "Максимум прибыли найден по таблице, но для его реализации не хватает сотрудников. О чём это говорит?"
+  student_view: { options: [{ id: D, text: "Задача оптимизации решена полностью и окончательно" }, { id: C, text: "Ограничения нужно убрать, тогда максимум станет достижимым" }, { id: A, text: "Найденный оптимум получен без учёта всех ограничений и может быть невыполнимым" }, { id: B, text: "Расчёт прибыли выполнен с ошибкой: нужно пересчитать" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Ограничения задачи задают допустимые варианты; неполный набор ограничений даёт максимум, который в жизни нереализуем." }
+
+- id: inf-11-data-025
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Единицы измерения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
+  prompt: "Зачем при формализации задачи указывают единицы измерения величин?"
+  student_view: { options: [{ id: D, text: "Чтобы не приводить числа к целому виду" }, { id: B, text: "Чтобы отчёт выглядел длиннее и солиднее" }, { id: C, text: "Чтобы программа работала быстрее" }, { id: A, text: "Чтобы можно было проверить размерность и не сложить скорость с расстоянием" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Проверка размерности — самый простой способ найти ошибку в формуле: складывать м/с и метры бессмысленно." }
+
+- id: inf-11-data-026
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Ускорение"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
+  prompt: "Автомобиль разгоняется с 20 м/с до 60 м/с за 10 с равноускоренно. Найдите ускорение. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Из v = v₀ + at получаем a = (v − v₀) / t = (60 − 20) / 10 = 4 м/с²." }
+
+- id: inf-11-data-027
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Путь по модели"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-model], meta: [plan-actions] }
+  prompt: "В том же движении (20 м/с, ускорение 4 м/с², 10 с) найдите путь, пройденный за эти 10 секунд. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [400], answer_text: "400", explanation: "Модель s = v₀t + at²/2 даёт s = 20 · 10 + 4 · 100 / 2 = 200 + 200 = 400 м. Модель проверена подстановкой." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-bank2.mjs ====
+
+- id: inf-11-data-028
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Размах данных"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Температура воздуха в течение пяти дней (°C): 12, 15, 9, 18, 14. Чему равен размах этого набора? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Размах = максимум − минимум: 18 − 9 = 9. Размах показывает, насколько данные разбросаны, и зависит от одного крайнего значения — в отличие от стандартного отклонения, которое учитывает все точки." }
+
+- id: inf-11-data-029
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Доли для круговой диаграммы"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Доли категорий товара: 30 %, 25 %, 45 % (в сумме 100 %). На сколько процентных пунктов доля первой категории меньше доли третьей? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "Доли даны в процентах, поэтому разность считаем в процентных пунктах: 45 − 30 = 15. Делить дополнительно не нужно — проценты к процентам не относятся." }
+
+- id: inf-11-data-030
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Коэффициент корреляции Пирсона"
+  type: code_run
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Даны пары значений: x = 1, 2, 3, 4, 5; y = 3, 5, 4, 6, 7. Вычислите коэффициент корреляции Пирсона по формуле r = Σ(xᵢ − x̄)(yᵢ − ȳ) / √[Σ(xᵢ − x̄)² · Σ(yᵢ − ȳ)²] и выведите результат, округлённый до сотых."
+  student_view: { language: python, template: "# Считаем средние, потом числитель и знаменатель\nx = [1, 2, 3, 4, 5]\ny = [3, 5, 4, 6, 7]\nn = len(x)\nmx = ...\nmy = ...\nsxy = 0\nsxx = 0\nsyy = 0\nfor i in range(n):\n    # накапливаем отклонения\n    ...\nr = ...\nprint(round(r, 2))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "x = [1, 2, 3, 4, 5]\ny = [3, 5, 4, 6, 7]\nn = len(x)\nmx = sum(x) / n\nmy = sum(y) / n\nsxy = 0\nsxx = 0\nsyy = 0\nfor i in range(n):\n    dx = x[i] - mx\n    dy = y[i] - my\n    sxy = sxy + dx * dy\n    sxx = sxx + dx * dx\n    syy = syy + dy * dy\nr = sxy / (sxx * syy) ** 0.5\nprint(round(r, 2))", expected_stdout: "0.9", explanation: "Средние: x̄ = 3, ȳ = 5. Числитель: (−2)(−2) + (−1)(0) + 0(−1) + 1·1 + 2·2 = 9. Знаменатель: √(10 · 10) = 10. Значит r = 9/10 = 0.9. Положительный знак — прямая связь, модуль близок к 1 — сильная. В LibreOffice Calc то же считает функция КОРРЕЛ." }
+
+- id: inf-11-data-031
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Шаг перебора"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Корень уравнения ищут перебором на отрезке [1; 3] с шагом 0,1. Сколько значений параметра проверят, если отрезок включается целиком с обоих концов? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [21], answer_text: "21", explanation: "Отрезок разбивают на отрезки длиной 0,1: их (3 − 1) / 0,1 = 20, а точек перебора на одну больше, чем отрезков, — обе границы тоже проверяют. Отсюда 20 + 1 = 21. Забыть про границы — самая частая ошибка." }
+
+- id: inf-11-data-032
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Минимум затрат"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "Почтовый тариф: посылка массой 1 кг стоит 200 рублей, посылка массой 2 кг — 350 рублей. Нужно отправить ровно 4 кг. Какую минимальную сумму придётся заплатить? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [700], answer_text: "700", explanation: "Перебираем все разбиения 4 кг: 1+1+1+1 = 800; 1+1+2 = 750; 1+2+1 = 750; 2+1+1 = 750; 2+2 = 700. Минимум — 2 + 2 кг, то есть 700 рублей. По одной посылке дороже, чем две двухкилограммовые, хотя 200 · 2 = 400 — почти вдвое больше 350. Задача на минимум решается так же, как задача на максимум: перебором значений параметра и сравнением." }
+
+- id: inf-11-data-033
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Четыре шага формализации"
+  type: matching
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-formal], meta: [plan-actions] }
+  prompt: "Установите соответствие: что выписывают при формализации задачи — какой это пункт."
+  student_view: { left: ["Объекты и их свойства", "Связи между объектами", "Ограничения", "Цель"], right: ["какие величины значимы для задачи", "какие величины зависят друг от друга", "что запрещено, какие значения недопустимы", "что требуется найти или оптимизировать"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Объекты и их свойства": "какие величины значимы для задачи", "Связи между объектами": "какие величины зависят друг от друга", "Ограничения": "что запрещено, какие значения недопустимы", "Цель": "что требуется найти или оптимизировать" }, explanation: "Формализация идёт именно в этом порядке: сначала что моделируем, потом как связаны величины, затем что запрещено и, наконец, что ищем. Пропуск любого пункта приводит к программе, которая решает не ту задачу. Верно: Объекты и их свойства = какие величины значимы для задачи; Связи между объектами = какие величины зависят друг от друга; Ограничения = что запрещено, какие значения недопустимы; Цель = что требуется найти или оптимизировать." }
+
+- id: inf-11-data-034
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Равномерное движение"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-motion], meta: [plan-actions] }
+  prompt: "Автомобиль движется равномерно со скоростью 15 м/с в течение 40 с. Какой путь он пройдёт по модели s = v · t? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [600], answer_text: "600", explanation: "Модель равномерного движения s = v · t: 15 · 40 = 600 м. Размерность проверяется сразу: м/с · с = м, скорость со временем сложить нельзя." }
+
+- id: inf-11-data-035
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Сложные проценты"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-percent], meta: [plan-actions] }
+  prompt: "Вклад 20000 рублей под 10 % годовых. Проценты начисляют в конце каждого года и добавляют к вкладу. Сколько денег будет на счёте через 2 года? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [24200], answer_text: "24200", explanation: "Сложные проценты: каждый год к сумме прибавляют 10 % от неё же, то есть умножают на 1,1. За два года: 20000 · 1,1 = 22000, затем ещё раз — 24200 рублей. Простые проценты дали бы 24000: разница 200 рублей и есть эффект сложного процента." }
+
+- id: inf-11-data-036
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Модель роста популяции"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-growth], meta: [plan-actions] }
+  prompt: "Популяция численностью 1250 особей растёт на 8 % в год. Через 2 года по модели N = N₀ · (1 + r)ᵗ население составит особей? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1458], answer_text: "1458", explanation: "N = 1250 · 1,08² = 1250 · 1.1664 = 1458 особей. Модель биологического роста составлена для постоянного процента прироста: если он меняется по годам, формулу применяют по частям." }
+
+- id: inf-11-data-037
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Проверка размерности"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: analyze
+  points: 2
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-unit], meta: [plan-actions] }
+  prompt: "При проверке модели записали формулу s = v + t. Что скажет проверка размерности?"
+  student_view: { options: [{ id: A, text: "Никакая: скорость и время складывать можно, это обычное сложение чисел" }, { id: C, text: "Единицы измерения совпадают, поэтому проверить формулу нечем" }, { id: D, text: "Проверять нужно только знак результата, единицы тут ни при чём" }, { id: B, text: "Единицы измерения не совпадают: у s метры, а у v и t — метры в секунду и секунды" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Проверка размерности — самый быстрый способ найти ошибку в формуле. У пройденного пути единица измерения — метры, а складываются метры в секунду и секунды, то есть м/с + с. Складывать величины разной размерности бессмысленно: так у модели нет физического смысла." }
+
+- id: inf-11-data-038
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Экстремум по графику функции"
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-graph], meta: [plan-actions] }
+  prompt: "Постройте таблицу значений функции y = −x² + 4x для x от 0 до 10 и найдите наибольшее значение функции. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Таблица даёт максимум при x = 2: y = −2² + 4 · 2 = 4. Проверка по формуле: у параболы с ветвями вниз вершина в x = −b/(2a) = 2. График показывает экстремум наглядно — этого нет в таблице значений, если точек мало." }
+
+- id: inf-11-data-039
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Проверка модели"
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-check], meta: [plan-actions] }
+  prompt: "Модель совпала с наблюдением для одной точки данных. Почему этой проверки недостаточно?"
+  student_view: { options: [{ id: A, text: "Ничего: правильная формула на одном наборе данных работает и дальше" }, { id: D, text: "Нужно только нарисовать график — он заменяет проверку" }, { id: C, text: "Достаточно одного набора: если сошлось, формула верна" }, { id: B, text: "Модель проверяют на нескольких наборах данных и на граничных значениях" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "D", explanation: "Совпадение в одной точке — случайность, а не доказательство: формулу можно подогнать под любое единственное измерение. Модель проверяют на нескольких независимых данных, на граничных значениях и на размерности, и только потом используют для прогноза." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-11-data-bank3.mjs ====
+
+- id: inf-11-data-040
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Среднее арифметическое"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Четыре ученика пробежали 100 м за 14, 15, 16 и 15 секунд. Найдите среднее время забега по модели «сумма, делённая на число забегов». Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [15], answer_text: "15", explanation: "Сумма времён 14 + 15 + 16 + 15 = 60 секунд, забегов было 4, значит среднее равно 60 / 4 = 15 секунд. Среднее показывает типичное время класса, но оно зависит от выбросов: если один ученик пробежал бы 25 секунд, среднее стало бы 17,25, хотя три других результата не изменились." }
+
+- id: inf-11-data-041
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Мода"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Оценки класса за четверть: 5, 4, 5, 3, 5, 4, 4, 5. Какая оценка встречается чаще всего?"
+  student_view: { options: [{ id: D, text: "Среднее 4,25 — оно и есть самая частая оценка" }, { id: C, text: "3 — она встречается 1 раз, и это наименьшая оценка в списке" }, { id: A, text: "5 — она встречается в списке 4 раза, чаще любой другой оценки" }, { id: B, text: "4 — она встречается 3 раза: это второе по частоте значение, но не самое частое" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Мода — самое частое значение. Оценка 5 встречается 4 раза, оценка 4 — 3 раза, оценка 3 — 1 раз, поэтому мода равна 5. Среднее арифметическое здесь 4,25 — это другая величина, и в списке оно не встречается ни разу.", common_errors: ["Среднее 4,25 принимают за моду", "Оценку 4 называют из-за второго по частоте значения"] }
+
+- id: inf-11-data-042
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Дисперсия и стандартное отклонение"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-02-stats
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-stats], meta: [plan-actions] }
+  prompt: "Дан набор чисел: 2, 4, 4, 4, 5, 5, 7, 9. Найдите дисперсию D = Σ(xᵢ − x̄)² / n и стандартное отклонение σ = √D. Выведите оба числа в одну строку через пробел, каждое с округлением до сотых."
+  student_view: { language: python, template: "# Сначала среднее, потом сумма квадратов отклонений от него\ndata = [2, 4, 4, 4, 5, 5, 7, 9]\nn = len(data)\nmean = ...\nsq = 0\nfor value in data:\n    # прибавляем квадрат отклонения\n    ...\nvariance = ...\nsd = ...\nprint(round(variance, 2), round(sd, 2))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "data = [2, 4, 4, 4, 5, 5, 7, 9]\nn = len(data)\nmean = sum(data) / n\nsq = 0\nfor value in data:\n    sq = sq + (value - mean) ** 2\nvariance = sq / n\nsd = variance ** 0.5\nprint(round(variance, 2), round(sd, 2))", expected_stdout: "4.0 2.0", explanation: "Среднее x̄ = 40 / 8 = 5. Отклонения: −3, −1, −1, −1, 0, 0, 2, 4, их квадраты дают 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32. Дисперсия D = 32 / 8 = 4, стандартное отклонение σ = √4 = 2. В отличие от размаха (9 − 2 = 7) дисперсия учитывает все точки набора, поэтому число устойчивее. В LibreOffice Calc то же дают функции ДИСП и СТАБР." }
+
+- id: inf-11-data-043
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Чтение столбчатой диаграммы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Столбчатая диаграмма показывает число участников олимпиады по классам: 8 класс — 24 человека, 9 класс — 17, 10 класс — 21, 11 класс — 13. На сколько человек больше в 8 классе, чем в 11 классе? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Высота столбца 8 класса — 24 человека, 11 класса — 13 человек. Разность: 24 − 13 = 11 человек. Диаграмма читается проще таблицы, но сравнивать нужно столбцы с одинаковой шкалой: если для одного класса ось начинается с нуля, а для другого с 20, разницу покажут неверно." }
+
+- id: inf-11-data-044
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Выбор линейчатой диаграммы"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "Нужно сравнить продажи четырёх товаров: «Тетрадь в клетку», «Набор карандашей», «Пластилин», «Альбом для рисования». Какую диаграмму выбрать?"
+  student_view: { options: [{ id: C, text: "Столбчатую: она всегда удобнее линейчатой, потому что столбцы растут снизу вверх" }, { id: A, text: "Линейчатую: столбцы лежат горизонтально, и длинные названия товаров читаются, не наезжая на подписи" }, { id: D, text: "Диаграмму разброса: она предназначена для сопоставления двух величин сразу" }, { id: B, text: "Круговую: она показывает доли, а четыре товара — это доли от общего" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "B", explanation: "У линейчатой диаграммы столбцы расположены горизонтально, поэтому подписи категорий идут слева направо и длинные названия не накладываются на столбцы — это её главное преимущество. Круговая диаграмма годится для долей одного целого, а не для сравнения четырёх несравнимых величин, а диаграмма разброса показывает связь двух величин.", common_errors: ["Выбирают круговую: «там всё видно сразу»", "Считают, что вид диаграммы не влияет на читаемость подписей"] }
+
+- id: inf-11-data-045
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Круговая диаграмма: угол сектора"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-03-diagrams
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-viz], meta: [plan-actions] }
+  prompt: "На круговой диаграмме показаны четыре доли: 10 %, 20 %, 30 % и 40 % (в сумме 100 %). Сколько градусов занимает сектор, соответствующий доле 30 %? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [108], answer_text: "108", explanation: "Весь круг — это 100 %, то есть 360 градусов. На долю 30 % приходится 30 / 100 · 360 = 108 градусов. Проверка: 10 % дают 36°, 20 % — 72°, 30 % — 108°, 40 % — 144°, а в сумме 360°. В LibreOffice Impress угол сектора задаётся числом градусов, поэтому сначала находят долю, потом переводят её в градусы." }
+
+- id: inf-11-data-046
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Знак коэффициента корреляции"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "При увеличении X от 1 до 10 величина Y каждый раз уменьшается с 50 до 20. Какой знак у коэффициента корреляции Пирсона?"
+  student_view: { options: [{ id: A, text: "Отрицательный: при росте X величина Y уменьшается, и точки на графике идут сверху вниз" }, { id: C, text: "Нулевой: без числа наблюдений знак определить нельзя" }, { id: B, text: "Положительный: чем больше X, тем больше Y, потому что обе величины меняются" }, { id: D, text: "Знак зависит от единиц измерения: в метрах он один, в сантиметрах другой" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Знак коэффициента корреляции показывает направление связи: при прямой связи r > 0, при обратной r < 0, при отсутствии линейной связи r = 0. Здесь X растёт, а Y падает — это обратная связь, значит r отрицательный. Единицы измерения на знак не влияют: смена метров на сантиметры меняет величину коэффициента, но не его знак.", common_errors: ["Считают, что знак зависит от единиц измерения", "Путают отсутствие корреляции с отсутствием связи вообще"] }
+
+- id: inf-11-data-047
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Объём выборки"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-corr], meta: [plan-actions] }
+  prompt: "Коэффициент корреляции посчитали по данным всего пяти человек одной группы. Что из этого следует?"
+  student_view: { options: [{ id: A, text: "Выводы надёжны только для этой группы: малая выборка, выводы по ней нельзя переносить на всех" }, { id: D, text: "Пять наблюдений достаточно, если считать среднее вручную, а не на калькуляторе" }, { id: C, text: "Выборку нужно расширить, но выводы по ней всё равно делать нельзя" }, { id: B, text: "Выводы верны для любой группы: корреляция зависит только от формулы, а не от данных" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Выборка — это те наблюдения, по которым считают коэффициент. На пяти точках корреляция может случайно оказаться высокой, и переносить такой вывод на всю совокупность нельзя: с другими данными коэффициент изменится. Надёжный вывод требует достаточного числа наблюдений, разбросанных по всему диапазону значений X.", common_errors: ["Считают, что формула корреляции не зависит от данных", "Путают «мало данных» с «неверными данными»"] }
+
+- id: inf-11-data-048
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Наклон линии связи"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Прямая линия связи проходит через точки (2; 5) и (6; 17). Найдите коэффициент k в формуле y = kx + b. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Наклон показывает, на сколько Y растёт при увеличении X на единицу: k = (17 − 5) / (6 − 2) = 12 / 4 = 3. Значит, при росте X на 1 величина Y растёт на 3. Проверка: свободный член b = 5 − 3 · 2 = −1, и тогда y = 3x − 1 даёт 5 при x = 2 и 17 при x = 6 — обе точки попали." }
+
+- id: inf-11-data-049
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Линия тренда и прогноз"
+  type: code_run
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-04-correlation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Даны пары значений: x = 2, 4, 6, 8, 10 и y = 3, 7, 8, 12, 14. Постройте линию тренда y = kx + b методом наименьших квадратов и оцените y при x = 12. Выведите два числа в одну строку через пробел: сначала k, затем прогноз, каждое с округлением до сотых."
+  student_view: { language: python, template: "# Средние, потом наклон k = Σ(xᵢ − x̄)(yᵢ − ȳ) / Σ(xᵢ − x̄)²\nx = [2, 4, 6, 8, 10]\ny = [3, 7, 8, 12, 14]\nn = len(x)\nmx = ...\nmy = ...\nsxy = 0\nsxx = 0\nfor i in range(n):\n    sxy = sxy + ...\n    sxx = sxx + ...\nk = ...\nb = ...\nprint(round(k, 2), round(k * 12 + b, 2))" }
+  auto_check: { method: code_stdout, timeout_s: 10 }
+  teacher_only: { solution_code: "x = [2, 4, 6, 8, 10]\ny = [3, 7, 8, 12, 14]\nn = len(x)\nmx = sum(x) / n\nmy = sum(y) / n\nsxy = 0\nsxx = 0\nfor i in range(n):\n    sxy = sxy + (x[i] - mx) * (y[i] - my)\n    sxx = sxx + (x[i] - mx) ** 2\nk = sxy / sxx\nb = my - k * mx\nprint(round(k, 2), round(k * 12 + b, 2))", expected_stdout: "1.35 16.9", explanation: "Средние: x̄ = 6, ȳ = 8,8. Сумма произведений отклонений Sxy = 54, сумма квадратов отклонений X Sxx = 40. Отсюда k = 54 / 40 = 1,35, свободный член b = 8,8 − 1,35 · 6 = 0,7. При x = 12 получаем y = 1,35 · 12 + 0,7 = 16,9. Наклон положительный: с ростом x величина y в среднем растёт на 1,35. В LibreOffice Calc ту же линию даёт функция НАКЛОН." }
+
+- id: inf-11-data-050
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Составление уравнения по условию"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Из коробки взяли 5 конфет, и осталось 12. Сколько конфет было в коробке? Составьте уравнение n − 5 = 12, решите его и запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [17], answer_text: "17", explanation: "Достаём неизвестное: было n конфет, взяли 5, осталось 12. Уравнение n − 5 = 12 даёт n = 12 + 5 = 17. Проверка подстановкой: 17 − 5 = 12, верно. Решение уравнения — это подбор всех значений, при которых равенство становится правдой, и уравнение с одним корнем здесь имеет ровно один ответ." }
+
+- id: inf-11-data-051
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Проверка корня подстановкой"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Как проверить, что x = 2 является корнем уравнения x² − 4 = 0?"
+  student_view: { options: [{ id: D, text: "Округлить x до целого и проверить знак результата" }, { id: C, text: "Посчитать, сколько у уравнения корней, и сравнить с числом справа" }, { id: A, text: "Подставить x = 2 в уравнение и вычислить: 2² − 4 = 4 − 4 = 0, равенство верно" }, { id: B, text: "Построить график в другой системе координат, где корень уйдёт в сторону" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "C", explanation: "Корень — это значение, при котором равенство становится правдой, поэтому его проверяют прямой подстановкой: вместо x ставим 2 и считаем левую часть. Получаем 2² − 4 = 0, значит x = 2 действительно корень. Обратите внимание на запись проверки: вычисляют левую часть и сравнивают её с нулём, а не пишут «2 = 4 − 4», иначе пришлось бы утверждать, что 2 = 0.", common_errors: ["Подставляют x и проверяют знак, а не равенство нулю", "Проверяют корень в другой формуле, выведенной для этого же уравнения"] }
+
+- id: inf-11-data-052
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Корни квадратного уравнения"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-05-equation
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-fit], meta: [plan-actions] }
+  prompt: "Решите уравнение x² − 9x + 20 = 0 и найдите сумму его корней. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Дискриминант D = (−9)² − 4 · 1 · 20 = 81 − 80 = 1, поэтому корни x₁ = (9 − 1) / 2 = 4 и x₂ = (9 + 1) / 2 = 5, а их сумма равна 9. По теореме Виета сумма корней равна −b / a = 9, так что корни можно и не находить. Проверка подстановкой: 4² − 9 · 4 + 20 = 0 и 5² − 9 · 5 + 20 = 0." }
+
+- id: inf-11-data-053
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Округление вверх при покупке"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "Нужно упаковать 100 тетрадей в упаковки по 30 штук. Какое наименьшее число упаковок придётся купить? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "100 / 30 = 3,33 — три упаковки хватает на 90 тетрадей, а четыре — на 120. Значит, наименьшее допустимое число упаковок 3 + 1 = 4. Здесь важно округлять вверх: ограничение «не больше 30» задаёт минимальное, а не среднее значение. В табличном редакторе тот же расчёт делает функция ОКРВВЕРХ." }
+
+- id: inf-11-data-054
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Сравнение вариантов покупки"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "Тетрадь стоит 45 рублей поштучно, комплект из 10 тетрадей — 400 рублей. Нужно купить 30 тетрадей. На сколько рублей дешевле купить три комплекта, чем 30 тетрадей поштучно? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [150], answer_text: "150", explanation: "Поштучно: 30 · 45 = 1350 рублей. Комплектами: 3 · 400 = 1200 рублей. Разница: 1350 − 1200 = 150 рублей в пользу комплектов. Задача на оптимизацию решается перебором вариантов и сравнением: выбирают не «самое дешёвое», а самое выгодное по результату при выполнении ограничения «ровно 30 тетрадей»." }
+
+- id: inf-11-data-055
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Влияние ограничения на оптимум"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "В задаче на максимум прибыли добавили ограничение: продать можно не больше 50 единиц товара. Что произойдёт с найденным максимумом?"
+  student_view: { options: [{ id: A, text: "Максимум может уменьшиться или остаться прежним: часть вариантов стала недопустимой" }, { id: B, text: "Максимум обязательно уменьшится ровно в 50 раз — это следует из самого числа 50" }, { id: C, text: "Максимум не изменится: ограничение только описывает вариант, который и так был лучшим" }, { id: D, text: "Задача перестанет решаться: ограничения нельзя добавлять после расчёта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Ограничение отсекает часть допустимых вариантов, поэтому новый максимум не может оказаться больше прежнего: он либо уменьшится, либо останется тем же, если лучший вариант укладывается в новое ограничение. Измениться может и сам вид задачи, если ограничение стало главным, но возможность решить задачу оно не отменяет.", common_errors: ["Считают, что новое ограничение обязательно уменьшает максимум", "Считают, что ограничение появляется после расчёта и не влияет на него"] }
+
+- id: inf-11-data-056
+  class: 11
+  topic: "Анализ данных"
+  subtopic: "Оптимизация по ограничению ресурса"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 11data-06-optimize
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-data-opt], meta: [plan-actions] }
+  prompt: "В огороде 8 грядок. Каждая грядка с высокой урожайностью даёт 9 кг огурцов и требует 2 ведра воды, обычная грядка даёт 6 кг и воды не требует. Всего есть 10 вёдер воды. Грядки можно оставить обычными. Сколько килограммов огурцов соберут при таком расходе воды? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [63], answer_text: "63", explanation: "Пусть h — число грядок под высокую урожайность. Воды хватит на 10 / 2 = 5 таких грядок. Перебираем h от 0 до 5: 0 → 48 кг, 1 → 51, 2 → 54, 3 → 57, 4 → 60, 5 → 63. Максимум — 63 кг при 5 высоких и 3 обычных грядках, воды использовано ровно 10 вёдер. Больше высоких грядок взять нельзя: воды уже не останется, а оставшиеся грядки придётся оставить обычными." }
+
+- id: inf-11-data-057
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Параметры и ограничения"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-formal], meta: [plan-actions] }
+  prompt: "В условии задачи сказано: «В один бакет помещается не больше 10 кг яблок, масса одного яблока — 150 г». Что здесь параметр, а что ограничение?"
+  student_view: { options: [{ id: A, text: "Параметр — масса одного яблока, ограничение — «не больше 10 кг» в одном бакете" }, { id: D, text: "Параметров и ограничений нет: это просто бытовое высказывание" }, { id: C, text: "Параметр — цена яблока, ограничение — масса бакета" }, { id: B, text: "Параметр — вместимость бакета, ограничение — число яблок внутри него" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Параметр — величина, которую подставляют в модель вместо неизвестного: здесь масса одного яблока, её подставляют в формулу «сколько яблок в бакете». Ограничение задаёт допустимые значения параметра: масса не должна превышать 10 кг, поэтому число яблок в бакете ограничено сверху. Путаница этих двух понятий — самая частая причина неверных моделей.", common_errors: ["Меняют местами параметр и ограничение", "Считают, что ограничение задаёт саму величину, а не её допустимый диапазон"] }
+
+- id: inf-11-data-058
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Модель прямоугольника"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-formal], meta: [plan-actions] }
+  prompt: "Длина прямоугольника на 6 см больше ширины, а периметр равен 44 см. Составьте уравнение по модели P = 2(a + b) и найдите площадь прямоугольника в квадратных сантиметрах. Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [112], answer_text: "112", explanation: "Пусть b — ширина, тогда длина a = b + 6. По модели P = 2(a + b) получаем 44 = 2(b + 6 + b), откуда 22 = 2b + 6 и b = 8 см, а длина a = 14 см. Площадь S = a · b = 14 · 8 = 112 см². Проверка размерности: обе стороны заданы в сантиметрах, поэтому периметр выходит в сантиметрах, а произведение сторон — в квадратных сантиметрах." }
+
+- id: inf-11-data-059
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Линейная модель: обратная задача"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-graph], meta: [plan-actions] }
+  prompt: "Температура воздуха меняется по модели T = 20 − 3t, где t — время в минутах, T — температура в градусах Цельсия. Через сколько минут температура станет 2 °C? Запишите только число."
+  student_view: { base: 10 }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Обратная задача: известен результат 2, ищем время. Подставляем: 2 = 20 − 3t, откуда 3t = 18 и t = 6 минут. Проверка по модели: T(6) = 20 − 18 = 2, всё сошлось. Ответ осмысленный: за 6 минут температура успела опуститься с 20 до 2 градусов, то есть модель применима на всём этом интервале времени." }
+
+- id: inf-11-data-060
+  class: 11
+  topic: "Модели и моделирование"
+  subtopic: "Границы применимости модели"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 11model-01-modeling
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-11-model-check], meta: [plan-actions] }
+  prompt: "Модель s = v · t для автомобиля со скоростью 60 км/ч даёт путь 120 км за 2 ч. Можно ли этой моделью найти путь, который автомобиль проедет за те же 2 часа, если 15 минут из них он стоял на светофоре?"
+  student_view: { options: [{ id: A, text: "Нельзя: модель предполагает постоянную скорость, а остановка это условие нарушает" }, { id: B, text: "Можно, если посчитать среднюю скорость за эти два часа" }, { id: D, text: "Нельзя, потому что модель s = v · t работает только для машин" }, { id: C, text: "Можно, если округлить скорость до целого километра в час" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: "A", explanation: "Условие применимости модели s = v · t — постоянная скорость. Остановка на 15 минут скорость меняет, то есть исходное условие модели нарушено, и её применение даст завышенный результат. Правильный путь: разбить время на два участка, для стоянки принять v = 0, и посчитать путь по каждому участку отдельно. Это и есть проверка модели на граничных случаях.", common_errors: ["Считают, что средняя скорость за два часа решает задачу", "Считают, что модель применима, если машина едет по дороге"] }

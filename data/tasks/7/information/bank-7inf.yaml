@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
   prompt: "Какое свойство информации нарушено, если расписание дано за прошлую неделю?"
-  student_view: { options: [{ id: A, text: "Актуальность" }, { id: B, text: "Достоверность" }, { id: C, text: "Полнота" }, { id: D, text: "Понятность" }] }
+  student_view: { options: [{ id: D, text: "Понятность" }, { id: C, text: "Полнота" }, { id: A, text: "Актуальность" }, { id: B, text: "Достоверность" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Информация устарела — не вовремя" }
+  teacher_only: { answer: C, explanation: "Информация устарела — не вовремя" }
 
 - id: inf-7-inf-002
   class: 7
@@ -29,7 +29,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-process], meta: [plan-actions] }
   prompt: "Что идёт первым в цепочке передачи информации?"
-  student_view: { options: [{ id: A, text: "Приёмник" }, { id: B, text: "Источник" }, { id: C, text: "Канал связи" }, { id: D, text: "Декодирующее устройство" }] }
+  student_view: { options: [{ id: C, text: "Канал связи" }, { id: B, text: "Источник" }, { id: A, text: "Приёмник" }, { id: D, text: "Декодирующее устройство" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, explanation: "Источник → кодер → канал → декодер → приёмник" }
 
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
   prompt: "Сколько разных символов можно закодировать кодом длины 5?"
-  student_view: { options: [{ id: A, text: "10" }, { id: B, text: "25" }, { id: C, text: "32" }, { id: D, text: "64" }] }
+  student_view: { options: [{ id: B, text: "25" }, { id: D, text: "64" }, { id: A, text: "10" }, { id: C, text: "32" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "N = 2^5 = 32" }
+  teacher_only: { answer: D, explanation: "N = 2^5 = 32" }
 
 - id: inf-7-inf-004
   class: 7
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
   prompt: "Что такое мощность алфавита?"
-  student_view: { options: [{ id: A, text: "Количество символов в нём" }, { id: B, text: "Длина самого длинного слова" }, { id: C, text: "Вес одного символа" }, { id: D, text: "Число слов языка" }] }
+  student_view: { options: [{ id: D, text: "Число слов языка" }, { id: C, text: "Вес одного символа" }, { id: B, text: "Длина самого длинного слова" }, { id: A, text: "Количество символов в нём" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "N — число символов алфавита" }
+  teacher_only: { answer: D, explanation: "N — число символов алфавита" }
 
 - id: inf-7-inf-006
   class: 7
@@ -148,9 +148,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
   prompt: "Сколько байт в одном килобайте?"
-  student_view: { options: [{ id: A, text: "1000" }, { id: B, text: "1024" }, { id: C, text: "8" }, { id: D, text: "256" }] }
+  student_view: { options: [{ id: B, text: "1024" }, { id: C, text: "8" }, { id: D, text: "256" }, { id: A, text: "1000" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "В информатике кило — это 1024" }
+  teacher_only: { answer: A, explanation: "В информатике кило — это 1024" }
 
 - id: inf-7-inf-010
   class: 7
@@ -215,9 +215,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
   prompt: "Сколько разных символов можно закодировать кодом длины 3?"
-  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "8" }, { id: C, text: "9" }, { id: D, text: "3" }] }
+  student_view: { options: [{ id: A, text: "6" }, { id: C, text: "9" }, { id: B, text: "8" }, { id: D, text: "3" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "2^3 = 8" }
+  teacher_only: { answer: C, explanation: "2^3 = 8" }
 
 - id: inf-7-inf-014
   class: 7
@@ -235,3 +235,672 @@
   student_view: { base: 10 }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [1024], answer_text: "1024", explanation: "В информатике кило — 1024" }
+
+# ==== ДОПИСАНО scripts/make-7-bank.mjs — ниже руками не править ====
+# Ответы вычислены кодом (calc/автоматический подбор варианта) и проверены check.mjs.
+
+- id: inf-7-inf-015
+  class: 7
+  topic: Информация и процессы
+  subtopic: Информационная грамотность
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-01-info
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
+  prompt: "Преподаватель проверил факт в двух независимых источниках и только потом использовал его в задании. Какое правило информационной грамотности он выполнил?"
+  student_view: { options: [{ id: A, text: "Найти по запросу первый подходящий результат" }, { id: B, text: "Проверить факт, прежде чем использовать его" }, { id: D, text: "Искать информацию, не задав цели" }, { id: C, text: "Выдать собственное мнение за факт" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Надёжный источник и проверка важнее красивого результата: сначала цель, потом источник, потом проверка." }
+
+- id: inf-7-inf-016
+  class: 7
+  topic: Информация и процессы
+  subtopic: Виды информационных процессов
+  type: matching
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-01-info
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-process], meta: [plan-actions] }
+  prompt: "Установите соответствие: действие с информацией — вид информационного процесса."
+  student_view: { left: ["Открыть окно программы и прочитать текст", "Сохранить файл на диск", "Посчитать средний балл"], right: ["приём", "хранение", "обработка"] }
+  auto_check: { method: matching, partial: proportional }
+  teacher_only: { answer_map: { "Открыть окно программы и прочитать текст": "приём", "Сохранить файл на диск": "хранение", "Посчитать средний балл": "обработка" }, explanation: "Приём — получить, хранение — сохранить, обработка — изменить или преобразовать." }
+
+- id: inf-7-inf-017
+  class: 7
+  topic: Дискретность данных
+  subtopic: Аналоговая информация
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Какой из примеров — аналоговая (непрерывная) информация?"
+  student_view: { options: [{ id: D, text: "Число на игральной кости" }, { id: A, text: "Температура воздуха в комнате 21,7 °C" }, { id: C, text: "Ответ теста: дождь идёт или не идёт" }, { id: B, text: "Номер кабинета, где идёт урок" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Аналоговая величина принимает любое значение из промежутка; остальные примеры — из конечного набора." }
+
+- id: inf-7-inf-018
+  class: 7
+  topic: Дискретность данных
+  subtopic: Дискретизация
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Яркость кодируется числами от 0 до 255. Сколько бит отдано на одно значение яркости? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Всего 256 значений, 256 = 2^8, значит на одно значение нужно 8 бит." }
+
+- id: inf-7-inf-019
+  class: 7
+  topic: Дискретность данных
+  subtopic: Приближение вместо копии
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Яркость 63,5 кодируется числами от 0 до 255. Какое значение запишет компьютер?"
+  student_view: { options: [{ id: D, text: "255 — округлит до максимального значения" }, { id: A, text: "63,5 — запишет как есть, компьютер умеет хранить дробные числа" }, { id: C, text: "128 — округлит к середине набора" }, { id: B, text: "64 — округлит до ближайшего числа из набора" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Дискретизация — приближение: 63,5 округляется к ближайшему из 256 выбранных значений." }
+
+- id: inf-7-inf-020
+  class: 7
+  topic: Двоичное кодирование
+  subtopic: Минимальная длина кода
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-02-coding
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
+  prompt: "Какой наименьшей длины должен быть двоичный код, чтобы закодировать 1000 различных символов? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [10], answer_text: "10", explanation: "2^9 = 512 < 1000, а 2^10 = 1024 — значит, нужно 10 бит на символ." }
+
+- id: inf-7-inf-021
+  class: 7
+  topic: Двоичное кодирование
+  subtopic: Равномерный код
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
+  prompt: "Сообщение занимает 40 байт и закодировано равномерным кодом по 8 бит на символ. Сколько символов в сообщении?"
+  student_view: { options: [{ id: C, text: "5" }, { id: B, text: "320" }, { id: D, text: "800" }, { id: A, text: "40" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "40 байт — это 320 бит; при равномерном коде символов = битов : i = 320 : 8 = 40." }
+
+- id: inf-7-inf-022
+  class: 7
+  topic: Двоичное кодирование
+  subtopic: Неравномерный код
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
+  prompt: "В неравномерном коде буквы Е и Т кодируются одним знаком, а О, Н и А — двумя. Сколько знаков в коде слова ОНТА? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [7], answer_text: "7", explanation: "О — 2, Н — 2, Т — 1, А — 2; итого 2 + 2 + 1 + 2 = 7 знаков." }
+
+- id: inf-7-inf-023
+  class: 7
+  topic: Двоичное кодирование
+  subtopic: Префиксный код
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-prefix], meta: [plan-actions] }
+  prompt: "Почему коды 0, 01 и 011 нельзя использовать в неравномерном коде?"
+  student_view: { options: [{ id: B, text: "Коды слишком короткие, поэтому в них мало информации" }, { id: C, text: "В неравномерном коде у всех символов должна быть одинаковая длина" }, { id: A, text: "Код 0 стоит в начале 01 и 011, поэтому нельзя понять, где кончился один символ" }, { id: D, text: "Три кода использовать можно, но только вместе с разделителем" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Нарушено условие префиксного кода: ни один код не должен быть началом другого." }
+
+- id: inf-7-inf-024
+  class: 7
+  topic: Измерение информации
+  subtopic: Сравнение кодировок
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-03-measure
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Файл в кодировке Windows-1251 занимает 500 байт: на символ приходится 1 байт. В UTF-8 тот же текст занимает 2 байта на символ. На сколько байт больше файл в UTF-8? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [500], answer_text: "500", explanation: "В UTF-8 символ вдвое «длиннее»: 500 · 2 = 1000 байт, разница 1000 − 500 = 500 байт." }
+
+- id: inf-7-inf-025
+  class: 7
+  topic: Объём сообщения
+  subtopic: Объём сообщения
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-07-volume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-formula], meta: [plan-actions] }
+  prompt: "Сообщение из 200 символов, вес символа 8 бит. Чему равен информационный объём в битах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1600], answer_text: "1600", explanation: "I = K · i = 200 · 8 = 1600 бит." }
+
+- id: inf-7-inf-026
+  class: 7
+  topic: Объём сообщения
+  subtopic: Вес символа
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-07-volume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-formula], meta: [plan-actions] }
+  prompt: "Сообщение объёмом 480 бит состоит из 60 символов. Каков вес символа в битах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "Идём назад от объёма: i = I : K = 480 : 60 = 8 бит на символ." }
+
+- id: inf-7-inf-027
+  class: 7
+  topic: Объём сообщения
+  subtopic: Объём по страницам
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-07-volume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Текст 4 страницы по 50 строк по 70 символов записан 128-символьным алфавитом. Чему равен объём в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12250], answer_text: "12250", explanation: "128 = 2^7, значит i = 7 бит; K = 4 · 50 · 70 = 14 000 символов; I = 98 000 бит = 12 250 байт." }
+
+- id: inf-7-inf-028
+  class: 7
+  topic: Объём сообщения
+  subtopic: Перевод вниз
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-08-units
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Сколько Кбайт в 4096 байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Вниз делим: 4096 : 1024 = 4 Кбайта." }
+
+- id: inf-7-inf-029
+  class: 7
+  topic: Объём сообщения
+  subtopic: Перевод вверх
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-08-units
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Сколько бит в 2 Кбайтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [16384], answer_text: "16384", explanation: "Вверх умножаем: 2 · 1024 = 2048 байта, а 2048 · 8 = 16 384 бита." }
+
+- id: inf-7-inf-030
+  class: 7
+  topic: Объём сообщения
+  subtopic: Файл и символы
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-08-units
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Файл весит 4 Кбайта, один символ в нём занимает 2 байта. Сколько символов в файле? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2048], answer_text: "2048", explanation: "4 Кбайта = 4 · 1024 = 4096 байт; символов = 4096 : 2 = 2048." }
+
+- id: inf-7-inf-031
+  class: 7
+  topic: Объём текста
+  subtopic: Число символов текста
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-04-textvolume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Одна страница текста — это 40 строк по 60 символов. Сколько символов в 5 таких страницах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12000], answer_text: "12000", explanation: "K = страницы · строки · символы = 5 · 40 · 60 = 12 000 символов." }
+
+- id: inf-7-inf-032
+  class: 7
+  topic: Объём текста
+  subtopic: Считаем от ответа
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-09-textvolume-2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Сообщение занимает 2 Кбайта, вес символа 8 бит. Сколько символов в сообщении? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2048], answer_text: "2048", explanation: "2 Кбайта = 2048 байта = 16 384 бита; K = I : i = 16 384 : 8 = 2048 символов." }
+
+- id: inf-7-inf-033
+  class: 7
+  topic: Объём текста
+  subtopic: Объёмы частей складываются
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-09-textvolume-2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Сообщение состоит из текста 24 символа по 8 бит и рисунка 1600 бит. Чему равен общий объём в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [224], answer_text: "224", explanation: "Объёмы частей складываются: 24 · 8 = 192 бита, 192 + 1600 = 1792 бита = 224 байта." }
+
+- id: inf-7-inf-034
+  class: 7
+  topic: Объём текста
+  subtopic: Текст с заданным алфавитом
+  type: numeric_base
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-09-textvolume-2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Текст 2 страницы, 50 строк по 70 символов, алфавит 128 символов. Чему равен объём в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [6125], answer_text: "6125", explanation: "128 = 2^7, значит i = 7 бит; K = 2 · 50 · 70 = 7000 символов; I = 49 000 бит = 6125 байт." }
+
+- id: inf-7-inf-035
+  class: 7
+  topic: Итоговая работа
+  subtopic: Глубина кодирования
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-10-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-formula], meta: [self-control] }
+  prompt: "Сколько бит нужно на один оттенок, если компьютер различает 256 оттенков серого? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [8], answer_text: "8", explanation: "256 = 2^8, поэтому глубина кодирования равна 8 бит." }
+
+- id: inf-7-inf-036
+  class: 7
+  topic: Итоговая работа
+  subtopic: Единицы измерения
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-10-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [self-control] }
+  prompt: "Сколько байт в 1 Мбайте? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1048576], answer_text: "1048576", explanation: "1 Мбайт = 1024 Кбайта, а 1 Кбайт = 1024 байта: 1024 · 1024 = 1 048 576 байт." }
+
+- id: inf-7-inf-037
+  class: 7
+  topic: Итоговая работа
+  subtopic: Типичные ошибки
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-10-control
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-props], meta: [self-control] }
+  prompt: "Ученик посчитал время передачи файла как скорость, умноженную на объём. Какая формула верна?"
+  student_view: { options: [{ id: C, text: "время = объём + скорость" }, { id: D, text: "время = скорость : объём" }, { id: B, text: "время = скорость · объём" }, { id: A, text: "время = объём : скорость" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Объём делят на скорость: единицы сокращаются до секунд." }
+
+- id: inf-7-inf-038
+  class: 7
+  topic: Разбор ошибок
+  subtopic: Тип ошибки
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-11-errors
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-errors-fix], meta: [self-control] }
+  prompt: "Ответ по сути верный, но дан в байтах, когда в задании требовались Кбайты. К какому типу ошибок это относится?"
+  student_view: { options: [{ id: A, text: "Единицы измерения" }, { id: B, text: "Не знал правило" }, { id: D, text: "Невнимательность при чтении вопроса" }, { id: C, text: "Ошибся в вычислении" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Ответ верный, но не в тех единицах: лечится выписыванием цепочки перевода бит → байт → Кбайт." }
+
+- id: inf-7-inf-039
+  class: 7
+  topic: Разбор ошибок
+  subtopic: Проверка единиц
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-11-errors
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-errors-fix], meta: [self-control] }
+  prompt: "Ученик переводил биты в байты делением на 8 и из 4096 бит получил 512 байт. Сколько байт на самом деле? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [512], answer_text: "512", explanation: "Деление на 8 было верным, но 4096 бит — это 512 байт: ошибка в арифметике, а не в правиле." }
+
+- id: inf-7-inf-040
+  class: 7
+  topic: Разбор ошибок
+  subtopic: Найди шаг ошибки
+  type: single_choice
+  difficulty: advanced
+  cognitive_level: analyze
+  points: 3
+  lesson: 7inf-11-errors
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-errors-fix], meta: [self-control] }
+  prompt: "Для алфавита из 64 символов ученик записал i = 64. В чём ошибка?"
+  student_view: { options: [{ id: D, text: "i = 64 верно, но вес символа измеряют в байтах" }, { id: C, text: "i находят делением: 64 : 8 = 8" }, { id: A, text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит" }, { id: B, text: "Ошибки нет: N и i — одно и то же" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Из N = 2^i берут показатель степени: при 64 символах i = 6, а не 64." }
+
+# ==== СГЕНЕРИРОВАНО scripts/make-7-bank2.mjs ====
+# Ответы вычислены кодом (calc/подбор варианта) и проверены check.mjs.
+
+- id: inf-7-inf-041
+  class: 7
+  topic: "Информация и процессы"
+  subtopic: "Объективность"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-01-info
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
+  prompt: "Ученик написал в ответе: «Учительница завысила оценки, потому что она несправедливая». Какое свойство информации требует, чтобы сведения соответствовали реальности, а не мнению автора?"
+  student_view: { options: [{ id: C, text: "Ценность" }, { id: A, text: "Объективность" }, { id: D, text: "Полнота" }, { id: B, text: "Понятность" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "Объективность — соответствие реальности; оценка «несправедливо» это мнение, а его нельзя выдать за факт." }
+
+- id: inf-7-inf-042
+  class: 7
+  topic: "Информация и процессы"
+  subtopic: "Ценность информации"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-01-info
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
+  prompt: "Два ученика получили одно и то же сообщение о расписании на завтра. Для первого оно оказалось полезным, а для второго — бесполезным: он уже знал расписание наизусть. Какое свойство информации различается у этих двух сообщений?"
+  student_view: { options: [{ id: B, text: "Полнота" }, { id: D, text: "Достоверность" }, { id: C, text: "Актуальность" }, { id: A, text: "Ценность" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: D, explanation: "Ценность — польза именно для этого человека в этот момент; сами сведения от этого не меняются." }
+
+- id: inf-7-inf-043
+  class: 7
+  topic: "Дискретность данных"
+  subtopic: "Дискретная информация"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Какой из примеров — дискретная информация?"
+  student_view: { options: [{ id: C, text: "Громкость музыки: 60 %" }, { id: D, text: "Скорость машины: 82,5 км/ч" }, { id: A, text: "Число дней в неделе: 7" }, { id: B, text: "Температура воздуха: 18,4 °C" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: C, explanation: "Дискретная величина берётся из конечного набора; температура, громкость и скорость принимают любое значение из промежутка." }
+
+- id: inf-7-inf-044
+  class: 7
+  topic: "Дискретность данных"
+  subtopic: "Компьютер и дискретность"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Какое утверждение о компьютере верно?"
+  student_view: { options: [{ id: A, text: "Компьютер работает только с дискретными данными" }, { id: D, text: "Чем больше дискретных значений, тем меньше данных" }, { id: B, text: "Компьютер хранит непрерывные данные без всяких ограничений" }, { id: C, text: "Дискретные данные нужны только для изображений" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Мир непрерывен, но компьютер оперирует конечным набором чисел; больше значений — точнее, но больше бит." }
+
+- id: inf-7-inf-045
+  class: 7
+  topic: "Дискретность данных"
+  subtopic: "Число значений яркости"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-05-discrete
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
+  prompt: "Громкость звука кодируется 5 битами. Сколько всего значений громкости сможет различить компьютер? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [32], answer_text: "32", explanation: "Каждый бит удваивает число значений: 2^5 = 32 ступени громкости." }
+
+- id: inf-7-inf-046
+  class: 7
+  topic: "Двоичное кодирование"
+  subtopic: "Знак и знаковая система"
+  type: single_choice
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-02-coding
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
+  prompt: "Что называется знаком?"
+  student_view: { options: [{ id: A, text: "Заменитель объекта по соглашению: слово, цифру или жест" }, { id: C, text: "Ошибка при наборе текста, которую надо исправить" }, { id: D, text: "Символ, который нельзя использовать в коде" }, { id: B, text: "То, что человек вкладывает в слово при чтении" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Знак заменяет объект по договорённости; набор таких знаков и есть знаковая система." }
+
+- id: inf-7-inf-047
+  class: 7
+  topic: "Двоичное кодирование"
+  subtopic: "Код и кодирование"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
+  prompt: "Что такое кодирование информации?"
+  student_view: { options: [{ id: A, text: "Перевод информации в код по согласованным правилам" }, { id: C, text: "Изменение смысла сообщения, чтобы оно было понятнее" }, { id: B, text: "Получение информации из кода обратно" }, { id: D, text: "Выбор одного из нескольких вариантов ответа" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: A, explanation: "Кодирование — перевод в код, декодирование — обратный перевод; без кодовой таблицы нельзя ни закодировать, ни разобрать." }
+
+- id: inf-7-inf-048
+  class: 7
+  topic: "Двоичное кодирование"
+  subtopic: "Код Морзе"
+  type: single_choice
+  difficulty: basic
+  cognitive_level: remember
+  points: 1
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
+  prompt: "В коде Морзе самая частая английская буква E передаётся самым коротким кодом. Каким?"
+  student_view: { options: [{ id: C, text: "Две точки" }, { id: A, text: "Одна точка" }, { id: B, text: "Одна черта" }, { id: D, text: "Точка и черта" }] }
+  auto_check: { method: exact_option }
+  teacher_only: { answer: B, explanation: "В неравномерном коде частым символам отдают короткие коды: E — одна точка, T — одна черта." }
+
+- id: inf-7-inf-049
+  class: 7
+  topic: "Двоичное кодирование"
+  subtopic: "Неравномерный код"
+  type: numeric_base
+  difficulty: intermediate
+  cognitive_level: apply
+  points: 2
+  lesson: 7inf-06-codes
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
+  prompt: "В неравномерном коде буква Т кодируется одним знаком, О — двумя, А — тремя. Сколько знаков в коде слова ТОТ? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Т — 1, О — 2, Т — 1: длина сообщения считается как сумма длин кодов, 1 + 2 + 1 = 4 знака." }
+
+- id: inf-7-inf-050
+  class: 7
+  topic: "Объём сообщения"
+  subtopic: "Объём сообщения"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-07-volume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-formula], meta: [plan-actions] }
+  prompt: "Сообщение из 250 символов записано 32-символьным алфавитом. Чему равен информационный объём в битах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [1250], answer_text: "1250", explanation: "32 = 2^5, значит вес символа i = 5 бит; I = K · i = 250 · 5 = 1250 бит." }
+
+- id: inf-7-inf-051
+  class: 7
+  topic: "Объём сообщения"
+  subtopic: "Перевод цепочкой"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-08-units
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
+  prompt: "Выразите 1,5 Кбайта в битах. Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [12288], answer_text: "12288", explanation: "Полтора килобайта — это 1,5 · 1024 = 1536 байта, а 1536 · 8 = 12 288 бит." }
+
+- id: inf-7-inf-052
+  class: 7
+  topic: "Объём текста"
+  subtopic: "Объём одной страницы"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-04-textvolume
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Одна страница текста — это 40 строк по 60 символов, вес символа 8 бит. Чему равен объём одной страницы в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [2400], answer_text: "2400", explanation: "Символов на странице 40 · 60 = 2400, при 8 битах на символ это ровно 1 байт на символ, значит объём 2400 байт." }
+
+- id: inf-7-inf-053
+  class: 7
+  topic: "Объём текста"
+  subtopic: "Вес символа через алфавит"
+  type: numeric_base
+  difficulty: basic
+  cognitive_level: apply
+  points: 1
+  lesson: 7inf-09-textvolume-2
+  fgos_requirement: 1.1
+  fgos_element: 1.1
+  fgos: { subject: [inf-7-text-tasks], meta: [plan-actions] }
+  prompt: "Текст 3 страницы по 40 строк по 60 символов записан 16-символьным алфавитом. Чему равен объём текста в байтах? Запишите только число."
+  student_view: { base: 10, placeholder: "только число" }
+  auto_check: { method: numeric_base, base: 10, strip_affixes: true }
+  teacher_only: { accepted_values_decimal: [3600], answer_text: "3600", explanation: "16 = 2^4, значит i = 4 бита; K = 3 · 40 · 60 = 7200 символов; I = 7200 · 4 = 28 800 бит = 3600 байт." }
