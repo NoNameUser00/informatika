@@ -85,6 +85,9 @@ export default function Teacher() {
     <TeacherGate>
     <div>
       <h1>Журнал работ</h1>
+      <p className="muted">
+        <a href={`${import.meta.env.BASE_URL}teacher/practices/`}>Методичка: практические работы — что проверять</a>
+      </p>
       {role !== 'teacher' && role !== 'admin' && (
         <div className="card">
           <p><strong>Раздел учителя.</strong> Войди через Google/Яндекс и получи роль учителя (см. docs/auth-setup.md) — иначе видны только локальные строки этого браузера без отметок.</p>
