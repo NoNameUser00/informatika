@@ -8,8 +8,9 @@ import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/clie
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
 // Источник: Supabase (когда настроен доступ teacher) + локальная очередь этого браузера.
-// Выставление final_mark — следующий шаг (нужна авторизация учителя).
+// Подтверждение итога: proposed_mark -> final_mark + комментарий (в базу при её наличии, иначе локально).
 interface Row {
+  id?: string;
   created_at?: string;
   surname: string;
   firstname: string;
@@ -23,15 +24,27 @@ interface Row {
   max_score: number;
   percent: number;
   proposed_mark: number;
+  final_mark?: number | null;
+  teacher_comment?: string;
   needs_review?: boolean;
   filename?: string;
 }
 
 export default function Teacher() {
   const [rows, setRows] = useState<Row[]>([]);
+  const [remoteCount, setRemoteCount] = useState(0);
   const [note, setNote] = useState('Загрузка…');
   const [open, setOpen] = useState<number | null>(null);
   const [role, setRole] = useState<Role>('guest');
+  // Фильтры журнала.
+  const [classFilter, setClassFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState('');
+  const [onlyPending, setOnlyPending] = useState(false);
+  // Черновики подтверждения отметок: по индексу строки.
+  const [draftMark, setDraftMark] = useState<Record<number, string>>({});
+  const [draftComment, setDraftComment] = useState<Record<number, string>>({});
+  const [saving, setSaving] = useState<Record<number, boolean>>({});
+  const [saveMsg, setSaveMsg] = useState<Record<number, string>>({});
 
   useEffect(() => {
     getRole().then((r) => setRole(r.role));
@@ -54,6 +67,7 @@ export default function Teacher() {
           if (res.ok) {
             const remote = (await res.json()) as Row[];
             setRows([...remote, ...local]);
+            setRemoteCount(remote.length);
             setNote(`Строк: ${remote.length} из базы + ${local.length} локальных`);
             return;
           }
@@ -69,9 +83,9 @@ export default function Teacher() {
   }, []);
 
   function csv() {
-    const head = 'surname,firstname,class,test_type,test_code,score,max,percent,mark,filename';
+    const head = 'surname,firstname,class,test_type,test_code,score,max,percent,proposed_mark,final_mark,teacher_comment,filename';
     const lines = rows.map((r) =>
-      [r.surname, r.firstname, r.class_name, r.test_type, r.test_code, r.auto_score, r.max_score, r.percent, r.proposed_mark, r.filename ?? '']
+      [r.surname, r.firstname, r.class_name, r.test_type, r.test_code, r.auto_score, r.max_score, r.percent, r.proposed_mark, r.final_mark ?? '', r.teacher_comment ?? '', r.filename ?? '']
         .map((v) => `"${String(v).replace(/"/g, '""')}"`).join(','),
     );
     const a = document.createElement('a');
@@ -80,6 +94,63 @@ export default function Teacher() {
     a.click();
     URL.revokeObjectURL(a.href);
   }
+
+  // Подтверждение отметки: proposed_mark -> final_mark + комментарий.
+  // Строка из базы (есть id) — UPDATE через REST (RLS пускает только teacher);
+  // локальная строка — дописываем в очередь этого браузера.
+  async function confirmMark(i: number) {
+    const r = rows[i];
+    const mark = Number(draftMark[i] ?? r.proposed_mark);
+    if (![2, 3, 4, 5].includes(mark)) {
+      setSaveMsg({ ...saveMsg, [i]: 'Отметка — число от 2 до 5.' });
+      return;
+    }
+    const comment = (draftComment[i] ?? r.teacher_comment ?? '').slice(0, 500);
+    setSaving({ ...saving, [i]: true });
+    setSaveMsg({ ...saveMsg, [i]: '' });
+    try {
+      const url = import.meta.env.PUBLIC_SUPABASE_URL as string | undefined;
+      const key = import.meta.env.PUBLIC_SUPABASE_ANON_KEY as string | undefined;
+      if (r.id && url && key && (role === 'teacher' || role === 'admin')) {
+        const token = await getToken();
+        if (!token) throw new Error('нет токена');
+        const res = await fetch(`${url.replace(/\/$/, '')}/rest/v1/results?id=eq.${r.id}`, {
+          method: 'PATCH',
+          headers: {
+            apikey: key,
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+            Prefer: 'return=minimal',
+          },
+          body: JSON.stringify({ final_mark: mark, teacher_comment: comment }),
+        });
+        if (!res.ok) throw new Error(`сервер: ${res.status}`);
+        setRows(rows.map((x, j) => (j === i ? { ...x, final_mark: mark, teacher_comment: comment } : x)));
+        setSaveMsg({ ...saveMsg, [i]: 'Подтверждено в базе.' });
+      } else {
+        // Локальная очередь: индекс внутри неё = общий индекс минус строки из базы.
+        const raw = localStorage.getItem('results-queue-v1');
+        const arr = raw ? (JSON.parse(raw) as Row[]) : [];
+        const li = i - remoteCount;
+        if (li < 0 || li >= arr.length) throw new Error('строка не найдена локально');
+        arr[li] = { ...arr[li], final_mark: mark, teacher_comment: comment };
+        localStorage.setItem('results-queue-v1', JSON.stringify(arr));
+        setRows(rows.map((x, j) => (j === i ? { ...x, final_mark: mark, teacher_comment: comment } : x)));
+        setSaveMsg({ ...saveMsg, [i]: 'Подтверждено локально.' });
+      }
+    } catch (e) {
+      setSaveMsg({ ...saveMsg, [i]: `Не сохранено: ${e instanceof Error ? e.message : e}` });
+    } finally {
+      setSaving({ ...saving, [i]: false });
+    }
+  }
+
+  const classNames = [...new Set(rows.map((r) => r.class_name))].sort();
+  const testTypes = [...new Set(rows.map((r) => r.test_type))].sort();
+  const pendingCount = rows.filter((r) => r.final_mark == null).length;
+  const visible = rows
+    .map((r, i) => ({ r, i }))
+    .filter(({ r }) => (!classFilter || r.class_name === classFilter) && (!typeFilter || r.test_type === typeFilter) && (!onlyPending || r.final_mark == null));
 
   return (
     <TeacherGate>
@@ -96,6 +167,24 @@ export default function Teacher() {
       <Analytics rows={rows} />
       <ClassManager role={role} />
       <div className="card">
+        <h2>Фильтры</h2>
+        <p className="muted">Всего строк: {rows.length} · ждут подтверждения: {pendingCount}</p>
+        <div className="radio-row">
+          <label htmlFor="f-class">Класс</label>
+          <select id="f-class" value={classFilter} onChange={(e) => setClassFilter(e.target.value)}>
+            <option value="">все</option>
+            {classNames.map((c) => <option key={c} value={c}>{c}</option>)}
+          </select>
+          <label htmlFor="f-type">Тип</label>
+          <select id="f-type" value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
+            <option value="">все</option>
+            {testTypes.map((t) => <option key={t} value={t}>{t}</option>)}
+          </select>
+          <input id="f-pending" type="checkbox" checked={onlyPending} onChange={(e) => setOnlyPending(e.target.checked)} />
+          <label htmlFor="f-pending" style={{ margin: 0, fontWeight: 400 }}>только без итоговой отметки</label>
+        </div>
+      </div>
+      <div className="card">
         <h2>Доска разборов</h2>
         <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>
         <Board id="teacher-board" />
@@ -103,11 +192,16 @@ export default function Teacher() {
       <ErrorReview />
       <p className="muted">{note}</p>
       {rows.length > 0 && <button className="btn secondary" onClick={csv}>Экспорт CSV</button>}
-      {rows.map((r, i) => (
-        <div className="card" key={i}>
+      {visible.map(({ r, i }) => {
+        const confirmed = r.final_mark != null;
+        return (
+        <div className="card" key={r.id ?? `local-${i}`}>
           <p>
             <strong>{r.surname} {r.firstname}</strong>, {r.class_name} · {r.test_type} · {r.test_code}
-            {' '}— <strong>{r.auto_score}/{r.max_score} ({r.percent}%) → {r.proposed_mark}</strong>
+            {' '}— <strong>{r.auto_score}/{r.max_score} ({r.percent}%) → {confirmed ? r.final_mark : r.proposed_mark}</strong>
+            {confirmed
+              ? <span className="ok"> · итог подтверждён{r.teacher_comment ? `: ${r.teacher_comment}` : ''}</span>
+              : <span className="bad"> · ждёт подтверждения</span>}
             {r.needs_review && <span className="bad"> · ждет проверки{r.filename ? `: ${r.filename}` : ''}</span>}
           </p>
           <button className="btn secondary" onClick={() => setOpen(open === i ? null : i)}>
@@ -119,8 +213,31 @@ export default function Teacher() {
               <p className="muted">Ключи: {JSON.stringify(r.keys)}</p>
             </div>
           )}
+          <div className="radio-row">
+            <label htmlFor={`fm-${i}`}>Итоговая отметка</label>
+            <select
+              id={`fm-${i}`}
+              value={draftMark[i] ?? String(r.final_mark ?? r.proposed_mark)}
+              onChange={(e) => setDraftMark({ ...draftMark, [i]: e.target.value })}
+            >
+              {[5, 4, 3, 2].map((m) => <option key={m} value={m}>{m}</option>)}
+            </select>
+            <input
+              type="text"
+              placeholder="комментарий (необязательно)"
+              maxLength={500}
+              value={draftComment[i] ?? r.teacher_comment ?? ''}
+              onChange={(e) => setDraftComment({ ...draftComment, [i]: e.target.value })}
+              aria-label="Комментарий учителя"
+            />
+            <button className="btn secondary" disabled={!!saving[i]} onClick={() => confirmMark(i)}>
+              {saving[i] ? 'Сохраняю…' : confirmed ? 'Изменить итог' : 'Подтвердить итог'}
+            </button>
+          </div>
+          {saveMsg[i] && <p className="muted" role="status">{saveMsg[i]}</p>}
         </div>
-      ))}
+        );
+      })}
     </div>
     </TeacherGate>
   );
