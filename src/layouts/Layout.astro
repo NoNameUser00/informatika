@@ -18,6 +18,8 @@ const _segs = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean);
 const _baseLen = B.replace(/\/$/, '').split('/').filter(Boolean).length;
 const _g = _segs[_baseLen] ?? '';
 const navGrade = ['7', '8', '9', '10', '11'].includes(_g) ? _g : '8';
+// Раздел учителя — вне классов: grade-ссылки («8 класс») там врут, показываем нейтральные.
+const isTeacher = _segs[_baseLen] === 'teacher';
 const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9': 'sheets', '10': 'base', '11': 'data' };
 ---
 <!doctype html>
@@ -62,6 +64,27 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
       header.top a { color: #fff; text-decoration: none; font-weight: 800; }
       header.top nav a { margin-right: 16px; color: #c7d2fe; }
       .auth-panel { float: right; font-size: 0.85rem; }
+      /* Раскрывашка входа в шапке: одна кнопка вместо россыпи форм. */
+      .auth-drop { position: relative; margin-left: auto; }
+      .auth-drop > summary { list-style: none; cursor: pointer; }
+      .auth-drop > summary::-webkit-details-marker { display: none; }
+      .auth-drop-body {
+        position: absolute; right: 0; top: calc(100% + 8px); z-index: 50;
+        min-width: 280px; max-width: min(92vw, 360px);
+        background: rgba(15, 23, 42, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 14px;
+        padding: 14px 16px;
+        box-shadow: 0 12px 40px rgba(2, 6, 23, 0.6);
+      }
+      .auth-drop-body .auth-panel { float: none; display: block; }
+      .auth-drop-body .auth-panel + .auth-panel { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.15); }
+      .auth-drop-body input[type='text'], .auth-drop-body input[type='password'] {
+        width: 100%; margin: 6px 0 0; box-sizing: border-box;
+        padding: 10px; font-size: .95rem; border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        background: rgba(2, 6, 23, 0.6); color: #fff; min-height: 44px;
+      }
+      .auth-drop-body .auth-btn { margin: 8px 8px 0 0; }
       .auth-btn {
         background: rgba(255,255,255,.14); color: #fff;
         border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
@@ -142,11 +165,25 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
     <header class="top">
       <nav>
         <a href={B}>Информатика</a>
-        <a href={`${B}${navGrade}/`}>{navGrade} класс</a>
-        <a href={`${B}${navGrade}/${NAV_TRAINER[navGrade]}/`}>Тренажер</a>
-        <a href={`${B}teacher/`}>Учитель</a>
-        <AuthPanel client:load />
-        <ClassJoin client:load />
+        {isTeacher ? (
+          <>
+            <a href={`${B}trainers/`}>Тренажёры</a>
+            <a href={`${B}teacher/`} aria-current="page">Учитель</a>
+          </>
+        ) : (
+          <>
+            <a href={`${B}${navGrade}/`}>{navGrade} класс</a>
+            <a href={`${B}${navGrade}/${NAV_TRAINER[navGrade]}/`}>Тренажер</a>
+            <a href={`${B}teacher/`}>Учитель</a>
+          </>
+        )}
+        <details class="auth-drop">
+          <summary class="auth-btn">Вход</summary>
+          <div class="auth-drop-body">
+            <AuthPanel client:load />
+            <ClassJoin client:load />
+          </div>
+        </details>
       </nav>
     </header>
     <main>

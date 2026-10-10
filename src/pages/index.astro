@@ -61,6 +61,26 @@ const GRADES: Grade[] = [
       }
       .home-top .auth-btn:disabled { opacity: .5; }
       .home-top .auth-error { color: #fca5a5; }
+      .home-top .auth-drop { position: relative; margin-left: 16px; }
+      .home-top .auth-drop > summary { list-style: none; cursor: pointer; }
+      .home-top .auth-drop > summary::-webkit-details-marker { display: none; }
+      .home-top .auth-drop-body {
+        position: absolute; right: 0; top: calc(100% + 8px); z-index: 50;
+        min-width: 280px; max-width: min(92vw, 360px);
+        background: rgba(15, 23, 42, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 14px;
+        padding: 14px 16px;
+        box-shadow: 0 12px 40px rgba(2, 6, 23, 0.6);
+      }
+      .home-top .auth-drop-body .auth-panel { float: none; display: block; margin-left: 0; }
+      .home-top .auth-drop-body .auth-panel + .auth-panel { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.15); }
+      .home-top .auth-drop-body input[type='text'], .home-top .auth-drop-body input[type='password'] {
+        width: 100%; margin: 6px 0 0; box-sizing: border-box;
+        padding: 10px; font-size: .95rem; border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        background: rgba(2, 6, 23, 0.6); color: #fff; min-height: 44px;
+      }
+      .home-top .auth-drop-body .auth-btn { margin: 8px 8px 0 0; }
       .home-hero { padding: 40px 0 8px; }
       .home-kicker { color: #93c5fd; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
       .home-hero h1 { font-size: 2.4rem; margin: 8px 0; text-shadow: 0 2px 14px rgba(2,6,23,.85); }
@@ -123,8 +143,13 @@ const GRADES: Grade[] = [
         <span class="home-logo">Информатика</span>
         <nav>
           <a href={`${B}teacher/`}>Учителю</a>
-          <AuthPanel client:load />
-          <ClassJoin client:load />
+          <details class="auth-drop">
+            <summary class="auth-btn">Вход</summary>
+            <div class="auth-drop-body">
+              <AuthPanel client:load />
+              <ClassJoin client:load />
+            </div>
+          </details>
         </nav>
       </header>
       <section class="home-hero">
