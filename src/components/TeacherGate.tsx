@@ -1,14 +1,26 @@
 import { useEffect, useState } from 'react';
 import { getRole, isAuthConfigured, type Role } from '../lib/auth/client';
+import { OFFLINE_TEACHER } from '../lib/offline';
 
 // Гейт страницы учителя: пускает только teacher/admin по роли из profiles.
 // Без настроенного бэкенда — демо-режим для проверки вёрстки (как раньше была заглушка).
+// Исключение: локальная учительская сборка — это и есть инструмент учителя
+// (ключи зашиты, чужих глаз нет), гейт не нужен.
 const DEMO_KEY = 'teacher-demo-v1';
 
 export default function TeacherGate({ children }: { children: React.ReactNode }) {
   const [configured] = useState(isAuthConfigured());
   const [role, setRole] = useState<Role | null>(null);
   const [demo, setDemo] = useState(false);
+
+  if (OFFLINE_TEACHER) {
+    return (
+      <div>
+        <p className="muted">Локальная учительская сборка: вход не нужен, данные — из загруженных файлов и этого компьютера.</p>
+        {children}
+      </div>
+    );
+  }
 
   useEffect(() => {
     if (!configured) return;

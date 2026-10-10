@@ -5,6 +5,7 @@ import Analytics from './Analytics';
 import TeacherGate from './TeacherGate';
 import ClassManager from './ClassManager';
 import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
+import { OFFLINE_TEACHER } from '../lib/offline';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
 // Источник: Supabase (когда настроен доступ teacher) + локальная очередь этого браузера.
@@ -212,6 +213,14 @@ export default function Teacher() {
     <TeacherGate>
     <div>
       <h1>Журнал работ</h1>
+      {OFFLINE_TEACHER && (
+        <div className="card">
+          <p>
+            <a className="btn" href={`${import.meta.env.BASE_URL}teacher/check-files/`}>Загрузить работы учеников →</a>
+          </p>
+          <p className="muted">Выбери файлы ответов с флешки, из почты или сетевой папки — ответы и отметки посчитаются на этом компьютере.</p>
+        </div>
+      )}
       <p className="muted">
         <a href={`${import.meta.env.BASE_URL}teacher/practices/`}>Методичка: практические работы — что проверять</a>
       </p>
@@ -228,7 +237,7 @@ export default function Teacher() {
       <WidgetGuard title="Аналитика">
         <Analytics rows={rows} />
       </WidgetGuard>
-      <ClassManager role={role} />
+      {isAuthConfigured() && <ClassManager role={role} />}
       <div className="card">
         <h2>Фильтры</h2>
         <p className="muted">Всего строк: {rows.length} · ждут подтверждения: {pendingCount}</p>
