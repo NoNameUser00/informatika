@@ -1,4 +1,4 @@
-import { Component, useEffect, useState, type ReactNode } from 'react';
+import { Component, useEffect, useMemo, useState, type ReactNode } from 'react';
 import Board from './Board';
 import ErrorReview from './ErrorReview';
 import Analytics from './Analytics';
@@ -6,6 +6,7 @@ import TeacherGate from './TeacherGate';
 import ClassManager from './ClassManager';
 import { getRole, getToken, isAuthConfigured, type Role } from '../lib/auth/client';
 import { OFFLINE_TEACHER } from '../lib/offline';
+import './check-files.css';
 
 // Учительская: журнал работ (фамилия + ответы + ключи + баллы + отметки).
 // Источник: Supabase (когда настроен доступ teacher) + локальная очередь этого браузера.
@@ -102,6 +103,26 @@ export default function Teacher() {
   const [draftComment, setDraftComment] = useState<Record<number, string>>({});
   const [saving, setSaving] = useState<Record<number, boolean>>({});
   const [saveMsg, setSaveMsg] = useState<Record<number, string>>({});
+  // Печать ведомостей в PDF (через диалог печати).
+  const [printJob, setPrintJob] = useState<null | { kind: 'students' | 'classes' | 'analytics' }>(null);
+
+  useEffect(() => {
+    if (!printJob) return;
+    document.body.classList.add('cf-printing');
+    const t = setTimeout(() => window.print(), 150);
+    const done = () => {
+      document.body.classList.remove('cf-printing');
+      setPrintJob(null);
+    };
+    window.addEventListener('afterprint', done, { once: true });
+    const fallback = setTimeout(done, 30000);
+    return () => {
+      clearTimeout(t);
+      clearTimeout(fallback);
+      window.removeEventListener('afterprint', done);
+      document.body.classList.remove('cf-printing');
+    };
+  }, [printJob]);
 
   useEffect(() => {
     getRole().then((r) => setRole(r.role));
@@ -209,9 +230,38 @@ export default function Teacher() {
     .map((r, i) => ({ r, i }))
     .filter(({ r }) => (!classFilter || r.class_name === classFilter) && (!typeFilter || r.test_type === typeFilter) && (!onlyPending || r.final_mark == null));
 
+  function markOf(r: Row): number {
+    return r.final_mark ?? r.proposed_mark;
+  }
+
+  // Группы для печати: по работам, внутри — по классам, ученики по алфавиту.
+  // Уважают текущие фильтры журнала.
+  const printGroups = useMemo(() => {
+    const byWork = new Map<string, { r: Row }[]>();
+    for (const { r } of visible) {
+      const arr = byWork.get(r.test_code) ?? [];
+      arr.push({ r });
+      byWork.set(r.test_code, arr);
+    }
+    return [...byWork.entries()].map(([testCode, items]) => {
+      const byClass = new Map<string, { r: Row }[]>();
+      for (const it of items) {
+        const arr = byClass.get(it.r.class_name) ?? [];
+        arr.push(it);
+        byClass.set(it.r.class_name, arr);
+      }
+      for (const arr of byClass.values()) {
+        arr.sort((a, b) =>
+          `${a.r.surname} ${a.r.firstname}`.localeCompare(`${b.r.surname} ${b.r.firstname}`, 'ru'),
+        );
+      }
+      return { testCode, items, byClass: [...byClass.entries()] };
+    });
+  }, [visible]);
+
   return (
     <TeacherGate>
-    <div>
+    <div className="no-print">
       <h1>Журнал работ</h1>
       {OFFLINE_TEACHER && (
         <div className="card">
@@ -265,7 +315,14 @@ export default function Teacher() {
       </WidgetGuard>
       <ErrorReview />
       <p className="muted">{note}</p>
-      {rows.length > 0 && <button className="btn secondary" onClick={csv}>Экспорт CSV</button>}
+      {rows.length > 0 && (
+        <p>
+          <button className="btn secondary" onClick={csv}>Экспорт CSV</button>{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>PDF: по ученикам</button>{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>PDF: по классу</button>{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>PDF: аналитика</button>
+        </p>
+      )}
       {visible.map(({ r, i }) => {
         const confirmed = r.final_mark != null;
         return (
@@ -326,7 +383,95 @@ export default function Teacher() {
         </div>
         );
       })}
-    </div>
+      </div>
+      {printJob && (
+        <div className="cf-print">
+          {printJob.kind === 'students' && printGroups.map((wg) => (
+            <div key={wg.testCode}>
+              {wg.items.map(({ r }) => (
+                <div key={`${r.id ?? `${r.surname}-${r.firstname}`}-${wg.testCode}`} className="cf-sheet cf-page-break">
+                  <h2>{wg.testCode} — лист ученика</h2>
+                  <p>Ученик: <strong>{r.surname} {r.firstname}</strong> · Класс: <strong>{r.class_name}</strong> · Вариант: {r.variant}</p>
+                  <table>
+                    <thead>
+                      <tr><th>№</th><th>Вопрос</th><th>Ответ ученика</th><th>Ключ</th><th>Верно</th></tr>
+                    </thead>
+                    <tbody>
+                      {Object.keys(r.answers ?? {}).map((qid, qi) => {
+                        const given = String((r.answers as Record<string, string>)[qid] ?? '');
+                        const key = String((r.keys as Record<string, string>)?.[qid] ?? '');
+                        const ok = key !== '' && sameAnswer(given, key);
+                        return (
+                          <tr key={qid}>
+                            <td>{qi + 1}</td>
+                            <td>{qid}</td>
+                            <td>{prettyValue(given) || '—'}</td>
+                            <td>{key !== '' ? prettyValue(key) : '—'}</td>
+                            <td>{key === '' ? '—' : ok ? '+' : '−'}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <p>Баллы: <strong>{r.auto_score} из {r.max_score} ({r.percent}%)</strong> · Отметка: <strong>{markOf(r)}</strong>{r.final_mark == null ? ' (на подтверждении)' : ''}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+          {printJob.kind === 'classes' && printGroups.map((wg) => (
+            <div key={wg.testCode}>
+              {wg.byClass.map(([cls, items]) => (
+                <div key={cls} className="cf-sheet cf-page-break">
+                  <h2>{wg.testCode} — ведомость класса {cls}</h2>
+                  <table>
+                    <thead>
+                      <tr><th>№</th><th>ФИО ученика</th><th>Баллы</th><th>Отметка</th></tr>
+                    </thead>
+                    <tbody>
+                      {items.map(({ r }, k) => (
+                        <tr key={`${r.id ?? `${r.surname}-${r.firstname}`}`}>
+                          <td>{k + 1}</td>
+                          <td>{r.surname} {r.firstname}</td>
+                          <td>{r.auto_score} из {r.max_score} ({r.percent}%)</td>
+                          <td>{markOf(r)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </div>
+          ))}
+          {printJob.kind === 'analytics' && printGroups.map((wg) => {
+            const marks = wg.items.map(({ r }) => markOf(r));
+            const avg = wg.items.length
+              ? Math.round((wg.items.reduce((s, { r }) => s + (r.percent ?? 0), 0) / wg.items.length) * 10) / 10
+              : 0;
+            const dist = [5, 4, 3, 2].map((m) => ({ m, n: marks.filter((x) => x === m).length }));
+            return (
+              <div key={wg.testCode} className="cf-sheet cf-page-break">
+                <h2>{wg.testCode} — аналитика для учителя</h2>
+                <p>Работ в журнале (с учётом фильтров): {wg.items.length} · Средний процент: {avg}%</p>
+                <h3>Распределение отметок</h3>
+                <table>
+                  <thead>
+                    <tr><th>Отметка</th><th>Учеников</th></tr>
+                  </thead>
+                  <tbody>
+                    {dist.map((d) => (
+                      <tr key={d.m}>
+                        <td>{d.m}</td>
+                        <td>{d.n}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p className="muted">Подробнее по вопросам и темам — раздел «Аналитика работ» на экране.</p>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </TeacherGate>
   );
 }
