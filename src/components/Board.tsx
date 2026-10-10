@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Доска разборов: рисуй столбики, схемы, блок-схемы — скачай PNG в работу.
 // Всё локально в браузере (Excalidraw, MIT), на сервер ничего не уходит.
 // Импорт динамический: Excalidraw не переживает SSR, только клиент.
 export default function Board({ id, height = 480 }: { id: string; height?: number }) {
   const [mod, setMod] = useState<any>(null);
+  const apiRef = useRef<any>(null);
   const [scene, setScene] = useState<{ elements: readonly any[]; appState: any; files: any }>({
     elements: [],
     appState: {},
@@ -28,6 +29,23 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
       dead = true;
     };
   }, []);
+
+  // Пересчёт координат Excalidraw (курсор/указка): после монтирования
+  // и при ресайзе окна. Скролл и ресайз контейнера библиотека ловит сама.
+  useEffect(() => {
+    if (!mod) return;
+    const refresh = () => {
+      try {
+        apiRef.current?.refresh?.();
+      } catch { /* доска ещё не готова */ }
+    };
+    const raf = requestAnimationFrame(() => setTimeout(refresh, 50));
+    window.addEventListener('resize', refresh);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener('resize', refresh);
+    };
+  }, [mod]);
 
   async function savePng() {
     setStatus('');
@@ -62,6 +80,9 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
         <Excalidraw
           langCode="ru-RU"
           onChange={handleChange}
+          excalidrawAPI={(api: any) => {
+            apiRef.current = api;
+          }}
         />
       </div>
       <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center' }}>
