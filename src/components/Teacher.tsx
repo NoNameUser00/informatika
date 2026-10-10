@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Component, useEffect, useState, type ReactNode } from 'react';
 import Board from './Board';
 import ErrorReview from './ErrorReview';
 import Analytics from './Analytics';
@@ -66,6 +66,24 @@ function sameAnswer(a: string, b: string): boolean {
     return JSON.stringify(pa) === JSON.stringify(pb);
   }
   return String(pa).trim().replace(/\s+/g, ' ') === String(pb).trim().replace(/\s+/g, ' ');
+}
+
+// Предохранитель: падение виджета (аналитика, доска) не должно гасить весь журнал.
+class WidgetGuard extends Component<{ title: string; children: ReactNode }, { dead: boolean }> {
+  state = { dead: false };
+  static getDerivedStateFromError(): { dead: boolean } {
+    return { dead: true };
+  }
+  render(): ReactNode {
+    if (this.state.dead) {
+      return (
+        <div className="card">
+          <p className="muted">{this.props.title} временно недоступен — журнал ниже работает. Сообщи учителю текст ошибки из консоли (F12).</p>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
 }
 
 export default function Teacher() {
@@ -207,7 +225,9 @@ export default function Teacher() {
           </p>
         </details>
       )}
-      <Analytics rows={rows} />
+      <WidgetGuard title="Аналитика">
+        <Analytics rows={rows} />
+      </WidgetGuard>
       <ClassManager role={role} />
       <div className="card">
         <h2>Фильтры</h2>
@@ -227,11 +247,13 @@ export default function Teacher() {
           <label htmlFor="f-pending" style={{ margin: 0, fontWeight: 400 }}>только без итоговой отметки</label>
         </div>
       </div>
-      <div className="card">
-        <h2>Доска разборов</h2>
-        <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>
-        <Board id="teacher-board" />
-      </div>
+      <WidgetGuard title="Доска разборов">
+        <div className="card">
+          <h2>Доска разборов</h2>
+          <p className="muted">Нарисуй столбик деления, лесенку разрядов или блок-схему — сохрани картинкой и приложи к работе над ошибками.</p>
+          <Board id="teacher-board" />
+        </div>
+      </WidgetGuard>
       <ErrorReview />
       <p className="muted">{note}</p>
       {rows.length > 0 && <button className="btn secondary" onClick={csv}>Экспорт CSV</button>}

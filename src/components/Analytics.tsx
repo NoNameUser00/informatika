@@ -232,9 +232,10 @@ export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
       <p>
         <label>Работа:{' '}
           <select value={cur} onChange={(e) => { setCode(e.target.value); setCls('all'); }}>
-            {codes.map((c) => (
-              <option key={c} value={c}>{WORKS[c].grade} кл · {WORKS[c].title}</option>
-            ))}
+            {codes.map((c) => {
+              const m = c === DEMO_BANK.test_code ? DEMO_META : WORKS[c];
+              return <option key={c} value={c}>{m?.grade ?? '?'} кл · {m?.title ?? c}</option>;
+            })}
           </select>
         </label>{' '}
         <label>Класс:{' '}
