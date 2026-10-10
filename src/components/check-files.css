@@ -1,0 +1,44 @@
+/* Печать ведомостей из проверки файлов. На экране печатные листы скрыты,
+   при печати скрыто всё остальное. */
+.cf-print {
+  display: none;
+}
+
+@media print {
+  body.cf-printing .no-print {
+    display: none !important;
+  }
+  body.cf-printing .cf-print {
+    display: block;
+  }
+  .cf-sheet {
+    color: #000;
+    font-size: 12px;
+  }
+  .cf-sheet h2 {
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+  .cf-sheet h3 {
+    font-size: 13px;
+    margin: 12px 0 4px;
+  }
+  .cf-sheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0;
+  }
+  .cf-sheet th,
+  .cf-sheet td {
+    border: 1px solid #000;
+    padding: 3px 6px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .cf-page-break {
+    break-after: page;
+  }
+  .cf-ok {
+    font-weight: 700;
+  }
+}

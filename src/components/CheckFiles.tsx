@@ -2,13 +2,14 @@
 // Учитель загружает файлы учеников -> сверка хэша работы -> проверка
 // теми же чекерами, что на сдаче -> таблица + аналитика + CSV.
 // Ключи есть только в этой сборке; ученик их никогда не видит.
-import { useMemo, useState } from 'react';
-import { taskCorrect } from '../lib/analytics/aggregate.mjs';
+import { useEffect, useMemo, useState } from 'react';
+import { statsForWork, taskCorrect } from '../lib/analytics/aggregate.mjs';
 import { percentToMark } from '../lib/scoring/check.mjs';
 import { findVariant } from '../lib/variants/resolve.mjs';
 import { ANSWER_FORMAT, type AnswerFile } from '../lib/offline';
 import HASHES from '../data/offline-hashes.json';
 import Analytics from './Analytics';
+import './check-files.css';
 
 interface Graded {
   file: string;
@@ -83,6 +84,27 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
   const [open, setOpen] = useState<number | null>(null);
   // Ручные вердикты по code_run: индекс работы -> id задания -> верно?
   const [manualOk, setManualOk] = useState<Record<number, Record<string, boolean>>>({});
+  // Печать ведомостей в PDF (через диалог печати).
+  const [printJob, setPrintJob] = useState<null | { kind: 'students' | 'classes' | 'analytics' }>(null);
+
+  useEffect(() => {
+    if (!printJob) return;
+    document.body.classList.add('cf-printing');
+    const t = setTimeout(() => window.print(), 150);
+    const done = () => {
+      document.body.classList.remove('cf-printing');
+      setPrintJob(null);
+    };
+    window.addEventListener('afterprint', done, { once: true });
+    // Страховка, если afterprint не выстрелит (отмена диалога в некоторых WebView).
+    const fallback = setTimeout(done, 30000);
+    return () => {
+      clearTimeout(t);
+      clearTimeout(fallback);
+      window.removeEventListener('afterprint', done);
+      document.body.classList.remove('cf-printing');
+    };
+  }, [printJob]);
 
   // Итоги с учётом ручных вердиктов.
   function eff(g: Graded, i: number): { correct: number; total: number; percent: number; mark: number; pending: number } {
@@ -112,6 +134,52 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
     const tasks: any[] = Array.isArray(bank?.pool) ? bank.pool : (bank?.tasks ?? []);
     return tasks.find((t) => t.id === id)?.points ?? 0;
   }
+
+  function bankTasks(testCode: string): any[] {
+    const bank = banks[testCode];
+    return Array.isArray(bank?.pool) ? bank.pool : (bank?.tasks ?? []);
+  }
+
+  function promptOf(testCode: string, id: string): string {
+    return bankTasks(testCode).find((t) => t.id === id)?.prompt ?? id;
+  }
+
+  function flagOf(g: Graded, i: number, qid: string): boolean | null {
+    if (g.manual[qid]) {
+      const ov = (manualOk[i] ?? {})[qid];
+      return ov === undefined ? null : ov === true;
+    }
+    return g.flags[qid] === true;
+  }
+
+  function workTitle(testCode: string): string {
+    const b = banks[testCode];
+    return b?.title ? `${b.title} (${testCode})` : testCode;
+  }
+
+  // Группы для печати: по работам, внутри — по классам, ученики по алфавиту.
+  const printGroups = useMemo(() => {
+    const byWork = new Map<string, number[]>();
+    graded.forEach((g, i) => {
+      const arr = byWork.get(g.test_code) ?? [];
+      arr.push(i);
+      byWork.set(g.test_code, arr);
+    });
+    return [...byWork.entries()].map(([testCode, idxs]) => {
+      const byClass = new Map<string, number[]>();
+      for (const i of idxs) {
+        const arr = byClass.get(graded[i].class_name) ?? [];
+        arr.push(i);
+        byClass.set(graded[i].class_name, arr);
+      }
+      for (const arr of byClass.values()) {
+        arr.sort((a, b) =>
+          `${graded[a].surname} ${graded[a].firstname}`.localeCompare(`${graded[b].surname} ${graded[b].firstname}`, 'ru'),
+        );
+      }
+      return { testCode, idxs, byClass: [...byClass.entries()] };
+    });
+  }, [graded]);
 
   async function onFiles(list: FileList | null) {
     if (!list) return;
@@ -166,6 +234,7 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
 
   return (
     <div>
+      <div className="no-print">
       <div className="card">
         <h2>Файлы учеников</h2>
         <p className="muted">
@@ -182,7 +251,12 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
           />
         </p>
         {graded.length > 0 && (
-          <p><button className="btn secondary" onClick={csv}>Экспорт CSV</button></p>
+          <p>
+            <button className="btn secondary" onClick={csv}>Экспорт CSV</button>{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>PDF: по ученикам</button>{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>PDF: по классу</button>{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>PDF: аналитика</button>
+          </p>
         )}
       </div>
       {rejected.length > 0 && (
@@ -248,6 +322,116 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
         </div>
       )}
       {rows.length > 0 && <Analytics rows={rows} banks={banks} />}
+      </div>
+      {printJob && (
+        <div className="cf-print">
+          {printJob.kind === 'students' && printGroups.map((wg) => (
+            <div key={wg.testCode}>
+              {wg.idxs.map((i) => {
+                const g = graded[i];
+                const e = eff(g, i);
+                return (
+                  <div key={i} className="cf-sheet cf-page-break">
+                    <h2>{workTitle(wg.testCode)} — лист ученика</h2>
+                    <p>Ученик: <strong>{g.surname} {g.firstname}</strong> · Класс: <strong>{g.class_name}</strong> · Вариант: {g.variant}</p>
+                    <table>
+                      <thead>
+                        <tr><th>№</th><th>Вопрос</th><th>Ответ ученика</th><th>Верно</th></tr>
+                      </thead>
+                      <tbody>
+                        {Object.keys(g.answers).map((qid, qi) => {
+                          const f = flagOf(g, i, qid);
+                          return (
+                            <tr key={qid}>
+                              <td>{qi + 1}</td>
+                              <td>{promptOf(wg.testCode, qid)}</td>
+                              <td>{String(g.answers[qid] ?? '') || '—'}</td>
+                              <td>{f === null ? 'на проверке' : f ? '+' : '−'}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                    <p>Верных ответов: <strong>{e.correct} из {g.questions}</strong> · Баллы: <strong>{e.total} из {g.max} ({e.percent}%)</strong> · Отметка: <strong>{e.mark}</strong></p>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+          {printJob.kind === 'classes' && printGroups.map((wg) => (
+            <div key={wg.testCode}>
+              {wg.byClass.map(([cls, idxs]) => (
+                <div key={cls} className="cf-sheet cf-page-break">
+                  <h2>{workTitle(wg.testCode)} — ведомость класса {cls}</h2>
+                  <table>
+                    <thead>
+                      <tr><th>№</th><th>ФИО ученика</th><th>Баллы</th><th>Отметка</th></tr>
+                    </thead>
+                    <tbody>
+                      {idxs.map((i, k) => {
+                        const g = graded[i];
+                        const e = eff(g, i);
+                        return (
+                          <tr key={i}>
+                            <td>{k + 1}</td>
+                            <td>{g.surname} {g.firstname}</td>
+                            <td>{e.total} из {g.max} ({e.percent}%)</td>
+                            <td>{e.mark}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </div>
+          ))}
+          {printJob.kind === 'analytics' && printGroups.map((wg) => {
+            const st = statsForWork(
+              wg.idxs.map((i) => ({ answers: graded[i].answers })),
+              bankTasks(wg.testCode),
+            );
+            return (
+              <div key={wg.testCode} className="cf-sheet cf-page-break">
+                <h2>{workTitle(wg.testCode)} — аналитика для учителя</h2>
+                <p>Работ проверено: {wg.idxs.length}</p>
+                <h3>По вопросам</h3>
+                <table>
+                  <thead>
+                    <tr><th>№</th><th>Вопрос</th><th>Верно</th><th>%</th></tr>
+                  </thead>
+                  <tbody>
+                    {st.perTask.map((q: any, qi: number) => (
+                      <tr key={q.id}>
+                        <td>{qi + 1}</td>
+                        <td>{q.prompt.length > 120 ? q.prompt.slice(0, 120) + '…' : q.prompt}</td>
+                        <td>{q.correct}/{q.n}</td>
+                        <td>{q.pct}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h3>По темам</h3>
+                <table>
+                  <thead>
+                    <tr><th>Тема (урок)</th><th>Верно</th><th>%</th><th>Уровень</th></tr>
+                  </thead>
+                  <tbody>
+                    {st.perLesson.map((L: any) => (
+                      <tr key={L.lesson}>
+                        <td>{L.lesson}</td>
+                        <td>{L.correct}/{L.n}</td>
+                        <td>{L.pct}%</td>
+                        <td>{L.level === 'ok' ? 'освоено' : L.level === 'shaky' ? 'шатко' : 'не освоено'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
