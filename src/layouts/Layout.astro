@@ -3,6 +3,7 @@ import SpaceBackground from '../components/SpaceBackground';
 import BoardFloat from '../components/BoardFloat';
 import AuthPanel from '../components/AuthPanel';
 import ClassJoin from '../components/ClassJoin';
+import OfflineHead from '../components/OfflineHead.astro';
 import '../components/space-background.css';
 import '../components/board-float.css';
 // ЕДИНЫЙ стиль сайта: тёмный космос + матовое стекло (как главная).
@@ -29,6 +30,7 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <OfflineHead />
     <style is:global>
       :root {
         --subject: #2563eb; /* информатика — синий, закреплен за предметом везде */

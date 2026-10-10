@@ -3,6 +3,7 @@ import SpaceBackground from '../../../components/SpaceBackground';
 import RecordVisit from '../../../components/RecordVisit';
 import LessonPlay from '../../../components/LessonPlay';
 import BoardFloat from '../../../components/BoardFloat';
+import OfflineHead from '../../../components/OfflineHead.astro';
 import '../../../components/space-background.css';
 import '../../../components/lesson-play.css';
 import '../../../components/board-float.css';
@@ -29,6 +30,7 @@ const trainerHref = `${B}10/${trainerPage}/`;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={`${meta.title} — полный урок на 45 минут.`} />
+    <OfflineHead />
     <title>{meta.title} — урок целиком — 10 класс</title>
     <style>
       * { box-sizing: border-box; }

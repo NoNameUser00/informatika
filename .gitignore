@@ -9,6 +9,7 @@ node_modules/
 node_modules/.cache/
 dist/
 dist-offline-*/
+app-*/
 # Чужие учебники целиком (копирайт + вес) и внутренние документы школы — не в публичный репо.
 # На сайте только свои конспекты (src/content).
 material/

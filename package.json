@@ -18,6 +18,8 @@
     "offline:hash": "node scripts/offline-hash.mjs",
     "build:offline-student": "node scripts/offline-build.mjs student",
     "build:offline-teacher": "node scripts/offline-build.mjs teacher",
+    "app:student": "node scripts/offline-pack.mjs student",
+    "app:teacher": "node scripts/offline-pack.mjs teacher",
     "lint": "echo \"eslint TODO: подключить после npm install\""
   },
   "dependencies": {

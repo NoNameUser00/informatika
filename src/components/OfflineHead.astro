@@ -1,0 +1,10 @@
+---
+import { OFFLINE_ROLE } from '../lib/offline';
+---
+{OFFLINE_ROLE !== 'online' && (
+  <>
+    <script src="/__neutralino_globals.js"></script>
+    <script src="/js/neutralino.js" defer></script>
+    <script>{'try{Neutralino.init()}catch(e){}'}</script>
+  </>
+)}

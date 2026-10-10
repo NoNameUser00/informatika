@@ -40,8 +40,30 @@ export function answerFileName(a: AnswerFile): string {
   return `${safeName(a.class_name)}_${safeName(a.surname)}_${safeName(a.firstname)}_${safeName(a.test_code)}_v${safeName(a.variant)}.json`;
 }
 
-/** Скачать объект как JSON-файл (ученик уносит файл учителю). */
+/** Скачать объект как JSON-файл (ученик уносит файл учителю).
+ * В приложении (Neutralino) — через системный диалог сохранения,
+ * в браузере — обычное скачивание. */
 export function downloadJson(obj: unknown, filename: string): void {
+  void saveNative(obj, filename).then((saved) => {
+    if (!saved) saveAnchor(obj, filename);
+  });
+}
+
+async function saveNative(obj: unknown, filename: string): Promise<boolean> {
+  try {
+    const NL = (window as unknown as { Neutralino?: any }).Neutralino;
+    if (!NL?.os?.showSaveDialog || !NL?.filesystem?.writeBinaryFile) return false;
+    const path = await NL.os.showSaveDialog({ defaultPath: filename });
+    if (!path) return false;
+    const text = JSON.stringify(obj);
+    await NL.filesystem.writeBinaryFile(path, new TextEncoder().encode(text));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function saveAnchor(obj: unknown, filename: string): void {
   const blob = new Blob([JSON.stringify(obj)], { type: 'application/json;charset=utf-8' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);

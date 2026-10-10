@@ -5,6 +5,7 @@ import BoardFloat from '../components/BoardFloat';
 import AuthPanel from '../components/AuthPanel';
 import ClassJoin from '../components/ClassJoin';
 import Mascot from '../components/Mascot';
+import OfflineHead from '../components/OfflineHead.astro';
 import '../components/space-background.css';
 import '../components/board-float.css';
 import '../components/mascot.css';
@@ -33,6 +34,7 @@ const GRADES: Grade[] = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Школьная информатика: теория, тренажеры, проверочные. 7–11 классы." />
     <title>Информатика — школьный тренажер</title>
+    <OfflineHead />
     <style is:global>
       /* is:global — стили должны доставать и до React-островов (ContinueCard). */
       :root { color-scheme: dark; }
