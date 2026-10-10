@@ -136,10 +136,14 @@ serve(async (req) => {
   }
 
   let total = 0;
+  let correctCount = 0;
   const keys: Record<string, string> = {};
   for (const t of variant.tasks) {
     const v = taskCorrect(t as never, p.answers[t.id]);
-    if (v) total += t.points;
+    if (v) {
+      total += t.points;
+      correctCount++;
+    }
     keys[t.id] = String((t as BankTask).key ?? '');
   }
   total = Math.round(total * 100) / 100;
@@ -173,6 +177,6 @@ serve(async (req) => {
   if (insError) {
     return Response.json({ error: 'not saved: ' + insError.message }, { status: 403 });
   }
-  // Ученику — только итоги, без ключей и без разбивки по вопросам.
-  return Response.json({ total, max: variant.max_score, percent, mark, variant: variantNumber });
+  // Ученику — только итоги и счётчики, без ключей и без разбивки по вопросам.
+  return Response.json({ total, max: variant.max_score, percent, mark, variant: variantNumber, correct: correctCount, questions: variant.tasks.length });
 });

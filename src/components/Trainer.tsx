@@ -124,6 +124,8 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     max: number;
     percent: number;
     mark: number;
+    correct: number;
+    questions: number;
     saveStatus: string;
     server: boolean;
   }>(null);
@@ -225,7 +227,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
       if (role === 'student') {
         setQuietDone('Ответы сохранены на сервере. Баллы и отметку подтвердит учитель — здесь их нет.');
       } else {
-        setDone({ per: [], total: body.total, max: body.max, percent: body.percent, mark: body.mark, saveStatus: 'проверено сервером, сохранено в журнал', server: true });
+        setDone({ per: [], total: body.total, max: body.max, percent: body.percent, mark: body.mark, correct: body.correct ?? 0, questions: tasks.length, saveStatus: 'проверено сервером, сохранено в журнал', server: true });
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } finally {
@@ -326,7 +328,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     } catch {
       saveStatus = 'не удалось сохранить в базу, копия осталась в браузере';
     }
-    setDone({ per, total, max, percent, mark, saveStatus, server: false });
+    setDone({ per, total, max, percent, mark, correct: per.filter((p) => p.ok).length, questions: tasks.length, saveStatus, server: false });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -411,6 +413,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     const isCheck = mode === 'proverka' || done.server;
     const mood = markMood(done.mark);
     const silent = isCheck && done.mark === 2;
+    const wrong = done.questions - done.correct;
     const bubble = silent
       ? ''
       : isCheck
@@ -426,20 +429,18 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
         </div>
         <div className="card">
           <h2>Результат: {done.total} из {done.max} ({done.percent}%) — отметка {done.mark}</h2>
+          <p>
+            Верных ответов: <strong>{done.correct} из {done.questions}</strong> · ошибок: <strong>{wrong}</strong>
+          </p>
+          <p className="muted">
+            Шкала: «5» — от 90%, «4» — от 75%, «3» — от 50%, иначе «2».
+          </p>
           <p className="muted">
             {surname} {firstname}, {classNum}-{classLetter} · {mode === 'proverka' ? 'проверочная' : 'тренажер'} · {done.saveStatus}
           </p>
-          {mode === 'proverka' && <p>Правильные ответы скрыты — работу посмотрит учитель и подтвердит отметку.</p>}
+          {mode === 'proverka' && <p>Какие именно вопросы неверны — не показываем: работу посмотрит учитель и подтвердит отметку.</p>}
+          {mode === 'trainer' && <p>Какие именно вопросы неверны — не показываем: найди ошибки сам и пройди ещё раз.</p>}
         </div>
-        {done.per.length > 0 && done.per.map((p) => (
-          <div className="card q" key={p.id}>
-            <p>
-              <strong>Вопрос №{qNum(p.id)}</strong> — <span className={p.ok ? 'ok' : 'bad'}>{p.ok ? 'верно' : 'неверно'}</span> · {p.score}/{p.max}
-            </p>
-            <p className="muted">Ваш ответ: {p.given}</p>
-            {mode === 'trainer' && <p>Правильно: {p.key}</p>}
-          </div>
-        ))}
         <button className="btn secondary" onClick={() => { setDone(null); setAnswers({}); setStep(0); }}>
           Пройти заново
         </button>
