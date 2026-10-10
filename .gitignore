@@ -24,5 +24,7 @@ material/
 # Локальные артефакты OpenCode и MCP — не в репо.
 /.playwright-mcp/
 /.opencode/
+/tools/
+/supabase/.temp/
 
 # vendor/ edge-функции коммитится намеренно: паритет проверяет CI, деплой — из чистого чекаута
