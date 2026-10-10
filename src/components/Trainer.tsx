@@ -13,6 +13,8 @@ import DragMatch from './DragMatch';
 import CodeRunner from './CodeRunner';
 import Mascot, { type MascotMood } from './Mascot';
 import './mascot.css';
+import { OFFLINE_STUDENT, ANSWER_FORMAT, answerFileName, downloadJson, type AnswerFile } from '../lib/offline';
+import HASHES from '../data/offline-hashes.json';
 
 // Бипин в тренажёре:
 // - тренажёр: радость/печаль по результату + похвала или «попробуй ещё»;
@@ -109,7 +111,7 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   const [surname, setSurname] = useState('');
   const [firstname, setFirstname] = useState('');
   // Смена варианта сбрасывает заполненные ответы: они относятся к прежнему набору.
-  useEffect(() => { setAnswers({}); setCodeVerdicts({}); setStep(0); setDone(null); setQuietDone(null); }, [variantNumber]);
+  useEffect(() => { setAnswers({}); setCodeVerdicts({}); setStep(0); setDone(null); setQuietDone(null); setFileSaved(null); }, [variantNumber]);
   const [classNum, setClassNum] = useState('');
   const [classLetter, setClassLetter] = useState('');
   const [consent, setConsent] = useState(false);
@@ -118,6 +120,8 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
   const [busySubmit, setBusySubmit] = useState(false);
   const [error, setError] = useState('');
   const [quietDone, setQuietDone] = useState<string | null>(null);
+  // Ученическая офлайн-сборка: имя сохранённого файла ответов.
+  const [fileSaved, setFileSaved] = useState<string | null>(null);
   const [done, setDone] = useState<null | {
     per: PerQ[];
     total: number;
@@ -138,11 +142,16 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     setAnswers((a) => ({ ...a, [id]: v }));
     setDone(null);
     setQuietDone(null);
+    setFileSaved(null);
   };
 
   const isAnswered = (t: any): boolean => {
     const a = answers[t.id];
-    if (t.type === 'code_run') return a != null && String(a).trim() !== '' && codeVerdicts[t.id] !== undefined;
+    // Ученическая офлайн-сборка: код без эталона не проверить — достаточно непустого кода.
+    if (t.type === 'code_run') {
+      if (OFFLINE_STUDENT) return a != null && String(a).trim() !== '';
+      return a != null && String(a).trim() !== '' && codeVerdicts[t.id] !== undefined;
+    }
     if (a == null || a === '') return false;
     if (t.type === 'matching') return t.left.every((k: string) => (a as Record<string, string>)[k]);
     return true;
@@ -240,6 +249,31 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
     const missing = pages[step - 1].filter((t: any) => !isAnswered(t));
     if (missing.length > 0) {
       setError(`Ответьте на все вопросы страницы (не отвечен: Вопрос №${qNum(missing[0].id)}).`);
+      return;
+    }
+    // Ученическая офлайн-сборка: ключей нет, проверки нет — только файл ответов.
+    if (OFFLINE_STUDENT) {
+      const testCode = String((bank as any).test_code ?? 'work');
+      const plain: Record<string, string> = {};
+      for (const t of tasks) {
+        const a = answers[t.id];
+        plain[t.id] = typeof a === 'string' ? a : JSON.stringify(a);
+      }
+      const file: AnswerFile = {
+        format: ANSWER_FORMAT,
+        test_code: testCode,
+        variant: String(variantNumber),
+        bank_hash: (HASHES as Record<string, string>)[testCode] ?? '',
+        surname: surname.trim(),
+        firstname: firstname.trim(),
+        class_name: `${classNum}-${classLetter}`,
+        answers: plain,
+        created_at: new Date().toISOString(),
+      };
+      const name = answerFileName(file);
+      downloadJson(file, name);
+      setFileSaved(name);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
     // Проверочная/контрольная с бэкендом: считает только сервер (ключей в клиенте нет).
@@ -384,6 +418,32 @@ export default function Trainer({ data, title, forceMode }: { data: any; title: 
           />
         )}
       </fieldset>
+    );
+  }
+
+  if (fileSaved) {
+    return (
+      <div>
+        <div className="mascot-row">
+          <Mascot mood="happy" size={64} />
+          <p className="mascot-say rb-say" key="file">Файл готов! Передай его учителю — он всё проверит.</p>
+        </div>
+        <div className="card">
+          <h2>Ответы сохранены в файл</h2>
+          <p>
+            {surname} {firstname}, {classNum}-{classLetter} · {mode === 'proverka' ? 'проверочная' : 'тренажер'}
+          </p>
+          <p><strong>{fileSaved}</strong></p>
+          <p className="muted">
+            Передай файл учителю: по почте, на флешке или по локальной сети.
+            Баллов и верных ответов здесь нет — их посчитает учитель.
+            Если файл не скачался, нажми «Отправить» ещё раз.
+          </p>
+        </div>
+        <button className="btn secondary" onClick={() => { setFileSaved(null); setAnswers({}); setCodeVerdicts({}); setStep(0); }}>
+          Пройти заново
+        </button>
+      </div>
     );
   }
 

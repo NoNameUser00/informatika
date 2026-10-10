@@ -170,7 +170,7 @@ async function fetchServerBank(code: string): Promise<BankFile | null> {
   }
 }
 
-export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
+export default function Analytics({ rows, banks }: { rows: AnalyticsRow[]; banks?: Record<string, BankFile> }) {
   const B = import.meta.env.BASE_URL;
   const [demo, setDemo] = useState(false);
   const [code, setCode] = useState('numsys-control-v1');
@@ -193,7 +193,7 @@ export default function Analytics({ rows }: { rows: AnalyticsRow[] }) {
       if (b) setServerBanks((m) => ({ ...m, [cur]: b }));
     });
   }, [cur]);
-  const bank = cur === DEMO_BANK.test_code ? DEMO_BANK : (serverBanks[cur] ?? LOCAL_BANKS[cur]);
+  const bank = cur === DEMO_BANK.test_code ? DEMO_BANK : (banks?.[cur] ?? serverBanks[cur] ?? LOCAL_BANKS[cur]);
   const meta = cur ? (WORKS[cur] ?? (cur === DEMO_BANK.test_code ? DEMO_META : undefined)) : undefined;
   const classes = useMemo(() => [...new Set(all.filter((r) => r.test_code === cur).map((r) => r.class_name ?? '—'))], [all, cur]);
   const sel = useMemo(

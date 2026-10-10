@@ -15,6 +15,9 @@
     "bank:30": "node scripts/check-30.mjs",
     "checks": "npx esbuild scripts/make-checks.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/make-checks.cjs --log-level=error && node node_modules/.cache/make-checks.cjs",
     "edge:sync": "node scripts/edge-sync.mjs",
+    "offline:hash": "node scripts/offline-hash.mjs",
+    "build:offline-student": "node scripts/offline-build.mjs student",
+    "build:offline-teacher": "node scripts/offline-build.mjs teacher",
     "lint": "echo \"eslint TODO: подключить после npm install\""
   },
   "dependencies": {

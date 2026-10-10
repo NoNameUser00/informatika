@@ -1,0 +1,35 @@
+---
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import CheckFiles from '../../components/CheckFiles';
+
+// Учительская офлайн-сборка: полные банки (с ключами) читаем на сборке
+// серверным кодом — в клиент уходит только сериализованный проп острова.
+// В онлайне и ученической сборке страница объясняет недоступность.
+const TEACHER = process.env.OFFLINE_ROLE === 'teacher';
+let banks: Record<string, any> = {};
+if (TEACHER) {
+  for (const f of readdirSync('src/data/checks')) {
+    if (!f.endsWith('.json') || f.endsWith('-public.json') || f === 'manifest.json') continue;
+    const b = JSON.parse(readFileSync(join('src/data/checks', f), 'utf-8'));
+    if (b.test_code) banks[b.test_code] = b;
+  }
+  for (const f of readdirSync('src/data')) {
+    if (!f.endsWith('-tasks.json')) continue;
+    const b = JSON.parse(readFileSync(join('src/data', f), 'utf-8'));
+    if (b.test_code) banks[b.test_code] = b;
+  }
+}
+---
+<Layout title="Проверка файлов ответов — учитель">
+  <p class="muted"><a href="/">Главная</a> · Проверка файлов</p>
+  <h1>Проверка файлов ответов</h1>
+  {TEACHER ? (
+    <CheckFiles client:load banks={banks} />
+  ) : (
+    <div class="card">
+      <p>Эта страница работает только в учительской офлайн-сборке (там лежат ключи работ).</p>
+    </div>
+  )}
+</Layout>
