@@ -198,9 +198,14 @@ export default function Teacher() {
         <a href={`${import.meta.env.BASE_URL}teacher/practices/`}>Методичка: практические работы — что проверять</a>
       </p>
       {role !== 'teacher' && role !== 'admin' && (
-        <div className="card">
-          <p><strong>Раздел учителя.</strong> Войди через Google/Яндекс и получи роль учителя (см. docs/auth-setup.md) — иначе видны только локальные строки этого браузера без отметок.</p>
-        </div>
+        <details className="card">
+          <summary><strong>Справка: почему журнал ограничен</strong></summary>
+          <p className="muted">
+            Раздел учителя. Войди через Google/Яндекс и получи роль учителя —
+            иначе видны только локальные строки этого браузера без отметок.
+            Роль выдаёт администратор после первого входа.
+          </p>
+        </details>
       )}
       <Analytics rows={rows} />
       <ClassManager role={role} />
