@@ -7,7 +7,14 @@ import CheckFiles from '../../components/CheckFiles';
 // Учительская офлайн-сборка: полные банки (с ключами) читаем на сборке
 // серверным кодом — в клиент уходит только сериализованный проп острова.
 // В онлайне и ученической сборке страница объясняет недоступность.
+// Встроенный клиент для учеников: мастер-скрипт (offline-all) сначала
+// собирает ученические zip, pack-скрипт кладёт их в dl/ учительской
+// программы; флаг OFFLINE_DL подтверждает, что они там будут.
 const TEACHER = process.env.OFFLINE_ROLE === 'teacher';
+const DL = process.env.OFFLINE_DL === '1' ? [
+  { file: 'Informatika-uchenik-windows.zip', label: 'Клиент для учеников (Windows)' },
+  { file: 'Informatika-uchenik-rosa.zip', label: 'Клиент для учеников (Rosa)' },
+] : [];
 let banks: Record<string, any> = {};
 if (TEACHER) {
   for (const f of readdirSync('src/data/checks')) {
@@ -26,7 +33,18 @@ if (TEACHER) {
   <p class="muted"><a href="/">Главная</a> · Проверка файлов</p>
   <h1>Проверка файлов ответов</h1>
   {TEACHER ? (
-    <CheckFiles client:load banks={banks} />
+    <>
+      {DL.length > 0 && (
+        <div class="card">
+          <h2>Клиент для учеников</h2>
+          <p class="muted">Раздай файл на класс — установка в один запуск: распаковать и открыть программу.</p>
+          {DL.map((d) => (
+            <p><a class="btn secondary" href={`/dl/${d.file}`} download>{d.label} ↓</a></p>
+          ))}
+        </div>
+      )}
+      <CheckFiles client:load banks={banks} />
+    </>
   ) : (
     <div class="card">
       <p>Эта страница работает только в учительской офлайн-сборке (там лежат ключи работ).</p>

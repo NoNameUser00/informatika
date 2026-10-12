@@ -56,6 +56,19 @@ for (const os of ['windows', 'rosa']) {
   cpSync(DIST, `${dir}/resources`, { recursive: true });
   mkdirSync(`${dir}/resources/js`, { recursive: true });
   copyFileSync('offline/neutralino.js', `${dir}/resources/js/neutralino.js`);
+  // Учительская программа везёт с собой клиент для учеников (скачивание
+  // со страницы проверки файлов). Архивы собирает мастер-скрипт заранее.
+  if (role === 'teacher') {
+    mkdirSync(`${dir}/resources/dl`, { recursive: true });
+    let embedded = 0;
+    for (const f of ['Informatika-uchenik-windows.zip', 'Informatika-uchenik-rosa.zip']) {
+      if (existsSync(`release/${f}`)) {
+        copyFileSync(`release/${f}`, `${dir}/resources/dl/${f}`);
+        embedded++;
+      }
+    }
+    if (embedded < 2) console.warn(`ВНИМАНИЕ: встроено архивов ${embedded}/2 — сначала собери ученические (offline-all)`);
+  }
   const exe = os === 'windows'
     ? (role === 'student' ? 'Informatika-uchenik.exe' : 'Informatika-uchitel.exe')
     : (role === 'student' ? 'Informatika-uchenik' : 'Informatika-uchitel');
