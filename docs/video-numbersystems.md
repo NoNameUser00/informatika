@@ -1,11 +1,11 @@
 # Видеоконтур: обучающие ролики «Системы счисления» (OpenMontage)
 
-Отдельный контур, не часть сайта. Чекаут: `D:\openmontage` (shallow clone `calesthio/OpenMontage`).
+Отдельный контур, не часть сайта. Чекаут: `D:\AI project\openmontage` (shallow clone `calesthio/OpenMontage`).
 Сайт ссылается на готовые ролики, производство и черновики в репозиторий сайта не попадают.
 
 ## Пайплайн
 
-`animated-explainer` v2.0 (`D:\openmontage\pipeline_defs\animated-explainer.yaml`):
+`animated-explainer` v2.0 (`D:\AI project\openmontage\pipeline_defs\animated-explainer.yaml`):
 `research → proposal → script → scene_plan → assets → edit → compose → publish`.
 Плейбук: `flat-motion-graphics` (запасной `minimalist-diagram`).
 
@@ -17,14 +17,14 @@
 
 ## Статус окружения (2026-10-06)
 
-- Есть: Python 3.14/3.12, Node 24, git, FFmpeg 9.0.2 (winget, в PATH новых оболочек), Manim 0.21.0 (`D:\openmontage\venv`, Python 3.12).
+- Есть: Python 3.14/3.12, Node 24, git, FFmpeg 9.0.2 (winget, в PATH новых оболочек), Manim 0.21.0 (`D:\AI project\openmontage\venv`, Python 3.12).
 - Нет: Piper-голос ru_RU, `make setup` в чекауте.
 - Вывод: сейчас делаем бриф + сценарии (рецензия методиста), рендер — следующим шагом.
 
 ## Manim-трек (детерминированная анимация, проверено рендером)
 
-- Чекаут: `D:\manim` (Manim Community, MIT). Окружение: `D:\openmontage\venv` (manim 0.21.0, Python 3.12).
-- Сцены пилота: `D:\openmontage\projects\numsys\*.py` (игнорится их `.gitignore`, в сайт не коммитить).
+- Чекаут: `D:\manim` (Manim Community, MIT). Окружение: `D:\AI project\openmontage\venv` (manim 0.21.0, Python 3.12).
+- Сцены пилота: `D:\AI project\openmontage\projects\numsys\*.py` (игнорится их `.gitignore`, в сайт не коммитить).
 - Готов: `dec_to_bin.py` (DecToBin, ~13 сек, 480p) — столбик делений 13→1101, сборка остатков, проверка 8+4+0+1. Рендер ~1 мин на CPU.
 - Команды: `manim render -ql scene.py Scene` (черновик 480p), `-qm` (720p финал), `--dry_run` (без ffmpeg).
 - Правила сцен: только `Text`/`MarkupText`, НЕ `Tex`/`MathTex` (без LaTeX, кириллица из системных шрифтов — проверено кадрами);
@@ -53,7 +53,7 @@
 
 ## Озвучка-трек (Piper, проверено end-to-end 2026-10-07)
 
-- Голос: `ru_RU-dmitri-medium` (`D:\openmontage\projects\numsys\voices/`, 63 МБ; установка:
+- Голос: `ru_RU-dmitri-medium` (`D:\AI project\openmontage\projects\numsys\voices/`, 63 МБ; установка:
   `venv/Scripts/python -m piper.download_voices ru_RU-dmitri-medium --download-dir voices`).
 - Тексты блоков: `vo_0{1..4}_*.txt` (из `docs/video/script-01-dec-to-bin.md`, цифры для проговаривания расписаны словами).
 - Синтез блока: `python -m piper -m voices/ru_RU-dmitri-medium.onnx -c voices/ru_RU-dmitri-medium.onnx.json -i vo_XX.txt -f vo_XX.wav --sentence-silence 0.4`.
@@ -65,7 +65,7 @@
 
 ## HyperFrames-трек (motion-graphics, проверено рендером 2026-10-07)
 
-- Проект: `D:\openmontage\projects\numsys\hf-title` (`index.html` — композиция 10 с, 1920×1080, GSAP paused timeline;
+- Проект: `D:\AI project\openmontage\projects\numsys\hf-title` (`index.html` — композиция 10 с, 1920×1080, GSAP paused timeline;
   пин `hyperframes@0.8.139` в `package.json`). Команды: `check` (включая WCAG AA — 43/43), `render`.
 - Готов: титр эпизода (кикер → заголовок с `<sub>10</sub>` → биты стаггером → правило). Рендер 10 с за ~28 с,
   `renders/hf-title_2026-10-07_13-00-45.mp4`, проверен кадрами.
@@ -75,7 +75,7 @@
 
 ## ComfyUI track (локальная генерация медиа)
 
-- Роль: заставки/превью/иллюстрации для explainer-сцен вместо платных fal.ai/Kling. Связка предусмотрена самим OpenMontage (`COMFYUI_SERVER_URL`, `D:\openmontage\.env` уже указывает на `http://localhost:8188`).
+- Роль: заставки/превью/иллюстрации для explainer-сцен вместо платных fal.ai/Kling. Связка предусмотрена самим OpenMontage (`COMFYUI_SERVER_URL`, `D:\AI project\openmontage\.env` уже указывает на `http://localhost:8188`).
 - Вердикт по железу (2026-10-06): здесь только встроенная AMD Radeon Graphics (512 МБ) без ROCm — локальная диффузия практически невозможна (CPU-режим крайне медленный, видео — нереально). ComfyUI НЕ ставим.
 - Триггер установки: дискретный GPU (NVIDIA 20xx+ / AMD RX). Тогда: ComfyUI Desktop → скачать веса (Flux/SDXL для картинок, Wan/LTX для видео, гигабайты) → поднять сервер на :8188 → прогнать explainer-ассеты через него.
 - До тех пор визуал держим на CPU-дружелюбном: `math_animate`, `diagram_gen`, Remotion, сток Archive.org/NASA/Wikimedia.
@@ -83,5 +83,5 @@
 ## Следующий шаг (без GPU)
 
 1. ~~FFmpeg + Piper~~ — готово (FFmpeg 9.0.2, piper-tts 1.8.0, голос ru_RU-dmitri-medium, эпизод-пилот собран).
-2. `make setup` в `D:\openmontage` (проверить `config.yaml`; `.env` уже содержит только локальный COMFYUI_URL без секретов).
+2. `make setup` в `D:\AI project\openmontage` (проверить `config.yaml`; `.env` уже содержит только локальный COMFYUI_URL без секретов).
 3. Прогнать пайплайн на пилотном сценарии от стадии `assets` (research/proposal/script уже закрыты этим брифом).

@@ -11,7 +11,7 @@
 | https://github.com/Aider-AI/aider ✅ | AI pair-programming CLI | Установлен (uv, 0.86.2); команда `/aider` (`.opencode/commands/aider.md`) |
 | https://github.com/alibaba/open-code-review ✅ | AI-ревью кода (diff/scan, deterministic+LLM) | CLI `ocr` + плагин (`.opencode/plugins/`); только `scan`, без `data/tasks` |
 | https://github.com/coderamp-labs/gitingest ✅ | Упаковка репо в дайджест для LLM | Установлен (uv); рецепт `scripts/make-llm-digest.py` с исключениями |
-| https://github.com/calesthio/OpenMontage ✅ | Агентный видеопродакшн (12 пайплайнов) | Клон `D:\openmontage`; контур роликов, бриф `docs/video-numbersystems.md` |
+| https://github.com/calesthio/OpenMontage ✅ | Агентный видеопродакшн (12 пайплайнов) | Клон `D:\AI project\openmontage`; контур роликов, бриф `docs/video-numbersystems.md` |
 | https://github.com/ManimCommunity/manim ✅ | Движок матанимаций (3Blue1Brown-стиль), MIT | Клон `D:\manim` + venv; сцены `dec_episode.py`, критерии приёмки в брифе |
 | https://github.com/heygen-com/hyperframes ✅ | HTML→MP4 титры/моушн (Apache-2.0) | Проект `hf-title`, титр эпизода отрендерен |
 | https://github.com/rhasspy/piper-voices ✅ | Голоса TTS (ONNX), MIT | `ru_RU-dmitri-medium` скачан; озвучка эпизода (46 с) |
