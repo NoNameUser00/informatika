@@ -42,6 +42,15 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
         --ok-card: #15803d;
         --bad-card: #b91c1c;
         --link-card: #1e3a8a;
+        /* Токены в духе Атласа: линии, акценты, радиусы, тени, фокус. */
+        --line: rgba(148, 178, 220, 0.16);
+        --line-strong: rgba(148, 178, 220, 0.32);
+        --acc: #5aa2ff;
+        --acc-2: #a78bfa;
+        --gold: #ffd27a;
+        --radius: 16px;
+        --focus: #fbbf24;
+        --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.5);
       }
       * { box-sizing: border-box; }
       body {
@@ -52,14 +61,18 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
         line-height: 1.6;
       }
       a { color: #93c5fd; }
+      :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
       .layout-veil {
         position: fixed; inset: 0; z-index: 1; pointer-events: none;
-        background: radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%);
+        background:
+          radial-gradient(900px 420px at 8% -6%, rgba(90, 162, 255, 0.14), transparent 62%),
+          radial-gradient(760px 380px at 96% 2%, rgba(167, 139, 250, 0.12), transparent 58%),
+          radial-gradient(120% 60% at 50% 0%, rgba(2,6,23,0) 40%, rgba(2,6,23,.55) 100%);
       }
       header.top {
-        position: relative; z-index: 2;
-        background: rgba(15, 23, 42, 0.55);
-        -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+        position: sticky; top: 0; z-index: 20;
+        background: rgba(15, 23, 42, 0.72);
+        -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.14);
         padding: 12px 20px;
       }

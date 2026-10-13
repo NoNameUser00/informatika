@@ -85,7 +85,11 @@ const GRADES: Grade[] = [
       .home-top .auth-drop-body .auth-btn { margin: 8px 8px 0 0; }
       .home-hero { padding: 40px 0 8px; }
       .home-kicker { color: #93c5fd; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
-      .home-hero h1 { font-size: 2.4rem; margin: 8px 0; text-shadow: 0 2px 14px rgba(2,6,23,.85); }
+      .home-hero h1 {
+        font-size: 2.4rem; margin: 8px 0;
+        background: linear-gradient(92deg, #fff 15%, #93c5fd 60%, #c4b5fd);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
       .home-sub { color: #e2e8f0; text-shadow: 0 1px 10px rgba(2,6,23,.9); }
       .home-cta {
         display: inline-block; margin-top: 12px;
@@ -109,12 +113,29 @@ const GRADES: Grade[] = [
       }
       .home-main h2 { font-size: 1.1rem; color: #c7d2fe; margin-top: 28px; }
       .home-row {
+        --c: #2563eb;
+        position: relative; overflow: hidden;
         display: flex; align-items: center; gap: 12px;
         background: rgba(203,213,225,.78); color: #0f172a;
         border-radius: 14px; border: 1px solid rgba(255,255,255,.55);
         padding: 14px 16px; margin: 10px 0;
+        text-decoration: none;
         -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
         box-shadow: 0 4px 20px rgba(2,6,23,.25);
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      }
+      .home-row::before {
+        content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+        background: linear-gradient(180deg, var(--c), transparent 130%);
+      }
+      .home-row:hover {
+        transform: translateY(-3px);
+        border-color: var(--c);
+        box-shadow: 0 12px 32px rgba(2,6,23,.4);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .home-row { transition: none; }
+        .home-row:hover { transform: none; }
       }
       .home-grade {
         color: #fff; font-weight: 900; font-size: 1.3rem; border-radius: 10px;
@@ -168,7 +189,7 @@ const GRADES: Grade[] = [
       <main class="home-main">
         <h2>Класс → тема → урок</h2>
         {GRADES.map((g) => (
-          <a class="home-row" href={`${B}${g.n}/`}>
+          <a class="home-row" style={`--c: ${g.color}`} href={`${B}${g.n}/`}>
             <span class="home-grade" style={{ background: g.color }}>{g.n}</span>
             <span class="home-rowbody">
               <strong>{g.n} класс</strong>

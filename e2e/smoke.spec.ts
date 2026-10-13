@@ -19,8 +19,10 @@ test('trainer flow answers questions', async ({ page }) => {
   await page.getByRole('button', { name: /далее/i }).click();
   await expect(page.getByText(/вопрос \d/i).first()).toBeVisible();
   // отвечаем на первый вопрос страницы (радио или ввод)
-  const radio = page.locator('input[type="radio"]').first();
-  const text = page.locator('input[type="text"], input:not([type])').first();
+  const firstQ = page.locator('fieldset.q').first();
+  await expect(firstQ).toBeVisible();
+  const radio = firstQ.locator('input[type="radio"]').first();
+  const text = firstQ.locator('input[placeholder="только число"]');
   if (await radio.count()) {
     await radio.check({ force: true });
   } else {
