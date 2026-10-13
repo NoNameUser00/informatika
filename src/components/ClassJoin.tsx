@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { joinClass, isBackend } from '../lib/auth/classes';
 
 // Вступление ученика: код класса + ФИО. Без бэкенда — ничего не рисует.
@@ -8,6 +8,12 @@ export default function ClassJoin() {
   const [fio, setFio] = useState('');
   const [msg, setMsg] = useState('');
   const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    // QR с кодом класса ведёт на ?class=КОД — подставляем в поле.
+    const q = new URLSearchParams(window.location.search).get('class');
+    if (q) setCode(q.trim().toUpperCase());
+  }, []);
 
   if (!isBackend()) return null;
 

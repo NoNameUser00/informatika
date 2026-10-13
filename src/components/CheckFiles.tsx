@@ -86,6 +86,118 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
   const [manualOk, setManualOk] = useState<Record<number, Record<string, boolean>>>({});
   // Печать ведомостей в PDF (через диалог печати).
   const [printJob, setPrintJob] = useState<null | { kind: 'students' | 'classes' | 'analytics' }>(null);
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfError, setPdfError] = useState('');
+
+  function fileStem(testCode: string, cls: string): string {
+    const safe = (s: string) => s.replace(/[^\p{L}\p{N}_-]+/gu, '_').slice(0, 40);
+    return `${safe(testCode)}_${safe(cls)}`;
+  }
+
+  async function pdfStudents(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { studentsPdf } = await import('../lib/pdf/vedomost');
+      const sheets = printGroups.flatMap((wg) =>
+        wg.idxs.map((i) => {
+          const g = graded[i];
+          const e = eff(g, i);
+          return {
+            title: workTitle(wg.testCode),
+            fio: `${g.surname} ${g.firstname}`,
+            className: g.class_name,
+            variant: g.variant,
+            questions: Object.keys(g.answers).map((qid) => ({
+              prompt: promptOf(wg.testCode, qid),
+              answer: String(g.answers[qid] ?? ''),
+              key: g.keys[qid] ?? '',
+              ok: flagOf(g, i, qid),
+            })),
+            correct: e.correct,
+            questionsTotal: g.questions,
+            total: e.total,
+            max: g.max,
+            percent: e.percent,
+            mark: e.mark,
+          };
+        }),
+      );
+      await studentsPdf(sheets, 'listy-uchenikov.pdf');
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
+
+  async function pdfClasses(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { classPdf } = await import('../lib/pdf/vedomost');
+      for (const wg of printGroups) {
+        for (const [cls, idxs] of wg.byClass) {
+          await classPdf(
+            workTitle(wg.testCode),
+            cls,
+            idxs.map((i) => {
+              const g = graded[i];
+              const e = eff(g, i);
+              return {
+                fio: `${g.surname} ${g.firstname}`,
+                score: e.total,
+                max: g.max,
+                percent: e.percent,
+                mark: e.mark,
+              };
+            }),
+            `vedomost-${fileStem(wg.testCode, cls)}.pdf`,
+          );
+        }
+      }
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
+
+  async function pdfAnalytics(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { analyticsPdf } = await import('../lib/pdf/vedomost');
+      for (const wg of printGroups) {
+        const st = statsForWork(
+          wg.idxs.map((i) => ({ answers: graded[i].answers })),
+          bankTasks(wg.testCode),
+        );
+        await analyticsPdf(
+          workTitle(wg.testCode),
+          `Проверено работ: ${wg.idxs.length}`,
+          st.perTask.map((q: { prompt: string; correct: number; n: number; pct: number }) => ({
+            prompt: q.prompt,
+            correct: q.correct,
+            n: q.n,
+            pct: q.pct,
+          })),
+          st.perLesson.map((L: { lesson: string; correct: number; n: number; pct: number; level: string }) => ({
+            lesson: L.lesson,
+            correct: L.correct,
+            n: L.n,
+            pct: L.pct,
+            level: L.level === 'ok' ? 'освоено' : L.level === 'shaky' ? 'шатко' : 'не освоено',
+          })),
+          `analitika-${fileStem(wg.testCode, 'all')}.pdf`,
+        );
+      }
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
 
   useEffect(() => {
     if (!printJob) return;
@@ -253,9 +365,24 @@ export default function CheckFiles({ banks }: { banks: Record<string, any> }) {
         {graded.length > 0 && (
           <p>
             <button className="btn secondary" onClick={csv}>Экспорт CSV</button>{' '}
-            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>PDF: по ученикам</button>{' '}
-            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>PDF: по классу</button>{' '}
-            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>PDF: аналитика</button>
+            <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfStudents()}>
+              {pdfBusy ? 'Собираю…' : 'PDF-файл: по ученикам'}
+            </button>{' '}
+            <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfClasses()}>
+              {pdfBusy ? 'Собираю…' : 'PDF-файл: по классу'}
+            </button>{' '}
+            <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfAnalytics()}>
+              {pdfBusy ? 'Собираю…' : 'PDF-файл: аналитика'}
+            </button>
+          </p>
+        )}
+        {pdfError && <p className="form-error" role="alert">{pdfError}</p>}
+        {graded.length > 0 && (
+          <p className="muted">
+            Печать из браузера:{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>по ученикам</button>{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>по классу</button>{' '}
+            <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>аналитика</button>
           </p>
         )}
       </div>

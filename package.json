@@ -13,6 +13,7 @@
     "bank:gen": "node scripts/make-numsys-bank.mjs",
     "trainer:json": "npx esbuild scripts/build-trainer-json.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/trainer-json.cjs --log-level=error && node node_modules/.cache/trainer-json.cjs",
     "bank:30": "node scripts/check-30.mjs",
+    "test:e2e": "playwright test",
     "checks": "npx esbuild scripts/make-checks.ts --bundle --platform=node --format=cjs --outfile=node_modules/.cache/make-checks.cjs --log-level=error && node node_modules/.cache/make-checks.cjs",
     "edge:sync": "node scripts/edge-sync.mjs",
     "offline:hash": "node scripts/offline-hash.mjs",
@@ -31,15 +32,23 @@
     "@supabase/supabase-js": "^2.117.2",
     "astro": "^4.16.0",
     "blockly": "^13.3.0",
+    "dejavu-fonts-ttf": "^2.37.3",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
+    "qrcode": "^1.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "recharts": "^3.10.1",
     "tailwindcss": "^3.4.0",
     "yaml": "^2.9.1",
     "zod": "^3.23.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
     "@types/node": "^20.16.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^18.3.0",
+    "@vite-pwa/astro": "^1.2.0",
     "typescript": "^5.6.0"
   }
 }

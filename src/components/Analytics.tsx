@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { statsForWork, summary, MASTERY_LABEL } from '../lib/analytics/aggregate.mjs';
 import { WORKS } from '../lib/analytics/works';
 import { ERROR_REVIEW } from '../data/error-review';
@@ -118,6 +118,40 @@ function barColor(pct: number): string {
   if (pct >= 75) return '#2e7d32';
   if (pct >= 50) return '#f9a825';
   return '#c62828';
+}
+
+// Диаграммы (recharts, лениво — тяжёлая библиотека грузится по требованию).
+const Charts = React.lazy(() => import('./AnalyticsCharts'));
+
+function MarkChart({ sel }: { sel: { proposed_mark?: number }[] }) {
+  const data = [5, 4, 3, 2].map((m) => ({
+    mark: `«${m}»`,
+    n: sel.filter((r) => r.proposed_mark === m).length,
+  }));
+  return (
+    <React.Suspense fallback={<p className="muted">Строю диаграмму…</p>}>
+      <figure style={{ margin: '12px 0' }}>
+        <figcaption><strong>Распределение отметок</strong></figcaption>
+        <Charts kind="marks" data={data} />
+      </figure>
+    </React.Suspense>
+  );
+}
+
+function TopicChart({ lessons }: { lessons: LessonStat[] }) {
+  const data = lessons.map((L) => ({
+    topic: (TITLES.get(L.lesson) ?? L.lesson).slice(0, 28),
+    pct: L.pct,
+    fill: barColor(L.pct),
+  }));
+  return (
+    <React.Suspense fallback={<p className="muted">Строю диаграмму…</p>}>
+      <figure style={{ margin: '12px 0' }}>
+        <figcaption><strong>Освоение тем, % верных</strong></figcaption>
+        <Charts kind="topics" data={data} />
+      </figure>
+    </React.Suspense>
+  );
 }
 
 function markFor(pct: number): number {
@@ -254,6 +288,8 @@ export default function Analytics({ rows, banks }: { rows: AnalyticsRow[]; banks
         Сдавших: <strong>{sum.students}</strong> · Средний процент: <strong>{sum.avgPercent}%</strong> ·
         Средняя отметка: <strong>{sum.avgMark}</strong> · Тем освоено: <strong>{st.perLesson.filter((L: LessonStat) => L.level === 'ok').length}/{st.perLesson.length}</strong>
       </p>
+      <MarkChart sel={sel} />
+      <TopicChart lessons={st.perLesson} />
       <h3>По вопросам: как ответили (верно/отвечавших)</h3>
       {st.perTask.map((q: TaskStat, i: number) => (
         <div key={q.id} style={{ marginBottom: 6 }}>

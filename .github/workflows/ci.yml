@@ -24,3 +24,5 @@ jobs:
       - run: npm run bank:30
       - run: npx tsc --noEmit
       - run: npx astro build
+      - run: npx playwright install chromium --only-shell
+      - run: npx playwright test

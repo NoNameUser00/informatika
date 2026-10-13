@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getClient, type Role } from '../lib/auth/client';
 import { approveTeacherByEmail, createClass, resolveDuplicate, type ClassInfo } from '../lib/auth/classes';
+import ClassQr from './ClassQr';
 
 // Учитель: создать класс -> показать код; списки; разбор дублей. Админ: назначить учителя.
 interface Member {
@@ -88,6 +89,7 @@ export default function ClassManager({ role }: { role: Role }) {
           <div key={cl.id}>
             <p><strong>{cl.name}</strong> · код <strong>{cl.code}</strong> · учеников: {act.length}{dups.length > 0 && <span className="bad"> · спорных: {dups.length}</span>}{' '}
               <button className="btn secondary" onClick={() => void loadMembers(cl.id)}>Обновить список</button>
+              <ClassQr code={cl.code} />
             </p>
             {ms && (
               <ul>

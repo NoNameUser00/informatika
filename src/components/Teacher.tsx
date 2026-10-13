@@ -236,8 +236,7 @@ export default function Teacher() {
 
   // Группы для печати: по работам, внутри — по классам, ученики по алфавиту.
   // Уважают текущие фильтры журнала.
-  const printGroups = useMemo(() => {
-    const byWork = new Map<string, { r: Row }[]>();
+  const printGroups = useMemo(() => {    const byWork = new Map<string, { r: Row }[]>();
     for (const { r } of visible) {
       const arr = byWork.get(r.test_code) ?? [];
       arr.push({ r });
@@ -258,6 +257,124 @@ export default function Teacher() {
       return { testCode, items, byClass: [...byClass.entries()] };
     });
   }, [visible]);
+
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfError, setPdfError] = useState('');
+
+  function fileStem(testCode: string, cls: string): string {
+    const safe = (s: string) => s.replace(/[^\p{L}\p{N}_-]+/gu, '_').slice(0, 40);
+    return `${safe(testCode)}_${safe(cls)}`;
+  }
+
+  function rowCorrect(r: Row): { correct: number; total: number } {
+    const ids = Object.keys(r.answers ?? {});
+    let correct = 0;
+    for (const qid of ids) {
+      const given = String((r.answers as Record<string, string>)[qid] ?? '');
+      const key = String((r.keys as Record<string, string>)?.[qid] ?? '');
+      if (key !== '' && sameAnswer(given, key)) correct++;
+    }
+    return { correct, total: ids.length };
+  }
+
+  async function pdfStudents(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { studentsPdf } = await import('../lib/pdf/vedomost');
+      const sheets = printGroups.flatMap((wg) =>
+        wg.items.map(({ r }) => {
+          const c = rowCorrect(r);
+          return {
+            title: wg.testCode,
+            fio: `${r.surname} ${r.firstname}`,
+            className: r.class_name,
+            variant: r.variant,
+            questions: Object.keys(r.answers ?? {}).map((qid) => {
+              const given = String((r.answers as Record<string, string>)[qid] ?? '');
+              const key = String((r.keys as Record<string, string>)?.[qid] ?? '');
+              return {
+                prompt: qid,
+                answer: prettyValue(given) || '—',
+                key: key !== '' ? prettyValue(key) : '—',
+                ok: key === '' ? null : sameAnswer(given, key),
+              };
+            }),
+            correct: c.correct,
+            questionsTotal: c.total,
+            total: r.auto_score,
+            max: r.max_score,
+            percent: r.percent,
+            mark: markOf(r),
+          };
+        }),
+      );
+      await studentsPdf(sheets, 'listy-uchenikov.pdf');
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
+
+  async function pdfClasses(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { classPdf } = await import('../lib/pdf/vedomost');
+      for (const wg of printGroups) {
+        for (const [cls, items] of wg.byClass) {
+          await classPdf(
+            wg.testCode,
+            cls,
+            items.map(({ r }) => ({
+              fio: `${r.surname} ${r.firstname}`,
+              score: r.auto_score,
+              max: r.max_score,
+              percent: r.percent,
+              mark: markOf(r),
+            })),
+            `vedomost-${fileStem(wg.testCode, cls)}.pdf`,
+          );
+        }
+      }
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
+
+  async function pdfAnalytics(): Promise<void> {
+    setPdfBusy(true);
+    setPdfError('');
+    try {
+      const { analyticsPdf } = await import('../lib/pdf/vedomost');
+      for (const wg of printGroups) {
+        const marks = wg.items.map(({ r }) => markOf(r));
+        const avg = wg.items.length
+          ? Math.round((wg.items.reduce((s, { r }) => s + (r.percent ?? 0), 0) / wg.items.length) * 10) / 10
+          : 0;
+        await analyticsPdf(
+          wg.testCode,
+          `Строк в журнале (с учётом фильтров): ${wg.items.length} · средний процент: ${avg}%`,
+          [],
+          [5, 4, 3, 2].map((m) => ({
+            lesson: `Отметка ${m}`,
+            correct: marks.filter((x) => x === m).length,
+            n: marks.length,
+            pct: marks.length ? Math.round((marks.filter((x) => x === m).length / marks.length) * 1000) / 10 : 0,
+            level: '',
+          })),
+          `analitika-${fileStem(wg.testCode, 'all')}.pdf`,
+        );
+      }
+    } catch (err) {
+      setPdfError(err instanceof Error ? err.message : 'не вышло собрать PDF');
+    } finally {
+      setPdfBusy(false);
+    }
+  }
 
   return (
     <TeacherGate>
@@ -318,9 +435,24 @@ export default function Teacher() {
       {rows.length > 0 && (
         <p>
           <button className="btn secondary" onClick={csv}>Экспорт CSV</button>{' '}
-          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>PDF: по ученикам</button>{' '}
-          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>PDF: по классу</button>{' '}
-          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>PDF: аналитика</button>
+          <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfStudents()}>
+            {pdfBusy ? 'Собираю…' : 'PDF-файл: по ученикам'}
+          </button>{' '}
+          <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfClasses()}>
+            {pdfBusy ? 'Собираю…' : 'PDF-файл: по классу'}
+          </button>{' '}
+          <button className="btn secondary" disabled={pdfBusy} onClick={() => void pdfAnalytics()}>
+            {pdfBusy ? 'Собираю…' : 'PDF-файл: аналитика'}
+          </button>
+        </p>
+      )}
+      {pdfError && <p className="form-error" role="alert">{pdfError}</p>}
+      {rows.length > 0 && (
+        <p className="muted">
+          Печать из браузера:{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'students' })}>по ученикам</button>{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'classes' })}>по классу</button>{' '}
+          <button className="btn secondary" onClick={() => setPrintJob({ kind: 'analytics' })}>аналитика</button>
         </p>
       )}
       {visible.map(({ r, i }) => {
