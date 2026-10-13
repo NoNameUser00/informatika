@@ -101,12 +101,12 @@ const GRADES: Grade[] = [
       }
       .home-continue {
         display: flex; align-items: center; gap: 10px; margin-top: 12px;
-        background: rgba(203,213,225,.78); color: #0f172a;
-        border: 1px solid rgba(255,255,255,.55); border-radius: 14px; padding: 12px 16px;
-        -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
-        box-shadow: 0 4px 20px rgba(2,6,23,.25);
+        background: rgba(15,23,42,.72); color: #f8fafc;
+        border: 1px solid rgba(148,178,220,.32); border-radius: 14px; padding: 12px 16px;
+        -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+        box-shadow: 0 18px 44px rgba(0,0,0,.5);
       }
-      .home-continue-go { margin-left: auto; font-weight: 800; color: #1e3a8a; white-space: nowrap; }
+      .home-continue-go { margin-left: auto; font-weight: 800; color: #93c5fd; white-space: nowrap; }
       @media (max-width: 560px) {
         .home-continue { flex-wrap: wrap; }
         .home-continue-go { margin-left: 0; }
@@ -116,12 +116,12 @@ const GRADES: Grade[] = [
         --c: #2563eb;
         position: relative; overflow: hidden;
         display: flex; align-items: center; gap: 12px;
-        background: rgba(203,213,225,.78); color: #0f172a;
-        border-radius: 14px; border: 1px solid rgba(255,255,255,.55);
+        background: rgba(15,23,42,.72); color: #f8fafc;
+        border-radius: 14px; border: 1px solid rgba(148,178,220,.32);
         padding: 14px 16px; margin: 10px 0;
         text-decoration: none;
-        -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
-        box-shadow: 0 4px 20px rgba(2,6,23,.25);
+        -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+        box-shadow: 0 18px 44px rgba(0,0,0,.5);
         transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
       }
       .home-row::before {
@@ -143,14 +143,15 @@ const GRADES: Grade[] = [
       }
       .home-top nav { display: flex; flex-wrap: wrap; align-items: center; }
       .home-rowbody { display: flex; flex-direction: column; flex: 1; min-width: 0; }
-      .home-rowbody small { color: #1e293b; }
+      .home-rowbody strong { color: #fff; }
+      .home-rowbody small { color: #b9c4d8; }
       .home-status {
         background: rgba(15,23,42,.62); border: 1px solid rgba(255,255,255,.3);
         border-radius: 999px; padding: 4px 12px; font-size: .8rem; font-weight: 700;
         color: #fff; white-space: nowrap;
         -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
       }
-      .home-open { font-weight: 800; color: #1e3a8a; white-space: nowrap; }
+      .home-open { font-weight: 800; color: #93c5fd; white-space: nowrap; }
       @media (max-width: 560px) {
         .home-hero h1 { font-size: 1.8rem; }
         .home-status { display: none; }

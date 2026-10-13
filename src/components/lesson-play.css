@@ -11,20 +11,20 @@
 .lp-phases li.past { color: #bbf7d0; background: rgba(22,163,74,.35); border-color: rgba(22,163,74,.5); }
 .lp-meta { color: #c7d2fe; }
 .lp-card {
-  background: rgba(203,213,225,.82); color: #0f172a;
-  border: 1px solid rgba(255,255,255,.55); border-radius: 18px; padding: 22px; margin: 12px 0;
-  -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
-  box-shadow: 0 4px 20px rgba(2,6,23,.3);
+  background: rgba(15,23,42,.72); color: #f8fafc;
+  border: 1px solid rgba(148,178,220,.32); border-radius: 18px; padding: 22px; margin: 12px 0;
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 18px 44px rgba(0,0,0,.5);
 }
-.lp-kicker { color: #1e3a8a; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; margin: 0 0 4px; }
-.lp-card h1 { margin-top: 0; font-size: 1.4rem; color: #0f172a; }
-.lp-card p, .lp-card li { color: #1e293b; }
+.lp-kicker { color: #93c5fd; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; margin: 0 0 4px; }
+.lp-card h1 { margin-top: 0; font-size: 1.4rem; color: #fff; }
+.lp-card p, .lp-card li { color: #e2e8f0; }
 .lp-key { border-left: 8px solid #f59e0b; }
 .lp-practice { border-left: 8px solid #16a34a; }
 .lp-write { background: rgba(251,191,36,.25); border: 1px dashed #b45309; border-radius: 12px; padding: 10px 14px; font-weight: 700; color: #451a03 !important; }
 .lp-fact { background: rgba(125,211,252,.22); border: 1px solid #0284c7; border-radius: 12px; padding: 10px 14px; color: #0c2a3a !important; }
 .lp-fact-label { display: block; font-weight: 800; color: #0c4a6e; margin-bottom: 4px; }
-.lp-check { display: flex; align-items: center; gap: 10px; min-height: 48px; cursor: pointer; font-weight: 700; color: #0f172a; }
+.lp-check { display: flex; align-items: center; gap: 10px; min-height: 48px; cursor: pointer; font-weight: 700; color: #f8fafc; }
 .lp-check input { width: 22px; height: 22px; }
 .lp-lines li { margin-bottom: 10px; }
 .lp-mono {
@@ -48,7 +48,7 @@
   border: 2px solid #94a3b8; background: rgba(255,255,255,.85); color: #0f172a; min-height: 48px;
 }
 .lp-taskinput:focus { border-color: #2563eb; outline: none; }
-.lp-radio { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; color: #0f172a; }
+.lp-radio { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; color: #f8fafc; }
 .lp-radio input { width: 22px; height: 22px; }
 .lp-checkbtn {
   display: inline-block; background: rgba(30,41,59,.8); color: #f8fafc; font-weight: 700;
@@ -56,9 +56,9 @@
   font-size: 1rem; cursor: pointer;
   -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
 }
-.lp-ok { color: #15803d; font-weight: 700; }
-.lp-bad { color: #b91c1c; font-weight: 700; }
-.lp-hint { color: #1e3a8a; }
+.lp-ok { color: #4ade80; font-weight: 700; }
+.lp-bad { color: #fca5a5; font-weight: 700; }
+.lp-hint { color: #93c5fd; }
 .lp-gate { color: #e2e8f0; text-shadow: 0 1px 8px rgba(2,6,23,.9); }
 .lp-nav { display: flex; gap: 10px; margin-top: 6px; }
 .lp-back {

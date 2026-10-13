@@ -119,17 +119,20 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
       header.top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; }
       main h1, main h2, main h3 { color: #fff; text-shadow: 0 2px 12px rgba(2,6,23,.8); }
       .card {
-        background: rgba(203, 213, 225, 0.82);
-        color: var(--ink);
-        border: 1px solid rgba(255, 255, 255, 0.55);
-        border-radius: 16px;
+        background: rgba(15, 23, 42, 0.72);
+        color: var(--chrome);
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
         padding: 20px;
         margin: 16px 0;
-        -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
-        box-shadow: 0 4px 20px rgba(2, 6, 23, 0.3);
+        -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+        box-shadow: var(--shadow-lg);
       }
-      .card h1, .card h2, .card h3 { color: var(--ink); text-shadow: none; }
-      .card a { color: var(--link-card); }
+      .card h1, .card h2, .card h3 { color: #fff; text-shadow: none; }
+      .card a { color: #93c5fd; }
+      .card .muted { color: var(--muted-dark); }
+      .card .ok { color: #4ade80; }
+      .card .bad { color: #fca5a5; }
       .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
       .btn {
         display: inline-block;
@@ -162,15 +165,14 @@ const NAV_TRAINER: Record<string, string> = { '7': 'trainer', '8': 'trainer', '9
       input[type='text']:focus, select:focus { border-color: #fbbf24; outline: none; }
       input[type='text']::placeholder { color: #94a3b8; }
       fieldset { border: 2px solid rgba(255, 255, 255, 0.25); border-radius: 12px; margin: 16px 0; padding: 16px; }
-      fieldset.card { border: 1px solid rgba(255, 255, 255, 0.55); }
-      fieldset.card > legend { color: var(--ink); float: left; width: 100%; margin: 0 0 8px; padding: 0; }
+      fieldset.card { border: 1px solid var(--line-strong); }
+      fieldset.card > legend { color: var(--chrome); float: left; width: 100%; margin: 0 0 8px; padding: 0; }
       legend { font-weight: 800; padding: 0 8px; }
       .radio-row { display: flex; align-items: center; gap: 10px; padding: 10px; min-height: 48px; }
       .radio-row input { width: 22px; height: 22px; accent-color: #fbbf24; }
       .ok { color: var(--ok-card); font-weight: 700; }
       .bad { color: var(--bad-card); font-weight: 700; }
       .muted { color: var(--muted-dark); }
-      .card .muted { color: var(--muted-card); }
       .form-error { color: #fca5a5; font-weight: 700; }
       .q { scroll-margin-top: 12px; }
       @media (max-width: 560px) {
