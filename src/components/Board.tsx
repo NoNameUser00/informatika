@@ -12,6 +12,24 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
     files: {},
   });
   const [status, setStatus] = useState('');
+  // Тема доски: светлая/тёмная, выбор запоминаем. Тёмные линии на тёмном
+  // фоне не читаются — подсказываем рисовать светлыми.
+  const [dark, setDark] = useState(() => {
+    try {
+      return localStorage.getItem(`board-theme-${id}`) === 'dark';
+    } catch {
+      return false;
+    }
+  });
+
+  function toggleTheme() {
+    setDark((d) => {
+      try {
+        localStorage.setItem(`board-theme-${id}`, d ? 'light' : 'dark');
+      } catch { /* приватный режим */ }
+      return !d;
+    });
+  }
 
   // Стабильная ссылка обязательна: новый onChange каждый рендер зацикливает Excalidraw.
   const handleChange = useCallback((elements: any, appState: any, files: any) => {
@@ -85,14 +103,30 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
           langCode="ru-RU"
           onChange={handleChange}
           excalidrawAPI={handleApi}
+          theme={dark ? 'dark' : 'light'}
         />
       </div>
-      <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center', flexWrap: 'wrap' }}>
         <button type="button" className="btn secondary" style={{ width: 'auto' }} onClick={savePng}>
           Скачать PNG
         </button>
+        <button
+          type="button"
+          className="btn secondary"
+          style={{ width: 'auto' }}
+          onClick={toggleTheme}
+          aria-pressed={dark}
+          title="Переключить светлую/тёмную тему доски"
+        >
+          {dark ? '☀️ Светлая' : '🌙 Тёмная'}
+        </button>
         {status && <span className="muted">{status}</span>}
       </div>
+      {dark && (
+        <p className="muted" style={{ margin: '6px 0 0' }}>
+          На тёмном фоне рисуй светлыми цветами — чёрные линии не будет видно.
+        </p>
+      )}
     </div>
   );
 }
