@@ -99,14 +99,15 @@
 .lp-back:active:not(:disabled) { transform: scale(.98); }
 .lp-back:disabled { opacity: .45; cursor: default; }
 .lp-next {
-  flex: 1; text-align: center; background: rgba(251,191,36,.9); color: #451a03; font-weight: 900;
-  border: 1px solid rgba(251,191,36,.6); border-radius: 12px; padding: 12px 22px; min-height: 48px;
+  flex: 1; text-align: center;
+  background: linear-gradient(135deg, #4f46e5, #2563eb); color: #fff; font-weight: 900;
+  border: 1px solid rgba(147,197,253,.5); border-radius: 12px; padding: 12px 22px; min-height: 48px;
   font-size: 1rem; cursor: pointer;
   -webkit-backdrop-filter: blur(12px) saturate(1.4); backdrop-filter: blur(12px) saturate(1.4);
-  box-shadow: 0 4px 18px rgba(2,6,23,.35);
-  transition: filter .18s ease, transform .12s ease;
+  box-shadow: 0 6px 24px rgba(59,90,246,.35), inset 0 1px 0 rgba(255,255,255,.25);
+  transition: filter .18s ease, transform .12s ease, box-shadow .18s ease;
 }
-.lp-next:hover { filter: brightness(1.08); }
+.lp-next:hover { filter: brightness(1.12); box-shadow: 0 8px 30px rgba(59,90,246,.5), inset 0 1px 0 rgba(255,255,255,.25); }
 .lp-next:active { transform: scale(.98); }
 @media (max-width: 560px) {
   .lp-stepbtn, .lp-checkbtn { width: 100%; text-align: center; }
