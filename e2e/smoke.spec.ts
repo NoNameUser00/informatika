@@ -38,6 +38,18 @@ test('404 game page loads', async ({ page }) => {
   await expect(page.getByRole('button', { name: /старт/i })).toBeVisible();
 });
 
+// Доска открывается без ошибок React (регрессия: инлайн excalidrawAPI зацикливал рендеры).
+test('board opens without errors', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', (e) => errors.push(String(e).slice(0, 200)));
+  await page.goto('./');
+  await page.getByRole('button', { name: /доску для черновиков/i }).click();
+  await expect(page.locator('.board-window')).toBeVisible();
+  await expect(page.locator('.board-window canvas').first()).toBeVisible({ timeout: 15000 });
+  await page.waitForTimeout(2000);
+  expect(errors).toEqual([]);
+});
+
 // Учительская без бэкенда: демо-гейт, страница не падает.
 test('teacher page shows gate without backend', async ({ page }) => {
   await page.goto('./teacher/');
