@@ -266,7 +266,7 @@ export default function LessonPlay({
               {step.mono.join('\n')}
             </pre>
           )}
-          <p className="lp-write">✍️ {step.writeDown}</p>
+          <p className="lp-write"><span className="lp-write-ico" aria-hidden="true">✍️</span><span>{step.writeDown}</span></p>
           <label className="lp-check">
             <input
               type="checkbox"
@@ -330,7 +330,7 @@ export default function LessonPlay({
           )}
           {(revealed[idx] ?? 0) >= step.steps.length && (
             <>
-              <p className="lp-write">✅ {step.result}</p>
+              <p className="lp-write"><span className="lp-write-ico" aria-hidden="true">✅</span><span>{step.result}</span></p>
               <label className="lp-check">
                 <input
                   type="checkbox"
