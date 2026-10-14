@@ -4,9 +4,9 @@
   bottom: 20px;
   left: 12px;
   z-index: 60;
-  background: rgba(251, 191, 36, 0.9);
-  color: #451a03;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: #fff;
+  border: 1px solid rgba(147,197,253,.5);
   border-radius: 999px;
   padding: 12px 18px;
   min-height: 48px;
@@ -15,8 +15,11 @@
   cursor: pointer;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.4);
+  box-shadow: 0 6px 24px rgba(59,90,246,.35), inset 0 1px 0 rgba(255,255,255,.25);
+  transition: filter .18s ease, transform .12s ease, box-shadow .18s ease;
 }
+.board-fab:hover { filter: brightness(1.12); box-shadow: 0 8px 30px rgba(59,90,246,.5), inset 0 1px 0 rgba(255,255,255,.25); }
+.board-fab:active { transform: scale(.98); }
 .board-window {
   position: fixed;
   z-index: 100;
