@@ -17,6 +17,10 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
   const handleChange = useCallback((elements: any, appState: any, files: any) => {
     setScene({ elements, appState, files });
   }, []);
+  // То же для excalidrawAPI: инлайн-колбэк каждый рендер — тоже бесконечный цикл.
+  const handleApi = useCallback((api: any) => {
+    apiRef.current = api;
+  }, []);
 
   useEffect(() => {
     let dead = false;
@@ -80,9 +84,7 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
         <Excalidraw
           langCode="ru-RU"
           onChange={handleChange}
-          excalidrawAPI={(api: any) => {
-            apiRef.current = api;
-          }}
+          excalidrawAPI={handleApi}
         />
       </div>
       <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center' }}>
