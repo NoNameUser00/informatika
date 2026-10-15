@@ -1,4 +1,20 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
+
+/**
+ * Ждёт гидратацию Astro-островов.
+ *
+ * Остров после серверного рендера несёт атрибут `ssr`, а клиентский скрипт
+ * убирает его, когда остров ожил. Без этого ожидания тесты, которые кликают по
+ * React-обработчикам, иногда кликали в ещё не гидратированную страницу — обработчик
+ * не срабатывал, и тест падал в зависимости от того, успел ли клиент загрузиться.
+ * Проверки, которые смотрят только на серверный HTML, флакать не могут — поэтому
+ * страдали ровно два интерактивных теста.
+ */
+async function hydrated(page: Page) {
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'), null, {
+    timeout: 20_000,
+  });
+}
 
 // Главная: герой, маскот, список классов.
 test('homepage renders hero and grades', async ({ page }) => {
@@ -11,6 +27,7 @@ test('homepage renders hero and grades', async ({ page }) => {
 // Тренажёр 8 класса: ФИО → вопросы видны, ответы вводятся.
 test('trainer flow answers questions', async ({ page }) => {
   await page.goto('./8/trainer/');
+  await hydrated(page);
   await page.locator('#surname').fill('Тестов');
   await page.locator('#firstname').fill('Тест');
   await page.locator('#klass').selectOption('8');
@@ -43,6 +60,7 @@ test('board opens without errors', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (e) => errors.push(String(e).slice(0, 200)));
   await page.goto('./');
+  await hydrated(page);
   await page.getByRole('button', { name: /доску для черновиков/i }).click();
   await expect(page.locator('.board-window')).toBeVisible();
   await expect(page.locator('.board-window canvas').first()).toBeVisible({ timeout: 15000 });
