@@ -18,7 +18,6 @@
 //   node scripts/shuffle-options.mjs                      — банки по списку FILES
 //   node scripts/shuffle-options.mjs путь/к/файлу.yaml ... — только указанные файлы
 import { readFileSync, writeFileSync } from 'node:fs';
-import { globSync } from 'node:fs';
 
 const TARGETS = process.argv.slice(2).filter((a) => !a.startsWith('-'));
 const FILES = TARGETS.length
