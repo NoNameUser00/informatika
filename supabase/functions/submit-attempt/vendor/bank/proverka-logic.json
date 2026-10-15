@@ -23,6 +23,7 @@
         "inf-8-logic-002",
         "inf-8-logic-003",
         "inf-8-logic-020",
+        "inf-8-logic-021",
         "inf-8-logic-031",
         "inf-8-logic-032",
         "inf-8-logic-033",
@@ -32,7 +33,6 @@
         "inf-8-logic-005",
         "inf-8-logic-008",
         "inf-8-logic-009",
-        "inf-8-logic-010",
         "inf-8-logic-014",
         "inf-8-logic-017",
         "inf-8-logic-019",
@@ -60,9 +60,9 @@
         "inf-8-logic-068",
         "inf-8-logic-026",
         "inf-8-logic-027",
+        "inf-8-logic-028",
         "inf-8-logic-041",
         "inf-8-logic-042",
-        "inf-8-logic-043",
         "inf-8-logic-044",
         "inf-8-logic-069",
         "inf-8-logic-070"
@@ -223,6 +223,32 @@
       ],
       "correct": "D",
       "key": "D"
+    },
+    {
+      "id": "inf-8-logic-021",
+      "lesson": "logic-01-utterances",
+      "type": "matching",
+      "points": 3,
+      "prompt": "Установите соответствие: высказывание — как его проверяют вычислением.",
+      "left": [
+        "15 делится на 5",
+        "2² = 5",
+        "10 делится на 4",
+        "2³ = 8"
+      ],
+      "right": [
+        "10 : 4 = 2, остаток 2",
+        "2² = 4, а не 5",
+        "15 : 5 = 3, делится нацело",
+        "2³ = 2 · 2 · 2 = 8"
+      ],
+      "answerMap": {
+        "15 делится на 5": "15 : 5 = 3, делится нацело",
+        "2² = 5": "2² = 4, а не 5",
+        "10 делится на 4": "10 : 4 = 2, остаток 2",
+        "2³ = 8": "2³ = 2 · 2 · 2 = 8"
+      },
+      "key": "15 делится на 5=15 : 5 = 3, делится нацело, 2² = 5=2² = 4, а не 5, 10 делится на 4=10 : 4 = 2, остаток 2, 2³ = 8=2³ = 2 · 2 · 2 = 8"
     },
     {
       "id": "inf-8-logic-031",
@@ -418,25 +444,6 @@
       ],
       "correct": "A",
       "key": "A"
-    },
-    {
-      "id": "inf-8-logic-010",
-      "lesson": "logic-02-operations",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "При A=0, B=0 вычислите A ∨ B.",
-      "options": [
-        {
-          "id": "A",
-          "text": "Истина"
-        },
-        {
-          "id": "B",
-          "text": "Ложь"
-        }
-      ],
-      "correct": "B",
-      "key": "B"
     },
     {
       "id": "inf-8-logic-014",
@@ -735,6 +742,16 @@
       "key": "C"
     },
     {
+      "id": "inf-8-logic-028",
+      "lesson": "logic-06-laws",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Сколько различных значений принимает выражение A ∨ ¬A при всех возможных значениях A? Запишите только число.",
+      "base": 10,
+      "expected": 1,
+      "key": "1"
+    },
+    {
       "id": "inf-8-logic-041",
       "lesson": "logic-06-laws",
       "type": "single_choice",
@@ -770,33 +787,6 @@
       "base": 10,
       "expected": 2,
       "key": "2"
-    },
-    {
-      "id": "inf-8-logic-043",
-      "lesson": "logic-06-laws",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Чему равносильно выражение ¬(A ∧ B)?",
-      "options": [
-        {
-          "id": "B",
-          "text": "¬A ∧ ¬B"
-        },
-        {
-          "id": "A",
-          "text": "¬A ∨ ¬B"
-        },
-        {
-          "id": "D",
-          "text": "¬(A ∨ B)"
-        },
-        {
-          "id": "C",
-          "text": "A ∨ B"
-        }
-      ],
-      "correct": "B",
-      "key": "B"
     },
     {
       "id": "inf-8-logic-044",
@@ -1180,48 +1170,48 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-8-logic-036",
-        "inf-8-logic-063",
-        "inf-8-logic-006",
-        "inf-8-logic-044",
+        "inf-8-logic-070",
+        "inf-8-logic-069",
+        "inf-8-logic-018",
+        "inf-8-logic-024",
         "inf-8-logic-030",
-        "inf-8-logic-049",
-        "inf-8-logic-002",
-        "inf-8-logic-066",
-        "inf-8-logic-068",
-        "inf-8-logic-032"
+        "inf-8-logic-055",
+        "inf-8-logic-051",
+        "inf-8-logic-063",
+        "inf-8-logic-003",
+        "inf-8-logic-020"
       ],
       "orders": {
+        "inf-8-logic-070": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
         "inf-8-logic-063": {
           "right": [
             "«13 не больше 20»",
-            "«9 не делится на 5»",
             "«2² ≠ 4»",
-            "«В треугольнике не четыре стороны»"
+            "«В треугольнике не четыре стороны»",
+            "«9 не делится на 5»"
           ]
         },
-        "inf-8-logic-044": {
+        "inf-8-logic-003": {
           "options": [
-            "D",
             "A",
             "C",
+            "D",
             "B"
           ]
         },
-        "inf-8-logic-002": {
+        "inf-8-logic-020": {
           "options": [
-            "C",
-            "D",
             "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-068": {
-          "options": [
+            "A",
             "D",
-            "C",
-            "B",
-            "A"
+            "C"
           ]
         }
       },
@@ -1231,60 +1221,50 @@
       "number": 2,
       "task_ids": [
         "inf-8-logic-059",
-        "inf-8-logic-067",
-        "inf-8-logic-013",
-        "inf-8-logic-027",
-        "inf-8-logic-004",
-        "inf-8-logic-070",
-        "inf-8-logic-014",
-        "inf-8-logic-005",
-        "inf-8-logic-064",
-        "inf-8-logic-055"
+        "inf-8-logic-069",
+        "inf-8-logic-017",
+        "inf-8-logic-009",
+        "inf-8-logic-044",
+        "inf-8-logic-042",
+        "inf-8-logic-056",
+        "inf-8-logic-047",
+        "inf-8-logic-003",
+        "inf-8-logic-050"
       ],
       "orders": {
-        "inf-8-logic-013": {
+        "inf-8-logic-017": {
           "options": [
             "A",
             "B"
           ]
         },
-        "inf-8-logic-027": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-logic-004": {
+        "inf-8-logic-009": {
           "options": [
             "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-logic-070": {
-          "options": [
-            "B",
-            "D",
-            "C",
             "A"
           ]
         },
-        "inf-8-logic-014": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-logic-005": {
+        "inf-8-logic-044": {
           "options": [
             "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
             "D",
             "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "B",
+            "C",
+            "D",
             "A"
           ]
         }
@@ -1294,56 +1274,40 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-8-logic-064",
         "inf-8-logic-014",
-        "inf-8-logic-051",
-        "inf-8-logic-070",
-        "inf-8-logic-068",
-        "inf-8-logic-024",
+        "inf-8-logic-030",
         "inf-8-logic-065",
-        "inf-8-logic-063",
+        "inf-8-logic-024",
+        "inf-8-logic-049",
+        "inf-8-logic-006",
+        "inf-8-logic-003",
+        "inf-8-logic-069",
         "inf-8-logic-001",
-        "inf-8-logic-058"
+        "inf-8-logic-026"
       ],
       "orders": {
         "inf-8-logic-014": {
           "options": [
-            "D",
             "C",
+            "D",
             "A",
             "B"
           ]
         },
-        "inf-8-logic-070": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-068": {
+        "inf-8-logic-003": {
           "options": [
             "C",
-            "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-8-logic-063": {
-          "right": [
-            "«В треугольнике не четыре стороны»",
-            "«13 не больше 20»",
-            "«2² ≠ 4»",
-            "«9 не делится на 5»"
+            "D",
+            "B"
           ]
         },
         "inf-8-logic-001": {
           "options": [
-            "B",
+            "A",
             "C",
             "D",
-            "A"
+            "B"
           ]
         }
       },
@@ -1352,59 +1316,53 @@
     {
       "number": 4,
       "task_ids": [
-        "inf-8-logic-068",
-        "inf-8-logic-066",
+        "inf-8-logic-067",
+        "inf-8-logic-030",
+        "inf-8-logic-019",
         "inf-8-logic-008",
-        "inf-8-logic-043",
-        "inf-8-logic-064",
-        "inf-8-logic-033",
-        "inf-8-logic-017",
-        "inf-8-logic-013",
-        "inf-8-logic-057",
-        "inf-8-logic-069"
+        "inf-8-logic-007",
+        "inf-8-logic-051",
+        "inf-8-logic-038",
+        "inf-8-logic-056",
+        "inf-8-logic-068",
+        "inf-8-logic-014"
       ],
       "orders": {
-        "inf-8-logic-068": {
+        "inf-8-logic-019": {
           "options": [
-            "C",
-            "D",
             "A",
             "B"
           ]
         },
         "inf-8-logic-008": {
           "right": [
+            "∧",
             "¬",
-            "∨",
-            "∧"
+            "∨"
           ]
         },
-        "inf-8-logic-043": {
+        "inf-8-logic-056": {
           "options": [
             "C",
-            "B",
+            "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "D",
+            "C",
+            "B",
             "A"
           ]
         },
-        "inf-8-logic-033": {
+        "inf-8-logic-014": {
           "options": [
-            "A",
-            "D",
+            "C",
             "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
             "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-013": {
-          "options": [
-            "A",
-            "B"
+            "D"
           ]
         }
       },
@@ -1413,44 +1371,47 @@
     {
       "number": 5,
       "task_ids": [
-        "inf-8-logic-030",
-        "inf-8-logic-038",
+        "inf-8-logic-014",
         "inf-8-logic-049",
-        "inf-8-logic-017",
+        "inf-8-logic-064",
+        "inf-8-logic-067",
+        "inf-8-logic-057",
         "inf-8-logic-055",
-        "inf-8-logic-010",
-        "inf-8-logic-018",
-        "inf-8-logic-041",
-        "inf-8-logic-026",
-        "inf-8-logic-005"
+        "inf-8-logic-002",
+        "inf-8-logic-008",
+        "inf-8-logic-024",
+        "inf-8-logic-068"
       ],
       "orders": {
-        "inf-8-logic-017": {
+        "inf-8-logic-014": {
           "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-010": {
-          "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
+            "D",
             "B",
             "C",
-            "A",
-            "D"
+            "A"
           ]
         },
-        "inf-8-logic-005": {
+        "inf-8-logic-002": {
           "options": [
-            "C",
+            "D",
             "A",
             "B",
-            "D"
+            "C"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "¬",
+            "∧"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         }
       },
@@ -1459,78 +1420,40 @@
     {
       "number": 6,
       "task_ids": [
+        "inf-8-logic-001",
+        "inf-8-logic-042",
+        "inf-8-logic-031",
+        "inf-8-logic-037",
+        "inf-8-logic-047",
+        "inf-8-logic-020",
+        "inf-8-logic-069",
+        "inf-8-logic-054",
         "inf-8-logic-049",
-        "inf-8-logic-033",
-        "inf-8-logic-003",
-        "inf-8-logic-043",
-        "inf-8-logic-048",
-        "inf-8-logic-059",
-        "inf-8-logic-017",
-        "inf-8-logic-023",
-        "inf-8-logic-056",
-        "inf-8-logic-041"
+        "inf-8-logic-030"
       ],
       "orders": {
-        "inf-8-logic-033": {
+        "inf-8-logic-001": {
           "options": [
             "C",
-            "A",
+            "D",
             "B",
-            "D"
+            "A"
           ]
         },
-        "inf-8-logic-003": {
+        "inf-8-logic-037": {
           "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "D",
             "A",
             "C",
+            "D",
             "B"
           ]
         },
-        "inf-8-logic-048": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-023": {
+        "inf-8-logic-020": {
           "options": [
             "B",
             "A",
             "D",
             "C"
-          ]
-        },
-        "inf-8-logic-056": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
           ]
         }
       },
@@ -1539,60 +1462,38 @@
     {
       "number": 7,
       "task_ids": [
-        "inf-8-logic-004",
-        "inf-8-logic-030",
-        "inf-8-logic-023",
+        "inf-8-logic-036",
+        "inf-8-logic-050",
+        "inf-8-logic-057",
+        "inf-8-logic-054",
+        "inf-8-logic-001",
         "inf-8-logic-032",
-        "inf-8-logic-027",
-        "inf-8-logic-018",
-        "inf-8-logic-070",
-        "inf-8-logic-013",
-        "inf-8-logic-005",
-        "inf-8-logic-065"
+        "inf-8-logic-047",
+        "inf-8-logic-002",
+        "inf-8-logic-026",
+        "inf-8-logic-044"
       ],
       "orders": {
-        "inf-8-logic-004": {
+        "inf-8-logic-001": {
           "options": [
             "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-023": {
-          "options": [
             "A",
             "B",
-            "C",
             "D"
           ]
         },
-        "inf-8-logic-027": {
+        "inf-8-logic-002": {
           "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-070": {
-          "options": [
-            "A",
             "D",
             "B",
+            "A",
             "C"
           ]
         },
-        "inf-8-logic-013": {
+        "inf-8-logic-044": {
           "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-005": {
-          "options": [
-            "A",
             "C",
+            "A",
             "D",
             "B"
           ]
@@ -1603,62 +1504,56 @@
     {
       "number": 8,
       "task_ids": [
-        "inf-8-logic-002",
-        "inf-8-logic-055",
-        "inf-8-logic-004",
-        "inf-8-logic-032",
-        "inf-8-logic-057",
-        "inf-8-logic-043",
-        "inf-8-logic-041",
-        "inf-8-logic-064",
-        "inf-8-logic-068",
-        "inf-8-logic-013"
+        "inf-8-logic-044",
+        "inf-8-logic-005",
+        "inf-8-logic-058",
+        "inf-8-logic-063",
+        "inf-8-logic-018",
+        "inf-8-logic-065",
+        "inf-8-logic-020",
+        "inf-8-logic-070",
+        "inf-8-logic-042",
+        "inf-8-logic-049"
       ],
       "orders": {
-        "inf-8-logic-002": {
+        "inf-8-logic-044": {
           "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-004": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
-            "B",
             "D",
             "A",
+            "B",
             "C"
           ]
         },
-        "inf-8-logic-068": {
+        "inf-8-logic-005": {
           "options": [
             "B",
-            "C",
             "D",
+            "C",
             "A"
           ]
         },
-        "inf-8-logic-013": {
+        "inf-8-logic-063": {
+          "right": [
+            "«2² ≠ 4»",
+            "«9 не делится на 5»",
+            "«13 не больше 20»",
+            "«В треугольнике не четыре стороны»"
+          ]
+        },
+        "inf-8-logic-020": {
           "options": [
             "A",
-            "B"
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
           ]
         }
       },
@@ -1667,47 +1562,32 @@
     {
       "number": 9,
       "task_ids": [
-        "inf-8-logic-023",
-        "inf-8-logic-042",
-        "inf-8-logic-049",
-        "inf-8-logic-008",
         "inf-8-logic-029",
-        "inf-8-logic-044",
-        "inf-8-logic-064",
+        "inf-8-logic-032",
+        "inf-8-logic-038",
+        "inf-8-logic-051",
+        "inf-8-logic-004",
         "inf-8-logic-019",
-        "inf-8-logic-058",
-        "inf-8-logic-020"
+        "inf-8-logic-023",
+        "inf-8-logic-069",
+        "inf-8-logic-018",
+        "inf-8-logic-030"
       ],
       "orders": {
-        "inf-8-logic-023": {
+        "inf-8-logic-029": {
           "options": [
-            "A",
             "C",
             "B",
+            "A",
             "D"
           ]
         },
-        "inf-8-logic-008": {
-          "right": [
-            "¬",
-            "∨",
-            "∧"
-          ]
-        },
-        "inf-8-logic-029": {
+        "inf-8-logic-004": {
           "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-044": {
-          "options": [
-            "C",
+            "A",
             "D",
             "B",
-            "A"
+            "C"
           ]
         },
         "inf-8-logic-019": {
@@ -1716,12 +1596,12 @@
             "A"
           ]
         },
-        "inf-8-logic-020": {
+        "inf-8-logic-023": {
           "options": [
-            "C",
             "D",
+            "B",
             "A",
-            "B"
+            "C"
           ]
         }
       },
@@ -1730,22 +1610,52 @@
     {
       "number": 10,
       "task_ids": [
-        "inf-8-logic-066",
-        "inf-8-logic-059",
-        "inf-8-logic-013",
-        "inf-8-logic-063",
-        "inf-8-logic-010",
-        "inf-8-logic-006",
-        "inf-8-logic-038",
-        "inf-8-logic-002",
+        "inf-8-logic-020",
         "inf-8-logic-035",
-        "inf-8-logic-070"
+        "inf-8-logic-027",
+        "inf-8-logic-017",
+        "inf-8-logic-013",
+        "inf-8-logic-059",
+        "inf-8-logic-063",
+        "inf-8-logic-048",
+        "inf-8-logic-029",
+        "inf-8-logic-036"
       ],
       "orders": {
-        "inf-8-logic-013": {
+        "inf-8-logic-020": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-017": {
           "options": [
             "B",
             "A"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
           ]
         },
         "inf-8-logic-063": {
@@ -1756,34 +1666,20 @@
             "«2² ≠ 4»"
           ]
         },
-        "inf-8-logic-010": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-002": {
+        "inf-8-logic-048": {
           "options": [
             "A",
-            "D",
             "C",
-            "B"
-          ]
-        },
-        "inf-8-logic-035": {
-          "options": [
             "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-logic-070": {
-          "options": [
-            "B",
-            "C",
-            "A",
             "D"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
           ]
         }
       },
@@ -1792,66 +1688,61 @@
     {
       "number": 11,
       "task_ids": [
+        "inf-8-logic-008",
+        "inf-8-logic-031",
+        "inf-8-logic-030",
+        "inf-8-logic-048",
         "inf-8-logic-009",
-        "inf-8-logic-070",
-        "inf-8-logic-013",
-        "inf-8-logic-023",
-        "inf-8-logic-064",
-        "inf-8-logic-057",
         "inf-8-logic-065",
-        "inf-8-logic-017",
+        "inf-8-logic-035",
         "inf-8-logic-027",
-        "inf-8-logic-005"
+        "inf-8-logic-023",
+        "inf-8-logic-051"
       ],
       "orders": {
+        "inf-8-logic-008": {
+          "right": [
+            "∨",
+            "¬",
+            "∧"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
         "inf-8-logic-009": {
           "options": [
             "B",
             "A"
           ]
         },
-        "inf-8-logic-070": {
+        "inf-8-logic-035": {
           "options": [
+            "C",
             "B",
-            "D",
             "A",
-            "C"
+            "D"
           ]
         },
-        "inf-8-logic-013": {
+        "inf-8-logic-027": {
           "options": [
+            "C",
             "B",
+            "D",
             "A"
           ]
         },
         "inf-8-logic-023": {
           "options": [
-            "C",
             "A",
             "B",
+            "C",
             "D"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-027": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-logic-005": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
           ]
         }
       },
@@ -1860,48 +1751,54 @@
     {
       "number": 12,
       "task_ids": [
-        "inf-8-logic-054",
-        "inf-8-logic-033",
-        "inf-8-logic-001",
-        "inf-8-logic-069",
-        "inf-8-logic-059",
         "inf-8-logic-051",
-        "inf-8-logic-027",
-        "inf-8-logic-005",
-        "inf-8-logic-026",
+        "inf-8-logic-056",
+        "inf-8-logic-038",
+        "inf-8-logic-033",
+        "inf-8-logic-069",
+        "inf-8-logic-041",
+        "inf-8-logic-017",
+        "inf-8-logic-030",
+        "inf-8-logic-001",
         "inf-8-logic-047"
       ],
       "orders": {
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
         "inf-8-logic-033": {
           "options": [
             "C",
-            "B",
+            "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "B",
             "A"
           ]
         },
         "inf-8-logic-001": {
           "options": [
-            "C",
-            "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-8-logic-027": {
-          "options": [
-            "A",
             "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-005": {
-          "options": [
-            "C",
-            "D",
             "A",
-            "B"
+            "C"
           ]
         }
       },
@@ -1910,41 +1807,57 @@
     {
       "number": 13,
       "task_ids": [
-        "inf-8-logic-063",
-        "inf-8-logic-044",
-        "inf-8-logic-051",
-        "inf-8-logic-047",
-        "inf-8-logic-019",
-        "inf-8-logic-066",
+        "inf-8-logic-041",
+        "inf-8-logic-029",
+        "inf-8-logic-004",
         "inf-8-logic-035",
-        "inf-8-logic-042",
-        "inf-8-logic-032",
-        "inf-8-logic-030"
+        "inf-8-logic-051",
+        "inf-8-logic-009",
+        "inf-8-logic-024",
+        "inf-8-logic-030",
+        "inf-8-logic-003",
+        "inf-8-logic-018"
       ],
       "orders": {
-        "inf-8-logic-063": {
-          "right": [
-            "«13 не больше 20»",
-            "«2² ≠ 4»",
-            "«В треугольнике не четыре стороны»",
-            "«9 не делится на 5»"
+        "inf-8-logic-041": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
           ]
         },
-        "inf-8-logic-044": {
+        "inf-8-logic-029": {
           "options": [
-            "D",
             "A",
             "C",
+            "D",
             "B"
           ]
         },
-        "inf-8-logic-019": {
+        "inf-8-logic-004": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-009": {
           "options": [
             "B",
             "A"
           ]
         },
-        "inf-8-logic-035": {
+        "inf-8-logic-003": {
           "options": [
             "C",
             "D",
@@ -1958,38 +1871,48 @@
     {
       "number": 14,
       "task_ids": [
-        "inf-8-logic-041",
-        "inf-8-logic-027",
-        "inf-8-logic-050",
         "inf-8-logic-032",
-        "inf-8-logic-058",
-        "inf-8-logic-019",
-        "inf-8-logic-068",
-        "inf-8-logic-007",
-        "inf-8-logic-056",
-        "inf-8-logic-017"
+        "inf-8-logic-063",
+        "inf-8-logic-006",
+        "inf-8-logic-035",
+        "inf-8-logic-059",
+        "inf-8-logic-003",
+        "inf-8-logic-054",
+        "inf-8-logic-044",
+        "inf-8-logic-050",
+        "inf-8-logic-068"
       ],
       "orders": {
-        "inf-8-logic-041": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
+        "inf-8-logic-063": {
+          "right": [
+            "«В треугольнике не четыре стороны»",
+            "«2² ≠ 4»",
+            "«13 не больше 20»",
+            "«9 не делится на 5»"
           ]
         },
-        "inf-8-logic-027": {
+        "inf-8-logic-035": {
           "options": [
-            "C",
+            "A",
             "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "D",
+            "C",
             "A",
             "B"
           ]
         },
-        "inf-8-logic-019": {
+        "inf-8-logic-044": {
           "options": [
+            "D",
+            "A",
             "B",
-            "A"
+            "C"
           ]
         },
         "inf-8-logic-068": {
@@ -1998,20 +1921,6 @@
             "A",
             "D",
             "C"
-          ]
-        },
-        "inf-8-logic-056": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
-            "A",
-            "B"
           ]
         }
       },
@@ -2021,63 +1930,76 @@
       "number": 15,
       "task_ids": [
         "inf-8-logic-041",
-        "inf-8-logic-018",
-        "inf-8-logic-058",
-        "inf-8-logic-063",
-        "inf-8-logic-020",
+        "inf-8-logic-001",
+        "inf-8-logic-008",
         "inf-8-logic-037",
+        "inf-8-logic-029",
+        "inf-8-logic-064",
+        "inf-8-logic-030",
         "inf-8-logic-023",
-        "inf-8-logic-049",
-        "inf-8-logic-004",
-        "inf-8-logic-055"
+        "inf-8-logic-013",
+        "inf-8-logic-020"
       ],
       "orders": {
         "inf-8-logic-041": {
           "options": [
-            "C",
-            "D",
+            "B",
             "A",
-            "B"
+            "D",
+            "C"
           ]
         },
-        "inf-8-logic-063": {
-          "right": [
-            "«9 не делится на 5»",
-            "«В треугольнике не четыре стороны»",
-            "«2² ≠ 4»",
-            "«13 не больше 20»"
-          ]
-        },
-        "inf-8-logic-020": {
+        "inf-8-logic-001": {
           "options": [
+            "B",
             "C",
             "D",
-            "A",
-            "B"
+            "A"
+          ]
+        },
+        "inf-8-logic-008": {
+          "right": [
+            "∧",
+            "¬",
+            "∨"
           ]
         },
         "inf-8-logic-037": {
           "options": [
             "A",
-            "D",
             "C",
-            "B"
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
           ]
         },
         "inf-8-logic-023": {
           "options": [
-            "D",
             "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
             "A",
             "B"
           ]
         },
-        "inf-8-logic-004": {
+        "inf-8-logic-020": {
           "options": [
-            "A",
-            "C",
             "B",
-            "D"
+            "A",
+            "D",
+            "C"
           ]
         }
       },
@@ -2086,16 +2008,16 @@
     {
       "number": 16,
       "task_ids": [
-        "inf-8-logic-042",
         "inf-8-logic-013",
-        "inf-8-logic-010",
-        "inf-8-logic-031",
-        "inf-8-logic-029",
-        "inf-8-logic-030",
-        "inf-8-logic-067",
-        "inf-8-logic-063",
-        "inf-8-logic-064",
-        "inf-8-logic-024"
+        "inf-8-logic-019",
+        "inf-8-logic-048",
+        "inf-8-logic-057",
+        "inf-8-logic-070",
+        "inf-8-logic-020",
+        "inf-8-logic-026",
+        "inf-8-logic-017",
+        "inf-8-logic-054",
+        "inf-8-logic-037"
       ],
       "orders": {
         "inf-8-logic-013": {
@@ -2104,13 +2026,13 @@
             "A"
           ]
         },
-        "inf-8-logic-010": {
+        "inf-8-logic-019": {
           "options": [
             "B",
             "A"
           ]
         },
-        "inf-8-logic-029": {
+        "inf-8-logic-048": {
           "options": [
             "B",
             "D",
@@ -2118,12 +2040,34 @@
             "A"
           ]
         },
-        "inf-8-logic-063": {
-          "right": [
-            "«13 не больше 20»",
-            "«9 не делится на 5»",
-            "«2² ≠ 4»",
-            "«В треугольнике не четыре стороны»"
+        "inf-8-logic-070": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
           ]
         }
       },
@@ -2132,19 +2076,35 @@
     {
       "number": 17,
       "task_ids": [
-        "inf-8-logic-058",
-        "inf-8-logic-027",
-        "inf-8-logic-033",
-        "inf-8-logic-063",
-        "inf-8-logic-068",
-        "inf-8-logic-055",
-        "inf-8-logic-035",
-        "inf-8-logic-003",
-        "inf-8-logic-048",
-        "inf-8-logic-051"
+        "inf-8-logic-005",
+        "inf-8-logic-059",
+        "inf-8-logic-054",
+        "inf-8-logic-014",
+        "inf-8-logic-004",
+        "inf-8-logic-047",
+        "inf-8-logic-050",
+        "inf-8-logic-026",
+        "inf-8-logic-037",
+        "inf-8-logic-068"
       ],
       "orders": {
-        "inf-8-logic-027": {
+        "inf-8-logic-005": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-014": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-004": {
           "options": [
             "A",
             "C",
@@ -2152,47 +2112,15 @@
             "B"
           ]
         },
-        "inf-8-logic-033": {
+        "inf-8-logic-037": {
           "options": [
-            "B",
             "D",
+            "B",
             "A",
             "C"
           ]
         },
-        "inf-8-logic-063": {
-          "right": [
-            "«9 не делится на 5»",
-            "«2² ≠ 4»",
-            "«13 не больше 20»",
-            "«В треугольнике не четыре стороны»"
-          ]
-        },
         "inf-8-logic-068": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-logic-035": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-003": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-048": {
           "options": [
             "B",
             "C",
@@ -2206,40 +2134,116 @@
     {
       "number": 18,
       "task_ids": [
-        "inf-8-logic-055",
-        "inf-8-logic-030",
-        "inf-8-logic-001",
-        "inf-8-logic-044",
-        "inf-8-logic-063",
-        "inf-8-logic-033",
-        "inf-8-logic-007",
-        "inf-8-logic-069",
+        "inf-8-logic-054",
         "inf-8-logic-013",
+        "inf-8-logic-058",
+        "inf-8-logic-044",
+        "inf-8-logic-067",
+        "inf-8-logic-009",
+        "inf-8-logic-002",
+        "inf-8-logic-031",
+        "inf-8-logic-048",
+        "inf-8-logic-026"
+      ],
+      "orders": {
+        "inf-8-logic-013": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-8-logic-063",
+        "inf-8-logic-044",
+        "inf-8-logic-056",
+        "inf-8-logic-059",
+        "inf-8-logic-023",
+        "inf-8-logic-048",
+        "inf-8-logic-017",
+        "inf-8-logic-051",
+        "inf-8-logic-033",
         "inf-8-logic-041"
       ],
       "orders": {
-        "inf-8-logic-001": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
+        "inf-8-logic-063": {
+          "right": [
+            "«9 не делится на 5»",
+            "«2² ≠ 4»",
+            "«В треугольнике не четыре стороны»",
+            "«13 не больше 20»"
           ]
         },
         "inf-8-logic-044": {
           "options": [
             "B",
             "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "A",
+            "C",
             "D",
+            "B"
+          ]
+        },
+        "inf-8-logic-023": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-048": {
+          "options": [
+            "D",
+            "C",
+            "B",
             "A"
           ]
         },
-        "inf-8-logic-063": {
-          "right": [
-            "«13 не больше 20»",
-            "«2² ≠ 4»",
-            "«9 не делится на 5»",
-            "«В треугольнике не четыре стороны»"
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
           ]
         },
         "inf-8-logic-033": {
@@ -2250,16 +2254,491 @@
             "C"
           ]
         },
+        "inf-8-logic-041": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-8-logic-001",
+        "inf-8-logic-042",
+        "inf-8-logic-003",
+        "inf-8-logic-033",
+        "inf-8-logic-050",
+        "inf-8-logic-068",
+        "inf-8-logic-058",
+        "inf-8-logic-056",
+        "inf-8-logic-037",
+        "inf-8-logic-018"
+      ],
+      "orders": {
+        "inf-8-logic-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-003": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-8-logic-055",
+        "inf-8-logic-068",
+        "inf-8-logic-005",
+        "inf-8-logic-013",
+        "inf-8-logic-007",
+        "inf-8-logic-069",
+        "inf-8-logic-057",
+        "inf-8-logic-017",
+        "inf-8-logic-020",
+        "inf-8-logic-037"
+      ],
+      "orders": {
+        "inf-8-logic-068": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
         "inf-8-logic-013": {
           "options": [
             "A",
             "B"
           ]
         },
-        "inf-8-logic-041": {
+        "inf-8-logic-017": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-020": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-8-logic-037",
+        "inf-8-logic-058",
+        "inf-8-logic-009",
+        "inf-8-logic-068",
+        "inf-8-logic-066",
+        "inf-8-logic-047",
+        "inf-8-logic-051",
+        "inf-8-logic-003",
+        "inf-8-logic-036",
+        "inf-8-logic-019"
+      ],
+      "orders": {
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-068": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-logic-003": {
           "options": [
             "A",
             "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-019": {
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-8-logic-050",
+        "inf-8-logic-008",
+        "inf-8-logic-033",
+        "inf-8-logic-070",
+        "inf-8-logic-067",
+        "inf-8-logic-057",
+        "inf-8-logic-056",
+        "inf-8-logic-063",
+        "inf-8-logic-018",
+        "inf-8-logic-044"
+      ],
+      "orders": {
+        "inf-8-logic-008": {
+          "right": [
+            "∧",
+            "∨",
+            "¬"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-056": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«9 не делится на 5»",
+            "«2² ≠ 4»",
+            "«13 не больше 20»",
+            "«В треугольнике не четыре стороны»"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-8-logic-026",
+        "inf-8-logic-063",
+        "inf-8-logic-023",
+        "inf-8-logic-032",
+        "inf-8-logic-055",
+        "inf-8-logic-005",
+        "inf-8-logic-059",
+        "inf-8-logic-051",
+        "inf-8-logic-064",
+        "inf-8-logic-037"
+      ],
+      "orders": {
+        "inf-8-logic-063": {
+          "right": [
+            "«2² ≠ 4»",
+            "«9 не делится на 5»",
+            "«13 не больше 20»",
+            "«В треугольнике не четыре стороны»"
+          ]
+        },
+        "inf-8-logic-023": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-005": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-8-logic-006",
+        "inf-8-logic-056",
+        "inf-8-logic-044",
+        "inf-8-logic-001",
+        "inf-8-logic-070",
+        "inf-8-logic-051",
+        "inf-8-logic-002",
+        "inf-8-logic-009",
+        "inf-8-logic-057",
+        "inf-8-logic-042"
+      ],
+      "orders": {
+        "inf-8-logic-056": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-logic-044": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-001": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-009": {
+          "options": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-8-logic-026",
+        "inf-8-logic-003",
+        "inf-8-logic-031",
+        "inf-8-logic-059",
+        "inf-8-logic-037",
+        "inf-8-logic-035",
+        "inf-8-logic-033",
+        "inf-8-logic-029",
+        "inf-8-logic-049",
+        "inf-8-logic-018"
+      ],
+      "orders": {
+        "inf-8-logic-003": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-033": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-logic-029": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-8-logic-009",
+        "inf-8-logic-017",
+        "inf-8-logic-002",
+        "inf-8-logic-041",
+        "inf-8-logic-058",
+        "inf-8-logic-035",
+        "inf-8-logic-037",
+        "inf-8-logic-047",
+        "inf-8-logic-051",
+        "inf-8-logic-055"
+      ],
+      "orders": {
+        "inf-8-logic-009": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-017": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-logic-041": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-logic-035": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-logic-037": {
+          "options": [
+            "B",
+            "A",
             "C",
             "D"
           ]
@@ -2268,30 +2747,24 @@
       "max_score": 14
     },
     {
-      "number": 19,
+      "number": 28,
       "task_ids": [
-        "inf-8-logic-070",
-        "inf-8-logic-059",
-        "inf-8-logic-009",
-        "inf-8-logic-066",
+        "inf-8-logic-050",
+        "inf-8-logic-065",
+        "inf-8-logic-033",
         "inf-8-logic-019",
-        "inf-8-logic-037",
-        "inf-8-logic-041",
-        "inf-8-logic-013",
-        "inf-8-logic-008",
-        "inf-8-logic-048"
+        "inf-8-logic-048",
+        "inf-8-logic-044",
+        "inf-8-logic-058",
+        "inf-8-logic-069",
+        "inf-8-logic-070",
+        "inf-8-logic-008"
       ],
       "orders": {
-        "inf-8-logic-070": {
+        "inf-8-logic-033": {
           "options": [
-            "A",
+            "C",
             "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-009": {
-          "options": [
             "A",
             "B"
           ]
@@ -2302,546 +2775,35 @@
             "B"
           ]
         },
-        "inf-8-logic-037": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-logic-013": {
-          "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-008": {
-          "right": [
-            "¬",
-            "∨",
-            "∧"
-          ]
-        },
         "inf-8-logic-048": {
           "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-8-logic-058",
-        "inf-8-logic-023",
-        "inf-8-logic-003",
-        "inf-8-logic-024",
-        "inf-8-logic-036",
-        "inf-8-logic-006",
-        "inf-8-logic-049",
-        "inf-8-logic-031",
-        "inf-8-logic-033",
-        "inf-8-logic-055"
-      ],
-      "orders": {
-        "inf-8-logic-023": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-logic-003": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-033": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 21,
-      "task_ids": [
-        "inf-8-logic-030",
-        "inf-8-logic-063",
-        "inf-8-logic-050",
-        "inf-8-logic-026",
-        "inf-8-logic-001",
-        "inf-8-logic-033",
-        "inf-8-logic-055",
-        "inf-8-logic-036",
-        "inf-8-logic-044",
-        "inf-8-logic-047"
-      ],
-      "orders": {
-        "inf-8-logic-063": {
-          "right": [
-            "«13 не больше 20»",
-            "«2² ≠ 4»",
-            "«9 не делится на 5»",
-            "«В треугольнике не четыре стороны»"
-          ]
-        },
-        "inf-8-logic-001": {
-          "options": [
             "C",
             "D",
             "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-033": {
-          "options": [
-            "B",
-            "C",
-            "D",
             "A"
           ]
         },
         "inf-8-logic-044": {
           "options": [
-            "C",
-            "D",
             "B",
-            "A"
+            "A",
+            "C",
+            "D"
           ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-8-logic-030",
-        "inf-8-logic-070",
-        "inf-8-logic-067",
-        "inf-8-logic-043",
-        "inf-8-logic-008",
-        "inf-8-logic-050",
-        "inf-8-logic-054",
-        "inf-8-logic-020",
-        "inf-8-logic-064",
-        "inf-8-logic-017"
-      ],
-      "orders": {
+        },
         "inf-8-logic-070": {
           "options": [
             "C",
-            "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
+            "D",
+            "B"
           ]
         },
         "inf-8-logic-008": {
           "right": [
-            "¬",
+            "∧",
             "∨",
-            "∧"
-          ]
-        },
-        "inf-8-logic-020": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-8-logic-023",
-        "inf-8-logic-041",
-        "inf-8-logic-032",
-        "inf-8-logic-049",
-        "inf-8-logic-043",
-        "inf-8-logic-066",
-        "inf-8-logic-007",
-        "inf-8-logic-057",
-        "inf-8-logic-031",
-        "inf-8-logic-004"
-      ],
-      "orders": {
-        "inf-8-logic-023": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-004": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-8-logic-014",
-        "inf-8-logic-063",
-        "inf-8-logic-067",
-        "inf-8-logic-026",
-        "inf-8-logic-059",
-        "inf-8-logic-055",
-        "inf-8-logic-006",
-        "inf-8-logic-027",
-        "inf-8-logic-013",
-        "inf-8-logic-003"
-      ],
-      "orders": {
-        "inf-8-logic-014": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-logic-063": {
-          "right": [
-            "«2² ≠ 4»",
-            "«В треугольнике не четыре стороны»",
-            "«13 не больше 20»",
-            "«9 не делится на 5»"
-          ]
-        },
-        "inf-8-logic-027": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-logic-013": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-003": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-8-logic-041",
-        "inf-8-logic-007",
-        "inf-8-logic-049",
-        "inf-8-logic-044",
-        "inf-8-logic-031",
-        "inf-8-logic-036",
-        "inf-8-logic-055",
-        "inf-8-logic-033",
-        "inf-8-logic-030",
-        "inf-8-logic-003"
-      ],
-      "orders": {
-        "inf-8-logic-041": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-044": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-logic-033": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-003": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 26,
-      "task_ids": [
-        "inf-8-logic-059",
-        "inf-8-logic-063",
-        "inf-8-logic-029",
-        "inf-8-logic-041",
-        "inf-8-logic-009",
-        "inf-8-logic-043",
-        "inf-8-logic-049",
-        "inf-8-logic-005",
-        "inf-8-logic-035",
-        "inf-8-logic-048"
-      ],
-      "orders": {
-        "inf-8-logic-063": {
-          "right": [
-            "«В треугольнике не четыре стороны»",
-            "«2² ≠ 4»",
-            "«13 не больше 20»",
-            "«9 не делится на 5»"
-          ]
-        },
-        "inf-8-logic-029": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-logic-009": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-logic-005": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-logic-035": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-logic-048": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-8-logic-003",
-        "inf-8-logic-049",
-        "inf-8-logic-069",
-        "inf-8-logic-068",
-        "inf-8-logic-054",
-        "inf-8-logic-004",
-        "inf-8-logic-059",
-        "inf-8-logic-020",
-        "inf-8-logic-018",
-        "inf-8-logic-024"
-      ],
-      "orders": {
-        "inf-8-logic-003": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-068": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-logic-004": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-020": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 28,
-      "task_ids": [
-        "inf-8-logic-048",
-        "inf-8-logic-003",
-        "inf-8-logic-069",
-        "inf-8-logic-058",
-        "inf-8-logic-043",
-        "inf-8-logic-014",
-        "inf-8-logic-050",
-        "inf-8-logic-035",
-        "inf-8-logic-056",
-        "inf-8-logic-017"
-      ],
-      "orders": {
-        "inf-8-logic-048": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-logic-003": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-logic-043": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-014": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-035": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-logic-056": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-logic-017": {
-          "options": [
-            "A",
-            "B"
+            "¬"
           ]
         }
       },
@@ -2850,54 +2812,48 @@
     {
       "number": 29,
       "task_ids": [
+        "inf-8-logic-064",
+        "inf-8-logic-003",
+        "inf-8-logic-020",
         "inf-8-logic-067",
-        "inf-8-logic-005",
-        "inf-8-logic-051",
-        "inf-8-logic-024",
+        "inf-8-logic-069",
+        "inf-8-logic-063",
         "inf-8-logic-056",
-        "inf-8-logic-010",
-        "inf-8-logic-041",
-        "inf-8-logic-006",
-        "inf-8-logic-059",
-        "inf-8-logic-002"
+        "inf-8-logic-050",
+        "inf-8-logic-038",
+        "inf-8-logic-057"
       ],
       "orders": {
-        "inf-8-logic-005": {
+        "inf-8-logic-003": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-logic-020": {
           "options": [
             "C",
-            "A",
+            "B",
             "D",
-            "B"
+            "A"
+          ]
+        },
+        "inf-8-logic-063": {
+          "right": [
+            "«В треугольнике не четыре стороны»",
+            "«9 не делится на 5»",
+            "«13 не больше 20»",
+            "«2² ≠ 4»"
           ]
         },
         "inf-8-logic-056": {
           "options": [
-            "B",
             "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-logic-010": {
-          "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-logic-041": {
-          "options": [
             "C",
             "D",
-            "A",
             "B"
-          ]
-        },
-        "inf-8-logic-002": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
           ]
         }
       },
@@ -2906,39 +2862,51 @@
     {
       "number": 30,
       "task_ids": [
-        "inf-8-logic-024",
-        "inf-8-logic-063",
-        "inf-8-logic-050",
-        "inf-8-logic-020",
+        "inf-8-logic-009",
+        "inf-8-logic-064",
+        "inf-8-logic-067",
+        "inf-8-logic-059",
         "inf-8-logic-001",
-        "inf-8-logic-065",
-        "inf-8-logic-036",
-        "inf-8-logic-047",
-        "inf-8-logic-069",
-        "inf-8-logic-059"
+        "inf-8-logic-027",
+        "inf-8-logic-031",
+        "inf-8-logic-055",
+        "inf-8-logic-013",
+        "inf-8-logic-070"
       ],
       "orders": {
-        "inf-8-logic-063": {
-          "right": [
-            "«2² ≠ 4»",
-            "«9 не делится на 5»",
-            "«В треугольнике не четыре стороны»",
-            "«13 не больше 20»"
-          ]
-        },
-        "inf-8-logic-020": {
+        "inf-8-logic-009": {
           "options": [
             "B",
-            "D",
-            "A",
-            "C"
+            "A"
           ]
         },
         "inf-8-logic-001": {
           "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-027": {
+          "options": [
             "B",
             "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-logic-013": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-logic-070": {
+          "options": [
             "C",
+            "B",
+            "A",
             "D"
           ]
         }

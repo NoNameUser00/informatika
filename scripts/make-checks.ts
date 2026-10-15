@@ -48,12 +48,14 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
 
 /**
  * Пропорциональное распределение total по весам методом наибольших остатков.
- * После шага каждый элемент не меньше min (добираем у тех, где есть запас).
+ * min — минимум на элемент: число или массив по элементам. Распределяемый остаток
+ * добирается у тех, где есть запас.
  */
-function allocate(weights: number[], total: number, min: number): number[] {
+function allocate(weights: number[], total: number, min: number | number[]): number[] {
   const n = weights.length;
-  const out = new Array<number>(n).fill(min);
-  let left = total - min * n;
+  const mins = Array.isArray(min) ? min.slice() : new Array(n).fill(min);
+  const out = mins.slice();
+  let left = total - mins.reduce((s, v) => s + v, 0);
   if (left < 0) throw new Error(`allocate: total ${total} < min*${n}`);
   const sum = weights.reduce((s, w) => s + Math.max(w, 0), 0);
   if (sum === 0) {
@@ -83,6 +85,49 @@ function lessonCount(ranges: Array<{ from: number; to: number }>): number {
   return ranges.reduce((s, r) => s + (r.to - r.from + 1), 0);
 }
 
+/**
+ * Раскладывает квоту одной сложности по разделам «водопадом»: сначала по
+ * единице в каждый раздел, у которого есть запас, затем снова по кругу, пока
+ * квота не кончится или резервы не исчерпаются.
+ *
+ * Так квота уходит туда, где задания реально есть, и не сгорает на разделах с
+ * короткими банками. Распределение детерминированное.
+ */
+function allocateWaterfall(caps: number[], quota: number, minEach: number): number[] {
+  const out = caps.map(() => 0);
+  const mins = caps.map((c) => Math.min(c, minEach));
+  let sumMin = mins.reduce((s, v) => s + v, 0);
+  if (sumMin > quota) {
+    // квоты не хватает даже на минимумы — режем по порядку разделов
+    let left = quota;
+    for (let i = 0; i < mins.length && left > 0; i++) {
+      const take = Math.min(mins[i], left);
+      out[i] = take;
+      left -= take;
+    }
+    return out;
+  }
+  for (let i = 0; i < mins.length; i++) out[i] = mins[i];
+  let left = quota - sumMin;
+  for (let guard = 0; guard < 200 && left > 0; guard++) {
+    let added = 0;
+    for (let i = 0; i < caps.length && left > 0; i++) {
+      if (out[i] < caps[i]) {
+        out[i]++;
+        left--;
+        added++;
+      }
+    }
+    if (!added) break;
+  }
+  return out;
+}
+
+/** Сколько всего заданий нужной сложности есть в разделах работы. */
+function capacity(sections: any[], difficulty: Diff): number[] {
+  return sections.map((s) => s.tasks.filter((t: Raw) => t.difficulty === difficulty).length);
+}
+
 /** Раскладывает пул по разделам и сложностям; возвращает дефициты для отчёта. */
 function buildPool(work: any, byLesson: Map<string, Raw[]>): { sections: any[]; gaps: string[] } {
   const gaps: string[] = [];
@@ -91,27 +136,56 @@ function buildPool(work: any, byLesson: Map<string, Raw[]>): { sections: any[]; 
     POOL_QUOTA.total,
     MIN_PER_SECTION,
   );
-  const diffWeights = DIFFS.map((d) => POOL_QUOTA[d]);
 
-  const sections = work.sections.map((sec: any, i: number) => {
+  // Шаги 1-3: разделы с заданиями и их суммарная квота.
+  const picked = work.sections.map(() => [] as Raw[]);
+  const buckets = work.sections.map((sec: any) => {
     const tasks: Raw[] = [];
     for (const [lesson, list] of byLesson) {
       const ktp = ktpOf(lesson);
       if (ktp !== null && inRanges(ktp, sec.ktp)) tasks.push(...list);
     }
-    // Раскладываем квоту по сложностям внутри раздела.
-    const quota = allocate(diffWeights, sectionTotals[i], 1);
-    const picked: Raw[] = [];
-    for (const d of DIFFS) {
-      const bucket = tasks.filter((t) => t.difficulty === d);
-      const need = quota[DIFFS.indexOf(d)];
-      if (bucket.length < need) {
-        gaps.push(`${work.file} / «${sec.title}» / ${d}: нужно ${need}, есть ${bucket.length}`);
+    return tasks;
+  });
+
+  // Сначала добираем basic и intermediate: именно их берёт проверочная, и они
+  // должны вырабатываться целиком. Квота 36/18 — ориентир; если банк столько не
+  // набирает, берём всё, что есть, и пишем в отчёт, а не затыкаем дыру
+  // advanced-заданиями, которые проверочная всё равно не использует.
+  const order: Array<[Diff, number, number]> = [
+    ['basic', POOL_QUOTA.basic, 1],
+    ['intermediate', POOL_QUOTA.intermediate, 1],
+  ];
+  for (const [d, quota, minEach] of order) {
+    const caps = buckets.map((tasks: Raw[]) => tasks.filter((t: Raw) => t.difficulty === d).length);
+    const share = allocateWaterfall(caps, quota, minEach);
+    buckets.forEach((tasks: Raw[], i: number) => {
+      const bucket = tasks.filter((t: Raw) => t.difficulty === d);
+      picked[i].push(...pickSpread(bucket, share[i]));
+      if (share[i] > bucket.length) {
+        gaps.push(`${work.file} / «${work.sections[i].title}» / ${d}: нужно ${share[i]}, есть ${bucket.length}`);
       }
-      picked.push(...pickSpread(bucket, need));
+    });
+  }
+
+  // Остаток до 60 добираем advanced — его использует только контрольная.
+  const capAdv = buckets.map((tasks: Raw[]) => tasks.filter((t: Raw) => t.difficulty === 'advanced').length);
+  const usedBefore = picked.map((p: Raw[]) => p.length);
+  const leftTotal = POOL_QUOTA.total - usedBefore.reduce((s: number, v: number) => s + v, 0);
+  const shareAdv = allocateWaterfall(capAdv, Math.max(leftTotal, 0), 0);
+  buckets.forEach((tasks: Raw[], i: number) => {
+    const bucket = tasks.filter((t: Raw) => t.difficulty === 'advanced');
+    picked[i].push(...pickSpread(bucket, shareAdv[i]));
+    if (usedBefore[i] + shareAdv[i] < MIN_PER_SECTION) {
+      gaps.push(`${work.file} / «${work.sections[i].title}»: набрано ${usedBefore[i] + shareAdv[i]} из ${sectionTotals[i]}`);
     }
-    picked.sort((a, b) => (a.lesson < b.lesson ? -1 : a.lesson > b.lesson ? 1 : a.json.id < b.json.id ? -1 : 1));
-    return { title: sec.title, ktp: sec.ktp, quota: sectionTotals[i], tasks: picked };
+  });
+
+  const sections = work.sections.map((sec: any, i: number) => {
+    picked[i].sort((a: Raw, b: Raw) =>
+      a.lesson < b.lesson ? -1 : a.lesson > b.lesson ? 1 : a.json.id < b.json.id ? -1 : 1,
+    );
+    return { title: sec.title, ktp: sec.ktp, quota: sectionTotals[i], tasks: picked[i] };
   });
 
   return { sections, gaps };
@@ -150,23 +224,53 @@ function pickSpread(bucket: Raw[], n: number): Raw[] {
   return out;
 }
 
-/** Набирает count заданий из раздела в порядке сложностей (basic -> advanced). */
-function takeFor(section: any, count: number, diffs: Diff[], rng: () => number): Raw[] {
-  const buckets: Raw[][] = diffs.map((d) => shuffle(section.tasks.filter((t: Raw) => t.difficulty === d), rng));
+/**
+ * Набирает count заданий из раздела, двигая окно по вариантам.
+ *
+ * Порядок внутри бакета задаётся один раз на пару (раздел, сложность) и от
+ * номера варианта не зависит, а вот старт окна сдвигается линейно:
+ * off = floor(n * m / VARIANTS). За 30 вариантов окно проходит весь бакет,
+ * поэтому каждое задание пула попадает хотя бы в один вариант.
+ *
+ * Раньше порядок перемешивался заново на каждый вариант и брался с конца, из-за
+ * чего часть пула не выбиралась ни разу: до 27 заданий из 60 в проверочных.
+ *
+ * Квоту между сложностями делим пропорционально их размерам, а НЕ по очереди:
+ * при поочерёдном разборе проверочная (в ней allowed basic + intermediate)
+ * выбирала только basic, и intermediate не использовалась вообще.
+ */
+function takeFor(section: any, count: number, diffs: Diff[], seedBase: string, n: number): Raw[] {
+  const tasks: Raw[] = section.tasks;
+  const buckets: Raw[][] = diffs
+    .map((d) => shuffle(tasks.filter((t: Raw) => t.difficulty === d), mulberry32(fnv1a(`${seedBase}|${d}`))))
+    .filter((b) => b.length > 0);
+  if (!buckets.length) return [];
+
+  const sizes = buckets.map((b) => b.length);
+  const total = sizes.reduce((s, v) => s + v, 0);
+  const want = Math.min(count, total);
+
+  // Порядок сложностей сдвигается по вариантам. Без этого разделы, которым
+  // достаётся одно задание, отдавали его всегда в basic (он больше), и
+  // intermediate не попадала ни в один из 30 вариантов — до 13 заданий в
+  // proverka-11net оставались неиспользованными.
+  const start = n % buckets.length;
+  const order = buckets.slice(start).concat(buckets.slice(0, start));
+  // Если заданий не больше, чем сложностей, берём по одной из первых want:
+  // так каждая сложность гарантированно участвует.
+  const quota =
+    want <= order.length
+      ? order.map((_, k) => (k < want ? 1 : 0))
+      : allocate(order.map((b) => b.length), want, order.map(() => 0));
+
   const out: Raw[] = [];
-  let guard = 0;
-  while (out.length < count && guard++ < 200) {
-    let added = false;
-    for (const b of buckets) {
-      if (out.length >= count) break;
-      if (b.length) {
-        const task = b.pop();
-        if (task) out.push(task);
-        added = true;
-      }
-    }
-    if (!added) break;
-  }
+  order.forEach((b: Raw[], k: number) => {
+    const m = b.length;
+    const take = Math.min(quota[k], m);
+    if (!take) return;
+    const off = Math.floor((n * m) / VARIANTS) % m;
+    for (let j = 0; j < take; j++) out.push(b[(off + j) % m]);
+  });
   return out;
 }
 
@@ -180,33 +284,99 @@ function buildVariant(work: any, sections: any[], n: number, kind: string): any 
   const rng = mulberry32(fnv1a(`${work.code}|${n}|${SALT}`));
   const picked: Raw[] = [];
   usable.forEach((s, i) => {
-    const take = Math.min(perSection[i], s.tasks.filter((t: Raw) => diffs.includes(t.difficulty)).length);
-    picked.push(...takeFor(s, take, diffs, rng));
+    const avail = s.tasks.filter((t: Raw) => diffs.includes(t.difficulty)).length;
+    const take = Math.min(perSection[i], avail);
+    picked.push(...takeFor(s, take, diffs, `${work.code}|${s.title}|${n}`, n));
   });
 
-  // Добор до нормы, если раздел не дал нужного количества.
+  // Добор до нормы, если раздел не дал нужного количества. Окно по spare тоже
+  // сдвигается, иначе добор каждый раз тянул бы из одного и того же хвоста.
   const all = diffs.flatMap((d) => usable.flatMap((s: any) => s.tasks.filter((t: Raw) => t.difficulty === d)));
   const used = new Set(picked.map((t) => t.json.id));
   const spare = shuffle(all.filter((t) => !used.has(t.json.id)), rng);
+  let off = spare.length ? Math.floor((n * spare.length) / VARIANTS) % spare.length : 0;
   while (picked.length < spec.perVariant && spare.length) {
-    const task = spare.pop();
-    if (task) picked.push(task);
+    picked.push(spare[off % spare.length]);
+    off++;
   }
 
   // Порядок вопросов перемешан: вариант не выглядит «по разделам».
   const questions = shuffle(picked, rng).slice(0, spec.perVariant);
   // Перестановка вариантов ответа внутри задания — косметика варианта:
   // ученик шлёт id варианта (A/B/C/D), поэтому на проверку это не влияет.
+  // Seed задаётся на само задание и номер варианта, а не берётся из общего потока
+  // rng: тогда перестановка не зависит от порядка набора и в вариант можно
+  // безопасно подставить другое задание (см. repairCoverage).
   const orders: Record<string, { options?: string[]; right?: string[] }> = {};
   for (const q of questions) {
+    const r = mulberry32(fnv1a(`${work.code}|${q.json.id}|${n}|${SALT}`));
     if (q.json.options) {
-      orders[q.json.id] = { options: shuffle(q.json.options.map((o) => o.id), rng) };
+      orders[q.json.id] = { options: shuffle(q.json.options.map((o) => o.id), r) };
     } else if (q.json.right) {
-      orders[q.json.id] = { right: shuffle(q.json.right, rng) };
+      orders[q.json.id] = { right: shuffle(q.json.right, r) };
     }
   }
   const maxScore = questions.reduce((s, q) => s + q.json.points, 0);
   return { number: n, task_ids: questions.map((q) => q.json.id), orders, max_score: maxScore };
+}
+
+/**
+ * Гарантирует выработку пула: задания, не попавшие ни в один вариант,
+ * подменяются наименее востребованными в том варианте, где есть перебор.
+ *
+ * Сдвиг окна в takeFor покрывает бакет обычно, но в разделах с неудобным
+ * соотношением размеров остаются единичные «хвосты». Этот проход не полагается
+ * на арифметику сдвига и доводит покрытие до конца.
+ *
+ * Важно: пропуском считается только задание, которое в этот вид работы входит по
+ * норме. В проверочной advanced не берётся, и вставлять его нельзя — иначе
+ * работа по содержанию перестанет быть проверочной.
+ *
+ * Инварианты: размер варианта и отсутствие повторов внутри него сохраняются,
+ * подставленное задание не вытесняется следующей подменой, баллы пересчитываются,
+ * порядок обхода детерминированный.
+ */
+function repairCoverage(
+  variants: any[],
+  poolById: Map<string, any>,
+  poolDiff: Map<string, string>,
+  allowed: Set<string>,
+): string[] {
+  const count = new Map<string, number>();
+  for (const id of poolById.keys()) count.set(id, 0);
+  for (const v of variants) for (const id of v.task_ids as string[]) count.set(id, (count.get(id) ?? 0) + 1);
+
+  const missing = [...count.keys()].filter((id) => count.get(id) === 0 && allowed.has(poolDiff.get(id) ?? ''));
+  if (!missing.length) return [];
+
+  const inserted = new Set<string>();
+  const notes: string[] = [];
+  for (const id of missing) {
+    const target = variants.find((v) => !(v.task_ids as string[]).includes(id));
+    if (!target) break;
+    // выкидываем наименее востребованное, но не то, что только что подставили
+    let worst: string | null = null;
+    for (const t of target.task_ids as string[]) {
+      if (inserted.has(t)) continue;
+      if (worst === null || (count.get(t) ?? 0) < (count.get(worst) ?? 0)) worst = t;
+    }
+    if (worst === null) break;
+    const at = (target.task_ids as string[]).indexOf(worst);
+    (target.task_ids as string[])[at] = id;
+    count.set(id, 1);
+    count.set(worst, (count.get(worst) ?? 1) - 1);
+    inserted.add(id);
+    notes.push(`в${target.number}: ${id} вместо ${worst}`);
+  }
+  if (inserted.size) {
+    for (const v of variants) {
+      v.max_score = (v.task_ids as string[]).reduce(
+        (s: number, tid) => s + (poolById.get(tid)?.points ?? 0),
+        0,
+      );
+    }
+  }
+  return notes;
 }
 
 function checkVariant(work: any, v: any, pool: Map<string, any>, kind: string): string[] {
@@ -259,7 +429,13 @@ for (const work of WORKS) {
 
   const poolTasks = sections.flatMap((s) => s.tasks);
   const poolById = new Map(poolTasks.map((t) => [t.json.id, t.json]));
+  const poolDiff = new Map(poolTasks.map((t) => [t.json.id, t.difficulty as string]));
+  const allowed = new Set<string>(SLOTS[work.kind as 'control' | 'proverka'].difficulties as string[]);
   const variants = Array.from({ length: VARIANTS }, (_, i) => buildVariant(work, sections, i + 1, work.kind));
+  // Доводим выработку пула: задания, не взятые ни одним вариантом, вставляем
+  // на место наименее востребованных. После подмены баллы пересчитаны в repairCoverage.
+  const repairs = repairCoverage(variants, poolById, poolDiff, allowed);
+  if (repairs.length) report.push(`  выработка: подстановок ${repairs.length} — ${repairs.join('; ')}`);
   const soft = gaps.length > 0 && process.env.ALLOW_POOL_GAPS === '1';
   for (const v of variants) {
     const errs = checkVariant(work, v, poolById, work.kind);

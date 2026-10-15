@@ -25,18 +25,16 @@
         "inf-7-base-015",
         "inf-7-base-016",
         "inf-7-base-038",
-        "inf-7-base-100",
         "inf-7-base-040",
         "inf-7-base-041",
         "inf-7-base-092",
         "inf-7-base-043",
         "inf-7-base-044",
-        "inf-7-base-045",
         "inf-7-base-093",
         "inf-7-base-046",
         "inf-7-base-047",
         "inf-7-base-048",
-        "inf-7-base-101",
+        "inf-7-base-094",
         "inf-7-base-049",
         "inf-7-base-050",
         "inf-7-base-095",
@@ -60,6 +58,7 @@
         "inf-7-media-010",
         "inf-7-media-017",
         "inf-7-media-018",
+        "inf-7-media-040",
         "inf-7-media-019",
         "inf-7-media-020",
         "inf-7-media-021",
@@ -89,6 +88,7 @@
         "inf-7-base-055",
         "inf-7-base-056",
         "inf-7-base-097",
+        "inf-7-base-098",
         "inf-7-base-099",
         "inf-7-media-003",
         "inf-7-media-004",
@@ -97,8 +97,8 @@
         "inf-7-media-048",
         "inf-7-media-026",
         "inf-7-media-027",
-        "inf-7-media-028",
         "inf-7-media-050",
+        "inf-7-media-051",
         "inf-7-media-052",
         "inf-7-media-029",
         "inf-7-media-031",
@@ -260,31 +260,6 @@
       ]
     },
     {
-      "id": "inf-7-base-100",
-      "lesson": "7doc-01-text",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Автор хочет, чтобы все абзацы в документе начинались с красной строки. Какой параметр абзаца нужно изменить?",
-      "options": [
-        {
-          "id": "C",
-          "text": "Выравнивание по ширине"
-        },
-        {
-          "id": "A",
-          "text": "Отступ первой строки"
-        },
-        {
-          "id": "D",
-          "text": "Интервал после абзаца"
-        },
-        {
-          "id": "B",
-          "text": "Межстрочный интервал"
-        }
-      ]
-    },
-    {
       "id": "inf-7-base-040",
       "lesson": "7doc-02-format",
       "type": "single_choice",
@@ -398,27 +373,6 @@
       ]
     },
     {
-      "id": "inf-7-base-045",
-      "lesson": "7doc-03-styles",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Восемь заголовков оформлены вручную: жирные, 16 пт, по центру. Как правильно переоформить документ?",
-      "options": [
-        {
-          "id": "B",
-          "text": "Оставить как есть: прямое форматирование быстрее"
-        },
-        {
-          "id": "C",
-          "text": "Сделать все заголовки обычным текстом, чтобы оформление было одинаковым"
-        },
-        {
-          "id": "A",
-          "text": "Применить стиль «Заголовок 1» ко всем заголовкам и убрать ручное оформление"
-        }
-      ]
-    },
-    {
       "id": "inf-7-base-093",
       "lesson": "7doc-03-styles",
       "type": "single_choice",
@@ -496,22 +450,28 @@
       "base": 10
     },
     {
-      "id": "inf-7-base-101",
+      "id": "inf-7-base-094",
       "lesson": "7doc-04-lists",
-      "type": "matching",
-      "points": 2,
-      "prompt": "Установите соответствие: действие в таблице — его результат.",
-      "left": [
-        "Объединить ячейки",
-        "Разбить ячейку",
-        "Сортировать данные",
-        "Суммировать столбец"
-      ],
-      "right": [
-        "шапка на всю ширину таблицы",
-        "многострочная ячейка",
-        "упорядоченные строки",
-        "итог под столбцом"
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Зачем в таблице нужна шапка?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Она уменьшает размер таблицы на экране"
+        },
+        {
+          "id": "C",
+          "text": "Она вычисляет суммы по столбцам автоматически"
+        },
+        {
+          "id": "B",
+          "text": "Она делает таблицу красивее при печати"
+        },
+        {
+          "id": "A",
+          "text": "Она называет столбцы, без неё не понятно, что в них записано"
+        }
       ]
     },
     {
@@ -780,6 +740,31 @@
         {
           "id": "C",
           "text": "Добавить ещё анимации, чтобы слайды отличались друг от друга"
+        }
+      ]
+    },
+    {
+      "id": "inf-7-media-040",
+      "lesson": "7media-01-slides",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Автор закончил презентацию за час до выступления и ни разу её не показал. Какой этап обязательно пропущен?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Монтаж — без него презентация не запускается"
+        },
+        {
+          "id": "C",
+          "text": "Выбор дизайна — его утверждают только перед показом"
+        },
+        {
+          "id": "B",
+          "text": "Создание слайдов — их нужно делать в день выступления"
+        },
+        {
+          "id": "A",
+          "text": "Репетиция перед показом — она выявляет, что текст не влезает и время не уложится"
         }
       ]
     },
@@ -1111,6 +1096,31 @@
       ]
     },
     {
+      "id": "inf-7-base-098",
+      "lesson": "7doc-07-vector",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Почему векторный файл того же рисунка обычно меньше растра?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Вектор сохраняет не все цвета, поэтому данных меньше"
+        },
+        {
+          "id": "B",
+          "text": "Вектор сжимает картинку в сто раз сильнее любого архиватора"
+        },
+        {
+          "id": "A",
+          "text": "Вектор хранит формулы фигур, а растр — цвет каждого пикселя"
+        },
+        {
+          "id": "D",
+          "text": "Вектор нельзя открыть на компьютере, поэтому файл получается пустым"
+        }
+      ]
+    },
+    {
       "id": "inf-7-base-099",
       "lesson": "7doc-07-vector",
       "type": "single_choice",
@@ -1303,31 +1313,6 @@
       ]
     },
     {
-      "id": "inf-7-media-028",
-      "lesson": "7gfx-04-raster",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Рисунок собран на одном слое: небо, дорога и надпись. Почему исправить одну деталь не получается?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Слои не разделены, поэтому правка одного элемента тянет за собой весь рисунок"
-        },
-        {
-          "id": "D",
-          "text": "Надо уменьшить разрешение, и детали станут мельче"
-        },
-        {
-          "id": "B",
-          "text": "Не хватает кисти: покрупнее инструмент всё исправит"
-        },
-        {
-          "id": "C",
-          "text": "Файл сохранён не в том формате"
-        }
-      ]
-    },
-    {
       "id": "inf-7-media-050",
       "lesson": "7gfx-04-raster",
       "type": "single_choice",
@@ -1349,6 +1334,31 @@
         {
           "id": "D",
           "text": "Градиент"
+        }
+      ]
+    },
+    {
+      "id": "inf-7-media-051",
+      "lesson": "7gfx-04-raster",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Ширина рисунка — 2400 пикселей, а его надо уменьшить до 800. Во сколько раз уменьшится высота, если пропорции сохранены?",
+      "options": [
+        {
+          "id": "B",
+          "text": "В 2 раза"
+        },
+        {
+          "id": "D",
+          "text": "Высота не изменится"
+        },
+        {
+          "id": "C",
+          "text": "В 800 раз"
+        },
+        {
+          "id": "A",
+          "text": "В 3 раза"
         }
       ]
     },
@@ -1507,67 +1517,418 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-7-media-022",
-        "inf-7-media-047",
-        "inf-7-media-052",
-        "inf-7-media-017",
-        "inf-7-base-096",
-        "inf-7-base-101",
-        "inf-7-base-093",
-        "inf-7-media-010",
+        "inf-7-base-095",
         "inf-7-media-003",
-        "inf-7-base-044"
+        "inf-7-base-056",
+        "inf-7-base-093",
+        "inf-7-base-006",
+        "inf-7-media-047",
+        "inf-7-media-043",
+        "inf-7-media-010",
+        "inf-7-base-047",
+        "inf-7-media-002"
       ],
       "orders": {
-        "inf-7-media-022": {
+        "inf-7-base-095": {
           "options": [
             "D",
-            "B",
             "C",
-            "A"
-          ]
-        },
-        "inf-7-media-047": {
-          "options": [
             "A",
-            "C",
-            "D",
             "B"
           ]
         },
-        "inf-7-media-052": {
+        "inf-7-media-003": {
           "options": [
-            "C",
             "B",
             "D",
+            "C",
             "A"
           ]
         },
-        "inf-7-base-096": {
+        "inf-7-base-056": {
           "options": [
-            "C",
             "D",
+            "A",
             "B",
-            "A"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "шапка на всю ширину таблицы",
-            "многострочная ячейка",
-            "упорядоченные строки",
-            "итог под столбцом"
+            "C"
           ]
         },
         "inf-7-base-093": {
           "options": [
             "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-006": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-047": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-043": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-010": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "сравнить одни и те же признаки у нескольких объектов",
+            "показать доли целого",
+            "перечислить шаги, где важен порядок",
+            "перечислить факты, где порядок не важен"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-7-base-096",
+        "inf-7-media-022",
+        "inf-7-base-006",
+        "inf-7-media-004",
+        "inf-7-base-038",
+        "inf-7-media-017",
+        "inf-7-base-015",
+        "inf-7-media-019",
+        "inf-7-base-055",
+        "inf-7-media-053"
+      ],
+      "orders": {
+        "inf-7-base-096": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-006": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-004": {
+          "right": [
+            "схемы без потерь",
+            "фото",
+            "анимация 256 цветов"
+          ]
+        },
+        "inf-7-base-038": {
+          "options": [
+            "A",
             "C",
             "D",
             "B"
           ]
         },
+        "inf-7-base-015": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-019": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-055": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-053": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-7-media-045",
+        "inf-7-base-055",
+        "inf-7-media-010",
+        "inf-7-media-023",
+        "inf-7-base-052",
+        "inf-7-media-050",
+        "inf-7-base-006",
+        "inf-7-media-052",
+        "inf-7-base-047",
+        "inf-7-base-049"
+      ],
+      "orders": {
+        "inf-7-media-045": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-055": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
         "inf-7-media-010": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-023": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-050": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-006": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "перечислить факты, где порядок не важен",
+            "перечислить шаги, где важен порядок",
+            "сравнить одни и те же признаки у нескольких объектов",
+            "показать доли целого"
+          ]
+        },
+        "inf-7-base-049": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-7-media-026",
+        "inf-7-media-020",
+        "inf-7-base-013",
+        "inf-7-base-052",
+        "inf-7-media-022",
+        "inf-7-media-055",
+        "inf-7-media-051",
+        "inf-7-media-002",
+        "inf-7-base-094",
+        "inf-7-base-050"
+      ],
+      "orders": {
+        "inf-7-media-026": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-013": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-055": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-094": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-050": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-7-media-002",
+        "inf-7-base-056",
+        "inf-7-media-053",
+        "inf-7-base-093",
+        "inf-7-media-003",
+        "inf-7-base-053",
+        "inf-7-media-001",
+        "inf-7-media-040",
+        "inf-7-base-095",
+        "inf-7-base-096"
+      ],
+      "orders": {
+        "inf-7-media-002": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-056": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-053": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-093": {
           "options": [
             "A",
             "B",
@@ -1577,47 +1938,35 @@
         },
         "inf-7-media-003": {
           "options": [
-            "C",
             "D",
             "A",
+            "C",
             "B"
           ]
         },
-        "inf-7-base-044": {
+        "inf-7-base-053": {
           "right": [
-            "название документа на каждой странице",
-            "номера страниц внизу листа",
-            "поле, которое обновляется само",
-            "книжная или альбомная"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 2,
-      "task_ids": [
-        "inf-7-base-101",
-        "inf-7-base-093",
-        "inf-7-base-050",
-        "inf-7-media-022",
-        "inf-7-media-043",
-        "inf-7-media-004",
-        "inf-7-media-047",
-        "inf-7-base-097",
-        "inf-7-media-042",
-        "inf-7-base-016"
-      ],
-      "orders": {
-        "inf-7-base-101": {
-          "right": [
-            "шапка на всю ширину таблицы",
-            "итог под столбцом",
-            "упорядоченные строки",
-            "многострочная ячейка"
+            "книга: автор, название, место и год издания",
+            "сайт: название, адрес и дата обращения"
           ]
         },
-        "inf-7-base-093": {
+        "inf-7-media-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-040": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-095": {
           "options": [
             "D",
             "B",
@@ -1625,28 +1974,38 @@
             "A"
           ]
         },
-        "inf-7-base-050": {
+        "inf-7-base-096": {
           "options": [
+            "C",
+            "B",
             "D",
-            "C",
-            "A",
-            "B"
+            "A"
           ]
-        },
-        "inf-7-media-022": {
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-7-media-053",
+        "inf-7-media-004",
+        "inf-7-base-094",
+        "inf-7-media-019",
+        "inf-7-base-093",
+        "inf-7-base-098",
+        "inf-7-base-095",
+        "inf-7-base-044",
+        "inf-7-media-044",
+        "inf-7-media-020"
+      ],
+      "orders": {
+        "inf-7-media-053": {
           "options": [
             "C",
-            "A",
             "B",
-            "D"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
+            "D",
+            "A"
           ]
         },
         "inf-7-media-004": {
@@ -1656,119 +2015,31 @@
             "анимация 256 цветов"
           ]
         },
-        "inf-7-media-047": {
+        "inf-7-base-094": {
           "options": [
             "B",
-            "D",
             "C",
+            "D",
             "A"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-042": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-016": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 3,
-      "task_ids": [
-        "inf-7-media-003",
-        "inf-7-base-038",
-        "inf-7-base-043",
-        "inf-7-media-046",
-        "inf-7-base-053",
-        "inf-7-base-099",
-        "inf-7-media-019",
-        "inf-7-base-092",
-        "inf-7-media-022",
-        "inf-7-media-053"
-      ],
-      "orders": {
-        "inf-7-media-003": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-046": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-053": {
-          "right": [
-            "книга: автор, название, место и год издания",
-            "сайт: название, адрес и дата обращения"
-          ]
-        },
-        "inf-7-base-099": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
           ]
         },
         "inf-7-media-019": {
           "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-092": {
-          "options": [
-            "D",
-            "B",
             "C",
+            "D",
+            "B",
             "A"
           ]
         },
-        "inf-7-media-022": {
+        "inf-7-base-093": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-098": {
           "options": [
             "B",
             "A",
@@ -1776,7 +2047,23 @@
             "D"
           ]
         },
-        "inf-7-media-053": {
+        "inf-7-base-095": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-044": {
+          "right": [
+            "поле, которое обновляется само",
+            "книжная или альбомная",
+            "название документа на каждой странице",
+            "номера страниц внизу листа"
+          ]
+        },
+        "inf-7-media-044": {
           "options": [
             "B",
             "C",
@@ -1785,307 +2072,24 @@
           ]
         }
       },
-      "max_score": 14
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-7-media-023",
-        "inf-7-base-038",
-        "inf-7-base-097",
-        "inf-7-base-092",
-        "inf-7-media-045",
-        "inf-7-base-096",
-        "inf-7-media-053",
-        "inf-7-media-001",
-        "inf-7-base-100",
-        "inf-7-media-027"
-      ],
-      "orders": {
-        "inf-7-media-023": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-092": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-096": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 5,
-      "task_ids": [
-        "inf-7-media-023",
-        "inf-7-base-038",
-        "inf-7-base-041",
-        "inf-7-media-045",
-        "inf-7-media-042",
-        "inf-7-base-016",
-        "inf-7-media-004",
-        "inf-7-media-050",
-        "inf-7-base-006",
-        "inf-7-base-097"
-      ],
-      "orders": {
-        "inf-7-media-023": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "правая рука, основной ряд",
-            "левая рука, основной ряд",
-            "правая рука, верхний ряд",
-            "левая рука, верхний ряд"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-042": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-016": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-004": {
-          "right": [
-            "анимация 256 цветов",
-            "фото",
-            "схемы без потерь"
-          ]
-        },
-        "inf-7-media-050": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-006": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 6,
-      "task_ids": [
-        "inf-7-media-027",
-        "inf-7-media-054",
-        "inf-7-media-017",
-        "inf-7-media-045",
-        "inf-7-base-013",
-        "inf-7-base-053",
-        "inf-7-media-026",
-        "inf-7-media-010",
-        "inf-7-base-041",
-        "inf-7-base-049"
-      ],
-      "orders": {
-        "inf-7-media-027": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-054": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-013": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-053": {
-          "right": [
-            "сайт: название, адрес и дата обращения",
-            "книга: автор, название, место и год издания"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-media-010": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "правая рука, верхний ряд",
-            "левая рука, верхний ряд",
-            "левая рука, основной ряд",
-            "правая рука, основной ряд"
-          ]
-        },
-        "inf-7-base-049": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
+      "max_score": 13
     },
     {
       "number": 7,
       "task_ids": [
-        "inf-7-media-026",
-        "inf-7-base-046",
-        "inf-7-media-010",
-        "inf-7-media-046",
-        "inf-7-base-097",
-        "inf-7-media-052",
-        "inf-7-media-045",
+        "inf-7-media-001",
+        "inf-7-base-007",
+        "inf-7-media-051",
         "inf-7-base-043",
-        "inf-7-base-100",
-        "inf-7-base-053"
+        "inf-7-base-053",
+        "inf-7-base-094",
+        "inf-7-base-056",
+        "inf-7-media-042",
+        "inf-7-media-043",
+        "inf-7-media-026"
       ],
       "orders": {
-        "inf-7-media-026": {
+        "inf-7-media-001": {
           "options": [
             "B",
             "C",
@@ -2093,68 +2097,28 @@
             "A"
           ]
         },
-        "inf-7-base-046": {
+        "inf-7-base-007": {
           "options": [
-            "A",
-            "B",
             "D",
+            "B",
+            "A",
             "C"
           ]
         },
-        "inf-7-media-010": {
+        "inf-7-media-051": {
           "options": [
             "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-046": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
             "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-052": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "A",
-            "B",
-            "D",
             "C"
           ]
         },
         "inf-7-base-043": {
           "options": [
             "D",
-            "C",
             "B",
-            "A"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "D",
-            "C",
             "A",
-            "B"
+            "C"
           ]
         },
         "inf-7-base-053": {
@@ -2162,50 +2126,106 @@
             "книга: автор, название, место и год издания",
             "сайт: название, адрес и дата обращения"
           ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 8,
-      "task_ids": [
-        "inf-7-base-100",
-        "inf-7-media-046",
-        "inf-7-base-050",
-        "inf-7-media-042",
-        "inf-7-media-019",
-        "inf-7-media-054",
-        "inf-7-media-004",
-        "inf-7-base-093",
-        "inf-7-base-052",
-        "inf-7-media-053"
-      ],
-      "orders": {
-        "inf-7-base-100": {
+        },
+        "inf-7-base-094": {
           "options": [
-            "B",
             "D",
             "A",
+            "B",
             "C"
           ]
         },
-        "inf-7-media-046": {
+        "inf-7-base-056": {
           "options": [
             "B",
-            "D",
             "C",
-            "A"
-          ]
-        },
-        "inf-7-base-050": {
-          "options": [
             "A",
-            "B",
-            "C",
             "D"
           ]
         },
         "inf-7-media-042": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-043": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-026": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-7-base-055",
+        "inf-7-media-029",
+        "inf-7-base-007",
+        "inf-7-base-016",
+        "inf-7-base-043",
+        "inf-7-media-040",
+        "inf-7-media-041",
+        "inf-7-media-019",
+        "inf-7-base-044",
+        "inf-7-media-004"
+      ],
+      "orders": {
+        "inf-7-base-055": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-029": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-016": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-040": {
           "options": [
             "A",
             "D",
@@ -2213,1797 +2233,93 @@
             "B"
           ]
         },
-        "inf-7-media-019": {
+        "inf-7-media-041": {
           "options": [
-            "C",
             "A",
             "B",
-            "D"
+            "D",
+            "C"
           ]
         },
-        "inf-7-media-054": {
+        "inf-7-media-019": {
           "options": [
-            "D",
-            "B",
             "A",
-            "C"
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-044": {
+          "right": [
+            "название документа на каждой странице",
+            "поле, которое обновляется само",
+            "номера страниц внизу листа",
+            "книжная или альбомная"
           ]
         },
         "inf-7-media-004": {
           "right": [
             "анимация 256 цветов",
-            "фото",
-            "схемы без потерь"
-          ]
-        },
-        "inf-7-base-093": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-052": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
+            "схемы без потерь",
+            "фото"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 13
     },
     {
       "number": 9,
       "task_ids": [
-        "inf-7-base-100",
-        "inf-7-base-040",
-        "inf-7-media-050",
-        "inf-7-base-099",
-        "inf-7-media-054",
-        "inf-7-base-044",
-        "inf-7-base-043",
-        "inf-7-media-043",
-        "inf-7-media-042",
-        "inf-7-media-044"
-      ],
-      "orders": {
-        "inf-7-base-100": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-040": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-050": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-099": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-054": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "номера страниц внизу листа",
-            "название документа на каждой странице",
-            "поле, которое обновляется само",
-            "книжная или альбомная"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-042": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 10,
-      "task_ids": [
-        "inf-7-base-096",
-        "inf-7-base-016",
-        "inf-7-base-097",
-        "inf-7-media-010",
-        "inf-7-media-026",
         "inf-7-media-001",
-        "inf-7-base-100",
-        "inf-7-media-052",
+        "inf-7-base-097",
+        "inf-7-media-022",
         "inf-7-media-046",
-        "inf-7-base-053"
-      ],
-      "orders": {
-        "inf-7-base-096": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-016": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-010": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-052": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-046": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-053": {
-          "right": [
-            "сайт: название, адрес и дата обращения",
-            "книга: автор, название, место и год издания"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 11,
-      "task_ids": [
-        "inf-7-base-093",
-        "inf-7-base-044",
-        "inf-7-base-056",
-        "inf-7-base-055",
-        "inf-7-media-026",
-        "inf-7-media-044",
-        "inf-7-base-040",
-        "inf-7-media-002",
-        "inf-7-base-101",
-        "inf-7-media-020"
-      ],
-      "orders": {
-        "inf-7-base-093": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "поле, которое обновляется само",
-            "книжная или альбомная",
-            "номера страниц внизу листа",
-            "название документа на каждой странице"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-055": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-040": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-002": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "итог под столбцом",
-            "упорядоченные строки",
-            "многострочная ячейка",
-            "шапка на всю ширину таблицы"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-7-media-050",
-        "inf-7-media-026",
-        "inf-7-base-044",
         "inf-7-base-006",
-        "inf-7-media-027",
-        "inf-7-base-096",
-        "inf-7-media-010",
-        "inf-7-media-020",
-        "inf-7-base-101",
-        "inf-7-media-001"
-      ],
-      "orders": {
-        "inf-7-media-050": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "поле, которое обновляется само",
-            "номера страниц внизу листа",
-            "книжная или альбомная",
-            "название документа на каждой странице"
-          ]
-        },
-        "inf-7-base-006": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-096": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-010": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "итог под столбцом",
-            "упорядоченные строки",
-            "многострочная ячейка",
-            "шапка на всю ширину таблицы"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-7-media-017",
-        "inf-7-base-093",
-        "inf-7-media-001",
-        "inf-7-base-092",
-        "inf-7-media-027",
-        "inf-7-base-097",
-        "inf-7-media-003",
-        "inf-7-media-022",
-        "inf-7-base-101",
-        "inf-7-base-038"
-      ],
-      "orders": {
-        "inf-7-base-093": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-092": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-003": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-022": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "упорядоченные строки",
-            "многострочная ячейка",
-            "итог под столбцом",
-            "шапка на всю ширину таблицы"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 14,
-      "task_ids": [
-        "inf-7-media-052",
-        "inf-7-media-045",
-        "inf-7-media-053",
-        "inf-7-media-029",
-        "inf-7-base-044",
-        "inf-7-base-043",
-        "inf-7-base-038",
-        "inf-7-media-023",
-        "inf-7-base-049",
-        "inf-7-media-022"
-      ],
-      "orders": {
-        "inf-7-media-052": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-029": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "поле, которое обновляется само",
-            "номера страниц внизу листа",
-            "название документа на каждой странице",
-            "книжная или альбомная"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-023": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-049": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-022": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-7-base-095",
-        "inf-7-base-097",
-        "inf-7-media-045",
-        "inf-7-base-038",
-        "inf-7-media-029",
-        "inf-7-media-022",
-        "inf-7-base-056",
-        "inf-7-media-043",
-        "inf-7-base-041",
-        "inf-7-base-015"
-      ],
-      "orders": {
-        "inf-7-base-095": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-029": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-022": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "левая рука, верхний ряд",
-            "левая рука, основной ряд",
-            "правая рука, основной ряд",
-            "правая рука, верхний ряд"
-          ]
-        },
-        "inf-7-base-015": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-7-media-053",
-        "inf-7-base-097",
-        "inf-7-media-042",
-        "inf-7-base-013",
-        "inf-7-media-046",
-        "inf-7-media-055",
-        "inf-7-base-038",
-        "inf-7-media-001",
-        "inf-7-base-044",
-        "inf-7-base-095"
-      ],
-      "orders": {
-        "inf-7-media-053": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-042": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-013": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-046": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-055": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "название документа на каждой странице",
-            "поле, которое обновляется само",
-            "книжная или альбомная",
-            "номера страниц внизу листа"
-          ]
-        },
-        "inf-7-base-095": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 17,
-      "task_ids": [
-        "inf-7-media-054",
-        "inf-7-media-002",
-        "inf-7-media-026",
-        "inf-7-media-043",
-        "inf-7-base-093",
-        "inf-7-media-044",
-        "inf-7-base-038",
-        "inf-7-base-047",
-        "inf-7-base-049",
-        "inf-7-media-027"
-      ],
-      "orders": {
-        "inf-7-media-054": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-002": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-093": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-047": {
-          "right": [
-            "перечислить шаги, где важен порядок",
-            "перечислить факты, где порядок не важен",
-            "сравнить одни и те же признаки у нескольких объектов",
-            "показать доли целого"
-          ]
-        },
-        "inf-7-base-049": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 18,
-      "task_ids": [
-        "inf-7-media-020",
-        "inf-7-base-092",
-        "inf-7-media-045",
-        "inf-7-media-026",
-        "inf-7-base-046",
-        "inf-7-media-047",
-        "inf-7-base-056",
-        "inf-7-media-002",
-        "inf-7-base-100",
-        "inf-7-base-101"
-      ],
-      "orders": {
-        "inf-7-base-092": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-046": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-047": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-002": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "итог под столбцом",
-            "упорядоченные строки",
-            "шапка на всю ширину таблицы",
-            "многострочная ячейка"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 19,
-      "task_ids": [
-        "inf-7-media-019",
-        "inf-7-base-055",
-        "inf-7-base-052",
-        "inf-7-base-007",
-        "inf-7-media-020",
-        "inf-7-base-099",
-        "inf-7-media-044",
-        "inf-7-base-050",
-        "inf-7-base-100",
-        "inf-7-media-053"
-      ],
-      "orders": {
-        "inf-7-media-019": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-055": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-052": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-007": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-099": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-050": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-7-media-002",
-        "inf-7-base-056",
-        "inf-7-base-046",
-        "inf-7-media-026",
-        "inf-7-base-047",
-        "inf-7-base-101",
-        "inf-7-media-001",
-        "inf-7-media-043",
-        "inf-7-base-096",
-        "inf-7-base-097"
-      ],
-      "orders": {
-        "inf-7-media-002": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-046": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-047": {
-          "right": [
-            "перечислить шаги, где важен порядок",
-            "показать доли целого",
-            "сравнить одни и те же признаки у нескольких объектов",
-            "перечислить факты, где порядок не важен"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "шапка на всю ширину таблицы",
-            "упорядоченные строки",
-            "итог под столбцом",
-            "многострочная ячейка"
-          ]
-        },
-        "inf-7-media-001": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-096": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 21,
-      "task_ids": [
-        "inf-7-media-046",
-        "inf-7-media-047",
-        "inf-7-media-044",
-        "inf-7-base-052",
-        "inf-7-media-045",
-        "inf-7-media-027",
-        "inf-7-media-050",
-        "inf-7-base-100",
-        "inf-7-base-044",
-        "inf-7-base-043"
-      ],
-      "orders": {
-        "inf-7-media-046": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-047": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-052": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-050": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "книжная или альбомная",
-            "поле, которое обновляется само",
-            "название документа на каждой странице",
-            "номера страниц внизу листа"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-7-media-047",
-        "inf-7-base-006",
-        "inf-7-base-047",
-        "inf-7-base-096",
-        "inf-7-base-097",
-        "inf-7-base-099",
-        "inf-7-base-041",
-        "inf-7-media-002",
-        "inf-7-media-023",
-        "inf-7-media-041"
-      ],
-      "orders": {
-        "inf-7-media-047": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-006": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-047": {
-          "right": [
-            "перечислить факты, где порядок не важен",
-            "перечислить шаги, где важен порядок",
-            "сравнить одни и те же признаки у нескольких объектов",
-            "показать доли целого"
-          ]
-        },
-        "inf-7-base-096": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-099": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "правая рука, основной ряд",
-            "левая рука, верхний ряд",
-            "левая рука, основной ряд",
-            "правая рука, верхний ряд"
-          ]
-        },
-        "inf-7-media-002": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-023": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-041": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-7-media-027",
-        "inf-7-media-010",
-        "inf-7-base-041",
-        "inf-7-media-019",
-        "inf-7-media-043",
-        "inf-7-base-055",
-        "inf-7-media-047",
-        "inf-7-base-044",
-        "inf-7-base-049",
-        "inf-7-base-095"
-      ],
-      "orders": {
-        "inf-7-media-027": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-010": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "левая рука, верхний ряд",
-            "левая рука, основной ряд",
-            "правая рука, основной ряд",
-            "правая рука, верхний ряд"
-          ]
-        },
-        "inf-7-media-019": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-043": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-055": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-047": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-044": {
-          "right": [
-            "книжная или альбомная",
-            "поле, которое обновляется само",
-            "название документа на каждой странице",
-            "номера страниц внизу листа"
-          ]
-        },
-        "inf-7-base-049": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-095": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-7-base-050",
-        "inf-7-base-097",
-        "inf-7-base-043",
-        "inf-7-base-016",
-        "inf-7-media-027",
-        "inf-7-media-023",
-        "inf-7-media-053",
-        "inf-7-media-044",
-        "inf-7-base-038",
-        "inf-7-media-019"
-      ],
-      "orders": {
-        "inf-7-base-050": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-016": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-media-027": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-023": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-019": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-7-media-052",
-        "inf-7-base-015",
-        "inf-7-base-050",
-        "inf-7-media-017",
-        "inf-7-base-055",
-        "inf-7-base-047",
-        "inf-7-base-052",
-        "inf-7-media-026",
-        "inf-7-media-045",
-        "inf-7-media-019"
-      ],
-      "orders": {
-        "inf-7-media-052": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-015": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-050": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-055": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-047": {
-          "right": [
-            "перечислить шаги, где важен порядок",
-            "перечислить факты, где порядок не важен",
-            "показать доли целого",
-            "сравнить одни и те же признаки у нескольких объектов"
-          ]
-        },
-        "inf-7-base-052": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-026": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-019": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 26,
-      "task_ids": [
-        "inf-7-media-022",
-        "inf-7-base-056",
-        "inf-7-media-044",
-        "inf-7-media-053",
-        "inf-7-base-097",
-        "inf-7-base-096",
-        "inf-7-base-007",
-        "inf-7-base-053",
-        "inf-7-media-046",
-        "inf-7-base-038"
-      ],
-      "orders": {
-        "inf-7-media-022": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-053": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-096": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-007": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-053": {
-          "right": [
-            "книга: автор, название, место и год издания",
-            "сайт: название, адрес и дата обращения"
-          ]
-        },
-        "inf-7-media-046": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-7-base-041",
-        "inf-7-media-048",
         "inf-7-media-004",
-        "inf-7-media-041",
-        "inf-7-base-006",
-        "inf-7-media-043",
-        "inf-7-media-002",
-        "inf-7-base-043",
-        "inf-7-base-100",
-        "inf-7-media-047"
+        "inf-7-base-038",
+        "inf-7-base-049",
+        "inf-7-base-016",
+        "inf-7-media-050"
       ],
       "orders": {
-        "inf-7-base-041": {
-          "right": [
-            "правая рука, верхний ряд",
-            "правая рука, основной ряд",
-            "левая рука, основной ряд",
-            "левая рука, верхний ряд"
+        "inf-7-media-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
           ]
         },
-        "inf-7-media-048": {
+        "inf-7-base-097": {
           "options": [
-            "C",
-            "A",
             "D",
+            "A",
+            "C",
             "B"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-046": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-006": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
           ]
         },
         "inf-7-media-004": {
@@ -4013,7 +2329,65 @@
             "фото"
           ]
         },
-        "inf-7-media-041": {
+        "inf-7-base-038": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-base-049": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-016": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-050": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-7-media-042",
+        "inf-7-base-050",
+        "inf-7-media-019",
+        "inf-7-media-052",
+        "inf-7-base-007",
+        "inf-7-base-096",
+        "inf-7-base-013",
+        "inf-7-media-029",
+        "inf-7-base-098",
+        "inf-7-media-040"
+      ],
+      "orders": {
+        "inf-7-media-042": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-050": {
           "options": [
             "B",
             "D",
@@ -4021,7 +2395,1651 @@
             "A"
           ]
         },
-        "inf-7-base-006": {
+        "inf-7-media-019": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-013": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-029": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-040": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-7-base-013",
+        "inf-7-media-017",
+        "inf-7-base-092",
+        "inf-7-base-097",
+        "inf-7-base-038",
+        "inf-7-base-007",
+        "inf-7-media-029",
+        "inf-7-media-027",
+        "inf-7-media-045",
+        "inf-7-media-022"
+      ],
+      "orders": {
+        "inf-7-base-013": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-092": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-097": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-038": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-027": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-045": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-7-base-055",
+        "inf-7-media-026",
+        "inf-7-media-002",
+        "inf-7-base-053",
+        "inf-7-base-052",
+        "inf-7-base-013",
+        "inf-7-media-020",
+        "inf-7-base-096",
+        "inf-7-base-056",
+        "inf-7-media-044"
+      ],
+      "orders": {
+        "inf-7-base-055": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-026": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-053": {
+          "right": [
+            "сайт: название, адрес и дата обращения",
+            "книга: автор, название, место и год издания"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-013": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-056": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-044": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-7-base-094",
+        "inf-7-media-002",
+        "inf-7-base-007",
+        "inf-7-base-049",
+        "inf-7-base-050",
+        "inf-7-media-022",
+        "inf-7-media-055",
+        "inf-7-media-043",
+        "inf-7-base-098",
+        "inf-7-base-097"
+      ],
+      "orders": {
+        "inf-7-base-094": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-base-049": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-050": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-055": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-043": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-097": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-7-media-047",
+        "inf-7-media-019",
+        "inf-7-base-098",
+        "inf-7-base-044",
+        "inf-7-base-040",
+        "inf-7-media-044",
+        "inf-7-base-099",
+        "inf-7-base-094",
+        "inf-7-media-020",
+        "inf-7-base-046"
+      ],
+      "orders": {
+        "inf-7-media-047": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-019": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-base-044": {
+          "right": [
+            "поле, которое обновляется само",
+            "книжная или альбомная",
+            "название документа на каждой странице",
+            "номера страниц внизу листа"
+          ]
+        },
+        "inf-7-base-040": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-044": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-099": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-094": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-046": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-7-base-043",
+        "inf-7-media-004",
+        "inf-7-media-010",
+        "inf-7-base-016",
+        "inf-7-media-002",
+        "inf-7-base-047",
+        "inf-7-media-029",
+        "inf-7-base-093",
+        "inf-7-media-003",
+        "inf-7-media-046"
+      ],
+      "orders": {
+        "inf-7-base-043": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-004": {
+          "right": [
+            "схемы без потерь",
+            "фото",
+            "анимация 256 цветов"
+          ]
+        },
+        "inf-7-media-010": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-016": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "показать доли целого",
+            "перечислить факты, где порядок не важен",
+            "сравнить одни и те же признаки у нескольких объектов",
+            "перечислить шаги, где важен порядок"
+          ]
+        },
+        "inf-7-media-029": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-093": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-003": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-046": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-7-media-040",
+        "inf-7-media-052",
+        "inf-7-base-016",
+        "inf-7-media-042",
+        "inf-7-media-041",
+        "inf-7-base-098",
+        "inf-7-base-015",
+        "inf-7-base-041",
+        "inf-7-media-048",
+        "inf-7-base-043"
+      ],
+      "orders": {
+        "inf-7-media-040": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-016": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-042": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-041": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-015": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-041": {
+          "right": [
+            "правая рука, основной ряд",
+            "левая рука, верхний ряд",
+            "левая рука, основной ряд",
+            "правая рука, верхний ряд"
+          ]
+        },
+        "inf-7-media-048": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-7-base-015",
+        "inf-7-base-013",
+        "inf-7-base-038",
+        "inf-7-media-020",
+        "inf-7-base-092",
+        "inf-7-media-042",
+        "inf-7-media-044",
+        "inf-7-media-048",
+        "inf-7-media-047",
+        "inf-7-media-027"
+      ],
+      "orders": {
+        "inf-7-base-015": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-038": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-092": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-042": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-044": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-048": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-047": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-027": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-7-base-098",
+        "inf-7-media-047",
+        "inf-7-media-046",
+        "inf-7-media-002",
+        "inf-7-base-050",
+        "inf-7-media-022",
+        "inf-7-media-004",
+        "inf-7-base-043",
+        "inf-7-base-016",
+        "inf-7-base-052"
+      ],
+      "orders": {
+        "inf-7-base-098": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-047": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-046": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-050": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-004": {
+          "right": [
+            "фото",
+            "анимация 256 цветов",
+            "схемы без потерь"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-016": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-7-base-041",
+        "inf-7-base-092",
+        "inf-7-media-045",
+        "inf-7-media-046",
+        "inf-7-media-001",
+        "inf-7-media-029",
+        "inf-7-base-046",
+        "inf-7-media-054",
+        "inf-7-media-004",
+        "inf-7-base-049"
+      ],
+      "orders": {
+        "inf-7-base-041": {
+          "right": [
+            "левая рука, верхний ряд",
+            "правая рука, основной ряд",
+            "левая рука, основной ряд",
+            "правая рука, верхний ряд"
+          ]
+        },
+        "inf-7-base-092": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-045": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-046": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-029": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-046": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-054": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-004": {
+          "right": [
+            "анимация 256 цветов",
+            "схемы без потерь",
+            "фото"
+          ]
+        },
+        "inf-7-base-049": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-7-base-013",
+        "inf-7-media-002",
+        "inf-7-media-051",
+        "inf-7-base-038",
+        "inf-7-base-043",
+        "inf-7-media-043",
+        "inf-7-media-050",
+        "inf-7-base-007",
+        "inf-7-media-052",
+        "inf-7-media-045"
+      ],
+      "orders": {
+        "inf-7-base-013": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-038": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-043": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-050": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-045": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-7-base-047",
+        "inf-7-base-015",
+        "inf-7-media-017",
+        "inf-7-base-099",
+        "inf-7-base-055",
+        "inf-7-media-010",
+        "inf-7-media-002",
+        "inf-7-base-052",
+        "inf-7-base-043",
+        "inf-7-media-051"
+      ],
+      "orders": {
+        "inf-7-base-047": {
+          "right": [
+            "перечислить шаги, где важен порядок",
+            "сравнить одни и те же признаки у нескольких объектов",
+            "перечислить факты, где порядок не важен",
+            "показать доли целого"
+          ]
+        },
+        "inf-7-base-015": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-099": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-055": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-010": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-7-media-001",
+        "inf-7-media-047",
+        "inf-7-base-096",
+        "inf-7-media-052",
+        "inf-7-media-022",
+        "inf-7-media-053",
+        "inf-7-base-050",
+        "inf-7-media-040",
+        "inf-7-base-094",
+        "inf-7-base-095"
+      ],
+      "orders": {
+        "inf-7-media-001": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-047": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-053": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-050": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-040": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-094": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-095": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-7-media-004",
+        "inf-7-media-017",
+        "inf-7-base-013",
+        "inf-7-media-042",
+        "inf-7-base-038",
+        "inf-7-base-097",
+        "inf-7-base-015",
+        "inf-7-base-043",
+        "inf-7-media-054",
+        "inf-7-media-019"
+      ],
+      "orders": {
+        "inf-7-media-004": {
+          "right": [
+            "анимация 256 цветов",
+            "схемы без потерь",
+            "фото"
+          ]
+        },
+        "inf-7-base-013": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-042": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-038": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-097": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-015": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-054": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-019": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-7-base-047",
+        "inf-7-base-043",
+        "inf-7-media-052",
+        "inf-7-media-002",
+        "inf-7-base-092",
+        "inf-7-media-001",
+        "inf-7-media-051",
+        "inf-7-base-055",
+        "inf-7-base-095",
+        "inf-7-media-040"
+      ],
+      "orders": {
+        "inf-7-base-047": {
+          "right": [
+            "перечислить шаги, где важен порядок",
+            "показать доли целого",
+            "сравнить одни и те же признаки у нескольких объектов",
+            "перечислить факты, где порядок не важен"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-052": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-092": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-001": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-055": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-095": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-040": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-7-media-048",
+        "inf-7-base-056",
+        "inf-7-media-017",
+        "inf-7-media-045",
+        "inf-7-base-055",
+        "inf-7-base-043",
+        "inf-7-base-041",
+        "inf-7-media-042",
+        "inf-7-base-095",
+        "inf-7-base-052"
+      ],
+      "orders": {
+        "inf-7-media-048": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-056": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-045": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-055": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-043": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-041": {
+          "right": [
+            "правая рука, верхний ряд",
+            "правая рука, основной ряд",
+            "левая рука, основной ряд",
+            "левая рука, верхний ряд"
+          ]
+        },
+        "inf-7-media-042": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-095": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-052": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-7-base-044",
+        "inf-7-base-096",
+        "inf-7-base-098",
+        "inf-7-media-055",
+        "inf-7-media-022",
+        "inf-7-media-045",
+        "inf-7-media-050",
+        "inf-7-media-023",
+        "inf-7-base-094",
+        "inf-7-base-046"
+      ],
+      "orders": {
+        "inf-7-base-044": {
+          "right": [
+            "книжная или альбомная",
+            "название документа на каждой странице",
+            "номера страниц внизу листа",
+            "поле, которое обновляется само"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-055": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-045": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-050": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-023": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-094": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-046": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 13
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-7-media-019",
+        "inf-7-base-097",
+        "inf-7-media-053",
+        "inf-7-base-047",
+        "inf-7-base-007",
+        "inf-7-base-015",
+        "inf-7-base-096",
+        "inf-7-media-041",
+        "inf-7-media-043",
+        "inf-7-media-055"
+      ],
+      "orders": {
+        "inf-7-media-019": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-097": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-053": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "перечислить шаги, где важен порядок",
+            "сравнить одни и те же признаки у нескольких объектов",
+            "показать доли целого",
+            "перечислить факты, где порядок не важен"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-015": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-041": {
           "options": [
             "D",
             "B",
@@ -4037,252 +4055,293 @@
             "B"
           ]
         },
-        "inf-7-media-002": {
+        "inf-7-media-055": {
           "options": [
             "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-043": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
             "C",
             "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-047": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
+            "A"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 13
     },
     {
       "number": 28,
       "task_ids": [
-        "inf-7-media-053",
+        "inf-7-base-046",
         "inf-7-media-041",
-        "inf-7-base-092",
-        "inf-7-media-023",
-        "inf-7-base-038",
-        "inf-7-media-004",
-        "inf-7-base-041",
-        "inf-7-media-045",
-        "inf-7-base-052",
-        "inf-7-media-029"
+        "inf-7-base-098",
+        "inf-7-base-095",
+        "inf-7-base-056",
+        "inf-7-media-019",
+        "inf-7-base-096",
+        "inf-7-media-051",
+        "inf-7-base-047",
+        "inf-7-media-023"
       ],
       "orders": {
-        "inf-7-media-053": {
+        "inf-7-base-046": {
           "options": [
-            "C",
-            "D",
             "B",
+            "D",
+            "C",
             "A"
           ]
         },
         "inf-7-media-041": {
           "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-092": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-023": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-038": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-media-004": {
-          "right": [
-            "анимация 256 цветов",
-            "фото",
-            "схемы без потерь"
-          ]
-        },
-        "inf-7-base-041": {
-          "right": [
-            "правая рука, основной ряд",
-            "правая рука, верхний ряд",
-            "левая рука, верхний ряд",
-            "левая рука, основной ряд"
-          ]
-        },
-        "inf-7-media-045": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-base-052": {
-          "options": [
             "D",
             "A",
             "C",
             "B"
           ]
         },
-        "inf-7-media-029": {
+        "inf-7-base-098": {
           "options": [
-            "D",
             "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 29,
-      "task_ids": [
-        "inf-7-base-046",
-        "inf-7-media-010",
-        "inf-7-base-056",
-        "inf-7-base-101",
-        "inf-7-media-050",
-        "inf-7-media-046",
-        "inf-7-base-047",
-        "inf-7-base-097",
-        "inf-7-media-044",
-        "inf-7-base-096"
-      ],
-      "orders": {
-        "inf-7-base-046": {
-          "options": [
-            "C",
-            "A",
             "D",
-            "B"
+            "A",
+            "C"
           ]
         },
-        "inf-7-media-010": {
+        "inf-7-base-095": {
           "options": [
             "D",
+            "C",
             "A",
-            "B",
-            "C"
+            "B"
           ]
         },
         "inf-7-base-056": {
           "options": [
-            "A",
             "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-101": {
-          "right": [
-            "упорядоченные строки",
-            "итог под столбцом",
-            "многострочная ячейка",
-            "шапка на всю ширину таблицы"
-          ]
-        },
-        "inf-7-media-050": {
-          "options": [
             "B",
             "D",
-            "C",
             "A"
           ]
         },
-        "inf-7-media-046": {
+        "inf-7-media-019": {
           "options": [
             "C",
             "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-047": {
-          "right": [
-            "сравнить одни и те же признаки у нескольких объектов",
-            "перечислить шаги, где важен порядок",
-            "показать доли целого",
-            "перечислить факты, где порядок не важен"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-044": {
-          "options": [
             "D",
-            "C",
-            "A",
             "B"
           ]
         },
         "inf-7-base-096": {
           "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
             "A",
             "C",
-            "B",
-            "D"
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "перечислить факты, где порядок не важен",
+            "перечислить шаги, где важен порядок",
+            "показать доли целого",
+            "сравнить одни и те же признаки у нескольких объектов"
+          ]
+        },
+        "inf-7-media-023": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 13
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-7-media-053",
+        "inf-7-base-056",
+        "inf-7-media-044",
+        "inf-7-media-046",
+        "inf-7-base-092",
+        "inf-7-base-041",
+        "inf-7-base-098",
+        "inf-7-media-022",
+        "inf-7-base-007",
+        "inf-7-base-096"
+      ],
+      "orders": {
+        "inf-7-media-053": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-056": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-044": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-046": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-base-092": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-041": {
+          "right": [
+            "левая рука, верхний ряд",
+            "левая рука, основной ряд",
+            "правая рука, верхний ряд",
+            "правая рука, основной ряд"
+          ]
+        },
+        "inf-7-base-098": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-022": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-base-007": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-096": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 13
     },
     {
       "number": 30,
       "task_ids": [
+        "inf-7-base-040",
+        "inf-7-media-002",
+        "inf-7-media-048",
+        "inf-7-media-055",
+        "inf-7-base-093",
+        "inf-7-media-051",
         "inf-7-media-045",
-        "inf-7-base-052",
-        "inf-7-base-050",
-        "inf-7-base-006",
-        "inf-7-media-019",
-        "inf-7-base-100",
-        "inf-7-base-097",
-        "inf-7-media-017",
-        "inf-7-base-056",
-        "inf-7-media-050"
+        "inf-7-base-047",
+        "inf-7-media-023",
+        "inf-7-base-052"
       ],
       "orders": {
+        "inf-7-base-040": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-002": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-048": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-055": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-093": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-051": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
         "inf-7-media-045": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-047": {
+          "right": [
+            "сравнить одни и те же признаки у нескольких объектов",
+            "перечислить факты, где порядок не важен",
+            "показать доли целого",
+            "перечислить шаги, где важен порядок"
+          ]
+        },
+        "inf-7-media-023": {
           "options": [
             "C",
             "D",
@@ -4292,70 +4351,14 @@
         },
         "inf-7-base-052": {
           "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-base-050": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-base-006": {
-          "options": [
             "B",
             "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-media-019": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-base-100": {
-          "options": [
             "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-097": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-056": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-media-050": {
-          "options": [
-            "B",
-            "D",
-            "C",
             "A"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 13
     }
   ]
 }

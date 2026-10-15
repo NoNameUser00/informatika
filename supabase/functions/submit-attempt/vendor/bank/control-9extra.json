@@ -26,6 +26,7 @@
         "inf-9-extra-027",
         "inf-9-extra-063",
         "inf-9-extra-028",
+        "inf-9-extra-029",
         "inf-9-extra-030",
         "inf-9-extra-064",
         "inf-9-extra-065",
@@ -69,16 +70,19 @@
       ],
       "task_ids": [
         "inf-9-extra-006",
+        "inf-9-extra-007",
         "inf-9-extra-008",
+        "inf-9-extra-009",
         "inf-9-extra-010",
         "inf-9-extra-011",
         "inf-9-extra-012",
         "inf-9-extra-016",
         "inf-9-extra-017",
         "inf-9-extra-020",
-        "inf-9-extra-044",
+        "inf-9-extra-042",
         "inf-9-extra-070",
         "inf-9-extra-071",
+        "inf-9-extra-045",
         "inf-9-extra-047",
         "inf-9-extra-072",
         "inf-9-extra-073"
@@ -99,18 +103,14 @@
         "inf-9-extra-074",
         "inf-9-extra-079",
         "inf-9-extra-051",
-        "inf-9-extra-052",
-        "inf-9-extra-053",
         "inf-9-extra-075",
         "inf-9-extra-054",
         "inf-9-extra-055",
         "inf-9-extra-076",
         "inf-9-extra-057",
-        "inf-9-extra-058",
         "inf-9-extra-077",
         "inf-9-extra-060",
         "inf-9-extra-061",
-        "inf-9-extra-062",
         "inf-9-extra-078"
       ]
     }
@@ -287,6 +287,33 @@
       "base": 10,
       "expected": 4,
       "key": "4"
+    },
+    {
+      "id": "inf-9-extra-029",
+      "lesson": "9robot-02-systems",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Чем закрытое управление отличается от открытого?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Открытое точнее, потому что не зависит от состояния объекта"
+        },
+        {
+          "id": "B",
+          "text": "Закрытое работает без датчиков"
+        },
+        {
+          "id": "D",
+          "text": "Ничем: это два названия одного и того же"
+        },
+        {
+          "id": "A",
+          "text": "Закрытое учитывает обратную связь и останавливается по сигналу датчика"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
     },
     {
       "id": "inf-9-extra-030",
@@ -652,6 +679,16 @@
       "key": "D"
     },
     {
+      "id": "inf-9-extra-007",
+      "lesson": "9net-01-internet",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сколько бит в IPv4-адресе? Запишите только число.",
+      "base": 10,
+      "expected": 32,
+      "key": "32"
+    },
+    {
       "id": "inf-9-extra-008",
       "lesson": "9net-01-internet",
       "type": "single_choice",
@@ -677,6 +714,33 @@
       ],
       "correct": "A",
       "key": "A"
+    },
+    {
+      "id": "inf-9-extra-009",
+      "lesson": "9net-01-internet",
+      "type": "single_choice",
+      "points": 2,
+      "prompt": "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?",
+      "options": [
+        {
+          "id": "C",
+          "text": "22.73.4.13.133"
+        },
+        {
+          "id": "D",
+          "text": "4.13.73.3.133.22"
+        },
+        {
+          "id": "A",
+          "text": "224.133.133.73"
+        },
+        {
+          "id": "B",
+          "text": "3.133.22.4.13.73"
+        }
+      ],
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-9-extra-010",
@@ -841,31 +905,31 @@
       "key": "D"
     },
     {
-      "id": "inf-9-extra-044",
+      "id": "inf-9-extra-042",
       "lesson": "9net-02-web",
       "type": "single_choice",
-      "points": 3,
-      "prompt": "Страницу нужно открыть с телефона. Что важнее всего проверить перед сдачей?",
+      "points": 1,
+      "prompt": "Почему страница «ломается», если перенести только файл HTML без папки с картинками?",
       "options": [
         {
+          "id": "D",
+          "text": "Текст и картинки хранятся в одном файле, поэтому ничего не теряется"
+        },
+        {
           "id": "C",
-          "text": "Наличие отступов в исходном коде"
+          "text": "HTML-файл без картинок не открывается вовсе"
         },
         {
           "id": "B",
-          "text": "Цвет фона страницы"
+          "text": "Без картинок браузер не покажет текст"
         },
         {
           "id": "A",
-          "text": "Читаемость: нет длинных строк и огромных картинок, ссылки и картинки работают"
-        },
-        {
-          "id": "D",
-          "text": "Имя файла на латинице"
+          "text": "Изображения хранятся отдельными файлами, на которые страница только ссылается"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "D",
+      "key": "D"
     },
     {
       "id": "inf-9-extra-070",
@@ -903,6 +967,33 @@
       "base": 10,
       "expected": 3,
       "key": "3"
+    },
+    {
+      "id": "inf-9-extra-045",
+      "lesson": "9net-03-safe",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое фишинг?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Способ ускорить интернет"
+        },
+        {
+          "id": "B",
+          "text": "Программа, которая шифрует файлы и требует оплату"
+        },
+        {
+          "id": "D",
+          "text": "Протокол шифрования данных в браузере"
+        },
+        {
+          "id": "A",
+          "text": "Поддельный сайт или письмо, которое выманивает логин и пароль"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
     },
     {
       "id": "inf-9-extra-047",
@@ -1119,56 +1210,6 @@
       "key": "B"
     },
     {
-      "id": "inf-9-extra-052",
-      "lesson": "9net-05-collab",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Что произойдёт, если двое одновременно правят один и тот же абзац?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Изменения перезапишут друг друга, часть правок потеряется"
-        },
-        {
-          "id": "C",
-          "text": "Документ автоматически удвоится"
-        },
-        {
-          "id": "D",
-          "text": "Система заблокирует весь документ навсегда"
-        },
-        {
-          "id": "B",
-          "text": "Абзац превратится в картинку"
-        }
-      ],
-      "correct": "A",
-      "key": "A"
-    },
-    {
-      "id": "inf-9-extra-053",
-      "lesson": "9net-05-collab",
-      "type": "matching",
-      "points": 3,
-      "prompt": "Установите соответствие: уровень доступа к облачному документу — что он позволяет.",
-      "left": [
-        "Владение",
-        "Редактирование",
-        "Просмотр"
-      ],
-      "right": [
-        "управлять доступом",
-        "менять содержимое",
-        "только читать"
-      ],
-      "answerMap": {
-        "Владение": "управлять доступом",
-        "Редактирование": "менять содержимое",
-        "Просмотр": "только читать"
-      },
-      "key": "Владение=управлять доступом, Редактирование=менять содержимое, Просмотр=только читать"
-    },
-    {
       "id": "inf-9-extra-075",
       "lesson": "9net-05-collab",
       "type": "numeric_base",
@@ -1270,33 +1311,6 @@
       "key": "A"
     },
     {
-      "id": "inf-9-extra-058",
-      "lesson": "9net-07-onlineoffice",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Что из перечисленного — ограничение онлайн-офиса по сравнению с настольной программой?",
-      "options": [
-        {
-          "id": "D",
-          "text": "Файлы сохраняются только в текстовом формате"
-        },
-        {
-          "id": "C",
-          "text": "Не нужна учётная запись"
-        },
-        {
-          "id": "B",
-          "text": "Работает быстрее, чем настольная программа"
-        },
-        {
-          "id": "A",
-          "text": "Нужен постоянный интернет, а части функций может не быть"
-        }
-      ],
-      "correct": "D",
-      "key": "D"
-    },
-    {
       "id": "inf-9-extra-077",
       "lesson": "9net-07-onlineoffice",
       "type": "single_choice",
@@ -1378,16 +1392,6 @@
       "key": "B"
     },
     {
-      "id": "inf-9-extra-062",
-      "lesson": "9net-08-onlineoffice2",
-      "type": "numeric_base",
-      "points": 3,
-      "prompt": "В таблице проекта по годам: 2019 — всего 1000 кг, переработано 400; 2020 — 1200 и 600; 2021 — 1500 и 900. В каком году доля переработанного максимальна? Запишите только номер года.",
-      "base": 10,
-      "expected": 2021,
-      "key": "2021"
-    },
-    {
       "id": "inf-9-extra-078",
       "lesson": "9net-08-onlineoffice2",
       "type": "numeric_base",
@@ -1402,111 +1406,117 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-9-extra-033",
-        "inf-9-extra-035",
-        "inf-9-extra-014",
-        "inf-9-extra-002",
+        "inf-9-extra-007",
+        "inf-9-extra-018",
+        "inf-9-extra-010",
+        "inf-9-extra-045",
+        "inf-9-extra-055",
         "inf-9-extra-076",
-        "inf-9-extra-079",
-        "inf-9-extra-073",
-        "inf-9-extra-069",
-        "inf-9-extra-008",
-        "inf-9-extra-071",
-        "inf-9-extra-061",
-        "inf-9-extra-034",
-        "inf-9-extra-064",
-        "inf-9-extra-036",
-        "inf-9-extra-020",
+        "inf-9-extra-017",
+        "inf-9-extra-070",
+        "inf-9-extra-031",
         "inf-9-extra-060",
-        "inf-9-extra-050",
-        "inf-9-extra-053",
+        "inf-9-extra-002",
+        "inf-9-extra-003",
+        "inf-9-extra-051",
+        "inf-9-extra-068",
+        "inf-9-extra-030",
+        "inf-9-extra-009",
         "inf-9-extra-047",
-        "inf-9-extra-030"
+        "inf-9-extra-054",
+        "inf-9-extra-050",
+        "inf-9-extra-015"
       ],
       "orders": {
-        "inf-9-extra-035": {
+        "inf-9-extra-018": {
           "options": [
+            "D",
+            "B",
             "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
             "C",
             "B",
-            "D"
+            "D",
+            "A"
           ]
         },
-        "inf-9-extra-014": {
+        "inf-9-extra-045": {
           "options": [
-            "D",
+            "C",
             "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "B",
             "D",
-            "A",
-            "C"
+            "B"
           ]
         },
         "inf-9-extra-076": {
           "options": [
-            "A",
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "C",
             "D",
             "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "B",
+            "D",
+            "A",
             "C"
           ]
         },
-        "inf-9-extra-079": {
-          "right": [
-            "создавать документы и таблицы",
-            "обсуждать вопросы на тему",
-            "искать информацию",
-            "работать с картами и координатами",
-            "хранить и передавать файлы",
-            "переписываться"
-          ]
-        },
-        "inf-9-extra-073": {
+        "inf-9-extra-031": {
           "options": [
-            "A",
             "C",
+            "D",
             "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
+            "A"
           ]
         },
         "inf-9-extra-060": {
           "options": [
             "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "A",
             "D",
             "C",
             "B"
           ]
         },
-        "inf-9-extra-050": {
+        "inf-9-extra-051": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-009": {
           "options": [
             "A",
             "C",
@@ -1514,153 +1524,91 @@
             "D"
           ]
         },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-047": {
+        "inf-9-extra-054": {
           "options": [
-            "D",
             "A",
             "B",
+            "D",
             "C"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
       "number": 2,
       "task_ids": [
-        "inf-9-extra-010",
-        "inf-9-extra-028",
-        "inf-9-extra-031",
+        "inf-9-extra-051",
         "inf-9-extra-019",
+        "inf-9-extra-065",
         "inf-9-extra-038",
         "inf-9-extra-078",
-        "inf-9-extra-033",
-        "inf-9-extra-053",
-        "inf-9-extra-050",
-        "inf-9-extra-058",
-        "inf-9-extra-020",
-        "inf-9-extra-065",
-        "inf-9-extra-076",
-        "inf-9-extra-068",
+        "inf-9-extra-014",
+        "inf-9-extra-045",
+        "inf-9-extra-074",
+        "inf-9-extra-071",
+        "inf-9-extra-010",
+        "inf-9-extra-002",
+        "inf-9-extra-007",
+        "inf-9-extra-077",
         "inf-9-extra-030",
-        "inf-9-extra-072",
-        "inf-9-extra-017",
-        "inf-9-extra-052",
-        "inf-9-extra-063",
-        "inf-9-extra-047"
+        "inf-9-extra-031",
+        "inf-9-extra-079",
+        "inf-9-extra-035",
+        "inf-9-extra-008",
+        "inf-9-extra-032",
+        "inf-9-extra-009"
       ],
       "orders": {
-        "inf-9-extra-010": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-031": {
+        "inf-9-extra-051": {
           "options": [
             "D",
             "A",
-            "C",
-            "B"
+            "B",
+            "C"
           ]
         },
         "inf-9-extra-019": {
           "options": [
-            "B",
+            "A",
             "D",
             "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "C",
+            "B",
+            "D",
             "A"
           ]
         },
         "inf-9-extra-038": {
           "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "только читать",
-            "управлять доступом"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-058": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-076": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
             "B",
             "D",
             "A",
             "C"
           ]
         },
-        "inf-9-extra-017": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-063": {
+        "inf-9-extra-014": {
           "options": [
             "C",
             "A",
@@ -1668,1128 +1616,161 @@
             "D"
           ]
         },
-        "inf-9-extra-047": {
+        "inf-9-extra-045": {
           "options": [
             "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 3,
-      "task_ids": [
-        "inf-9-extra-074",
-        "inf-9-extra-035",
-        "inf-9-extra-060",
-        "inf-9-extra-017",
-        "inf-9-extra-034",
-        "inf-9-extra-050",
-        "inf-9-extra-055",
-        "inf-9-extra-047",
-        "inf-9-extra-071",
-        "inf-9-extra-063",
-        "inf-9-extra-039",
-        "inf-9-extra-062",
-        "inf-9-extra-004",
-        "inf-9-extra-052",
-        "inf-9-extra-012",
-        "inf-9-extra-006",
-        "inf-9-extra-064",
-        "inf-9-extra-027",
-        "inf-9-extra-015",
-        "inf-9-extra-033"
-      ],
-      "orders": {
-        "inf-9-extra-035": {
-          "options": [
-            "B",
             "D",
             "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-060": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "A",
-            "C",
-            "D",
             "B"
           ]
         },
-        "inf-9-extra-006": {
+        "inf-9-extra-010": {
           "options": [
-            "B",
             "D",
             "C",
+            "B",
             "A"
           ]
         },
-        "inf-9-extra-027": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-9-extra-015",
-        "inf-9-extra-076",
-        "inf-9-extra-033",
-        "inf-9-extra-053",
-        "inf-9-extra-077",
-        "inf-9-extra-068",
-        "inf-9-extra-073",
-        "inf-9-extra-011",
-        "inf-9-extra-039",
-        "inf-9-extra-004",
-        "inf-9-extra-008",
-        "inf-9-extra-044",
-        "inf-9-extra-055",
-        "inf-9-extra-014",
-        "inf-9-extra-062",
-        "inf-9-extra-064",
-        "inf-9-extra-012",
-        "inf-9-extra-079",
-        "inf-9-extra-031",
-        "inf-9-extra-027"
-      ],
-      "orders": {
-        "inf-9-extra-015": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-076": {
+        "inf-9-extra-002": {
           "options": [
             "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "только читать",
-            "менять содержимое"
+            "A",
+            "C"
           ]
         },
         "inf-9-extra-077": {
           "options": [
-            "D",
-            "C",
             "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
             "C",
-            "B",
             "D",
             "A"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-031": {
           "options": [
-            "A",
             "C",
+            "B",
             "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-014": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
+            "A"
           ]
         },
         "inf-9-extra-079": {
           "right": [
-            "создавать документы и таблицы",
-            "обсуждать вопросы на тему",
-            "искать информацию",
             "переписываться",
-            "работать с картами и координатами",
-            "хранить и передавать файлы"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-027": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 5,
-      "task_ids": [
-        "inf-9-extra-027",
-        "inf-9-extra-075",
-        "inf-9-extra-017",
-        "inf-9-extra-053",
-        "inf-9-extra-016",
-        "inf-9-extra-070",
-        "inf-9-extra-061",
-        "inf-9-extra-014",
-        "inf-9-extra-039",
-        "inf-9-extra-047",
-        "inf-9-extra-055",
-        "inf-9-extra-031",
-        "inf-9-extra-050",
-        "inf-9-extra-078",
-        "inf-9-extra-064",
-        "inf-9-extra-015",
-        "inf-9-extra-008",
-        "inf-9-extra-019",
-        "inf-9-extra-004",
-        "inf-9-extra-069"
-      ],
-      "orders": {
-        "inf-9-extra-027": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-070": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-014": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 6,
-      "task_ids": [
-        "inf-9-extra-018",
-        "inf-9-extra-063",
-        "inf-9-extra-016",
-        "inf-9-extra-039",
-        "inf-9-extra-054",
-        "inf-9-extra-074",
-        "inf-9-extra-011",
-        "inf-9-extra-019",
-        "inf-9-extra-038",
-        "inf-9-extra-052",
-        "inf-9-extra-053",
-        "inf-9-extra-012",
-        "inf-9-extra-044",
-        "inf-9-extra-001",
-        "inf-9-extra-027",
-        "inf-9-extra-015",
-        "inf-9-extra-050",
-        "inf-9-extra-008",
-        "inf-9-extra-058",
-        "inf-9-extra-031"
-      ],
-      "orders": {
-        "inf-9-extra-018": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-054": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-011": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-038": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "только читать",
-            "управлять доступом"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-027": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-058": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 7,
-      "task_ids": [
-        "inf-9-extra-049",
-        "inf-9-extra-008",
-        "inf-9-extra-016",
-        "inf-9-extra-071",
-        "inf-9-extra-052",
-        "inf-9-extra-054",
-        "inf-9-extra-001",
-        "inf-9-extra-053",
-        "inf-9-extra-036",
-        "inf-9-extra-019",
-        "inf-9-extra-014",
-        "inf-9-extra-018",
-        "inf-9-extra-030",
-        "inf-9-extra-012",
-        "inf-9-extra-060",
-        "inf-9-extra-028",
-        "inf-9-extra-047",
-        "inf-9-extra-034",
-        "inf-9-extra-062",
-        "inf-9-extra-003"
-      ],
-      "orders": {
-        "inf-9-extra-008": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-054": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-014": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-060": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-003": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 8,
-      "task_ids": [
-        "inf-9-extra-031",
-        "inf-9-extra-049",
-        "inf-9-extra-036",
-        "inf-9-extra-055",
-        "inf-9-extra-068",
-        "inf-9-extra-053",
-        "inf-9-extra-003",
-        "inf-9-extra-066",
-        "inf-9-extra-028",
-        "inf-9-extra-057",
-        "inf-9-extra-062",
-        "inf-9-extra-047",
-        "inf-9-extra-027",
-        "inf-9-extra-001",
-        "inf-9-extra-072",
-        "inf-9-extra-020",
-        "inf-9-extra-017",
-        "inf-9-extra-075",
-        "inf-9-extra-006",
-        "inf-9-extra-019"
-      ],
-      "orders": {
-        "inf-9-extra-031": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "управлять доступом",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-003": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-057": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-027": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-006": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 9,
-      "task_ids": [
-        "inf-9-extra-011",
-        "inf-9-extra-060",
-        "inf-9-extra-065",
-        "inf-9-extra-047",
-        "inf-9-extra-014",
-        "inf-9-extra-038",
-        "inf-9-extra-030",
-        "inf-9-extra-003",
-        "inf-9-extra-019",
-        "inf-9-extra-020",
-        "inf-9-extra-039",
-        "inf-9-extra-001",
-        "inf-9-extra-049",
-        "inf-9-extra-031",
-        "inf-9-extra-050",
-        "inf-9-extra-048",
-        "inf-9-extra-079",
-        "inf-9-extra-072",
-        "inf-9-extra-017",
-        "inf-9-extra-053"
-      ],
-      "orders": {
-        "inf-9-extra-011": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-060": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-014": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-038": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-003": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-048": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "работать с картами и координатами",
-            "обсуждать вопросы на тему",
             "создавать документы и таблицы",
-            "переписываться",
+            "работать с картами и координатами",
             "хранить и передавать файлы",
+            "обсуждать вопросы на тему",
             "искать информацию"
           ]
         },
-        "inf-9-extra-072": {
+        "inf-9-extra-035": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-008": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-009": {
           "options": [
             "B",
             "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
+            "A",
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     },
     {
-      "number": 10,
+      "number": 3,
       "task_ids": [
-        "inf-9-extra-065",
-        "inf-9-extra-017",
-        "inf-9-extra-001",
-        "inf-9-extra-061",
-        "inf-9-extra-044",
-        "inf-9-extra-038",
-        "inf-9-extra-036",
-        "inf-9-extra-066",
-        "inf-9-extra-012",
         "inf-9-extra-027",
-        "inf-9-extra-034",
-        "inf-9-extra-050",
-        "inf-9-extra-060",
-        "inf-9-extra-049",
-        "inf-9-extra-053",
         "inf-9-extra-057",
+        "inf-9-extra-015",
+        "inf-9-extra-020",
+        "inf-9-extra-011",
+        "inf-9-extra-038",
+        "inf-9-extra-028",
+        "inf-9-extra-045",
+        "inf-9-extra-075",
         "inf-9-extra-010",
-        "inf-9-extra-068",
-        "inf-9-extra-073",
-        "inf-9-extra-005"
+        "inf-9-extra-005",
+        "inf-9-extra-014",
+        "inf-9-extra-003",
+        "inf-9-extra-067",
+        "inf-9-extra-054",
+        "inf-9-extra-055",
+        "inf-9-extra-031",
+        "inf-9-extra-006",
+        "inf-9-extra-009",
+        "inf-9-extra-077"
       ],
       "orders": {
-        "inf-9-extra-065": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-038": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
         "inf-9-extra-027": {
           "options": [
-            "D",
+            "B",
             "A",
             "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-060": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "только читать",
-            "управлять доступом"
+            "D"
           ]
         },
         "inf-9-extra-057": {
           "options": [
             "C",
             "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "B",
+            "D",
             "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "C",
+            "A",
+            "D",
             "B"
           ]
         },
@@ -2801,191 +1782,15 @@
             "D"
           ]
         },
-        "inf-9-extra-073": {
+        "inf-9-extra-014": {
           "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 11,
-      "task_ids": [
-        "inf-9-extra-062",
-        "inf-9-extra-039",
-        "inf-9-extra-002",
-        "inf-9-extra-018",
-        "inf-9-extra-047",
-        "inf-9-extra-031",
-        "inf-9-extra-001",
-        "inf-9-extra-067",
-        "inf-9-extra-070",
-        "inf-9-extra-012",
-        "inf-9-extra-030",
-        "inf-9-extra-048",
-        "inf-9-extra-017",
-        "inf-9-extra-005",
-        "inf-9-extra-050",
-        "inf-9-extra-055",
-        "inf-9-extra-076",
-        "inf-9-extra-073",
-        "inf-9-extra-063",
-        "inf-9-extra-061"
-      ],
-      "orders": {
-        "inf-9-extra-002": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "A",
             "C",
             "B",
+            "A",
             "D"
           ]
         },
-        "inf-9-extra-031": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-070": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-048": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-076": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-9-extra-066",
-        "inf-9-extra-061",
-        "inf-9-extra-001",
-        "inf-9-extra-028",
-        "inf-9-extra-036",
-        "inf-9-extra-054",
-        "inf-9-extra-069",
-        "inf-9-extra-020",
-        "inf-9-extra-052",
-        "inf-9-extra-062",
-        "inf-9-extra-012",
-        "inf-9-extra-047",
-        "inf-9-extra-073",
-        "inf-9-extra-030",
-        "inf-9-extra-078",
-        "inf-9-extra-004",
-        "inf-9-extra-019",
-        "inf-9-extra-053",
-        "inf-9-extra-031",
-        "inf-9-extra-071"
-      ],
-      "orders": {
-        "inf-9-extra-061": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-001": {
+        "inf-9-extra-003": {
           "options": [
             "A",
             "C",
@@ -2995,9 +1800,109 @@
         },
         "inf-9-extra-054": {
           "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
             "C",
             "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-9-extra-077",
+        "inf-9-extra-027",
+        "inf-9-extra-065",
+        "inf-9-extra-034",
+        "inf-9-extra-051",
+        "inf-9-extra-010",
+        "inf-9-extra-020",
+        "inf-9-extra-061",
+        "inf-9-extra-029",
+        "inf-9-extra-069",
+        "inf-9-extra-008",
+        "inf-9-extra-035",
+        "inf-9-extra-007",
+        "inf-9-extra-004",
+        "inf-9-extra-011",
+        "inf-9-extra-074",
+        "inf-9-extra-036",
+        "inf-9-extra-016",
+        "inf-9-extra-015",
+        "inf-9-extra-060"
+      ],
+      "orders": {
+        "inf-9-extra-077": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "C",
+            "D",
+            "A",
             "B"
           ]
         },
@@ -3009,31 +1914,31 @@
             "D"
           ]
         },
-        "inf-9-extra-052": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-012": {
+        "inf-9-extra-061": {
           "options": [
             "C",
             "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
             "A",
-            "C",
-            "B",
             "D"
           ]
         },
-        "inf-9-extra-073": {
+        "inf-9-extra-029": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-008": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-035": {
           "options": [
             "C",
             "D",
@@ -3045,336 +1950,275 @@
           "options": [
             "D",
             "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "только читать",
-            "менять содержимое",
-            "управлять доступом"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
             "C",
-            "B",
-            "A",
-            "D"
+            "A"
           ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-9-extra-011",
-        "inf-9-extra-002",
-        "inf-9-extra-078",
-        "inf-9-extra-060",
-        "inf-9-extra-050",
-        "inf-9-extra-049",
-        "inf-9-extra-035",
-        "inf-9-extra-031",
-        "inf-9-extra-036",
-        "inf-9-extra-017",
-        "inf-9-extra-062",
-        "inf-9-extra-052",
-        "inf-9-extra-001",
-        "inf-9-extra-033",
-        "inf-9-extra-012",
-        "inf-9-extra-072",
-        "inf-9-extra-027",
-        "inf-9-extra-066",
-        "inf-9-extra-047",
-        "inf-9-extra-003"
-      ],
-      "orders": {
+        },
         "inf-9-extra-011": {
           "options": [
-            "A",
             "C",
             "D",
+            "A",
             "B"
           ]
         },
-        "inf-9-extra-002": {
+        "inf-9-extra-016": {
           "options": [
-            "D",
             "A",
             "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "C",
+            "D",
+            "A",
             "B"
           ]
         },
         "inf-9-extra-060": {
           "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-9-extra-008",
+        "inf-9-extra-002",
+        "inf-9-extra-075",
+        "inf-9-extra-018",
+        "inf-9-extra-014",
+        "inf-9-extra-070",
+        "inf-9-extra-016",
+        "inf-9-extra-031",
+        "inf-9-extra-032",
+        "inf-9-extra-074",
+        "inf-9-extra-039",
+        "inf-9-extra-048",
+        "inf-9-extra-027",
+        "inf-9-extra-017",
+        "inf-9-extra-064",
+        "inf-9-extra-067",
+        "inf-9-extra-049",
+        "inf-9-extra-071",
+        "inf-9-extra-057",
+        "inf-9-extra-007"
+      ],
+      "orders": {
+        "inf-9-extra-008": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
             "B",
             "C",
             "D",
             "A"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-035": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
           ]
         },
         "inf-9-extra-031": {
           "options": [
             "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "D",
-            "A",
             "B",
+            "D",
             "C"
           ]
         },
-        "inf-9-extra-052": {
+        "inf-9-extra-048": {
           "options": [
-            "C",
+            "A",
             "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "A",
-            "C",
             "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
+            "C"
           ]
         },
         "inf-9-extra-027": {
           "options": [
             "C",
             "B",
-            "A",
-            "D"
+            "D",
+            "A"
           ]
         },
-        "inf-9-extra-047": {
+        "inf-9-extra-017": {
           "options": [
-            "A",
-            "C",
             "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-003": {
-          "options": [
             "D",
-            "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 14,
-      "task_ids": [
-        "inf-9-extra-066",
-        "inf-9-extra-008",
-        "inf-9-extra-058",
-        "inf-9-extra-054",
-        "inf-9-extra-035",
-        "inf-9-extra-047",
-        "inf-9-extra-036",
-        "inf-9-extra-062",
-        "inf-9-extra-055",
-        "inf-9-extra-015",
-        "inf-9-extra-050",
-        "inf-9-extra-069",
-        "inf-9-extra-028",
-        "inf-9-extra-031",
-        "inf-9-extra-039",
-        "inf-9-extra-020",
-        "inf-9-extra-051",
-        "inf-9-extra-030",
-        "inf-9-extra-011",
-        "inf-9-extra-073"
-      ],
-      "orders": {
-        "inf-9-extra-008": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-058": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-054": {
-          "options": [
-            "D",
-            "B",
             "C",
             "A"
           ]
         },
-        "inf-9-extra-035": {
+        "inf-9-extra-057": {
           "options": [
-            "C",
-            "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
             "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "B",
-            "A",
             "C",
             "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-9-extra-030",
+        "inf-9-extra-029",
+        "inf-9-extra-031",
+        "inf-9-extra-064",
+        "inf-9-extra-001",
+        "inf-9-extra-039",
+        "inf-9-extra-009",
+        "inf-9-extra-060",
+        "inf-9-extra-051",
+        "inf-9-extra-072",
+        "inf-9-extra-032",
+        "inf-9-extra-076",
+        "inf-9-extra-004",
+        "inf-9-extra-045",
+        "inf-9-extra-073",
+        "inf-9-extra-016",
+        "inf-9-extra-020",
+        "inf-9-extra-003",
+        "inf-9-extra-057",
+        "inf-9-extra-049"
+      ],
+      "orders": {
+        "inf-9-extra-029": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
           ]
         },
         "inf-9-extra-031": {
           "options": [
             "C",
-            "B",
             "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "A",
+            "C",
+            "B",
             "D"
           ]
         },
-        "inf-9-extra-020": {
+        "inf-9-extra-009": {
           "options": [
-            "D",
             "A",
+            "D",
             "B",
             "C"
           ]
         },
-        "inf-9-extra-051": {
+        "inf-9-extra-060": {
           "options": [
-            "A",
-            "D",
             "C",
+            "D",
+            "A",
             "B"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-051": {
           "options": [
-            "A",
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-072": {
+          "options": [
             "D",
             "C",
+            "A",
             "B"
+          ]
+        },
+        "inf-9-extra-076": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
           ]
         },
         "inf-9-extra-073": {
           "options": [
-            "D",
-            "C",
             "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-9-extra-079",
-        "inf-9-extra-055",
-        "inf-9-extra-017",
-        "inf-9-extra-044",
-        "inf-9-extra-072",
-        "inf-9-extra-062",
-        "inf-9-extra-020",
-        "inf-9-extra-064",
-        "inf-9-extra-038",
-        "inf-9-extra-001",
-        "inf-9-extra-069",
-        "inf-9-extra-063",
-        "inf-9-extra-031",
-        "inf-9-extra-050",
-        "inf-9-extra-073",
-        "inf-9-extra-078",
-        "inf-9-extra-030",
-        "inf-9-extra-039",
-        "inf-9-extra-036",
-        "inf-9-extra-051"
-      ],
-      "orders": {
-        "inf-9-extra-079": {
-          "right": [
-            "работать с картами и координатами",
-            "искать информацию",
-            "обсуждать вопросы на тему",
-            "создавать документы и таблицы",
-            "переписываться",
-            "хранить и передавать файлы"
+            "B",
+            "D",
+            "C"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-extra-016": {
           "options": [
             "D",
             "C",
@@ -3382,27 +2226,135 @@
             "A"
           ]
         },
-        "inf-9-extra-044": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
         "inf-9-extra-020": {
           "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "C",
             "D",
             "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-9-extra-016",
+        "inf-9-extra-009",
+        "inf-9-extra-028",
+        "inf-9-extra-055",
+        "inf-9-extra-034",
+        "inf-9-extra-033",
+        "inf-9-extra-017",
+        "inf-9-extra-001",
+        "inf-9-extra-071",
+        "inf-9-extra-060",
+        "inf-9-extra-007",
+        "inf-9-extra-051",
+        "inf-9-extra-011",
+        "inf-9-extra-069",
+        "inf-9-extra-004",
+        "inf-9-extra-048",
+        "inf-9-extra-014",
+        "inf-9-extra-075",
+        "inf-9-extra-038",
+        "inf-9-extra-027"
+      ],
+      "orders": {
+        "inf-9-extra-016": {
+          "options": [
             "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "B",
+            "D",
+            "A",
             "C"
           ]
         },
@@ -3414,31 +2366,67 @@
             "A"
           ]
         },
-        "inf-9-extra-001": {
+        "inf-9-extra-027": {
           "options": [
+            "B",
             "D",
             "C",
-            "A",
-            "B"
+            "A"
           ]
-        },
-        "inf-9-extra-063": {
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-9-extra-051",
+        "inf-9-extra-031",
+        "inf-9-extra-054",
+        "inf-9-extra-078",
+        "inf-9-extra-012",
+        "inf-9-extra-033",
+        "inf-9-extra-073",
+        "inf-9-extra-001",
+        "inf-9-extra-011",
+        "inf-9-extra-009",
+        "inf-9-extra-014",
+        "inf-9-extra-070",
+        "inf-9-extra-038",
+        "inf-9-extra-030",
+        "inf-9-extra-079",
+        "inf-9-extra-068",
+        "inf-9-extra-015",
+        "inf-9-extra-007",
+        "inf-9-extra-074",
+        "inf-9-extra-003"
+      ],
+      "orders": {
+        "inf-9-extra-051": {
           "options": [
-            "D",
             "B",
             "C",
+            "D",
             "A"
           ]
         },
         "inf-9-extra-031": {
           "options": [
-            "D",
-            "A",
             "B",
-            "C"
+            "A",
+            "C",
+            "D"
           ]
         },
-        "inf-9-extra-050": {
+        "inf-9-extra-054": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-012": {
           "options": [
             "A",
             "D",
@@ -3448,138 +2436,139 @@
         },
         "inf-9-extra-073": {
           "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
             "D",
             "C",
             "A",
             "B"
           ]
         },
-        "inf-9-extra-051": {
+        "inf-9-extra-009": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-070": {
           "options": [
             "D",
             "A",
             "C",
             "B"
           ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "искать информацию",
+            "создавать документы и таблицы",
+            "работать с картами и координатами",
+            "хранить и передавать файлы",
+            "обсуждать вопросы на тему",
+            "переписываться"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     },
     {
-      "number": 16,
+      "number": 9,
       "task_ids": [
-        "inf-9-extra-062",
         "inf-9-extra-015",
-        "inf-9-extra-016",
-        "inf-9-extra-071",
-        "inf-9-extra-052",
-        "inf-9-extra-039",
-        "inf-9-extra-067",
-        "inf-9-extra-031",
-        "inf-9-extra-008",
-        "inf-9-extra-077",
-        "inf-9-extra-048",
-        "inf-9-extra-028",
-        "inf-9-extra-066",
-        "inf-9-extra-079",
-        "inf-9-extra-053",
-        "inf-9-extra-027",
-        "inf-9-extra-047",
-        "inf-9-extra-019",
+        "inf-9-extra-057",
         "inf-9-extra-032",
+        "inf-9-extra-027",
+        "inf-9-extra-074",
+        "inf-9-extra-078",
+        "inf-9-extra-068",
+        "inf-9-extra-049",
+        "inf-9-extra-031",
+        "inf-9-extra-042",
+        "inf-9-extra-016",
+        "inf-9-extra-005",
+        "inf-9-extra-064",
+        "inf-9-extra-070",
+        "inf-9-extra-010",
+        "inf-9-extra-017",
+        "inf-9-extra-048",
+        "inf-9-extra-067",
+        "inf-9-extra-029",
         "inf-9-extra-012"
       ],
       "orders": {
         "inf-9-extra-015": {
           "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
             "C",
             "B",
             "A",
             "D"
           ]
         },
-        "inf-9-extra-077": {
+        "inf-9-extra-057": {
           "options": [
             "B",
             "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-048": {
-          "options": [
             "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "создавать документы и таблицы",
-            "обсуждать вопросы на тему",
-            "хранить и передавать файлы",
-            "переписываться",
-            "искать информацию",
-            "работать с картами и координатами"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "только читать",
-            "управлять доступом",
-            "менять содержимое"
+            "D"
           ]
         },
         "inf-9-extra-027": {
           "options": [
-            "D",
             "C",
-            "B",
-            "A"
+            "D",
+            "A",
+            "B"
           ]
         },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-019": {
+        "inf-9-extra-031": {
           "options": [
             "A",
             "B",
@@ -3587,818 +2576,120 @@
             "C"
           ]
         },
-        "inf-9-extra-012": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 17,
-      "task_ids": [
-        "inf-9-extra-030",
-        "inf-9-extra-050",
-        "inf-9-extra-065",
-        "inf-9-extra-078",
-        "inf-9-extra-010",
-        "inf-9-extra-020",
-        "inf-9-extra-063",
-        "inf-9-extra-053",
-        "inf-9-extra-047",
-        "inf-9-extra-067",
-        "inf-9-extra-049",
-        "inf-9-extra-016",
-        "inf-9-extra-002",
-        "inf-9-extra-031",
-        "inf-9-extra-018",
-        "inf-9-extra-008",
-        "inf-9-extra-019",
-        "inf-9-extra-005",
-        "inf-9-extra-079",
-        "inf-9-extra-075"
-      ],
-      "orders": {
-        "inf-9-extra-050": {
+        "inf-9-extra-042": {
           "options": [
             "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "D",
             "C",
             "B",
-            "A"
+            "D"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
           ]
         },
         "inf-9-extra-010": {
           "options": [
             "C",
-            "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "только читать",
-            "управлять доступом"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "A",
-            "C",
             "D",
             "B"
           ]
         },
-        "inf-9-extra-002": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "хранить и передавать файлы",
-            "переписываться",
-            "работать с картами и координатами",
-            "искать информацию",
-            "создавать документы и таблицы",
-            "обсуждать вопросы на тему"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 18,
-      "task_ids": [
-        "inf-9-extra-039",
-        "inf-9-extra-017",
-        "inf-9-extra-027",
-        "inf-9-extra-079",
-        "inf-9-extra-048",
-        "inf-9-extra-032",
-        "inf-9-extra-070",
-        "inf-9-extra-019",
-        "inf-9-extra-062",
-        "inf-9-extra-031",
-        "inf-9-extra-063",
-        "inf-9-extra-054",
-        "inf-9-extra-065",
-        "inf-9-extra-038",
-        "inf-9-extra-012",
-        "inf-9-extra-055",
-        "inf-9-extra-064",
-        "inf-9-extra-047",
-        "inf-9-extra-050",
-        "inf-9-extra-072"
-      ],
-      "orders": {
         "inf-9-extra-017": {
           "options": [
+            "B",
+            "C",
             "D",
-            "B",
-            "C",
             "A"
-          ]
-        },
-        "inf-9-extra-027": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "переписываться",
-            "работать с картами и координатами",
-            "искать информацию",
-            "создавать документы и таблицы",
-            "хранить и передавать файлы",
-            "обсуждать вопросы на тему"
           ]
         },
         "inf-9-extra-048": {
           "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-070": {
-          "options": [
-            "C",
-            "D",
             "A",
+            "D",
+            "C",
             "B"
           ]
         },
-        "inf-9-extra-019": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-063": {
+        "inf-9-extra-029": {
           "options": [
             "D",
-            "C",
             "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-054": {
-          "options": [
             "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-038": {
-          "options": [
-            "B",
-            "D",
-            "A",
             "C"
           ]
         },
         "inf-9-extra-012": {
           "options": [
-            "A",
+            "D",
             "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
-            "C",
-            "D",
             "B",
             "A"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     },
     {
-      "number": 19,
+      "number": 10,
       "task_ids": [
-        "inf-9-extra-015",
-        "inf-9-extra-019",
-        "inf-9-extra-001",
-        "inf-9-extra-047",
-        "inf-9-extra-012",
-        "inf-9-extra-031",
-        "inf-9-extra-075",
+        "inf-9-extra-045",
         "inf-9-extra-027",
+        "inf-9-extra-006",
+        "inf-9-extra-034",
+        "inf-9-extra-051",
         "inf-9-extra-004",
-        "inf-9-extra-066",
-        "inf-9-extra-062",
-        "inf-9-extra-072",
-        "inf-9-extra-052",
-        "inf-9-extra-053",
-        "inf-9-extra-020",
-        "inf-9-extra-048",
-        "inf-9-extra-079",
-        "inf-9-extra-033",
+        "inf-9-extra-015",
         "inf-9-extra-068",
-        "inf-9-extra-073"
+        "inf-9-extra-054",
+        "inf-9-extra-079",
+        "inf-9-extra-078",
+        "inf-9-extra-016",
+        "inf-9-extra-073",
+        "inf-9-extra-039",
+        "inf-9-extra-076",
+        "inf-9-extra-017",
+        "inf-9-extra-001",
+        "inf-9-extra-066",
+        "inf-9-extra-008",
+        "inf-9-extra-067"
       ],
       "orders": {
-        "inf-9-extra-015": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-019": {
+        "inf-9-extra-045": {
           "options": [
             "D",
-            "B",
             "C",
+            "B",
             "A"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
           ]
         },
         "inf-9-extra-027": {
           "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-072": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "только читать",
-            "менять содержимое"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-048": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "хранить и передавать файлы",
-            "обсуждать вопросы на тему",
-            "искать информацию",
-            "создавать документы и таблицы",
-            "работать с картами и координатами",
-            "переписываться"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-9-extra-033",
-        "inf-9-extra-012",
-        "inf-9-extra-065",
-        "inf-9-extra-053",
-        "inf-9-extra-018",
-        "inf-9-extra-061",
-        "inf-9-extra-063",
-        "inf-9-extra-031",
-        "inf-9-extra-032",
-        "inf-9-extra-005",
-        "inf-9-extra-058",
-        "inf-9-extra-011",
-        "inf-9-extra-073",
-        "inf-9-extra-002",
-        "inf-9-extra-020",
-        "inf-9-extra-054",
-        "inf-9-extra-075",
-        "inf-9-extra-047",
-        "inf-9-extra-030",
-        "inf-9-extra-050"
-      ],
-      "orders": {
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
             "B",
             "C",
             "D",
             "A"
           ]
         },
-        "inf-9-extra-058": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-011": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-054": {
+        "inf-9-extra-006": {
           "options": [
             "B",
             "D",
             "C",
             "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 21,
-      "task_ids": [
-        "inf-9-extra-077",
-        "inf-9-extra-020",
-        "inf-9-extra-004",
-        "inf-9-extra-030",
-        "inf-9-extra-036",
-        "inf-9-extra-014",
-        "inf-9-extra-001",
-        "inf-9-extra-069",
-        "inf-9-extra-047",
-        "inf-9-extra-002",
-        "inf-9-extra-079",
-        "inf-9-extra-071",
-        "inf-9-extra-075",
-        "inf-9-extra-005",
-        "inf-9-extra-008",
-        "inf-9-extra-073",
-        "inf-9-extra-053",
-        "inf-9-extra-050",
-        "inf-9-extra-034",
-        "inf-9-extra-049"
-      ],
-      "orders": {
-        "inf-9-extra-077": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-020": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-014": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "хранить и передавать файлы",
-            "работать с картами и координатами",
-            "создавать документы и таблицы",
-            "искать информацию",
-            "обсуждать вопросы на тему",
-            "переписываться"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "управлять доступом",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-9-extra-052",
-        "inf-9-extra-030",
-        "inf-9-extra-038",
-        "inf-9-extra-031",
-        "inf-9-extra-047",
-        "inf-9-extra-064",
-        "inf-9-extra-079",
-        "inf-9-extra-039",
-        "inf-9-extra-050",
-        "inf-9-extra-019",
-        "inf-9-extra-008",
-        "inf-9-extra-051",
-        "inf-9-extra-066",
-        "inf-9-extra-068",
-        "inf-9-extra-012",
-        "inf-9-extra-011",
-        "inf-9-extra-002",
-        "inf-9-extra-077",
-        "inf-9-extra-016",
-        "inf-9-extra-053"
-      ],
-      "orders": {
-        "inf-9-extra-052": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-038": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "обсуждать вопросы на тему",
-            "переписываться",
-            "работать с картами и координатами",
-            "создавать документы и таблицы",
-            "хранить и передавать файлы",
-            "искать информацию"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
           ]
         },
         "inf-9-extra-051": {
@@ -4409,169 +2700,313 @@
             "D"
           ]
         },
-        "inf-9-extra-012": {
+        "inf-9-extra-004": {
           "options": [
             "C",
             "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
             "A",
+            "C",
+            "B",
             "D"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-054": {
           "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "D",
             "A",
             "B",
-            "C"
+            "C",
+            "D"
           ]
         },
-        "inf-9-extra-077": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
+        "inf-9-extra-079": {
+          "right": [
+            "создавать документы и таблицы",
+            "обсуждать вопросы на тему",
+            "работать с картами и координатами",
+            "хранить и передавать файлы",
+            "переписываться",
+            "искать информацию"
           ]
         },
         "inf-9-extra-016": {
           "options": [
+            "A",
             "D",
             "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
             "C",
+            "B",
+            "D",
             "A"
           ]
         },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "управлять доступом",
-            "только читать"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-9-extra-069",
-        "inf-9-extra-061",
-        "inf-9-extra-019",
-        "inf-9-extra-034",
-        "inf-9-extra-020",
-        "inf-9-extra-010",
-        "inf-9-extra-064",
-        "inf-9-extra-060",
-        "inf-9-extra-072",
-        "inf-9-extra-050",
-        "inf-9-extra-018",
-        "inf-9-extra-053",
-        "inf-9-extra-017",
-        "inf-9-extra-005",
-        "inf-9-extra-075",
-        "inf-9-extra-044",
-        "inf-9-extra-066",
-        "inf-9-extra-065",
-        "inf-9-extra-027",
-        "inf-9-extra-058"
-      ],
-      "orders": {
-        "inf-9-extra-061": {
+        "inf-9-extra-076": {
           "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "D",
             "C",
+            "A",
+            "D",
             "B"
           ]
         },
-        "inf-9-extra-020": {
+        "inf-9-extra-017": {
           "options": [
             "A",
+            "C",
             "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "A",
             "B",
             "C"
           ]
         },
+        "inf-9-extra-008": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-9-extra-010",
+        "inf-9-extra-060",
+        "inf-9-extra-031",
+        "inf-9-extra-074",
+        "inf-9-extra-004",
+        "inf-9-extra-063",
+        "inf-9-extra-002",
+        "inf-9-extra-049",
+        "inf-9-extra-011",
+        "inf-9-extra-027",
+        "inf-9-extra-036",
+        "inf-9-extra-015",
+        "inf-9-extra-017",
+        "inf-9-extra-003",
+        "inf-9-extra-077",
+        "inf-9-extra-020",
+        "inf-9-extra-070",
+        "inf-9-extra-042",
+        "inf-9-extra-057",
+        "inf-9-extra-018"
+      ],
+      "orders": {
         "inf-9-extra-010": {
           "options": [
+            "A",
             "C",
             "B",
-            "A",
             "D"
           ]
         },
         "inf-9-extra-060": {
           "options": [
-            "B",
-            "C",
+            "A",
             "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "D",
+            "C",
             "A"
           ]
         },
-        "inf-9-extra-072": {
+        "inf-9-extra-063": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-027": {
           "options": [
             "D",
-            "B",
             "C",
-            "A"
+            "A",
+            "B"
           ]
         },
-        "inf-9-extra-050": {
+        "inf-9-extra-015": {
           "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
+            "A",
             "D",
             "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "только читать",
-            "менять содержимое"
+            "C"
           ]
         },
         "inf-9-extra-017": {
           "options": [
             "D",
-            "C",
             "B",
+            "C",
             "A"
           ]
         },
-        "inf-9-extra-044": {
+        "inf-9-extra-003": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-020": {
           "options": [
             "D",
-            "C",
             "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-9-extra-002",
+        "inf-9-extra-070",
+        "inf-9-extra-065",
+        "inf-9-extra-017",
+        "inf-9-extra-030",
+        "inf-9-extra-076",
+        "inf-9-extra-029",
+        "inf-9-extra-011",
+        "inf-9-extra-038",
+        "inf-9-extra-074",
+        "inf-9-extra-078",
+        "inf-9-extra-071",
+        "inf-9-extra-031",
+        "inf-9-extra-061",
+        "inf-9-extra-012",
+        "inf-9-extra-004",
+        "inf-9-extra-045",
+        "inf-9-extra-060",
+        "inf-9-extra-069",
+        "inf-9-extra-019"
+      ],
+      "orders": {
+        "inf-9-extra-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "B",
+            "C",
+            "D",
             "A"
           ]
         },
         "inf-9-extra-065": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-076": {
           "options": [
             "D",
             "A",
@@ -4579,63 +3014,598 @@
             "C"
           ]
         },
-        "inf-9-extra-027": {
+        "inf-9-extra-029": {
           "options": [
             "A",
+            "D",
             "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "C",
+            "A",
             "D",
             "B"
           ]
         },
-        "inf-9-extra-058": {
+        "inf-9-extra-038": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-061": {
           "options": [
             "A",
             "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "C",
+            "A",
             "D",
             "B"
           ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-9-extra-053",
-        "inf-9-extra-028",
-        "inf-9-extra-051",
-        "inf-9-extra-049",
-        "inf-9-extra-003",
-        "inf-9-extra-015",
-        "inf-9-extra-036",
-        "inf-9-extra-072",
-        "inf-9-extra-076",
-        "inf-9-extra-014",
-        "inf-9-extra-055",
-        "inf-9-extra-027",
-        "inf-9-extra-017",
-        "inf-9-extra-008",
-        "inf-9-extra-050",
-        "inf-9-extra-006",
-        "inf-9-extra-067",
-        "inf-9-extra-044",
-        "inf-9-extra-034",
-        "inf-9-extra-005"
-      ],
-      "orders": {
-        "inf-9-extra-053": {
-          "right": [
-            "только читать",
-            "менять содержимое",
-            "управлять доступом"
-          ]
         },
-        "inf-9-extra-051": {
+        "inf-9-extra-045": {
           "options": [
             "C",
             "D",
             "B",
             "A"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-9-extra-042",
+        "inf-9-extra-009",
+        "inf-9-extra-051",
+        "inf-9-extra-079",
+        "inf-9-extra-075",
+        "inf-9-extra-063",
+        "inf-9-extra-010",
+        "inf-9-extra-074",
+        "inf-9-extra-069",
+        "inf-9-extra-065",
+        "inf-9-extra-016",
+        "inf-9-extra-019",
+        "inf-9-extra-008",
+        "inf-9-extra-034",
+        "inf-9-extra-078",
+        "inf-9-extra-003",
+        "inf-9-extra-035",
+        "inf-9-extra-002",
+        "inf-9-extra-073",
+        "inf-9-extra-030"
+      ],
+      "orders": {
+        "inf-9-extra-042": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "искать информацию",
+            "обсуждать вопросы на тему",
+            "работать с картами и координатами",
+            "создавать документы и таблицы",
+            "хранить и передавать файлы",
+            "переписываться"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-008": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-9-extra-073",
+        "inf-9-extra-027",
+        "inf-9-extra-038",
+        "inf-9-extra-051",
+        "inf-9-extra-033",
+        "inf-9-extra-035",
+        "inf-9-extra-057",
+        "inf-9-extra-031",
+        "inf-9-extra-012",
+        "inf-9-extra-075",
+        "inf-9-extra-065",
+        "inf-9-extra-049",
+        "inf-9-extra-017",
+        "inf-9-extra-069",
+        "inf-9-extra-006",
+        "inf-9-extra-007",
+        "inf-9-extra-048",
+        "inf-9-extra-042",
+        "inf-9-extra-014",
+        "inf-9-extra-015"
+      ],
+      "orders": {
+        "inf-9-extra-073": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-9-extra-073",
+        "inf-9-extra-017",
+        "inf-9-extra-031",
+        "inf-9-extra-011",
+        "inf-9-extra-019",
+        "inf-9-extra-060",
+        "inf-9-extra-035",
+        "inf-9-extra-020",
+        "inf-9-extra-001",
+        "inf-9-extra-006",
+        "inf-9-extra-078",
+        "inf-9-extra-054",
+        "inf-9-extra-065",
+        "inf-9-extra-014",
+        "inf-9-extra-077",
+        "inf-9-extra-027",
+        "inf-9-extra-018",
+        "inf-9-extra-071",
+        "inf-9-extra-032",
+        "inf-9-extra-055"
+      ],
+      "orders": {
+        "inf-9-extra-073": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-9-extra-031",
+        "inf-9-extra-051",
+        "inf-9-extra-045",
+        "inf-9-extra-048",
+        "inf-9-extra-010",
+        "inf-9-extra-003",
+        "inf-9-extra-007",
+        "inf-9-extra-014",
+        "inf-9-extra-027",
+        "inf-9-extra-017",
+        "inf-9-extra-064",
+        "inf-9-extra-009",
+        "inf-9-extra-032",
+        "inf-9-extra-073",
+        "inf-9-extra-039",
+        "inf-9-extra-054",
+        "inf-9-extra-015",
+        "inf-9-extra-004",
+        "inf-9-extra-079",
+        "inf-9-extra-060"
+      ],
+      "orders": {
+        "inf-9-extra-031": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
           ]
         },
         "inf-9-extra-003": {
@@ -4646,7 +3616,125 @@
             "A"
           ]
         },
+        "inf-9-extra-014": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
         "inf-9-extra-015": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "обсуждать вопросы на тему",
+            "переписываться",
+            "создавать документы и таблицы",
+            "хранить и передавать файлы",
+            "работать с картами и координатами",
+            "искать информацию"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-9-extra-036",
+        "inf-9-extra-027",
+        "inf-9-extra-010",
+        "inf-9-extra-007",
+        "inf-9-extra-055",
+        "inf-9-extra-054",
+        "inf-9-extra-051",
+        "inf-9-extra-034",
+        "inf-9-extra-071",
+        "inf-9-extra-029",
+        "inf-9-extra-032",
+        "inf-9-extra-008",
+        "inf-9-extra-074",
+        "inf-9-extra-064",
+        "inf-9-extra-035",
+        "inf-9-extra-016",
+        "inf-9-extra-067",
+        "inf-9-extra-015",
+        "inf-9-extra-077",
+        "inf-9-extra-020"
+      ],
+      "orders": {
+        "inf-9-extra-027": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-010": {
           "options": [
             "B",
             "A",
@@ -4654,7 +3742,1381 @@
             "D"
           ]
         },
+        "inf-9-extra-054": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-029": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-008": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-9-extra-012",
+        "inf-9-extra-075",
+        "inf-9-extra-051",
+        "inf-9-extra-049",
+        "inf-9-extra-034",
+        "inf-9-extra-004",
+        "inf-9-extra-002",
+        "inf-9-extra-018",
+        "inf-9-extra-066",
+        "inf-9-extra-019",
+        "inf-9-extra-069",
+        "inf-9-extra-028",
+        "inf-9-extra-007",
+        "inf-9-extra-020",
+        "inf-9-extra-074",
+        "inf-9-extra-073",
+        "inf-9-extra-042",
+        "inf-9-extra-027",
+        "inf-9-extra-010",
+        "inf-9-extra-077"
+      ],
+      "orders": {
+        "inf-9-extra-012": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-9-extra-008",
+        "inf-9-extra-054",
+        "inf-9-extra-042",
+        "inf-9-extra-066",
+        "inf-9-extra-004",
+        "inf-9-extra-015",
+        "inf-9-extra-002",
+        "inf-9-extra-075",
+        "inf-9-extra-070",
+        "inf-9-extra-071",
+        "inf-9-extra-033",
+        "inf-9-extra-007",
+        "inf-9-extra-017",
+        "inf-9-extra-060",
+        "inf-9-extra-068",
+        "inf-9-extra-030",
+        "inf-9-extra-069",
+        "inf-9-extra-031",
+        "inf-9-extra-074",
+        "inf-9-extra-055"
+      ],
+      "orders": {
+        "inf-9-extra-008": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-9-extra-015",
+        "inf-9-extra-077",
+        "inf-9-extra-019",
+        "inf-9-extra-031",
+        "inf-9-extra-007",
+        "inf-9-extra-078",
+        "inf-9-extra-049",
+        "inf-9-extra-075",
+        "inf-9-extra-028",
+        "inf-9-extra-038",
+        "inf-9-extra-027",
+        "inf-9-extra-063",
+        "inf-9-extra-068",
+        "inf-9-extra-004",
+        "inf-9-extra-020",
+        "inf-9-extra-048",
+        "inf-9-extra-009",
+        "inf-9-extra-071",
+        "inf-9-extra-042",
+        "inf-9-extra-070"
+      ],
+      "orders": {
+        "inf-9-extra-015": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-9-extra-072",
+        "inf-9-extra-054",
+        "inf-9-extra-036",
+        "inf-9-extra-007",
+        "inf-9-extra-017",
+        "inf-9-extra-067",
+        "inf-9-extra-034",
+        "inf-9-extra-030",
+        "inf-9-extra-057",
+        "inf-9-extra-049",
+        "inf-9-extra-071",
+        "inf-9-extra-015",
+        "inf-9-extra-068",
+        "inf-9-extra-073",
+        "inf-9-extra-008",
+        "inf-9-extra-029",
+        "inf-9-extra-038",
+        "inf-9-extra-060",
+        "inf-9-extra-028",
+        "inf-9-extra-078"
+      ],
+      "orders": {
         "inf-9-extra-072": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-008": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-029": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-9-extra-006",
+        "inf-9-extra-078",
+        "inf-9-extra-048",
+        "inf-9-extra-010",
+        "inf-9-extra-027",
+        "inf-9-extra-064",
+        "inf-9-extra-002",
+        "inf-9-extra-012",
+        "inf-9-extra-063",
+        "inf-9-extra-073",
+        "inf-9-extra-067",
+        "inf-9-extra-039",
+        "inf-9-extra-075",
+        "inf-9-extra-055",
+        "inf-9-extra-011",
+        "inf-9-extra-003",
+        "inf-9-extra-031",
+        "inf-9-extra-018",
+        "inf-9-extra-009",
+        "inf-9-extra-060"
+      ],
+      "orders": {
+        "inf-9-extra-006": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-060": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-9-extra-061",
+        "inf-9-extra-020",
+        "inf-9-extra-045",
+        "inf-9-extra-039",
+        "inf-9-extra-067",
+        "inf-9-extra-004",
+        "inf-9-extra-070",
+        "inf-9-extra-029",
+        "inf-9-extra-015",
+        "inf-9-extra-054",
+        "inf-9-extra-069",
+        "inf-9-extra-010",
+        "inf-9-extra-057",
+        "inf-9-extra-077",
+        "inf-9-extra-030",
+        "inf-9-extra-031",
+        "inf-9-extra-009",
+        "inf-9-extra-011",
+        "inf-9-extra-065",
+        "inf-9-extra-074"
+      ],
+      "orders": {
+        "inf-9-extra-061": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-015": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-9-extra-078",
+        "inf-9-extra-065",
+        "inf-9-extra-019",
+        "inf-9-extra-079",
+        "inf-9-extra-031",
+        "inf-9-extra-073",
+        "inf-9-extra-018",
+        "inf-9-extra-057",
+        "inf-9-extra-012",
+        "inf-9-extra-051",
+        "inf-9-extra-072",
+        "inf-9-extra-070",
+        "inf-9-extra-038",
+        "inf-9-extra-063",
+        "inf-9-extra-075",
+        "inf-9-extra-030",
+        "inf-9-extra-064",
+        "inf-9-extra-006",
+        "inf-9-extra-017",
+        "inf-9-extra-032"
+      ],
+      "orders": {
+        "inf-9-extra-065": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "искать информацию",
+            "создавать документы и таблицы",
+            "переписываться",
+            "обсуждать вопросы на тему",
+            "хранить и передавать файлы",
+            "работать с картами и координатами"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-073": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-072": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-063": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-9-extra-073",
+        "inf-9-extra-002",
+        "inf-9-extra-012",
+        "inf-9-extra-076",
+        "inf-9-extra-068",
+        "inf-9-extra-077",
+        "inf-9-extra-034",
+        "inf-9-extra-051",
+        "inf-9-extra-014",
+        "inf-9-extra-032",
+        "inf-9-extra-004",
+        "inf-9-extra-016",
+        "inf-9-extra-027",
+        "inf-9-extra-079",
+        "inf-9-extra-065",
+        "inf-9-extra-042",
+        "inf-9-extra-057",
+        "inf-9-extra-045",
+        "inf-9-extra-009",
+        "inf-9-extra-033"
+      ],
+      "orders": {
+        "inf-9-extra-073": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-076": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-014": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-027": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "хранить и передавать файлы",
+            "работать с картами и координатами",
+            "переписываться",
+            "создавать документы и таблицы",
+            "искать информацию",
+            "обсуждать вопросы на тему"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-009": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-9-extra-030",
+        "inf-9-extra-031",
+        "inf-9-extra-038",
+        "inf-9-extra-012",
+        "inf-9-extra-045",
+        "inf-9-extra-006",
+        "inf-9-extra-004",
+        "inf-9-extra-039",
+        "inf-9-extra-016",
+        "inf-9-extra-002",
+        "inf-9-extra-011",
+        "inf-9-extra-029",
+        "inf-9-extra-051",
+        "inf-9-extra-028",
+        "inf-9-extra-075",
+        "inf-9-extra-074",
+        "inf-9-extra-018",
+        "inf-9-extra-017",
+        "inf-9-extra-057",
+        "inf-9-extra-055"
+      ],
+      "orders": {
+        "inf-9-extra-031": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-038": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-004": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-016": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-002": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-011": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-029": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-9-extra-017",
+        "inf-9-extra-030",
+        "inf-9-extra-003",
+        "inf-9-extra-010",
+        "inf-9-extra-070",
+        "inf-9-extra-029",
+        "inf-9-extra-079",
+        "inf-9-extra-064",
+        "inf-9-extra-035",
+        "inf-9-extra-006",
+        "inf-9-extra-012",
+        "inf-9-extra-076",
+        "inf-9-extra-034",
+        "inf-9-extra-069",
+        "inf-9-extra-054",
+        "inf-9-extra-039",
+        "inf-9-extra-028",
+        "inf-9-extra-077",
+        "inf-9-extra-072",
+        "inf-9-extra-048"
+      ],
+      "orders": {
+        "inf-9-extra-017": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-070": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-029": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-079": {
+          "right": [
+            "обсуждать вопросы на тему",
+            "создавать документы и таблицы",
+            "переписываться",
+            "искать информацию",
+            "хранить и передавать файлы",
+            "работать с картами и координатами"
+          ]
+        },
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-012": {
           "options": [
             "A",
             "D",
@@ -4664,226 +5126,94 @@
         },
         "inf-9-extra-076": {
           "options": [
-            "B",
             "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "A",
+            "B",
             "D",
             "C"
           ]
         },
-        "inf-9-extra-014": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-027": {
+        "inf-9-extra-077": {
           "options": [
             "A",
             "D",
             "B",
             "C"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-008": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-006": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-9-extra-050",
-        "inf-9-extra-073",
-        "inf-9-extra-012",
-        "inf-9-extra-061",
-        "inf-9-extra-017",
-        "inf-9-extra-002",
-        "inf-9-extra-066",
-        "inf-9-extra-072",
-        "inf-9-extra-033",
-        "inf-9-extra-031",
-        "inf-9-extra-018",
-        "inf-9-extra-032",
-        "inf-9-extra-064",
-        "inf-9-extra-074",
-        "inf-9-extra-058",
-        "inf-9-extra-030",
-        "inf-9-extra-078",
-        "inf-9-extra-044",
-        "inf-9-extra-062",
-        "inf-9-extra-039"
-      ],
-      "orders": {
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
           ]
         },
         "inf-9-extra-072": {
           "options": [
             "D",
             "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-018": {
-          "options": [
             "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-058": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "D",
-            "B",
-            "C",
             "A"
+          ]
+        },
+        "inf-9-extra-048": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     },
     {
-      "number": 26,
+      "number": 28,
       "task_ids": [
-        "inf-9-extra-073",
-        "inf-9-extra-017",
-        "inf-9-extra-008",
-        "inf-9-extra-028",
-        "inf-9-extra-058",
-        "inf-9-extra-031",
-        "inf-9-extra-019",
-        "inf-9-extra-079",
-        "inf-9-extra-060",
-        "inf-9-extra-053",
-        "inf-9-extra-077",
-        "inf-9-extra-066",
-        "inf-9-extra-010",
-        "inf-9-extra-002",
+        "inf-9-extra-036",
+        "inf-9-extra-034",
+        "inf-9-extra-068",
+        "inf-9-extra-001",
+        "inf-9-extra-069",
+        "inf-9-extra-075",
+        "inf-9-extra-078",
+        "inf-9-extra-063",
+        "inf-9-extra-057",
+        "inf-9-extra-055",
         "inf-9-extra-030",
-        "inf-9-extra-044",
-        "inf-9-extra-004",
-        "inf-9-extra-039",
-        "inf-9-extra-050",
-        "inf-9-extra-068"
+        "inf-9-extra-008",
+        "inf-9-extra-010",
+        "inf-9-extra-065",
+        "inf-9-extra-042",
+        "inf-9-extra-007",
+        "inf-9-extra-020",
+        "inf-9-extra-003",
+        "inf-9-extra-071",
+        "inf-9-extra-076"
       ],
       "orders": {
-        "inf-9-extra-073": {
+        "inf-9-extra-001": {
           "options": [
+            "A",
             "B",
             "C",
-            "A",
             "D"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-extra-063": {
           "options": [
-            "B",
             "D",
             "C",
+            "B",
             "A"
+          ]
+        },
+        "inf-9-extra-057": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
           ]
         },
         "inf-9-extra-008": {
@@ -4894,252 +5224,80 @@
             "B"
           ]
         },
-        "inf-9-extra-058": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-031": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-079": {
-          "right": [
-            "искать информацию",
-            "хранить и передавать файлы",
-            "обсуждать вопросы на тему",
-            "работать с картами и координатами",
-            "переписываться",
-            "создавать документы и таблицы"
-          ]
-        },
-        "inf-9-extra-060": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "только читать",
-            "менять содержимое",
-            "управлять доступом"
-          ]
-        },
-        "inf-9-extra-077": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
         "inf-9-extra-010": {
           "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-002": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-004": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-9-extra-038",
-        "inf-9-extra-055",
-        "inf-9-extra-036",
-        "inf-9-extra-030",
-        "inf-9-extra-017",
-        "inf-9-extra-034",
-        "inf-9-extra-050",
-        "inf-9-extra-063",
-        "inf-9-extra-049",
-        "inf-9-extra-070",
-        "inf-9-extra-074",
-        "inf-9-extra-053",
-        "inf-9-extra-033",
-        "inf-9-extra-065",
-        "inf-9-extra-032",
-        "inf-9-extra-060",
-        "inf-9-extra-015",
-        "inf-9-extra-011",
-        "inf-9-extra-020",
-        "inf-9-extra-047"
-      ],
-      "orders": {
-        "inf-9-extra-038": {
-          "options": [
             "B",
             "D",
             "A",
             "C"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-extra-070": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "только читать",
-            "менять содержимое",
-            "управлять доступом"
           ]
         },
         "inf-9-extra-065": {
           "options": [
             "B",
             "D",
-            "C",
-            "A"
+            "A",
+            "C"
           ]
         },
-        "inf-9-extra-060": {
+        "inf-9-extra-042": {
           "options": [
-            "C",
             "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
             "C",
             "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-011": {
-          "options": [
-            "C",
-            "A",
-            "D",
             "B"
           ]
         },
         "inf-9-extra-020": {
           "options": [
-            "A",
+            "C",
             "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
             "B",
+            "D",
+            "A",
             "C"
           ]
         },
-        "inf-9-extra-047": {
+        "inf-9-extra-076": {
           "options": [
-            "D",
             "A",
+            "B",
             "C",
-            "B"
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     },
     {
-      "number": 28,
+      "number": 29,
       "task_ids": [
-        "inf-9-extra-030",
-        "inf-9-extra-062",
         "inf-9-extra-004",
-        "inf-9-extra-067",
-        "inf-9-extra-019",
-        "inf-9-extra-017",
-        "inf-9-extra-033",
-        "inf-9-extra-001",
-        "inf-9-extra-015",
-        "inf-9-extra-016",
+        "inf-9-extra-002",
         "inf-9-extra-034",
-        "inf-9-extra-053",
-        "inf-9-extra-061",
-        "inf-9-extra-063",
+        "inf-9-extra-065",
+        "inf-9-extra-075",
+        "inf-9-extra-057",
         "inf-9-extra-012",
-        "inf-9-extra-010",
-        "inf-9-extra-052",
-        "inf-9-extra-048",
-        "inf-9-extra-044",
-        "inf-9-extra-077"
+        "inf-9-extra-054",
+        "inf-9-extra-072",
+        "inf-9-extra-055",
+        "inf-9-extra-014",
+        "inf-9-extra-016",
+        "inf-9-extra-011",
+        "inf-9-extra-078",
+        "inf-9-extra-005",
+        "inf-9-extra-038",
+        "inf-9-extra-020",
+        "inf-9-extra-030",
+        "inf-9-extra-042",
+        "inf-9-extra-003"
       ],
       "orders": {
         "inf-9-extra-004": {
@@ -5150,231 +5308,52 @@
             "A"
           ]
         },
-        "inf-9-extra-019": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-015": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "управлять доступом",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-063": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-extra-010": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-048": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-044": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-077": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 29,
-      "task_ids": [
-        "inf-9-extra-010",
-        "inf-9-extra-062",
-        "inf-9-extra-001",
-        "inf-9-extra-017",
-        "inf-9-extra-019",
-        "inf-9-extra-049",
-        "inf-9-extra-012",
-        "inf-9-extra-039",
-        "inf-9-extra-002",
-        "inf-9-extra-068",
-        "inf-9-extra-057",
-        "inf-9-extra-011",
-        "inf-9-extra-058",
-        "inf-9-extra-047",
-        "inf-9-extra-027",
-        "inf-9-extra-014",
-        "inf-9-extra-018",
-        "inf-9-extra-074",
-        "inf-9-extra-034",
-        "inf-9-extra-053"
-      ],
-      "orders": {
-        "inf-9-extra-010": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-001": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
         "inf-9-extra-002": {
           "options": [
-            "A",
             "B",
             "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-065": {
+          "options": [
+            "A",
+            "D",
+            "B",
             "C"
           ]
         },
         "inf-9-extra-057": {
           "options": [
-            "A",
             "C",
             "D",
+            "A",
             "B"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-012": {
           "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-058": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-047": {
-          "options": [
-            "B",
             "A",
             "C",
+            "B",
             "D"
           ]
         },
-        "inf-9-extra-027": {
+        "inf-9-extra-054": {
           "options": [
-            "A",
+            "B",
             "D",
             "C",
-            "B"
+            "A"
+          ]
+        },
+        "inf-9-extra-072": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
           ]
         },
         "inf-9-extra-014": {
@@ -5385,81 +5364,7 @@
             "B"
           ]
         },
-        "inf-9-extra-018": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "менять содержимое",
-            "управлять доступом",
-            "только читать"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 30,
-      "task_ids": [
-        "inf-9-extra-032",
-        "inf-9-extra-003",
-        "inf-9-extra-012",
-        "inf-9-extra-055",
-        "inf-9-extra-053",
-        "inf-9-extra-039",
-        "inf-9-extra-051",
-        "inf-9-extra-019",
-        "inf-9-extra-028",
-        "inf-9-extra-063",
-        "inf-9-extra-008",
-        "inf-9-extra-034",
-        "inf-9-extra-061",
-        "inf-9-extra-027",
-        "inf-9-extra-064",
-        "inf-9-extra-016",
-        "inf-9-extra-050",
-        "inf-9-extra-073",
-        "inf-9-extra-044",
-        "inf-9-extra-075"
-      ],
-      "orders": {
-        "inf-9-extra-003": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-053": {
-          "right": [
-            "управлять доступом",
-            "менять содержимое",
-            "только читать"
-          ]
-        },
-        "inf-9-extra-051": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-019": {
+        "inf-9-extra-016": {
           "options": [
             "D",
             "B",
@@ -5467,72 +5372,172 @@
             "C"
           ]
         },
-        "inf-9-extra-063": {
+        "inf-9-extra-011": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-038": {
           "options": [
             "C",
             "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-020": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-042": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-003": {
+          "options": [
+            "C",
             "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 29
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-9-extra-035",
+        "inf-9-extra-033",
+        "inf-9-extra-030",
+        "inf-9-extra-077",
+        "inf-9-extra-017",
+        "inf-9-extra-071",
+        "inf-9-extra-010",
+        "inf-9-extra-001",
+        "inf-9-extra-031",
+        "inf-9-extra-076",
+        "inf-9-extra-008",
+        "inf-9-extra-057",
+        "inf-9-extra-064",
+        "inf-9-extra-067",
+        "inf-9-extra-018",
+        "inf-9-extra-049",
+        "inf-9-extra-006",
+        "inf-9-extra-051",
+        "inf-9-extra-007",
+        "inf-9-extra-066"
+      ],
+      "orders": {
+        "inf-9-extra-035": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-extra-077": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-9-extra-001": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-031": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-extra-076": {
+          "options": [
+            "B",
+            "D",
+            "C",
             "A"
           ]
         },
         "inf-9-extra-008": {
           "options": [
-            "D",
             "B",
             "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-061": {
-          "options": [
-            "B",
             "A",
-            "D",
-            "C"
+            "D"
           ]
         },
-        "inf-9-extra-027": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-016": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-050": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-073": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-044": {
+        "inf-9-extra-057": {
           "options": [
             "B",
             "C",
             "A",
             "D"
           ]
+        },
+        "inf-9-extra-018": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-051": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
         }
       },
-      "max_score": 37
+      "max_score": 29
     }
   ]
 }

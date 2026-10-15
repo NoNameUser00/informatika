@@ -27,7 +27,8 @@
         "inf-10-ss-008",
         "inf-10-ss-029",
         "inf-10-ss-030",
-        "inf-10-ss-031"
+        "inf-10-ss-031",
+        "inf-10-ss-044"
       ]
     },
     {
@@ -39,6 +40,7 @@
         }
       ],
       "task_ids": [
+        "inf-10-ss-011",
         "inf-10-ss-012",
         "inf-10-ss-032",
         "inf-10-ss-033",
@@ -60,18 +62,15 @@
       ],
       "task_ids": [
         "inf-10-ss-020",
-        "inf-10-ss-022",
         "inf-10-ss-023",
         "inf-10-ss-025",
         "inf-10-ss-040",
         "inf-10-ss-043",
         "inf-10-ss-017",
-        "inf-10-ss-018",
         "inf-10-ss-038",
         "inf-10-ss-047",
         "inf-10-ss-026",
-        "inf-10-ss-027",
-        "inf-10-ss-048"
+        "inf-10-ss-027"
       ]
     },
     {
@@ -84,6 +83,7 @@
       ],
       "task_ids": [
         "inf-10-logic-001",
+        "inf-10-logic-003",
         "inf-10-logic-009",
         "inf-10-logic-038",
         "inf-10-logic-045",
@@ -109,7 +109,6 @@
         "inf-10-logic-008",
         "inf-10-logic-014",
         "inf-10-logic-015",
-        "inf-10-logic-036",
         "inf-10-logic-047",
         "inf-10-logic-018",
         "inf-10-logic-019",
@@ -126,6 +125,7 @@
       ],
       "task_ids": [
         "inf-10-logic-021",
+        "inf-10-logic-023",
         "inf-10-logic-039",
         "inf-10-logic-041",
         "inf-10-logic-049",
@@ -297,6 +297,26 @@
       "key": "4"
     },
     {
+      "id": "inf-10-ss-044",
+      "lesson": "10ss-02-transfer",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Число 45 записано в двоичной системе счисления. Сколько цифр в этой записи, если ведущие нули не записывают? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-10-ss-011",
+      "lesson": "10ss-03-arith",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сложите двоичные числа 1101 и 111. Запишите результат в двоичной системе, без указания основания.",
+      "base": 2,
+      "expected": 20,
+      "key": "10100"
+    },
+    {
       "id": "inf-10-ss-012",
       "lesson": "10ss-03-arith",
       "type": "numeric_base",
@@ -448,33 +468,6 @@
       "key": "16777216"
     },
     {
-      "id": "inf-10-ss-022",
-      "lesson": "10gfx-01-image",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Чем приходится платить за экономию места при сохранении изображения с палитрой из 256 цветов?",
-      "options": [
-        {
-          "id": "C",
-          "text": "Размером самого экрана: он перестаёт показывать картинку"
-        },
-        {
-          "id": "B",
-          "text": "Скоростью работы компьютера: палитра обрабатывается медленнее"
-        },
-        {
-          "id": "A",
-          "text": "Точностью цвета: часть оттенков не передаётся, и на градиентах появляются заметные ступеньки"
-        },
-        {
-          "id": "D",
-          "text": "Ничем: палитра хранит те же цвета, что и режим TrueColor"
-        }
-      ],
-      "correct": "C",
-      "key": "C"
-    },
-    {
       "id": "inf-10-ss-023",
       "lesson": "10gfx-02-sound",
       "type": "numeric_base",
@@ -542,16 +535,6 @@
       "key": "256"
     },
     {
-      "id": "inf-10-ss-018",
-      "lesson": "10ss-05-text",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "В файле 500 русских букв без пробелов. На сколько байт этот файл больше в UTF-8, чем в однобайтовой кодировке Windows-1251? Запишите только число.",
-      "base": 10,
-      "expected": 500,
-      "key": "500"
-    },
-    {
       "id": "inf-10-ss-038",
       "lesson": "10ss-05-text",
       "type": "numeric_base",
@@ -609,16 +592,6 @@
       "key": "240000"
     },
     {
-      "id": "inf-10-ss-048",
-      "lesson": "10ss-06-tasks",
-      "type": "numeric_base",
-      "points": 1,
-      "prompt": "Один кадр изображения экрана 1280 × 1024 пикселя сохраняется без сжатия с глубиной цвета 32 бита. Сколько мегабайт он занимает? Запишите только число.",
-      "base": 10,
-      "expected": 5,
-      "key": "5"
-    },
-    {
       "id": "inf-10-logic-001",
       "lesson": "10logic-01-ops",
       "type": "single_choice",
@@ -632,6 +605,33 @@
         {
           "id": "A",
           "text": "Ложь"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-10-logic-003",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое предикат?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Число"
+        },
+        {
+          "id": "A",
+          "text": "Утверждение с переменными"
+        },
+        {
+          "id": "C",
+          "text": "Вопрос"
+        },
+        {
+          "id": "B",
+          "text": "Готовая истина"
         }
       ],
       "correct": "B",
@@ -947,33 +947,6 @@
       "key": "3"
     },
     {
-      "id": "inf-10-logic-036",
-      "lesson": "10logic-04-normal",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Выражение (A ∨ B) ∧ ¬C истинно при A = 0, B = 0, C = 0 и при A = 1, B = 0, C = 0. Что верно о его КНФ?",
-      "options": [
-        {
-          "id": "D",
-          "text": "В КНФ войдёт один член, потому что выражение ложно во всех строках с C = 1"
-        },
-        {
-          "id": "C",
-          "text": "КНФ совпадает с ДНФ, потому что обе формы строятся по одним и тем же строкам"
-        },
-        {
-          "id": "A",
-          "text": "В КНФ войдут члены для всех ложных строк, то есть ровно 5 членов, соединённых конъюнкцией"
-        },
-        {
-          "id": "B",
-          "text": "В КНФ войдут только два члена — по числу истинных строк"
-        }
-      ],
-      "correct": "C",
-      "key": "C"
-    },
-    {
       "id": "inf-10-logic-047",
       "lesson": "10logic-04-normal",
       "type": "numeric_base",
@@ -1039,6 +1012,33 @@
       "base": 10,
       "expected": 15,
       "key": "15"
+    },
+    {
+      "id": "inf-10-logic-023",
+      "lesson": "10logic-06-venn",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что обозначает область A ∧ ¬B на диаграмме Эйлера-Венна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Объекты, которые входят в круг A, но не входят в круг B"
+        },
+        {
+          "id": "C",
+          "text": "Объекты, которые не входят ни в один из кругов"
+        },
+        {
+          "id": "B",
+          "text": "Объекты, которые входят в оба круга"
+        },
+        {
+          "id": "D",
+          "text": "Объекты, которые входят в круг B, но не входят в круг A"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-039",
@@ -1176,93 +1176,59 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-10-logic-024",
-        "inf-10-ss-003",
-        "inf-10-ss-015",
-        "inf-10-ss-017",
-        "inf-10-ss-032",
-        "inf-10-ss-040",
-        "inf-10-logic-033",
-        "inf-10-logic-008",
-        "inf-10-logic-047",
-        "inf-10-ss-001"
+        "inf-10-ss-011",
+        "inf-10-logic-043",
+        "inf-10-logic-007",
+        "inf-10-ss-043",
+        "inf-10-ss-004",
+        "inf-10-ss-038",
+        "inf-10-ss-012",
+        "inf-10-logic-001",
+        "inf-10-logic-046",
+        "inf-10-ss-030"
       ],
       "orders": {
-        "inf-10-ss-003": {
+        "inf-10-logic-007": {
           "options": [
             "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
             "D",
             "B",
-            "C",
+            "C"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "B",
             "A"
+          ]
+        },
+        "inf-10-logic-046": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 2,
       "task_ids": [
-        "inf-10-logic-046",
-        "inf-10-ss-006",
+        "inf-10-ss-040",
         "inf-10-ss-012",
-        "inf-10-logic-005",
-        "inf-10-ss-046",
-        "inf-10-logic-019",
-        "inf-10-logic-042",
+        "inf-10-logic-015",
+        "inf-10-logic-003",
+        "inf-10-logic-024",
+        "inf-10-logic-009",
+        "inf-10-ss-008",
+        "inf-10-ss-030",
         "inf-10-ss-023",
-        "inf-10-ss-003",
-        "inf-10-ss-040"
+        "inf-10-ss-014"
       ],
       "orders": {
-        "inf-10-logic-046": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-019": {
+        "inf-10-logic-003": {
           "options": [
             "A",
             "D",
@@ -1270,20 +1236,20 @@
             "B"
           ]
         },
-        "inf-10-logic-042": {
+        "inf-10-logic-009": {
           "options": [
             "C",
-            "B",
+            "D",
             "A",
-            "D"
+            "B"
           ]
         },
-        "inf-10-ss-003": {
+        "inf-10-ss-014": {
           "options": [
-            "D",
             "B",
+            "A",
             "C",
-            "A"
+            "D"
           ]
         }
       },
@@ -1292,90 +1258,96 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-10-logic-007",
-        "inf-10-ss-046",
-        "inf-10-logic-015",
-        "inf-10-ss-001",
-        "inf-10-ss-012",
-        "inf-10-ss-004",
-        "inf-10-logic-045",
-        "inf-10-ss-026",
-        "inf-10-ss-040",
-        "inf-10-logic-024"
-      ],
-      "orders": {
-        "inf-10-logic-007": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-10-ss-046",
-        "inf-10-ss-006",
-        "inf-10-ss-020",
-        "inf-10-logic-015",
-        "inf-10-logic-019",
-        "inf-10-logic-039",
         "inf-10-ss-033",
-        "inf-10-logic-038",
-        "inf-10-ss-008",
-        "inf-10-ss-038"
+        "inf-10-ss-026",
+        "inf-10-ss-004",
+        "inf-10-ss-006",
+        "inf-10-logic-007",
+        "inf-10-ss-011",
+        "inf-10-ss-027",
+        "inf-10-logic-043",
+        "inf-10-logic-034",
+        "inf-10-logic-038"
       ],
       "orders": {
         "inf-10-ss-006": {
           "options": [
-            "D",
-            "C",
             "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
             "B",
             "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "C",
             "A",
+            "B",
             "D"
           ]
         },
         "inf-10-logic-038": {
           "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-10-logic-001",
+        "inf-10-logic-049",
+        "inf-10-ss-015",
+        "inf-10-logic-046",
+        "inf-10-ss-020",
+        "inf-10-ss-038",
+        "inf-10-ss-011",
+        "inf-10-logic-005",
+        "inf-10-ss-029",
+        "inf-10-ss-001"
+      ],
+      "orders": {
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-046": {
+          "options": [
             "D",
             "C",
             "A",
             "B"
+          ]
+        },
+        "inf-10-logic-005": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
           ]
         }
       },
@@ -1384,64 +1356,40 @@
     {
       "number": 5,
       "task_ids": [
-        "inf-10-logic-046",
-        "inf-10-ss-014",
-        "inf-10-ss-030",
-        "inf-10-logic-006",
-        "inf-10-ss-038",
-        "inf-10-ss-015",
-        "inf-10-ss-048",
+        "inf-10-ss-011",
+        "inf-10-logic-034",
         "inf-10-logic-008",
-        "inf-10-logic-042",
+        "inf-10-ss-012",
+        "inf-10-ss-027",
+        "inf-10-logic-003",
+        "inf-10-ss-001",
+        "inf-10-ss-023",
+        "inf-10-logic-025",
         "inf-10-ss-005"
       ],
       "orders": {
-        "inf-10-logic-046": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
         "inf-10-logic-008": {
           "options": [
             "A",
             "C",
-            "B",
-            "D"
+            "D",
+            "B"
           ]
         },
-        "inf-10-logic-042": {
+        "inf-10-logic-003": {
           "options": [
+            "A",
             "D",
             "B",
-            "A",
             "C"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
           ]
         },
         "inf-10-ss-005": {
@@ -1453,69 +1401,37 @@
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 6,
       "task_ids": [
-        "inf-10-ss-015",
-        "inf-10-ss-006",
-        "inf-10-logic-011",
-        "inf-10-logic-006",
-        "inf-10-ss-008",
+        "inf-10-logic-034",
         "inf-10-logic-042",
-        "inf-10-ss-047",
+        "inf-10-logic-046",
+        "inf-10-ss-033",
+        "inf-10-logic-018",
         "inf-10-ss-038",
+        "inf-10-ss-030",
         "inf-10-ss-046",
-        "inf-10-logic-008"
+        "inf-10-ss-004",
+        "inf-10-ss-020"
       ],
       "orders": {
-        "inf-10-ss-015": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
         "inf-10-logic-042": {
           "options": [
             "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-047": {
-          "options": [
-            "D",
             "C",
             "A",
-            "B"
+            "D"
           ]
         },
-        "inf-10-logic-008": {
+        "inf-10-logic-046": {
           "options": [
+            "C",
             "D",
             "B",
-            "A",
-            "C"
+            "A"
           ]
         }
       },
@@ -1524,77 +1440,103 @@
     {
       "number": 7,
       "task_ids": [
-        "inf-10-logic-046",
-        "inf-10-ss-005",
+        "inf-10-ss-006",
+        "inf-10-logic-025",
+        "inf-10-logic-034",
+        "inf-10-ss-026",
+        "inf-10-logic-011",
+        "inf-10-logic-008",
+        "inf-10-ss-044",
+        "inf-10-ss-027",
         "inf-10-ss-012",
-        "inf-10-ss-035",
-        "inf-10-ss-040",
-        "inf-10-logic-019",
-        "inf-10-ss-030",
-        "inf-10-logic-047",
-        "inf-10-logic-024",
-        "inf-10-ss-017"
+        "inf-10-ss-014"
       ],
       "orders": {
-        "inf-10-logic-046": {
+        "inf-10-ss-006": {
           "options": [
             "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "C",
             "A",
             "B",
+            "D"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "A",
+            "B",
+            "D",
             "C"
           ]
-        },
-        "inf-10-ss-005": {
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-10-logic-034",
+        "inf-10-logic-023",
+        "inf-10-ss-027",
+        "inf-10-ss-008",
+        "inf-10-ss-012",
+        "inf-10-logic-033",
+        "inf-10-ss-017",
+        "inf-10-ss-030",
+        "inf-10-logic-006",
+        "inf-10-ss-014"
+      ],
+      "orders": {
+        "inf-10-logic-023": {
           "options": [
-            "B",
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-006": {
+          "options": [
             "D",
             "C",
+            "B",
             "A"
           ]
         },
-        "inf-10-logic-019": {
+        "inf-10-ss-014": {
           "options": [
-            "C",
+            "A",
             "D",
-            "B",
-            "A"
+            "C",
+            "B"
           ]
         }
       },
       "max_score": 14
     },
     {
-      "number": 8,
+      "number": 9,
       "task_ids": [
-        "inf-10-ss-032",
-        "inf-10-logic-006",
-        "inf-10-ss-038",
-        "inf-10-logic-042",
-        "inf-10-logic-038",
         "inf-10-ss-012",
-        "inf-10-ss-043",
-        "inf-10-ss-029",
-        "inf-10-ss-030",
-        "inf-10-logic-007"
+        "inf-10-logic-043",
+        "inf-10-ss-003",
+        "inf-10-logic-007",
+        "inf-10-ss-014",
+        "inf-10-logic-001",
+        "inf-10-ss-040",
+        "inf-10-logic-038",
+        "inf-10-ss-017",
+        "inf-10-ss-006"
       ],
       "orders": {
-        "inf-10-logic-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-038": {
+        "inf-10-ss-003": {
           "options": [
             "B",
             "A",
@@ -1604,35 +1546,9 @@
         },
         "inf-10-logic-007": {
           "options": [
-            "B",
             "C",
             "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 9,
-      "task_ids": [
-        "inf-10-logic-039",
-        "inf-10-ss-014",
-        "inf-10-ss-015",
-        "inf-10-logic-019",
-        "inf-10-ss-018",
-        "inf-10-logic-015",
-        "inf-10-logic-033",
-        "inf-10-ss-026",
-        "inf-10-ss-029",
-        "inf-10-ss-030"
-      ],
-      "orders": {
-        "inf-10-logic-039": {
-          "options": [
-            "D",
             "B",
-            "C",
             "A"
           ]
         },
@@ -1644,61 +1560,75 @@
             "C"
           ]
         },
-        "inf-10-ss-015": {
+        "inf-10-logic-001": {
           "options": [
-            "A",
-            "C",
-            "D",
-            "B"
+            "B",
+            "A"
           ]
         },
-        "inf-10-logic-019": {
+        "inf-10-logic-038": {
           "options": [
-            "A",
-            "B",
             "C",
+            "B",
+            "A",
             "D"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 10,
       "task_ids": [
-        "inf-10-logic-046",
-        "inf-10-logic-047",
-        "inf-10-ss-012",
-        "inf-10-logic-008",
-        "inf-10-ss-045",
-        "inf-10-ss-005",
+        "inf-10-ss-040",
+        "inf-10-logic-042",
         "inf-10-ss-023",
-        "inf-10-ss-030",
-        "inf-10-ss-027",
-        "inf-10-logic-050"
+        "inf-10-logic-033",
+        "inf-10-logic-034",
+        "inf-10-ss-015",
+        "inf-10-ss-044",
+        "inf-10-ss-011",
+        "inf-10-logic-005",
+        "inf-10-ss-001"
       ],
       "orders": {
-        "inf-10-logic-046": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-008": {
+        "inf-10-logic-042": {
           "options": [
             "B",
             "C",
-            "A",
-            "D"
+            "D",
+            "A"
           ]
         },
-        "inf-10-ss-005": {
+        "inf-10-ss-015": {
           "options": [
-            "A",
             "D",
             "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-005": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "A",
+            "C",
+            "D",
             "B"
           ]
         }
@@ -1708,114 +1638,86 @@
     {
       "number": 11,
       "task_ids": [
-        "inf-10-ss-001",
-        "inf-10-ss-004",
-        "inf-10-logic-045",
-        "inf-10-ss-014",
-        "inf-10-ss-015",
-        "inf-10-ss-026",
-        "inf-10-logic-047",
-        "inf-10-logic-007",
-        "inf-10-ss-027",
-        "inf-10-logic-024"
+        "inf-10-logic-019",
+        "inf-10-ss-038",
+        "inf-10-ss-030",
+        "inf-10-logic-001",
+        "inf-10-logic-003",
+        "inf-10-ss-045",
+        "inf-10-ss-033",
+        "inf-10-ss-023",
+        "inf-10-ss-044",
+        "inf-10-logic-025"
       ],
       "orders": {
-        "inf-10-ss-001": {
+        "inf-10-logic-019": {
           "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
-            "A",
             "D",
             "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "C",
-            "D",
             "B",
             "A"
           ]
         },
-        "inf-10-logic-007": {
+        "inf-10-logic-001": {
           "options": [
             "B",
-            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-003": {
+          "options": [
             "A",
-            "D"
+            "C",
+            "D",
+            "B"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 12,
       "task_ids": [
-        "inf-10-ss-004",
+        "inf-10-ss-011",
+        "inf-10-ss-012",
+        "inf-10-ss-006",
+        "inf-10-ss-003",
+        "inf-10-ss-027",
         "inf-10-logic-050",
+        "inf-10-logic-011",
         "inf-10-ss-026",
-        "inf-10-ss-001",
-        "inf-10-ss-014",
-        "inf-10-logic-008",
-        "inf-10-logic-033",
-        "inf-10-logic-005",
-        "inf-10-ss-040",
-        "inf-10-ss-015"
+        "inf-10-logic-001",
+        "inf-10-logic-006"
       ],
       "orders": {
-        "inf-10-ss-001": {
+        "inf-10-ss-006": {
           "options": [
             "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
             "B",
             "C",
-            "A",
             "D"
           ]
         },
-        "inf-10-logic-008": {
+        "inf-10-ss-003": {
           "options": [
-            "C",
             "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
             "B",
             "A"
           ]
         },
-        "inf-10-logic-005": {
+        "inf-10-logic-006": {
           "options": [
-            "C",
             "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
+            "D",
+            "C"
           ]
         }
       },
@@ -1824,35 +1726,25 @@
     {
       "number": 13,
       "task_ids": [
+        "inf-10-ss-023",
+        "inf-10-logic-001",
+        "inf-10-logic-043",
+        "inf-10-logic-008",
+        "inf-10-ss-012",
+        "inf-10-ss-046",
         "inf-10-ss-038",
-        "inf-10-ss-015",
-        "inf-10-logic-033",
-        "inf-10-logic-047",
-        "inf-10-ss-004",
-        "inf-10-ss-048",
-        "inf-10-ss-006",
-        "inf-10-ss-014",
-        "inf-10-logic-007",
-        "inf-10-logic-024"
+        "inf-10-logic-045",
+        "inf-10-ss-030",
+        "inf-10-ss-029"
       ],
       "orders": {
-        "inf-10-ss-015": {
+        "inf-10-logic-001": {
           "options": [
-            "C",
             "B",
-            "D",
             "A"
           ]
         },
-        "inf-10-ss-006": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-014": {
+        "inf-10-logic-008": {
           "options": [
             "C",
             "A",
@@ -1860,7 +1752,7 @@
             "D"
           ]
         },
-        "inf-10-logic-007": {
+        "inf-10-logic-045": {
           "options": [
             "A",
             "C",
@@ -1869,61 +1761,53 @@
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 14,
       "task_ids": [
+        "inf-10-ss-006",
+        "inf-10-ss-045",
+        "inf-10-logic-038",
         "inf-10-ss-033",
-        "inf-10-logic-018",
-        "inf-10-ss-003",
-        "inf-10-ss-020",
-        "inf-10-ss-032",
-        "inf-10-logic-045",
-        "inf-10-ss-001",
+        "inf-10-logic-015",
+        "inf-10-ss-023",
+        "inf-10-logic-009",
         "inf-10-logic-042",
         "inf-10-ss-027",
-        "inf-10-logic-007"
+        "inf-10-ss-029"
       ],
       "orders": {
-        "inf-10-ss-003": {
+        "inf-10-ss-006": {
           "options": [
-            "A",
-            "B",
             "D",
-            "C"
+            "A",
+            "C",
+            "B"
           ]
         },
-        "inf-10-logic-045": {
+        "inf-10-logic-038": {
           "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
+            "B",
             "D",
             "C",
-            "B",
             "A"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
           ]
         },
         "inf-10-logic-042": {
           "options": [
             "C",
-            "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
             "A",
-            "C",
-            "B",
-            "D"
+            "B"
           ]
         }
       },
@@ -1932,82 +1816,98 @@
     {
       "number": 15,
       "task_ids": [
-        "inf-10-ss-012",
-        "inf-10-ss-003",
-        "inf-10-logic-019",
-        "inf-10-logic-047",
-        "inf-10-logic-011",
-        "inf-10-logic-024",
-        "inf-10-ss-018",
-        "inf-10-ss-043",
-        "inf-10-ss-035",
-        "inf-10-ss-030"
-      ],
-      "orders": {
-        "inf-10-ss-003": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-10-ss-012",
-        "inf-10-logic-008",
-        "inf-10-ss-005",
-        "inf-10-ss-026",
+        "inf-10-ss-040",
+        "inf-10-logic-034",
         "inf-10-ss-032",
-        "inf-10-ss-038",
-        "inf-10-logic-050",
-        "inf-10-ss-001",
-        "inf-10-logic-045",
-        "inf-10-logic-015"
+        "inf-10-logic-008",
+        "inf-10-ss-015",
+        "inf-10-logic-011",
+        "inf-10-ss-020",
+        "inf-10-ss-003",
+        "inf-10-ss-030",
+        "inf-10-logic-025"
       ],
       "orders": {
         "inf-10-logic-008": {
           "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
             "D",
             "B",
             "C",
             "A"
           ]
-        },
-        "inf-10-ss-005": {
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-10-ss-008",
+        "inf-10-logic-005",
+        "inf-10-ss-035",
+        "inf-10-ss-030",
+        "inf-10-ss-043",
+        "inf-10-logic-003",
+        "inf-10-logic-009",
+        "inf-10-ss-038",
+        "inf-10-ss-015",
+        "inf-10-logic-023"
+      ],
+      "orders": {
+        "inf-10-logic-005": {
           "options": [
-            "C",
             "B",
             "A",
+            "C",
             "D"
           ]
         },
-        "inf-10-ss-001": {
+        "inf-10-logic-003": {
           "options": [
             "B",
             "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
             "D",
+            "B",
+            "A",
             "C"
           ]
         },
-        "inf-10-logic-045": {
+        "inf-10-ss-015": {
           "options": [
-            "A",
             "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
             "B",
-            "C"
+            "A",
+            "C",
+            "D"
           ]
         }
       },
@@ -2016,114 +1916,104 @@
     {
       "number": 17,
       "task_ids": [
-        "inf-10-logic-019",
         "inf-10-ss-015",
-        "inf-10-ss-006",
-        "inf-10-logic-039",
-        "inf-10-ss-023",
-        "inf-10-logic-047",
-        "inf-10-ss-027",
-        "inf-10-ss-032",
-        "inf-10-ss-029",
-        "inf-10-logic-033"
+        "inf-10-logic-001",
+        "inf-10-ss-047",
+        "inf-10-ss-014",
+        "inf-10-ss-038",
+        "inf-10-logic-033",
+        "inf-10-ss-008",
+        "inf-10-logic-043",
+        "inf-10-logic-019",
+        "inf-10-ss-006"
       ],
       "orders": {
-        "inf-10-logic-019": {
+        "inf-10-ss-015": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-001": {
           "options": [
             "B",
-            "D",
+            "A"
+          ]
+        },
+        "inf-10-ss-047": {
+          "options": [
             "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "B",
+            "A",
+            "D",
             "C"
           ]
         },
-        "inf-10-ss-015": {
+        "inf-10-logic-019": {
           "options": [
-            "B",
-            "D",
             "C",
-            "A"
+            "D",
+            "A",
+            "B"
           ]
         },
         "inf-10-ss-006": {
           "options": [
             "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "D",
-            "B",
             "A",
-            "C"
+            "D",
+            "B"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 18,
       "task_ids": [
-        "inf-10-ss-015",
-        "inf-10-logic-042",
-        "inf-10-logic-019",
-        "inf-10-ss-001",
+        "inf-10-ss-030",
+        "inf-10-logic-045",
+        "inf-10-logic-034",
+        "inf-10-ss-044",
+        "inf-10-logic-023",
         "inf-10-logic-015",
-        "inf-10-ss-026",
-        "inf-10-ss-014",
-        "inf-10-logic-038",
-        "inf-10-ss-004",
-        "inf-10-ss-027"
+        "inf-10-ss-032",
+        "inf-10-ss-015",
+        "inf-10-ss-017",
+        "inf-10-ss-040"
       ],
       "orders": {
-        "inf-10-ss-015": {
+        "inf-10-logic-045": {
           "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
-            "D",
             "A",
             "B",
+            "D",
             "C"
           ]
         },
-        "inf-10-logic-038": {
+        "inf-10-logic-023": {
           "options": [
             "B",
-            "D",
+            "A",
             "C",
-            "A"
+            "D"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
           ]
         }
       },
@@ -2132,90 +2022,88 @@
     {
       "number": 19,
       "task_ids": [
-        "inf-10-logic-033",
-        "inf-10-logic-015",
-        "inf-10-logic-007",
-        "inf-10-ss-018",
-        "inf-10-ss-015",
-        "inf-10-ss-030",
-        "inf-10-ss-008",
+        "inf-10-logic-043",
+        "inf-10-logic-001",
         "inf-10-ss-014",
-        "inf-10-logic-050",
-        "inf-10-ss-043"
+        "inf-10-ss-038",
+        "inf-10-ss-043",
+        "inf-10-ss-006",
+        "inf-10-ss-005",
+        "inf-10-ss-033",
+        "inf-10-logic-038",
+        "inf-10-logic-019"
       ],
       "orders": {
-        "inf-10-logic-007": {
+        "inf-10-logic-001": {
           "options": [
-            "A",
             "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
+            "A"
           ]
         },
         "inf-10-ss-014": {
           "options": [
-            "C",
             "D",
             "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-10-logic-045",
-        "inf-10-ss-018",
-        "inf-10-ss-004",
-        "inf-10-logic-024",
-        "inf-10-logic-047",
-        "inf-10-ss-015",
-        "inf-10-ss-020",
-        "inf-10-logic-019",
-        "inf-10-ss-045",
-        "inf-10-ss-001"
-      ],
-      "orders": {
-        "inf-10-logic-045": {
-          "options": [
             "B",
-            "D",
-            "A",
             "C"
           ]
         },
-        "inf-10-ss-015": {
+        "inf-10-ss-006": {
           "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "D",
             "A",
             "B",
-            "D",
             "C"
           ]
         },
         "inf-10-logic-019": {
           "options": [
-            "B",
-            "A",
             "C",
-            "D"
+            "D",
+            "B",
+            "A"
           ]
-        },
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-10-ss-033",
+        "inf-10-ss-004",
+        "inf-10-logic-050",
+        "inf-10-ss-038",
+        "inf-10-logic-034",
+        "inf-10-logic-047",
+        "inf-10-ss-011",
+        "inf-10-logic-011",
+        "inf-10-ss-001",
+        "inf-10-ss-020"
+      ],
+      "orders": {
         "inf-10-ss-001": {
           "options": [
-            "B",
             "A",
+            "D",
             "C",
-            "D"
+            "B"
           ]
         }
       },
@@ -2224,222 +2112,54 @@
     {
       "number": 21,
       "task_ids": [
-        "inf-10-logic-050",
-        "inf-10-logic-038",
-        "inf-10-ss-005",
-        "inf-10-logic-008",
-        "inf-10-ss-046",
+        "inf-10-ss-017",
+        "inf-10-ss-011",
+        "inf-10-ss-008",
         "inf-10-ss-030",
+        "inf-10-logic-045",
+        "inf-10-logic-007",
         "inf-10-ss-040",
-        "inf-10-logic-048",
-        "inf-10-ss-048",
-        "inf-10-ss-033"
+        "inf-10-ss-033",
+        "inf-10-logic-034",
+        "inf-10-logic-021"
       ],
       "orders": {
-        "inf-10-logic-038": {
+        "inf-10-logic-045": {
           "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "A",
             "D",
+            "A",
             "B",
             "C"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-10-ss-030",
-        "inf-10-ss-027",
-        "inf-10-logic-033",
-        "inf-10-ss-029",
-        "inf-10-logic-019",
-        "inf-10-ss-033",
-        "inf-10-logic-047",
-        "inf-10-ss-048",
-        "inf-10-logic-050",
-        "inf-10-ss-046"
-      ],
-      "orders": {
-        "inf-10-logic-019": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-10-ss-006",
-        "inf-10-ss-035",
-        "inf-10-logic-039",
-        "inf-10-logic-006",
-        "inf-10-ss-018",
-        "inf-10-logic-007",
-        "inf-10-ss-048",
-        "inf-10-ss-003",
-        "inf-10-logic-045",
-        "inf-10-ss-015"
-      ],
-      "orders": {
-        "inf-10-ss-006": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
           ]
         },
         "inf-10-logic-007": {
           "options": [
-            "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-003": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
             "B",
             "A",
-            "D",
             "C"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
-      "number": 24,
+      "number": 22,
       "task_ids": [
-        "inf-10-ss-046",
-        "inf-10-ss-012",
-        "inf-10-ss-043",
-        "inf-10-ss-006",
-        "inf-10-ss-018",
-        "inf-10-logic-050",
-        "inf-10-logic-006",
-        "inf-10-logic-045",
-        "inf-10-logic-019",
-        "inf-10-ss-003"
-      ],
-      "orders": {
-        "inf-10-ss-006": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-003": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-10-logic-046",
-        "inf-10-logic-050",
-        "inf-10-ss-027",
+        "inf-10-ss-038",
+        "inf-10-logic-001",
         "inf-10-ss-014",
+        "inf-10-logic-042",
+        "inf-10-ss-033",
         "inf-10-ss-005",
-        "inf-10-ss-023",
-        "inf-10-logic-007",
-        "inf-10-ss-001",
-        "inf-10-logic-015",
-        "inf-10-ss-015"
+        "inf-10-ss-017",
+        "inf-10-ss-006",
+        "inf-10-logic-006",
+        "inf-10-logic-045"
       ],
       "orders": {
-        "inf-10-logic-046": {
+        "inf-10-logic-001": {
           "options": [
-            "D",
-            "C",
             "B",
             "A"
           ]
@@ -2452,23 +2172,23 @@
             "D"
           ]
         },
+        "inf-10-logic-042": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
         "inf-10-ss-005": {
           "options": [
-            "D",
-            "A",
             "C",
-            "B"
+            "D",
+            "B",
+            "A"
           ]
         },
-        "inf-10-logic-007": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-001": {
+        "inf-10-ss-006": {
           "options": [
             "A",
             "B",
@@ -2476,10 +2196,18 @@
             "C"
           ]
         },
-        "inf-10-ss-015": {
+        "inf-10-logic-006": {
           "options": [
             "C",
             "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-045": {
+          "options": [
+            "B",
+            "C",
             "A",
             "D"
           ]
@@ -2488,37 +2216,21 @@
       "max_score": 14
     },
     {
-      "number": 26,
+      "number": 23,
       "task_ids": [
+        "inf-10-ss-001",
+        "inf-10-ss-023",
+        "inf-10-logic-021",
         "inf-10-logic-045",
-        "inf-10-logic-047",
-        "inf-10-logic-039",
-        "inf-10-ss-040",
-        "inf-10-ss-043",
         "inf-10-logic-007",
+        "inf-10-ss-012",
+        "inf-10-logic-034",
+        "inf-10-ss-038",
         "inf-10-ss-045",
-        "inf-10-ss-006",
-        "inf-10-ss-033",
-        "inf-10-ss-004"
+        "inf-10-ss-029"
       ],
       "orders": {
-        "inf-10-logic-045": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-007": {
+        "inf-10-ss-001": {
           "options": [
             "B",
             "D",
@@ -2526,12 +2238,170 @@
             "A"
           ]
         },
-        "inf-10-ss-006": {
+        "inf-10-logic-045": {
           "options": [
+            "A",
             "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
             "B",
+            "C",
             "A",
             "D"
+          ]
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-10-ss-026",
+        "inf-10-logic-009",
+        "inf-10-ss-012",
+        "inf-10-logic-024",
+        "inf-10-ss-001",
+        "inf-10-logic-005",
+        "inf-10-ss-044",
+        "inf-10-logic-046",
+        "inf-10-ss-045",
+        "inf-10-ss-038"
+      ],
+      "orders": {
+        "inf-10-logic-009": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-logic-005": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-046": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-10-logic-034",
+        "inf-10-logic-043",
+        "inf-10-ss-015",
+        "inf-10-logic-011",
+        "inf-10-logic-008",
+        "inf-10-ss-043",
+        "inf-10-ss-004",
+        "inf-10-ss-040",
+        "inf-10-ss-032",
+        "inf-10-ss-006"
+      ],
+      "orders": {
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 26,
+      "task_ids": [
+        "inf-10-ss-014",
+        "inf-10-ss-023",
+        "inf-10-logic-048",
+        "inf-10-ss-006",
+        "inf-10-ss-015",
+        "inf-10-logic-024",
+        "inf-10-logic-034",
+        "inf-10-ss-040",
+        "inf-10-ss-005",
+        "inf-10-logic-038"
+      ],
+      "orders": {
+        "inf-10-ss-014": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
           ]
         }
       },
@@ -2540,150 +2410,52 @@
     {
       "number": 27,
       "task_ids": [
-        "inf-10-logic-011",
-        "inf-10-ss-048",
-        "inf-10-logic-047",
-        "inf-10-logic-008",
+        "inf-10-ss-045",
         "inf-10-ss-027",
-        "inf-10-ss-001",
-        "inf-10-logic-049",
-        "inf-10-ss-008",
+        "inf-10-ss-004",
+        "inf-10-logic-043",
+        "inf-10-logic-034",
+        "inf-10-logic-019",
+        "inf-10-ss-047",
+        "inf-10-logic-033",
         "inf-10-ss-033",
-        "inf-10-ss-046"
+        "inf-10-ss-030"
       ],
       "orders": {
-        "inf-10-logic-008": {
+        "inf-10-logic-019": {
           "options": [
-            "D",
-            "C",
             "B",
-            "A"
+            "D",
+            "A",
+            "C"
           ]
         },
-        "inf-10-ss-001": {
+        "inf-10-ss-047": {
           "options": [
-            "C",
-            "A",
+            "B",
             "D",
-            "B"
+            "C",
+            "A"
           ]
         }
       },
-      "max_score": 14
+      "max_score": 16
     },
     {
       "number": 28,
       "task_ids": [
-        "inf-10-ss-032",
-        "inf-10-logic-046",
-        "inf-10-ss-001",
-        "inf-10-logic-047",
-        "inf-10-ss-012",
-        "inf-10-ss-043",
-        "inf-10-logic-007",
-        "inf-10-ss-003",
-        "inf-10-ss-018",
-        "inf-10-logic-039"
-      ],
-      "orders": {
-        "inf-10-logic-046": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-ss-003": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 29,
-      "task_ids": [
-        "inf-10-ss-003",
-        "inf-10-ss-020",
-        "inf-10-ss-032",
-        "inf-10-logic-008",
-        "inf-10-ss-038",
-        "inf-10-logic-006",
-        "inf-10-logic-042",
-        "inf-10-logic-045",
         "inf-10-ss-015",
-        "inf-10-ss-006"
+        "inf-10-ss-006",
+        "inf-10-ss-044",
+        "inf-10-logic-024",
+        "inf-10-logic-018",
+        "inf-10-ss-035",
+        "inf-10-logic-033",
+        "inf-10-ss-020",
+        "inf-10-ss-040",
+        "inf-10-logic-034"
       ],
       "orders": {
-        "inf-10-ss-003": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
         "inf-10-ss-015": {
           "options": [
             "C",
@@ -2696,58 +2468,104 @@
           "options": [
             "D",
             "A",
-            "B",
-            "C"
+            "C",
+            "B"
           ]
         }
       },
       "max_score": 14
     },
     {
-      "number": 30,
+      "number": 29,
       "task_ids": [
-        "inf-10-logic-018",
-        "inf-10-logic-019",
+        "inf-10-ss-032",
+        "inf-10-logic-021",
         "inf-10-ss-015",
-        "inf-10-ss-035",
-        "inf-10-ss-001",
-        "inf-10-ss-043",
-        "inf-10-ss-040",
-        "inf-10-logic-050",
-        "inf-10-logic-011",
-        "inf-10-ss-003"
+        "inf-10-ss-038",
+        "inf-10-logic-019",
+        "inf-10-ss-029",
+        "inf-10-logic-001",
+        "inf-10-logic-033",
+        "inf-10-ss-017",
+        "inf-10-ss-006"
       ],
       "orders": {
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
         "inf-10-logic-019": {
           "options": [
             "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
             "C",
+            "D",
             "B",
             "A"
+          ]
+        }
+      },
+      "max_score": 16
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-10-logic-039",
+        "inf-10-ss-004",
+        "inf-10-ss-026",
+        "inf-10-logic-001",
+        "inf-10-ss-015",
+        "inf-10-ss-040",
+        "inf-10-ss-030",
+        "inf-10-ss-032",
+        "inf-10-logic-045",
+        "inf-10-logic-015"
+      ],
+      "orders": {
+        "inf-10-logic-039": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
           ]
         },
         "inf-10-ss-015": {
           "options": [
-            "A",
             "D",
             "C",
+            "A",
             "B"
           ]
         },
-        "inf-10-ss-001": {
+        "inf-10-logic-045": {
           "options": [
+            "C",
             "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-003": {
-          "options": [
-            "C",
             "B",
-            "D",
-            "A"
+            "D"
           ]
         }
       },

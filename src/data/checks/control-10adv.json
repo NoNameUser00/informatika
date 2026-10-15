@@ -27,7 +27,8 @@
         "inf-10-ss-008",
         "inf-10-ss-029",
         "inf-10-ss-030",
-        "inf-10-ss-031"
+        "inf-10-ss-031",
+        "inf-10-ss-044"
       ]
     },
     {
@@ -39,6 +40,7 @@
         }
       ],
       "task_ids": [
+        "inf-10-ss-011",
         "inf-10-ss-012",
         "inf-10-ss-032",
         "inf-10-ss-033",
@@ -60,18 +62,15 @@
       ],
       "task_ids": [
         "inf-10-ss-020",
-        "inf-10-ss-022",
         "inf-10-ss-023",
         "inf-10-ss-025",
         "inf-10-ss-040",
         "inf-10-ss-043",
         "inf-10-ss-017",
-        "inf-10-ss-018",
         "inf-10-ss-038",
         "inf-10-ss-047",
         "inf-10-ss-026",
-        "inf-10-ss-027",
-        "inf-10-ss-048"
+        "inf-10-ss-027"
       ]
     },
     {
@@ -84,6 +83,7 @@
       ],
       "task_ids": [
         "inf-10-logic-001",
+        "inf-10-logic-003",
         "inf-10-logic-009",
         "inf-10-logic-038",
         "inf-10-logic-045",
@@ -109,7 +109,6 @@
         "inf-10-logic-008",
         "inf-10-logic-014",
         "inf-10-logic-015",
-        "inf-10-logic-036",
         "inf-10-logic-047",
         "inf-10-logic-018",
         "inf-10-logic-019",
@@ -126,6 +125,7 @@
       ],
       "task_ids": [
         "inf-10-logic-021",
+        "inf-10-logic-023",
         "inf-10-logic-039",
         "inf-10-logic-041",
         "inf-10-logic-049",
@@ -297,6 +297,26 @@
       "key": "4"
     },
     {
+      "id": "inf-10-ss-044",
+      "lesson": "10ss-02-transfer",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Число 45 записано в двоичной системе счисления. Сколько цифр в этой записи, если ведущие нули не записывают? Запишите только число.",
+      "base": 10,
+      "expected": 6,
+      "key": "6"
+    },
+    {
+      "id": "inf-10-ss-011",
+      "lesson": "10ss-03-arith",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Сложите двоичные числа 1101 и 111. Запишите результат в двоичной системе, без указания основания.",
+      "base": 2,
+      "expected": 20,
+      "key": "10100"
+    },
+    {
       "id": "inf-10-ss-012",
       "lesson": "10ss-03-arith",
       "type": "numeric_base",
@@ -448,33 +468,6 @@
       "key": "16777216"
     },
     {
-      "id": "inf-10-ss-022",
-      "lesson": "10gfx-01-image",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Чем приходится платить за экономию места при сохранении изображения с палитрой из 256 цветов?",
-      "options": [
-        {
-          "id": "C",
-          "text": "Размером самого экрана: он перестаёт показывать картинку"
-        },
-        {
-          "id": "B",
-          "text": "Скоростью работы компьютера: палитра обрабатывается медленнее"
-        },
-        {
-          "id": "A",
-          "text": "Точностью цвета: часть оттенков не передаётся, и на градиентах появляются заметные ступеньки"
-        },
-        {
-          "id": "D",
-          "text": "Ничем: палитра хранит те же цвета, что и режим TrueColor"
-        }
-      ],
-      "correct": "C",
-      "key": "C"
-    },
-    {
       "id": "inf-10-ss-023",
       "lesson": "10gfx-02-sound",
       "type": "numeric_base",
@@ -542,16 +535,6 @@
       "key": "256"
     },
     {
-      "id": "inf-10-ss-018",
-      "lesson": "10ss-05-text",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "В файле 500 русских букв без пробелов. На сколько байт этот файл больше в UTF-8, чем в однобайтовой кодировке Windows-1251? Запишите только число.",
-      "base": 10,
-      "expected": 500,
-      "key": "500"
-    },
-    {
       "id": "inf-10-ss-038",
       "lesson": "10ss-05-text",
       "type": "numeric_base",
@@ -609,16 +592,6 @@
       "key": "240000"
     },
     {
-      "id": "inf-10-ss-048",
-      "lesson": "10ss-06-tasks",
-      "type": "numeric_base",
-      "points": 1,
-      "prompt": "Один кадр изображения экрана 1280 × 1024 пикселя сохраняется без сжатия с глубиной цвета 32 бита. Сколько мегабайт он занимает? Запишите только число.",
-      "base": 10,
-      "expected": 5,
-      "key": "5"
-    },
-    {
       "id": "inf-10-logic-001",
       "lesson": "10logic-01-ops",
       "type": "single_choice",
@@ -632,6 +605,33 @@
         {
           "id": "A",
           "text": "Ложь"
+        }
+      ],
+      "correct": "B",
+      "key": "B"
+    },
+    {
+      "id": "inf-10-logic-003",
+      "lesson": "10logic-01-ops",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что такое предикат?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Число"
+        },
+        {
+          "id": "A",
+          "text": "Утверждение с переменными"
+        },
+        {
+          "id": "C",
+          "text": "Вопрос"
+        },
+        {
+          "id": "B",
+          "text": "Готовая истина"
         }
       ],
       "correct": "B",
@@ -947,33 +947,6 @@
       "key": "3"
     },
     {
-      "id": "inf-10-logic-036",
-      "lesson": "10logic-04-normal",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Выражение (A ∨ B) ∧ ¬C истинно при A = 0, B = 0, C = 0 и при A = 1, B = 0, C = 0. Что верно о его КНФ?",
-      "options": [
-        {
-          "id": "D",
-          "text": "В КНФ войдёт один член, потому что выражение ложно во всех строках с C = 1"
-        },
-        {
-          "id": "C",
-          "text": "КНФ совпадает с ДНФ, потому что обе формы строятся по одним и тем же строкам"
-        },
-        {
-          "id": "A",
-          "text": "В КНФ войдут члены для всех ложных строк, то есть ровно 5 членов, соединённых конъюнкцией"
-        },
-        {
-          "id": "B",
-          "text": "В КНФ войдут только два члена — по числу истинных строк"
-        }
-      ],
-      "correct": "C",
-      "key": "C"
-    },
-    {
       "id": "inf-10-logic-047",
       "lesson": "10logic-04-normal",
       "type": "numeric_base",
@@ -1039,6 +1012,33 @@
       "base": 10,
       "expected": 15,
       "key": "15"
+    },
+    {
+      "id": "inf-10-logic-023",
+      "lesson": "10logic-06-venn",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что обозначает область A ∧ ¬B на диаграмме Эйлера-Венна?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Объекты, которые входят в круг A, но не входят в круг B"
+        },
+        {
+          "id": "C",
+          "text": "Объекты, которые не входят ни в один из кругов"
+        },
+        {
+          "id": "B",
+          "text": "Объекты, которые входят в оба круга"
+        },
+        {
+          "id": "D",
+          "text": "Объекты, которые входят в круг B, но не входят в круг A"
+        }
+      ],
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-039",
@@ -1176,89 +1176,57 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-10-ss-006",
-        "inf-10-logic-041",
-        "inf-10-ss-023",
-        "inf-10-ss-017",
-        "inf-10-logic-005",
-        "inf-10-logic-039",
-        "inf-10-ss-038",
-        "inf-10-logic-036",
-        "inf-10-ss-025",
-        "inf-10-logic-046",
-        "inf-10-ss-005",
-        "inf-10-logic-025",
-        "inf-10-ss-037",
-        "inf-10-ss-012",
         "inf-10-logic-007",
-        "inf-10-logic-047",
-        "inf-10-logic-013",
+        "inf-10-logic-014",
+        "inf-10-ss-001",
+        "inf-10-logic-005",
         "inf-10-ss-031",
+        "inf-10-ss-037",
+        "inf-10-ss-025",
+        "inf-10-ss-015",
+        "inf-10-logic-049",
+        "inf-10-logic-003",
+        "inf-10-ss-038",
+        "inf-10-logic-025",
         "inf-10-logic-001",
-        "inf-10-ss-014"
+        "inf-10-ss-014",
+        "inf-10-ss-005",
+        "inf-10-ss-046",
+        "inf-10-ss-026",
+        "inf-10-logic-041",
+        "inf-10-logic-013",
+        "inf-10-ss-003"
       ],
       "orders": {
-        "inf-10-ss-006": {
+        "inf-10-logic-007": {
           "options": [
+            "A",
             "B",
             "D",
-            "C",
-            "A"
+            "C"
           ]
         },
-        "inf-10-logic-041": {
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "¬A ∨ ¬B",
+            "0",
+            "¬A ∨ B"
+          ]
+        },
+        "inf-10-ss-001": {
           "options": [
+            "A",
             "D",
-            "B",
             "C",
-            "A"
+            "B"
           ]
         },
         "inf-10-logic-005": {
           "options": [
-            "C",
-            "B",
             "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
             "D",
             "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-046": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "D",
-            "C",
-            "A",
             "B"
           ]
         },
@@ -1266,38 +1234,78 @@
           "options": [
             "D",
             "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "B",
+            "D",
             "A",
             "C"
           ]
         },
-        "inf-10-logic-007": {
+        "inf-10-logic-003": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-014": {
           "options": [
             "C",
             "D",
             "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "A",
+            "D",
+            "C",
             "B"
           ]
         },
         "inf-10-logic-013": {
           "options": [
-            "A",
             "D",
+            "A",
             "C",
             "B"
           ]
         },
-        "inf-10-logic-001": {
+        "inf-10-ss-003": {
           "options": [
             "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
+            "C",
             "A",
-            "D",
-            "B",
-            "C"
+            "D"
           ]
         }
       },
@@ -1306,37 +1314,45 @@
     {
       "number": 2,
       "task_ids": [
-        "inf-10-logic-021",
-        "inf-10-logic-034",
-        "inf-10-ss-031",
-        "inf-10-logic-036",
-        "inf-10-ss-004",
-        "inf-10-ss-047",
-        "inf-10-ss-040",
-        "inf-10-logic-008",
-        "inf-10-ss-035",
-        "inf-10-ss-037",
-        "inf-10-ss-026",
-        "inf-10-logic-013",
-        "inf-10-logic-011",
-        "inf-10-logic-042",
-        "inf-10-ss-001",
-        "inf-10-ss-033",
-        "inf-10-logic-005",
-        "inf-10-ss-022",
         "inf-10-logic-041",
-        "inf-10-logic-006"
+        "inf-10-logic-014",
+        "inf-10-ss-043",
+        "inf-10-ss-001",
+        "inf-10-ss-040",
+        "inf-10-ss-033",
+        "inf-10-ss-031",
+        "inf-10-ss-044",
+        "inf-10-logic-048",
+        "inf-10-logic-045",
+        "inf-10-ss-032",
+        "inf-10-logic-013",
+        "inf-10-ss-008",
+        "inf-10-logic-050",
+        "inf-10-ss-014",
+        "inf-10-ss-025",
+        "inf-10-logic-025",
+        "inf-10-logic-009",
+        "inf-10-ss-037",
+        "inf-10-logic-007"
       ],
       "orders": {
-        "inf-10-logic-036": {
+        "inf-10-logic-041": {
           "options": [
             "A",
             "C",
-            "D",
-            "B"
+            "B",
+            "D"
           ]
         },
-        "inf-10-ss-047": {
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "¬A ∨ B",
+            "1",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-ss-001": {
           "options": [
             "B",
             "C",
@@ -1344,76 +1360,60 @@
             "A"
           ]
         },
-        "inf-10-logic-008": {
+        "inf-10-logic-045": {
           "options": [
             "B",
-            "A",
             "D",
+            "A",
             "C"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
           ]
         },
         "inf-10-ss-037": {
           "options": [
             "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
             "D",
             "C",
-            "B",
-            "A"
+            "B"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         }
       },
@@ -1422,161 +1422,29 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-10-logic-050",
-        "inf-10-logic-011",
-        "inf-10-logic-013",
-        "inf-10-ss-012",
-        "inf-10-logic-007",
-        "inf-10-ss-048",
-        "inf-10-ss-017",
-        "inf-10-ss-030",
-        "inf-10-ss-035",
-        "inf-10-logic-005",
-        "inf-10-ss-018",
-        "inf-10-logic-036",
-        "inf-10-logic-018",
-        "inf-10-ss-031",
-        "inf-10-logic-021",
-        "inf-10-logic-041",
-        "inf-10-ss-025",
-        "inf-10-logic-034",
-        "inf-10-ss-037",
-        "inf-10-ss-005"
-      ],
-      "orders": {
-        "inf-10-logic-013": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-10-ss-030",
-        "inf-10-ss-048",
-        "inf-10-ss-046",
-        "inf-10-ss-022",
-        "inf-10-logic-009",
-        "inf-10-logic-006",
-        "inf-10-ss-047",
-        "inf-10-ss-033",
-        "inf-10-logic-033",
-        "inf-10-logic-021",
-        "inf-10-ss-040",
-        "inf-10-ss-004",
-        "inf-10-ss-037",
-        "inf-10-logic-007",
-        "inf-10-ss-031",
+        "inf-10-ss-001",
+        "inf-10-logic-043",
         "inf-10-logic-014",
-        "inf-10-logic-041",
-        "inf-10-logic-047",
         "inf-10-logic-013",
-        "inf-10-logic-042"
+        "inf-10-ss-037",
+        "inf-10-logic-038",
+        "inf-10-ss-017",
+        "inf-10-ss-015",
+        "inf-10-ss-011",
+        "inf-10-logic-009",
+        "inf-10-ss-004",
+        "inf-10-logic-006",
+        "inf-10-ss-038",
+        "inf-10-logic-019",
+        "inf-10-logic-042",
+        "inf-10-ss-031",
+        "inf-10-ss-029",
+        "inf-10-ss-025",
+        "inf-10-logic-041",
+        "inf-10-ss-045"
       ],
       "orders": {
-        "inf-10-ss-022": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-047": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-007": {
+        "inf-10-ss-001": {
           "options": [
             "C",
             "D",
@@ -1586,13 +1454,61 @@
         },
         "inf-10-logic-014": {
           "right": [
-            "¬A ∨ B",
-            "0",
+            "¬A ∨ ¬B",
             "1",
-            "¬A ∨ ¬B"
+            "0",
+            "¬A ∨ B"
           ]
         },
-        "inf-10-logic-041": {
+        "inf-10-logic-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-006": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-logic-019": {
           "options": [
             "D",
             "C",
@@ -1600,19 +1516,135 @@
             "A"
           ]
         },
-        "inf-10-logic-013": {
+        "inf-10-logic-042": {
           "options": [
-            "C",
             "D",
+            "C",
             "A",
             "B"
           ]
         },
-        "inf-10-logic-042": {
+        "inf-10-ss-025": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-10-ss-038",
+        "inf-10-logic-014",
+        "inf-10-ss-025",
+        "inf-10-logic-041",
+        "inf-10-logic-015",
+        "inf-10-ss-005",
+        "inf-10-logic-034",
+        "inf-10-logic-038",
+        "inf-10-logic-013",
+        "inf-10-ss-029",
+        "inf-10-logic-021",
+        "inf-10-ss-046",
+        "inf-10-ss-045",
+        "inf-10-ss-012",
+        "inf-10-logic-023",
+        "inf-10-ss-020",
+        "inf-10-ss-037",
+        "inf-10-ss-031",
+        "inf-10-ss-001",
+        "inf-10-logic-007"
+      ],
+      "orders": {
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "¬A ∨ ¬B",
+            "0",
+            "1"
+          ]
+        },
+        "inf-10-ss-025": {
           "options": [
             "C",
             "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "C",
             "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "D",
+            "C",
+            "B",
             "A"
           ]
         }
@@ -1622,37 +1654,69 @@
     {
       "number": 5,
       "task_ids": [
-        "inf-10-ss-035",
-        "inf-10-ss-031",
+        "inf-10-logic-043",
+        "inf-10-logic-047",
+        "inf-10-ss-030",
         "inf-10-logic-009",
         "inf-10-ss-037",
-        "inf-10-ss-008",
-        "inf-10-logic-014",
-        "inf-10-ss-033",
-        "inf-10-logic-049",
-        "inf-10-ss-006",
+        "inf-10-ss-031",
         "inf-10-ss-025",
-        "inf-10-logic-013",
-        "inf-10-ss-040",
-        "inf-10-logic-038",
-        "inf-10-logic-025",
-        "inf-10-ss-048",
-        "inf-10-logic-018",
-        "inf-10-ss-026",
+        "inf-10-logic-003",
         "inf-10-logic-008",
+        "inf-10-ss-038",
+        "inf-10-ss-047",
+        "inf-10-ss-012",
+        "inf-10-logic-014",
+        "inf-10-ss-029",
+        "inf-10-logic-013",
         "inf-10-logic-041",
-        "inf-10-logic-005"
+        "inf-10-logic-042",
+        "inf-10-ss-044",
+        "inf-10-ss-045",
+        "inf-10-ss-032"
       ],
       "orders": {
         "inf-10-logic-009": {
           "options": [
             "D",
-            "B",
             "A",
-            "C"
+            "C",
+            "B"
           ]
         },
         "inf-10-ss-037": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-003": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-ss-047": {
           "options": [
             "C",
             "B",
@@ -1662,45 +1726,21 @@
         },
         "inf-10-logic-014": {
           "right": [
-            "¬A ∨ ¬B",
             "¬A ∨ B",
-            "1",
-            "0"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
+            "¬A ∨ ¬B",
+            "0",
+            "1"
           ]
         },
         "inf-10-logic-013": {
           "options": [
             "D",
-            "A",
             "C",
+            "A",
             "B"
           ]
         },
-        "inf-10-logic-038": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-008": {
+        "inf-10-logic-041": {
           "options": [
             "C",
             "D",
@@ -1708,19 +1748,11 @@
             "A"
           ]
         },
-        "inf-10-logic-041": {
+        "inf-10-logic-042": {
           "options": [
-            "A",
-            "D",
             "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
             "B",
             "A",
-            "C",
             "D"
           ]
         }
@@ -1730,128 +1762,98 @@
     {
       "number": 6,
       "task_ids": [
-        "inf-10-logic-047",
-        "inf-10-ss-015",
+        "inf-10-logic-041",
+        "inf-10-logic-005",
+        "inf-10-ss-023",
         "inf-10-ss-030",
+        "inf-10-ss-033",
+        "inf-10-ss-027",
         "inf-10-ss-031",
-        "inf-10-logic-039",
-        "inf-10-logic-006",
-        "inf-10-ss-037",
-        "inf-10-ss-026",
-        "inf-10-ss-047",
-        "inf-10-logic-013",
-        "inf-10-logic-043",
-        "inf-10-ss-032",
-        "inf-10-logic-007",
-        "inf-10-ss-005",
-        "inf-10-logic-046",
-        "inf-10-logic-001",
+        "inf-10-logic-045",
+        "inf-10-ss-029",
+        "inf-10-ss-004",
+        "inf-10-logic-025",
         "inf-10-logic-014",
-        "inf-10-ss-022",
-        "inf-10-ss-018",
-        "inf-10-logic-041"
+        "inf-10-ss-025",
+        "inf-10-logic-013",
+        "inf-10-ss-037",
+        "inf-10-logic-019",
+        "inf-10-logic-039",
+        "inf-10-ss-011",
+        "inf-10-logic-034",
+        "inf-10-ss-046"
       ],
       "orders": {
-        "inf-10-ss-015": {
+        "inf-10-logic-041": {
           "options": [
             "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "C",
             "B",
-            "A",
-            "D"
+            "D",
+            "C"
           ]
         },
-        "inf-10-ss-037": {
+        "inf-10-logic-005": {
           "options": [
             "B",
+            "D",
             "A",
-            "C",
-            "D"
+            "C"
           ]
         },
-        "inf-10-ss-047": {
+        "inf-10-logic-045": {
           "options": [
+            "B",
+            "D",
             "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "¬A ∨ B",
+            "¬A ∨ ¬B",
+            "0"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
             "C",
+            "A",
             "D",
             "B"
           ]
         },
         "inf-10-logic-013": {
           "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
             "D",
             "C",
             "B",
             "A"
           ]
         },
-        "inf-10-ss-005": {
+        "inf-10-ss-037": {
           "options": [
             "A",
             "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-046": {
-          "options": [
-            "C",
-            "A",
             "D",
             "B"
           ]
         },
-        "inf-10-logic-001": {
+        "inf-10-logic-019": {
           "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-039": {
+          "options": [
+            "C",
+            "D",
             "B",
             "A"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "¬A ∨ ¬B",
-            "1",
-            "0",
-            "¬A ∨ B"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
           ]
         }
       },
@@ -1860,112 +1862,90 @@
     {
       "number": 7,
       "task_ids": [
-        "inf-10-ss-018",
-        "inf-10-logic-024",
-        "inf-10-logic-008",
-        "inf-10-logic-018",
-        "inf-10-logic-038",
-        "inf-10-logic-014",
-        "inf-10-ss-031",
-        "inf-10-ss-008",
-        "inf-10-ss-030",
-        "inf-10-ss-015",
-        "inf-10-logic-006",
         "inf-10-ss-037",
-        "inf-10-logic-043",
-        "inf-10-logic-001",
-        "inf-10-ss-017",
-        "inf-10-ss-022",
-        "inf-10-logic-041",
-        "inf-10-logic-013",
         "inf-10-ss-023",
-        "inf-10-ss-014"
+        "inf-10-ss-005",
+        "inf-10-ss-031",
+        "inf-10-logic-021",
+        "inf-10-logic-034",
+        "inf-10-logic-041",
+        "inf-10-ss-008",
+        "inf-10-logic-039",
+        "inf-10-ss-045",
+        "inf-10-ss-027",
+        "inf-10-ss-030",
+        "inf-10-logic-013",
+        "inf-10-logic-019",
+        "inf-10-logic-011",
+        "inf-10-ss-033",
+        "inf-10-ss-032",
+        "inf-10-ss-025",
+        "inf-10-logic-015",
+        "inf-10-logic-014"
       ],
       "orders": {
-        "inf-10-logic-008": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-038": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "¬A ∨ B",
-            "1",
-            "¬A ∨ ¬B",
-            "0"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
         "inf-10-ss-037": {
           "options": [
-            "A",
-            "D",
+            "C",
             "B",
-            "C"
+            "D",
+            "A"
           ]
         },
-        "inf-10-logic-001": {
+        "inf-10-ss-005": {
           "options": [
+            "D",
+            "C",
             "A",
             "B"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
           ]
         },
         "inf-10-logic-041": {
           "options": [
             "D",
+            "C",
             "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-039": {
+          "options": [
             "A",
+            "D",
+            "B",
             "C"
           ]
         },
         "inf-10-logic-013": {
           "options": [
             "A",
+            "C",
             "B",
-            "D",
-            "C"
+            "D"
           ]
         },
-        "inf-10-ss-014": {
+        "inf-10-logic-019": {
           "options": [
             "A",
             "D",
             "B",
             "C"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ ¬B",
+            "¬A ∨ B",
+            "1",
+            "0"
           ]
         }
       },
@@ -1974,112 +1954,112 @@
     {
       "number": 8,
       "task_ids": [
-        "inf-10-ss-048",
-        "inf-10-logic-001",
-        "inf-10-ss-047",
         "inf-10-logic-013",
-        "inf-10-ss-022",
-        "inf-10-logic-041",
+        "inf-10-ss-045",
         "inf-10-logic-043",
-        "inf-10-ss-040",
-        "inf-10-logic-014",
-        "inf-10-logic-005",
-        "inf-10-ss-037",
-        "inf-10-ss-031",
-        "inf-10-ss-008",
-        "inf-10-logic-038",
-        "inf-10-ss-033",
-        "inf-10-ss-001",
+        "inf-10-ss-005",
+        "inf-10-ss-015",
+        "inf-10-logic-003",
+        "inf-10-logic-015",
+        "inf-10-logic-041",
+        "inf-10-ss-030",
         "inf-10-logic-008",
-        "inf-10-logic-024",
-        "inf-10-ss-035",
-        "inf-10-logic-018"
+        "inf-10-ss-040",
+        "inf-10-ss-014",
+        "inf-10-ss-025",
+        "inf-10-logic-001",
+        "inf-10-ss-031",
+        "inf-10-ss-023",
+        "inf-10-ss-037",
+        "inf-10-ss-008",
+        "inf-10-logic-014",
+        "inf-10-logic-050"
       ],
       "orders": {
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-003": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
         "inf-10-logic-001": {
           "options": [
             "B",
             "A"
           ]
         },
-        "inf-10-ss-047": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-ss-022": {
+        "inf-10-ss-037": {
           "options": [
             "C",
             "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "A",
-            "D",
-            "C",
             "B"
           ]
         },
         "inf-10-logic-014": {
           "right": [
-            "¬A ∨ B",
-            "0",
             "¬A ∨ ¬B",
-            "1"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-038": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
+            "1",
+            "0",
+            "¬A ∨ B"
           ]
         }
       },
@@ -2088,29 +2068,85 @@
     {
       "number": 9,
       "task_ids": [
-        "inf-10-logic-019",
-        "inf-10-ss-025",
-        "inf-10-ss-037",
+        "inf-10-logic-043",
+        "inf-10-logic-013",
+        "inf-10-ss-031",
+        "inf-10-ss-045",
+        "inf-10-logic-038",
+        "inf-10-logic-041",
+        "inf-10-ss-020",
+        "inf-10-logic-034",
+        "inf-10-logic-005",
         "inf-10-logic-014",
-        "inf-10-logic-025",
-        "inf-10-ss-038",
-        "inf-10-ss-032",
+        "inf-10-ss-029",
+        "inf-10-logic-007",
+        "inf-10-ss-025",
+        "inf-10-ss-033",
+        "inf-10-ss-027",
+        "inf-10-logic-049",
         "inf-10-ss-008",
         "inf-10-ss-006",
-        "inf-10-ss-033",
-        "inf-10-logic-013",
-        "inf-10-logic-039",
-        "inf-10-logic-009",
-        "inf-10-logic-047",
-        "inf-10-ss-017",
-        "inf-10-logic-011",
-        "inf-10-ss-048",
-        "inf-10-logic-041",
-        "inf-10-logic-006",
-        "inf-10-ss-031"
+        "inf-10-ss-037",
+        "inf-10-ss-046"
       ],
       "orders": {
-        "inf-10-logic-019": {
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-005": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "1",
+            "0",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-006": {
           "options": [
             "A",
             "B",
@@ -2118,76 +2154,12 @@
             "D"
           ]
         },
-        "inf-10-ss-025": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
         "inf-10-ss-037": {
           "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "¬A ∨ ¬B",
-            "1",
-            "¬A ∨ B",
-            "0"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
             "B",
             "D",
             "A",
             "C"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
           ]
         }
       },
@@ -2196,448 +2168,42 @@
     {
       "number": 10,
       "task_ids": [
-        "inf-10-ss-005",
-        "inf-10-logic-018",
-        "inf-10-ss-043",
-        "inf-10-logic-048",
-        "inf-10-ss-033",
-        "inf-10-logic-043",
-        "inf-10-logic-013",
-        "inf-10-logic-009",
-        "inf-10-logic-050",
-        "inf-10-ss-037",
-        "inf-10-logic-014",
-        "inf-10-logic-045",
         "inf-10-ss-031",
         "inf-10-ss-025",
-        "inf-10-logic-019",
-        "inf-10-ss-027",
-        "inf-10-ss-045",
-        "inf-10-ss-030",
+        "inf-10-ss-038",
+        "inf-10-ss-001",
+        "inf-10-ss-044",
+        "inf-10-ss-035",
+        "inf-10-logic-033",
         "inf-10-logic-041",
-        "inf-10-ss-017"
+        "inf-10-ss-003",
+        "inf-10-ss-014",
+        "inf-10-logic-001",
+        "inf-10-logic-039",
+        "inf-10-ss-015",
+        "inf-10-ss-037",
+        "inf-10-ss-026",
+        "inf-10-logic-019",
+        "inf-10-logic-014",
+        "inf-10-logic-043",
+        "inf-10-logic-015",
+        "inf-10-logic-013"
       ],
       "orders": {
-        "inf-10-ss-005": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "1",
-            "0",
-            "¬A ∨ B",
-            "¬A ∨ ¬B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
         "inf-10-ss-025": {
           "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "D",
             "C",
             "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 11,
-      "task_ids": [
-        "inf-10-ss-037",
-        "inf-10-ss-027",
-        "inf-10-logic-045",
-        "inf-10-logic-014",
-        "inf-10-logic-043",
-        "inf-10-logic-008",
-        "inf-10-ss-001",
-        "inf-10-logic-047",
-        "inf-10-ss-026",
-        "inf-10-logic-001",
-        "inf-10-ss-025",
-        "inf-10-logic-041",
-        "inf-10-logic-049",
-        "inf-10-ss-043",
-        "inf-10-logic-013",
-        "inf-10-logic-048",
-        "inf-10-ss-031",
-        "inf-10-ss-004",
-        "inf-10-ss-032",
-        "inf-10-ss-012"
-      ],
-      "orders": {
-        "inf-10-ss-037": {
-          "options": [
-            "C",
-            "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "1",
-            "¬A ∨ ¬B",
-            "0",
-            "¬A ∨ B"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "B",
-            "D",
-            "C",
             "A"
           ]
         },
         "inf-10-ss-001": {
           "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-001": {
-          "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-10-logic-013",
-        "inf-10-logic-038",
-        "inf-10-logic-006",
-        "inf-10-logic-021",
-        "inf-10-ss-031",
-        "inf-10-ss-022",
-        "inf-10-ss-037",
-        "inf-10-logic-008",
-        "inf-10-ss-033",
-        "inf-10-ss-029",
-        "inf-10-logic-041",
-        "inf-10-ss-006",
-        "inf-10-logic-047",
-        "inf-10-ss-048",
-        "inf-10-logic-024",
-        "inf-10-ss-014",
-        "inf-10-ss-017",
-        "inf-10-logic-034",
-        "inf-10-ss-038",
-        "inf-10-logic-014"
-      ],
-      "orders": {
-        "inf-10-logic-013": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-038": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
             "D",
             "C",
             "B",
             "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-014": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "1",
-            "¬A ∨ ¬B",
-            "0",
-            "¬A ∨ B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-10-logic-033",
-        "inf-10-ss-012",
-        "inf-10-logic-018",
-        "inf-10-logic-025",
-        "inf-10-ss-048",
-        "inf-10-ss-031",
-        "inf-10-ss-032",
-        "inf-10-logic-013",
-        "inf-10-ss-030",
-        "inf-10-logic-014",
-        "inf-10-logic-007",
-        "inf-10-logic-034",
-        "inf-10-ss-037",
-        "inf-10-logic-006",
-        "inf-10-logic-024",
-        "inf-10-ss-018",
-        "inf-10-ss-025",
-        "inf-10-logic-041",
-        "inf-10-ss-043",
-        "inf-10-ss-005"
-      ],
-      "orders": {
-        "inf-10-logic-013": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "0",
-            "¬A ∨ ¬B",
-            "¬A ∨ B",
-            "1"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 14,
-      "task_ids": [
-        "inf-10-logic-045",
-        "inf-10-logic-034",
-        "inf-10-logic-007",
-        "inf-10-ss-012",
-        "inf-10-ss-031",
-        "inf-10-ss-018",
-        "inf-10-ss-008",
-        "inf-10-logic-013",
-        "inf-10-logic-041",
-        "inf-10-logic-005",
-        "inf-10-ss-025",
-        "inf-10-ss-046",
-        "inf-10-logic-039",
-        "inf-10-logic-036",
-        "inf-10-ss-017",
-        "inf-10-ss-043",
-        "inf-10-ss-006",
-        "inf-10-ss-037",
-        "inf-10-logic-043",
-        "inf-10-logic-047"
-      ],
-      "orders": {
-        "inf-10-logic-045": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
           ]
         },
         "inf-10-logic-041": {
@@ -2645,114 +2211,6 @@
             "D",
             "A",
             "B",
-            "C"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-10-ss-025",
-        "inf-10-logic-036",
-        "inf-10-logic-041",
-        "inf-10-ss-037",
-        "inf-10-ss-023",
-        "inf-10-ss-003",
-        "inf-10-logic-045",
-        "inf-10-logic-015",
-        "inf-10-logic-019",
-        "inf-10-logic-047",
-        "inf-10-logic-050",
-        "inf-10-logic-013",
-        "inf-10-ss-030",
-        "inf-10-logic-034",
-        "inf-10-logic-043",
-        "inf-10-ss-015",
-        "inf-10-ss-035",
-        "inf-10-ss-017",
-        "inf-10-ss-040",
-        "inf-10-ss-031"
-      ],
-      "orders": {
-        "inf-10-ss-025": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "B",
-            "D",
             "C"
           ]
         },
@@ -2764,7 +2222,37 @@
             "D"
           ]
         },
-        "inf-10-logic-045": {
+        "inf-10-ss-014": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-039": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-037": {
           "options": [
             "D",
             "B",
@@ -2774,13 +2262,233 @@
         },
         "inf-10-logic-019": {
           "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "1",
+            "0",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-10-logic-018",
+        "inf-10-logic-007",
+        "inf-10-logic-003",
+        "inf-10-logic-013",
+        "inf-10-ss-045",
+        "inf-10-ss-020",
+        "inf-10-logic-043",
+        "inf-10-ss-031",
+        "inf-10-ss-015",
+        "inf-10-ss-037",
+        "inf-10-ss-030",
+        "inf-10-logic-014",
+        "inf-10-ss-025",
+        "inf-10-logic-023",
+        "inf-10-logic-041",
+        "inf-10-ss-044",
+        "inf-10-ss-046",
+        "inf-10-ss-038",
+        "inf-10-logic-001",
+        "inf-10-ss-003"
+      ],
+      "orders": {
+        "inf-10-logic-007": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-003": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "0",
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-10-logic-013",
+        "inf-10-ss-025",
+        "inf-10-logic-045",
+        "inf-10-ss-023",
+        "inf-10-ss-015",
+        "inf-10-ss-029",
+        "inf-10-ss-040",
+        "inf-10-logic-008",
+        "inf-10-ss-032",
+        "inf-10-logic-025",
+        "inf-10-ss-001",
+        "inf-10-logic-006",
+        "inf-10-logic-001",
+        "inf-10-logic-050",
+        "inf-10-ss-004",
+        "inf-10-logic-041",
+        "inf-10-ss-011",
+        "inf-10-logic-014",
+        "inf-10-ss-031",
+        "inf-10-ss-037"
+      ],
+      "orders": {
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-045": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
             "D",
             "C",
             "A",
             "B"
           ]
         },
-        "inf-10-logic-013": {
+        "inf-10-ss-001": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-006": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-041": {
           "options": [
             "B",
             "D",
@@ -2788,11 +2496,349 @@
             "C"
           ]
         },
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "1",
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-10-logic-011",
+        "inf-10-logic-023",
+        "inf-10-ss-008",
+        "inf-10-ss-032",
+        "inf-10-logic-006",
+        "inf-10-logic-034",
+        "inf-10-logic-041",
+        "inf-10-ss-030",
+        "inf-10-ss-003",
+        "inf-10-ss-031",
+        "inf-10-ss-037",
+        "inf-10-ss-038",
+        "inf-10-logic-014",
+        "inf-10-ss-015",
+        "inf-10-ss-047",
+        "inf-10-logic-013",
+        "inf-10-logic-019",
+        "inf-10-ss-045",
+        "inf-10-ss-025",
+        "inf-10-logic-043"
+      ],
+      "orders": {
+        "inf-10-logic-023": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-006": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "1",
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
+          ]
+        },
         "inf-10-ss-015": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-ss-047": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-019": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-10-ss-047",
+        "inf-10-logic-013",
+        "inf-10-ss-005",
+        "inf-10-logic-049",
+        "inf-10-ss-031",
+        "inf-10-ss-032",
+        "inf-10-logic-008",
+        "inf-10-ss-045",
+        "inf-10-logic-034",
+        "inf-10-logic-025",
+        "inf-10-logic-048",
+        "inf-10-logic-014",
+        "inf-10-ss-040",
+        "inf-10-ss-003",
+        "inf-10-ss-037",
+        "inf-10-ss-025",
+        "inf-10-ss-006",
+        "inf-10-ss-033",
+        "inf-10-logic-041",
+        "inf-10-logic-045"
+      ],
+      "orders": {
+        "inf-10-ss-047": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ ¬B",
+            "¬A ∨ B",
+            "0",
+            "1"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-045": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-10-logic-013",
+        "inf-10-logic-011",
+        "inf-10-ss-030",
+        "inf-10-ss-025",
+        "inf-10-ss-037",
+        "inf-10-ss-011",
+        "inf-10-ss-015",
+        "inf-10-logic-019",
+        "inf-10-ss-031",
+        "inf-10-ss-023",
+        "inf-10-ss-003",
+        "inf-10-ss-038",
+        "inf-10-logic-015",
+        "inf-10-logic-014",
+        "inf-10-logic-041",
+        "inf-10-ss-035",
+        "inf-10-logic-043",
+        "inf-10-ss-004",
+        "inf-10-logic-049",
+        "inf-10-logic-001"
+      ],
+      "orders": {
+        "inf-10-logic-013": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-037": {
           "options": [
             "C",
             "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-019": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "¬A ∨ B",
+            "1",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
             "B"
           ]
         }
@@ -2802,73 +2848,97 @@
     {
       "number": 16,
       "task_ids": [
-        "inf-10-logic-048",
-        "inf-10-logic-036",
-        "inf-10-ss-008",
-        "inf-10-ss-037",
+        "inf-10-logic-043",
+        "inf-10-logic-034",
+        "inf-10-logic-045",
+        "inf-10-logic-015",
+        "inf-10-logic-014",
+        "inf-10-logic-013",
+        "inf-10-logic-039",
+        "inf-10-ss-043",
+        "inf-10-ss-015",
+        "inf-10-ss-003",
+        "inf-10-ss-030",
         "inf-10-logic-007",
         "inf-10-ss-025",
-        "inf-10-logic-046",
-        "inf-10-ss-033",
-        "inf-10-ss-046",
-        "inf-10-ss-023",
-        "inf-10-logic-006",
+        "inf-10-ss-011",
+        "inf-10-ss-037",
+        "inf-10-ss-040",
         "inf-10-logic-041",
+        "inf-10-ss-032",
         "inf-10-ss-031",
-        "inf-10-ss-006",
-        "inf-10-logic-024",
-        "inf-10-ss-026",
-        "inf-10-logic-001",
-        "inf-10-logic-013",
-        "inf-10-ss-018",
-        "inf-10-logic-021"
+        "inf-10-ss-044"
       ],
       "orders": {
-        "inf-10-logic-036": {
+        "inf-10-logic-045": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "0",
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-013": {
           "options": [
             "A",
             "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-039": {
+          "options": [
+            "B",
+            "A",
             "D",
+            "C"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "C",
+            "D",
+            "A",
             "B"
           ]
         },
-        "inf-10-ss-037": {
+        "inf-10-ss-003": {
           "options": [
-            "A",
+            "B",
             "D",
             "C",
-            "B"
+            "A"
           ]
         },
         "inf-10-logic-007": {
           "options": [
-            "C",
-            "B",
             "A",
+            "B",
+            "C",
             "D"
           ]
         },
         "inf-10-ss-025": {
           "options": [
-            "C",
-            "A",
+            "B",
             "D",
-            "B"
+            "A",
+            "C"
           ]
         },
-        "inf-10-logic-046": {
+        "inf-10-ss-037": {
           "options": [
-            "A",
             "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "B",
             "A",
-            "C",
+            "B",
             "D"
           ]
         },
@@ -2878,28 +2948,6 @@
             "C",
             "A",
             "B"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-001": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
           ]
         }
       },
@@ -2909,68 +2957,28 @@
       "number": 17,
       "task_ids": [
         "inf-10-logic-041",
-        "inf-10-ss-032",
-        "inf-10-logic-036",
-        "inf-10-ss-043",
-        "inf-10-logic-008",
         "inf-10-ss-027",
-        "inf-10-ss-020",
-        "inf-10-ss-001",
-        "inf-10-ss-004",
-        "inf-10-logic-025",
-        "inf-10-ss-033",
-        "inf-10-logic-038",
-        "inf-10-ss-037",
-        "inf-10-logic-001",
+        "inf-10-ss-012",
+        "inf-10-ss-045",
+        "inf-10-logic-011",
+        "inf-10-ss-032",
         "inf-10-ss-031",
+        "inf-10-ss-029",
+        "inf-10-logic-001",
+        "inf-10-logic-025",
+        "inf-10-ss-025",
         "inf-10-logic-013",
+        "inf-10-ss-037",
+        "inf-10-logic-019",
         "inf-10-logic-050",
-        "inf-10-logic-047",
-        "inf-10-logic-015",
-        "inf-10-ss-022"
+        "inf-10-ss-003",
+        "inf-10-ss-030",
+        "inf-10-logic-014",
+        "inf-10-ss-043",
+        "inf-10-logic-006"
       ],
       "orders": {
         "inf-10-logic-041": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-038": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-ss-037": {
           "options": [
             "D",
             "A",
@@ -2980,11 +2988,43 @@
         },
         "inf-10-logic-001": {
           "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
             "A",
+            "C",
             "B"
           ]
         },
         "inf-10-logic-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-logic-019": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-ss-003": {
           "options": [
             "C",
             "A",
@@ -2992,11 +3032,19 @@
             "D"
           ]
         },
-        "inf-10-ss-022": {
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "¬A ∨ ¬B",
+            "1",
+            "¬A ∨ B"
+          ]
+        },
+        "inf-10-logic-006": {
           "options": [
             "D",
-            "A",
             "B",
+            "A",
             "C"
           ]
         }
@@ -3006,85 +3054,45 @@
     {
       "number": 18,
       "task_ids": [
-        "inf-10-ss-012",
         "inf-10-logic-005",
-        "inf-10-ss-020",
-        "inf-10-ss-038",
-        "inf-10-ss-043",
-        "inf-10-ss-031",
-        "inf-10-logic-009",
-        "inf-10-ss-001",
-        "inf-10-ss-046",
-        "inf-10-logic-013",
         "inf-10-ss-037",
-        "inf-10-logic-039",
-        "inf-10-logic-025",
-        "inf-10-ss-025",
-        "inf-10-logic-036",
-        "inf-10-ss-029",
-        "inf-10-logic-033",
+        "inf-10-ss-044",
+        "inf-10-ss-006",
         "inf-10-logic-041",
-        "inf-10-logic-008",
-        "inf-10-logic-048"
+        "inf-10-logic-014",
+        "inf-10-logic-013",
+        "inf-10-logic-001",
+        "inf-10-ss-004",
+        "inf-10-ss-015",
+        "inf-10-logic-019",
+        "inf-10-ss-014",
+        "inf-10-logic-038",
+        "inf-10-ss-046",
+        "inf-10-logic-021",
+        "inf-10-logic-024",
+        "inf-10-ss-031",
+        "inf-10-ss-023",
+        "inf-10-ss-025",
+        "inf-10-ss-027"
       ],
       "orders": {
         "inf-10-logic-005": {
           "options": [
-            "D",
+            "B",
             "C",
             "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-001": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
+            "D"
           ]
         },
         "inf-10-ss-037": {
           "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-039": {
-          "options": [
-            "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-025": {
-          "options": [
-            "C",
-            "D",
+            "B",
             "A",
-            "B"
+            "C"
           ]
         },
-        "inf-10-logic-036": {
+        "inf-10-ss-006": {
           "options": [
             "D",
             "B",
@@ -3095,12 +3103,66 @@
         "inf-10-logic-041": {
           "options": [
             "C",
+            "D",
             "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ ¬B",
+            "0",
+            "¬A ∨ B",
+            "1"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "D",
             "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "B",
+            "C",
+            "A",
             "D"
           ]
         },
-        "inf-10-logic-008": {
+        "inf-10-logic-019": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
           "options": [
             "D",
             "B",
@@ -3114,29 +3176,91 @@
     {
       "number": 19,
       "task_ids": [
-        "inf-10-ss-006",
-        "inf-10-logic-034",
-        "inf-10-logic-041",
-        "inf-10-logic-014",
-        "inf-10-logic-018",
-        "inf-10-logic-007",
-        "inf-10-ss-043",
-        "inf-10-logic-050",
-        "inf-10-ss-015",
+        "inf-10-logic-039",
+        "inf-10-logic-046",
+        "inf-10-ss-029",
         "inf-10-ss-035",
-        "inf-10-ss-040",
-        "inf-10-logic-033",
-        "inf-10-ss-037",
-        "inf-10-ss-022",
-        "inf-10-logic-013",
-        "inf-10-ss-004",
-        "inf-10-logic-021",
-        "inf-10-ss-023",
         "inf-10-ss-031",
-        "inf-10-logic-006"
+        "inf-10-logic-001",
+        "inf-10-logic-008",
+        "inf-10-logic-013",
+        "inf-10-ss-026",
+        "inf-10-logic-025",
+        "inf-10-ss-025",
+        "inf-10-ss-038",
+        "inf-10-logic-047",
+        "inf-10-ss-033",
+        "inf-10-logic-014",
+        "inf-10-ss-032",
+        "inf-10-ss-003",
+        "inf-10-ss-030",
+        "inf-10-ss-037",
+        "inf-10-logic-041"
       ],
       "orders": {
-        "inf-10-ss-006": {
+        "inf-10-logic-039": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-logic-046": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "¬A ∨ B",
+            "0",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-ss-003": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-ss-037": {
           "options": [
             "B",
             "C",
@@ -3146,65 +3270,9 @@
         },
         "inf-10-logic-041": {
           "options": [
+            "A",
+            "D",
             "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "¬A ∨ ¬B",
-            "1",
-            "¬A ∨ B",
-            "0"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "C",
-            "A",
-            "D",
             "B"
           ]
         }
@@ -3214,98 +3282,98 @@
     {
       "number": 20,
       "task_ids": [
-        "inf-10-ss-033",
-        "inf-10-logic-021",
-        "inf-10-ss-043",
-        "inf-10-logic-005",
-        "inf-10-ss-029",
-        "inf-10-logic-013",
-        "inf-10-ss-031",
-        "inf-10-ss-045",
-        "inf-10-logic-036",
-        "inf-10-ss-020",
-        "inf-10-logic-019",
-        "inf-10-ss-006",
-        "inf-10-logic-047",
-        "inf-10-logic-011",
         "inf-10-ss-037",
-        "inf-10-ss-022",
-        "inf-10-ss-027",
-        "inf-10-logic-009",
-        "inf-10-logic-041",
-        "inf-10-logic-050"
+        "inf-10-ss-011",
+        "inf-10-logic-039",
+        "inf-10-ss-038",
+        "inf-10-ss-025",
+        "inf-10-logic-003",
+        "inf-10-logic-021",
+        "inf-10-ss-020",
+        "inf-10-ss-031",
+        "inf-10-logic-014",
+        "inf-10-logic-008",
+        "inf-10-logic-034",
+        "inf-10-ss-032",
+        "inf-10-ss-004",
+        "inf-10-logic-013",
+        "inf-10-logic-015",
+        "inf-10-ss-030",
+        "inf-10-ss-012",
+        "inf-10-ss-005",
+        "inf-10-logic-041"
       ],
       "orders": {
-        "inf-10-logic-005": {
+        "inf-10-ss-037": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-039": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-10-logic-003": {
           "options": [
             "B",
-            "D",
+            "C",
             "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "¬A ∨ ¬B",
+            "0",
+            "1"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "A",
+            "D",
+            "B",
             "C"
           ]
         },
         "inf-10-logic-013": {
           "options": [
-            "C",
             "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
+            "C",
             "A",
-            "B",
-            "C",
             "D"
           ]
         },
-        "inf-10-logic-019": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-ss-006": {
+        "inf-10-ss-005": {
           "options": [
             "D",
             "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "C",
-            "D",
             "A",
             "B"
           ]
         },
         "inf-10-logic-041": {
           "options": [
-            "D",
+            "C",
             "A",
-            "B",
-            "C"
+            "D",
+            "B"
           ]
         }
       },
@@ -3314,93 +3382,29 @@
     {
       "number": 21,
       "task_ids": [
-        "inf-10-ss-015",
-        "inf-10-logic-041",
-        "inf-10-logic-043",
-        "inf-10-ss-037",
-        "inf-10-ss-047",
-        "inf-10-ss-048",
-        "inf-10-ss-008",
-        "inf-10-logic-024",
-        "inf-10-ss-030",
-        "inf-10-logic-009",
-        "inf-10-logic-005",
-        "inf-10-logic-006",
-        "inf-10-logic-007",
-        "inf-10-ss-025",
-        "inf-10-ss-027",
-        "inf-10-logic-013",
-        "inf-10-ss-014",
+        "inf-10-logic-038",
         "inf-10-ss-031",
+        "inf-10-ss-046",
+        "inf-10-logic-013",
+        "inf-10-logic-006",
+        "inf-10-logic-042",
+        "inf-10-ss-025",
+        "inf-10-ss-043",
+        "inf-10-ss-037",
+        "inf-10-logic-008",
+        "inf-10-logic-001",
+        "inf-10-logic-041",
+        "inf-10-ss-012",
+        "inf-10-ss-011",
+        "inf-10-ss-029",
+        "inf-10-ss-030",
+        "inf-10-ss-044",
+        "inf-10-ss-040",
         "inf-10-logic-014",
-        "inf-10-logic-011"
+        "inf-10-logic-043"
       ],
       "orders": {
-        "inf-10-ss-015": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-ss-047": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-025": {
+        "inf-10-logic-038": {
           "options": [
             "C",
             "B",
@@ -3410,26 +3414,72 @@
         },
         "inf-10-logic-013": {
           "options": [
-            "C",
             "A",
             "B",
+            "C",
             "D"
           ]
         },
-        "inf-10-ss-014": {
+        "inf-10-logic-006": {
           "options": [
-            "D",
             "C",
+            "D",
             "A",
             "B"
+          ]
+        },
+        "inf-10-logic-042": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-001": {
+          "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
           ]
         },
         "inf-10-logic-014": {
           "right": [
             "1",
             "0",
-            "¬A ∨ ¬B",
-            "¬A ∨ B"
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
           ]
         }
       },
@@ -3438,37 +3488,77 @@
     {
       "number": 22,
       "task_ids": [
-        "inf-10-logic-019",
-        "inf-10-ss-047",
-        "inf-10-ss-001",
-        "inf-10-logic-048",
-        "inf-10-logic-013",
-        "inf-10-logic-006",
-        "inf-10-ss-037",
-        "inf-10-logic-042",
-        "inf-10-ss-031",
-        "inf-10-logic-046",
-        "inf-10-ss-005",
-        "inf-10-ss-035",
-        "inf-10-ss-018",
         "inf-10-logic-041",
-        "inf-10-ss-022",
-        "inf-10-logic-043",
+        "inf-10-logic-023",
+        "inf-10-ss-038",
+        "inf-10-ss-045",
+        "inf-10-ss-026",
+        "inf-10-ss-025",
+        "inf-10-ss-011",
+        "inf-10-logic-005",
+        "inf-10-logic-007",
+        "inf-10-logic-014",
+        "inf-10-ss-012",
         "inf-10-logic-009",
-        "inf-10-logic-036",
-        "inf-10-ss-015",
-        "inf-10-ss-023"
+        "inf-10-ss-037",
+        "inf-10-ss-044",
+        "inf-10-ss-030",
+        "inf-10-ss-031",
+        "inf-10-logic-033",
+        "inf-10-ss-029",
+        "inf-10-logic-013",
+        "inf-10-logic-025"
       ],
       "orders": {
-        "inf-10-logic-019": {
+        "inf-10-logic-041": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
           "options": [
             "B",
             "C",
-            "D",
-            "A"
+            "A",
+            "D"
           ]
         },
-        "inf-10-ss-047": {
+        "inf-10-logic-005": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "¬A ∨ B",
+            "¬A ∨ ¬B",
+            "1"
+          ]
+        },
+        "inf-10-logic-009": {
           "options": [
             "D",
             "C",
@@ -3476,100 +3566,20 @@
             "B"
           ]
         },
-        "inf-10-ss-001": {
+        "inf-10-ss-037": {
           "options": [
-            "C",
             "A",
+            "C",
             "D",
             "B"
           ]
         },
         "inf-10-logic-013": {
           "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "D",
-            "B",
             "A",
-            "C"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "C",
-            "B",
             "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
             "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-046": {
-          "options": [
-            "C",
-            "D",
-            "A",
             "B"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-10-ss-015": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
           ]
         }
       },
@@ -3578,34 +3588,42 @@
     {
       "number": 23,
       "task_ids": [
-        "inf-10-logic-014",
-        "inf-10-ss-033",
-        "inf-10-logic-013",
-        "inf-10-ss-006",
-        "inf-10-ss-038",
-        "inf-10-ss-022",
-        "inf-10-ss-037",
-        "inf-10-logic-045",
-        "inf-10-ss-031",
         "inf-10-logic-007",
+        "inf-10-ss-030",
+        "inf-10-ss-032",
+        "inf-10-ss-015",
+        "inf-10-ss-044",
+        "inf-10-ss-043",
+        "inf-10-logic-021",
+        "inf-10-logic-013",
+        "inf-10-logic-011",
+        "inf-10-ss-037",
+        "inf-10-ss-025",
+        "inf-10-ss-029",
+        "inf-10-ss-040",
         "inf-10-logic-041",
-        "inf-10-ss-048",
-        "inf-10-ss-017",
-        "inf-10-logic-043",
-        "inf-10-logic-024",
-        "inf-10-logic-018",
-        "inf-10-logic-048",
-        "inf-10-ss-005",
         "inf-10-logic-009",
-        "inf-10-ss-032"
+        "inf-10-ss-035",
+        "inf-10-logic-014",
+        "inf-10-logic-006",
+        "inf-10-logic-042",
+        "inf-10-ss-031"
       ],
       "orders": {
-        "inf-10-logic-014": {
-          "right": [
-            "0",
-            "1",
-            "¬A ∨ B",
-            "¬A ∨ ¬B"
+        "inf-10-logic-007": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-015": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
           ]
         },
         "inf-10-logic-013": {
@@ -3616,59 +3634,27 @@
             "B"
           ]
         },
-        "inf-10-ss-006": {
+        "inf-10-ss-037": {
           "options": [
-            "B",
-            "D",
             "A",
-            "C"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "D",
             "C",
-            "A",
+            "D",
             "B"
           ]
         },
-        "inf-10-ss-037": {
+        "inf-10-ss-025": {
           "options": [
-            "B",
             "D",
             "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
             "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
+            "B"
           ]
         },
         "inf-10-logic-041": {
           "options": [
-            "B",
             "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
             "B",
             "D",
-            "A",
             "C"
           ]
         },
@@ -3677,6 +3663,30 @@
             "B",
             "D",
             "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "1",
+            "0",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-006": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-042": {
+          "options": [
+            "C",
+            "B",
+            "D",
             "A"
           ]
         }
@@ -3686,45 +3696,153 @@
     {
       "number": 24,
       "task_ids": [
-        "inf-10-logic-048",
-        "inf-10-logic-045",
-        "inf-10-ss-030",
-        "inf-10-logic-009",
-        "inf-10-ss-037",
-        "inf-10-logic-049",
-        "inf-10-ss-048",
-        "inf-10-logic-014",
-        "inf-10-ss-047",
-        "inf-10-ss-031",
-        "inf-10-logic-019",
-        "inf-10-ss-015",
-        "inf-10-logic-043",
-        "inf-10-logic-041",
-        "inf-10-ss-022",
-        "inf-10-ss-045",
-        "inf-10-logic-013",
+        "inf-10-ss-035",
+        "inf-10-logic-038",
         "inf-10-ss-027",
+        "inf-10-ss-044",
+        "inf-10-logic-043",
+        "inf-10-ss-031",
+        "inf-10-ss-033",
+        "inf-10-ss-043",
         "inf-10-logic-015",
-        "inf-10-ss-008"
+        "inf-10-ss-004",
+        "inf-10-logic-009",
+        "inf-10-logic-041",
+        "inf-10-ss-030",
+        "inf-10-ss-037",
+        "inf-10-ss-014",
+        "inf-10-ss-025",
+        "inf-10-logic-019",
+        "inf-10-logic-014",
+        "inf-10-logic-013",
+        "inf-10-logic-023"
       ],
       "orders": {
-        "inf-10-logic-045": {
+        "inf-10-logic-038": {
           "options": [
-            "A",
             "B",
             "C",
+            "A",
             "D"
           ]
         },
         "inf-10-logic-009": {
           "options": [
+            "B",
+            "D",
             "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
             "B",
             "A",
+            "C",
             "D"
           ]
         },
         "inf-10-ss-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-019": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "0",
+            "1",
+            "¬A ∨ ¬B"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-10-logic-007",
+        "inf-10-logic-013",
+        "inf-10-ss-011",
+        "inf-10-logic-041",
+        "inf-10-ss-006",
+        "inf-10-ss-040",
+        "inf-10-ss-031",
+        "inf-10-ss-046",
+        "inf-10-ss-015",
+        "inf-10-logic-014",
+        "inf-10-ss-043",
+        "inf-10-logic-046",
+        "inf-10-logic-039",
+        "inf-10-logic-021",
+        "inf-10-ss-003",
+        "inf-10-ss-025",
+        "inf-10-ss-037",
+        "inf-10-logic-009",
+        "inf-10-logic-005",
+        "inf-10-ss-029"
+      ],
+      "orders": {
+        "inf-10-logic-007": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-041": {
           "options": [
             "C",
             "B",
@@ -3732,28 +3850,12 @@
             "A"
           ]
         },
-        "inf-10-logic-014": {
-          "right": [
-            "1",
-            "0",
-            "¬A ∨ ¬B",
-            "¬A ∨ B"
-          ]
-        },
-        "inf-10-ss-047": {
+        "inf-10-ss-006": {
           "options": [
             "D",
             "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
+            "B",
+            "A"
           ]
         },
         "inf-10-ss-015": {
@@ -3764,120 +3866,68 @@
             "D"
           ]
         },
-        "inf-10-logic-041": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "¬A ∨ ¬B",
+            "0",
+            "¬A ∨ B"
           ]
         },
-        "inf-10-ss-022": {
+        "inf-10-logic-046": {
           "options": [
-            "D",
             "B",
+            "D",
             "A",
             "C"
           ]
         },
-        "inf-10-logic-013": {
+        "inf-10-logic-039": {
           "options": [
             "B",
+            "A",
             "C",
-            "D",
-            "A"
+            "D"
           ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-10-logic-043",
-        "inf-10-ss-048",
-        "inf-10-ss-030",
-        "inf-10-ss-018",
-        "inf-10-logic-009",
-        "inf-10-ss-031",
-        "inf-10-logic-038",
-        "inf-10-logic-041",
-        "inf-10-logic-049",
-        "inf-10-ss-025",
-        "inf-10-logic-036",
-        "inf-10-logic-047",
-        "inf-10-ss-045",
-        "inf-10-logic-013",
-        "inf-10-ss-004",
-        "inf-10-logic-015",
-        "inf-10-logic-019",
-        "inf-10-ss-033",
-        "inf-10-ss-043",
-        "inf-10-ss-037"
-      ],
-      "orders": {
-        "inf-10-logic-009": {
+        },
+        "inf-10-ss-003": {
           "options": [
             "C",
             "A",
             "D",
             "B"
-          ]
-        },
-        "inf-10-logic-038": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
           ]
         },
         "inf-10-ss-025": {
           "options": [
-            "C",
             "A",
             "B",
+            "C",
             "D"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
           ]
         },
         "inf-10-ss-037": {
           "options": [
-            "C",
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
             "D",
             "A",
-            "B"
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
           ]
         }
       },
@@ -3886,42 +3936,158 @@
     {
       "number": 26,
       "task_ids": [
-        "inf-10-logic-036",
-        "inf-10-logic-041",
-        "inf-10-ss-025",
-        "inf-10-logic-018",
-        "inf-10-ss-033",
-        "inf-10-logic-009",
-        "inf-10-logic-033",
-        "inf-10-ss-017",
+        "inf-10-logic-042",
         "inf-10-logic-047",
-        "inf-10-ss-032",
+        "inf-10-ss-008",
+        "inf-10-logic-009",
+        "inf-10-ss-025",
         "inf-10-logic-007",
-        "inf-10-ss-026",
-        "inf-10-logic-050",
-        "inf-10-ss-030",
-        "inf-10-ss-027",
-        "inf-10-ss-004",
+        "inf-10-ss-037",
+        "inf-10-logic-041",
+        "inf-10-logic-043",
+        "inf-10-logic-014",
+        "inf-10-ss-044",
+        "inf-10-ss-006",
+        "inf-10-ss-011",
+        "inf-10-ss-017",
         "inf-10-ss-031",
-        "inf-10-logic-025",
+        "inf-10-ss-033",
+        "inf-10-ss-040",
         "inf-10-logic-013",
-        "inf-10-ss-037"
+        "inf-10-logic-038",
+        "inf-10-ss-014"
       ],
       "orders": {
-        "inf-10-logic-036": {
+        "inf-10-logic-042": {
           "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-009": {
+          "options": [
+            "D",
             "C",
             "B",
+            "A"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "C",
             "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-007": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "A",
+            "B",
+            "C",
             "D"
           ]
         },
         "inf-10-logic-041": {
           "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "¬A ∨ ¬B",
+            "¬A ∨ B",
+            "0"
+          ]
+        },
+        "inf-10-ss-006": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-10-logic-038": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
             "D",
             "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-10-ss-044",
+        "inf-10-ss-040",
+        "inf-10-logic-008",
+        "inf-10-ss-001",
+        "inf-10-ss-031",
+        "inf-10-ss-033",
+        "inf-10-ss-025",
+        "inf-10-logic-047",
+        "inf-10-ss-035",
+        "inf-10-logic-014",
+        "inf-10-logic-013",
+        "inf-10-ss-037",
+        "inf-10-logic-009",
+        "inf-10-ss-020",
+        "inf-10-logic-045",
+        "inf-10-logic-042",
+        "inf-10-logic-041",
+        "inf-10-logic-043",
+        "inf-10-ss-046",
+        "inf-10-ss-003"
+      ],
+      "orders": {
+        "inf-10-logic-008": {
+          "options": [
             "C",
+            "D",
+            "B",
             "A"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
           ]
         },
         "inf-10-ss-025": {
@@ -3932,66 +4098,54 @@
             "D"
           ]
         },
-        "inf-10-logic-009": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
+        "inf-10-logic-014": {
+          "right": [
+            "1",
+            "0",
+            "¬A ∨ B",
+            "¬A ∨ ¬B"
           ]
         },
         "inf-10-logic-013": {
           "options": [
-            "C",
-            "B",
             "A",
-            "D"
+            "C",
+            "D",
+            "B"
           ]
         },
         "inf-10-ss-037": {
           "options": [
-            "A",
-            "C",
             "B",
+            "C",
+            "A",
             "D"
           ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-10-logic-041",
-        "inf-10-logic-047",
-        "inf-10-logic-038",
-        "inf-10-ss-037",
-        "inf-10-logic-005",
-        "inf-10-ss-018",
-        "inf-10-logic-021",
-        "inf-10-logic-001",
-        "inf-10-ss-031",
-        "inf-10-ss-033",
-        "inf-10-logic-014",
-        "inf-10-logic-024",
-        "inf-10-logic-013",
-        "inf-10-logic-007",
-        "inf-10-ss-017",
-        "inf-10-ss-029",
-        "inf-10-ss-006",
-        "inf-10-ss-032",
-        "inf-10-ss-023",
-        "inf-10-ss-022"
-      ],
-      "orders": {
+        },
+        "inf-10-logic-009": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-10-logic-045": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-042": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
         "inf-10-logic-041": {
           "options": [
             "B",
@@ -4000,74 +4154,12 @@
             "D"
           ]
         },
-        "inf-10-logic-038": {
+        "inf-10-ss-003": {
           "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "D",
             "B",
             "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "A",
             "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-001": {
-          "options": [
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-logic-014": {
-          "right": [
-            "¬A ∨ B",
-            "0",
-            "¬A ∨ ¬B",
-            "1"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-007": {
-          "options": [
-            "B",
-            "C",
-            "A",
             "D"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
           ]
         }
       },
@@ -4076,26 +4168,26 @@
     {
       "number": 28,
       "task_ids": [
-        "inf-10-ss-008",
-        "inf-10-logic-013",
-        "inf-10-ss-031",
-        "inf-10-logic-007",
-        "inf-10-ss-022",
-        "inf-10-logic-043",
-        "inf-10-logic-001",
-        "inf-10-ss-037",
-        "inf-10-logic-047",
-        "inf-10-ss-047",
-        "inf-10-ss-033",
         "inf-10-ss-023",
-        "inf-10-logic-036",
-        "inf-10-logic-050",
+        "inf-10-ss-027",
+        "inf-10-ss-029",
+        "inf-10-logic-013",
+        "inf-10-ss-001",
+        "inf-10-logic-033",
+        "inf-10-logic-007",
+        "inf-10-ss-044",
+        "inf-10-ss-031",
+        "inf-10-logic-024",
+        "inf-10-ss-012",
+        "inf-10-ss-025",
         "inf-10-logic-041",
-        "inf-10-ss-032",
-        "inf-10-ss-038",
-        "inf-10-ss-030",
-        "inf-10-logic-045",
-        "inf-10-logic-048"
+        "inf-10-logic-025",
+        "inf-10-logic-034",
+        "inf-10-ss-035",
+        "inf-10-logic-015",
+        "inf-10-ss-046",
+        "inf-10-logic-014",
+        "inf-10-ss-037"
       ],
       "orders": {
         "inf-10-logic-013": {
@@ -4106,61 +4198,47 @@
             "A"
           ]
         },
+        "inf-10-ss-001": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
         "inf-10-logic-007": {
           "options": [
-            "B",
             "A",
+            "B",
             "C",
             "D"
           ]
         },
-        "inf-10-ss-022": {
+        "inf-10-ss-025": {
           "options": [
-            "A",
-            "B",
             "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-001": {
-          "options": [
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
             "B",
-            "D",
             "C",
             "A"
           ]
         },
-        "inf-10-ss-047": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
         "inf-10-logic-041": {
           "options": [
-            "A",
             "C",
+            "D",
             "B",
-            "D"
+            "A"
           ]
         },
-        "inf-10-logic-045": {
+        "inf-10-logic-014": {
+          "right": [
+            "0",
+            "¬A ∨ ¬B",
+            "1",
+            "¬A ∨ B"
+          ]
+        },
+        "inf-10-ss-037": {
           "options": [
             "C",
             "B",
@@ -4174,230 +4252,34 @@
     {
       "number": 29,
       "task_ids": [
-        "inf-10-ss-032",
-        "inf-10-ss-020",
-        "inf-10-ss-018",
-        "inf-10-ss-015",
-        "inf-10-ss-022",
-        "inf-10-logic-005",
-        "inf-10-ss-047",
-        "inf-10-logic-045",
-        "inf-10-ss-037",
-        "inf-10-logic-036",
-        "inf-10-ss-031",
-        "inf-10-logic-013",
-        "inf-10-logic-006",
-        "inf-10-logic-019",
-        "inf-10-ss-005",
-        "inf-10-logic-021",
+        "inf-10-ss-033",
         "inf-10-logic-041",
-        "inf-10-ss-030",
-        "inf-10-logic-009",
-        "inf-10-logic-042"
-      ],
-      "orders": {
-        "inf-10-ss-015": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-10-ss-022": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-10-logic-005": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-ss-047": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-036": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-019": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-10-ss-005": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-10-logic-041": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-logic-009": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-10-logic-042": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 30,
-      "task_ids": [
-        "inf-10-logic-043",
-        "inf-10-ss-043",
-        "inf-10-ss-022",
-        "inf-10-logic-008",
-        "inf-10-logic-006",
-        "inf-10-logic-041",
-        "inf-10-logic-013",
-        "inf-10-logic-045",
-        "inf-10-ss-006",
         "inf-10-ss-027",
         "inf-10-ss-032",
-        "inf-10-ss-037",
-        "inf-10-logic-047",
+        "inf-10-logic-015",
+        "inf-10-logic-021",
         "inf-10-logic-014",
+        "inf-10-ss-025",
+        "inf-10-logic-046",
+        "inf-10-ss-045",
+        "inf-10-ss-037",
+        "inf-10-logic-001",
+        "inf-10-logic-013",
         "inf-10-ss-031",
-        "inf-10-logic-009",
-        "inf-10-ss-003",
-        "inf-10-ss-033",
-        "inf-10-ss-020",
-        "inf-10-logic-039"
+        "inf-10-logic-008",
+        "inf-10-ss-005",
+        "inf-10-ss-008",
+        "inf-10-logic-024",
+        "inf-10-ss-001",
+        "inf-10-ss-017"
       ],
       "orders": {
-        "inf-10-ss-022": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-10-logic-008": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-10-logic-006": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
         "inf-10-logic-041": {
           "options": [
-            "C",
-            "D",
             "A",
-            "B"
-          ]
-        },
-        "inf-10-logic-013": {
-          "options": [
             "B",
-            "A",
             "C",
             "D"
-          ]
-        },
-        "inf-10-logic-045": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-006": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-10-ss-037": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
           ]
         },
         "inf-10-logic-014": {
@@ -4408,28 +4290,174 @@
             "0"
           ]
         },
-        "inf-10-logic-009": {
+        "inf-10-ss-025": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-10-logic-046": {
           "options": [
             "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
             "A",
+            "D",
             "C",
             "B"
           ]
         },
-        "inf-10-ss-003": {
+        "inf-10-logic-001": {
           "options": [
+            "A",
+            "B"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "A",
             "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-008": {
+          "options": [
             "C",
+            "B",
             "A",
             "D"
           ]
         },
-        "inf-10-logic-039": {
+        "inf-10-ss-005": {
           "options": [
+            "C",
             "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-10-ss-001": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 38
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-10-ss-031",
+        "inf-10-logic-007",
+        "inf-10-ss-014",
+        "inf-10-logic-041",
+        "inf-10-ss-025",
+        "inf-10-logic-023",
+        "inf-10-ss-023",
+        "inf-10-ss-005",
+        "inf-10-ss-038",
+        "inf-10-ss-035",
+        "inf-10-ss-037",
+        "inf-10-ss-008",
+        "inf-10-logic-021",
+        "inf-10-logic-013",
+        "inf-10-ss-012",
+        "inf-10-logic-003",
+        "inf-10-logic-014",
+        "inf-10-ss-030",
+        "inf-10-logic-034",
+        "inf-10-logic-015"
+      ],
+      "orders": {
+        "inf-10-logic-007": {
+          "options": [
             "C",
             "A",
+            "B",
             "D"
+          ]
+        },
+        "inf-10-ss-014": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-041": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-10-ss-025": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-logic-023": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-10-ss-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-10-ss-037": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-10-logic-013": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-10-logic-003": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-10-logic-014": {
+          "right": [
+            "¬A ∨ B",
+            "1",
+            "0",
+            "¬A ∨ ¬B"
           ]
         }
       },

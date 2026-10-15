@@ -21,6 +21,7 @@
       "task_ids": [
         "inf-11-data-025",
         "inf-11-data-026",
+        "inf-11-data-027",
         "inf-11-data-033",
         "inf-11-data-034",
         "inf-11-data-035",
@@ -107,7 +108,6 @@
         "inf-11-graph-029",
         "inf-11-graph-030",
         "inf-11-graph-031",
-        "inf-11-graph-032",
         "inf-11-graph-047",
         "inf-11-graph-048",
         "inf-11-graph-049",
@@ -152,6 +152,16 @@
       "base": 10,
       "expected": 4,
       "key": "4"
+    },
+    {
+      "id": "inf-11-data-027",
+      "lesson": "11model-01-modeling",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "В том же движении (20 м/с, ускорение 4 м/с², 10 с) найдите путь, пройденный за эти 10 секунд. Запишите только число.",
+      "base": 10,
+      "expected": 400,
+      "key": "400"
     },
     {
       "id": "inf-11-data-033",
@@ -987,16 +997,6 @@
       "key": "5"
     },
     {
-      "id": "inf-11-graph-032",
-      "lesson": "11graph-03-table",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Разметьте позиции игры: куча камней, за ход берут 1 или 3 камня, проигрывает тот, кто взял последний камень. Позиция проигрышная, если ни один ход не ведёт в проигрышную позицию соперника; ход, забирающий весь остаток, проигрывает сразу. Выведите все проигрышные позиции от 1 до 21, каждую с новой строки.",
-      "template": "# Допиши разметку снизу вверх\nmoves = [1, 3]\nlimit = 21\nwin = {}\nfor s in range(1, limit + 1):\n    # позиция выигрышная, если есть ход в проигрышную\n    ...\nfor s in range(1, limit + 1):\n    if not win[s]:\n        print(s)",
-      "expected": "1\n3\n5\n7\n9\n11\n13\n15\n17\n19\n21",
-      "key": "1\n3\n5\n7\n9\n11\n13\n15\n17\n19\n21"
-    },
-    {
       "id": "inf-11-graph-047",
       "lesson": "11graph-03-table",
       "type": "numeric_base",
@@ -1058,19 +1058,35 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-11-data-058",
-        "inf-11-graph-027",
+        "inf-11-graph-050",
+        "inf-11-graph-020",
+        "inf-11-data-025",
+        "inf-11-graph-005",
+        "inf-11-graph-006",
+        "inf-11-data-037",
+        "inf-11-graph-022",
+        "inf-11-graph-001",
         "inf-11-graph-014",
-        "inf-11-graph-021",
-        "inf-11-graph-008",
-        "inf-11-graph-036",
-        "inf-11-graph-024",
-        "inf-11-graph-002",
-        "inf-11-data-036",
-        "inf-11-data-025"
+        "inf-11-data-059"
       ],
       "orders": {
-        "inf-11-graph-008": {
+        "inf-11-data-025": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-11-graph-005": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-11-graph-006": {
           "options": [
             "B",
             "C",
@@ -1078,12 +1094,20 @@
             "A"
           ]
         },
-        "inf-11-data-025": {
+        "inf-11-data-037": {
           "options": [
-            "A",
-            "D",
             "B",
-            "C"
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-11-graph-001": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
           ]
         }
       },
@@ -1092,48 +1116,32 @@
     {
       "number": 2,
       "task_ids": [
-        "inf-11-data-026",
         "inf-11-graph-018",
-        "inf-11-graph-040",
         "inf-11-graph-009",
-        "inf-11-graph-049",
-        "inf-11-graph-037",
-        "inf-11-data-058",
-        "inf-11-graph-024",
-        "inf-11-graph-029",
-        "inf-11-data-060"
+        "inf-11-data-034",
+        "inf-11-graph-020",
+        "inf-11-graph-023",
+        "inf-11-graph-045",
+        "inf-11-graph-042",
+        "inf-11-data-026",
+        "inf-11-data-057",
+        "inf-11-graph-001"
       ],
       "orders": {
-        "inf-11-graph-049": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "у каждой вершины выписан перечень её соседей",
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "каждое ребро записано отдельной парой вершин"
-          ]
-        },
-        "inf-11-graph-029": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-11-data-060": {
+        "inf-11-data-057": {
           "options": [
             "A",
-            "B",
             "D",
-            "C"
+            "C",
+            "B"
+          ]
+        },
+        "inf-11-graph-001": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
           ]
         }
       },
@@ -1142,19 +1150,35 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-11-graph-039",
-        "inf-11-data-034",
-        "inf-11-graph-030",
-        "inf-11-graph-028",
-        "inf-11-graph-043",
-        "inf-11-data-060",
-        "inf-11-data-036",
-        "inf-11-graph-023",
-        "inf-11-graph-002",
-        "inf-11-graph-017"
+        "inf-11-graph-040",
+        "inf-11-graph-018",
+        "inf-11-graph-001",
+        "inf-11-data-037",
+        "inf-11-data-058",
+        "inf-11-graph-024",
+        "inf-11-graph-029",
+        "inf-11-graph-047",
+        "inf-11-data-025",
+        "inf-11-graph-030"
       ],
       "orders": {
-        "inf-11-data-060": {
+        "inf-11-graph-001": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-11-data-037": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-11-graph-029": {
           "options": [
             "B",
             "A",
@@ -1162,12 +1186,12 @@
             "D"
           ]
         },
-        "inf-11-graph-017": {
+        "inf-11-data-025": {
           "options": [
-            "B",
             "A",
             "D",
-            "C"
+            "C",
+            "B"
           ]
         }
       },
@@ -1176,40 +1200,40 @@
     {
       "number": 4,
       "task_ids": [
-        "inf-11-graph-042",
-        "inf-11-data-058",
-        "inf-11-graph-029",
-        "inf-11-graph-017",
-        "inf-11-graph-012",
-        "inf-11-data-026",
-        "inf-11-graph-020",
-        "inf-11-graph-008",
-        "inf-11-data-059",
+        "inf-11-graph-027",
+        "inf-11-graph-041",
+        "inf-11-data-037",
+        "inf-11-graph-033",
+        "inf-11-data-057",
+        "inf-11-graph-022",
+        "inf-11-graph-045",
+        "inf-11-data-033",
+        "inf-11-graph-050",
         "inf-11-graph-003"
       ],
       "orders": {
-        "inf-11-graph-029": {
+        "inf-11-data-037": {
           "options": [
-            "B",
-            "A",
             "C",
-            "D"
-          ]
-        },
-        "inf-11-graph-017": {
-          "options": [
             "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-11-data-057": {
+          "options": [
             "B",
+            "D",
+            "A",
             "C"
           ]
         },
-        "inf-11-graph-008": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
+        "inf-11-data-033": {
+          "right": [
+            "какие величины зависят друг от друга",
+            "какие величины значимы для задачи",
+            "что запрещено, какие значения недопустимы",
+            "что требуется найти или оптимизировать"
           ]
         }
       },
@@ -1218,19 +1242,19 @@
     {
       "number": 5,
       "task_ids": [
-        "inf-11-graph-009",
-        "inf-11-data-035",
-        "inf-11-graph-017",
-        "inf-11-data-060",
-        "inf-11-graph-023",
-        "inf-11-graph-040",
-        "inf-11-data-058",
-        "inf-11-graph-014",
-        "inf-11-graph-005",
-        "inf-11-graph-045"
+        "inf-11-data-036",
+        "inf-11-graph-012",
+        "inf-11-data-059",
+        "inf-11-data-057",
+        "inf-11-graph-007",
+        "inf-11-graph-018",
+        "inf-11-graph-049",
+        "inf-11-graph-041",
+        "inf-11-graph-043",
+        "inf-11-graph-037"
       ],
       "orders": {
-        "inf-11-graph-017": {
+        "inf-11-data-057": {
           "options": [
             "A",
             "D",
@@ -1238,20 +1262,28 @@
             "C"
           ]
         },
-        "inf-11-data-060": {
+        "inf-11-graph-007": {
           "options": [
-            "C",
             "D",
             "B",
+            "C",
             "A"
           ]
         },
-        "inf-11-graph-005": {
+        "inf-11-graph-049": {
           "options": [
-            "C",
             "D",
             "B",
-            "A"
+            "A",
+            "C"
+          ]
+        },
+        "inf-11-graph-037": {
+          "right": [
+            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
+            "каждое ребро записано отдельной парой вершин",
+            "таблица: вместо единицы в клетке стоит длина ребра",
+            "у каждой вершины выписан перечень её соседей"
           ]
         }
       },
@@ -1260,32 +1292,32 @@
     {
       "number": 6,
       "task_ids": [
-        "inf-11-graph-037",
-        "inf-11-graph-012",
-        "inf-11-data-059",
-        "inf-11-graph-027",
-        "inf-11-graph-028",
-        "inf-11-graph-041",
-        "inf-11-data-035",
-        "inf-11-graph-050",
+        "inf-11-data-057",
+        "inf-11-graph-009",
+        "inf-11-data-034",
+        "inf-11-graph-047",
+        "inf-11-graph-006",
+        "inf-11-graph-023",
         "inf-11-graph-018",
-        "inf-11-data-060"
+        "inf-11-data-036",
+        "inf-11-graph-020",
+        "inf-11-graph-036"
       ],
       "orders": {
-        "inf-11-graph-037": {
-          "right": [
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "у каждой вершины выписан перечень её соседей",
-            "каждое ребро записано отдельной парой вершин"
-          ]
-        },
-        "inf-11-data-060": {
+        "inf-11-data-057": {
           "options": [
-            "D",
+            "C",
             "B",
             "A",
-            "C"
+            "D"
+          ]
+        },
+        "inf-11-graph-006": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
           ]
         }
       },
@@ -1294,55 +1326,47 @@
     {
       "number": 7,
       "task_ids": [
-        "inf-11-graph-034",
-        "inf-11-graph-011",
-        "inf-11-graph-029",
-        "inf-11-graph-023",
-        "inf-11-data-058",
-        "inf-11-graph-007",
-        "inf-11-graph-027",
+        "inf-11-graph-021",
+        "inf-11-data-060",
+        "inf-11-graph-030",
+        "inf-11-graph-024",
+        "inf-11-graph-048",
+        "inf-11-graph-017",
+        "inf-11-graph-018",
         "inf-11-data-037",
-        "inf-11-graph-005",
-        "inf-11-data-060"
+        "inf-11-data-034",
+        "inf-11-graph-049"
       ],
       "orders": {
-        "inf-11-graph-029": {
+        "inf-11-data-060": {
           "options": [
-            "D",
+            "C",
             "A",
             "B",
-            "C"
+            "D"
           ]
         },
-        "inf-11-graph-007": {
+        "inf-11-graph-017": {
           "options": [
-            "A",
+            "D",
             "B",
             "C",
-            "D"
+            "A"
           ]
         },
         "inf-11-data-037": {
           "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-11-graph-005": {
-          "options": [
-            "A",
             "C",
+            "D",
             "B",
-            "D"
+            "A"
           ]
         },
-        "inf-11-data-060": {
+        "inf-11-graph-049": {
           "options": [
             "B",
-            "A",
             "D",
+            "A",
             "C"
           ]
         }
@@ -1352,58 +1376,32 @@
     {
       "number": 8,
       "task_ids": [
-        "inf-11-data-034",
-        "inf-11-graph-030",
-        "inf-11-data-036",
-        "inf-11-graph-028",
+        "inf-11-graph-007",
         "inf-11-graph-002",
-        "inf-11-data-057",
-        "inf-11-graph-023",
-        "inf-11-graph-045",
+        "inf-11-graph-027",
         "inf-11-graph-039",
-        "inf-11-graph-001"
+        "inf-11-graph-047",
+        "inf-11-data-057",
+        "inf-11-data-026",
+        "inf-11-data-034",
+        "inf-11-graph-022",
+        "inf-11-graph-037"
       ],
       "orders": {
+        "inf-11-graph-007": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
         "inf-11-data-057": {
           "options": [
             "C",
             "D",
             "A",
             "B"
-          ]
-        },
-        "inf-11-graph-001": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 9,
-      "task_ids": [
-        "inf-11-graph-022",
-        "inf-11-data-026",
-        "inf-11-graph-003",
-        "inf-11-data-033",
-        "inf-11-graph-009",
-        "inf-11-graph-041",
-        "inf-11-graph-037",
-        "inf-11-graph-045",
-        "inf-11-data-058",
-        "inf-11-graph-006"
-      ],
-      "orders": {
-        "inf-11-data-033": {
-          "right": [
-            "какие величины значимы для задачи",
-            "что запрещено, какие значения недопустимы",
-            "какие величины зависят друг от друга",
-            "что требуется найти или оптимизировать"
           ]
         },
         "inf-11-graph-037": {
@@ -1413,13 +1411,63 @@
             "каждое ребро записано отдельной парой вершин",
             "у каждой вершины выписан перечень её соседей"
           ]
-        },
-        "inf-11-graph-006": {
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-11-graph-028",
+        "inf-11-graph-001",
+        "inf-11-data-033",
+        "inf-11-graph-024",
+        "inf-11-data-037",
+        "inf-11-graph-003",
+        "inf-11-graph-009",
+        "inf-11-graph-049",
+        "inf-11-data-025",
+        "inf-11-graph-039"
+      ],
+      "orders": {
+        "inf-11-graph-001": {
           "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "какие величины значимы для задачи",
+            "какие величины зависят друг от друга",
+            "что требуется найти или оптимизировать",
+            "что запрещено, какие значения недопустимы"
+          ]
+        },
+        "inf-11-data-037": {
+          "options": [
+            "C",
             "A",
             "D",
+            "B"
+          ]
+        },
+        "inf-11-graph-049": {
+          "options": [
+            "D",
             "B",
-            "C"
+            "C",
+            "A"
+          ]
+        },
+        "inf-11-data-025": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
           ]
         }
       },
@@ -1428,40 +1476,48 @@
     {
       "number": 10,
       "task_ids": [
-        "inf-11-graph-020",
-        "inf-11-graph-030",
-        "inf-11-graph-035",
-        "inf-11-data-035",
-        "inf-11-graph-047",
-        "inf-11-graph-003",
-        "inf-11-graph-012",
+        "inf-11-graph-006",
+        "inf-11-graph-008",
+        "inf-11-graph-021",
+        "inf-11-data-033",
+        "inf-11-data-036",
+        "inf-11-graph-036",
+        "inf-11-graph-043",
+        "inf-11-graph-023",
         "inf-11-data-060",
-        "inf-11-graph-028",
-        "inf-11-data-033"
+        "inf-11-graph-002"
       ],
       "orders": {
-        "inf-11-graph-035": {
+        "inf-11-graph-006": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-11-graph-008": {
           "options": [
             "D",
-            "B",
+            "C",
             "A",
-            "C"
+            "B"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "какие величины зависят друг от друга",
+            "какие величины значимы для задачи",
+            "что требуется найти или оптимизировать",
+            "что запрещено, какие значения недопустимы"
           ]
         },
         "inf-11-data-060": {
           "options": [
             "B",
-            "D",
             "C",
-            "A"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "что запрещено, какие значения недопустимы",
-            "что требуется найти или оптимизировать",
-            "какие величины зависят друг от друга",
-            "какие величины значимы для задачи"
+            "A",
+            "D"
           ]
         }
       },
@@ -1470,56 +1526,24 @@
     {
       "number": 11,
       "task_ids": [
-        "inf-11-graph-014",
-        "inf-11-graph-018",
+        "inf-11-data-059",
+        "inf-11-graph-023",
+        "inf-11-data-058",
+        "inf-11-graph-030",
+        "inf-11-graph-033",
+        "inf-11-graph-043",
+        "inf-11-graph-003",
         "inf-11-graph-039",
-        "inf-11-data-057",
-        "inf-11-data-026",
-        "inf-11-graph-007",
-        "inf-11-data-025",
-        "inf-11-graph-049",
-        "inf-11-graph-037",
-        "inf-11-graph-023"
+        "inf-11-data-035",
+        "inf-11-graph-044"
       ],
       "orders": {
-        "inf-11-data-057": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-11-graph-007": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-11-data-025": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-11-graph-049": {
+        "inf-11-graph-044": {
           "options": [
             "A",
             "B",
             "D",
             "C"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "каждое ребро записано отдельной парой вершин",
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "у каждой вершины выписан перечень её соседей",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i"
           ]
         }
       },
@@ -1528,292 +1552,34 @@
     {
       "number": 12,
       "task_ids": [
-        "inf-11-graph-003",
-        "inf-11-graph-015",
-        "inf-11-graph-043",
-        "inf-11-data-033",
-        "inf-11-data-025",
-        "inf-11-graph-039",
-        "inf-11-graph-006",
-        "inf-11-data-026",
-        "inf-11-graph-034",
-        "inf-11-graph-012"
-      ],
-      "orders": {
-        "inf-11-graph-015": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "что запрещено, какие значения недопустимы",
-            "что требуется найти или оптимизировать",
-            "какие величины зависят друг от друга",
-            "какие величины значимы для задачи"
-          ]
-        },
-        "inf-11-data-025": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-11-graph-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-11-graph-023",
-        "inf-11-graph-021",
-        "inf-11-graph-002",
-        "inf-11-data-057",
-        "inf-11-graph-006",
         "inf-11-data-036",
-        "inf-11-graph-030",
+        "inf-11-data-057",
+        "inf-11-graph-022",
+        "inf-11-graph-017",
+        "inf-11-graph-041",
+        "inf-11-data-034",
+        "inf-11-graph-007",
         "inf-11-graph-044",
-        "inf-11-graph-037",
-        "inf-11-data-060"
+        "inf-11-graph-049",
+        "inf-11-graph-002"
       ],
       "orders": {
         "inf-11-data-057": {
           "options": [
-            "D",
-            "B",
             "A",
-            "C"
-          ]
-        },
-        "inf-11-graph-006": {
-          "options": [
             "C",
-            "A",
             "D",
             "B"
           ]
         },
-        "inf-11-graph-044": {
+        "inf-11-graph-017": {
           "options": [
+            "A",
             "C",
             "D",
-            "A",
             "B"
           ]
         },
-        "inf-11-graph-037": {
-          "right": [
-            "у каждой вершины выписан перечень её соседей",
-            "каждое ребро записано отдельной парой вершин",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "таблица: вместо единицы в клетке стоит длина ребра"
-          ]
-        },
-        "inf-11-data-060": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 14,
-      "task_ids": [
-        "inf-11-data-037",
-        "inf-11-graph-029",
-        "inf-11-graph-030",
-        "inf-11-data-058",
-        "inf-11-graph-012",
-        "inf-11-graph-037",
-        "inf-11-graph-006",
-        "inf-11-graph-005",
-        "inf-11-data-034",
-        "inf-11-graph-021"
-      ],
-      "orders": {
-        "inf-11-data-037": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-11-graph-029": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "у каждой вершины выписан перечень её соседей",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "каждое ребро записано отдельной парой вершин",
-            "таблица: вместо единицы в клетке стоит длина ребра"
-          ]
-        },
-        "inf-11-graph-006": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-11-graph-005": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-11-graph-039",
-        "inf-11-data-037",
-        "inf-11-graph-024",
-        "inf-11-graph-042",
-        "inf-11-graph-049",
-        "inf-11-graph-008",
-        "inf-11-graph-003",
-        "inf-11-graph-036",
-        "inf-11-data-033",
-        "inf-11-data-034"
-      ],
-      "orders": {
-        "inf-11-data-037": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-11-graph-049": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-graph-008": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "что запрещено, какие значения недопустимы",
-            "что требуется найти или оптимизировать",
-            "какие величины зависят друг от друга",
-            "какие величины значимы для задачи"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-11-data-060",
-        "inf-11-graph-022",
-        "inf-11-data-034",
-        "inf-11-graph-018",
-        "inf-11-graph-049",
-        "inf-11-graph-050",
-        "inf-11-graph-035",
-        "inf-11-data-037",
-        "inf-11-graph-006",
-        "inf-11-graph-011"
-      ],
-      "orders": {
-        "inf-11-data-060": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-11-graph-049": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-11-graph-035": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-11-data-037": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-11-graph-006": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 17,
-      "task_ids": [
-        "inf-11-data-034",
-        "inf-11-graph-007",
-        "inf-11-graph-037",
-        "inf-11-graph-024",
-        "inf-11-graph-045",
-        "inf-11-graph-014",
-        "inf-11-data-057",
-        "inf-11-data-035",
-        "inf-11-graph-018",
-        "inf-11-graph-038"
-      ],
-      "orders": {
         "inf-11-graph-007": {
           "options": [
             "A",
@@ -1822,20 +1588,214 @@
             "B"
           ]
         },
+        "inf-11-graph-044": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-11-graph-049": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-11-graph-027",
+        "inf-11-graph-003",
+        "inf-11-graph-007",
+        "inf-11-data-026",
+        "inf-11-graph-024",
+        "inf-11-graph-040",
+        "inf-11-data-058",
+        "inf-11-graph-033",
+        "inf-11-data-033",
+        "inf-11-graph-045"
+      ],
+      "orders": {
+        "inf-11-graph-007": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "какие величины зависят друг от друга",
+            "что запрещено, какие значения недопустимы",
+            "что требуется найти или оптимизировать",
+            "какие величины значимы для задачи"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-11-data-036",
+        "inf-11-data-058",
+        "inf-11-graph-005",
+        "inf-11-data-059",
+        "inf-11-graph-023",
+        "inf-11-graph-042",
+        "inf-11-graph-045",
+        "inf-11-graph-030",
+        "inf-11-graph-037",
+        "inf-11-graph-011"
+      ],
+      "orders": {
+        "inf-11-graph-005": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
         "inf-11-graph-037": {
           "right": [
             "у каждой вершины выписан перечень её соседей",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
+            "каждое ребро записано отдельной парой вершин",
             "таблица: вместо единицы в клетке стоит длина ребра",
-            "каждое ребро записано отдельной парой вершин"
+            "таблица: в строке i единицы стоят у всех вершин, смежных с i"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-11-graph-049",
+        "inf-11-graph-047",
+        "inf-11-data-035",
+        "inf-11-graph-012",
+        "inf-11-data-025",
+        "inf-11-graph-015",
+        "inf-11-graph-003",
+        "inf-11-data-057",
+        "inf-11-graph-039",
+        "inf-11-graph-033"
+      ],
+      "orders": {
+        "inf-11-graph-049": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-11-data-025": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-11-graph-015": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
           ]
         },
         "inf-11-data-057": {
           "options": [
+            "D",
             "C",
             "B",
-            "D",
             "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-11-graph-008",
+        "inf-11-graph-034",
+        "inf-11-graph-011",
+        "inf-11-data-059",
+        "inf-11-graph-022",
+        "inf-11-data-037",
+        "inf-11-graph-005",
+        "inf-11-graph-042",
+        "inf-11-data-034",
+        "inf-11-graph-045"
+      ],
+      "orders": {
+        "inf-11-graph-008": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-11-data-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-11-graph-005": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-11-data-026",
+        "inf-11-graph-047",
+        "inf-11-data-060",
+        "inf-11-data-058",
+        "inf-11-graph-034",
+        "inf-11-graph-008",
+        "inf-11-graph-039",
+        "inf-11-graph-023",
+        "inf-11-graph-002",
+        "inf-11-graph-045"
+      ],
+      "orders": {
+        "inf-11-data-060": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-11-graph-008": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
           ]
         }
       },
@@ -1844,27 +1804,19 @@
     {
       "number": 18,
       "task_ids": [
-        "inf-11-graph-002",
-        "inf-11-graph-039",
-        "inf-11-graph-048",
-        "inf-11-graph-034",
-        "inf-11-graph-008",
-        "inf-11-data-035",
-        "inf-11-graph-022",
-        "inf-11-data-025",
-        "inf-11-graph-044",
-        "inf-11-data-033"
+        "inf-11-data-059",
+        "inf-11-data-026",
+        "inf-11-graph-015",
+        "inf-11-graph-023",
+        "inf-11-graph-020",
+        "inf-11-graph-014",
+        "inf-11-data-058",
+        "inf-11-graph-003",
+        "inf-11-graph-035",
+        "inf-11-graph-043"
       ],
       "orders": {
-        "inf-11-graph-008": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-data-025": {
+        "inf-11-graph-015": {
           "options": [
             "D",
             "A",
@@ -1872,20 +1824,12 @@
             "C"
           ]
         },
-        "inf-11-graph-044": {
+        "inf-11-graph-035": {
           "options": [
+            "A",
             "B",
             "C",
-            "A",
             "D"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "что запрещено, какие значения недопустимы",
-            "какие величины значимы для задачи",
-            "какие величины зависят друг от друга",
-            "что требуется найти или оптимизировать"
           ]
         }
       },
@@ -1894,27 +1838,67 @@
     {
       "number": 19,
       "task_ids": [
-        "inf-11-graph-023",
-        "inf-11-graph-014",
-        "inf-11-graph-045",
-        "inf-11-graph-030",
-        "inf-11-graph-018",
-        "inf-11-graph-011",
-        "inf-11-data-033",
-        "inf-11-graph-036",
-        "inf-11-data-057",
-        "inf-11-data-035"
+        "inf-11-data-037",
+        "inf-11-graph-005",
+        "inf-11-graph-007",
+        "inf-11-graph-012",
+        "inf-11-graph-044",
+        "inf-11-graph-047",
+        "inf-11-graph-017",
+        "inf-11-data-025",
+        "inf-11-data-060",
+        "inf-11-graph-041"
       ],
       "orders": {
-        "inf-11-data-033": {
-          "right": [
-            "какие величины зависят друг от друга",
-            "что требуется найти или оптимизировать",
-            "что запрещено, какие значения недопустимы",
-            "какие величины значимы для задачи"
+        "inf-11-data-037": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
           ]
         },
-        "inf-11-data-057": {
+        "inf-11-graph-005": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-11-graph-007": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-11-graph-044": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-11-graph-017": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-11-data-025": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-11-data-060": {
           "options": [
             "B",
             "A",
@@ -1928,56 +1912,56 @@
     {
       "number": 20,
       "task_ids": [
-        "inf-11-graph-040",
-        "inf-11-graph-049",
         "inf-11-data-033",
-        "inf-11-data-035",
-        "inf-11-graph-043",
-        "inf-11-graph-037",
-        "inf-11-graph-003",
-        "inf-11-graph-008",
-        "inf-11-graph-012",
-        "inf-11-data-060"
+        "inf-11-graph-036",
+        "inf-11-graph-005",
+        "inf-11-data-057",
+        "inf-11-graph-049",
+        "inf-11-graph-015",
+        "inf-11-graph-039",
+        "inf-11-graph-023",
+        "inf-11-data-036",
+        "inf-11-graph-045"
       ],
       "orders": {
-        "inf-11-graph-049": {
+        "inf-11-data-033": {
+          "right": [
+            "какие величины зависят друг от друга",
+            "какие величины значимы для задачи",
+            "что требуется найти или оптимизировать",
+            "что запрещено, какие значения недопустимы"
+          ]
+        },
+        "inf-11-graph-005": {
           "options": [
-            "A",
             "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-11-data-057": {
+          "options": [
+            "B",
+            "A",
             "C",
             "D"
           ]
         },
-        "inf-11-data-033": {
-          "right": [
-            "что запрещено, какие значения недопустимы",
-            "какие величины значимы для задачи",
-            "какие величины зависят друг от друга",
-            "что требуется найти или оптимизировать"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "каждое ребро записано отдельной парой вершин",
-            "у каждой вершины выписан перечень её соседей"
-          ]
-        },
-        "inf-11-graph-008": {
+        "inf-11-graph-049": {
           "options": [
+            "A",
             "D",
             "B",
-            "C",
-            "A"
+            "C"
           ]
         },
-        "inf-11-data-060": {
+        "inf-11-graph-015": {
           "options": [
-            "D",
-            "A",
             "C",
-            "B"
+            "A",
+            "B",
+            "D"
           ]
         }
       },
@@ -1986,32 +1970,40 @@
     {
       "number": 21,
       "task_ids": [
-        "inf-11-graph-043",
-        "inf-11-data-037",
-        "inf-11-data-057",
-        "inf-11-graph-022",
-        "inf-11-graph-039",
-        "inf-11-data-034",
-        "inf-11-graph-033",
-        "inf-11-graph-009",
+        "inf-11-graph-007",
         "inf-11-graph-003",
-        "inf-11-graph-028"
+        "inf-11-data-035",
+        "inf-11-graph-022",
+        "inf-11-graph-028",
+        "inf-11-graph-048",
+        "inf-11-graph-001",
+        "inf-11-graph-040",
+        "inf-11-data-058",
+        "inf-11-data-033"
       ],
       "orders": {
-        "inf-11-data-037": {
+        "inf-11-graph-007": {
           "options": [
-            "C",
             "D",
+            "C",
             "A",
             "B"
           ]
         },
-        "inf-11-data-057": {
+        "inf-11-graph-001": {
           "options": [
             "C",
-            "D",
             "B",
-            "A"
+            "A",
+            "D"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "что требуется найти или оптимизировать",
+            "какие величины значимы для задачи",
+            "что запрещено, какие значения недопустимы",
+            "какие величины зависят друг от друга"
           ]
         }
       },
@@ -2020,48 +2012,48 @@
     {
       "number": 22,
       "task_ids": [
-        "inf-11-graph-049",
-        "inf-11-graph-030",
-        "inf-11-data-057",
-        "inf-11-graph-024",
-        "inf-11-graph-045",
-        "inf-11-data-025",
-        "inf-11-graph-038",
+        "inf-11-data-034",
+        "inf-11-data-059",
+        "inf-11-graph-008",
+        "inf-11-graph-017",
         "inf-11-graph-002",
-        "inf-11-data-036",
-        "inf-11-graph-035"
+        "inf-11-data-037",
+        "inf-11-graph-006",
+        "inf-11-graph-043",
+        "inf-11-graph-041",
+        "inf-11-graph-022"
       ],
       "orders": {
-        "inf-11-graph-049": {
+        "inf-11-graph-008": {
           "options": [
             "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-11-graph-017": {
+          "options": [
             "A",
             "D",
+            "C",
             "B"
           ]
         },
-        "inf-11-data-057": {
+        "inf-11-data-037": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-11-graph-006": {
           "options": [
             "C",
             "B",
             "D",
             "A"
-          ]
-        },
-        "inf-11-data-025": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-graph-035": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
           ]
         }
       },
@@ -2070,48 +2062,40 @@
     {
       "number": 23,
       "task_ids": [
-        "inf-11-graph-049",
-        "inf-11-data-059",
+        "inf-11-graph-042",
+        "inf-11-graph-007",
+        "inf-11-graph-022",
         "inf-11-data-034",
-        "inf-11-graph-044",
-        "inf-11-graph-002",
-        "inf-11-graph-008",
-        "inf-11-graph-024",
+        "inf-11-graph-043",
+        "inf-11-data-025",
         "inf-11-data-026",
-        "inf-11-graph-011",
-        "inf-11-graph-001"
+        "inf-11-graph-037",
+        "inf-11-graph-018",
+        "inf-11-graph-020"
       ],
       "orders": {
-        "inf-11-graph-049": {
+        "inf-11-graph-007": {
           "options": [
             "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-graph-044": {
-          "options": [
             "B",
-            "C",
             "A",
             "D"
           ]
         },
-        "inf-11-graph-008": {
+        "inf-11-data-025": {
           "options": [
             "D",
-            "A",
             "C",
-            "B"
+            "B",
+            "A"
           ]
         },
-        "inf-11-graph-001": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
+        "inf-11-graph-037": {
+          "right": [
+            "таблица: вместо единицы в клетке стоит длина ребра",
+            "у каждой вершины выписан перечень её соседей",
+            "каждое ребро записано отдельной парой вершин",
+            "таблица: в строке i единицы стоят у всех вершин, смежных с i"
           ]
         }
       },
@@ -2120,55 +2104,55 @@
     {
       "number": 24,
       "task_ids": [
-        "inf-11-graph-029",
-        "inf-11-data-036",
-        "inf-11-graph-017",
-        "inf-11-graph-041",
-        "inf-11-graph-015",
-        "inf-11-graph-002",
-        "inf-11-data-060",
+        "inf-11-graph-009",
+        "inf-11-graph-037",
+        "inf-11-data-033",
+        "inf-11-graph-003",
+        "inf-11-graph-042",
         "inf-11-graph-044",
-        "inf-11-graph-012",
-        "inf-11-data-058"
+        "inf-11-graph-022",
+        "inf-11-graph-011",
+        "inf-11-data-037",
+        "inf-11-data-057"
       ],
       "orders": {
-        "inf-11-graph-029": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
+        "inf-11-graph-037": {
+          "right": [
+            "у каждой вершины выписан перечень её соседей",
+            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
+            "каждое ребро записано отдельной парой вершин",
+            "таблица: вместо единицы в клетке стоит длина ребра"
           ]
         },
-        "inf-11-graph-017": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-11-graph-015": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-11-data-060": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
+        "inf-11-data-033": {
+          "right": [
+            "что запрещено, какие значения недопустимы",
+            "какие величины значимы для задачи",
+            "что требуется найти или оптимизировать",
+            "какие величины зависят друг от друга"
           ]
         },
         "inf-11-graph-044": {
           "options": [
+            "C",
             "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-11-data-037": {
+          "options": [
             "A",
             "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-11-data-057": {
+          "options": [
+            "C",
+            "B",
+            "A",
             "D"
           ]
         }
@@ -2178,48 +2162,32 @@
     {
       "number": 25,
       "task_ids": [
-        "inf-11-data-057",
-        "inf-11-graph-050",
-        "inf-11-graph-043",
+        "inf-11-graph-047",
+        "inf-11-graph-015",
+        "inf-11-data-059",
+        "inf-11-graph-021",
+        "inf-11-graph-036",
+        "inf-11-data-034",
         "inf-11-graph-005",
-        "inf-11-graph-034",
-        "inf-11-graph-011",
-        "inf-11-data-037",
-        "inf-11-graph-027",
-        "inf-11-graph-022",
-        "inf-11-data-033"
+        "inf-11-data-026",
+        "inf-11-graph-014",
+        "inf-11-graph-024"
       ],
       "orders": {
-        "inf-11-data-057": {
+        "inf-11-graph-015": {
           "options": [
             "B",
-            "A",
             "D",
+            "A",
             "C"
           ]
         },
         "inf-11-graph-005": {
           "options": [
             "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-11-data-037": {
-          "options": [
-            "D",
             "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "что требуется найти или оптимизировать",
-            "что запрещено, какие значения недопустимы",
-            "какие величины значимы для задачи",
-            "какие величины зависят друг от друга"
+            "B",
+            "C"
           ]
         }
       },
@@ -2229,15 +2197,15 @@
       "number": 26,
       "task_ids": [
         "inf-11-graph-017",
-        "inf-11-graph-003",
-        "inf-11-graph-045",
-        "inf-11-data-036",
-        "inf-11-graph-024",
-        "inf-11-data-058",
-        "inf-11-data-033",
-        "inf-11-graph-044",
-        "inf-11-graph-030",
-        "inf-11-graph-039"
+        "inf-11-graph-002",
+        "inf-11-graph-007",
+        "inf-11-graph-023",
+        "inf-11-graph-014",
+        "inf-11-graph-048",
+        "inf-11-data-035",
+        "inf-11-graph-038",
+        "inf-11-data-060",
+        "inf-11-data-033"
       ],
       "orders": {
         "inf-11-graph-017": {
@@ -2248,20 +2216,28 @@
             "A"
           ]
         },
-        "inf-11-data-033": {
-          "right": [
-            "какие величины зависят друг от друга",
-            "что требуется найти или оптимизировать",
-            "какие величины значимы для задачи",
-            "что запрещено, какие значения недопустимы"
+        "inf-11-graph-007": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
           ]
         },
-        "inf-11-graph-044": {
+        "inf-11-data-060": {
           "options": [
             "D",
+            "C",
             "A",
-            "B",
-            "C"
+            "B"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "какие величины значимы для задачи",
+            "что запрещено, какие значения недопустимы",
+            "какие величины зависят друг от друга",
+            "что требуется найти или оптимизировать"
           ]
         }
       },
@@ -2270,56 +2246,32 @@
     {
       "number": 27,
       "task_ids": [
-        "inf-11-graph-039",
-        "inf-11-graph-042",
+        "inf-11-graph-036",
+        "inf-11-graph-021",
+        "inf-11-graph-030",
+        "inf-11-graph-023",
+        "inf-11-data-034",
+        "inf-11-data-035",
         "inf-11-graph-044",
-        "inf-11-data-025",
-        "inf-11-data-036",
-        "inf-11-graph-015",
-        "inf-11-data-057",
-        "inf-11-graph-024",
-        "inf-11-graph-037",
-        "inf-11-graph-002"
+        "inf-11-graph-003",
+        "inf-11-graph-048",
+        "inf-11-data-060"
       ],
       "orders": {
         "inf-11-graph-044": {
           "options": [
+            "B",
             "C",
-            "D",
             "A",
-            "B"
+            "D"
           ]
         },
-        "inf-11-data-025": {
+        "inf-11-data-060": {
           "options": [
-            "C",
             "D",
+            "C",
             "B",
             "A"
-          ]
-        },
-        "inf-11-graph-015": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-11-data-057": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "каждое ребро записано отдельной парой вершин",
-            "у каждой вершины выписан перечень её соседей",
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i"
           ]
         }
       },
@@ -2328,48 +2280,40 @@
     {
       "number": 28,
       "task_ids": [
-        "inf-11-graph-006",
-        "inf-11-graph-009",
-        "inf-11-graph-037",
-        "inf-11-graph-024",
-        "inf-11-data-036",
-        "inf-11-graph-043",
+        "inf-11-graph-047",
+        "inf-11-graph-005",
+        "inf-11-graph-012",
+        "inf-11-graph-033",
         "inf-11-data-059",
-        "inf-11-data-060",
-        "inf-11-graph-020",
-        "inf-11-graph-005"
+        "inf-11-graph-021",
+        "inf-11-graph-015",
+        "inf-11-data-026",
+        "inf-11-graph-045",
+        "inf-11-data-025"
       ],
       "orders": {
-        "inf-11-graph-006": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "каждое ребро записано отдельной парой вершин",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "у каждой вершины выписан перечень её соседей"
-          ]
-        },
-        "inf-11-data-060": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
         "inf-11-graph-005": {
           "options": [
             "D",
-            "C",
             "A",
-            "B"
+            "B",
+            "C"
+          ]
+        },
+        "inf-11-graph-015": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-11-data-025": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
           ]
         }
       },
@@ -2378,48 +2322,56 @@
     {
       "number": 29,
       "task_ids": [
-        "inf-11-data-025",
-        "inf-11-graph-028",
-        "inf-11-graph-022",
-        "inf-11-graph-008",
-        "inf-11-graph-002",
-        "inf-11-graph-041",
-        "inf-11-graph-037",
-        "inf-11-graph-045",
+        "inf-11-graph-012",
+        "inf-11-graph-048",
+        "inf-11-data-060",
+        "inf-11-data-033",
+        "inf-11-graph-007",
+        "inf-11-graph-035",
+        "inf-11-graph-027",
         "inf-11-data-036",
-        "inf-11-data-057"
+        "inf-11-graph-041",
+        "inf-11-graph-005"
       ],
       "orders": {
-        "inf-11-data-025": {
+        "inf-11-data-060": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-11-data-033": {
+          "right": [
+            "что запрещено, какие значения недопустимы",
+            "что требуется найти или оптимизировать",
+            "какие величины значимы для задачи",
+            "какие величины зависят друг от друга"
+          ]
+        },
+        "inf-11-graph-007": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-11-graph-035": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-11-graph-005": {
           "options": [
             "D",
             "A",
             "B",
             "C"
-          ]
-        },
-        "inf-11-graph-008": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-11-graph-037": {
-          "right": [
-            "у каждой вершины выписан перечень её соседей",
-            "таблица: в строке i единицы стоят у всех вершин, смежных с i",
-            "таблица: вместо единицы в клетке стоит длина ребра",
-            "каждое ребро записано отдельной парой вершин"
-          ]
-        },
-        "inf-11-data-057": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
           ]
         }
       },
@@ -2428,51 +2380,18 @@
     {
       "number": 30,
       "task_ids": [
-        "inf-11-data-026",
-        "inf-11-graph-001",
-        "inf-11-graph-009",
+        "inf-11-data-059",
+        "inf-11-data-034",
         "inf-11-graph-048",
-        "inf-11-graph-006",
-        "inf-11-data-025",
+        "inf-11-graph-011",
         "inf-11-graph-023",
-        "inf-11-graph-003",
-        "inf-11-data-033",
-        "inf-11-graph-021"
+        "inf-11-graph-034",
+        "inf-11-graph-030",
+        "inf-11-data-035",
+        "inf-11-graph-045",
+        "inf-11-graph-003"
       ],
-      "orders": {
-        "inf-11-graph-001": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-11-graph-006": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-11-data-025": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-11-data-033": {
-          "right": [
-            "какие величины значимы для задачи",
-            "что требуется найти или оптимизировать",
-            "какие величины зависят друг от друга",
-            "что запрещено, какие значения недопустимы"
-          ]
-        }
-      },
+      "orders": {},
       "max_score": 14
     }
   ]

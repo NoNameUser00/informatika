@@ -52,7 +52,8 @@
         "inf-7-inf-022",
         "inf-7-inf-023",
         "inf-7-inf-047",
-        "inf-7-inf-048"
+        "inf-7-inf-048",
+        "inf-7-inf-049"
       ]
     },
     {
@@ -71,11 +72,9 @@
         "inf-7-inf-014",
         "inf-7-inf-024",
         "inf-7-inf-010",
-        "inf-7-inf-011",
         "inf-7-inf-031",
         "inf-7-inf-052",
         "inf-7-inf-025",
-        "inf-7-inf-026",
         "inf-7-inf-050",
         "inf-7-inf-028",
         "inf-7-inf-029",
@@ -100,14 +99,15 @@
         "inf-7-media-009",
         "inf-7-media-038",
         "inf-7-media-039",
+        "inf-7-base-008",
         "inf-7-base-009",
-        "inf-7-base-029",
         "inf-7-base-080",
         "inf-7-base-081",
         "inf-7-media-013",
         "inf-7-media-014",
         "inf-7-media-015",
         "inf-7-media-036",
+        "inf-7-media-037",
         "inf-7-base-030",
         "inf-7-base-031",
         "inf-7-base-082",
@@ -599,6 +599,14 @@
       ]
     },
     {
+      "id": "inf-7-inf-049",
+      "lesson": "7inf-06-codes",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В неравномерном коде буква Т кодируется одним знаком, О — двумя, А — тремя. Сколько знаков в коде слова ТОТ? Запишите только число.",
+      "base": 10
+    },
+    {
       "id": "inf-7-inf-006",
       "lesson": "7inf-03-measure",
       "type": "numeric_base",
@@ -672,14 +680,6 @@
       "base": 10
     },
     {
-      "id": "inf-7-inf-011",
-      "lesson": "7inf-04-textvolume",
-      "type": "numeric_base",
-      "points": 3,
-      "prompt": "Сообщение 9000 байт: 6 страниц по 40 строк по 60 символов. Каков информационный вес символа в битах? Запишите только число.",
-      "base": 10
-    },
-    {
       "id": "inf-7-inf-031",
       "lesson": "7inf-04-textvolume",
       "type": "numeric_base",
@@ -701,14 +701,6 @@
       "type": "numeric_base",
       "points": 1,
       "prompt": "Сообщение из 200 символов, вес символа 8 бит. Чему равен информационный объём в битах? Запишите только число.",
-      "base": 10
-    },
-    {
-      "id": "inf-7-inf-026",
-      "lesson": "7inf-07-volume",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Сообщение объёмом 480 бит состоит из 60 символов. Каков вес символа в битах? Запишите только число.",
       "base": 10
     },
     {
@@ -867,19 +859,36 @@
       ]
     },
     {
+      "id": "inf-7-base-008",
+      "lesson": "7gfx-01-graphics",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем растровое изображение отличается от векторного?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Хранит формулы фигур"
+        },
+        {
+          "id": "C",
+          "text": "Не имеет размера"
+        },
+        {
+          "id": "D",
+          "text": "Не хранит цвета"
+        },
+        {
+          "id": "A",
+          "text": "Хранит цвет каждого пикселя"
+        }
+      ]
+    },
+    {
       "id": "inf-7-base-009",
       "lesson": "7gfx-01-graphics",
       "type": "numeric_base",
       "points": 2,
       "prompt": "Чёрно-белый рисунок 10 на 10 пикселей (1 бит на пиксель). Сколько бит он весит? Запишите только число.",
-      "base": 10
-    },
-    {
-      "id": "inf-7-base-029",
-      "lesson": "7gfx-01-graphics",
-      "type": "numeric_base",
-      "points": 3,
-      "prompt": "Изображение 800 на 600 пикселей, глубина кодирования 24 бита. Чему равен объём в байтах? Запишите только число.",
       "base": 10
     },
     {
@@ -982,6 +991,31 @@
       ]
     },
     {
+      "id": "inf-7-media-037",
+      "lesson": "7gfx-03-color",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как в модели RGB получить белый цвет?",
+      "options": [
+        {
+          "id": "C",
+          "text": "Включить только красный канал: #FF0000"
+        },
+        {
+          "id": "D",
+          "text": "Смешать каналы попарно, получив #FF00FF"
+        },
+        {
+          "id": "A",
+          "text": "Включить все три канала: #FFFFFF"
+        },
+        {
+          "id": "B",
+          "text": "Выключить все три канала: #000000"
+        }
+      ]
+    },
+    {
       "id": "inf-7-base-030",
       "lesson": "7net-02-speed",
       "type": "single_choice",
@@ -1052,990 +1086,82 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-7-inf-015",
-        "inf-7-inf-023",
+        "inf-7-inf-005",
+        "inf-7-base-009",
+        "inf-7-media-009",
+        "inf-7-inf-033",
+        "inf-7-inf-020",
+        "inf-7-inf-008",
+        "inf-7-media-015",
+        "inf-7-inf-029",
+        "inf-7-inf-013",
+        "inf-7-inf-041",
+        "inf-7-inf-053",
+        "inf-7-base-030",
+        "inf-7-media-007",
         "inf-7-inf-030",
         "inf-7-media-013",
-        "inf-7-inf-011",
-        "inf-7-base-029",
-        "inf-7-inf-003",
-        "inf-7-inf-013",
-        "inf-7-media-007",
-        "inf-7-inf-009",
-        "inf-7-inf-028",
-        "inf-7-media-015",
-        "inf-7-base-031",
-        "inf-7-inf-002",
         "inf-7-inf-016",
-        "inf-7-inf-007",
-        "inf-7-inf-029",
-        "inf-7-inf-046",
-        "inf-7-media-009",
-        "inf-7-inf-017"
+        "inf-7-inf-004",
+        "inf-7-inf-045",
+        "inf-7-base-008",
+        "inf-7-inf-051"
       ],
       "orders": {
-        "inf-7-inf-015": {
+        "inf-7-inf-005": {
           "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-013": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-003": {
-          "options": [
-            "B",
             "C",
             "D",
+            "B",
             "A"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-009": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "обработка",
-            "приём"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
           ]
         },
         "inf-7-media-009": {
           "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 2,
-      "task_ids": [
-        "inf-7-inf-041",
-        "inf-7-inf-053",
-        "inf-7-media-015",
-        "inf-7-inf-042",
-        "inf-7-media-036",
-        "inf-7-base-031",
-        "inf-7-base-029",
-        "inf-7-inf-023",
-        "inf-7-inf-032",
-        "inf-7-inf-026",
-        "inf-7-inf-030",
-        "inf-7-inf-002",
-        "inf-7-inf-029",
-        "inf-7-base-030",
-        "inf-7-inf-048",
-        "inf-7-inf-019",
-        "inf-7-inf-011",
-        "inf-7-inf-047",
-        "inf-7-inf-004",
-        "inf-7-media-007"
-      ],
-      "orders": {
-        "inf-7-inf-041": {
-          "options": [
             "D",
             "A",
             "C",
             "B"
           ]
         },
-        "inf-7-inf-042": {
+        "inf-7-inf-043": {
           "options": [
-            "A",
             "D",
+            "A",
             "B",
             "C"
-          ]
-        },
-        "inf-7-media-036": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-030": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 3,
-      "task_ids": [
-        "inf-7-inf-030",
-        "inf-7-inf-018",
-        "inf-7-inf-024",
-        "inf-7-inf-023",
-        "inf-7-inf-008",
-        "inf-7-base-009",
-        "inf-7-inf-014",
-        "inf-7-inf-019",
-        "inf-7-inf-013",
-        "inf-7-base-029",
-        "inf-7-media-015",
-        "inf-7-inf-007",
-        "inf-7-media-007",
-        "inf-7-inf-004",
-        "inf-7-inf-021",
-        "inf-7-base-081",
-        "inf-7-inf-002",
-        "inf-7-media-039",
-        "inf-7-inf-041",
-        "inf-7-inf-010"
-      ],
-      "orders": {
-        "inf-7-inf-023": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
           ]
         },
         "inf-7-inf-013": {
           "options": [
+            "D",
             "B",
             "A",
-            "D",
             "C"
-          ]
-        },
-        "inf-7-inf-021": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-039": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
           ]
         },
         "inf-7-inf-041": {
           "options": [
             "D",
             "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-7-base-031",
-        "inf-7-media-015",
-        "inf-7-inf-048",
-        "inf-7-base-029",
-        "inf-7-inf-017",
-        "inf-7-base-080",
-        "inf-7-inf-016",
-        "inf-7-base-083",
-        "inf-7-inf-053",
-        "inf-7-inf-047",
-        "inf-7-inf-006",
-        "inf-7-inf-032",
-        "inf-7-inf-011",
-        "inf-7-inf-043",
-        "inf-7-inf-042",
-        "inf-7-inf-033",
-        "inf-7-inf-020",
-        "inf-7-inf-024",
-        "inf-7-base-009",
-        "inf-7-inf-004"
-      ],
-      "orders": {
-        "inf-7-inf-048": {
-          "options": [
-            "B",
-            "A",
             "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-base-080": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "обработка",
-            "хранение",
-            "приём"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "A",
-            "C",
-            "D",
             "B"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 5,
-      "task_ids": [
-        "inf-7-inf-024",
-        "inf-7-inf-005",
-        "inf-7-inf-030",
-        "inf-7-inf-045",
-        "inf-7-base-030",
-        "inf-7-media-007",
-        "inf-7-inf-009",
-        "inf-7-inf-052",
-        "inf-7-inf-023",
-        "inf-7-media-008",
-        "inf-7-inf-029",
-        "inf-7-inf-016",
-        "inf-7-inf-006",
-        "inf-7-media-009",
-        "inf-7-inf-041",
-        "inf-7-media-015",
-        "inf-7-base-029",
-        "inf-7-inf-048",
-        "inf-7-inf-017",
-        "inf-7-inf-004"
-      ],
-      "orders": {
-        "inf-7-inf-005": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
           ]
         },
         "inf-7-base-030": {
           "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-009": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "B",
-            "D",
             "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "обработка",
-            "приём",
-            "хранение"
-          ]
-        },
-        "inf-7-media-009": {
-          "options": [
-            "A",
-            "C",
             "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-041": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 6,
-      "task_ids": [
-        "inf-7-inf-019",
-        "inf-7-base-082",
-        "inf-7-inf-004",
-        "inf-7-inf-048",
-        "inf-7-base-029",
-        "inf-7-media-015",
-        "inf-7-inf-018",
-        "inf-7-inf-010",
-        "inf-7-inf-044",
-        "inf-7-media-014",
-        "inf-7-inf-030",
-        "inf-7-inf-051",
-        "inf-7-inf-023",
-        "inf-7-inf-024",
-        "inf-7-base-009",
-        "inf-7-inf-001",
-        "inf-7-base-080",
-        "inf-7-inf-047",
-        "inf-7-inf-033",
-        "inf-7-inf-052"
-      ],
-      "orders": {
-        "inf-7-inf-019": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-001": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-base-080": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 7,
-      "task_ids": [
-        "inf-7-inf-020",
-        "inf-7-inf-010",
-        "inf-7-media-007",
-        "inf-7-inf-011",
-        "inf-7-media-015",
-        "inf-7-inf-005",
-        "inf-7-inf-001",
-        "inf-7-inf-048",
-        "inf-7-inf-002",
-        "inf-7-media-039",
-        "inf-7-base-029",
-        "inf-7-media-014",
-        "inf-7-inf-042",
-        "inf-7-inf-051",
-        "inf-7-inf-025",
-        "inf-7-inf-019",
-        "inf-7-base-082",
-        "inf-7-inf-024",
-        "inf-7-inf-022",
-        "inf-7-inf-026"
-      ],
-      "orders": {
-        "inf-7-inf-005": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-001": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-media-039": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "B",
-            "A",
             "D",
             "C"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 8,
-      "task_ids": [
-        "inf-7-inf-024",
-        "inf-7-inf-048",
-        "inf-7-inf-019",
-        "inf-7-inf-045",
-        "inf-7-base-083",
-        "inf-7-inf-029",
-        "inf-7-inf-021",
-        "inf-7-media-015",
-        "inf-7-media-007",
-        "inf-7-inf-008",
-        "inf-7-inf-001",
-        "inf-7-inf-030",
-        "inf-7-base-009",
-        "inf-7-inf-017",
-        "inf-7-inf-006",
-        "inf-7-inf-014",
-        "inf-7-base-029",
-        "inf-7-media-038",
-        "inf-7-inf-004",
-        "inf-7-inf-023"
-      ],
-      "orders": {
-        "inf-7-inf-048": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-021": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-038": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 9,
-      "task_ids": [
-        "inf-7-inf-046",
-        "inf-7-inf-023",
-        "inf-7-base-009",
-        "inf-7-inf-032",
-        "inf-7-inf-047",
-        "inf-7-base-083",
-        "inf-7-media-015",
-        "inf-7-inf-016",
-        "inf-7-inf-043",
-        "inf-7-inf-011",
-        "inf-7-inf-042",
-        "inf-7-media-013",
-        "inf-7-inf-044",
-        "inf-7-inf-050",
-        "inf-7-inf-024",
-        "inf-7-inf-013",
-        "inf-7-media-014",
-        "inf-7-inf-007",
-        "inf-7-inf-010",
-        "inf-7-base-029"
-      ],
-      "orders": {
-        "inf-7-inf-046": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "обработка",
-            "приём"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
           ]
         },
         "inf-7-media-013": {
           "options": [
-            "C",
-            "D",
             "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
             "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 10,
-      "task_ids": [
-        "inf-7-inf-043",
-        "inf-7-media-039",
-        "inf-7-inf-030",
-        "inf-7-base-083",
-        "inf-7-inf-019",
-        "inf-7-base-031",
-        "inf-7-base-029",
-        "inf-7-inf-008",
-        "inf-7-inf-007",
-        "inf-7-inf-048",
-        "inf-7-inf-005",
-        "inf-7-inf-001",
-        "inf-7-inf-020",
-        "inf-7-inf-033",
-        "inf-7-inf-024",
-        "inf-7-base-009",
-        "inf-7-inf-025",
-        "inf-7-inf-042",
-        "inf-7-media-015",
-        "inf-7-inf-046"
-      ],
-      "orders": {
-        "inf-7-inf-043": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-039": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "D",
-            "A",
             "C",
             "B"
-          ]
-        },
-        "inf-7-inf-005": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 11,
-      "task_ids": [
-        "inf-7-base-031",
-        "inf-7-inf-030",
-        "inf-7-inf-050",
-        "inf-7-inf-033",
-        "inf-7-base-029",
-        "inf-7-base-083",
-        "inf-7-inf-016",
-        "inf-7-inf-017",
-        "inf-7-inf-023",
-        "inf-7-media-015",
-        "inf-7-inf-025",
-        "inf-7-inf-029",
-        "inf-7-base-082",
-        "inf-7-inf-001",
-        "inf-7-inf-021",
-        "inf-7-inf-004",
-        "inf-7-inf-018",
-        "inf-7-inf-011",
-        "inf-7-base-009",
-        "inf-7-inf-047"
-      ],
-      "orders": {
-        "inf-7-base-083": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
           ]
         },
         "inf-7-inf-016": {
@@ -2045,7 +1171,166 @@
             "обработка"
           ]
         },
-        "inf-7-inf-017": {
+        "inf-7-base-008": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 34
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-7-base-031",
+        "inf-7-inf-028",
+        "inf-7-inf-013",
+        "inf-7-base-009",
+        "inf-7-inf-004",
+        "inf-7-inf-020",
+        "inf-7-inf-005",
+        "inf-7-inf-024",
+        "inf-7-base-030",
+        "inf-7-inf-044",
+        "inf-7-base-080",
+        "inf-7-inf-029",
+        "inf-7-inf-033",
+        "inf-7-inf-014",
+        "inf-7-inf-042",
+        "inf-7-inf-016",
+        "inf-7-inf-025",
+        "inf-7-media-013",
+        "inf-7-base-081",
+        "inf-7-inf-002"
+      ],
+      "orders": {
+        "inf-7-inf-013": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-030": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "хранение",
+            "обработка",
+            "приём"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-7-inf-050",
+        "inf-7-inf-053",
+        "inf-7-base-083",
+        "inf-7-base-031",
+        "inf-7-inf-019",
+        "inf-7-inf-029",
+        "inf-7-inf-018",
+        "inf-7-inf-020",
+        "inf-7-inf-005",
+        "inf-7-inf-013",
+        "inf-7-media-008",
+        "inf-7-base-030",
+        "inf-7-inf-024",
+        "inf-7-inf-033",
+        "inf-7-inf-032",
+        "inf-7-media-013",
+        "inf-7-inf-004",
+        "inf-7-inf-001",
+        "inf-7-base-082",
+        "inf-7-inf-044"
+      ],
+      "orders": {
+        "inf-7-base-083": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-013": {
           "options": [
             "A",
             "D",
@@ -2053,75 +1338,337 @@
             "B"
           ]
         },
-        "inf-7-inf-023": {
+        "inf-7-base-030": {
           "options": [
-            "C",
             "D",
             "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "A",
+            "D",
+            "C",
             "B"
           ]
         },
         "inf-7-inf-001": {
           "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "C",
+            "B",
             "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-7-inf-044",
+        "inf-7-inf-014",
+        "inf-7-inf-022",
+        "inf-7-inf-017",
+        "inf-7-inf-052",
+        "inf-7-inf-045",
+        "inf-7-media-038",
+        "inf-7-inf-016",
+        "inf-7-inf-048",
+        "inf-7-inf-021",
+        "inf-7-media-037",
+        "inf-7-inf-033",
+        "inf-7-inf-051",
+        "inf-7-inf-030",
+        "inf-7-inf-007",
+        "inf-7-media-007",
+        "inf-7-media-009",
+        "inf-7-media-008",
+        "inf-7-base-008",
+        "inf-7-inf-020"
+      ],
+      "orders": {
+        "inf-7-inf-044": {
+          "options": [
+            "C",
             "B",
             "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-017": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "A",
+            "B",
+            "D",
             "C"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "приём",
+            "хранение",
+            "обработка"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
           ]
         },
         "inf-7-inf-021": {
           "options": [
             "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-037": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
             "B",
+            "A",
             "D",
             "C"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-7-inf-029",
+        "inf-7-media-039",
+        "inf-7-base-080",
+        "inf-7-inf-016",
+        "inf-7-media-014",
+        "inf-7-media-036",
+        "inf-7-inf-028",
+        "inf-7-inf-047",
+        "inf-7-inf-033",
+        "inf-7-inf-030",
+        "inf-7-inf-052",
+        "inf-7-inf-003",
+        "inf-7-inf-051",
+        "inf-7-base-009",
+        "inf-7-media-013",
+        "inf-7-inf-020",
+        "inf-7-inf-046",
+        "inf-7-inf-001",
+        "inf-7-inf-042",
+        "inf-7-inf-041"
+      ],
+      "orders": {
+        "inf-7-media-039": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "хранение",
+            "обработка",
+            "приём"
+          ]
+        },
+        "inf-7-media-036": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         },
         "inf-7-inf-047": {
           "options": [
             "A",
+            "C",
             "B",
-            "D",
-            "C"
+            "D"
           ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-7-inf-001",
-        "inf-7-inf-004",
-        "inf-7-media-014",
-        "inf-7-inf-024",
-        "inf-7-inf-030",
-        "inf-7-inf-010",
-        "inf-7-base-009",
-        "inf-7-media-009",
-        "inf-7-inf-014",
-        "inf-7-base-029",
-        "inf-7-inf-008",
-        "inf-7-media-036",
-        "inf-7-inf-020",
-        "inf-7-inf-021",
-        "inf-7-inf-019",
-        "inf-7-inf-047",
-        "inf-7-inf-017",
-        "inf-7-inf-045",
-        "inf-7-media-015",
-        "inf-7-inf-026"
-      ],
-      "orders": {
-        "inf-7-inf-001": {
+        },
+        "inf-7-inf-003": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-013": {
           "options": [
             "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-046": {
+          "options": [
+            "C",
             "D",
             "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "D",
+            "B",
+            "A",
             "C"
           ]
         },
-        "inf-7-media-009": {
+        "inf-7-inf-042": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-7-media-007",
+        "inf-7-base-008",
+        "inf-7-inf-031",
+        "inf-7-base-080",
+        "inf-7-inf-009",
+        "inf-7-inf-004",
+        "inf-7-inf-042",
+        "inf-7-inf-005",
+        "inf-7-base-082",
+        "inf-7-inf-030",
+        "inf-7-inf-048",
+        "inf-7-media-037",
+        "inf-7-base-009",
+        "inf-7-inf-017",
+        "inf-7-inf-050",
+        "inf-7-inf-033",
+        "inf-7-inf-044",
+        "inf-7-inf-020",
+        "inf-7-inf-019",
+        "inf-7-inf-029"
+      ],
+      "orders": {
+        "inf-7-base-008": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-009": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-037": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-017": {
           "options": [
             "B",
             "A",
@@ -2129,7 +1676,257 @@
             "D"
           ]
         },
-        "inf-7-media-036": {
+        "inf-7-inf-044": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-7-inf-010",
+        "inf-7-inf-018",
+        "inf-7-inf-050",
+        "inf-7-media-007",
+        "inf-7-inf-020",
+        "inf-7-inf-002",
+        "inf-7-inf-004",
+        "inf-7-base-031",
+        "inf-7-inf-031",
+        "inf-7-inf-016",
+        "inf-7-inf-021",
+        "inf-7-media-038",
+        "inf-7-inf-033",
+        "inf-7-inf-024",
+        "inf-7-base-082",
+        "inf-7-base-081",
+        "inf-7-media-037",
+        "inf-7-inf-003",
+        "inf-7-inf-014",
+        "inf-7-inf-001"
+      ],
+      "orders": {
+        "inf-7-inf-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "обработка",
+            "хранение",
+            "приём"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-037": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-003": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-7-inf-051",
+        "inf-7-media-009",
+        "inf-7-base-030",
+        "inf-7-inf-021",
+        "inf-7-inf-015",
+        "inf-7-media-039",
+        "inf-7-inf-030",
+        "inf-7-inf-029",
+        "inf-7-inf-032",
+        "inf-7-media-014",
+        "inf-7-inf-044",
+        "inf-7-inf-033",
+        "inf-7-inf-028",
+        "inf-7-inf-020",
+        "inf-7-media-007",
+        "inf-7-inf-004",
+        "inf-7-inf-041",
+        "inf-7-inf-013",
+        "inf-7-inf-016",
+        "inf-7-media-013"
+      ],
+      "orders": {
+        "inf-7-media-009": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-030": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-015": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-039": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "хранение",
+            "обработка",
+            "приём"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-7-inf-041",
+        "inf-7-media-038",
+        "inf-7-base-083",
+        "inf-7-inf-003",
+        "inf-7-media-039",
+        "inf-7-inf-022",
+        "inf-7-base-030",
+        "inf-7-inf-008",
+        "inf-7-inf-018",
+        "inf-7-inf-048",
+        "inf-7-inf-023",
+        "inf-7-base-009",
+        "inf-7-inf-019",
+        "inf-7-media-008",
+        "inf-7-inf-025",
+        "inf-7-inf-029",
+        "inf-7-inf-053",
+        "inf-7-inf-024",
+        "inf-7-inf-043",
+        "inf-7-inf-010"
+      ],
+      "orders": {
+        "inf-7-inf-041": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-base-083": {
           "options": [
             "A",
             "B",
@@ -2137,12 +1934,96 @@
             "C"
           ]
         },
-        "inf-7-inf-021": {
+        "inf-7-inf-003": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-039": {
           "options": [
             "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-030": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
             "C",
             "D",
+            "B",
             "A"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-043": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-7-media-013",
+        "inf-7-inf-019",
+        "inf-7-inf-031",
+        "inf-7-inf-003",
+        "inf-7-inf-022",
+        "inf-7-media-038",
+        "inf-7-inf-047",
+        "inf-7-inf-044",
+        "inf-7-media-007",
+        "inf-7-inf-033",
+        "inf-7-inf-052",
+        "inf-7-inf-001",
+        "inf-7-base-009",
+        "inf-7-inf-018",
+        "inf-7-inf-024",
+        "inf-7-inf-009",
+        "inf-7-media-009",
+        "inf-7-inf-007",
+        "inf-7-media-037",
+        "inf-7-inf-020"
+      ],
+      "orders": {
+        "inf-7-media-013": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
           ]
         },
         "inf-7-inf-019": {
@@ -2153,7 +2034,7 @@
             "C"
           ]
         },
-        "inf-7-inf-047": {
+        "inf-7-inf-003": {
           "options": [
             "A",
             "C",
@@ -2161,156 +2042,607 @@
             "D"
           ]
         },
-        "inf-7-inf-017": {
+        "inf-7-media-038": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-047": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-044": {
           "options": [
             "D",
+            "B",
             "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "C",
+            "D",
             "B",
             "A"
           ]
+        },
+        "inf-7-inf-009": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-037": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
         }
       },
-      "max_score": 38
+      "max_score": 32
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-7-inf-010",
+        "inf-7-inf-014",
+        "inf-7-inf-051",
+        "inf-7-inf-016",
+        "inf-7-inf-041",
+        "inf-7-base-030",
+        "inf-7-media-036",
+        "inf-7-base-008",
+        "inf-7-inf-044",
+        "inf-7-inf-047",
+        "inf-7-inf-030",
+        "inf-7-inf-046",
+        "inf-7-base-083",
+        "inf-7-inf-042",
+        "inf-7-inf-028",
+        "inf-7-inf-029",
+        "inf-7-inf-020",
+        "inf-7-inf-048",
+        "inf-7-media-007",
+        "inf-7-media-014"
+      ],
+      "orders": {
+        "inf-7-inf-016": {
+          "right": [
+            "хранение",
+            "приём",
+            "обработка"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-030": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-036": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-047": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-046": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-7-inf-010",
+        "inf-7-base-030",
+        "inf-7-inf-042",
+        "inf-7-inf-002",
+        "inf-7-base-009",
+        "inf-7-inf-007",
+        "inf-7-inf-021",
+        "inf-7-inf-003",
+        "inf-7-inf-023",
+        "inf-7-base-008",
+        "inf-7-inf-022",
+        "inf-7-inf-031",
+        "inf-7-base-083",
+        "inf-7-base-031",
+        "inf-7-inf-030",
+        "inf-7-inf-032",
+        "inf-7-media-009",
+        "inf-7-inf-019",
+        "inf-7-inf-043",
+        "inf-7-inf-025"
+      ],
+      "orders": {
+        "inf-7-base-030": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-003": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-043": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 32
     },
     {
       "number": 13,
       "task_ids": [
         "inf-7-inf-046",
-        "inf-7-media-013",
-        "inf-7-inf-003",
-        "inf-7-base-029",
-        "inf-7-inf-043",
-        "inf-7-inf-019",
-        "inf-7-inf-010",
+        "inf-7-base-083",
+        "inf-7-base-008",
+        "inf-7-media-038",
+        "inf-7-inf-024",
         "inf-7-inf-052",
         "inf-7-base-031",
-        "inf-7-inf-011",
-        "inf-7-inf-051",
-        "inf-7-media-039",
-        "inf-7-inf-023",
-        "inf-7-inf-018",
-        "inf-7-inf-048",
-        "inf-7-inf-024",
-        "inf-7-media-015",
-        "inf-7-inf-006",
+        "inf-7-inf-045",
+        "inf-7-inf-001",
+        "inf-7-inf-033",
+        "inf-7-inf-019",
+        "inf-7-inf-013",
         "inf-7-media-007",
-        "inf-7-inf-044"
+        "inf-7-inf-050",
+        "inf-7-inf-017",
+        "inf-7-inf-032",
+        "inf-7-inf-005",
+        "inf-7-inf-023",
+        "inf-7-media-009",
+        "inf-7-inf-029"
       ],
       "orders": {
         "inf-7-inf-046": {
           "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
             "B",
             "D",
             "C",
             "A"
           ]
         },
-        "inf-7-media-013": {
+        "inf-7-inf-001": {
           "options": [
-            "C",
             "D",
+            "C",
             "B",
             "A"
-          ]
-        },
-        "inf-7-inf-003": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
           ]
         },
         "inf-7-inf-019": {
           "options": [
             "B",
+            "A",
             "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-017": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-7-inf-023",
+        "inf-7-base-081",
+        "inf-7-inf-021",
+        "inf-7-inf-018",
+        "inf-7-base-008",
+        "inf-7-inf-004",
+        "inf-7-inf-053",
+        "inf-7-media-008",
+        "inf-7-inf-019",
+        "inf-7-media-013",
+        "inf-7-inf-001",
+        "inf-7-inf-014",
+        "inf-7-inf-047",
+        "inf-7-inf-031",
+        "inf-7-base-031",
+        "inf-7-inf-030",
+        "inf-7-inf-041",
+        "inf-7-inf-010",
+        "inf-7-media-039",
+        "inf-7-inf-006"
+      ],
+      "orders": {
+        "inf-7-inf-023": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-047": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "C",
+            "B",
             "D",
             "A"
           ]
         },
         "inf-7-media-039": {
           "options": [
-            "B",
-            "C",
             "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
             "D",
             "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
-            "A",
-            "C",
-            "D",
             "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     },
     {
-      "number": 14,
+      "number": 15,
       "task_ids": [
-        "inf-7-inf-017",
-        "inf-7-media-014",
-        "inf-7-inf-023",
-        "inf-7-inf-011",
-        "inf-7-inf-029",
-        "inf-7-inf-053",
-        "inf-7-inf-052",
-        "inf-7-inf-010",
-        "inf-7-inf-004",
-        "inf-7-inf-016",
-        "inf-7-base-083",
-        "inf-7-media-015",
         "inf-7-inf-001",
+        "inf-7-inf-008",
+        "inf-7-inf-046",
+        "inf-7-base-080",
+        "inf-7-inf-028",
+        "inf-7-media-014",
+        "inf-7-inf-029",
         "inf-7-inf-042",
-        "inf-7-base-029",
-        "inf-7-media-009",
-        "inf-7-base-009",
+        "inf-7-inf-002",
+        "inf-7-inf-020",
+        "inf-7-inf-021",
+        "inf-7-media-036",
+        "inf-7-inf-031",
         "inf-7-inf-030",
-        "inf-7-inf-047",
-        "inf-7-inf-005"
+        "inf-7-base-008",
+        "inf-7-base-031",
+        "inf-7-inf-013",
+        "inf-7-inf-016",
+        "inf-7-base-082",
+        "inf-7-inf-033"
       ],
       "orders": {
-        "inf-7-inf-017": {
+        "inf-7-inf-001": {
           "options": [
-            "C",
             "B",
             "A",
+            "C",
             "D"
           ]
         },
-        "inf-7-inf-023": {
+        "inf-7-inf-046": {
           "options": [
             "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "C",
             "D",
             "B",
-            "C"
+            "A"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-036": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
           ]
         },
         "inf-7-inf-016": {
@@ -2319,13 +2651,489 @@
             "хранение",
             "обработка"
           ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-7-media-014",
+        "inf-7-inf-046",
+        "inf-7-media-008",
+        "inf-7-inf-019",
+        "inf-7-base-080",
+        "inf-7-inf-007",
+        "inf-7-inf-044",
+        "inf-7-inf-053",
+        "inf-7-inf-031",
+        "inf-7-inf-006",
+        "inf-7-base-083",
+        "inf-7-inf-013",
+        "inf-7-inf-050",
+        "inf-7-inf-045",
+        "inf-7-inf-023",
+        "inf-7-inf-024",
+        "inf-7-inf-001",
+        "inf-7-inf-021",
+        "inf-7-media-013",
+        "inf-7-base-082"
+      ],
+      "orders": {
+        "inf-7-inf-046": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
         },
         "inf-7-base-083": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-001": {
           "options": [
             "C",
             "A",
             "B",
             "D"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-7-inf-030",
+        "inf-7-inf-045",
+        "inf-7-inf-029",
+        "inf-7-media-013",
+        "inf-7-inf-050",
+        "inf-7-base-080",
+        "inf-7-media-007",
+        "inf-7-inf-052",
+        "inf-7-inf-002",
+        "inf-7-inf-049",
+        "inf-7-inf-051",
+        "inf-7-media-038",
+        "inf-7-inf-023",
+        "inf-7-inf-006",
+        "inf-7-inf-005",
+        "inf-7-media-014",
+        "inf-7-inf-021",
+        "inf-7-base-082",
+        "inf-7-inf-041",
+        "inf-7-inf-019"
+      ],
+      "orders": {
+        "inf-7-media-013": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-080": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-7-inf-044",
+        "inf-7-inf-005",
+        "inf-7-inf-019",
+        "inf-7-inf-007",
+        "inf-7-base-082",
+        "inf-7-inf-024",
+        "inf-7-inf-022",
+        "inf-7-inf-017",
+        "inf-7-base-031",
+        "inf-7-media-007",
+        "inf-7-inf-028",
+        "inf-7-inf-032",
+        "inf-7-inf-047",
+        "inf-7-inf-045",
+        "inf-7-media-039",
+        "inf-7-media-036",
+        "inf-7-inf-023",
+        "inf-7-inf-053",
+        "inf-7-base-008",
+        "inf-7-inf-010"
+      ],
+      "orders": {
+        "inf-7-inf-044": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-017": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-047": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-039": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-media-036": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-7-inf-021",
+        "inf-7-base-083",
+        "inf-7-inf-020",
+        "inf-7-inf-053",
+        "inf-7-inf-030",
+        "inf-7-inf-033",
+        "inf-7-base-031",
+        "inf-7-inf-022",
+        "inf-7-inf-041",
+        "inf-7-inf-005",
+        "inf-7-media-013",
+        "inf-7-inf-052",
+        "inf-7-inf-019",
+        "inf-7-media-009",
+        "inf-7-inf-029",
+        "inf-7-media-014",
+        "inf-7-inf-028",
+        "inf-7-base-082",
+        "inf-7-inf-044",
+        "inf-7-inf-045"
+      ],
+      "orders": {
+        "inf-7-inf-021": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-7-inf-046",
+        "inf-7-media-038",
+        "inf-7-inf-017",
+        "inf-7-inf-024",
+        "inf-7-inf-033",
+        "inf-7-inf-052",
+        "inf-7-inf-048",
+        "inf-7-inf-029",
+        "inf-7-base-083",
+        "inf-7-inf-005",
+        "inf-7-inf-020",
+        "inf-7-base-082",
+        "inf-7-media-009",
+        "inf-7-inf-001",
+        "inf-7-inf-031",
+        "inf-7-base-031",
+        "inf-7-media-008",
+        "inf-7-inf-045",
+        "inf-7-inf-008",
+        "inf-7-inf-016"
+      ],
+      "orders": {
+        "inf-7-inf-046": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-017": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
           ]
         },
         "inf-7-inf-001": {
@@ -2336,994 +3144,202 @@
             "B"
           ]
         },
-        "inf-7-inf-042": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-media-009": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-005": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-7-inf-052",
-        "inf-7-inf-009",
-        "inf-7-inf-024",
-        "inf-7-inf-017",
-        "inf-7-base-031",
-        "inf-7-inf-022",
-        "inf-7-inf-033",
-        "inf-7-media-009",
-        "inf-7-inf-006",
-        "inf-7-inf-016",
-        "inf-7-inf-047",
-        "inf-7-media-015",
-        "inf-7-inf-041",
-        "inf-7-base-029",
-        "inf-7-media-014",
-        "inf-7-inf-042",
-        "inf-7-base-030",
-        "inf-7-inf-023",
-        "inf-7-inf-013",
-        "inf-7-inf-030"
-      ],
-      "orders": {
-        "inf-7-inf-009": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-media-009": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "обработка",
-            "приём"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-041": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-base-030": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-7-media-014",
-        "inf-7-inf-016",
-        "inf-7-inf-022",
-        "inf-7-inf-013",
-        "inf-7-inf-047",
-        "inf-7-inf-032",
-        "inf-7-inf-011",
-        "inf-7-base-082",
-        "inf-7-media-015",
-        "inf-7-inf-020",
-        "inf-7-media-008",
-        "inf-7-inf-010",
-        "inf-7-base-080",
-        "inf-7-inf-043",
-        "inf-7-inf-024",
-        "inf-7-inf-041",
-        "inf-7-inf-031",
-        "inf-7-base-029",
-        "inf-7-inf-045",
-        "inf-7-inf-026"
-      ],
-      "orders": {
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "приём",
-            "обработка"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-base-080": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-041": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 17,
-      "task_ids": [
-        "inf-7-base-080",
-        "inf-7-media-015",
-        "inf-7-inf-024",
-        "inf-7-media-007",
-        "inf-7-inf-025",
-        "inf-7-inf-013",
-        "inf-7-inf-017",
-        "inf-7-inf-031",
-        "inf-7-inf-022",
-        "inf-7-base-029",
-        "inf-7-inf-016",
-        "inf-7-base-083",
-        "inf-7-inf-030",
-        "inf-7-inf-007",
-        "inf-7-inf-023",
-        "inf-7-inf-002",
-        "inf-7-inf-021",
-        "inf-7-inf-010",
-        "inf-7-inf-015",
-        "inf-7-media-008"
-      ],
-      "orders": {
-        "inf-7-base-080": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "приём",
-            "обработка"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-021": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-015": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 18,
-      "task_ids": [
-        "inf-7-inf-044",
-        "inf-7-media-015",
-        "inf-7-inf-046",
-        "inf-7-base-031",
-        "inf-7-inf-047",
-        "inf-7-inf-019",
-        "inf-7-base-029",
-        "inf-7-inf-005",
-        "inf-7-inf-007",
-        "inf-7-inf-024",
-        "inf-7-inf-020",
-        "inf-7-base-082",
-        "inf-7-inf-033",
-        "inf-7-base-080",
-        "inf-7-inf-053",
-        "inf-7-media-014",
-        "inf-7-inf-011",
-        "inf-7-inf-002",
-        "inf-7-inf-008",
-        "inf-7-inf-018"
-      ],
-      "orders": {
-        "inf-7-inf-044": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-005": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-base-080": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 19,
-      "task_ids": [
-        "inf-7-inf-045",
-        "inf-7-inf-030",
-        "inf-7-base-031",
-        "inf-7-inf-007",
-        "inf-7-inf-047",
-        "inf-7-media-039",
-        "inf-7-inf-011",
-        "inf-7-inf-013",
-        "inf-7-inf-041",
-        "inf-7-inf-023",
-        "inf-7-inf-043",
-        "inf-7-inf-026",
-        "inf-7-base-029",
-        "inf-7-media-015",
-        "inf-7-inf-032",
-        "inf-7-inf-022",
-        "inf-7-inf-051",
-        "inf-7-inf-019",
-        "inf-7-base-009",
-        "inf-7-media-038"
-      ],
-      "orders": {
-        "inf-7-inf-047": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-media-039": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-041": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-media-038": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-7-base-030",
-        "inf-7-inf-011",
-        "inf-7-inf-019",
-        "inf-7-inf-024",
-        "inf-7-inf-013",
-        "inf-7-inf-002",
-        "inf-7-media-015",
-        "inf-7-inf-022",
-        "inf-7-media-014",
-        "inf-7-inf-015",
-        "inf-7-base-083",
-        "inf-7-inf-020",
-        "inf-7-base-009",
-        "inf-7-inf-008",
-        "inf-7-inf-050",
-        "inf-7-base-029",
-        "inf-7-inf-043",
-        "inf-7-inf-010",
-        "inf-7-inf-005",
-        "inf-7-inf-007"
-      ],
-      "orders": {
-        "inf-7-base-030": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-015": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-base-083": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-005": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 21,
-      "task_ids": [
-        "inf-7-inf-011",
-        "inf-7-inf-026",
-        "inf-7-media-036",
-        "inf-7-media-014",
-        "inf-7-inf-044",
-        "inf-7-media-015",
-        "inf-7-inf-032",
-        "inf-7-inf-046",
-        "inf-7-inf-042",
-        "inf-7-inf-024",
-        "inf-7-media-007",
-        "inf-7-media-009",
-        "inf-7-inf-052",
-        "inf-7-inf-013",
-        "inf-7-inf-007",
-        "inf-7-inf-019",
-        "inf-7-inf-017",
-        "inf-7-inf-003",
-        "inf-7-inf-020",
-        "inf-7-base-029"
-      ],
-      "orders": {
-        "inf-7-media-036": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-042": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-media-009": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-017": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-003": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-7-inf-045",
-        "inf-7-media-015",
-        "inf-7-media-007",
-        "inf-7-inf-003",
-        "inf-7-inf-043",
-        "inf-7-inf-006",
-        "inf-7-inf-051",
-        "inf-7-inf-030",
-        "inf-7-inf-021",
-        "inf-7-base-009",
-        "inf-7-base-029",
-        "inf-7-media-036",
-        "inf-7-inf-046",
-        "inf-7-inf-023",
-        "inf-7-inf-050",
-        "inf-7-base-082",
-        "inf-7-inf-016",
-        "inf-7-inf-024",
-        "inf-7-inf-044",
-        "inf-7-inf-029"
-      ],
-      "orders": {
-        "inf-7-inf-003": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-021": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-media-036": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-016": {
-          "right": [
-            "хранение",
-            "приём",
-            "обработка"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-7-base-030",
-        "inf-7-inf-048",
-        "inf-7-inf-011",
-        "inf-7-media-008",
-        "inf-7-inf-046",
-        "inf-7-inf-033",
-        "inf-7-inf-047",
-        "inf-7-base-031",
-        "inf-7-inf-052",
-        "inf-7-inf-015",
-        "inf-7-base-029",
-        "inf-7-inf-008",
-        "inf-7-media-015",
-        "inf-7-media-038",
-        "inf-7-inf-019",
-        "inf-7-inf-020",
-        "inf-7-inf-044",
-        "inf-7-inf-043",
-        "inf-7-inf-006",
-        "inf-7-inf-030"
-      ],
-      "orders": {
-        "inf-7-base-030": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-046": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-047": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-015": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-7-media-038": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-044": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-7-inf-024",
-        "inf-7-media-007",
-        "inf-7-inf-053",
-        "inf-7-inf-052",
-        "inf-7-inf-020",
-        "inf-7-media-015",
-        "inf-7-inf-016",
-        "inf-7-media-014",
-        "inf-7-inf-022",
-        "inf-7-inf-030",
-        "inf-7-inf-002",
-        "inf-7-inf-013",
-        "inf-7-media-038",
-        "inf-7-media-039",
-        "inf-7-inf-045",
-        "inf-7-inf-026",
-        "inf-7-inf-006",
-        "inf-7-inf-021",
-        "inf-7-inf-041",
-        "inf-7-base-029"
-      ],
-      "orders": {
         "inf-7-inf-016": {
           "right": [
             "приём",
             "обработка",
             "хранение"
           ]
-        },
-        "inf-7-inf-002": {
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-7-inf-018",
+        "inf-7-inf-022",
+        "inf-7-inf-023",
+        "inf-7-inf-007",
+        "inf-7-inf-044",
+        "inf-7-inf-030",
+        "inf-7-media-039",
+        "inf-7-media-009",
+        "inf-7-base-081",
+        "inf-7-base-080",
+        "inf-7-inf-048",
+        "inf-7-inf-008",
+        "inf-7-inf-031",
+        "inf-7-inf-032",
+        "inf-7-base-009",
+        "inf-7-inf-006",
+        "inf-7-base-031",
+        "inf-7-inf-019",
+        "inf-7-inf-001",
+        "inf-7-inf-003"
+      ],
+      "orders": {
+        "inf-7-inf-023": {
           "options": [
+            "C",
+            "A",
             "B",
-            "C",
-            "D",
-            "A"
+            "D"
           ]
         },
-        "inf-7-inf-013": {
+        "inf-7-inf-044": {
           "options": [
             "D",
-            "C",
             "A",
-            "B"
-          ]
-        },
-        "inf-7-media-038": {
-          "options": [
-            "A",
-            "D",
             "B",
             "C"
           ]
         },
         "inf-7-media-039": {
           "options": [
-            "D",
+            "C",
             "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
             "B",
+            "A",
+            "D",
             "C"
           ]
         },
-        "inf-7-inf-021": {
+        "inf-7-base-080": {
           "options": [
-            "D",
             "C",
-            "B",
-            "A"
+            "D",
+            "A",
+            "B"
           ]
         },
-        "inf-7-inf-041": {
+        "inf-7-inf-048": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-019": {
           "options": [
             "C",
             "A",
             "D",
             "B"
           ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-003": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     },
     {
-      "number": 25,
+      "number": 22,
       "task_ids": [
-        "inf-7-inf-010",
-        "inf-7-inf-011",
-        "inf-7-inf-015",
-        "inf-7-base-031",
-        "inf-7-inf-016",
-        "inf-7-inf-020",
-        "inf-7-inf-004",
-        "inf-7-inf-005",
-        "inf-7-base-029",
-        "inf-7-inf-031",
-        "inf-7-media-015",
-        "inf-7-inf-006",
-        "inf-7-inf-048",
-        "inf-7-media-007",
-        "inf-7-inf-041",
-        "inf-7-base-082",
+        "inf-7-inf-042",
+        "inf-7-inf-023",
+        "inf-7-inf-022",
+        "inf-7-inf-032",
+        "inf-7-media-038",
         "inf-7-inf-002",
-        "inf-7-inf-030",
+        "inf-7-base-082",
+        "inf-7-inf-044",
+        "inf-7-inf-033",
+        "inf-7-inf-009",
         "inf-7-base-081",
-        "inf-7-inf-028"
+        "inf-7-inf-048",
+        "inf-7-media-009",
+        "inf-7-inf-024",
+        "inf-7-inf-016",
+        "inf-7-inf-010",
+        "inf-7-inf-013",
+        "inf-7-inf-014",
+        "inf-7-media-008",
+        "inf-7-base-031"
       ],
       "orders": {
-        "inf-7-inf-015": {
+        "inf-7-inf-042": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-023": {
           "options": [
             "A",
             "B",
             "D",
+            "C"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-009": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "A",
+            "D",
+            "B",
             "C"
           ]
         },
@@ -3334,67 +3350,59 @@
             "обработка"
           ]
         },
-        "inf-7-inf-005": {
+        "inf-7-inf-013": {
           "options": [
-            "D",
-            "B",
             "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-048": {
-          "options": [
-            "A",
             "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-041": {
-          "options": [
-            "D",
-            "C",
             "A",
-            "B"
-          ]
-        },
-        "inf-7-inf-002": {
-          "options": [
-            "A",
-            "D",
-            "C",
             "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     },
     {
-      "number": 26,
+      "number": 23,
       "task_ids": [
-        "inf-7-inf-051",
-        "inf-7-inf-033",
-        "inf-7-inf-018",
+        "inf-7-inf-019",
         "inf-7-inf-002",
-        "inf-7-media-015",
+        "inf-7-base-031",
         "inf-7-inf-017",
-        "inf-7-inf-014",
-        "inf-7-inf-003",
-        "inf-7-media-007",
-        "inf-7-inf-026",
-        "inf-7-media-008",
-        "inf-7-media-036",
-        "inf-7-base-029",
-        "inf-7-inf-013",
         "inf-7-inf-030",
-        "inf-7-inf-004",
+        "inf-7-inf-010",
+        "inf-7-inf-013",
+        "inf-7-inf-031",
+        "inf-7-inf-006",
+        "inf-7-media-038",
         "inf-7-media-039",
-        "inf-7-inf-016",
-        "inf-7-inf-011",
-        "inf-7-inf-020"
+        "inf-7-inf-042",
+        "inf-7-inf-028",
+        "inf-7-media-009",
+        "inf-7-inf-046",
+        "inf-7-inf-020",
+        "inf-7-inf-014",
+        "inf-7-media-007",
+        "inf-7-media-036",
+        "inf-7-inf-021"
       ],
       "orders": {
+        "inf-7-inf-019": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
         "inf-7-inf-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-017": {
           "options": [
             "B",
             "C",
@@ -3402,222 +3410,346 @@
             "D"
           ]
         },
-        "inf-7-inf-017": {
+        "inf-7-inf-013": {
           "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-7-inf-003": {
-          "options": [
-            "D",
-            "A",
             "C",
-            "B"
-          ]
-        },
-        "inf-7-media-036": {
-          "options": [
             "B",
-            "C",
             "D",
             "A"
           ]
         },
-        "inf-7-inf-013": {
+        "inf-7-media-038": {
           "options": [
+            "B",
             "A",
             "D",
-            "B",
             "C"
           ]
         },
         "inf-7-media-039": {
           "options": [
+            "A",
             "C",
             "B",
-            "A",
             "D"
           ]
         },
+        "inf-7-inf-042": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-media-009": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-inf-046": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-7-media-036": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-7-inf-016",
+        "inf-7-media-037",
+        "inf-7-inf-029",
+        "inf-7-media-014",
+        "inf-7-inf-006",
+        "inf-7-inf-043",
+        "inf-7-inf-009",
+        "inf-7-inf-005",
+        "inf-7-media-039",
+        "inf-7-inf-023",
+        "inf-7-inf-048",
+        "inf-7-inf-032",
+        "inf-7-inf-022",
+        "inf-7-inf-053",
+        "inf-7-inf-030",
+        "inf-7-base-008",
+        "inf-7-inf-041",
+        "inf-7-inf-018",
+        "inf-7-media-008",
+        "inf-7-base-083"
+      ],
+      "orders": {
         "inf-7-inf-016": {
           "right": [
             "хранение",
             "обработка",
             "приём"
           ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-7-inf-002",
-        "inf-7-media-008",
-        "inf-7-base-030",
-        "inf-7-inf-021",
-        "inf-7-inf-011",
-        "inf-7-inf-051",
-        "inf-7-inf-013",
-        "inf-7-media-007",
-        "inf-7-media-013",
-        "inf-7-inf-010",
-        "inf-7-inf-023",
-        "inf-7-media-015",
-        "inf-7-inf-043",
-        "inf-7-inf-030",
-        "inf-7-inf-045",
-        "inf-7-inf-006",
-        "inf-7-inf-019",
-        "inf-7-inf-046",
-        "inf-7-inf-009",
-        "inf-7-base-029"
-      ],
-      "orders": {
-        "inf-7-inf-002": {
+        },
+        "inf-7-media-037": {
           "options": [
-            "B",
             "D",
             "C",
+            "B",
             "A"
           ]
         },
-        "inf-7-base-030": {
+        "inf-7-inf-043": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-009": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-media-039": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-7-inf-052",
+        "inf-7-base-083",
+        "inf-7-base-031",
+        "inf-7-inf-008",
+        "inf-7-inf-020",
+        "inf-7-media-007",
+        "inf-7-media-038",
+        "inf-7-media-037",
+        "inf-7-inf-030",
+        "inf-7-inf-044",
+        "inf-7-inf-047",
+        "inf-7-inf-021",
+        "inf-7-inf-033",
+        "inf-7-media-013",
+        "inf-7-inf-015",
+        "inf-7-inf-002",
+        "inf-7-inf-049",
+        "inf-7-inf-019",
+        "inf-7-inf-032",
+        "inf-7-inf-029"
+      ],
+      "orders": {
+        "inf-7-base-083": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-media-038": {
           "options": [
             "D",
             "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-7-media-037": {
+          "options": [
             "C",
-            "A"
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-047": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
           ]
         },
         "inf-7-inf-021": {
           "options": [
-            "C",
             "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
             "A",
             "D",
-            "B",
             "C"
           ]
         },
         "inf-7-media-013": {
           "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
             "A",
             "C",
             "D",
             "B"
           ]
         },
-        "inf-7-inf-019": {
+        "inf-7-inf-015": {
           "options": [
+            "A",
+            "C",
             "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
             "D",
             "A",
-            "C"
+            "C",
+            "B"
           ]
         },
-        "inf-7-inf-046": {
+        "inf-7-inf-019": {
           "options": [
+            "D",
             "A",
             "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-7-inf-009": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
+            "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     },
     {
-      "number": 28,
+      "number": 26,
       "task_ids": [
-        "inf-7-inf-047",
-        "inf-7-inf-009",
-        "inf-7-inf-029",
-        "inf-7-base-029",
-        "inf-7-inf-004",
-        "inf-7-inf-030",
-        "inf-7-inf-013",
+        "inf-7-inf-051",
+        "inf-7-inf-023",
         "inf-7-inf-042",
-        "inf-7-media-015",
-        "inf-7-inf-041",
-        "inf-7-inf-017",
-        "inf-7-inf-019",
-        "inf-7-inf-024",
-        "inf-7-media-008",
-        "inf-7-media-039",
+        "inf-7-media-009",
+        "inf-7-base-008",
         "inf-7-inf-007",
-        "inf-7-inf-008",
-        "inf-7-base-081",
-        "inf-7-inf-020",
-        "inf-7-media-007"
+        "inf-7-inf-017",
+        "inf-7-inf-010",
+        "inf-7-inf-030",
+        "inf-7-inf-052",
+        "inf-7-media-039",
+        "inf-7-inf-016",
+        "inf-7-inf-032",
+        "inf-7-media-008",
+        "inf-7-inf-043",
+        "inf-7-inf-048",
+        "inf-7-inf-005",
+        "inf-7-inf-022",
+        "inf-7-media-038",
+        "inf-7-base-031"
       ],
       "orders": {
-        "inf-7-inf-047": {
+        "inf-7-inf-023": {
           "options": [
             "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-009": {
-          "options": [
             "B",
             "A",
-            "C",
             "D"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
           ]
         },
         "inf-7-inf-042": {
           "options": [
-            "B",
             "A",
-            "C",
-            "D"
+            "D",
+            "B",
+            "C"
           ]
         },
-        "inf-7-inf-041": {
+        "inf-7-media-009": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-base-008": {
           "options": [
             "D",
             "A",
@@ -3627,120 +3759,220 @@
         },
         "inf-7-inf-017": {
           "options": [
-            "A",
             "B",
             "D",
-            "C"
-          ]
-        },
-        "inf-7-inf-019": {
-          "options": [
-            "B",
             "A",
-            "D",
             "C"
           ]
         },
         "inf-7-media-039": {
           "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 29,
-      "task_ids": [
-        "inf-7-inf-042",
-        "inf-7-media-014",
-        "inf-7-inf-043",
-        "inf-7-inf-030",
-        "inf-7-inf-013",
-        "inf-7-inf-031",
-        "inf-7-inf-007",
-        "inf-7-inf-052",
-        "inf-7-inf-010",
-        "inf-7-inf-021",
-        "inf-7-inf-016",
-        "inf-7-media-038",
-        "inf-7-media-039",
-        "inf-7-media-015",
-        "inf-7-inf-023",
-        "inf-7-base-031",
-        "inf-7-inf-011",
-        "inf-7-base-029",
-        "inf-7-inf-046",
-        "inf-7-inf-041"
-      ],
-      "orders": {
-        "inf-7-inf-042": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-043": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-7-inf-013": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-7-inf-021": {
-          "options": [
-            "B",
             "C",
             "A",
+            "B",
             "D"
           ]
         },
         "inf-7-inf-016": {
           "right": [
+            "обработка",
             "приём",
-            "хранение",
-            "обработка"
+            "хранение"
+          ]
+        },
+        "inf-7-inf-043": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-005": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
           ]
         },
         "inf-7-media-038": {
           "options": [
-            "A",
-            "B",
             "C",
-            "D"
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-7-base-080",
+        "inf-7-inf-007",
+        "inf-7-inf-019",
+        "inf-7-inf-045",
+        "inf-7-inf-032",
+        "inf-7-inf-006",
+        "inf-7-inf-031",
+        "inf-7-base-030",
+        "inf-7-inf-023",
+        "inf-7-inf-046",
+        "inf-7-inf-030",
+        "inf-7-inf-021",
+        "inf-7-media-013",
+        "inf-7-inf-041",
+        "inf-7-media-014",
+        "inf-7-inf-013",
+        "inf-7-base-083",
+        "inf-7-inf-052",
+        "inf-7-media-007",
+        "inf-7-inf-002"
+      ],
+      "orders": {
+        "inf-7-base-080": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
           ]
         },
-        "inf-7-media-039": {
+        "inf-7-inf-019": {
           "options": [
-            "D",
-            "C",
             "A",
+            "C",
+            "D",
             "B"
+          ]
+        },
+        "inf-7-base-030": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
           ]
         },
         "inf-7-inf-023": {
           "options": [
             "A",
-            "B",
             "D",
-            "C"
+            "C",
+            "B"
           ]
         },
         "inf-7-inf-046": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-base-083": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-7-inf-005",
+        "inf-7-base-031",
+        "inf-7-inf-001",
+        "inf-7-media-038",
+        "inf-7-base-009",
+        "inf-7-base-030",
+        "inf-7-inf-020",
+        "inf-7-inf-004",
+        "inf-7-base-082",
+        "inf-7-inf-030",
+        "inf-7-inf-048",
+        "inf-7-inf-007",
+        "inf-7-inf-008",
+        "inf-7-inf-042",
+        "inf-7-inf-019",
+        "inf-7-inf-041",
+        "inf-7-media-013",
+        "inf-7-inf-053",
+        "inf-7-inf-010",
+        "inf-7-inf-051"
+      ],
+      "orders": {
+        "inf-7-inf-005": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-001": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-7-media-038": {
           "options": [
             "B",
             "A",
@@ -3748,43 +3980,91 @@
             "D"
           ]
         },
+        "inf-7-base-030": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-048": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-042": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-7-inf-019": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
         "inf-7-inf-041": {
           "options": [
             "A",
+            "C",
             "D",
+            "B"
+          ]
+        },
+        "inf-7-media-013": {
+          "options": [
             "B",
-            "C"
+            "A",
+            "C",
+            "D"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     },
     {
-      "number": 30,
+      "number": 29,
       "task_ids": [
-        "inf-7-inf-003",
-        "inf-7-inf-016",
-        "inf-7-base-031",
-        "inf-7-inf-004",
+        "inf-7-inf-049",
+        "inf-7-inf-007",
         "inf-7-inf-008",
-        "inf-7-inf-002",
-        "inf-7-base-029",
-        "inf-7-inf-024",
-        "inf-7-media-015",
-        "inf-7-inf-029",
         "inf-7-inf-005",
-        "inf-7-inf-011",
-        "inf-7-media-009",
-        "inf-7-media-014",
-        "inf-7-inf-017",
-        "inf-7-inf-023",
-        "inf-7-base-080",
-        "inf-7-inf-026",
-        "inf-7-inf-018",
-        "inf-7-inf-053"
+        "inf-7-media-038",
+        "inf-7-media-007",
+        "inf-7-inf-016",
+        "inf-7-inf-003",
+        "inf-7-media-008",
+        "inf-7-inf-014",
+        "inf-7-inf-052",
+        "inf-7-inf-030",
+        "inf-7-inf-045",
+        "inf-7-base-030",
+        "inf-7-base-008",
+        "inf-7-inf-006",
+        "inf-7-inf-041",
+        "inf-7-base-081",
+        "inf-7-inf-020",
+        "inf-7-inf-002"
       ],
       "orders": {
-        "inf-7-inf-003": {
+        "inf-7-inf-005": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-7-media-038": {
           "options": [
             "A",
             "D",
@@ -3799,23 +4079,138 @@
             "хранение"
           ]
         },
-        "inf-7-inf-002": {
+        "inf-7-inf-003": {
           "options": [
-            "D",
-            "C",
             "B",
+            "C",
+            "D",
             "A"
           ]
         },
-        "inf-7-inf-005": {
+        "inf-7-base-030": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-7-base-008": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-041": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-002": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 32
+    },
+    {
+      "number": 30,
+      "task_ids": [
+        "inf-7-media-008",
+        "inf-7-base-083",
+        "inf-7-media-038",
+        "inf-7-inf-013",
+        "inf-7-inf-006",
+        "inf-7-media-037",
+        "inf-7-inf-023",
+        "inf-7-inf-008",
+        "inf-7-inf-016",
+        "inf-7-inf-021",
+        "inf-7-inf-044",
+        "inf-7-inf-032",
+        "inf-7-inf-046",
+        "inf-7-base-030",
+        "inf-7-inf-029",
+        "inf-7-inf-024",
+        "inf-7-inf-043",
+        "inf-7-base-009",
+        "inf-7-inf-042",
+        "inf-7-inf-031"
+      ],
+      "orders": {
+        "inf-7-base-083": {
           "options": [
             "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-media-038": {
+          "options": [
+            "B",
             "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-013": {
+          "options": [
+            "A",
+            "C",
             "D",
             "B"
           ]
         },
-        "inf-7-media-009": {
+        "inf-7-media-037": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-023": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-7-inf-016": {
+          "right": [
+            "обработка",
+            "хранение",
+            "приём"
+          ]
+        },
+        "inf-7-inf-021": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-7-inf-044": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-7-inf-046": {
           "options": [
             "B",
             "C",
@@ -3823,32 +4218,32 @@
             "A"
           ]
         },
-        "inf-7-inf-017": {
+        "inf-7-base-030": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-7-inf-043": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-7-inf-042": {
           "options": [
             "B",
             "D",
             "A",
             "C"
           ]
-        },
-        "inf-7-inf-023": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-7-base-080": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
         }
       },
-      "max_score": 38
+      "max_score": 32
     }
   ]
 }

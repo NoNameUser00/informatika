@@ -33,7 +33,6 @@
         "inf-9-sheet-029",
         "inf-9-sheet-030",
         "inf-9-sheet-032",
-        "inf-9-sheet-033",
         "inf-9-sheet-034",
         "inf-9-sheet-066"
       ]
@@ -47,10 +46,14 @@
         }
       ],
       "task_ids": [
+        "inf-9-arr-024",
         "inf-9-arr-025",
+        "inf-9-extra-025",
         "inf-9-extra-026",
         "inf-9-arr-006",
         "inf-9-arr-009",
+        "inf-9-arr-029",
+        "inf-9-arr-031",
         "inf-9-arr-033",
         "inf-9-arr-034",
         "inf-9-arr-005",
@@ -77,13 +80,10 @@
         "inf-9-graph-030",
         "inf-9-graph-034",
         "inf-9-graph-039",
-        "inf-9-graph-042",
         "inf-9-graph-043",
-        "inf-9-graph-047",
         "inf-9-graph-056",
         "inf-9-graph-058",
         "inf-9-extra-019",
-        "inf-9-extra-031",
         "inf-9-extra-039",
         "inf-9-extra-040",
         "inf-9-extra-065"
@@ -105,11 +105,11 @@
         "inf-9-extra-017",
         "inf-9-extra-045",
         "inf-9-extra-072",
-        "inf-9-extra-050",
         "inf-9-extra-051",
         "inf-9-extra-052",
         "inf-9-extra-053",
         "inf-9-extra-054",
+        "inf-9-extra-076",
         "inf-9-extra-058",
         "inf-9-extra-078"
       ]
@@ -342,14 +342,6 @@
       "base": 10
     },
     {
-      "id": "inf-9-sheet-033",
-      "lesson": "9sheet-08-tasks",
-      "type": "numeric_base",
-      "points": 1,
-      "prompt": "В B2:B13 баллы 12 учеников: 4, 5, 3, 5, 4, 3, 5, 4, 5, 3, 4, 5. Сколько учеников имеют балл не ниже 4? Запишите только число.",
-      "base": 10
-    },
-    {
       "id": "inf-9-sheet-034",
       "lesson": "9sheet-08-tasks",
       "type": "numeric_base",
@@ -366,11 +358,44 @@
       "base": 10
     },
     {
+      "id": "inf-9-arr-024",
+      "lesson": "9algo-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что делает условие в алгоритме с ветвлением?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Останавливает программу"
+        },
+        {
+          "id": "B",
+          "text": "Повторяет действия заданное число раз"
+        },
+        {
+          "id": "C",
+          "text": "Записывает результат в таблицу"
+        },
+        {
+          "id": "A",
+          "text": "Выбирает, какую из двух ветвей выполнять дальше"
+        }
+      ]
+    },
+    {
       "id": "inf-9-arr-025",
       "lesson": "9algo-01-performers",
       "type": "numeric_base",
       "points": 1,
       "prompt": "Цикл выполняет действие 5 раз: к переменной, равной 0, каждый раз прибавляют 2. Какое значение получится? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-extra-025",
+      "lesson": "9algo-01-performers",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Дана функция def f(n): return n * n. Что вернёт вызов f(5)? Запишите только число.",
       "base": 10
     },
     {
@@ -395,6 +420,22 @@
       "type": "numeric_base",
       "points": 1,
       "prompt": "Найдите среднее чисел [4, 6, 8]. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-029",
+      "lesson": "9arr-01-basics",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 4, 7, 2, 9. Чему равен элемент с индексом 2? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-9-arr-031",
+      "lesson": "9arr-02-aggregates",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Массив: 3, 8, 2, 5. Сколько в нём элементов? Запишите только число.",
       "base": 10
     },
     {
@@ -569,27 +610,11 @@
       "base": 10
     },
     {
-      "id": "inf-9-graph-042",
-      "lesson": "9graph-03-tasks",
-      "type": "numeric_base",
-      "points": 1,
-      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D. Сколько путей ведёт из A в B? Запишите только число.",
-      "base": 10
-    },
-    {
       "id": "inf-9-graph-043",
       "lesson": "9graph-03-tasks",
       "type": "numeric_base",
       "points": 1,
       "prompt": "Граф-цепочка A→B→C→D. Сколько рёбер в маршруте из A в D? Запишите только число.",
-      "base": 10
-    },
-    {
-      "id": "inf-9-graph-047",
-      "lesson": "9graph-03-tasks",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Граф: веса рёбер A–B = 1, A–C = 1, B–D = 5, C–D = 5, B–E = 2, E–D = 2. Чему равен кратчайший путь из A в D? Запишите только число.",
       "base": 10
     },
     {
@@ -630,31 +655,6 @@
         {
           "id": "B",
           "text": "Столбец"
-        }
-      ]
-    },
-    {
-      "id": "inf-9-extra-031",
-      "lesson": "9model-01-models",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Модель тормозного пути не совпала с измерением на мокром асфальте. Что нужно делать?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Исправлять модель: в неё не входит поправка на мокрое покрытие"
-        },
-        {
-          "id": "B",
-          "text": "Считать измерение ошибочным"
-        },
-        {
-          "id": "C",
-          "text": "Ничего не делать: допущения модели не важны"
-        },
-        {
-          "id": "D",
-          "text": "Удалить модель и больше её не строить"
         }
       ]
     },
@@ -884,31 +884,6 @@
       ]
     },
     {
-      "id": "inf-9-extra-050",
-      "lesson": "9net-04-services",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Почему сданную работу надо скачать из облака локально, даже если сервис работает?",
-      "options": [
-        {
-          "id": "C",
-          "text": "Чтобы отправить только ссылку вместо файла"
-        },
-        {
-          "id": "D",
-          "text": "Чтобы убрать из файла права доступа"
-        },
-        {
-          "id": "A",
-          "text": "Чтобы работа не зависела от того, работает ли сервис в момент сдачи"
-        },
-        {
-          "id": "B",
-          "text": "Чтобы файл стал больше"
-        }
-      ]
-    },
-    {
       "id": "inf-9-extra-051",
       "lesson": "9net-05-collab",
       "type": "single_choice",
@@ -1001,6 +976,31 @@
       ]
     },
     {
+      "id": "inf-9-extra-076",
+      "lesson": "9net-06-search",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Как найти документы, где есть слова «алгоритм» и «граф» одновременно?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Запрос «алгоритм AND граф»"
+        },
+        {
+          "id": "C",
+          "text": "Запрос «алгоритм»"
+        },
+        {
+          "id": "D",
+          "text": "Запрос с кавычками: \"алгоритм граф\""
+        },
+        {
+          "id": "B",
+          "text": "Запрос «алгоритм OR граф»"
+        }
+      ]
+    },
+    {
       "id": "inf-9-extra-058",
       "lesson": "9net-07-onlineoffice",
       "type": "single_choice",
@@ -1038,114 +1038,106 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-9-graph-029",
-        "inf-9-graph-030",
-        "inf-9-sheet-045",
-        "inf-9-extra-019",
-        "inf-9-sheet-066",
-        "inf-9-extra-052",
-        "inf-9-arr-006",
+        "inf-9-sheet-034",
+        "inf-9-sheet-027",
+        "inf-9-graph-058",
+        "inf-9-graph-006",
+        "inf-9-sheet-013",
+        "inf-9-arr-029",
         "inf-9-sheet-011",
-        "inf-9-extra-051",
-        "inf-9-arr-034"
+        "inf-9-graph-030",
+        "inf-9-extra-025",
+        "inf-9-extra-017"
       ],
       "orders": {
-        "inf-9-sheet-045": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-051": {
+        "inf-9-sheet-027": {
           "options": [
             "C",
             "D",
             "A",
             "B"
           ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
         }
       },
-      "max_score": 14
+      "max_score": 15
     },
     {
       "number": 2,
       "task_ids": [
         "inf-9-sheet-013",
-        "inf-9-extra-045",
-        "inf-9-graph-030",
-        "inf-9-extra-012",
-        "inf-9-graph-042",
-        "inf-9-arr-005",
-        "inf-9-graph-034",
-        "inf-9-arr-008",
-        "inf-9-sheet-001",
-        "inf-9-sheet-044"
+        "inf-9-extra-011",
+        "inf-9-sheet-009",
+        "inf-9-arr-025",
+        "inf-9-arr-009",
+        "inf-9-sheet-028",
+        "inf-9-extra-017",
+        "inf-9-graph-058",
+        "inf-9-graph-006",
+        "inf-9-arr-044"
       ],
       "orders": {
         "inf-9-sheet-013": {
           "options": [
-            "A",
             "B",
             "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-045": {
-          "options": [
             "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-arr-008": {
-          "options": [
-            "D",
-            "C",
-            "B",
             "A"
           ]
         },
-        "inf-9-sheet-001": {
+        "inf-9-extra-011": {
           "options": [
+            "D",
             "A",
-            "B",
             "C",
-            "D"
+            "B"
           ]
         },
-        "inf-9-sheet-044": {
-          "right": [
-            "считается как доля суток",
-            "считается в формулах",
-            "участвует в вычислениях как число",
-            "сортируется как текст, не как число"
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
           ]
         }
       },
@@ -1154,62 +1146,46 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-9-extra-017",
-        "inf-9-graph-034",
-        "inf-9-arr-005",
+        "inf-9-extra-076",
+        "inf-9-sheet-025",
+        "inf-9-extra-058",
+        "inf-9-sheet-046",
         "inf-9-extra-065",
-        "inf-9-sheet-039",
-        "inf-9-arr-009",
-        "inf-9-sheet-045",
-        "inf-9-sheet-044",
-        "inf-9-graph-039",
-        "inf-9-extra-006"
+        "inf-9-arr-033",
+        "inf-9-extra-039",
+        "inf-9-arr-024",
+        "inf-9-sheet-009",
+        "inf-9-arr-043"
       ],
       "orders": {
-        "inf-9-extra-017": {
+        "inf-9-extra-076": {
           "options": [
-            "C",
-            "A",
+            "D",
             "B",
-            "D"
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
           ]
         },
         "inf-9-extra-065": {
           "options": [
+            "B",
             "C",
             "D",
-            "B",
             "A"
           ]
         },
-        "inf-9-sheet-039": {
+        "inf-9-arr-024": {
           "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-sheet-045": {
-          "options": [
-            "A",
-            "D",
             "B",
-            "C"
-          ]
-        },
-        "inf-9-sheet-044": {
-          "right": [
-            "участвует в вычислениях как число",
-            "считается как доля суток",
-            "считается в формулах",
-            "сортируется как текст, не как число"
-          ]
-        },
-        "inf-9-extra-006": {
-          "options": [
             "C",
-            "B",
             "A",
             "D"
           ]
@@ -1220,56 +1196,48 @@
     {
       "number": 4,
       "task_ids": [
-        "inf-9-arr-034",
-        "inf-9-extra-011",
+        "inf-9-extra-045",
+        "inf-9-arr-025",
         "inf-9-sheet-001",
-        "inf-9-arr-006",
-        "inf-9-extra-052",
-        "inf-9-extra-019",
-        "inf-9-graph-043",
-        "inf-9-graph-030",
-        "inf-9-sheet-045",
-        "inf-9-sheet-011"
+        "inf-9-arr-044",
+        "inf-9-extra-017",
+        "inf-9-sheet-011",
+        "inf-9-graph-039",
+        "inf-9-arr-008",
+        "inf-9-sheet-030",
+        "inf-9-graph-034"
       ],
       "orders": {
-        "inf-9-extra-011": {
+        "inf-9-extra-045": {
           "options": [
-            "A",
             "C",
+            "A",
             "D",
             "B"
           ]
         },
         "inf-9-sheet-001": {
           "options": [
-            "D",
             "B",
+            "D",
             "C",
             "A"
           ]
         },
-        "inf-9-extra-052": {
+        "inf-9-extra-017": {
           "options": [
             "D",
-            "C",
             "B",
-            "A"
+            "A",
+            "C"
           ]
         },
-        "inf-9-extra-019": {
+        "inf-9-arr-008": {
           "options": [
-            "C",
-            "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-9-sheet-045": {
-          "options": [
-            "B",
             "A",
-            "C",
-            "D"
+            "B",
+            "C"
           ]
         }
       },
@@ -1278,46 +1246,46 @@
     {
       "number": 5,
       "task_ids": [
-        "inf-9-extra-006",
-        "inf-9-graph-042",
-        "inf-9-extra-039",
-        "inf-9-sheet-001",
-        "inf-9-arr-034",
-        "inf-9-graph-030",
-        "inf-9-arr-005",
-        "inf-9-sheet-034",
-        "inf-9-extra-017",
-        "inf-9-sheet-027"
+        "inf-9-extra-019",
+        "inf-9-extra-012",
+        "inf-9-arr-025",
+        "inf-9-sheet-009",
+        "inf-9-sheet-046",
+        "inf-9-graph-006",
+        "inf-9-arr-044",
+        "inf-9-extra-072",
+        "inf-9-sheet-025",
+        "inf-9-arr-033"
       ],
       "orders": {
-        "inf-9-extra-006": {
+        "inf-9-extra-019": {
           "options": [
-            "A",
-            "B",
             "C",
+            "B",
+            "A",
             "D"
           ]
         },
-        "inf-9-sheet-001": {
+        "inf-9-extra-012": {
           "options": [
-            "A",
             "D",
+            "B",
             "C",
-            "B"
+            "A"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-graph-006": {
           "options": [
+            "D",
             "A",
             "B",
-            "D",
             "C"
           ]
         },
-        "inf-9-sheet-027": {
+        "inf-9-extra-072": {
           "options": [
-            "C",
             "D",
+            "C",
             "B",
             "A"
           ]
@@ -1328,27 +1296,35 @@
     {
       "number": 6,
       "task_ids": [
+        "inf-9-extra-078",
+        "inf-9-graph-039",
         "inf-9-sheet-066",
-        "inf-9-extra-065",
+        "inf-9-extra-017",
+        "inf-9-sheet-044",
         "inf-9-arr-006",
-        "inf-9-sheet-034",
-        "inf-9-extra-052",
-        "inf-9-sheet-033",
-        "inf-9-extra-010",
-        "inf-9-graph-056",
-        "inf-9-arr-008",
-        "inf-9-graph-034"
+        "inf-9-sheet-045",
+        "inf-9-arr-024",
+        "inf-9-arr-025",
+        "inf-9-extra-039"
       ],
       "orders": {
-        "inf-9-extra-065": {
+        "inf-9-extra-017": {
           "options": [
             "C",
+            "A",
             "B",
-            "D",
-            "A"
+            "D"
           ]
         },
-        "inf-9-extra-052": {
+        "inf-9-sheet-044": {
+          "right": [
+            "считается в формулах",
+            "участвует в вычислениях как число",
+            "считается как доля суток",
+            "сортируется как текст, не как число"
+          ]
+        },
+        "inf-9-sheet-045": {
           "options": [
             "D",
             "A",
@@ -1356,20 +1332,12 @@
             "C"
           ]
         },
-        "inf-9-extra-010": {
+        "inf-9-arr-024": {
           "options": [
-            "D",
-            "C",
             "B",
-            "A"
-          ]
-        },
-        "inf-9-arr-008": {
-          "options": [
             "A",
-            "B",
-            "D",
-            "C"
+            "C",
+            "D"
           ]
         }
       },
@@ -1378,56 +1346,48 @@
     {
       "number": 7,
       "task_ids": [
-        "inf-9-extra-019",
-        "inf-9-sheet-001",
-        "inf-9-sheet-033",
-        "inf-9-arr-009",
-        "inf-9-graph-056",
+        "inf-9-sheet-028",
+        "inf-9-graph-043",
         "inf-9-extra-051",
-        "inf-9-extra-065",
-        "inf-9-extra-012",
-        "inf-9-sheet-025",
-        "inf-9-arr-043"
+        "inf-9-extra-058",
+        "inf-9-arr-029",
+        "inf-9-graph-058",
+        "inf-9-arr-031",
+        "inf-9-arr-043",
+        "inf-9-sheet-027",
+        "inf-9-sheet-013"
       ],
       "orders": {
-        "inf-9-extra-019": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-sheet-001": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
         "inf-9-extra-051": {
           "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-027": {
+          "options": [
             "C",
             "A",
             "D",
             "B"
           ]
         },
-        "inf-9-extra-065": {
+        "inf-9-sheet-013": {
           "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "D",
             "C",
-            "B",
-            "A"
+            "A",
+            "D",
+            "B"
           ]
         }
       },
@@ -1436,48 +1396,40 @@
     {
       "number": 8,
       "task_ids": [
-        "inf-9-sheet-030",
-        "inf-9-graph-047",
-        "inf-9-graph-006",
-        "inf-9-extra-010",
-        "inf-9-sheet-028",
-        "inf-9-arr-049",
-        "inf-9-sheet-009",
-        "inf-9-extra-065",
+        "inf-9-sheet-066",
+        "inf-9-arr-005",
         "inf-9-extra-012",
-        "inf-9-arr-044"
+        "inf-9-arr-025",
+        "inf-9-extra-006",
+        "inf-9-graph-039",
+        "inf-9-extra-019",
+        "inf-9-sheet-028",
+        "inf-9-arr-033",
+        "inf-9-sheet-009"
       ],
       "orders": {
-        "inf-9-graph-006": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-extra-010": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
         "inf-9-extra-012": {
           "options": [
-            "A",
             "C",
             "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-006": {
+          "options": [
+            "C",
+            "D",
+            "A",
             "B"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
           ]
         }
       },
@@ -1486,103 +1438,27 @@
     {
       "number": 9,
       "task_ids": [
-        "inf-9-extra-054",
-        "inf-9-extra-017",
-        "inf-9-arr-043",
-        "inf-9-sheet-066",
-        "inf-9-graph-043",
         "inf-9-graph-058",
-        "inf-9-arr-033",
-        "inf-9-sheet-001",
-        "inf-9-sheet-028",
-        "inf-9-graph-028"
-      ],
-      "orders": {
-        "inf-9-extra-054": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-extra-017": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-sheet-001": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 10,
-      "task_ids": [
-        "inf-9-arr-006",
-        "inf-9-sheet-066",
-        "inf-9-graph-028",
+        "inf-9-arr-029",
+        "inf-9-graph-029",
         "inf-9-arr-009",
-        "inf-9-sheet-011",
-        "inf-9-graph-058",
-        "inf-9-extra-017",
         "inf-9-sheet-027",
-        "inf-9-extra-045",
-        "inf-9-graph-029"
+        "inf-9-arr-006",
+        "inf-9-extra-054",
+        "inf-9-sheet-044",
+        "inf-9-extra-017",
+        "inf-9-sheet-001"
       ],
       "orders": {
-        "inf-9-extra-017": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
         "inf-9-sheet-027": {
           "options": [
-            "B",
             "A",
-            "D",
-            "C"
+            "C",
+            "B",
+            "D"
           ]
         },
-        "inf-9-extra-045": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 11,
-      "task_ids": [
-        "inf-9-extra-052",
-        "inf-9-sheet-044",
-        "inf-9-extra-045",
-        "inf-9-graph-042",
-        "inf-9-extra-065",
-        "inf-9-sheet-009",
-        "inf-9-arr-044",
-        "inf-9-arr-025",
-        "inf-9-extra-019",
-        "inf-9-sheet-033"
-      ],
-      "orders": {
-        "inf-9-extra-052": {
+        "inf-9-extra-054": {
           "options": [
             "A",
             "B",
@@ -1592,33 +1468,125 @@
         },
         "inf-9-sheet-044": {
           "right": [
-            "считается в формулах",
             "считается как доля суток",
             "участвует в вычислениях как число",
-            "сортируется как текст, не как число"
+            "сортируется как текст, не как число",
+            "считается в формулах"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-9-arr-008",
+        "inf-9-arr-025",
+        "inf-9-extra-045",
+        "inf-9-arr-043",
+        "inf-9-sheet-009",
+        "inf-9-sheet-028",
+        "inf-9-graph-039",
+        "inf-9-extra-058",
+        "inf-9-extra-039",
+        "inf-9-sheet-039"
+      ],
+      "orders": {
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
           ]
         },
         "inf-9-extra-045": {
           "options": [
             "A",
-            "D",
             "C",
-            "B"
+            "B",
+            "D"
           ]
         },
-        "inf-9-extra-065": {
+        "inf-9-extra-058": {
           "options": [
+            "B",
             "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-039": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-9-arr-044",
+        "inf-9-extra-045",
+        "inf-9-sheet-039",
+        "inf-9-graph-034",
+        "inf-9-sheet-011",
+        "inf-9-graph-043",
+        "inf-9-arr-031",
+        "inf-9-extra-058",
+        "inf-9-arr-025",
+        "inf-9-sheet-013"
+      ],
+      "orders": {
+        "inf-9-extra-045": {
+          "options": [
             "D",
             "B",
+            "C",
             "A"
           ]
         },
-        "inf-9-extra-019": {
+        "inf-9-sheet-039": {
           "options": [
-            "B",
-            "C",
             "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-013": {
+          "options": [
+            "D",
+            "C",
+            "B",
             "A"
           ]
         }
@@ -1629,67 +1597,33 @@
       "number": 12,
       "task_ids": [
         "inf-9-sheet-027",
-        "inf-9-arr-006",
-        "inf-9-graph-058",
-        "inf-9-graph-006",
-        "inf-9-extra-078",
-        "inf-9-arr-034",
-        "inf-9-sheet-034",
-        "inf-9-extra-065",
-        "inf-9-extra-052",
-        "inf-9-sheet-009"
+        "inf-9-sheet-044",
+        "inf-9-sheet-046",
+        "inf-9-arr-025",
+        "inf-9-extra-039",
+        "inf-9-graph-056",
+        "inf-9-extra-017",
+        "inf-9-arr-029",
+        "inf-9-arr-044",
+        "inf-9-extra-051"
       ],
       "orders": {
         "inf-9-sheet-027": {
           "options": [
             "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-graph-006": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
             "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-052": {
-          "options": [
             "C",
-            "D",
-            "A",
             "B"
           ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-9-extra-017",
-        "inf-9-graph-042",
-        "inf-9-arr-044",
-        "inf-9-extra-011",
-        "inf-9-arr-008",
-        "inf-9-extra-039",
-        "inf-9-extra-065",
-        "inf-9-sheet-045",
-        "inf-9-sheet-001",
-        "inf-9-sheet-011"
-      ],
-      "orders": {
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "сортируется как текст, не как число",
+            "считается как доля суток",
+            "считается в формулах",
+            "участвует в вычислениях как число"
+          ]
+        },
         "inf-9-extra-017": {
           "options": [
             "A",
@@ -1698,43 +1632,69 @@
             "C"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-051": {
           "options": [
-            "A",
-            "C",
             "B",
+            "C",
+            "A",
             "D"
           ]
-        },
-        "inf-9-arr-008": {
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-9-extra-025",
+        "inf-9-sheet-039",
+        "inf-9-extra-039",
+        "inf-9-extra-045",
+        "inf-9-extra-065",
+        "inf-9-arr-009",
+        "inf-9-arr-008",
+        "inf-9-sheet-025",
+        "inf-9-extra-012",
+        "inf-9-sheet-046"
+      ],
+      "orders": {
+        "inf-9-sheet-039": {
           "options": [
-            "A",
             "D",
             "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-9-extra-045": {
+          "options": [
+            "D",
+            "B",
+            "A",
             "C"
           ]
         },
         "inf-9-extra-065": {
           "options": [
             "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-9-sheet-045": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-sheet-001": {
-          "options": [
             "D",
             "B",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-012": {
+          "options": [
+            "B",
             "A",
+            "D",
             "C"
           ]
         }
@@ -1744,39 +1704,39 @@
     {
       "number": 14,
       "task_ids": [
-        "inf-9-sheet-009",
         "inf-9-arr-033",
-        "inf-9-extra-012",
-        "inf-9-graph-039",
-        "inf-9-sheet-013",
+        "inf-9-arr-006",
+        "inf-9-sheet-025",
+        "inf-9-sheet-001",
+        "inf-9-arr-029",
+        "inf-9-extra-010",
+        "inf-9-graph-043",
+        "inf-9-sheet-009",
         "inf-9-graph-034",
-        "inf-9-arr-005",
-        "inf-9-graph-029",
-        "inf-9-extra-011",
-        "inf-9-sheet-025"
+        "inf-9-extra-017"
       ],
       "orders": {
-        "inf-9-extra-012": {
+        "inf-9-sheet-001": {
           "options": [
-            "D",
             "A",
             "B",
-            "C"
-          ]
-        },
-        "inf-9-sheet-013": {
-          "options": [
-            "B",
-            "A",
             "D",
             "C"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-010": {
           "options": [
             "B",
             "C",
             "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-017": {
+          "options": [
+            "D",
+            "C",
+            "B",
             "A"
           ]
         }
@@ -1787,26 +1747,26 @@
       "number": 15,
       "task_ids": [
         "inf-9-sheet-027",
-        "inf-9-graph-047",
-        "inf-9-graph-028",
         "inf-9-arr-034",
-        "inf-9-extra-017",
-        "inf-9-extra-051",
-        "inf-9-sheet-039",
-        "inf-9-sheet-011",
-        "inf-9-graph-030",
-        "inf-9-arr-005"
+        "inf-9-sheet-045",
+        "inf-9-sheet-028",
+        "inf-9-extra-019",
+        "inf-9-graph-056",
+        "inf-9-extra-006",
+        "inf-9-extra-052",
+        "inf-9-arr-044",
+        "inf-9-arr-009"
       ],
       "orders": {
         "inf-9-sheet-027": {
           "options": [
-            "B",
-            "C",
+            "A",
             "D",
-            "A"
+            "B",
+            "C"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-sheet-045": {
           "options": [
             "B",
             "C",
@@ -1814,20 +1774,28 @@
             "D"
           ]
         },
-        "inf-9-extra-051": {
+        "inf-9-extra-019": {
           "options": [
+            "C",
             "D",
             "A",
-            "C",
             "B"
           ]
         },
-        "inf-9-sheet-039": {
+        "inf-9-extra-006": {
           "options": [
+            "B",
             "A",
             "D",
+            "C"
+          ]
+        },
+        "inf-9-extra-052": {
+          "options": [
+            "B",
+            "A",
             "C",
-            "B"
+            "D"
           ]
         }
       },
@@ -1836,48 +1804,56 @@
     {
       "number": 16,
       "task_ids": [
-        "inf-9-sheet-045",
-        "inf-9-extra-045",
-        "inf-9-sheet-066",
-        "inf-9-graph-042",
-        "inf-9-arr-043",
-        "inf-9-arr-025",
-        "inf-9-graph-047",
+        "inf-9-sheet-030",
+        "inf-9-extra-051",
+        "inf-9-graph-006",
+        "inf-9-sheet-046",
+        "inf-9-arr-008",
+        "inf-9-extra-058",
+        "inf-9-extra-025",
+        "inf-9-extra-019",
         "inf-9-sheet-025",
-        "inf-9-extra-065",
-        "inf-9-extra-012"
+        "inf-9-arr-034"
       ],
       "orders": {
-        "inf-9-sheet-045": {
+        "inf-9-extra-051": {
           "options": [
             "C",
             "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "C",
             "D",
+            "A",
             "B"
           ]
         },
-        "inf-9-extra-045": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-extra-065": {
+        "inf-9-arr-008": {
           "options": [
             "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
             "D",
             "B",
+            "A",
             "C"
           ]
         },
-        "inf-9-extra-012": {
+        "inf-9-extra-019": {
           "options": [
             "B",
             "D",
-            "C",
-            "A"
+            "A",
+            "C"
           ]
         }
       },
@@ -1886,40 +1862,56 @@
     {
       "number": 17,
       "task_ids": [
-        "inf-9-graph-030",
-        "inf-9-extra-019",
-        "inf-9-sheet-009",
+        "inf-9-extra-039",
+        "inf-9-extra-010",
+        "inf-9-arr-031",
+        "inf-9-sheet-044",
         "inf-9-extra-012",
-        "inf-9-sheet-030",
-        "inf-9-arr-049",
-        "inf-9-sheet-025",
-        "inf-9-graph-028",
-        "inf-9-extra-054",
-        "inf-9-arr-005"
+        "inf-9-graph-006",
+        "inf-9-sheet-027",
+        "inf-9-arr-029",
+        "inf-9-sheet-046",
+        "inf-9-arr-044"
       ],
       "orders": {
-        "inf-9-extra-019": {
+        "inf-9-extra-010": {
           "options": [
-            "C",
-            "D",
             "B",
-            "A"
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "сортируется как текст, не как число",
+            "участвует в вычислениях как число",
+            "считается как доля суток",
+            "считается в формулах"
           ]
         },
         "inf-9-extra-012": {
           "options": [
-            "D",
-            "B",
+            "C",
             "A",
-            "C"
+            "B",
+            "D"
           ]
         },
-        "inf-9-extra-054": {
+        "inf-9-graph-006": {
           "options": [
             "D",
-            "B",
+            "A",
             "C",
-            "A"
+            "B"
+          ]
+        },
+        "inf-9-sheet-027": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
           ]
         }
       },
@@ -1928,40 +1920,40 @@
     {
       "number": 18,
       "task_ids": [
-        "inf-9-extra-052",
-        "inf-9-extra-065",
-        "inf-9-graph-034",
-        "inf-9-sheet-001",
-        "inf-9-sheet-030",
-        "inf-9-arr-043",
-        "inf-9-graph-042",
         "inf-9-arr-009",
-        "inf-9-extra-078",
-        "inf-9-sheet-011"
+        "inf-9-sheet-011",
+        "inf-9-sheet-001",
+        "inf-9-graph-029",
+        "inf-9-graph-058",
+        "inf-9-sheet-066",
+        "inf-9-extra-010",
+        "inf-9-arr-029",
+        "inf-9-extra-058",
+        "inf-9-arr-005"
       ],
       "orders": {
-        "inf-9-extra-052": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-065": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
         "inf-9-sheet-001": {
           "options": [
+            "C",
+            "A",
             "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "A",
             "D",
             "C",
-            "A"
+            "B"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         }
       },
@@ -1970,19 +1962,19 @@
     {
       "number": 19,
       "task_ids": [
-        "inf-9-graph-043",
-        "inf-9-sheet-034",
-        "inf-9-sheet-027",
+        "inf-9-sheet-045",
+        "inf-9-sheet-009",
         "inf-9-extra-052",
-        "inf-9-arr-006",
-        "inf-9-extra-051",
-        "inf-9-sheet-030",
-        "inf-9-arr-025",
+        "inf-9-arr-024",
+        "inf-9-graph-043",
+        "inf-9-arr-033",
         "inf-9-graph-034",
-        "inf-9-graph-001"
+        "inf-9-extra-072",
+        "inf-9-sheet-028",
+        "inf-9-arr-044"
       ],
       "orders": {
-        "inf-9-sheet-027": {
+        "inf-9-sheet-045": {
           "options": [
             "B",
             "D",
@@ -1992,26 +1984,26 @@
         },
         "inf-9-extra-052": {
           "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
             "C",
             "B",
             "D",
             "A"
           ]
         },
-        "inf-9-extra-051": {
+        "inf-9-extra-072": {
           "options": [
-            "D",
-            "A",
             "B",
-            "C"
-          ]
-        },
-        "inf-9-graph-001": {
-          "options": [
-            "A",
             "D",
-            "C",
-            "B"
+            "A",
+            "C"
           ]
         }
       },
@@ -2020,19 +2012,43 @@
     {
       "number": 20,
       "task_ids": [
-        "inf-9-extra-039",
-        "inf-9-sheet-009",
-        "inf-9-graph-039",
-        "inf-9-sheet-013",
-        "inf-9-arr-025",
-        "inf-9-graph-042",
-        "inf-9-extra-017",
-        "inf-9-extra-011",
+        "inf-9-arr-009",
+        "inf-9-extra-019",
         "inf-9-sheet-044",
-        "inf-9-arr-043"
+        "inf-9-arr-008",
+        "inf-9-sheet-046",
+        "inf-9-arr-005",
+        "inf-9-sheet-009",
+        "inf-9-extra-012",
+        "inf-9-graph-039",
+        "inf-9-extra-076"
       ],
       "orders": {
-        "inf-9-sheet-013": {
+        "inf-9-extra-019": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "считается в формулах",
+            "сортируется как текст, не как число",
+            "участвует в вычислениях как число"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-extra-012": {
           "options": [
             "D",
             "B",
@@ -2040,28 +2056,12 @@
             "A"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-extra-076": {
           "options": [
             "A",
             "D",
             "C",
             "B"
-          ]
-        },
-        "inf-9-extra-011": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-sheet-044": {
-          "right": [
-            "участвует в вычислениях как число",
-            "считается в формулах",
-            "сортируется как текст, не как число",
-            "считается как доля суток"
           ]
         }
       },
@@ -2070,56 +2070,40 @@
     {
       "number": 21,
       "task_ids": [
-        "inf-9-extra-045",
-        "inf-9-extra-039",
-        "inf-9-sheet-013",
-        "inf-9-graph-006",
-        "inf-9-extra-012",
-        "inf-9-graph-028",
-        "inf-9-arr-049",
-        "inf-9-arr-006",
-        "inf-9-sheet-011",
-        "inf-9-sheet-039"
+        "inf-9-arr-025",
+        "inf-9-extra-052",
+        "inf-9-arr-034",
+        "inf-9-sheet-045",
+        "inf-9-graph-058",
+        "inf-9-graph-043",
+        "inf-9-extra-078",
+        "inf-9-sheet-044",
+        "inf-9-sheet-046",
+        "inf-9-arr-044"
       ],
       "orders": {
-        "inf-9-extra-045": {
+        "inf-9-extra-052": {
           "options": [
             "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-sheet-013": {
-          "options": [
             "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-9-graph-006": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-9-extra-012": {
-          "options": [
-            "C",
-            "B",
             "D",
             "A"
           ]
         },
-        "inf-9-sheet-039": {
+        "inf-9-sheet-045": {
           "options": [
-            "C",
-            "A",
+            "D",
             "B",
-            "D"
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "сортируется как текст, не как число",
+            "участвует в вычислениях как число",
+            "считается в формулах"
           ]
         }
       },
@@ -2128,24 +2112,114 @@
     {
       "number": 22,
       "task_ids": [
-        "inf-9-arr-005",
+        "inf-9-graph-039",
+        "inf-9-sheet-028",
         "inf-9-extra-072",
-        "inf-9-arr-034",
-        "inf-9-graph-042",
-        "inf-9-extra-058",
-        "inf-9-graph-058",
-        "inf-9-graph-056",
-        "inf-9-sheet-034",
-        "inf-9-sheet-039",
-        "inf-9-sheet-045"
+        "inf-9-extra-019",
+        "inf-9-extra-025",
+        "inf-9-sheet-046",
+        "inf-9-extra-052",
+        "inf-9-arr-031",
+        "inf-9-arr-008",
+        "inf-9-sheet-030"
       ],
       "orders": {
         "inf-9-extra-072": {
           "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-extra-052": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-9-sheet-013",
+        "inf-9-arr-024",
+        "inf-9-extra-039",
+        "inf-9-arr-008",
+        "inf-9-graph-006",
+        "inf-9-sheet-001",
+        "inf-9-sheet-025",
+        "inf-9-extra-010",
+        "inf-9-extra-058",
+        "inf-9-extra-025"
+      ],
+      "orders": {
+        "inf-9-sheet-013": {
+          "options": [
+            "B",
             "D",
             "A",
+            "C"
+          ]
+        },
+        "inf-9-arr-024": {
+          "options": [
+            "B",
             "C",
-            "B"
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-010": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
           ]
         },
         "inf-9-extra-058": {
@@ -2155,56 +2229,6 @@
             "A",
             "C"
           ]
-        },
-        "inf-9-sheet-039": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-9-sheet-045": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-9-sheet-066",
-        "inf-9-sheet-033",
-        "inf-9-extra-052",
-        "inf-9-sheet-025",
-        "inf-9-arr-009",
-        "inf-9-arr-044",
-        "inf-9-graph-047",
-        "inf-9-graph-056",
-        "inf-9-extra-006",
-        "inf-9-graph-042"
-      ],
-      "orders": {
-        "inf-9-extra-052": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-006": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
         }
       },
       "max_score": 14
@@ -2212,19 +2236,27 @@
     {
       "number": 24,
       "task_ids": [
-        "inf-9-extra-078",
-        "inf-9-sheet-013",
+        "inf-9-arr-033",
+        "inf-9-sheet-045",
+        "inf-9-extra-025",
         "inf-9-extra-039",
-        "inf-9-extra-065",
-        "inf-9-sheet-033",
-        "inf-9-arr-005",
-        "inf-9-graph-028",
+        "inf-9-sheet-039",
+        "inf-9-graph-056",
+        "inf-9-extra-051",
+        "inf-9-arr-031",
         "inf-9-extra-017",
-        "inf-9-sheet-025",
-        "inf-9-arr-049"
+        "inf-9-sheet-011"
       ],
       "orders": {
-        "inf-9-sheet-013": {
+        "inf-9-sheet-045": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-sheet-039": {
           "options": [
             "B",
             "C",
@@ -2232,19 +2264,19 @@
             "A"
           ]
         },
-        "inf-9-extra-065": {
+        "inf-9-extra-051": {
           "options": [
             "C",
             "D",
-            "A",
-            "B"
+            "B",
+            "A"
           ]
         },
         "inf-9-extra-017": {
           "options": [
-            "A",
-            "B",
             "C",
+            "B",
+            "A",
             "D"
           ]
         }
@@ -2254,27 +2286,27 @@
     {
       "number": 25,
       "task_ids": [
-        "inf-9-arr-008",
-        "inf-9-sheet-033",
-        "inf-9-extra-017",
-        "inf-9-graph-034",
-        "inf-9-graph-056",
-        "inf-9-sheet-027",
+        "inf-9-sheet-013",
+        "inf-9-extra-025",
+        "inf-9-graph-028",
+        "inf-9-extra-078",
+        "inf-9-arr-029",
         "inf-9-sheet-025",
-        "inf-9-arr-006",
-        "inf-9-graph-042",
-        "inf-9-extra-078"
+        "inf-9-sheet-039",
+        "inf-9-extra-039",
+        "inf-9-arr-031",
+        "inf-9-extra-058"
       ],
       "orders": {
-        "inf-9-arr-008": {
+        "inf-9-sheet-013": {
           "options": [
-            "A",
-            "D",
             "B",
-            "C"
+            "C",
+            "A",
+            "D"
           ]
         },
-        "inf-9-extra-017": {
+        "inf-9-sheet-039": {
           "options": [
             "A",
             "B",
@@ -2282,10 +2314,10 @@
             "D"
           ]
         },
-        "inf-9-sheet-027": {
+        "inf-9-extra-058": {
           "options": [
-            "C",
             "D",
+            "C",
             "A",
             "B"
           ]
@@ -2296,48 +2328,40 @@
     {
       "number": 26,
       "task_ids": [
-        "inf-9-graph-028",
-        "inf-9-graph-001",
+        "inf-9-arr-049",
         "inf-9-arr-005",
-        "inf-9-arr-033",
-        "inf-9-extra-051",
-        "inf-9-sheet-033",
-        "inf-9-extra-012",
-        "inf-9-sheet-025",
-        "inf-9-graph-058",
-        "inf-9-sheet-039"
+        "inf-9-sheet-030",
+        "inf-9-extra-017",
+        "inf-9-sheet-009",
+        "inf-9-extra-054",
+        "inf-9-extra-039",
+        "inf-9-sheet-044",
+        "inf-9-arr-034",
+        "inf-9-graph-043"
       ],
       "orders": {
-        "inf-9-graph-001": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-9-extra-051": {
+        "inf-9-extra-017": {
           "options": [
             "C",
             "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-054": {
+          "options": [
             "B",
+            "C",
+            "A",
             "D"
           ]
         },
-        "inf-9-extra-012": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-9-sheet-039": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
+        "inf-9-sheet-044": {
+          "right": [
+            "считается как доля суток",
+            "участвует в вычислениях как число",
+            "сортируется как текст, не как число",
+            "считается в формулах"
           ]
         }
       },
@@ -2346,40 +2370,32 @@
     {
       "number": 27,
       "task_ids": [
-        "inf-9-extra-019",
-        "inf-9-arr-005",
-        "inf-9-graph-043",
-        "inf-9-sheet-027",
-        "inf-9-sheet-011",
-        "inf-9-extra-051",
-        "inf-9-graph-029",
+        "inf-9-sheet-013",
+        "inf-9-extra-039",
+        "inf-9-sheet-028",
+        "inf-9-arr-024",
         "inf-9-extra-058",
-        "inf-9-sheet-033",
-        "inf-9-arr-025"
+        "inf-9-arr-008",
+        "inf-9-sheet-066",
+        "inf-9-extra-076",
+        "inf-9-arr-043",
+        "inf-9-graph-039"
       ],
       "orders": {
-        "inf-9-extra-019": {
+        "inf-9-sheet-013": {
           "options": [
+            "A",
             "C",
             "D",
-            "A",
             "B"
           ]
         },
-        "inf-9-sheet-027": {
+        "inf-9-arr-024": {
           "options": [
+            "D",
+            "A",
             "B",
-            "D",
-            "A",
             "C"
-          ]
-        },
-        "inf-9-extra-051": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
           ]
         },
         "inf-9-extra-058": {
@@ -2389,6 +2405,22 @@
             "A",
             "D"
           ]
+        },
+        "inf-9-arr-008": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-9-extra-076": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
         }
       },
       "max_score": 14
@@ -2396,51 +2428,43 @@
     {
       "number": 28,
       "task_ids": [
-        "inf-9-sheet-066",
-        "inf-9-graph-006",
-        "inf-9-arr-034",
-        "inf-9-graph-047",
-        "inf-9-sheet-044",
-        "inf-9-sheet-001",
+        "inf-9-sheet-013",
+        "inf-9-sheet-009",
+        "inf-9-extra-019",
+        "inf-9-arr-029",
         "inf-9-extra-012",
-        "inf-9-arr-006",
-        "inf-9-extra-011",
-        "inf-9-graph-039"
+        "inf-9-sheet-025",
+        "inf-9-arr-033",
+        "inf-9-graph-028",
+        "inf-9-extra-025",
+        "inf-9-extra-072"
       ],
       "orders": {
-        "inf-9-graph-006": {
+        "inf-9-sheet-013": {
           "options": [
             "C",
+            "D",
             "B",
+            "A"
+          ]
+        },
+        "inf-9-extra-019": {
+          "options": [
+            "B",
+            "C",
             "A",
             "D"
-          ]
-        },
-        "inf-9-sheet-044": {
-          "right": [
-            "участвует в вычислениях как число",
-            "сортируется как текст, не как число",
-            "считается как доля суток",
-            "считается в формулах"
-          ]
-        },
-        "inf-9-sheet-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
           ]
         },
         "inf-9-extra-012": {
           "options": [
             "B",
-            "C",
             "D",
-            "A"
+            "A",
+            "C"
           ]
         },
-        "inf-9-extra-011": {
+        "inf-9-extra-072": {
           "options": [
             "A",
             "D",
@@ -2454,56 +2478,56 @@
     {
       "number": 29,
       "task_ids": [
-        "inf-9-sheet-009",
+        "inf-9-arr-025",
         "inf-9-sheet-039",
-        "inf-9-graph-006",
-        "inf-9-extra-051",
-        "inf-9-arr-034",
+        "inf-9-extra-058",
+        "inf-9-arr-044",
+        "inf-9-graph-039",
         "inf-9-graph-034",
-        "inf-9-graph-042",
-        "inf-9-sheet-044",
-        "inf-9-arr-006",
-        "inf-9-extra-012"
+        "inf-9-sheet-001",
+        "inf-9-arr-024",
+        "inf-9-extra-076",
+        "inf-9-sheet-028"
       ],
       "orders": {
         "inf-9-sheet-039": {
           "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-9-extra-058": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-9-sheet-001": {
+          "options": [
             "D",
             "A",
             "B",
             "C"
           ]
         },
-        "inf-9-graph-006": {
+        "inf-9-arr-024": {
           "options": [
             "D",
-            "A",
             "B",
-            "C"
-          ]
-        },
-        "inf-9-extra-051": {
-          "options": [
-            "A",
-            "D",
             "C",
-            "B"
+            "A"
           ]
         },
-        "inf-9-sheet-044": {
-          "right": [
-            "считается как доля суток",
-            "участвует в вычислениях как число",
-            "сортируется как текст, не как число",
-            "считается в формулах"
-          ]
-        },
-        "inf-9-extra-012": {
+        "inf-9-extra-076": {
           "options": [
-            "A",
             "D",
+            "B",
             "C",
-            "B"
+            "A"
           ]
         }
       },
@@ -2512,64 +2536,48 @@
     {
       "number": 30,
       "task_ids": [
-        "inf-9-arr-008",
-        "inf-9-graph-039",
-        "inf-9-extra-012",
-        "inf-9-arr-044",
-        "inf-9-sheet-044",
+        "inf-9-sheet-001",
         "inf-9-sheet-066",
-        "inf-9-sheet-030",
-        "inf-9-graph-001",
-        "inf-9-extra-006",
-        "inf-9-extra-019"
+        "inf-9-extra-058",
+        "inf-9-sheet-025",
+        "inf-9-arr-034",
+        "inf-9-extra-010",
+        "inf-9-arr-031",
+        "inf-9-arr-044",
+        "inf-9-graph-058",
+        "inf-9-graph-001"
       ],
       "orders": {
-        "inf-9-arr-008": {
+        "inf-9-sheet-001": {
           "options": [
-            "B",
-            "A",
             "C",
-            "D"
+            "B",
+            "D",
+            "A"
           ]
         },
-        "inf-9-extra-012": {
+        "inf-9-extra-058": {
           "options": [
-            "A",
-            "D",
             "C",
+            "D",
+            "A",
             "B"
           ]
         },
-        "inf-9-sheet-044": {
-          "right": [
-            "считается в формулах",
-            "считается как доля суток",
-            "участвует в вычислениях как число",
-            "сортируется как текст, не как число"
+        "inf-9-extra-010": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
           ]
         },
         "inf-9-graph-001": {
           "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-9-extra-006": {
-          "options": [
-            "D",
             "B",
+            "D",
             "C",
             "A"
-          ]
-        },
-        "inf-9-extra-019": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
           ]
         }
       },

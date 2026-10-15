@@ -19,10 +19,13 @@
         }
       ],
       "task_ids": [
+        "inf-8-numsys-011",
         "inf-8-numsys-012",
         "inf-8-numsys-030",
+        "inf-8-numsys-031",
         "inf-8-numsys-032",
         "inf-8-numsys-034",
+        "inf-8-numsys-037",
         "inf-8-numsys-038",
         "inf-8-numsys-039",
         "inf-8-numsys-066",
@@ -46,8 +49,11 @@
         "inf-8-code-003",
         "inf-8-code-004",
         "inf-8-numsys-005",
+        "inf-8-numsys-014",
         "inf-8-numsys-019",
+        "inf-8-numsys-021",
         "inf-8-numsys-035",
+        "inf-8-numsys-061",
         "inf-8-numsys-062",
         "inf-8-numsys-068",
         "inf-8-numsys-081",
@@ -71,10 +77,7 @@
         "inf-8-numsys-043",
         "inf-8-numsys-048",
         "inf-8-numsys-063",
-        "inf-8-numsys-069",
         "inf-8-code-002",
-        "inf-8-numsys-002",
-        "inf-8-numsys-006",
         "inf-8-numsys-026",
         "inf-8-numsys-028",
         "inf-8-numsys-029",
@@ -100,22 +103,27 @@
         "inf-8-numsys-074",
         "inf-8-numsys-075",
         "inf-8-numsys-076",
-        "inf-8-numsys-085",
         "inf-8-numsys-086",
         "inf-8-numsys-087",
-        "inf-8-numsys-059",
         "inf-8-numsys-072",
         "inf-8-numsys-073",
         "inf-8-numsys-088",
         "inf-8-numsys-089",
         "inf-8-numsys-090",
         "inf-8-numsys-091",
-        "inf-8-numsys-092",
-        "inf-8-numsys-093"
+        "inf-8-numsys-092"
       ]
     }
   ],
   "pool": [
+    {
+      "id": "inf-8-numsys-011",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислите 1×2³ + 0×2² + 1×2 + 1. Запишите только число.",
+      "base": 10
+    },
     {
       "id": "inf-8-numsys-012",
       "lesson": "numsys-01-intro",
@@ -150,6 +158,14 @@
       "base": 10
     },
     {
+      "id": "inf-8-numsys-031",
+      "lesson": "numsys-01-intro",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число XLIV из римской системы в десятичную. Запишите только число.",
+      "base": 10
+    },
+    {
       "id": "inf-8-numsys-032",
       "lesson": "numsys-01-intro",
       "type": "numeric_base",
@@ -164,6 +180,31 @@
       "points": 1,
       "prompt": "Вычислите 1×2⁴ + 0×2³ + 0×2² + 1×2¹ + 1×2⁰. Запишите только число.",
       "base": 10
+    },
+    {
+      "id": "inf-8-numsys-037",
+      "lesson": "numsys-01-intro",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Укажите минимальное основание системы счисления, в которой может быть записано число 123.",
+      "options": [
+        {
+          "id": "D",
+          "text": "8"
+        },
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        }
+      ]
     },
     {
       "id": "inf-8-numsys-038",
@@ -324,11 +365,27 @@
       ]
     },
     {
+      "id": "inf-8-numsys-014",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 26₁₀ в двоичную систему. Запишите только число.",
+      "base": 2
+    },
+    {
       "id": "inf-8-numsys-019",
       "lesson": "numsys-02-binary",
       "type": "numeric_base",
       "points": 1,
       "prompt": "Переведите число 100111₂ в десятичную систему. Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-numsys-021",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 1110001₂ в десятичную систему. Запишите только число.",
       "base": 10
     },
     {
@@ -355,6 +412,14 @@
           "text": "6"
         }
       ]
+    },
+    {
+      "id": "inf-8-numsys-061",
+      "lesson": "numsys-02-binary",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Переведите число 101_2 в десятичную систему. Запишите только число.",
+      "base": 10
     },
     {
       "id": "inf-8-numsys-062",
@@ -487,36 +552,12 @@
       "base": 10
     },
     {
-      "id": "inf-8-numsys-069",
-      "lesson": "numsys-03-octal",
-      "type": "numeric_base",
-      "points": 3,
-      "prompt": "Число 730₁₀ переведите в восьмеричную систему, затем результат — в двоичную, и подсчитайте количество единиц в двоичной записи. Запишите только число.",
-      "base": 10
-    },
-    {
       "id": "inf-8-code-002",
       "lesson": "numsys-04-hex",
       "type": "code_run",
       "points": 1,
       "prompt": "Выведи шестнадцатеричную запись числа 175 функцией hex().",
       "template": "# Допиши код: выведи hex(175)\nprint(...)"
-    },
-    {
-      "id": "inf-8-numsys-002",
-      "lesson": "numsys-04-hex",
-      "type": "numeric_base",
-      "points": 1,
-      "prompt": "Переведите число 175₁₀ в шестнадцатеричную систему. Запишите только число.",
-      "base": 16
-    },
-    {
-      "id": "inf-8-numsys-006",
-      "lesson": "numsys-04-hex",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Переведите число 3A₁₆ в двоичную систему. Запишите только число.",
-      "base": 2
     },
     {
       "id": "inf-8-numsys-026",
@@ -631,14 +672,6 @@
       "base": 2
     },
     {
-      "id": "inf-8-numsys-085",
-      "lesson": "numsys-05-arith",
-      "type": "code_run",
-      "points": 1,
-      "prompt": "Напишите программу на Python, которая складывает два двоичных числа поразрядно, как это делают в столбик, и выводит сумму в двоичной системе без префикса 0b.",
-      "template": "# Складываем двоичные числа поразрядно: единицы в сумме 2 и больше дают 0 в этом разряде и единицу в следующий\ndef add_bin(a, b):\n    # строки равной длины, разряды считаем справа налево\n    res = ''\n    carry = 0\n    for i in range(len(a) - 1, -1, -1):\n        # TODO: сложить цифры разрядов вместе с переносом\n        ...\n    return res\n\n\nprint(add_bin('1011', '1101'))"
-    },
-    {
       "id": "inf-8-numsys-086",
       "lesson": "numsys-05-arith",
       "type": "numeric_base",
@@ -668,31 +701,6 @@
         {
           "id": "B",
           "text": "В разряд записывают 0, а единица переходит в следующий разряд"
-        }
-      ]
-    },
-    {
-      "id": "inf-8-numsys-059",
-      "lesson": "numsys-06-review",
-      "type": "single_choice",
-      "points": 3,
-      "prompt": "Какое из чисел наибольшее?",
-      "options": [
-        {
-          "id": "D",
-          "text": "30₈"
-        },
-        {
-          "id": "B",
-          "text": "1F₁₆"
-        },
-        {
-          "id": "A",
-          "text": "10111₂"
-        },
-        {
-          "id": "C",
-          "text": "27₈"
         }
       ]
     },
@@ -777,58 +785,121 @@
         "1E₁₆",
         "24₈"
       ]
-    },
-    {
-      "id": "inf-8-numsys-093",
-      "lesson": "numsys-06-review",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Переведите число 156₁₀ в шестнадцатеричную систему, а результат — в двоичную. Сколько разрядов в полученной двоичной записи? Запишите только число.",
-      "base": 10
     }
   ],
   "variants": [
     {
       "number": 1,
       "task_ids": [
-        "inf-8-numsys-076",
-        "inf-8-numsys-059",
-        "inf-8-numsys-091",
-        "inf-8-numsys-072",
-        "inf-8-code-001",
-        "inf-8-numsys-078",
-        "inf-8-numsys-069",
         "inf-8-numsys-067",
-        "inf-8-numsys-070",
-        "inf-8-numsys-062",
-        "inf-8-numsys-043",
-        "inf-8-numsys-075",
-        "inf-8-numsys-007",
-        "inf-8-numsys-047",
-        "inf-8-numsys-028",
-        "inf-8-numsys-030",
+        "inf-8-numsys-039",
+        "inf-8-numsys-073",
+        "inf-8-numsys-019",
         "inf-8-numsys-068",
-        "inf-8-numsys-022",
-        "inf-8-numsys-082",
-        "inf-8-numsys-012"
+        "inf-8-code-001",
+        "inf-8-numsys-070",
+        "inf-8-numsys-074",
+        "inf-8-numsys-075",
+        "inf-8-numsys-076",
+        "inf-8-numsys-011",
+        "inf-8-numsys-083",
+        "inf-8-numsys-064",
+        "inf-8-numsys-063",
+        "inf-8-numsys-078",
+        "inf-8-numsys-086",
+        "inf-8-numsys-030",
+        "inf-8-numsys-046",
+        "inf-8-numsys-025",
+        "inf-8-numsys-014"
       ],
       "orders": {
-        "inf-8-numsys-059": {
+        "inf-8-numsys-039": {
           "options": [
-            "B",
+            "C",
             "A",
-            "D",
-            "C"
+            "B",
+            "D"
           ]
         },
-        "inf-8-numsys-091": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 255₁₆",
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 511₈"
+          ]
+        }
+      },
+      "max_score": 33
+    },
+    {
+      "number": 2,
+      "task_ids": [
+        "inf-8-numsys-049",
+        "inf-8-numsys-084",
+        "inf-8-numsys-022",
+        "inf-8-numsys-067",
+        "inf-8-numsys-081",
+        "inf-8-numsys-072",
+        "inf-8-numsys-021",
+        "inf-8-numsys-065",
+        "inf-8-numsys-030",
+        "inf-8-numsys-031",
+        "inf-8-numsys-047",
+        "inf-8-numsys-086",
+        "inf-8-numsys-062",
+        "inf-8-numsys-092",
+        "inf-8-numsys-014",
+        "inf-8-numsys-007",
+        "inf-8-numsys-040",
+        "inf-8-numsys-077",
+        "inf-8-numsys-034",
+        "inf-8-code-002"
+      ],
+      "orders": {
+        "inf-8-numsys-092": {
+          "right": [
+            "11000₂",
+            "1E₁₆",
+            "24₈"
           ]
         },
+        "inf-8-numsys-040": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 3,
+      "task_ids": [
+        "inf-8-numsys-088",
+        "inf-8-numsys-080",
+        "inf-8-numsys-078",
+        "inf-8-numsys-089",
+        "inf-8-numsys-022",
+        "inf-8-numsys-046",
+        "inf-8-code-003",
+        "inf-8-numsys-028",
+        "inf-8-numsys-061",
+        "inf-8-numsys-091",
+        "inf-8-numsys-047",
+        "inf-8-numsys-073",
+        "inf-8-numsys-038",
+        "inf-8-numsys-005",
+        "inf-8-numsys-084",
+        "inf-8-numsys-037",
+        "inf-8-numsys-064",
+        "inf-8-numsys-081",
+        "inf-8-numsys-075",
+        "inf-8-numsys-030"
+      ],
+      "orders": {
         "inf-8-numsys-078": {
           "right": [
             "Наибольшее число в ней — 99999₁₀",
@@ -837,267 +908,201 @@
             "Наибольшее число в ней — 15₂"
           ]
         },
-        "inf-8-numsys-082": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-numsys-012": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 2,
-      "task_ids": [
-        "inf-8-numsys-028",
-        "inf-8-code-003",
-        "inf-8-numsys-040",
-        "inf-8-numsys-080",
-        "inf-8-numsys-059",
-        "inf-8-numsys-092",
-        "inf-8-numsys-047",
-        "inf-8-numsys-084",
-        "inf-8-numsys-070",
-        "inf-8-numsys-091",
-        "inf-8-numsys-030",
-        "inf-8-numsys-073",
-        "inf-8-numsys-005",
-        "inf-8-numsys-043",
-        "inf-8-numsys-034",
-        "inf-8-numsys-076",
-        "inf-8-numsys-065",
-        "inf-8-code-004",
-        "inf-8-numsys-078",
-        "inf-8-numsys-069"
-      ],
-      "orders": {
-        "inf-8-numsys-040": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "24₈",
-            "1E₁₆",
-            "11000₂"
-          ]
-        },
         "inf-8-numsys-091": {
           "options": [
-            "D",
-            "B",
             "C",
+            "B",
+            "D",
             "A"
-          ]
-        },
-        "inf-8-numsys-005": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 15₂",
-            "Наибольшее число в ней — 255₁₆",
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 511₈"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 3,
-      "task_ids": [
-        "inf-8-numsys-039",
-        "inf-8-numsys-076",
-        "inf-8-numsys-030",
-        "inf-8-numsys-040",
-        "inf-8-numsys-084",
-        "inf-8-numsys-059",
-        "inf-8-numsys-067",
-        "inf-8-numsys-082",
-        "inf-8-numsys-070",
-        "inf-8-numsys-049",
-        "inf-8-numsys-022",
-        "inf-8-numsys-048",
-        "inf-8-code-003",
-        "inf-8-numsys-089",
-        "inf-8-numsys-062",
-        "inf-8-numsys-007",
-        "inf-8-numsys-086",
-        "inf-8-numsys-092",
-        "inf-8-numsys-069",
-        "inf-8-numsys-066"
-      ],
-      "orders": {
-        "inf-8-numsys-039": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-040": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-numsys-082": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "1E₁₆",
-            "24₈",
-            "11000₂"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-8-numsys-062",
-        "inf-8-numsys-076",
-        "inf-8-numsys-059",
-        "inf-8-numsys-069",
-        "inf-8-numsys-038",
-        "inf-8-numsys-048",
-        "inf-8-numsys-089",
-        "inf-8-numsys-070",
-        "inf-8-numsys-085",
-        "inf-8-numsys-073",
-        "inf-8-numsys-092",
-        "inf-8-numsys-080",
-        "inf-8-numsys-030",
-        "inf-8-numsys-040",
-        "inf-8-numsys-005",
-        "inf-8-numsys-006",
-        "inf-8-numsys-025",
-        "inf-8-numsys-082",
-        "inf-8-numsys-068",
-        "inf-8-numsys-066"
-      ],
-      "orders": {
-        "inf-8-numsys-059": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
           ]
         },
         "inf-8-numsys-038": {
           "options": [
+            "A",
             "B",
-            "C",
             "D",
-            "A"
+            "C"
           ]
         },
-        "inf-8-numsys-092": {
-          "right": [
-            "1E₁₆",
-            "11000₂",
-            "24₈"
-          ]
-        },
-        "inf-8-numsys-040": {
+        "inf-8-numsys-005": {
           "options": [
+            "C",
+            "B",
             "D",
+            "A"
+          ]
+        },
+        "inf-8-numsys-037": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-8-numsys-073",
+        "inf-8-numsys-025",
+        "inf-8-numsys-062",
+        "inf-8-numsys-080",
+        "inf-8-numsys-066",
+        "inf-8-code-002",
+        "inf-8-numsys-074",
+        "inf-8-numsys-011",
+        "inf-8-numsys-012",
+        "inf-8-numsys-022",
+        "inf-8-numsys-086",
+        "inf-8-numsys-005",
+        "inf-8-code-003",
+        "inf-8-numsys-081",
+        "inf-8-numsys-046",
+        "inf-8-numsys-007",
+        "inf-8-numsys-047",
+        "inf-8-numsys-088",
+        "inf-8-numsys-032",
+        "inf-8-numsys-084"
+      ],
+      "orders": {
+        "inf-8-numsys-012": {
+          "options": [
             "B",
             "C",
-            "A"
+            "A",
+            "D"
           ]
         },
         "inf-8-numsys-005": {
           "options": [
             "A",
             "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-numsys-082": {
-          "options": [
-            "B",
             "D",
-            "C",
-            "A"
+            "C"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 5,
       "task_ids": [
         "inf-8-numsys-064",
-        "inf-8-numsys-035",
-        "inf-8-numsys-070",
-        "inf-8-numsys-076",
-        "inf-8-numsys-075",
-        "inf-8-numsys-093",
-        "inf-8-numsys-074",
-        "inf-8-numsys-090",
-        "inf-8-numsys-043",
-        "inf-8-numsys-029",
-        "inf-8-numsys-079",
-        "inf-8-numsys-030",
-        "inf-8-code-003",
-        "inf-8-numsys-032",
-        "inf-8-numsys-059",
-        "inf-8-numsys-069",
-        "inf-8-numsys-047",
-        "inf-8-numsys-080",
         "inf-8-numsys-084",
-        "inf-8-code-004"
+        "inf-8-numsys-082",
+        "inf-8-numsys-026",
+        "inf-8-numsys-038",
+        "inf-8-numsys-091",
+        "inf-8-numsys-067",
+        "inf-8-numsys-012",
+        "inf-8-numsys-046",
+        "inf-8-numsys-032",
+        "inf-8-numsys-022",
+        "inf-8-numsys-086",
+        "inf-8-numsys-005",
+        "inf-8-numsys-061",
+        "inf-8-numsys-065",
+        "inf-8-numsys-007",
+        "inf-8-numsys-092",
+        "inf-8-numsys-079",
+        "inf-8-numsys-062",
+        "inf-8-numsys-047"
       ],
       "orders": {
+        "inf-8-numsys-082": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-038": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-numsys-012": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-092": {
+          "right": [
+            "11000₂",
+            "24₈",
+            "1E₁₆"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-8-numsys-084",
+        "inf-8-numsys-019",
+        "inf-8-numsys-078",
+        "inf-8-numsys-034",
+        "inf-8-numsys-080",
+        "inf-8-numsys-026",
+        "inf-8-numsys-091",
+        "inf-8-numsys-046",
+        "inf-8-numsys-035",
+        "inf-8-numsys-005",
+        "inf-8-numsys-086",
+        "inf-8-numsys-072",
+        "inf-8-numsys-022",
+        "inf-8-numsys-039",
+        "inf-8-numsys-040",
+        "inf-8-numsys-007",
+        "inf-8-numsys-043",
+        "inf-8-numsys-075",
+        "inf-8-numsys-083",
+        "inf-8-numsys-011"
+      ],
+      "orders": {
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 511₈",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 255₁₆"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
         "inf-8-numsys-035": {
           "options": [
             "C",
@@ -1106,289 +1111,194 @@
             "B"
           ]
         },
-        "inf-8-numsys-059": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 6,
-      "task_ids": [
-        "inf-8-numsys-092",
-        "inf-8-numsys-005",
-        "inf-8-numsys-030",
-        "inf-8-numsys-026",
-        "inf-8-numsys-007",
-        "inf-8-numsys-082",
-        "inf-8-numsys-077",
-        "inf-8-numsys-032",
-        "inf-8-numsys-069",
-        "inf-8-numsys-059",
-        "inf-8-numsys-067",
-        "inf-8-numsys-006",
-        "inf-8-numsys-070",
-        "inf-8-numsys-084",
-        "inf-8-numsys-019",
-        "inf-8-numsys-090",
-        "inf-8-numsys-087",
-        "inf-8-numsys-076",
-        "inf-8-numsys-046",
-        "inf-8-numsys-040"
-      ],
-      "orders": {
-        "inf-8-numsys-092": {
-          "right": [
-            "24₈",
-            "11000₂",
-            "1E₁₆"
-          ]
-        },
         "inf-8-numsys-005": {
           "options": [
             "A",
-            "D",
             "B",
-            "C"
-          ]
-        },
-        "inf-8-numsys-082": {
-          "options": [
             "C",
-            "D",
-            "A",
-            "B"
+            "D"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-039": {
           "options": [
-            "C",
-            "A",
             "D",
-            "B"
-          ]
-        },
-        "inf-8-numsys-087": {
-          "options": [
             "A",
             "B",
-            "D",
             "C"
           ]
         },
         "inf-8-numsys-040": {
           "options": [
-            "D",
+            "C",
             "B",
             "A",
-            "C"
+            "D"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 7,
       "task_ids": [
-        "inf-8-numsys-039",
-        "inf-8-numsys-075",
-        "inf-8-numsys-005",
-        "inf-8-numsys-076",
-        "inf-8-numsys-083",
         "inf-8-numsys-047",
-        "inf-8-numsys-069",
-        "inf-8-numsys-091",
+        "inf-8-numsys-087",
         "inf-8-numsys-073",
-        "inf-8-numsys-070",
+        "inf-8-numsys-019",
+        "inf-8-numsys-039",
+        "inf-8-numsys-038",
         "inf-8-numsys-090",
-        "inf-8-numsys-049",
-        "inf-8-numsys-059",
-        "inf-8-numsys-032",
         "inf-8-numsys-067",
-        "inf-8-numsys-064",
-        "inf-8-numsys-077",
-        "inf-8-numsys-068",
-        "inf-8-code-003",
-        "inf-8-numsys-002"
+        "inf-8-numsys-063",
+        "inf-8-numsys-083",
+        "inf-8-numsys-051",
+        "inf-8-numsys-026",
+        "inf-8-numsys-091",
+        "inf-8-numsys-066",
+        "inf-8-numsys-040",
+        "inf-8-numsys-061",
+        "inf-8-numsys-005",
+        "inf-8-numsys-043",
+        "inf-8-numsys-084",
+        "inf-8-numsys-012"
       ],
       "orders": {
-        "inf-8-numsys-039": {
+        "inf-8-numsys-087": {
           "options": [
+            "A",
             "D",
             "B",
-            "A",
             "C"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-numsys-038": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-040": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
           ]
         },
         "inf-8-numsys-005": {
           "options": [
             "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-numsys-091": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 8,
-      "task_ids": [
-        "inf-8-numsys-002",
-        "inf-8-numsys-043",
-        "inf-8-numsys-047",
-        "inf-8-numsys-076",
-        "inf-8-numsys-051",
-        "inf-8-numsys-070",
-        "inf-8-numsys-067",
-        "inf-8-numsys-062",
-        "inf-8-numsys-077",
-        "inf-8-numsys-059",
-        "inf-8-numsys-030",
-        "inf-8-numsys-068",
-        "inf-8-numsys-083",
-        "inf-8-numsys-012",
-        "inf-8-numsys-069",
-        "inf-8-numsys-090",
-        "inf-8-numsys-035",
-        "inf-8-numsys-075",
-        "inf-8-numsys-063",
-        "inf-8-numsys-065"
-      ],
-      "orders": {
-        "inf-8-numsys-059": {
-          "options": [
             "B",
-            "A",
             "D",
             "C"
           ]
         },
         "inf-8-numsys-012": {
           "options": [
-            "A",
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-8-numsys-039",
+        "inf-8-numsys-080",
+        "inf-8-numsys-029",
+        "inf-8-numsys-088",
+        "inf-8-numsys-065",
+        "inf-8-numsys-035",
+        "inf-8-numsys-014",
+        "inf-8-numsys-007",
+        "inf-8-numsys-073",
+        "inf-8-numsys-084",
+        "inf-8-numsys-074",
+        "inf-8-numsys-046",
+        "inf-8-numsys-031",
+        "inf-8-numsys-083",
+        "inf-8-numsys-022",
+        "inf-8-code-001",
+        "inf-8-numsys-079",
+        "inf-8-numsys-048",
+        "inf-8-numsys-032",
+        "inf-8-code-002"
+      ],
+      "orders": {
+        "inf-8-numsys-039": {
+          "options": [
+            "B",
             "C",
             "D",
-            "B"
+            "A"
           ]
         },
         "inf-8-numsys-035": {
           "options": [
             "C",
-            "D",
             "A",
+            "D",
             "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 9,
       "task_ids": [
-        "inf-8-numsys-059",
-        "inf-8-numsys-068",
         "inf-8-numsys-030",
-        "inf-8-numsys-077",
-        "inf-8-code-004",
-        "inf-8-numsys-043",
-        "inf-8-numsys-075",
-        "inf-8-numsys-069",
-        "inf-8-numsys-091",
         "inf-8-numsys-048",
-        "inf-8-numsys-070",
-        "inf-8-numsys-019",
-        "inf-8-numsys-002",
-        "inf-8-numsys-080",
-        "inf-8-numsys-076",
-        "inf-8-numsys-063",
-        "inf-8-numsys-007",
-        "inf-8-numsys-005",
-        "inf-8-numsys-072",
-        "inf-8-numsys-039"
-      ],
-      "orders": {
-        "inf-8-numsys-059": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-numsys-091": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-005": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-numsys-039": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 10,
-      "task_ids": [
-        "inf-8-numsys-070",
-        "inf-8-code-004",
+        "inf-8-numsys-083",
+        "inf-8-numsys-037",
+        "inf-8-numsys-022",
+        "inf-8-code-002",
         "inf-8-numsys-092",
+        "inf-8-numsys-065",
+        "inf-8-numsys-079",
+        "inf-8-numsys-074",
+        "inf-8-numsys-025",
+        "inf-8-numsys-007",
+        "inf-8-numsys-019",
         "inf-8-code-001",
-        "inf-8-numsys-040",
-        "inf-8-numsys-069",
-        "inf-8-code-003",
-        "inf-8-numsys-034",
-        "inf-8-numsys-089",
-        "inf-8-numsys-068",
-        "inf-8-numsys-039",
-        "inf-8-numsys-047",
-        "inf-8-numsys-076",
-        "inf-8-numsys-080",
-        "inf-8-numsys-028",
-        "inf-8-numsys-066",
-        "inf-8-numsys-051",
-        "inf-8-numsys-059",
-        "inf-8-numsys-087",
-        "inf-8-numsys-046"
+        "inf-8-numsys-043",
+        "inf-8-numsys-011",
+        "inf-8-numsys-014",
+        "inf-8-numsys-091",
+        "inf-8-numsys-067",
+        "inf-8-numsys-068"
       ],
       "orders": {
+        "inf-8-numsys-037": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
         "inf-8-numsys-092": {
           "right": [
             "11000₂",
@@ -1396,191 +1306,64 @@
             "1E₁₆"
           ]
         },
-        "inf-8-numsys-040": {
+        "inf-8-numsys-091": {
           "options": [
-            "A",
-            "D",
             "C",
-            "B"
-          ]
-        },
-        "inf-8-numsys-039": {
-          "options": [
             "A",
-            "C",
             "D",
             "B"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-numsys-087": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
-      "number": 11,
+      "number": 10,
       "task_ids": [
-        "inf-8-numsys-064",
-        "inf-8-numsys-083",
-        "inf-8-numsys-085",
-        "inf-8-numsys-059",
-        "inf-8-numsys-048",
-        "inf-8-numsys-030",
-        "inf-8-numsys-007",
-        "inf-8-numsys-006",
-        "inf-8-numsys-038",
-        "inf-8-numsys-079",
-        "inf-8-numsys-029",
-        "inf-8-numsys-076",
-        "inf-8-numsys-067",
-        "inf-8-numsys-019",
-        "inf-8-numsys-069",
-        "inf-8-numsys-087",
+        "inf-8-numsys-073",
         "inf-8-numsys-068",
-        "inf-8-numsys-070",
+        "inf-8-numsys-029",
         "inf-8-code-003",
-        "inf-8-numsys-073"
+        "inf-8-code-001",
+        "inf-8-code-004",
+        "inf-8-numsys-037",
+        "inf-8-numsys-014",
+        "inf-8-numsys-091",
+        "inf-8-numsys-038",
+        "inf-8-numsys-080",
+        "inf-8-numsys-022",
+        "inf-8-numsys-089",
+        "inf-8-numsys-043",
+        "inf-8-numsys-048",
+        "inf-8-numsys-007",
+        "inf-8-numsys-086",
+        "inf-8-numsys-011",
+        "inf-8-numsys-078",
+        "inf-8-numsys-025"
       ],
       "orders": {
-        "inf-8-numsys-059": {
+        "inf-8-numsys-037": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-091": {
           "options": [
             "A",
+            "C",
             "D",
-            "B",
-            "C"
+            "B"
           ]
         },
         "inf-8-numsys-038": {
           "options": [
-            "A",
-            "B",
             "C",
-            "D"
-          ]
-        },
-        "inf-8-numsys-087": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-8-numsys-090",
-        "inf-8-numsys-075",
-        "inf-8-numsys-086",
-        "inf-8-numsys-078",
-        "inf-8-numsys-076",
-        "inf-8-numsys-043",
-        "inf-8-numsys-092",
-        "inf-8-numsys-047",
-        "inf-8-numsys-084",
-        "inf-8-numsys-070",
-        "inf-8-numsys-059",
-        "inf-8-numsys-067",
-        "inf-8-numsys-083",
-        "inf-8-numsys-030",
-        "inf-8-numsys-069",
-        "inf-8-numsys-039",
-        "inf-8-numsys-028",
-        "inf-8-numsys-040",
-        "inf-8-numsys-062",
-        "inf-8-numsys-019"
-      ],
-      "orders": {
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 255₁₆",
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 15₂"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "1E₁₆",
-            "24₈",
-            "11000₂"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
             "D",
             "A",
-            "C",
             "B"
-          ]
-        },
-        "inf-8-numsys-039": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-numsys-040": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-8-numsys-093",
-        "inf-8-numsys-047",
-        "inf-8-code-003",
-        "inf-8-numsys-067",
-        "inf-8-numsys-062",
-        "inf-8-numsys-070",
-        "inf-8-numsys-084",
-        "inf-8-numsys-064",
-        "inf-8-numsys-085",
-        "inf-8-numsys-065",
-        "inf-8-numsys-063",
-        "inf-8-numsys-030",
-        "inf-8-numsys-059",
-        "inf-8-numsys-049",
-        "inf-8-numsys-007",
-        "inf-8-numsys-069",
-        "inf-8-numsys-032",
-        "inf-8-numsys-078",
-        "inf-8-numsys-076",
-        "inf-8-code-004"
-      ],
-      "orders": {
-        "inf-8-numsys-059": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
           ]
         },
         "inf-8-numsys-078": {
@@ -1592,118 +1375,273 @@
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-8-numsys-028",
+        "inf-8-numsys-047",
+        "inf-8-numsys-090",
+        "inf-8-numsys-007",
+        "inf-8-numsys-068",
+        "inf-8-code-001",
+        "inf-8-numsys-062",
+        "inf-8-numsys-040",
+        "inf-8-numsys-061",
+        "inf-8-numsys-034",
+        "inf-8-numsys-038",
+        "inf-8-numsys-079",
+        "inf-8-numsys-074",
+        "inf-8-numsys-073",
+        "inf-8-numsys-025",
+        "inf-8-numsys-082",
+        "inf-8-numsys-011",
+        "inf-8-numsys-080",
+        "inf-8-numsys-089",
+        "inf-8-numsys-046"
+      ],
+      "orders": {
+        "inf-8-numsys-040": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-numsys-038": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-082": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-8-numsys-051",
+        "inf-8-numsys-029",
+        "inf-8-numsys-031",
+        "inf-8-numsys-080",
+        "inf-8-numsys-005",
+        "inf-8-numsys-083",
+        "inf-8-numsys-074",
+        "inf-8-numsys-092",
+        "inf-8-numsys-068",
+        "inf-8-numsys-037",
+        "inf-8-numsys-089",
+        "inf-8-numsys-088",
+        "inf-8-numsys-061",
+        "inf-8-numsys-077",
+        "inf-8-numsys-040",
+        "inf-8-numsys-048",
+        "inf-8-numsys-014",
+        "inf-8-numsys-064",
+        "inf-8-numsys-043",
+        "inf-8-numsys-039"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-numsys-092": {
+          "right": [
+            "24₈",
+            "11000₂",
+            "1E₁₆"
+          ]
+        },
+        "inf-8-numsys-037": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-040": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-8-numsys-074",
+        "inf-8-numsys-034",
+        "inf-8-numsys-046",
+        "inf-8-numsys-048",
+        "inf-8-numsys-068",
+        "inf-8-numsys-037",
+        "inf-8-code-004",
+        "inf-8-numsys-028",
+        "inf-8-numsys-021",
+        "inf-8-numsys-091",
+        "inf-8-numsys-066",
+        "inf-8-numsys-065",
+        "inf-8-numsys-062",
+        "inf-8-numsys-073",
+        "inf-8-numsys-019",
+        "inf-8-numsys-011",
+        "inf-8-numsys-007",
+        "inf-8-numsys-029",
+        "inf-8-numsys-063",
+        "inf-8-numsys-067"
+      ],
+      "orders": {
+        "inf-8-numsys-037": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 30
     },
     {
       "number": 14,
       "task_ids": [
-        "inf-8-numsys-070",
-        "inf-8-numsys-080",
-        "inf-8-numsys-085",
-        "inf-8-numsys-029",
-        "inf-8-numsys-089",
-        "inf-8-numsys-076",
-        "inf-8-numsys-062",
-        "inf-8-numsys-006",
-        "inf-8-numsys-066",
-        "inf-8-numsys-073",
-        "inf-8-numsys-093",
-        "inf-8-numsys-081",
+        "inf-8-numsys-032",
+        "inf-8-numsys-067",
+        "inf-8-numsys-084",
         "inf-8-numsys-012",
-        "inf-8-numsys-040",
-        "inf-8-numsys-068",
-        "inf-8-numsys-059",
-        "inf-8-numsys-047",
-        "inf-8-numsys-069",
+        "inf-8-numsys-061",
         "inf-8-numsys-005",
-        "inf-8-numsys-039"
+        "inf-8-numsys-019",
+        "inf-8-numsys-048",
+        "inf-8-numsys-007",
+        "inf-8-numsys-075",
+        "inf-8-numsys-028",
+        "inf-8-numsys-025",
+        "inf-8-numsys-046",
+        "inf-8-numsys-065",
+        "inf-8-numsys-037",
+        "inf-8-numsys-064",
+        "inf-8-numsys-087",
+        "inf-8-numsys-074",
+        "inf-8-numsys-082",
+        "inf-8-numsys-078"
       ],
       "orders": {
         "inf-8-numsys-012": {
           "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-040": {
-          "options": [
             "A",
-            "C",
             "D",
-            "B"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
             "B",
-            "C",
-            "D",
-            "A"
+            "C"
           ]
         },
         "inf-8-numsys-005": {
           "options": [
-            "C",
             "D",
+            "C",
             "B",
             "A"
           ]
         },
-        "inf-8-numsys-039": {
+        "inf-8-numsys-037": {
           "options": [
-            "A",
             "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-numsys-087": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-numsys-082": {
+          "options": [
+            "B",
+            "A",
             "D",
             "C"
           ]
+        },
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 511₈",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 255₁₆"
+          ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 15,
       "task_ids": [
-        "inf-8-numsys-076",
-        "inf-8-numsys-047",
-        "inf-8-numsys-080",
-        "inf-8-numsys-063",
-        "inf-8-numsys-012",
-        "inf-8-numsys-070",
-        "inf-8-numsys-034",
-        "inf-8-numsys-049",
-        "inf-8-numsys-040",
-        "inf-8-numsys-069",
-        "inf-8-numsys-059",
-        "inf-8-numsys-005",
+        "inf-8-numsys-038",
+        "inf-8-numsys-072",
         "inf-8-numsys-019",
-        "inf-8-numsys-079",
-        "inf-8-numsys-084",
+        "inf-8-numsys-046",
         "inf-8-numsys-089",
+        "inf-8-numsys-063",
+        "inf-8-numsys-084",
+        "inf-8-numsys-080",
+        "inf-8-numsys-011",
+        "inf-8-numsys-065",
+        "inf-8-numsys-062",
+        "inf-8-numsys-075",
+        "inf-8-numsys-005",
         "inf-8-numsys-073",
-        "inf-8-numsys-091",
-        "inf-8-numsys-093",
-        "inf-8-numsys-081"
+        "inf-8-numsys-022",
+        "inf-8-numsys-025",
+        "inf-8-numsys-048",
+        "inf-8-numsys-077",
+        "inf-8-numsys-083",
+        "inf-8-numsys-039"
       ],
       "orders": {
-        "inf-8-numsys-012": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-numsys-040": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-038": {
           "options": [
             "A",
             "B",
@@ -1713,93 +1651,109 @@
         },
         "inf-8-numsys-005": {
           "options": [
-            "B",
+            "C",
+            "D",
             "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "A",
+            "B",
             "D",
             "C"
           ]
-        },
-        "inf-8-numsys-091": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 16,
       "task_ids": [
-        "inf-8-numsys-038",
-        "inf-8-numsys-084",
-        "inf-8-numsys-070",
-        "inf-8-numsys-069",
-        "inf-8-numsys-077",
-        "inf-8-numsys-090",
-        "inf-8-numsys-067",
-        "inf-8-numsys-049",
-        "inf-8-code-004",
-        "inf-8-numsys-059",
-        "inf-8-numsys-076",
-        "inf-8-numsys-047",
-        "inf-8-numsys-019",
-        "inf-8-code-002",
-        "inf-8-numsys-007",
+        "inf-8-numsys-051",
+        "inf-8-numsys-088",
+        "inf-8-numsys-040",
         "inf-8-numsys-089",
+        "inf-8-numsys-066",
+        "inf-8-numsys-022",
+        "inf-8-numsys-075",
+        "inf-8-numsys-081",
+        "inf-8-numsys-047",
+        "inf-8-numsys-011",
+        "inf-8-numsys-039",
         "inf-8-numsys-062",
-        "inf-8-numsys-032",
-        "inf-8-numsys-026",
-        "inf-8-numsys-051"
+        "inf-8-numsys-035",
+        "inf-8-numsys-021",
+        "inf-8-numsys-084",
+        "inf-8-numsys-087",
+        "inf-8-numsys-067",
+        "inf-8-numsys-030",
+        "inf-8-numsys-048",
+        "inf-8-numsys-025"
       ],
       "orders": {
-        "inf-8-numsys-038": {
+        "inf-8-numsys-040": {
           "options": [
+            "C",
             "B",
             "D",
-            "C",
             "A"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-039": {
           "options": [
-            "B",
-            "C",
+            "D",
             "A",
-            "D"
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-087": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 17,
       "task_ids": [
-        "inf-8-numsys-080",
-        "inf-8-numsys-073",
-        "inf-8-numsys-007",
-        "inf-8-numsys-084",
-        "inf-8-numsys-029",
-        "inf-8-numsys-032",
-        "inf-8-numsys-069",
-        "inf-8-numsys-043",
-        "inf-8-numsys-076",
-        "inf-8-numsys-062",
-        "inf-8-numsys-025",
+        "inf-8-numsys-021",
+        "inf-8-numsys-040",
         "inf-8-numsys-083",
-        "inf-8-numsys-065",
-        "inf-8-code-003",
-        "inf-8-numsys-049",
+        "inf-8-numsys-048",
+        "inf-8-numsys-068",
+        "inf-8-numsys-051",
+        "inf-8-numsys-088",
+        "inf-8-numsys-007",
+        "inf-8-numsys-064",
+        "inf-8-numsys-062",
+        "inf-8-numsys-011",
+        "inf-8-numsys-047",
+        "inf-8-numsys-067",
+        "inf-8-numsys-087",
         "inf-8-numsys-039",
+        "inf-8-numsys-012",
+        "inf-8-numsys-014",
         "inf-8-numsys-079",
-        "inf-8-numsys-085",
-        "inf-8-numsys-070",
-        "inf-8-numsys-059"
+        "inf-8-numsys-028",
+        "inf-8-numsys-074"
       ],
       "orders": {
-        "inf-8-numsys-039": {
+        "inf-8-numsys-040": {
           "options": [
             "D",
             "B",
@@ -1807,463 +1761,425 @@
             "A"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-087": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-numsys-039": {
           "options": [
             "C",
             "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-numsys-012": {
+          "options": [
             "D",
+            "C",
+            "A",
             "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 18,
       "task_ids": [
-        "inf-8-numsys-088",
+        "inf-8-numsys-090",
         "inf-8-numsys-012",
-        "inf-8-numsys-065",
-        "inf-8-numsys-059",
-        "inf-8-numsys-092",
-        "inf-8-code-004",
-        "inf-8-numsys-038",
+        "inf-8-numsys-082",
         "inf-8-numsys-051",
-        "inf-8-numsys-043",
-        "inf-8-numsys-068",
-        "inf-8-numsys-029",
-        "inf-8-numsys-063",
-        "inf-8-numsys-049",
-        "inf-8-numsys-076",
-        "inf-8-numsys-078",
-        "inf-8-numsys-069",
+        "inf-8-numsys-086",
+        "inf-8-numsys-092",
+        "inf-8-numsys-030",
+        "inf-8-numsys-005",
+        "inf-8-numsys-011",
+        "inf-8-numsys-014",
+        "inf-8-numsys-040",
+        "inf-8-numsys-061",
+        "inf-8-code-002",
+        "inf-8-numsys-084",
+        "inf-8-numsys-077",
         "inf-8-numsys-067",
-        "inf-8-numsys-070",
-        "inf-8-code-001",
-        "inf-8-numsys-019"
+        "inf-8-numsys-048",
+        "inf-8-numsys-089",
+        "inf-8-numsys-043",
+        "inf-8-numsys-064"
       ],
       "orders": {
         "inf-8-numsys-012": {
           "options": [
-            "D",
             "B",
             "A",
-            "C"
+            "C",
+            "D"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-082": {
           "options": [
             "A",
-            "D",
             "B",
+            "D",
             "C"
           ]
         },
         "inf-8-numsys-092": {
           "right": [
-            "24₈",
             "1E₁₆",
-            "11000₂"
+            "11000₂",
+            "24₈"
           ]
         },
-        "inf-8-numsys-038": {
+        "inf-8-numsys-005": {
           "options": [
             "B",
             "A",
-            "D",
-            "C"
+            "C",
+            "D"
           ]
         },
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 255₁₆",
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 15₂",
-            "Наибольшее число в ней — 99999₁₀"
+        "inf-8-numsys-040": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 19,
       "task_ids": [
-        "inf-8-numsys-040",
-        "inf-8-numsys-070",
-        "inf-8-numsys-039",
-        "inf-8-numsys-049",
-        "inf-8-numsys-081",
-        "inf-8-numsys-038",
-        "inf-8-numsys-091",
-        "inf-8-numsys-068",
-        "inf-8-numsys-092",
-        "inf-8-numsys-063",
-        "inf-8-numsys-048",
-        "inf-8-numsys-093",
-        "inf-8-numsys-062",
+        "inf-8-numsys-082",
+        "inf-8-numsys-073",
+        "inf-8-numsys-078",
         "inf-8-numsys-067",
-        "inf-8-numsys-069",
-        "inf-8-numsys-076",
+        "inf-8-numsys-021",
+        "inf-8-numsys-037",
+        "inf-8-numsys-061",
+        "inf-8-numsys-046",
+        "inf-8-numsys-068",
+        "inf-8-numsys-091",
+        "inf-8-numsys-063",
+        "inf-8-numsys-030",
+        "inf-8-numsys-032",
         "inf-8-numsys-090",
-        "inf-8-numsys-019",
-        "inf-8-numsys-059",
-        "inf-8-numsys-079"
+        "inf-8-code-003",
+        "inf-8-code-002",
+        "inf-8-numsys-086",
+        "inf-8-numsys-040",
+        "inf-8-numsys-051",
+        "inf-8-numsys-047"
       ],
       "orders": {
-        "inf-8-numsys-040": {
+        "inf-8-numsys-082": {
           "options": [
-            "D",
-            "B",
             "A",
-            "C"
+            "B",
+            "C",
+            "D"
           ]
         },
-        "inf-8-numsys-039": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 511₈",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 255₁₆"
           ]
         },
-        "inf-8-numsys-038": {
+        "inf-8-numsys-037": {
           "options": [
+            "B",
             "C",
             "A",
-            "B",
             "D"
           ]
         },
         "inf-8-numsys-091": {
           "options": [
-            "C",
-            "B",
+            "A",
             "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "24₈",
-            "1E₁₆",
-            "11000₂"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
             "B",
+            "C"
+          ]
+        },
+        "inf-8-numsys-040": {
+          "options": [
             "C",
+            "B",
             "D",
             "A"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 20,
       "task_ids": [
-        "inf-8-numsys-035",
-        "inf-8-numsys-030",
-        "inf-8-numsys-080",
-        "inf-8-numsys-065",
-        "inf-8-numsys-062",
-        "inf-8-numsys-040",
-        "inf-8-numsys-092",
-        "inf-8-numsys-082",
-        "inf-8-numsys-029",
-        "inf-8-numsys-043",
-        "inf-8-numsys-034",
-        "inf-8-numsys-075",
-        "inf-8-numsys-076",
-        "inf-8-numsys-059",
+        "inf-8-numsys-072",
+        "inf-8-code-001",
+        "inf-8-numsys-025",
         "inf-8-numsys-084",
-        "inf-8-numsys-046",
-        "inf-8-numsys-069",
-        "inf-8-numsys-078",
-        "inf-8-numsys-089",
-        "inf-8-numsys-070"
+        "inf-8-numsys-007",
+        "inf-8-numsys-083",
+        "inf-8-numsys-067",
+        "inf-8-numsys-043",
+        "inf-8-numsys-088",
+        "inf-8-numsys-079",
+        "inf-8-numsys-022",
+        "inf-8-numsys-038",
+        "inf-8-numsys-026",
+        "inf-8-numsys-086",
+        "inf-8-numsys-021",
+        "inf-8-numsys-048",
+        "inf-8-numsys-014",
+        "inf-8-numsys-012",
+        "inf-8-numsys-075",
+        "inf-8-numsys-032"
       ],
       "orders": {
-        "inf-8-numsys-035": {
+        "inf-8-numsys-038": {
           "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-numsys-040": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "24₈",
-            "11000₂",
-            "1E₁₆"
-          ]
-        },
-        "inf-8-numsys-082": {
-          "options": [
-            "B",
             "D",
             "A",
-            "C"
+            "C",
+            "B"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-012": {
           "options": [
-            "A",
-            "B",
             "D",
-            "C"
-          ]
-        },
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 15₂",
-            "Наибольшее число в ней — 255₁₆"
+            "A",
+            "C",
+            "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 21,
       "task_ids": [
-        "inf-8-numsys-084",
-        "inf-8-numsys-070",
-        "inf-8-numsys-046",
-        "inf-8-numsys-005",
+        "inf-8-numsys-037",
+        "inf-8-numsys-091",
         "inf-8-numsys-007",
-        "inf-8-numsys-063",
-        "inf-8-numsys-085",
-        "inf-8-numsys-076",
-        "inf-8-numsys-039",
-        "inf-8-numsys-051",
-        "inf-8-numsys-035",
-        "inf-8-numsys-066",
-        "inf-8-numsys-030",
-        "inf-8-numsys-069",
-        "inf-8-numsys-082",
-        "inf-8-numsys-080",
-        "inf-8-numsys-059",
         "inf-8-numsys-074",
-        "inf-8-numsys-006",
-        "inf-8-numsys-002"
+        "inf-8-numsys-082",
+        "inf-8-numsys-029",
+        "inf-8-numsys-067",
+        "inf-8-numsys-088",
+        "inf-8-numsys-021",
+        "inf-8-numsys-046",
+        "inf-8-numsys-035",
+        "inf-8-numsys-084",
+        "inf-8-numsys-012",
+        "inf-8-numsys-005",
+        "inf-8-numsys-049",
+        "inf-8-numsys-051",
+        "inf-8-numsys-077",
+        "inf-8-numsys-063",
+        "inf-8-code-002",
+        "inf-8-numsys-011"
       ],
       "orders": {
-        "inf-8-numsys-005": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-039": {
+        "inf-8-numsys-037": {
           "options": [
             "C",
-            "B",
             "D",
-            "A"
+            "A",
+            "B"
           ]
         },
-        "inf-8-numsys-035": {
+        "inf-8-numsys-091": {
           "options": [
-            "D",
             "B",
+            "C",
             "A",
-            "C"
+            "D"
           ]
         },
         "inf-8-numsys-082": {
           "options": [
             "B",
+            "A",
             "D",
-            "C",
-            "A"
+            "C"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-035": {
           "options": [
-            "D",
             "A",
             "C",
+            "D",
             "B"
+          ]
+        },
+        "inf-8-numsys-012": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
       "number": 22,
       "task_ids": [
-        "inf-8-numsys-083",
-        "inf-8-numsys-076",
-        "inf-8-code-001",
-        "inf-8-numsys-078",
-        "inf-8-numsys-059",
-        "inf-8-numsys-084",
-        "inf-8-numsys-086",
+        "inf-8-numsys-032",
+        "inf-8-numsys-081",
         "inf-8-numsys-049",
-        "inf-8-numsys-072",
-        "inf-8-numsys-069",
-        "inf-8-numsys-038",
-        "inf-8-numsys-093",
-        "inf-8-numsys-026",
-        "inf-8-numsys-005",
-        "inf-8-numsys-070",
+        "inf-8-numsys-030",
+        "inf-8-numsys-088",
+        "inf-8-code-003",
         "inf-8-code-002",
+        "inf-8-numsys-019",
+        "inf-8-numsys-090",
+        "inf-8-numsys-084",
+        "inf-8-numsys-066",
+        "inf-8-numsys-040",
+        "inf-8-numsys-031",
+        "inf-8-numsys-046",
         "inf-8-numsys-092",
-        "inf-8-numsys-006",
-        "inf-8-numsys-080",
-        "inf-8-numsys-012"
+        "inf-8-numsys-063",
+        "inf-8-numsys-072",
+        "inf-8-numsys-067",
+        "inf-8-numsys-075",
+        "inf-8-numsys-021"
       ],
       "orders": {
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 255₁₆",
-            "Наибольшее число в ней — 15₂"
-          ]
-        },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-040": {
           "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-038": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-numsys-005": {
-          "options": [
-            "B",
             "A",
             "C",
+            "B",
             "D"
           ]
         },
         "inf-8-numsys-092": {
           "right": [
-            "11000₂",
             "24₈",
+            "11000₂",
             "1E₁₆"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 23,
+      "task_ids": [
+        "inf-8-numsys-072",
+        "inf-8-code-003",
+        "inf-8-numsys-065",
+        "inf-8-numsys-026",
+        "inf-8-numsys-046",
+        "inf-8-numsys-049",
+        "inf-8-numsys-080",
+        "inf-8-numsys-089",
+        "inf-8-numsys-030",
+        "inf-8-numsys-061",
+        "inf-8-numsys-051",
+        "inf-8-numsys-039",
+        "inf-8-numsys-022",
+        "inf-8-numsys-063",
+        "inf-8-numsys-078",
+        "inf-8-numsys-082",
+        "inf-8-numsys-012",
+        "inf-8-numsys-007",
+        "inf-8-numsys-068",
+        "inf-8-numsys-019"
+      ],
+      "orders": {
+        "inf-8-numsys-039": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 511₈",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 255₁₆"
+          ]
+        },
+        "inf-8-numsys-082": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
           ]
         },
         "inf-8-numsys-012": {
           "options": [
             "D",
             "B",
-            "C",
-            "A"
+            "A",
+            "C"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
-      "number": 23,
+      "number": 24,
       "task_ids": [
-        "inf-8-numsys-080",
-        "inf-8-numsys-063",
-        "inf-8-numsys-039",
-        "inf-8-numsys-030",
-        "inf-8-numsys-035",
-        "inf-8-numsys-081",
-        "inf-8-numsys-085",
-        "inf-8-numsys-043",
-        "inf-8-numsys-069",
-        "inf-8-numsys-076",
-        "inf-8-numsys-084",
-        "inf-8-numsys-005",
-        "inf-8-numsys-022",
-        "inf-8-numsys-075",
+        "inf-8-numsys-026",
+        "inf-8-numsys-021",
+        "inf-8-numsys-090",
+        "inf-8-numsys-011",
+        "inf-8-code-001",
         "inf-8-numsys-007",
-        "inf-8-numsys-086",
-        "inf-8-numsys-006",
-        "inf-8-numsys-059",
+        "inf-8-numsys-068",
+        "inf-8-numsys-072",
+        "inf-8-numsys-039",
+        "inf-8-numsys-043",
+        "inf-8-numsys-035",
+        "inf-8-numsys-083",
+        "inf-8-numsys-065",
+        "inf-8-numsys-080",
         "inf-8-numsys-077",
-        "inf-8-numsys-070"
+        "inf-8-numsys-063",
+        "inf-8-numsys-012",
+        "inf-8-numsys-049",
+        "inf-8-code-002",
+        "inf-8-numsys-092"
       ],
       "orders": {
         "inf-8-numsys-039": {
           "options": [
             "C",
             "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-numsys-035": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-005": {
-          "options": [
-            "A",
-            "C",
             "D",
             "B"
           ]
         },
-        "inf-8-numsys-059": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-8-numsys-059",
-        "inf-8-numsys-081",
-        "inf-8-numsys-079",
-        "inf-8-numsys-089",
-        "inf-8-numsys-012",
-        "inf-8-numsys-069",
-        "inf-8-numsys-022",
-        "inf-8-numsys-038",
-        "inf-8-numsys-084",
-        "inf-8-numsys-047",
-        "inf-8-numsys-080",
-        "inf-8-numsys-076",
-        "inf-8-code-003",
-        "inf-8-numsys-051",
-        "inf-8-numsys-085",
-        "inf-8-numsys-092",
-        "inf-8-numsys-064",
-        "inf-8-numsys-070",
-        "inf-8-numsys-043",
-        "inf-8-numsys-062"
-      ],
-      "orders": {
-        "inf-8-numsys-059": {
+        "inf-8-numsys-035": {
           "options": [
             "A",
             "B",
@@ -2272,236 +2188,6 @@
           ]
         },
         "inf-8-numsys-012": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-numsys-038": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-numsys-092": {
-          "right": [
-            "11000₂",
-            "1E₁₆",
-            "24₈"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-8-numsys-038",
-        "inf-8-numsys-048",
-        "inf-8-numsys-075",
-        "inf-8-numsys-062",
-        "inf-8-numsys-070",
-        "inf-8-numsys-082",
-        "inf-8-numsys-059",
-        "inf-8-numsys-043",
-        "inf-8-numsys-028",
-        "inf-8-numsys-088",
-        "inf-8-numsys-068",
-        "inf-8-numsys-007",
-        "inf-8-numsys-066",
-        "inf-8-code-003",
-        "inf-8-numsys-012",
-        "inf-8-numsys-064",
-        "inf-8-numsys-069",
-        "inf-8-numsys-067",
-        "inf-8-numsys-085",
-        "inf-8-numsys-076"
-      ],
-      "orders": {
-        "inf-8-numsys-038": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-numsys-082": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-numsys-012": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 26,
-      "task_ids": [
-        "inf-8-numsys-090",
-        "inf-8-numsys-082",
-        "inf-8-numsys-066",
-        "inf-8-numsys-063",
-        "inf-8-numsys-070",
-        "inf-8-numsys-059",
-        "inf-8-numsys-073",
-        "inf-8-numsys-035",
-        "inf-8-numsys-030",
-        "inf-8-numsys-043",
-        "inf-8-numsys-062",
-        "inf-8-numsys-076",
-        "inf-8-numsys-067",
-        "inf-8-numsys-068",
-        "inf-8-numsys-034",
-        "inf-8-numsys-069",
-        "inf-8-numsys-022",
-        "inf-8-numsys-051",
-        "inf-8-numsys-085",
-        "inf-8-numsys-006"
-      ],
-      "orders": {
-        "inf-8-numsys-082": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-numsys-035": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-8-numsys-069",
-        "inf-8-numsys-067",
-        "inf-8-numsys-074",
-        "inf-8-code-001",
-        "inf-8-numsys-007",
-        "inf-8-numsys-076",
-        "inf-8-numsys-092",
-        "inf-8-numsys-068",
-        "inf-8-numsys-034",
-        "inf-8-numsys-059",
-        "inf-8-numsys-072",
-        "inf-8-numsys-047",
-        "inf-8-numsys-038",
-        "inf-8-numsys-019",
-        "inf-8-numsys-070",
-        "inf-8-numsys-083",
-        "inf-8-numsys-026",
-        "inf-8-numsys-064",
-        "inf-8-numsys-077",
-        "inf-8-numsys-043"
-      ],
-      "orders": {
-        "inf-8-numsys-092": {
-          "right": [
-            "1E₁₆",
-            "11000₂",
-            "24₈"
-          ]
-        },
-        "inf-8-numsys-059": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-038": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        }
-      },
-      "max_score": 38
-    },
-    {
-      "number": 28,
-      "task_ids": [
-        "inf-8-numsys-070",
-        "inf-8-numsys-080",
-        "inf-8-numsys-089",
-        "inf-8-numsys-019",
-        "inf-8-numsys-022",
-        "inf-8-numsys-035",
-        "inf-8-numsys-051",
-        "inf-8-numsys-078",
-        "inf-8-numsys-074",
-        "inf-8-numsys-076",
-        "inf-8-numsys-034",
-        "inf-8-numsys-049",
-        "inf-8-numsys-084",
-        "inf-8-numsys-059",
-        "inf-8-numsys-028",
-        "inf-8-numsys-069",
-        "inf-8-numsys-046",
-        "inf-8-numsys-092",
-        "inf-8-numsys-032",
-        "inf-8-numsys-082"
-      ],
-      "orders": {
-        "inf-8-numsys-035": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 15₂",
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 255₁₆"
-          ]
-        },
-        "inf-8-numsys-059": {
           "options": [
             "D",
             "B",
@@ -2515,103 +2201,359 @@
             "24₈",
             "11000₂"
           ]
-        },
-        "inf-8-numsys-082": {
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-8-numsys-025",
+        "inf-8-numsys-031",
+        "inf-8-numsys-080",
+        "inf-8-code-004",
+        "inf-8-numsys-035",
+        "inf-8-numsys-037",
+        "inf-8-numsys-043",
+        "inf-8-numsys-026",
+        "inf-8-numsys-091",
+        "inf-8-numsys-039",
+        "inf-8-numsys-047",
+        "inf-8-numsys-063",
+        "inf-8-numsys-073",
+        "inf-8-numsys-090",
+        "inf-8-numsys-005",
+        "inf-8-numsys-061",
+        "inf-8-numsys-066",
+        "inf-8-numsys-068",
+        "inf-8-numsys-051",
+        "inf-8-numsys-065"
+      ],
+      "orders": {
+        "inf-8-numsys-035": {
           "options": [
-            "B",
             "C",
             "A",
+            "B",
             "D"
+          ]
+        },
+        "inf-8-numsys-037": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-005": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     },
     {
-      "number": 29,
+      "number": 26,
       "task_ids": [
-        "inf-8-numsys-028",
-        "inf-8-numsys-070",
-        "inf-8-numsys-067",
-        "inf-8-numsys-068",
-        "inf-8-code-001",
-        "inf-8-numsys-029",
-        "inf-8-numsys-088",
-        "inf-8-numsys-059",
-        "inf-8-numsys-083",
-        "inf-8-numsys-069",
-        "inf-8-numsys-092",
+        "inf-8-numsys-086",
+        "inf-8-numsys-012",
+        "inf-8-numsys-066",
+        "inf-8-numsys-043",
+        "inf-8-numsys-048",
         "inf-8-numsys-091",
-        "inf-8-numsys-076",
-        "inf-8-numsys-030",
-        "inf-8-numsys-062",
-        "inf-8-numsys-006",
-        "inf-8-numsys-078",
+        "inf-8-numsys-040",
+        "inf-8-numsys-080",
+        "inf-8-numsys-064",
+        "inf-8-code-003",
+        "inf-8-numsys-035",
         "inf-8-numsys-032",
+        "inf-8-numsys-074",
+        "inf-8-numsys-092",
+        "inf-8-numsys-039",
+        "inf-8-numsys-068",
+        "inf-8-numsys-082",
         "inf-8-numsys-051",
-        "inf-8-numsys-043"
+        "inf-8-numsys-014",
+        "inf-8-code-002"
       ],
       "orders": {
-        "inf-8-numsys-059": {
+        "inf-8-numsys-012": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-numsys-091": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-numsys-040": {
           "options": [
             "A",
-            "C",
+            "D",
             "B",
-            "D"
+            "C"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
           ]
         },
         "inf-8-numsys-092": {
           "right": [
-            "1E₁₆",
             "11000₂",
+            "1E₁₆",
             "24₈"
           ]
         },
-        "inf-8-numsys-091": {
+        "inf-8-numsys-039": {
           "options": [
-            "B",
+            "D",
             "C",
-            "A",
-            "D"
+            "B",
+            "A"
           ]
         },
-        "inf-8-numsys-078": {
-          "right": [
-            "Наибольшее число в ней — 511₈",
-            "Наибольшее число в ней — 99999₁₀",
-            "Наибольшее число в ней — 255₁₆",
-            "Наибольшее число в ней — 15₂"
+        "inf-8-numsys-082": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
+    },
+    {
+      "number": 27,
+      "task_ids": [
+        "inf-8-numsys-062",
+        "inf-8-numsys-081",
+        "inf-8-numsys-034",
+        "inf-8-numsys-007",
+        "inf-8-numsys-068",
+        "inf-8-numsys-005",
+        "inf-8-numsys-028",
+        "inf-8-numsys-025",
+        "inf-8-numsys-074",
+        "inf-8-numsys-073",
+        "inf-8-numsys-022",
+        "inf-8-numsys-043",
+        "inf-8-numsys-087",
+        "inf-8-numsys-077",
+        "inf-8-code-001",
+        "inf-8-numsys-088",
+        "inf-8-numsys-046",
+        "inf-8-numsys-039",
+        "inf-8-numsys-011",
+        "inf-8-numsys-080"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-numsys-087": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-8-numsys-083",
+        "inf-8-numsys-005",
+        "inf-8-numsys-007",
+        "inf-8-numsys-049",
+        "inf-8-numsys-068",
+        "inf-8-numsys-035",
+        "inf-8-code-002",
+        "inf-8-numsys-031",
+        "inf-8-numsys-025",
+        "inf-8-numsys-066",
+        "inf-8-numsys-086",
+        "inf-8-numsys-026",
+        "inf-8-numsys-090",
+        "inf-8-numsys-021",
+        "inf-8-numsys-080",
+        "inf-8-numsys-032",
+        "inf-8-numsys-088",
+        "inf-8-numsys-047",
+        "inf-8-numsys-073",
+        "inf-8-numsys-034"
+      ],
+      "orders": {
+        "inf-8-numsys-005": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 30
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-8-numsys-061",
+        "inf-8-numsys-091",
+        "inf-8-numsys-049",
+        "inf-8-numsys-025",
+        "inf-8-numsys-084",
+        "inf-8-numsys-074",
+        "inf-8-numsys-066",
+        "inf-8-numsys-051",
+        "inf-8-numsys-014",
+        "inf-8-numsys-063",
+        "inf-8-numsys-082",
+        "inf-8-numsys-048",
+        "inf-8-numsys-067",
+        "inf-8-numsys-031",
+        "inf-8-numsys-089",
+        "inf-8-numsys-011",
+        "inf-8-numsys-075",
+        "inf-8-numsys-035",
+        "inf-8-numsys-039",
+        "inf-8-numsys-028"
+      ],
+      "orders": {
+        "inf-8-numsys-091": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-numsys-082": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-numsys-035": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-numsys-039": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 30
     },
     {
       "number": 30,
       "task_ids": [
-        "inf-8-numsys-080",
-        "inf-8-numsys-088",
-        "inf-8-numsys-091",
-        "inf-8-numsys-081",
-        "inf-8-code-002",
-        "inf-8-numsys-079",
-        "inf-8-numsys-075",
-        "inf-8-numsys-076",
+        "inf-8-numsys-031",
+        "inf-8-numsys-043",
+        "inf-8-numsys-078",
+        "inf-8-numsys-083",
+        "inf-8-numsys-067",
+        "inf-8-numsys-021",
+        "inf-8-numsys-038",
+        "inf-8-numsys-073",
         "inf-8-numsys-068",
-        "inf-8-numsys-035",
-        "inf-8-numsys-093",
-        "inf-8-numsys-047",
-        "inf-8-numsys-046",
+        "inf-8-numsys-040",
+        "inf-8-numsys-063",
+        "inf-8-code-001",
+        "inf-8-numsys-051",
         "inf-8-numsys-025",
-        "inf-8-numsys-069",
-        "inf-8-numsys-070",
-        "inf-8-numsys-059",
-        "inf-8-numsys-030",
-        "inf-8-numsys-005",
-        "inf-8-numsys-034"
+        "inf-8-numsys-074",
+        "inf-8-numsys-086",
+        "inf-8-numsys-090",
+        "inf-8-numsys-035",
+        "inf-8-numsys-039",
+        "inf-8-numsys-046"
       ],
       "orders": {
-        "inf-8-numsys-091": {
+        "inf-8-numsys-078": {
+          "right": [
+            "Наибольшее число в ней — 511₈",
+            "Наибольшее число в ней — 15₂",
+            "Наибольшее число в ней — 99999₁₀",
+            "Наибольшее число в ней — 255₁₆"
+          ]
+        },
+        "inf-8-numsys-038": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-numsys-040": {
           "options": [
             "A",
             "C",
@@ -2622,29 +2564,21 @@
         "inf-8-numsys-035": {
           "options": [
             "A",
-            "D",
+            "B",
             "C",
-            "B"
+            "D"
           ]
         },
-        "inf-8-numsys-059": {
+        "inf-8-numsys-039": {
           "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-numsys-005": {
-          "options": [
-            "B",
-            "D",
             "A",
-            "C"
+            "C",
+            "D",
+            "B"
           ]
         }
       },
-      "max_score": 38
+      "max_score": 30
     }
   ]
 }

@@ -23,11 +23,15 @@
         "inf-8-algo-002",
         "inf-8-algo-004",
         "inf-8-algo-005",
+        "inf-8-algo-013",
+        "inf-8-algo-014",
         "inf-8-algo-021",
         "inf-8-algo-006",
         "inf-8-algo-007",
+        "inf-8-algo-008",
         "inf-8-algo-019",
-        "inf-8-algo-020"
+        "inf-8-algo-020",
+        "inf-8-algo-022"
       ]
     },
     {
@@ -43,12 +47,13 @@
         "inf-8-code-008",
         "inf-8-code-018",
         "inf-8-algo-024",
+        "inf-8-algo-025",
         "inf-8-algo-063",
         "inf-8-algo-071",
+        "inf-8-algo-027",
         "inf-8-algo-028",
         "inf-8-algo-064",
-        "inf-8-algo-072",
-        "inf-8-code-019"
+        "inf-8-algo-072"
       ]
     },
     {
@@ -72,10 +77,8 @@
         "inf-8-algo-040",
         "inf-8-algo-041",
         "inf-8-algo-042",
-        "inf-8-algo-043",
         "inf-8-algo-044",
-        "inf-8-algo-045",
-        "inf-8-code-022"
+        "inf-8-algo-045"
       ]
     },
     {
@@ -87,7 +90,6 @@
         }
       ],
       "task_ids": [
-        "inf-8-code-009",
         "inf-8-code-010",
         "inf-8-algo-049",
         "inf-8-code-006",
@@ -96,8 +98,6 @@
         "inf-8-code-013",
         "inf-8-code-017",
         "inf-8-algo-048",
-        "inf-8-algo-056",
-        "inf-8-code-031",
         "inf-8-algo-046",
         "inf-8-code-023",
         "inf-8-algo-052",
@@ -211,6 +211,39 @@
       ]
     },
     {
+      "id": "inf-8-algo-013",
+      "lesson": "alg-01-performers",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Вычислитель (1 — вычти 1, 2 — умножь на 3) выполняет команду 2 над числом 1. Что получится? Запишите только число.",
+      "base": 10
+    },
+    {
+      "id": "inf-8-algo-014",
+      "lesson": "alg-01-performers",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Что нарисует Черепаха после «Повтори 2 [Вперёд 10 Направо 90]»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Угол из двух отрезков"
+        },
+        {
+          "id": "C",
+          "text": "Треугольник"
+        },
+        {
+          "id": "B",
+          "text": "Квадрат"
+        },
+        {
+          "id": "D",
+          "text": "Отрезок"
+        }
+      ]
+    },
+    {
       "id": "inf-8-algo-021",
       "lesson": "alg-01-performers",
       "type": "numeric_base",
@@ -263,6 +296,14 @@
       ]
     },
     {
+      "id": "inf-8-algo-008",
+      "lesson": "alg-02-notation",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "Было x = 5. Выполнили «x := x + 1». Чему теперь равен x? Запишите только число.",
+      "base": 10
+    },
+    {
       "id": "inf-8-algo-019",
       "lesson": "alg-02-notation",
       "type": "numeric_base",
@@ -294,6 +335,14 @@
           "text": "Меню столовой"
         }
       ]
+    },
+    {
+      "id": "inf-8-algo-022",
+      "lesson": "alg-02-notation",
+      "type": "numeric_base",
+      "points": 3,
+      "prompt": "Было x = 4, y = 9. Выполнили по порядку: x := x + y; y := x − y; x := y · 2. Чему равен x? Запишите только число.",
+      "base": 10
     },
     {
       "id": "inf-8-code-007",
@@ -345,6 +394,14 @@
       ]
     },
     {
+      "id": "inf-8-algo-025",
+      "lesson": "py-05-data",
+      "type": "numeric_base",
+      "points": 2,
+      "prompt": "В программе a = int(' 12 ') + int('3'). Чему равно a? Запишите только число.",
+      "base": 10
+    },
+    {
       "id": "inf-8-algo-063",
       "lesson": "py-05-data",
       "type": "single_choice",
@@ -378,6 +435,14 @@
       "template": "marks = [4, 5, 5, 3, 5, 4, 5]\n# найди количество пятёрок в списке\nn = ...\nprint(f\"Пятёрок: {n} из {len(marks)}\")"
     },
     {
+      "id": "inf-8-algo-027",
+      "lesson": "py-06-linear",
+      "type": "numeric_base",
+      "points": 1,
+      "prompt": "Чему равен остаток от деления 17 на 5 (операция %)? Запишите только число.",
+      "base": 10
+    },
+    {
       "id": "inf-8-algo-028",
       "lesson": "py-06-linear",
       "type": "numeric_base",
@@ -400,14 +465,6 @@
       "points": 1,
       "prompt": "В программе a = 3 и b = 7. Требуется поменять их значения местами, не заводя третьей переменной: сначала выполнить a = a + b, затем b = a - b, затем a = a - b. Выполните команды по порядку и выведите a и b через пробел.",
       "template": "a = 3\nb = 7\n# поменяй a и b местами, не заводя третью переменную\na = ...\nb = ...\na = ...\nprint(a, b)"
-    },
-    {
-      "id": "inf-8-code-019",
-      "lesson": "py-06-linear",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Дан прямоугольник со сторонами 12 и 5. Выведи сначала площадь, затем периметр — каждое число с новой строки.",
-      "template": "# Прямоугольник 12 × 5\na, b = 12, 5\ns = a * b\np = ...\nprint(s)\nprint(...)"
     },
     {
       "id": "inf-8-algo-009",
@@ -625,31 +682,6 @@
       "base": 10
     },
     {
-      "id": "inf-8-algo-043",
-      "lesson": "alg-10-pr-branching",
-      "type": "single_choice",
-      "points": 2,
-      "prompt": "Что выведет программа for i in range(3): print(i * 2)? (каждое число — с новой строки)",
-      "options": [
-        {
-          "id": "B",
-          "text": "1 3 5"
-        },
-        {
-          "id": "C",
-          "text": "0 2 4 6"
-        },
-        {
-          "id": "D",
-          "text": "2 4 6"
-        },
-        {
-          "id": "A",
-          "text": "0 2 4"
-        }
-      ]
-    },
-    {
       "id": "inf-8-algo-044",
       "lesson": "alg-11-design",
       "type": "single_choice",
@@ -681,22 +713,6 @@
       "points": 2,
       "prompt": "Программа перебирает числа от 1 до 10 и считает те, что делятся на 2 без остатка. Что она выведет? Запишите только число.",
       "base": 10
-    },
-    {
-      "id": "inf-8-code-022",
-      "lesson": "alg-11-design",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Посчитай, сколько чисел от 1 до 100 не делится на 7, и выведи результат.",
-      "template": "# Перебор чисел и проверка делимости\nn = 100\nk = 0\nfor i in range(1, n + 1):\n    if i % 7 ...:\n        k = k + 1\nprint(k)"
-    },
-    {
-      "id": "inf-8-code-009",
-      "lesson": "py-02-branching",
-      "type": "code_run",
-      "points": 2,
-      "prompt": "Найди наибольшее из чисел 3, 7, 5 двумя неполными if (без max) и выведи его.",
-      "template": "# Допиши код: максимум из 3, 7, 5\na, b, c = 3, 7, 5\ny = a\n..."
     },
     {
       "id": "inf-8-code-010",
@@ -806,22 +822,6 @@
           "text": "Ошибка выполнения"
         }
       ]
-    },
-    {
-      "id": "inf-8-algo-056",
-      "lesson": "py-08-strings-2",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Какой индекс вернёт выражение 'информатика'.find('мат')? Запишите только число.",
-      "base": 10
-    },
-    {
-      "id": "inf-8-code-031",
-      "lesson": "py-08-strings-2",
-      "type": "code_run",
-      "points": 3,
-      "prompt": "Разверни строку 'Python' срезом s[::-1] и выведи разворот и его длину одной строкой через пробел.",
-      "template": "# Срез с шагом −1 читает строку с конца\ns = 'Python'\nb = s[::-1]\nprint(b, len(...))"
     },
     {
       "id": "inf-8-algo-046",
@@ -974,113 +974,153 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-8-code-009",
-        "inf-8-algo-059",
-        "inf-8-algo-028",
-        "inf-8-algo-073",
-        "inf-8-algo-065",
-        "inf-8-algo-019",
-        "inf-8-algo-021",
-        "inf-8-algo-033",
-        "inf-8-code-022",
-        "inf-8-algo-048",
-        "inf-8-algo-043",
-        "inf-8-algo-007",
-        "inf-8-code-019",
-        "inf-8-code-023",
-        "inf-8-algo-060",
         "inf-8-algo-054",
-        "inf-8-code-008",
-        "inf-8-algo-072",
+        "inf-8-algo-014",
+        "inf-8-algo-032",
+        "inf-8-algo-041",
+        "inf-8-code-018",
+        "inf-8-algo-040",
         "inf-8-algo-030",
-        "inf-8-code-013"
+        "inf-8-code-023",
+        "inf-8-algo-063",
+        "inf-8-algo-060",
+        "inf-8-algo-073",
+        "inf-8-code-010",
+        "inf-8-code-008",
+        "inf-8-algo-020",
+        "inf-8-algo-021",
+        "inf-8-algo-024",
+        "inf-8-algo-059",
+        "inf-8-algo-025",
+        "inf-8-algo-009",
+        "inf-8-algo-018"
       ],
       "orders": {
-        "inf-8-algo-033": {
+        "inf-8-algo-014": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-005": {
           "options": [
             "A",
-            "C",
+            "D",
             "B",
-            "D"
+            "C"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
           ]
         },
         "inf-8-algo-048": {
           "options": [
             "B",
-            "D",
             "A",
+            "D",
             "C"
           ]
         },
-        "inf-8-algo-043": {
+        "inf-8-algo-063": {
           "options": [
+            "B",
             "A",
             "D",
-            "B",
             "C"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
           ]
         },
         "inf-8-algo-060": {
           "options": [
-            "B",
             "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "C",
+            "B",
             "A",
             "D"
           ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "6",
+            "True",
+            "'P'",
+            "'yth'"
+          ]
         }
       },
-      "max_score": 37
+      "max_score": 35
     },
     {
       "number": 2,
       "task_ids": [
-        "inf-8-algo-005",
+        "inf-8-code-006",
+        "inf-8-algo-029",
         "inf-8-algo-072",
-        "inf-8-algo-043",
-        "inf-8-code-019",
-        "inf-8-algo-056",
-        "inf-8-algo-069",
-        "inf-8-algo-020",
-        "inf-8-algo-009",
+        "inf-8-algo-063",
+        "inf-8-algo-041",
         "inf-8-algo-059",
-        "inf-8-algo-021",
-        "inf-8-code-031",
+        "inf-8-algo-019",
+        "inf-8-code-017",
         "inf-8-algo-067",
-        "inf-8-algo-032",
-        "inf-8-algo-064",
-        "inf-8-algo-040",
-        "inf-8-algo-049",
-        "inf-8-algo-024",
+        "inf-8-algo-001",
+        "inf-8-algo-028",
+        "inf-8-algo-053",
+        "inf-8-algo-037",
+        "inf-8-algo-060",
+        "inf-8-algo-002",
         "inf-8-algo-018",
-        "inf-8-algo-054",
-        "inf-8-algo-041"
+        "inf-8-algo-042",
+        "inf-8-algo-010",
+        "inf-8-code-007",
+        "inf-8-algo-021"
       ],
       "orders": {
-        "inf-8-algo-005": {
+        "inf-8-algo-029": {
           "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "A",
-            "B",
             "C",
+            "B",
+            "A",
             "D"
           ]
         },
-        "inf-8-algo-020": {
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-041": {
           "options": [
             "C",
             "A",
@@ -1088,27 +1128,35 @@
             "B"
           ]
         },
-        "inf-8-algo-009": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-049": {
+        "inf-8-algo-001": {
           "options": [
             "D",
-            "C",
             "B",
-            "A"
-          ]
-        },
-        "inf-8-algo-024": {
-          "options": [
-            "B",
-            "D",
             "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "A",
+            "D",
+            "B",
             "C"
           ]
         },
@@ -1120,43 +1168,91 @@
             "'yth'"
           ]
         },
-        "inf-8-algo-041": {
+        "inf-8-algo-010": {
           "options": [
-            "C",
+            "D",
             "B",
             "A",
-            "D"
+            "C"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
       "number": 3,
       "task_ids": [
-        "inf-8-algo-019",
-        "inf-8-algo-041",
-        "inf-8-algo-072",
-        "inf-8-code-018",
-        "inf-8-code-031",
-        "inf-8-code-009",
-        "inf-8-algo-028",
-        "inf-8-algo-021",
-        "inf-8-algo-071",
-        "inf-8-code-011",
-        "inf-8-algo-040",
-        "inf-8-code-022",
-        "inf-8-algo-049",
-        "inf-8-algo-052",
         "inf-8-algo-059",
-        "inf-8-algo-030",
-        "inf-8-algo-065",
-        "inf-8-algo-037",
-        "inf-8-algo-006",
-        "inf-8-algo-057"
+        "inf-8-algo-045",
+        "inf-8-algo-041",
+        "inf-8-algo-057",
+        "inf-8-algo-020",
+        "inf-8-algo-029",
+        "inf-8-algo-001",
+        "inf-8-algo-064",
+        "inf-8-code-011",
+        "inf-8-algo-022",
+        "inf-8-algo-072",
+        "inf-8-algo-048",
+        "inf-8-algo-005",
+        "inf-8-algo-058",
+        "inf-8-algo-050",
+        "inf-8-algo-040",
+        "inf-8-algo-025",
+        "inf-8-algo-049",
+        "inf-8-code-008",
+        "inf-8-algo-042"
       ],
       "orders": {
         "inf-8-algo-041": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-005": {
           "options": [
             "D",
             "C",
@@ -1166,342 +1262,1598 @@
         },
         "inf-8-algo-049": {
           "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 4,
+      "task_ids": [
+        "inf-8-algo-037",
+        "inf-8-algo-013",
+        "inf-8-algo-033",
+        "inf-8-algo-064",
+        "inf-8-algo-019",
+        "inf-8-algo-048",
+        "inf-8-algo-012",
+        "inf-8-algo-050",
+        "inf-8-algo-022",
+        "inf-8-algo-071",
+        "inf-8-algo-049",
+        "inf-8-algo-057",
+        "inf-8-algo-045",
+        "inf-8-code-006",
+        "inf-8-algo-058",
+        "inf-8-algo-059",
+        "inf-8-algo-024",
+        "inf-8-algo-028",
+        "inf-8-algo-001",
+        "inf-8-algo-041"
+      ],
+      "orders": {
+        "inf-8-algo-037": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 5,
+      "task_ids": [
+        "inf-8-algo-009",
+        "inf-8-algo-070",
+        "inf-8-algo-059",
+        "inf-8-algo-064",
+        "inf-8-algo-019",
+        "inf-8-algo-021",
+        "inf-8-code-017",
+        "inf-8-code-011",
+        "inf-8-algo-018",
+        "inf-8-algo-045",
+        "inf-8-algo-063",
+        "inf-8-code-007",
+        "inf-8-algo-002",
+        "inf-8-algo-013",
+        "inf-8-algo-050",
+        "inf-8-algo-065",
+        "inf-8-algo-027",
+        "inf-8-algo-073",
+        "inf-8-algo-033",
+        "inf-8-algo-030"
+      ],
+      "orders": {
+        "inf-8-algo-009": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "'yth'",
+            "True",
+            "'P'",
+            "6"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 6,
+      "task_ids": [
+        "inf-8-code-011",
+        "inf-8-algo-027",
+        "inf-8-algo-012",
+        "inf-8-algo-071",
+        "inf-8-algo-030",
+        "inf-8-algo-037",
+        "inf-8-algo-028",
+        "inf-8-algo-041",
+        "inf-8-algo-018",
+        "inf-8-algo-002",
+        "inf-8-code-017",
+        "inf-8-algo-020",
+        "inf-8-algo-033",
+        "inf-8-algo-059",
+        "inf-8-algo-046",
+        "inf-8-algo-021",
+        "inf-8-algo-019",
+        "inf-8-algo-025",
+        "inf-8-algo-070",
+        "inf-8-algo-058"
+      ],
+      "orders": {
+        "inf-8-algo-012": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "'P'",
+            "'yth'",
+            "6",
+            "True"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
             "A",
             "C",
             "B",
             "D"
           ]
         },
-        "inf-8-algo-037": {
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-8-algo-063",
+        "inf-8-algo-041",
+        "inf-8-algo-020",
+        "inf-8-code-013",
+        "inf-8-algo-064",
+        "inf-8-algo-012",
+        "inf-8-algo-010",
+        "inf-8-algo-054",
+        "inf-8-algo-024",
+        "inf-8-algo-067",
+        "inf-8-algo-007",
+        "inf-8-algo-040",
+        "inf-8-algo-070",
+        "inf-8-algo-004",
+        "inf-8-algo-044",
+        "inf-8-algo-072",
+        "inf-8-algo-050",
+        "inf-8-algo-021",
+        "inf-8-algo-018",
+        "inf-8-algo-059"
+      ],
+      "orders": {
+        "inf-8-algo-063": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "'yth'",
+            "True",
+            "6",
+            "'P'"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 8,
+      "task_ids": [
+        "inf-8-algo-024",
+        "inf-8-algo-045",
+        "inf-8-algo-073",
+        "inf-8-algo-033",
+        "inf-8-algo-002",
+        "inf-8-algo-021",
+        "inf-8-algo-058",
+        "inf-8-algo-069",
+        "inf-8-algo-005",
+        "inf-8-algo-049",
+        "inf-8-algo-052",
+        "inf-8-algo-040",
+        "inf-8-code-011",
+        "inf-8-code-010",
+        "inf-8-algo-028",
+        "inf-8-algo-059",
+        "inf-8-algo-025",
+        "inf-8-algo-020",
+        "inf-8-code-008",
+        "inf-8-algo-030"
+      ],
+      "orders": {
+        "inf-8-algo-024": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 9,
+      "task_ids": [
+        "inf-8-algo-050",
+        "inf-8-algo-009",
+        "inf-8-algo-025",
+        "inf-8-algo-059",
+        "inf-8-algo-072",
+        "inf-8-algo-014",
+        "inf-8-algo-069",
+        "inf-8-algo-041",
+        "inf-8-algo-067",
+        "inf-8-algo-064",
+        "inf-8-algo-030",
+        "inf-8-code-010",
+        "inf-8-algo-040",
+        "inf-8-algo-008",
+        "inf-8-algo-007",
+        "inf-8-algo-071",
+        "inf-8-algo-012",
+        "inf-8-algo-021",
+        "inf-8-algo-054",
+        "inf-8-algo-018"
+      ],
+      "orders": {
+        "inf-8-algo-009": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "A",
+            "C",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "6",
+            "'P'",
+            "'yth'",
+            "True"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 10,
+      "task_ids": [
+        "inf-8-algo-025",
+        "inf-8-algo-057",
+        "inf-8-algo-020",
+        "inf-8-code-010",
+        "inf-8-algo-059",
+        "inf-8-algo-013",
+        "inf-8-algo-063",
+        "inf-8-algo-009",
+        "inf-8-algo-010",
+        "inf-8-algo-005",
+        "inf-8-algo-050",
+        "inf-8-algo-071",
+        "inf-8-algo-024",
+        "inf-8-algo-041",
+        "inf-8-algo-058",
+        "inf-8-algo-021",
+        "inf-8-algo-040",
+        "inf-8-algo-033",
+        "inf-8-code-017",
+        "inf-8-code-011"
+      ],
+      "orders": {
+        "inf-8-algo-057": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "B",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-005": {
           "options": [
             "B",
             "A",
             "C",
             "D"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-033": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 11,
+      "task_ids": [
+        "inf-8-algo-071",
+        "inf-8-algo-045",
+        "inf-8-algo-029",
+        "inf-8-algo-048",
+        "inf-8-algo-006",
+        "inf-8-algo-042",
+        "inf-8-algo-060",
+        "inf-8-algo-028",
+        "inf-8-algo-025",
+        "inf-8-code-007",
+        "inf-8-algo-008",
+        "inf-8-algo-010",
+        "inf-8-algo-059",
+        "inf-8-code-017",
+        "inf-8-algo-020",
+        "inf-8-code-006",
+        "inf-8-algo-067",
+        "inf-8-algo-073",
+        "inf-8-algo-022",
+        "inf-8-code-010"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "действие",
+            "условие",
+            "начало и конец",
+            "ввод и вывод"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "C",
+            "A",
+            "D",
+            "B"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 12,
+      "task_ids": [
+        "inf-8-algo-050",
+        "inf-8-algo-044",
+        "inf-8-algo-065",
+        "inf-8-algo-004",
+        "inf-8-algo-071",
+        "inf-8-algo-030",
+        "inf-8-algo-053",
+        "inf-8-algo-001",
+        "inf-8-algo-022",
+        "inf-8-algo-064",
+        "inf-8-code-008",
+        "inf-8-algo-059",
+        "inf-8-code-011",
+        "inf-8-algo-045",
+        "inf-8-algo-014",
+        "inf-8-algo-029",
+        "inf-8-algo-057",
+        "inf-8-algo-073",
+        "inf-8-algo-052",
+        "inf-8-algo-063"
+      ],
+      "orders": {
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 13,
+      "task_ids": [
+        "inf-8-algo-030",
+        "inf-8-algo-014",
+        "inf-8-algo-059",
+        "inf-8-code-017",
+        "inf-8-algo-067",
+        "inf-8-algo-008",
+        "inf-8-algo-044",
+        "inf-8-algo-010",
+        "inf-8-code-010",
+        "inf-8-algo-007",
+        "inf-8-algo-028",
+        "inf-8-algo-072",
+        "inf-8-algo-022",
+        "inf-8-algo-025",
+        "inf-8-algo-052",
+        "inf-8-code-006",
+        "inf-8-algo-071",
+        "inf-8-algo-060",
+        "inf-8-algo-073",
+        "inf-8-algo-029"
+      ],
+      "orders": {
+        "inf-8-algo-014": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-044": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 14,
+      "task_ids": [
+        "inf-8-algo-052",
+        "inf-8-algo-059",
+        "inf-8-algo-057",
+        "inf-8-algo-042",
+        "inf-8-algo-002",
+        "inf-8-algo-001",
+        "inf-8-algo-022",
+        "inf-8-algo-027",
+        "inf-8-code-007",
+        "inf-8-algo-045",
+        "inf-8-algo-008",
+        "inf-8-algo-029",
+        "inf-8-algo-049",
+        "inf-8-algo-018",
+        "inf-8-algo-009",
+        "inf-8-algo-054",
+        "inf-8-algo-063",
+        "inf-8-algo-058",
+        "inf-8-algo-064",
+        "inf-8-algo-030"
+      ],
+      "orders": {
+        "inf-8-algo-057": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "'P'",
+            "6",
+            "'yth'"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-8-algo-022",
+        "inf-8-algo-050",
+        "inf-8-algo-063",
+        "inf-8-algo-059",
+        "inf-8-algo-020",
+        "inf-8-algo-049",
+        "inf-8-algo-041",
+        "inf-8-code-011",
+        "inf-8-algo-010",
+        "inf-8-algo-070",
+        "inf-8-algo-042",
+        "inf-8-algo-028",
+        "inf-8-algo-073",
+        "inf-8-algo-019",
+        "inf-8-algo-065",
+        "inf-8-algo-037",
+        "inf-8-algo-024",
+        "inf-8-algo-002",
+        "inf-8-algo-048",
+        "inf-8-code-007"
+      ],
+      "orders": {
+        "inf-8-algo-063": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-8-algo-073",
+        "inf-8-algo-010",
+        "inf-8-algo-045",
+        "inf-8-algo-019",
+        "inf-8-algo-064",
+        "inf-8-code-007",
+        "inf-8-algo-013",
+        "inf-8-algo-024",
+        "inf-8-algo-050",
+        "inf-8-algo-040",
+        "inf-8-algo-060",
+        "inf-8-code-013",
+        "inf-8-algo-014",
+        "inf-8-algo-021",
+        "inf-8-algo-059",
+        "inf-8-algo-067",
+        "inf-8-algo-009",
+        "inf-8-algo-028",
+        "inf-8-algo-018",
+        "inf-8-code-011"
+      ],
+      "orders": {
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "B",
+            "C",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "'P'",
+            "'yth'",
+            "6"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-8-algo-037",
+        "inf-8-algo-029",
+        "inf-8-algo-001",
+        "inf-8-algo-019",
+        "inf-8-algo-028",
+        "inf-8-algo-012",
+        "inf-8-algo-060",
+        "inf-8-algo-024",
+        "inf-8-algo-021",
+        "inf-8-algo-013",
+        "inf-8-algo-010",
+        "inf-8-algo-025",
+        "inf-8-algo-053",
+        "inf-8-algo-058",
+        "inf-8-algo-030",
+        "inf-8-algo-072",
+        "inf-8-algo-054",
+        "inf-8-algo-050",
+        "inf-8-algo-059",
+        "inf-8-algo-052"
+      ],
+      "orders": {
+        "inf-8-algo-037": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-001": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 18,
+      "task_ids": [
+        "inf-8-algo-072",
+        "inf-8-algo-006",
+        "inf-8-algo-046",
+        "inf-8-algo-048",
+        "inf-8-algo-071",
+        "inf-8-algo-022",
+        "inf-8-algo-065",
+        "inf-8-algo-008",
+        "inf-8-algo-059",
+        "inf-8-algo-040",
+        "inf-8-algo-007",
+        "inf-8-algo-050",
+        "inf-8-algo-028",
+        "inf-8-algo-010",
+        "inf-8-algo-025",
+        "inf-8-algo-070",
+        "inf-8-algo-054",
+        "inf-8-algo-042",
+        "inf-8-algo-041",
+        "inf-8-algo-037"
+      ],
+      "orders": {
+        "inf-8-algo-006": {
+          "right": [
+            "условие",
+            "действие",
+            "начало и конец",
+            "ввод и вывод"
+          ]
+        },
+        "inf-8-algo-048": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 19,
+      "task_ids": [
+        "inf-8-algo-029",
+        "inf-8-algo-073",
+        "inf-8-algo-024",
+        "inf-8-algo-010",
+        "inf-8-code-010",
+        "inf-8-algo-022",
+        "inf-8-algo-058",
+        "inf-8-algo-007",
+        "inf-8-algo-030",
+        "inf-8-algo-019",
+        "inf-8-algo-049",
+        "inf-8-algo-028",
+        "inf-8-algo-009",
+        "inf-8-algo-063",
+        "inf-8-algo-057",
+        "inf-8-algo-053",
+        "inf-8-algo-059",
+        "inf-8-algo-014",
+        "inf-8-code-008",
+        "inf-8-code-011"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-049": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-063": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "C",
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "C",
+            "D",
+            "A",
+            "B"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-8-algo-067",
+        "inf-8-algo-025",
+        "inf-8-algo-030",
+        "inf-8-algo-072",
+        "inf-8-algo-021",
+        "inf-8-algo-029",
+        "inf-8-algo-006",
+        "inf-8-algo-014",
+        "inf-8-algo-042",
+        "inf-8-algo-053",
+        "inf-8-algo-059",
+        "inf-8-algo-027",
+        "inf-8-algo-018",
+        "inf-8-algo-069",
+        "inf-8-algo-054",
+        "inf-8-algo-005",
+        "inf-8-algo-028",
+        "inf-8-algo-041",
+        "inf-8-code-013",
+        "inf-8-algo-073"
+      ],
+      "orders": {
+        "inf-8-algo-029": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
           ]
         },
         "inf-8-algo-006": {
           "right": [
             "ввод и вывод",
-            "начало и конец",
+            "условие",
             "действие",
-            "условие"
+            "начало и конец"
           ]
         },
-        "inf-8-algo-057": {
+        "inf-8-algo-014": {
           "options": [
             "B",
-            "A",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 4,
-      "task_ids": [
-        "inf-8-code-008",
-        "inf-8-algo-073",
-        "inf-8-code-031",
-        "inf-8-algo-049",
-        "inf-8-algo-059",
-        "inf-8-algo-058",
-        "inf-8-algo-029",
-        "inf-8-algo-028",
-        "inf-8-algo-057",
-        "inf-8-algo-030",
-        "inf-8-algo-072",
-        "inf-8-algo-021",
-        "inf-8-algo-005",
-        "inf-8-code-010",
-        "inf-8-code-011",
-        "inf-8-algo-043",
-        "inf-8-algo-056",
-        "inf-8-algo-032",
-        "inf-8-algo-006",
-        "inf-8-code-018"
-      ],
-      "orders": {
-        "inf-8-algo-049": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-029": {
-          "options": [
-            "A",
             "D",
-            "C",
-            "B"
+            "A",
+            "C"
           ]
         },
-        "inf-8-algo-057": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "6",
+            "'P'",
+            "'yth'"
           ]
         },
         "inf-8-algo-005": {
           "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-006": {
-          "right": [
-            "начало и конец",
-            "условие",
-            "действие",
-            "ввод и вывод"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 5,
-      "task_ids": [
-        "inf-8-algo-059",
-        "inf-8-algo-030",
-        "inf-8-algo-045",
-        "inf-8-algo-020",
-        "inf-8-algo-069",
-        "inf-8-algo-049",
-        "inf-8-algo-040",
-        "inf-8-algo-021",
-        "inf-8-code-007",
-        "inf-8-algo-019",
-        "inf-8-code-023",
-        "inf-8-code-019",
-        "inf-8-algo-032",
-        "inf-8-algo-029",
-        "inf-8-code-008",
-        "inf-8-algo-050",
-        "inf-8-code-009",
-        "inf-8-code-011",
-        "inf-8-algo-063",
-        "inf-8-algo-067"
-      ],
-      "orders": {
-        "inf-8-algo-020": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-029": {
-          "options": [
             "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 6,
-      "task_ids": [
-        "inf-8-algo-054",
-        "inf-8-algo-021",
-        "inf-8-algo-019",
-        "inf-8-code-007",
-        "inf-8-code-006",
-        "inf-8-algo-044",
-        "inf-8-algo-028",
-        "inf-8-algo-059",
-        "inf-8-code-023",
-        "inf-8-code-022",
-        "inf-8-algo-070",
-        "inf-8-algo-048",
-        "inf-8-algo-010",
-        "inf-8-algo-033",
-        "inf-8-code-019",
-        "inf-8-algo-007",
-        "inf-8-algo-058",
-        "inf-8-algo-049",
-        "inf-8-code-008",
-        "inf-8-algo-030"
-      ],
-      "orders": {
-        "inf-8-algo-044": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-algo-048": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-010": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 7,
-      "task_ids": [
-        "inf-8-algo-070",
-        "inf-8-code-009",
-        "inf-8-algo-043",
-        "inf-8-algo-056",
-        "inf-8-algo-033",
-        "inf-8-algo-042",
-        "inf-8-algo-071",
-        "inf-8-algo-065",
-        "inf-8-code-023",
-        "inf-8-algo-052",
-        "inf-8-algo-072",
-        "inf-8-code-018",
-        "inf-8-algo-050",
-        "inf-8-algo-059",
-        "inf-8-algo-021",
-        "inf-8-code-022",
-        "inf-8-algo-019",
-        "inf-8-algo-007",
-        "inf-8-algo-028",
-        "inf-8-algo-030"
-      ],
-      "orders": {
-        "inf-8-algo-043": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 8,
-      "task_ids": [
-        "inf-8-algo-004",
-        "inf-8-algo-059",
-        "inf-8-algo-045",
-        "inf-8-code-013",
-        "inf-8-code-007",
-        "inf-8-algo-021",
-        "inf-8-algo-029",
-        "inf-8-code-009",
-        "inf-8-code-006",
-        "inf-8-code-019",
-        "inf-8-algo-041",
-        "inf-8-algo-018",
-        "inf-8-algo-033",
-        "inf-8-code-022",
-        "inf-8-algo-058",
-        "inf-8-code-023",
-        "inf-8-algo-024",
-        "inf-8-algo-069",
-        "inf-8-algo-001",
-        "inf-8-algo-064"
-      ],
-      "orders": {
-        "inf-8-algo-029": {
-          "options": [
-            "D",
-            "B",
             "A",
             "C"
           ]
         },
         "inf-8-algo-041": {
           "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-8-algo-037",
+        "inf-8-algo-024",
+        "inf-8-algo-064",
+        "inf-8-algo-042",
+        "inf-8-algo-046",
+        "inf-8-algo-012",
+        "inf-8-algo-022",
+        "inf-8-algo-007",
+        "inf-8-code-008",
+        "inf-8-algo-028",
+        "inf-8-algo-065",
+        "inf-8-code-017",
+        "inf-8-algo-059",
+        "inf-8-algo-010",
+        "inf-8-algo-057",
+        "inf-8-code-006",
+        "inf-8-algo-014",
+        "inf-8-algo-030",
+        "inf-8-algo-008",
+        "inf-8-algo-052"
+      ],
+      "orders": {
+        "inf-8-algo-037": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-8-algo-012": {
+          "options": [
             "C",
             "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "C",
             "D",
+            "A",
             "B"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 22,
+      "task_ids": [
+        "inf-8-algo-060",
+        "inf-8-code-017",
+        "inf-8-algo-037",
+        "inf-8-algo-002",
+        "inf-8-algo-024",
+        "inf-8-algo-041",
+        "inf-8-algo-021",
+        "inf-8-algo-046",
+        "inf-8-algo-058",
+        "inf-8-algo-018",
+        "inf-8-code-007",
+        "inf-8-algo-042",
+        "inf-8-algo-033",
+        "inf-8-algo-001",
+        "inf-8-algo-045",
+        "inf-8-algo-008",
+        "inf-8-algo-025",
+        "inf-8-algo-059",
+        "inf-8-algo-054",
+        "inf-8-algo-028"
+      ],
+      "orders": {
+        "inf-8-algo-060": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-002": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-024": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
           ]
         },
         "inf-8-algo-018": {
@@ -1514,96 +2866,48 @@
         },
         "inf-8-algo-033": {
           "options": [
+            "A",
             "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-024": {
-          "options": [
-            "A",
             "D",
-            "B",
-            "C"
+            "B"
           ]
         },
         "inf-8-algo-001": {
           "options": [
-            "C",
-            "D",
             "A",
-            "B"
+            "B",
+            "C",
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 9,
+      "number": 23,
       "task_ids": [
-        "inf-8-algo-024",
-        "inf-8-algo-063",
-        "inf-8-algo-037",
-        "inf-8-algo-002",
-        "inf-8-algo-004",
-        "inf-8-algo-021",
-        "inf-8-algo-059",
-        "inf-8-algo-032",
-        "inf-8-algo-045",
-        "inf-8-code-009",
-        "inf-8-code-019",
-        "inf-8-algo-043",
-        "inf-8-algo-058",
-        "inf-8-algo-053",
-        "inf-8-algo-056",
-        "inf-8-code-023",
-        "inf-8-algo-070",
-        "inf-8-code-017",
         "inf-8-algo-029",
-        "inf-8-code-007"
+        "inf-8-algo-012",
+        "inf-8-algo-063",
+        "inf-8-algo-052",
+        "inf-8-algo-071",
+        "inf-8-algo-058",
+        "inf-8-code-010",
+        "inf-8-algo-019",
+        "inf-8-code-006",
+        "inf-8-code-007",
+        "inf-8-algo-006",
+        "inf-8-algo-073",
+        "inf-8-algo-028",
+        "inf-8-algo-001",
+        "inf-8-algo-010",
+        "inf-8-algo-059",
+        "inf-8-algo-045",
+        "inf-8-algo-060",
+        "inf-8-algo-046",
+        "inf-8-algo-022"
       ],
       "orders": {
-        "inf-8-algo-024": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-037": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-002": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
         "inf-8-algo-029": {
           "options": [
             "A",
@@ -1611,36 +2915,8 @@
             "C",
             "D"
           ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 10,
-      "task_ids": [
-        "inf-8-algo-058",
-        "inf-8-algo-024",
-        "inf-8-algo-059",
-        "inf-8-algo-053",
-        "inf-8-algo-044",
-        "inf-8-algo-054",
-        "inf-8-code-007",
-        "inf-8-algo-041",
-        "inf-8-algo-018",
-        "inf-8-algo-042",
-        "inf-8-algo-045",
-        "inf-8-algo-006",
-        "inf-8-algo-064",
-        "inf-8-algo-070",
-        "inf-8-algo-021",
-        "inf-8-code-023",
-        "inf-8-algo-005",
-        "inf-8-code-011",
-        "inf-8-code-019",
-        "inf-8-code-022"
-      ],
-      "orders": {
-        "inf-8-algo-024": {
+        },
+        "inf-8-algo-012": {
           "options": [
             "C",
             "B",
@@ -1648,28 +2924,12 @@
             "D"
           ]
         },
-        "inf-8-algo-044": {
+        "inf-8-algo-063": {
           "options": [
             "B",
             "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "D",
             "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-018": {
-          "right": [
-            "True",
-            "'yth'",
-            "6",
-            "'P'"
+            "C"
           ]
         },
         "inf-8-algo-006": {
@@ -1680,1287 +2940,387 @@
             "ввод и вывод"
           ]
         },
-        "inf-8-algo-005": {
+        "inf-8-algo-001": {
           "options": [
+            "B",
             "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "C",
             "B",
             "A",
-            "C"
+            "D"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 11,
+      "number": 24,
       "task_ids": [
-        "inf-8-algo-050",
-        "inf-8-algo-059",
-        "inf-8-code-018",
-        "inf-8-code-022",
-        "inf-8-algo-045",
-        "inf-8-code-007",
-        "inf-8-code-011",
-        "inf-8-algo-019",
-        "inf-8-algo-063",
-        "inf-8-algo-021",
-        "inf-8-code-023",
-        "inf-8-algo-040",
-        "inf-8-algo-044",
-        "inf-8-code-017",
-        "inf-8-code-008",
-        "inf-8-algo-056",
-        "inf-8-algo-067",
-        "inf-8-algo-002",
+        "inf-8-algo-006",
+        "inf-8-algo-052",
+        "inf-8-algo-007",
         "inf-8-algo-057",
-        "inf-8-algo-041"
+        "inf-8-code-008",
+        "inf-8-algo-018",
+        "inf-8-algo-009",
+        "inf-8-algo-041",
+        "inf-8-algo-008",
+        "inf-8-algo-033",
+        "inf-8-algo-059",
+        "inf-8-algo-042",
+        "inf-8-algo-028",
+        "inf-8-algo-058",
+        "inf-8-code-006",
+        "inf-8-algo-064",
+        "inf-8-algo-021",
+        "inf-8-algo-024",
+        "inf-8-code-013",
+        "inf-8-algo-010"
       ],
       "orders": {
-        "inf-8-algo-063": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
+        "inf-8-algo-006": {
+          "right": [
+            "условие",
+            "ввод и вывод",
+            "начало и конец",
+            "действие"
           ]
         },
-        "inf-8-algo-044": {
+        "inf-8-algo-007": {
           "options": [
-            "B",
-            "D",
             "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-002": {
-          "options": [
-            "B",
             "C",
             "D",
-            "A"
+            "B"
           ]
         },
         "inf-8-algo-057": {
           "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 12,
-      "task_ids": [
-        "inf-8-algo-059",
-        "inf-8-algo-030",
-        "inf-8-code-011",
-        "inf-8-algo-065",
-        "inf-8-algo-073",
-        "inf-8-algo-004",
-        "inf-8-algo-033",
-        "inf-8-algo-060",
-        "inf-8-code-010",
-        "inf-8-code-018",
-        "inf-8-code-007",
-        "inf-8-algo-041",
-        "inf-8-algo-072",
-        "inf-8-code-006",
-        "inf-8-algo-021",
-        "inf-8-algo-064",
-        "inf-8-code-031",
-        "inf-8-algo-050",
-        "inf-8-algo-032",
-        "inf-8-algo-007"
-      ],
-      "orders": {
-        "inf-8-algo-033": {
-          "options": [
             "D",
             "B",
             "A",
             "C"
-          ]
-        },
-        "inf-8-algo-060": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 13,
-      "task_ids": [
-        "inf-8-algo-010",
-        "inf-8-code-022",
-        "inf-8-algo-044",
-        "inf-8-algo-001",
-        "inf-8-algo-067",
-        "inf-8-code-006",
-        "inf-8-algo-072",
-        "inf-8-algo-060",
-        "inf-8-algo-073",
-        "inf-8-code-007",
-        "inf-8-algo-059",
-        "inf-8-algo-030",
-        "inf-8-code-018",
-        "inf-8-algo-063",
-        "inf-8-code-023",
-        "inf-8-algo-046",
-        "inf-8-algo-054",
-        "inf-8-algo-005",
-        "inf-8-code-017",
-        "inf-8-algo-021"
-      ],
-      "orders": {
-        "inf-8-algo-010": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-001": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-060": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-005": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 14,
-      "task_ids": [
-        "inf-8-code-008",
-        "inf-8-code-022",
-        "inf-8-algo-029",
-        "inf-8-code-009",
-        "inf-8-code-023",
-        "inf-8-algo-030",
-        "inf-8-code-019",
-        "inf-8-algo-021",
-        "inf-8-algo-049",
-        "inf-8-algo-065",
-        "inf-8-algo-071",
-        "inf-8-algo-019",
-        "inf-8-algo-007",
-        "inf-8-algo-043",
-        "inf-8-algo-059",
-        "inf-8-code-011",
-        "inf-8-algo-040",
-        "inf-8-algo-052",
-        "inf-8-algo-069",
-        "inf-8-algo-063"
-      ],
-      "orders": {
-        "inf-8-algo-029": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 15,
-      "task_ids": [
-        "inf-8-code-007",
-        "inf-8-code-008",
-        "inf-8-algo-056",
-        "inf-8-algo-040",
-        "inf-8-algo-021",
-        "inf-8-algo-059",
-        "inf-8-code-019",
-        "inf-8-algo-005",
-        "inf-8-algo-049",
-        "inf-8-algo-018",
-        "inf-8-code-031",
-        "inf-8-algo-041",
-        "inf-8-algo-044",
-        "inf-8-code-022",
-        "inf-8-algo-054",
-        "inf-8-algo-070",
-        "inf-8-algo-001",
-        "inf-8-algo-045",
-        "inf-8-algo-028",
-        "inf-8-algo-065"
-      ],
-      "orders": {
-        "inf-8-algo-005": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
           ]
         },
         "inf-8-algo-018": {
           "right": [
+            "'P'",
             "True",
             "'yth'",
-            "'P'",
             "6"
           ]
         },
+        "inf-8-algo-009": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
         "inf-8-algo-041": {
           "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
             "C",
             "A",
             "B",
             "D"
           ]
         },
-        "inf-8-algo-001": {
+        "inf-8-algo-033": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-024": {
           "options": [
             "A",
-            "D",
             "B",
-            "C"
+            "C",
+            "D"
           ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-8-code-013",
-        "inf-8-code-006",
-        "inf-8-algo-019",
-        "inf-8-code-018",
-        "inf-8-algo-010",
-        "inf-8-algo-021",
-        "inf-8-algo-054",
-        "inf-8-code-022",
-        "inf-8-algo-059",
-        "inf-8-code-023",
-        "inf-8-algo-029",
-        "inf-8-algo-007",
-        "inf-8-algo-065",
-        "inf-8-algo-018",
-        "inf-8-algo-041",
-        "inf-8-algo-070",
-        "inf-8-algo-040",
-        "inf-8-algo-072",
-        "inf-8-algo-071",
-        "inf-8-algo-028"
-      ],
-      "orders": {
+        },
         "inf-8-algo-010": {
           "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-029": {
-          "options": [
-            "D",
-            "A",
             "C",
+            "D",
+            "A",
             "B"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-018": {
-          "right": [
-            "'P'",
-            "'yth'",
-            "6",
-            "True"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 17,
+      "number": 25,
       "task_ids": [
-        "inf-8-algo-065",
-        "inf-8-algo-021",
-        "inf-8-code-022",
+        "inf-8-algo-028",
+        "inf-8-algo-046",
+        "inf-8-algo-073",
+        "inf-8-algo-013",
         "inf-8-algo-019",
-        "inf-8-algo-043",
+        "inf-8-algo-048",
+        "inf-8-algo-050",
+        "inf-8-algo-037",
+        "inf-8-algo-025",
+        "inf-8-code-011",
+        "inf-8-algo-014",
+        "inf-8-algo-040",
+        "inf-8-algo-021",
+        "inf-8-algo-067",
+        "inf-8-algo-059",
         "inf-8-algo-045",
-        "inf-8-algo-009",
-        "inf-8-code-009",
-        "inf-8-algo-063",
-        "inf-8-algo-059",
-        "inf-8-algo-071",
-        "inf-8-algo-050",
-        "inf-8-algo-007",
-        "inf-8-code-023",
-        "inf-8-code-010",
-        "inf-8-code-019",
-        "inf-8-algo-033",
-        "inf-8-algo-070",
-        "inf-8-code-011",
-        "inf-8-code-007"
-      ],
-      "orders": {
-        "inf-8-algo-043": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-009": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 18,
-      "task_ids": [
-        "inf-8-algo-050",
-        "inf-8-algo-033",
-        "inf-8-algo-054",
-        "inf-8-algo-060",
-        "inf-8-algo-043",
-        "inf-8-algo-030",
-        "inf-8-algo-021",
-        "inf-8-algo-063",
-        "inf-8-algo-007",
-        "inf-8-code-006",
-        "inf-8-algo-065",
-        "inf-8-algo-024",
-        "inf-8-algo-059",
-        "inf-8-code-017",
-        "inf-8-algo-044",
-        "inf-8-algo-004",
         "inf-8-code-007",
-        "inf-8-code-031",
-        "inf-8-code-019",
-        "inf-8-algo-032"
+        "inf-8-algo-041",
+        "inf-8-code-008",
+        "inf-8-algo-069"
       ],
       "orders": {
-        "inf-8-algo-033": {
-          "options": [
-            "B",
-            "D",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-060": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "D",
-            "B",
-            "A",
-            "C"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-024": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 19,
-      "task_ids": [
-        "inf-8-algo-020",
-        "inf-8-code-023",
-        "inf-8-code-022",
-        "inf-8-code-009",
-        "inf-8-algo-024",
-        "inf-8-algo-030",
-        "inf-8-algo-004",
-        "inf-8-code-019",
-        "inf-8-algo-072",
-        "inf-8-algo-021",
-        "inf-8-algo-069",
-        "inf-8-algo-009",
-        "inf-8-algo-063",
-        "inf-8-algo-043",
-        "inf-8-code-011",
-        "inf-8-algo-049",
-        "inf-8-algo-033",
-        "inf-8-algo-059",
-        "inf-8-algo-065",
-        "inf-8-algo-048"
-      ],
-      "orders": {
-        "inf-8-algo-020": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-024": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-009": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        },
         "inf-8-algo-048": {
           "options": [
             "B",
+            "A",
             "C",
-            "D",
-            "A"
+            "D"
           ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 20,
-      "task_ids": [
-        "inf-8-code-006",
-        "inf-8-algo-070",
-        "inf-8-algo-020",
-        "inf-8-algo-058",
-        "inf-8-algo-050",
-        "inf-8-code-007",
-        "inf-8-algo-042",
-        "inf-8-algo-028",
-        "inf-8-algo-059",
-        "inf-8-algo-041",
-        "inf-8-code-031",
-        "inf-8-code-019",
-        "inf-8-code-022",
-        "inf-8-algo-010",
-        "inf-8-algo-021",
-        "inf-8-algo-072",
-        "inf-8-algo-049",
-        "inf-8-code-011",
-        "inf-8-algo-005",
-        "inf-8-algo-040"
-      ],
-      "orders": {
-        "inf-8-algo-020": {
+        },
+        "inf-8-algo-037": {
           "options": [
-            "C",
-            "D",
+            "A",
             "B",
-            "A"
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "A",
+            "D",
+            "C",
+            "B"
           ]
         },
         "inf-8-algo-041": {
           "options": [
             "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-010": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "A",
             "D",
             "C",
             "B"
-          ]
-        },
-        "inf-8-algo-005": {
-          "options": [
-            "D",
-            "C",
-            "B",
-            "A"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 21,
+      "number": 26,
       "task_ids": [
-        "inf-8-code-006",
-        "inf-8-code-019",
-        "inf-8-algo-057",
-        "inf-8-algo-030",
-        "inf-8-algo-050",
-        "inf-8-code-008",
-        "inf-8-algo-001",
+        "inf-8-algo-071",
+        "inf-8-algo-029",
         "inf-8-algo-064",
-        "inf-8-code-022",
-        "inf-8-code-010",
-        "inf-8-algo-005",
-        "inf-8-code-023",
-        "inf-8-algo-072",
-        "inf-8-algo-058",
-        "inf-8-algo-044",
-        "inf-8-algo-045",
-        "inf-8-code-011",
         "inf-8-algo-037",
-        "inf-8-algo-021",
-        "inf-8-algo-059"
+        "inf-8-algo-052",
+        "inf-8-algo-022",
+        "inf-8-algo-057",
+        "inf-8-code-006",
+        "inf-8-algo-004",
+        "inf-8-algo-058",
+        "inf-8-algo-050",
+        "inf-8-algo-006",
+        "inf-8-code-017",
+        "inf-8-algo-045",
+        "inf-8-algo-007",
+        "inf-8-algo-042",
+        "inf-8-algo-059",
+        "inf-8-algo-010",
+        "inf-8-algo-025",
+        "inf-8-algo-027"
       ],
       "orders": {
-        "inf-8-algo-057": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-001": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-005": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-044": {
+        "inf-8-algo-029": {
           "options": [
             "D",
-            "A",
             "C",
+            "A",
             "B"
           ]
         },
         "inf-8-algo-037": {
           "options": [
-            "B",
-            "A",
-            "C",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 22,
-      "task_ids": [
-        "inf-8-code-019",
-        "inf-8-code-011",
-        "inf-8-algo-007",
-        "inf-8-code-031",
-        "inf-8-algo-032",
-        "inf-8-algo-043",
-        "inf-8-code-007",
-        "inf-8-algo-049",
-        "inf-8-code-008",
-        "inf-8-algo-010",
-        "inf-8-algo-058",
-        "inf-8-algo-033",
-        "inf-8-algo-004",
-        "inf-8-algo-060",
-        "inf-8-algo-059",
-        "inf-8-code-009",
-        "inf-8-algo-021",
-        "inf-8-algo-028",
-        "inf-8-algo-053",
-        "inf-8-algo-012"
-      ],
-      "orders": {
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
             "D",
             "C",
             "B",
-            "A"
-          ]
-        },
-        "inf-8-algo-010": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        },
-        "inf-8-algo-060": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-012": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 23,
-      "task_ids": [
-        "inf-8-algo-020",
-        "inf-8-algo-010",
-        "inf-8-algo-021",
-        "inf-8-algo-054",
-        "inf-8-code-019",
-        "inf-8-algo-044",
-        "inf-8-code-031",
-        "inf-8-algo-059",
-        "inf-8-algo-005",
-        "inf-8-algo-070",
-        "inf-8-algo-046",
-        "inf-8-code-022",
-        "inf-8-algo-064",
-        "inf-8-algo-052",
-        "inf-8-algo-012",
-        "inf-8-algo-067",
-        "inf-8-algo-030",
-        "inf-8-algo-056",
-        "inf-8-code-008",
-        "inf-8-algo-071"
-      ],
-      "orders": {
-        "inf-8-algo-020": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
-        "inf-8-algo-010": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-005": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-012": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 24,
-      "task_ids": [
-        "inf-8-algo-030",
-        "inf-8-algo-029",
-        "inf-8-algo-072",
-        "inf-8-algo-028",
-        "inf-8-algo-059",
-        "inf-8-algo-007",
-        "inf-8-algo-041",
-        "inf-8-code-018",
-        "inf-8-algo-070",
-        "inf-8-algo-004",
-        "inf-8-algo-053",
-        "inf-8-algo-065",
-        "inf-8-algo-040",
-        "inf-8-code-007",
-        "inf-8-code-022",
-        "inf-8-algo-021",
-        "inf-8-code-023",
-        "inf-8-algo-054",
-        "inf-8-algo-049",
-        "inf-8-code-006"
-      ],
-      "orders": {
-        "inf-8-algo-029": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-007": {
-          "options": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "D",
-            "A",
-            "B",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-8-code-023",
-        "inf-8-algo-065",
-        "inf-8-algo-056",
-        "inf-8-algo-024",
-        "inf-8-algo-001",
-        "inf-8-algo-059",
-        "inf-8-algo-010",
-        "inf-8-code-018",
-        "inf-8-algo-021",
-        "inf-8-code-009",
-        "inf-8-code-022",
-        "inf-8-algo-018",
-        "inf-8-algo-044",
-        "inf-8-algo-019",
-        "inf-8-algo-049",
-        "inf-8-algo-033",
-        "inf-8-algo-069",
-        "inf-8-algo-063",
-        "inf-8-algo-043",
-        "inf-8-algo-072"
-      ],
-      "orders": {
-        "inf-8-algo-024": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-001": {
-          "options": [
-            "C",
-            "D",
-            "B",
-            "A"
-          ]
-        },
-        "inf-8-algo-010": {
-          "options": [
-            "C",
-            "A",
-            "D",
-            "B"
-          ]
-        },
-        "inf-8-algo-018": {
-          "right": [
-            "6",
-            "'P'",
-            "'yth'",
-            "True"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "D",
-            "C",
-            "A",
-            "B"
-          ]
-        },
-        "inf-8-algo-033": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-063": {
-          "options": [
-            "D",
-            "A",
-            "C",
-            "B"
-          ]
-        },
-        "inf-8-algo-043": {
-          "options": [
-            "C",
-            "D",
-            "A",
-            "B"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 26,
-      "task_ids": [
-        "inf-8-code-011",
-        "inf-8-algo-065",
-        "inf-8-algo-045",
-        "inf-8-code-007",
-        "inf-8-algo-069",
-        "inf-8-algo-028",
-        "inf-8-algo-021",
-        "inf-8-algo-043",
-        "inf-8-code-018",
-        "inf-8-algo-042",
-        "inf-8-algo-020",
-        "inf-8-algo-012",
-        "inf-8-algo-054",
-        "inf-8-code-031",
-        "inf-8-algo-004",
-        "inf-8-algo-072",
-        "inf-8-algo-046",
-        "inf-8-algo-049",
-        "inf-8-algo-059",
-        "inf-8-algo-032"
-      ],
-      "orders": {
-        "inf-8-algo-043": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-020": {
-          "options": [
-            "B",
-            "C",
-            "A",
-            "D"
-          ]
-        },
-        "inf-8-algo-012": {
-          "options": [
-            "A",
-            "C",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-049": {
-          "options": [
-            "B",
-            "A",
-            "D",
-            "C"
-          ]
-        }
-      },
-      "max_score": 37
-    },
-    {
-      "number": 27,
-      "task_ids": [
-        "inf-8-algo-059",
-        "inf-8-code-023",
-        "inf-8-algo-009",
-        "inf-8-algo-073",
-        "inf-8-algo-020",
-        "inf-8-algo-052",
-        "inf-8-algo-030",
-        "inf-8-code-019",
-        "inf-8-algo-041",
-        "inf-8-algo-057",
-        "inf-8-algo-021",
-        "inf-8-code-008",
-        "inf-8-algo-067",
-        "inf-8-algo-056",
-        "inf-8-code-011",
-        "inf-8-algo-032",
-        "inf-8-algo-028",
-        "inf-8-algo-004",
-        "inf-8-code-013",
-        "inf-8-code-007"
-      ],
-      "orders": {
-        "inf-8-algo-009": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-020": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-8-algo-041": {
-          "options": [
-            "B",
-            "C",
-            "D",
             "A"
           ]
         },
         "inf-8-algo-057": {
           "options": [
-            "B",
-            "D",
             "C",
-            "A"
+            "B",
+            "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "начало и конец",
+            "условие",
+            "действие",
+            "ввод и вывод"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "D",
+            "B",
+            "A",
+            "C"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 28,
+      "number": 27,
       "task_ids": [
-        "inf-8-code-022",
         "inf-8-algo-041",
-        "inf-8-algo-063",
-        "inf-8-algo-002",
-        "inf-8-algo-029",
-        "inf-8-algo-019",
-        "inf-8-algo-021",
+        "inf-8-algo-018",
         "inf-8-algo-072",
+        "inf-8-algo-063",
         "inf-8-algo-033",
+        "inf-8-algo-073",
+        "inf-8-algo-020",
+        "inf-8-algo-014",
+        "inf-8-algo-028",
+        "inf-8-code-008",
+        "inf-8-algo-040",
+        "inf-8-algo-069",
+        "inf-8-code-006",
+        "inf-8-algo-010",
+        "inf-8-algo-022",
+        "inf-8-code-017",
         "inf-8-algo-050",
-        "inf-8-algo-065",
-        "inf-8-algo-059",
-        "inf-8-algo-060",
-        "inf-8-code-031",
-        "inf-8-code-019",
-        "inf-8-algo-054",
-        "inf-8-algo-049",
-        "inf-8-algo-045",
-        "inf-8-algo-071",
-        "inf-8-algo-056"
+        "inf-8-algo-067",
+        "inf-8-algo-005",
+        "inf-8-algo-059"
       ],
       "orders": {
         "inf-8-algo-041": {
           "options": [
             "A",
+            "C",
             "B",
-            "D",
-            "C"
+            "D"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "'P'",
+            "'yth'",
+            "6"
           ]
         },
         "inf-8-algo-063": {
           "options": [
             "A",
+            "C",
             "B",
-            "D",
-            "C"
+            "D"
           ]
         },
-        "inf-8-algo-002": {
+        "inf-8-algo-033": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "D",
+            "A",
+            "C",
+            "B"
+          ]
+        },
+        "inf-8-algo-010": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "B",
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 28,
+      "task_ids": [
+        "inf-8-algo-021",
+        "inf-8-algo-030",
+        "inf-8-algo-005",
+        "inf-8-algo-072",
+        "inf-8-algo-028",
+        "inf-8-code-006",
+        "inf-8-algo-025",
+        "inf-8-algo-059",
+        "inf-8-algo-018",
+        "inf-8-algo-050",
+        "inf-8-algo-058",
+        "inf-8-algo-053",
+        "inf-8-algo-024",
+        "inf-8-algo-009",
+        "inf-8-algo-042",
+        "inf-8-algo-041",
+        "inf-8-algo-006",
+        "inf-8-algo-060",
+        "inf-8-algo-037",
+        "inf-8-algo-014"
+      ],
+      "orders": {
+        "inf-8-algo-005": {
           "options": [
             "A",
             "D",
@@ -2968,10 +3328,102 @@
             "B"
           ]
         },
-        "inf-8-algo-029": {
+        "inf-8-algo-018": {
+          "right": [
+            "True",
+            "6",
+            "'yth'",
+            "'P'"
+          ]
+        },
+        "inf-8-algo-024": {
           "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-009": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        },
+        "inf-8-algo-041": {
+          "options": [
+            "C",
             "B",
             "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "действие",
+            "условие",
+            "начало и конец",
+            "ввод и вывод"
+          ]
+        },
+        "inf-8-algo-060": {
+          "options": [
+            "D",
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "inf-8-algo-037": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-014": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 31
+    },
+    {
+      "number": 29,
+      "task_ids": [
+        "inf-8-code-017",
+        "inf-8-algo-028",
+        "inf-8-algo-010",
+        "inf-8-algo-027",
+        "inf-8-algo-019",
+        "inf-8-algo-033",
+        "inf-8-algo-071",
+        "inf-8-algo-041",
+        "inf-8-algo-073",
+        "inf-8-algo-025",
+        "inf-8-algo-013",
+        "inf-8-algo-046",
+        "inf-8-algo-065",
+        "inf-8-algo-029",
+        "inf-8-algo-053",
+        "inf-8-algo-057",
+        "inf-8-algo-059",
+        "inf-8-algo-021",
+        "inf-8-algo-054",
+        "inf-8-algo-006"
+      ],
+      "orders": {
+        "inf-8-algo-010": {
+          "options": [
+            "A",
+            "B",
             "D",
             "C"
           ]
@@ -2979,59 +3431,107 @@
         "inf-8-algo-033": {
           "options": [
             "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
-        "inf-8-algo-060": {
-          "options": [
             "A",
             "C",
-            "D",
-            "B"
+            "D"
           ]
         },
-        "inf-8-algo-049": {
+        "inf-8-algo-041": {
           "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "inf-8-algo-029": {
+          "options": [
+            "B",
             "D",
             "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-057": {
+          "options": [
+            "A",
+            "B",
             "C",
-            "B"
+            "D"
+          ]
+        },
+        "inf-8-algo-006": {
+          "right": [
+            "действие",
+            "условие",
+            "ввод и вывод",
+            "начало и конец"
           ]
         }
       },
-      "max_score": 37
+      "max_score": 31
     },
     {
-      "number": 29,
+      "number": 30,
       "task_ids": [
-        "inf-8-code-011",
         "inf-8-algo-029",
-        "inf-8-code-008",
-        "inf-8-code-031",
-        "inf-8-algo-052",
-        "inf-8-algo-045",
-        "inf-8-algo-021",
-        "inf-8-algo-058",
-        "inf-8-code-018",
-        "inf-8-algo-053",
-        "inf-8-algo-010",
-        "inf-8-algo-071",
-        "inf-8-algo-070",
-        "inf-8-algo-032",
-        "inf-8-algo-019",
-        "inf-8-algo-007",
-        "inf-8-algo-059",
+        "inf-8-algo-018",
+        "inf-8-code-006",
         "inf-8-algo-028",
+        "inf-8-algo-065",
+        "inf-8-algo-005",
+        "inf-8-code-013",
+        "inf-8-algo-020",
+        "inf-8-algo-022",
+        "inf-8-algo-069",
+        "inf-8-algo-025",
+        "inf-8-algo-007",
+        "inf-8-algo-010",
         "inf-8-algo-009",
-        "inf-8-code-009"
+        "inf-8-algo-072",
+        "inf-8-algo-030",
+        "inf-8-algo-042",
+        "inf-8-algo-071",
+        "inf-8-algo-050",
+        "inf-8-algo-059"
       ],
       "orders": {
         "inf-8-algo-029": {
           "options": [
+            "D",
+            "B",
+            "A",
+            "C"
+          ]
+        },
+        "inf-8-algo-018": {
+          "right": [
+            "'yth'",
+            "6",
+            "True",
+            "'P'"
+          ]
+        },
+        "inf-8-algo-005": {
+          "options": [
+            "B",
             "C",
             "A",
+            "D"
+          ]
+        },
+        "inf-8-algo-020": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-8-algo-007": {
+          "options": [
+            "A",
+            "C",
             "B",
             "D"
           ]
@@ -3044,76 +3544,16 @@
             "B"
           ]
         },
-        "inf-8-algo-007": {
-          "options": [
-            "C",
-            "B",
-            "A",
-            "D"
-          ]
-        },
         "inf-8-algo-009": {
           "options": [
             "C",
             "B",
-            "D",
-            "A"
+            "A",
+            "D"
           ]
         }
       },
-      "max_score": 37
-    },
-    {
-      "number": 30,
-      "task_ids": [
-        "inf-8-code-023",
-        "inf-8-algo-070",
-        "inf-8-code-018",
-        "inf-8-algo-028",
-        "inf-8-algo-050",
-        "inf-8-algo-012",
-        "inf-8-algo-071",
-        "inf-8-algo-021",
-        "inf-8-algo-030",
-        "inf-8-algo-067",
-        "inf-8-algo-045",
-        "inf-8-algo-056",
-        "inf-8-algo-019",
-        "inf-8-code-017",
-        "inf-8-code-009",
-        "inf-8-code-007",
-        "inf-8-algo-059",
-        "inf-8-algo-032",
-        "inf-8-algo-044",
-        "inf-8-algo-001"
-      ],
-      "orders": {
-        "inf-8-algo-012": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-044": {
-          "options": [
-            "C",
-            "A",
-            "B",
-            "D"
-          ]
-        },
-        "inf-8-algo-001": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 37
+      "max_score": 31
     }
   ]
 }

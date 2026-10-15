@@ -71,6 +71,7 @@
         }
       ],
       "task_ids": [
+        "inf-9-graph-015",
         "inf-9-graph-016",
         "inf-9-graph-017",
         "inf-9-graph-037",
@@ -80,7 +81,6 @@
         "inf-9-graph-041",
         "inf-9-graph-042",
         "inf-9-graph-043",
-        "inf-9-graph-044",
         "inf-9-graph-045",
         "inf-9-graph-046",
         "inf-9-graph-047",
@@ -110,7 +110,6 @@
         "inf-9-graph-057",
         "inf-9-graph-058",
         "inf-9-graph-059",
-        "inf-9-graph-060",
         "inf-9-graph-061"
       ]
     }
@@ -502,6 +501,33 @@
       "key": "6"
     },
     {
+      "id": "inf-9-graph-015",
+      "lesson": "9graph-03-tasks",
+      "type": "single_choice",
+      "points": 1,
+      "prompt": "Чем кратчайший путь отличается от пути с наименьшим числом переходов?",
+      "options": [
+        {
+          "id": "B",
+          "text": "Ничем, это одно и то же"
+        },
+        {
+          "id": "C",
+          "text": "Кратчайший — это путь с наименьшим числом рёбер"
+        },
+        {
+          "id": "D",
+          "text": "Кратчайший — это всегда прямой путь без промежуточных вершин"
+        },
+        {
+          "id": "A",
+          "text": "Кратчайший — это путь с минимальной суммой весов, а не с минимальным числом рёбер"
+        }
+      ],
+      "correct": "D",
+      "key": "D"
+    },
+    {
       "id": "inf-9-graph-016",
       "lesson": "9graph-03-tasks",
       "type": "numeric_base",
@@ -587,16 +613,6 @@
       "type": "numeric_base",
       "points": 1,
       "prompt": "Граф-цепочка A→B→C→D. Сколько рёбер в маршруте из A в D? Запишите только число.",
-      "base": 10,
-      "expected": 3,
-      "key": "3"
-    },
-    {
-      "id": "inf-9-graph-044",
-      "lesson": "9graph-03-tasks",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Граф: веса рёбер A–B = 4, A–C = 2, B–D = 5, C–D = 8. Кратчайший путь из A в D идёт по маршруту A→B→D→D. Сколько рёбер в этом маршруте? Запишите только число.",
       "base": 10,
       "expected": 3,
       "key": "3"
@@ -799,16 +815,6 @@
       "key": "5"
     },
     {
-      "id": "inf-9-graph-060",
-      "lesson": "9graph-04-paths",
-      "type": "numeric_base",
-      "points": 2,
-      "prompt": "Ациклический граф: A→B, A→C, B→D, C→D, A→E, D→E. В вершину-источник A засчитывается 1 путь. Сколько путей ведёт из A в E? Запишите только число.",
-      "base": 10,
-      "expected": 3,
-      "key": "3"
-    },
-    {
       "id": "inf-9-graph-061",
       "lesson": "9graph-04-paths",
       "type": "matching",
@@ -839,40 +845,32 @@
     {
       "number": 1,
       "task_ids": [
-        "inf-9-graph-006",
-        "inf-9-graph-060",
-        "inf-9-graph-046",
-        "inf-9-graph-027",
+        "inf-9-graph-016",
+        "inf-9-graph-028",
+        "inf-9-graph-001",
         "inf-9-graph-005",
-        "inf-9-graph-026",
-        "inf-9-graph-002",
+        "inf-9-graph-022",
         "inf-9-graph-013",
-        "inf-9-graph-052",
-        "inf-9-graph-043"
+        "inf-9-graph-030",
+        "inf-9-graph-059",
+        "inf-9-graph-015",
+        "inf-9-graph-054"
       ],
       "orders": {
-        "inf-9-graph-006": {
+        "inf-9-graph-001": {
           "options": [
             "D",
-            "B",
             "A",
-            "C"
-          ]
-        },
-        "inf-9-graph-027": {
-          "options": [
-            "D",
             "C",
-            "B",
-            "A"
+            "B"
           ]
         },
         "inf-9-graph-005": {
           "options": [
             "A",
-            "D",
+            "B",
             "C",
-            "B"
+            "D"
           ]
         }
       },
@@ -881,23 +879,23 @@
     {
       "number": 2,
       "task_ids": [
-        "inf-9-graph-008",
-        "inf-9-graph-038",
-        "inf-9-graph-060",
-        "inf-9-graph-030",
+        "inf-9-graph-004",
+        "inf-9-graph-039",
+        "inf-9-graph-003",
+        "inf-9-graph-029",
+        "inf-9-graph-048",
+        "inf-9-graph-055",
         "inf-9-graph-007",
-        "inf-9-graph-018",
         "inf-9-graph-034",
-        "inf-9-graph-005",
-        "inf-9-graph-012",
-        "inf-9-graph-047"
+        "inf-9-graph-028",
+        "inf-9-graph-058"
       ],
       "orders": {
-        "inf-9-graph-005": {
+        "inf-9-graph-003": {
           "options": [
-            "B",
-            "A",
             "C",
+            "A",
+            "B",
             "D"
           ]
         }
@@ -907,40 +905,24 @@
     {
       "number": 3,
       "task_ids": [
-        "inf-9-graph-047",
         "inf-9-graph-007",
-        "inf-9-graph-001",
-        "inf-9-graph-054",
-        "inf-9-graph-057",
-        "inf-9-graph-041",
-        "inf-9-graph-034",
-        "inf-9-graph-029",
-        "inf-9-graph-027",
-        "inf-9-graph-006"
+        "inf-9-graph-030",
+        "inf-9-graph-006",
+        "inf-9-graph-047",
+        "inf-9-graph-033",
+        "inf-9-graph-031",
+        "inf-9-graph-053",
+        "inf-9-graph-059",
+        "inf-9-graph-045",
+        "inf-9-graph-009"
       ],
       "orders": {
-        "inf-9-graph-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-graph-027": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
         "inf-9-graph-006": {
           "options": [
-            "B",
+            "D",
             "C",
             "A",
-            "D"
+            "B"
           ]
         }
       },
@@ -949,58 +931,49 @@
     {
       "number": 4,
       "task_ids": [
+        "inf-9-graph-028",
+        "inf-9-graph-008",
+        "inf-9-graph-009",
+        "inf-9-graph-016",
+        "inf-9-graph-034",
+        "inf-9-graph-026",
+        "inf-9-graph-018",
         "inf-9-graph-059",
-        "inf-9-graph-004",
-        "inf-9-graph-037",
-        "inf-9-graph-027",
-        "inf-9-graph-031",
-        "inf-9-graph-050",
-        "inf-9-graph-002",
-        "inf-9-graph-032",
-        "inf-9-graph-006",
-        "inf-9-graph-016"
+        "inf-9-graph-022",
+        "inf-9-graph-042"
       ],
-      "orders": {
-        "inf-9-graph-027": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-graph-006": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
+      "orders": {},
       "max_score": 14
     },
     {
       "number": 5,
       "task_ids": [
-        "inf-9-graph-038",
-        "inf-9-graph-007",
-        "inf-9-graph-003",
-        "inf-9-graph-051",
-        "inf-9-graph-028",
-        "inf-9-graph-060",
-        "inf-9-graph-009",
-        "inf-9-graph-026",
-        "inf-9-graph-016",
-        "inf-9-graph-013"
+        "inf-9-graph-037",
+        "inf-9-graph-027",
+        "inf-9-graph-022",
+        "inf-9-graph-025",
+        "inf-9-graph-010",
+        "inf-9-graph-048",
+        "inf-9-graph-032",
+        "inf-9-graph-056",
+        "inf-9-graph-006",
+        "inf-9-graph-057"
       ],
       "orders": {
-        "inf-9-graph-003": {
+        "inf-9-graph-027": {
           "options": [
-            "B",
-            "D",
+            "A",
             "C",
-            "A"
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
           ]
         }
       },
@@ -1009,67 +982,83 @@
     {
       "number": 6,
       "task_ids": [
-        "inf-9-graph-030",
-        "inf-9-graph-021",
-        "inf-9-graph-031",
-        "inf-9-graph-051",
-        "inf-9-graph-013",
-        "inf-9-graph-016",
-        "inf-9-graph-005",
-        "inf-9-graph-038",
+        "inf-9-graph-047",
+        "inf-9-graph-033",
+        "inf-9-graph-018",
+        "inf-9-graph-022",
+        "inf-9-graph-040",
         "inf-9-graph-058",
-        "inf-9-graph-009"
+        "inf-9-graph-008",
+        "inf-9-graph-004",
+        "inf-9-graph-029",
+        "inf-9-graph-026"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 7,
+      "task_ids": [
+        "inf-9-graph-032",
+        "inf-9-graph-058",
+        "inf-9-graph-047",
+        "inf-9-graph-012",
+        "inf-9-graph-042",
+        "inf-9-graph-023",
+        "inf-9-graph-027",
+        "inf-9-graph-051",
+        "inf-9-graph-005",
+        "inf-9-graph-003"
       ],
       "orders": {
+        "inf-9-graph-027": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        },
         "inf-9-graph-005": {
           "options": [
-            "B",
-            "A",
             "C",
-            "D"
+            "D",
+            "B",
+            "A"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "B",
+            "D",
+            "A",
+            "C"
           ]
         }
       },
       "max_score": 14
     },
     {
-      "number": 7,
-      "task_ids": [
-        "inf-9-graph-057",
-        "inf-9-graph-028",
-        "inf-9-graph-022",
-        "inf-9-graph-050",
-        "inf-9-graph-010",
-        "inf-9-graph-032",
-        "inf-9-graph-008",
-        "inf-9-graph-025",
-        "inf-9-graph-044",
-        "inf-9-graph-042"
-      ],
-      "orders": {},
-      "max_score": 14
-    },
-    {
       "number": 8,
       "task_ids": [
-        "inf-9-graph-010",
-        "inf-9-graph-045",
-        "inf-9-graph-034",
-        "inf-9-graph-060",
         "inf-9-graph-029",
-        "inf-9-graph-055",
-        "inf-9-graph-016",
-        "inf-9-graph-005",
-        "inf-9-graph-023",
-        "inf-9-graph-030"
+        "inf-9-graph-010",
+        "inf-9-graph-041",
+        "inf-9-graph-057",
+        "inf-9-graph-013",
+        "inf-9-graph-006",
+        "inf-9-graph-021",
+        "inf-9-graph-048",
+        "inf-9-graph-031",
+        "inf-9-graph-050"
       ],
       "orders": {
-        "inf-9-graph-005": {
+        "inf-9-graph-006": {
           "options": [
-            "B",
-            "C",
+            "A",
             "D",
-            "A"
+            "B",
+            "C"
           ]
         }
       },
@@ -1079,65 +1068,56 @@
       "number": 9,
       "task_ids": [
         "inf-9-graph-037",
+        "inf-9-graph-026",
+        "inf-9-graph-008",
         "inf-9-graph-032",
         "inf-9-graph-004",
-        "inf-9-graph-060",
-        "inf-9-graph-021",
         "inf-9-graph-046",
-        "inf-9-graph-055",
-        "inf-9-graph-026",
-        "inf-9-graph-025",
-        "inf-9-graph-005"
+        "inf-9-graph-023",
+        "inf-9-graph-030",
+        "inf-9-graph-050",
+        "inf-9-graph-059"
       ],
-      "orders": {
-        "inf-9-graph-005": {
-          "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        }
-      },
+      "orders": {},
       "max_score": 14
     },
     {
       "number": 10,
       "task_ids": [
-        "inf-9-graph-007",
+        "inf-9-graph-032",
+        "inf-9-graph-003",
+        "inf-9-graph-012",
+        "inf-9-graph-051",
+        "inf-9-graph-002",
+        "inf-9-graph-047",
         "inf-9-graph-001",
-        "inf-9-graph-025",
-        "inf-9-graph-043",
-        "inf-9-graph-044",
-        "inf-9-graph-056",
-        "inf-9-graph-033",
-        "inf-9-graph-006",
+        "inf-9-graph-037",
         "inf-9-graph-027",
-        "inf-9-graph-060"
+        "inf-9-graph-059"
       ],
       "orders": {
-        "inf-9-graph-001": {
+        "inf-9-graph-003": {
           "options": [
-            "B",
-            "C",
             "A",
-            "D"
+            "D",
+            "B",
+            "C"
           ]
         },
-        "inf-9-graph-006": {
+        "inf-9-graph-001": {
           "options": [
-            "A",
-            "B",
             "C",
-            "D"
+            "B",
+            "D",
+            "A"
           ]
         },
         "inf-9-graph-027": {
           "options": [
-            "A",
-            "C",
             "D",
-            "B"
+            "A",
+            "B",
+            "C"
           ]
         }
       },
@@ -1146,24 +1126,24 @@
     {
       "number": 11,
       "task_ids": [
-        "inf-9-graph-036",
-        "inf-9-graph-021",
-        "inf-9-graph-045",
-        "inf-9-graph-003",
-        "inf-9-graph-016",
-        "inf-9-graph-053",
-        "inf-9-graph-028",
+        "inf-9-graph-057",
+        "inf-9-graph-022",
+        "inf-9-graph-042",
+        "inf-9-graph-032",
+        "inf-9-graph-046",
+        "inf-9-graph-056",
+        "inf-9-graph-005",
+        "inf-9-graph-026",
         "inf-9-graph-004",
-        "inf-9-graph-058",
-        "inf-9-graph-026"
+        "inf-9-graph-028"
       ],
       "orders": {
-        "inf-9-graph-003": {
+        "inf-9-graph-005": {
           "options": [
-            "C",
             "D",
-            "A",
-            "B"
+            "C",
+            "B",
+            "A"
           ]
         }
       },
@@ -1172,43 +1152,52 @@
     {
       "number": 12,
       "task_ids": [
-        "inf-9-graph-007",
-        "inf-9-graph-018",
-        "inf-9-graph-004",
-        "inf-9-graph-034",
-        "inf-9-graph-016",
-        "inf-9-graph-038",
+        "inf-9-graph-022",
+        "inf-9-graph-033",
         "inf-9-graph-010",
-        "inf-9-graph-060",
-        "inf-9-graph-025",
-        "inf-9-graph-029"
+        "inf-9-graph-027",
+        "inf-9-graph-029",
+        "inf-9-graph-054",
+        "inf-9-graph-046",
+        "inf-9-graph-003",
+        "inf-9-graph-039",
+        "inf-9-graph-058"
       ],
-      "orders": {},
+      "orders": {
+        "inf-9-graph-027": {
+          "options": [
+            "D",
+            "C",
+            "A",
+            "B"
+          ]
+        },
+        "inf-9-graph-003": {
+          "options": [
+            "A",
+            "D",
+            "B",
+            "C"
+          ]
+        }
+      },
       "max_score": 14
     },
     {
       "number": 13,
       "task_ids": [
-        "inf-9-graph-052",
-        "inf-9-graph-038",
-        "inf-9-graph-031",
-        "inf-9-graph-057",
-        "inf-9-graph-006",
         "inf-9-graph-029",
-        "inf-9-graph-036",
-        "inf-9-graph-016",
         "inf-9-graph-002",
-        "inf-9-graph-003"
+        "inf-9-graph-057",
+        "inf-9-graph-040",
+        "inf-9-graph-048",
+        "inf-9-graph-010",
+        "inf-9-graph-026",
+        "inf-9-graph-003",
+        "inf-9-graph-052",
+        "inf-9-graph-036"
       ],
       "orders": {
-        "inf-9-graph-006": {
-          "options": [
-            "B",
-            "D",
-            "C",
-            "A"
-          ]
-        },
         "inf-9-graph-003": {
           "options": [
             "C",
@@ -1223,18 +1212,95 @@
     {
       "number": 14,
       "task_ids": [
-        "inf-9-graph-059",
-        "inf-9-graph-005",
-        "inf-9-graph-028",
         "inf-9-graph-025",
+        "inf-9-graph-047",
+        "inf-9-graph-006",
+        "inf-9-graph-036",
+        "inf-9-graph-031",
+        "inf-9-graph-018",
         "inf-9-graph-023",
-        "inf-9-graph-044",
-        "inf-9-graph-054",
+        "inf-9-graph-057",
         "inf-9-graph-010",
-        "inf-9-graph-040",
-        "inf-9-graph-013"
+        "inf-9-graph-037"
       ],
       "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 15,
+      "task_ids": [
+        "inf-9-graph-038",
+        "inf-9-graph-025",
+        "inf-9-graph-058",
+        "inf-9-graph-021",
+        "inf-9-graph-034",
+        "inf-9-graph-006",
+        "inf-9-graph-009",
+        "inf-9-graph-018",
+        "inf-9-graph-031",
+        "inf-9-graph-048"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 16,
+      "task_ids": [
+        "inf-9-graph-022",
+        "inf-9-graph-030",
+        "inf-9-graph-012",
+        "inf-9-graph-032",
+        "inf-9-graph-004",
+        "inf-9-graph-051",
+        "inf-9-graph-041",
+        "inf-9-graph-057",
+        "inf-9-graph-010",
+        "inf-9-graph-047"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 17,
+      "task_ids": [
+        "inf-9-graph-031",
+        "inf-9-graph-012",
+        "inf-9-graph-006",
+        "inf-9-graph-032",
+        "inf-9-graph-057",
+        "inf-9-graph-005",
+        "inf-9-graph-023",
+        "inf-9-graph-039",
+        "inf-9-graph-055",
+        "inf-9-graph-048"
+      ],
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "D",
+            "C",
+            "B",
+            "A"
+          ]
+        },
         "inf-9-graph-005": {
           "options": [
             "A",
@@ -1247,110 +1313,24 @@
       "max_score": 14
     },
     {
-      "number": 15,
-      "task_ids": [
-        "inf-9-graph-006",
-        "inf-9-graph-056",
-        "inf-9-graph-039",
-        "inf-9-graph-013",
-        "inf-9-graph-026",
-        "inf-9-graph-059",
-        "inf-9-graph-002",
-        "inf-9-graph-012",
-        "inf-9-graph-048",
-        "inf-9-graph-008"
-      ],
-      "orders": {
-        "inf-9-graph-006": {
-          "options": [
-            "A",
-            "C",
-            "D",
-            "B"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 16,
-      "task_ids": [
-        "inf-9-graph-030",
-        "inf-9-graph-054",
-        "inf-9-graph-004",
-        "inf-9-graph-031",
-        "inf-9-graph-036",
-        "inf-9-graph-003",
-        "inf-9-graph-021",
-        "inf-9-graph-059",
-        "inf-9-graph-038",
-        "inf-9-graph-048"
-      ],
-      "orders": {
-        "inf-9-graph-003": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
-      "number": 17,
-      "task_ids": [
-        "inf-9-graph-033",
-        "inf-9-graph-026",
-        "inf-9-graph-001",
-        "inf-9-graph-039",
-        "inf-9-graph-023",
-        "inf-9-graph-004",
-        "inf-9-graph-059",
-        "inf-9-graph-044",
-        "inf-9-graph-051",
-        "inf-9-graph-030"
-      ],
-      "orders": {
-        "inf-9-graph-001": {
-          "options": [
-            "C",
-            "B",
-            "D",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
       "number": 18,
       "task_ids": [
         "inf-9-graph-012",
-        "inf-9-graph-001",
-        "inf-9-graph-016",
-        "inf-9-graph-003",
-        "inf-9-graph-026",
-        "inf-9-graph-041",
-        "inf-9-graph-054",
-        "inf-9-graph-036",
-        "inf-9-graph-019",
-        "inf-9-graph-021"
+        "inf-9-graph-004",
+        "inf-9-graph-059",
+        "inf-9-graph-055",
+        "inf-9-graph-025",
+        "inf-9-graph-045",
+        "inf-9-graph-048",
+        "inf-9-graph-032",
+        "inf-9-graph-023",
+        "inf-9-graph-003"
       ],
       "orders": {
-        "inf-9-graph-001": {
-          "options": [
-            "A",
-            "B",
-            "D",
-            "C"
-          ]
-        },
         "inf-9-graph-003": {
           "options": [
-            "C",
             "B",
+            "C",
             "A",
             "D"
           ]
@@ -1361,27 +1341,70 @@
     {
       "number": 19,
       "task_ids": [
-        "inf-9-graph-023",
-        "inf-9-graph-001",
-        "inf-9-graph-034",
-        "inf-9-graph-008",
-        "inf-9-graph-046",
-        "inf-9-graph-025",
+        "inf-9-graph-013",
+        "inf-9-graph-022",
+        "inf-9-graph-019",
+        "inf-9-graph-005",
         "inf-9-graph-027",
-        "inf-9-graph-037",
-        "inf-9-graph-060",
-        "inf-9-graph-054"
+        "inf-9-graph-009",
+        "inf-9-graph-047",
+        "inf-9-graph-040",
+        "inf-9-graph-012",
+        "inf-9-graph-055"
       ],
       "orders": {
-        "inf-9-graph-001": {
+        "inf-9-graph-005": {
           "options": [
-            "D",
-            "B",
+            "A",
             "C",
-            "A"
+            "D",
+            "B"
           ]
         },
         "inf-9-graph-027": {
+          "options": [
+            "B",
+            "C",
+            "D",
+            "A"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 20,
+      "task_ids": [
+        "inf-9-graph-022",
+        "inf-9-graph-008",
+        "inf-9-graph-036",
+        "inf-9-graph-010",
+        "inf-9-graph-026",
+        "inf-9-graph-012",
+        "inf-9-graph-053",
+        "inf-9-graph-045",
+        "inf-9-graph-048",
+        "inf-9-graph-019"
+      ],
+      "orders": {},
+      "max_score": 14
+    },
+    {
+      "number": 21,
+      "task_ids": [
+        "inf-9-graph-059",
+        "inf-9-graph-005",
+        "inf-9-graph-038",
+        "inf-9-graph-050",
+        "inf-9-graph-030",
+        "inf-9-graph-013",
+        "inf-9-graph-016",
+        "inf-9-graph-023",
+        "inf-9-graph-008",
+        "inf-9-graph-028"
+      ],
+      "orders": {
+        "inf-9-graph-005": {
           "options": [
             "C",
             "A",
@@ -1393,69 +1416,44 @@
       "max_score": 14
     },
     {
-      "number": 20,
-      "task_ids": [
-        "inf-9-graph-054",
-        "inf-9-graph-028",
-        "inf-9-graph-004",
-        "inf-9-graph-060",
-        "inf-9-graph-038",
-        "inf-9-graph-002",
-        "inf-9-graph-030",
-        "inf-9-graph-048",
-        "inf-9-graph-034",
-        "inf-9-graph-009"
-      ],
-      "orders": {},
-      "max_score": 14
-    },
-    {
-      "number": 21,
-      "task_ids": [
-        "inf-9-graph-009",
-        "inf-9-graph-058",
-        "inf-9-graph-033",
-        "inf-9-graph-010",
-        "inf-9-graph-045",
-        "inf-9-graph-030",
-        "inf-9-graph-048",
-        "inf-9-graph-018",
-        "inf-9-graph-022",
-        "inf-9-graph-028"
-      ],
-      "orders": {},
-      "max_score": 14
-    },
-    {
       "number": 22,
       "task_ids": [
+        "inf-9-graph-006",
+        "inf-9-graph-012",
+        "inf-9-graph-022",
+        "inf-9-graph-039",
         "inf-9-graph-010",
-        "inf-9-graph-008",
-        "inf-9-graph-060",
-        "inf-9-graph-038",
-        "inf-9-graph-029",
-        "inf-9-graph-056",
-        "inf-9-graph-032",
-        "inf-9-graph-030",
-        "inf-9-graph-007",
-        "inf-9-graph-048"
+        "inf-9-graph-036",
+        "inf-9-graph-026",
+        "inf-9-graph-016",
+        "inf-9-graph-051",
+        "inf-9-graph-057"
       ],
-      "orders": {},
+      "orders": {
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "B",
+            "D",
+            "C"
+          ]
+        }
+      },
       "max_score": 14
     },
     {
       "number": 23,
       "task_ids": [
+        "inf-9-graph-002",
+        "inf-9-graph-059",
+        "inf-9-graph-010",
         "inf-9-graph-005",
-        "inf-9-graph-027",
-        "inf-9-graph-057",
-        "inf-9-graph-033",
-        "inf-9-graph-004",
+        "inf-9-graph-029",
+        "inf-9-graph-051",
         "inf-9-graph-043",
-        "inf-9-graph-021",
-        "inf-9-graph-018",
-        "inf-9-graph-028",
-        "inf-9-graph-047"
+        "inf-9-graph-031",
+        "inf-9-graph-048",
+        "inf-9-graph-013"
       ],
       "orders": {
         "inf-9-graph-005": {
@@ -1465,7 +1463,59 @@
             "C",
             "A"
           ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 24,
+      "task_ids": [
+        "inf-9-graph-002",
+        "inf-9-graph-027",
+        "inf-9-graph-013",
+        "inf-9-graph-050",
+        "inf-9-graph-001",
+        "inf-9-graph-048",
+        "inf-9-graph-039",
+        "inf-9-graph-029",
+        "inf-9-graph-008",
+        "inf-9-graph-059"
+      ],
+      "orders": {
+        "inf-9-graph-027": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
+          ]
         },
+        "inf-9-graph-001": {
+          "options": [
+            "C",
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "max_score": 14
+    },
+    {
+      "number": 25,
+      "task_ids": [
+        "inf-9-graph-048",
+        "inf-9-graph-059",
+        "inf-9-graph-010",
+        "inf-9-graph-027",
+        "inf-9-graph-012",
+        "inf-9-graph-054",
+        "inf-9-graph-033",
+        "inf-9-graph-042",
+        "inf-9-graph-021",
+        "inf-9-graph-004"
+      ],
+      "orders": {
         "inf-9-graph-027": {
           "options": [
             "A",
@@ -1478,84 +1528,25 @@
       "max_score": 14
     },
     {
-      "number": 24,
-      "task_ids": [
-        "inf-9-graph-031",
-        "inf-9-graph-053",
-        "inf-9-graph-008",
-        "inf-9-graph-002",
-        "inf-9-graph-009",
-        "inf-9-graph-042",
-        "inf-9-graph-047",
-        "inf-9-graph-060",
-        "inf-9-graph-029",
-        "inf-9-graph-032"
-      ],
-      "orders": {},
-      "max_score": 14
-    },
-    {
-      "number": 25,
-      "task_ids": [
-        "inf-9-graph-007",
-        "inf-9-graph-032",
-        "inf-9-graph-008",
-        "inf-9-graph-003",
-        "inf-9-graph-046",
-        "inf-9-graph-057",
-        "inf-9-graph-053",
-        "inf-9-graph-027",
-        "inf-9-graph-031",
-        "inf-9-graph-040"
-      ],
-      "orders": {
-        "inf-9-graph-003": {
-          "options": [
-            "A",
-            "D",
-            "C",
-            "B"
-          ]
-        },
-        "inf-9-graph-027": {
-          "options": [
-            "D",
-            "B",
-            "C",
-            "A"
-          ]
-        }
-      },
-      "max_score": 14
-    },
-    {
       "number": 26,
       "task_ids": [
+        "inf-9-graph-056",
+        "inf-9-graph-031",
+        "inf-9-graph-040",
+        "inf-9-graph-019",
+        "inf-9-graph-001",
+        "inf-9-graph-022",
+        "inf-9-graph-010",
         "inf-9-graph-028",
-        "inf-9-graph-032",
-        "inf-9-graph-003",
-        "inf-9-graph-046",
-        "inf-9-graph-058",
-        "inf-9-graph-027",
-        "inf-9-graph-038",
-        "inf-9-graph-052",
-        "inf-9-graph-008",
-        "inf-9-graph-022"
+        "inf-9-graph-047",
+        "inf-9-graph-034"
       ],
       "orders": {
-        "inf-9-graph-003": {
+        "inf-9-graph-001": {
           "options": [
-            "B",
-            "C",
-            "D",
-            "A"
-          ]
-        },
-        "inf-9-graph-027": {
-          "options": [
-            "D",
             "C",
             "B",
+            "D",
             "A"
           ]
         }
@@ -1565,24 +1556,40 @@
     {
       "number": 27,
       "task_ids": [
-        "inf-9-graph-045",
-        "inf-9-graph-047",
-        "inf-9-graph-012",
-        "inf-9-graph-007",
-        "inf-9-graph-026",
-        "inf-9-graph-053",
-        "inf-9-graph-013",
+        "inf-9-graph-005",
         "inf-9-graph-058",
-        "inf-9-graph-010",
-        "inf-9-graph-003"
+        "inf-9-graph-052",
+        "inf-9-graph-046",
+        "inf-9-graph-038",
+        "inf-9-graph-003",
+        "inf-9-graph-002",
+        "inf-9-graph-031",
+        "inf-9-graph-013",
+        "inf-9-graph-027"
       ],
       "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "B",
+            "D",
+            "C",
+            "A"
+          ]
+        },
         "inf-9-graph-003": {
           "options": [
-            "D",
-            "A",
+            "B",
             "C",
-            "B"
+            "A",
+            "D"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "C",
+            "D",
+            "B",
+            "A"
           ]
         }
       },
@@ -1591,70 +1598,77 @@
     {
       "number": 28,
       "task_ids": [
-        "inf-9-graph-037",
-        "inf-9-graph-022",
+        "inf-9-graph-010",
+        "inf-9-graph-002",
+        "inf-9-graph-030",
         "inf-9-graph-033",
-        "inf-9-graph-006",
-        "inf-9-graph-051",
-        "inf-9-graph-004",
-        "inf-9-graph-028",
+        "inf-9-graph-039",
+        "inf-9-graph-009",
+        "inf-9-graph-016",
         "inf-9-graph-058",
-        "inf-9-graph-047",
+        "inf-9-graph-051",
         "inf-9-graph-026"
       ],
-      "orders": {
-        "inf-9-graph-006": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
+      "orders": {},
       "max_score": 14
     },
     {
       "number": 29,
       "task_ids": [
-        "inf-9-graph-003",
-        "inf-9-graph-043",
-        "inf-9-graph-029",
-        "inf-9-graph-019",
+        "inf-9-graph-033",
         "inf-9-graph-004",
-        "inf-9-graph-028",
-        "inf-9-graph-051",
-        "inf-9-graph-047",
-        "inf-9-graph-034",
-        "inf-9-graph-023"
+        "inf-9-graph-025",
+        "inf-9-graph-053",
+        "inf-9-graph-038",
+        "inf-9-graph-008",
+        "inf-9-graph-057",
+        "inf-9-graph-048",
+        "inf-9-graph-026",
+        "inf-9-graph-022"
       ],
-      "orders": {
-        "inf-9-graph-003": {
-          "options": [
-            "A",
-            "D",
-            "B",
-            "C"
-          ]
-        }
-      },
+      "orders": {},
       "max_score": 14
     },
     {
       "number": 30,
       "task_ids": [
-        "inf-9-graph-044",
-        "inf-9-graph-004",
         "inf-9-graph-038",
-        "inf-9-graph-052",
+        "inf-9-graph-005",
+        "inf-9-graph-034",
+        "inf-9-graph-007",
+        "inf-9-graph-006",
+        "inf-9-graph-027",
+        "inf-9-graph-018",
+        "inf-9-graph-016",
         "inf-9-graph-057",
-        "inf-9-graph-028",
-        "inf-9-graph-009",
-        "inf-9-graph-029",
-        "inf-9-graph-036",
-        "inf-9-graph-022"
+        "inf-9-graph-012"
       ],
-      "orders": {},
+      "orders": {
+        "inf-9-graph-005": {
+          "options": [
+            "A",
+            "C",
+            "B",
+            "D"
+          ]
+        },
+        "inf-9-graph-006": {
+          "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "inf-9-graph-027": {
+          "options": [
+            "D",
+            "B",
+            "C",
+            "A"
+          ]
+        }
+      },
       "max_score": 14
     }
   ]
