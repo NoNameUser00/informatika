@@ -25,6 +25,9 @@ material/
 /tmp_*/
 # Отчёты планировщика пулов (scripts/plan-pools.ts) и черновики — генерируются заново.
 /tmp/
+# Единый бандл офлайн-приложений — только для GitHub Release (50 МБ дублей
+# ради дублей в истории git незачем). Собирается: npm run offline:bundle
+/release/Informatika-all.zip
 # Локальные артефакты OpenCode и MCP — не в репо.
 /.playwright-mcp/
 /.opencode/

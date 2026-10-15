@@ -22,6 +22,7 @@
     "app:student": "node scripts/offline-pack.mjs student",
     "app:teacher": "node scripts/offline-pack.mjs teacher",
     "offline:all": "node scripts/offline-all.mjs",
+    "offline:bundle": "python scripts/offline-bundle.py",
     "lint": "echo \"eslint TODO: подключить после npm install\""
   },
   "dependencies": {

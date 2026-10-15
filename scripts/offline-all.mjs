@@ -2,7 +2,7 @@
 // 1) ученический dist (вырезка ключей + аудит) -> 2) ученические zip ->
 // 3) учительский dist (OFFLINE_DL=1: карточка скачивания клиента) ->
 // 4) упаковка 4 приложений (в учительские встраиваются ученические zip) ->
-// 5) общие комплекты в release/.
+// 5) общие комплекты в release/ + 6) единый бандл всех четырёх (релиз).
 // Дистрибутивы и пакеты в репо не коммитятся, кроме release/*.zip.
 import { execSync } from 'node:child_process';
 
@@ -15,4 +15,5 @@ run('powershell -NoProfile -Command "Remove-Item release/Informatika-uchenik-*.z
 run('node scripts/offline-build.mjs teacher', { OFFLINE_DL: '1' });
 run('node scripts/offline-pack.mjs teacher');
 run('powershell -NoProfile -Command "Remove-Item release/Informatika-uchitel-*.zip -Force -ErrorAction SilentlyContinue; Compress-Archive -Path app-teacher-windows -DestinationPath release/Informatika-uchitel-windows.zip; Compress-Archive -Path app-teacher-rosa -DestinationPath release/Informatika-uchitel-rosa.zip"');
-console.log('ALL OK: release/ содержит 4 архива, в учительских встроен клиент');
+run('python scripts/offline-bundle.py');
+console.log('ALL OK: release/ содержит 4 архива + Informatika-all.zip, в учительских встроен клиент');
