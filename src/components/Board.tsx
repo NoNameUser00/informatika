@@ -107,13 +107,12 @@ export default function Board({ id, height = 480 }: { id: string; height?: numbe
         />
       </div>
       <div style={{ display: 'flex', gap: 8, marginTop: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-        <button type="button" className="btn secondary" style={{ width: 'auto' }} onClick={savePng}>
+        <button type="button" className="board-btn" onClick={savePng}>
           Скачать PNG
         </button>
         <button
           type="button"
-          className="btn secondary"
-          style={{ width: 'auto' }}
+          className="board-btn"
           onClick={toggleTheme}
           aria-pressed={dark}
           title="Переключить светлую/тёмную тему доски"
