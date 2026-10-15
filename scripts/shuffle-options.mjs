@@ -1,17 +1,29 @@
 // Перемешивает варианты ответов в single_choice заданиях банков.
 //
 // ЗАЧЕМ: генераторы ставили правильный вариант первым (буква A), и в банке
-// накопился перекос — из 525 single_choice правильный ответ «A» в 476.
-// Ученик, который всегда отвечает «A», получает 91% по single_choice.
+// накопился перекос — правильный ответ «A» шёл в 476 заданиях из 525.
+// Ученик, который всегда отвечает «A», получал 91% по single_choice.
 //
-// Скрипт детерминирован: seed для перемешивания — fnv1a(id задания),
-// поэтому повторный запуск не меняет файл.
+// Детерминирован: seed — fnv1a(id задания). Порядок перед перемешиванием
+// приводится к каноническому (сортировка по тексту варианта), поэтому повторный
+// запуск на уже перемешанном файле даёт тот же результат, а не «перемешивает
+// ещё раз». Без этого скрипт портил файл при каждом запуске.
 //
-// Запуск: node scripts/shuffle-options.mjs
+// ВАЖНО: после перестановки id перенумеровываются по новой позиции. Раньше
+// этого не было, и answer писался буквой позиции при старых буквах в массиве —
+// ключ указывал на чужой вариант. Так в банках накопилось 59 неверных ключей,
+// которые пришлось чинить вручную.
+//
+// Запуск:
+//   node scripts/shuffle-options.mjs                      — банки по списку FILES
+//   node scripts/shuffle-options.mjs путь/к/файлу.yaml ... — только указанные файлы
 import { readFileSync, writeFileSync } from 'node:fs';
 import { globSync } from 'node:fs';
 
-const FILES = [
+const TARGETS = process.argv.slice(2).filter((a) => !a.startsWith('-'));
+const FILES = TARGETS.length
+  ? TARGETS
+  : [
   'data/tasks/7/information/bank-7inf.yaml',
   'data/tasks/7/base/bank-7base.yaml',
   'data/tasks/7/media/bank-7media.yaml',
@@ -98,14 +110,21 @@ for (const file of FILES) {
     }
     if (items.length < 2) continue;
 
-    // Старый правильный ответ
+    // Старый правильный ответ — по букве в teacher_only
     const ansM = /teacher_only: \{ answer: "?([A-D])"?,?/.exec(part);
     if (!ansM) {
       console.error(`  ! ${id}: не найден answer`);
       continue;
     }
     const oldLetter = ansM[1];
-    const oldIdx = items.findIndex((it) => it.letter === oldLetter);
+
+    // Канонический порядок перед перемешиванием: по тексту варианта. Тогда
+    // результат зависит только от seed и содержимого вариантов, а не от того, в каком
+    // порядке они лежат в файле сейчас. Это и делает скрипт идемпотентным.
+    const canonical = items
+      .slice()
+      .sort((a, b) => (a.text < b.text ? -1 : a.text > b.text ? 1 : 0));
+    const oldIdx = canonical.findIndex((it) => it.letter === oldLetter);
     if (oldIdx < 0) {
       console.error(`  ! ${id}: буква ${oldLetter} не найдена в options`);
       continue;
@@ -113,20 +132,24 @@ for (const file of FILES) {
 
     // Перемешиваем
     const rng = mulberry32(fnv1a(id));
-    const order = shuffle(items.map((_, k) => k), rng);
-    const newItems = order.map((k) => items[k]);
+    const order = shuffle(canonical.map((_, k) => k), rng);
+    const newItems = order.map((k) => canonical[k]);
     const newIdx = order.indexOf(oldIdx);
-    const newLetter = 'ABCD'[newIdx];
 
-    // Собираем новую строку options
-    const newInner = newItems.map((it) => it.full).join(', ');
+    // Перенумеровываем id ПО НОВЫЙ ПОЗИЦИИ. Без этого в файле остаются старые
+    // буквы в перемешанном порядке, а answer ниже пишется буквой позиции — и
+    // ключ указывает на чужой вариант. Именно так в банках оказалось 59
+    // неверных ключей single_choice.
+    const newInner = newItems
+      .map((it, pos) => it.full.replace(/^(\{ id: )[A-D](, text:)/, `$1${'ABCD'[pos]}$2`))
+      .join(', ');
     const newSv = `student_view: { options: [${newInner}] }`;
     let newPart = part.replace(svM[0], newSv);
 
-    // Заменяем answer
+    // answer — это буква позиции правильного варианта в новом порядке
     newPart = newPart.replace(
       /(teacher_only: \{ answer: "?)[A-D]("?,?)/,
-      `$1${newLetter}$2`,
+      `$1${'ABCD'[newIdx]}$2`,
     );
 
     if (newPart !== part) {

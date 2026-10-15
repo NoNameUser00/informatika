@@ -232,7 +232,7 @@
   fgos_requirement: 1.3
   fgos_element: 1.6
   fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
-  prompt: "Имеются монеты 1, 3 и 5 рубля. Сколькими способами можно набрать сумму 7 рублей? Запишите только число."
+  prompt: "Имеются монеты 1, 3 и 5 рубля, причём каждого номинала сколько угодно. Сколькими способами можно набрать сумму 7 рублей? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
   teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Способы: 1·1 + 2·3 + 0·5; 2·1 + 0·3 + 1·5; 4·1 + 1·3 + 0·5; 7·1 + 0·3 + 0·5 — всего 4. В дереве решений каждая ветка заканчивается таким набором, их и считают." }
@@ -489,10 +489,10 @@
   fgos_requirement: 1.3
   fgos_element: 1.6
   fgos: { subject: [inf-9-tree], meta: [plan-actions] }
-  prompt: "У дерева с 12 вершинами корень один. Сколько рёбер ведёт к листьям — вершинам без потомков? Запишите только число."
+  prompt: "У дерева с 12 вершинами ровно один корень. Сколько в нём рёбер? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "Из корня выходит 11 рёбер — по одному на каждую следующую вершину, значит всего 11 листьев, если каждая вершина — лист. Листья — вершины, из которых не выходит ни одного ребра." }
+  teacher_only: { accepted_values_decimal: [11], answer_text: "11", explanation: "В дереве с 12 вершинами рёбер ровно на одно меньше, чем вершин: 12 − 1 = 11. Число листьев при этом может быть любым — одна цепочка даёт 1 лист, звезда 11, поэтому спрашивать про листья без описания формы нельзя." }
 
 - id: inf-9-graph-030
   class: 9
@@ -543,7 +543,7 @@
   prompt: "Перебирают пары из монет: 2 руб., 5 руб., 10 руб.. Каждая монета используется один раз, порядок не важен. Сколько всего пар? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Пар из 3 монет без повторов: 3 · 2 / 2 = 6. Порядок не важен, поэтому делим на два — иначе каждую пару посчитаем дважды." }
+  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "Пар из 3 монет без повторов: 3 · 2 / 2 = 3. Порядок не важен, поэтому делим на два — иначе каждую пару посчитаем дважды." }
 
 - id: inf-9-graph-033
   class: 9
@@ -611,7 +611,7 @@
   prompt: "Перебирают тройки из монет: 2 руб., 5 руб., 10 руб., 20 руб., каждая монета используется один раз, порядок не важен. Сколько всего троек? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [6], answer_text: "6", explanation: "Троек из 4 монет: 4 · 3 · 2 / 6 = 6. Порядок не важен, поэтому делим на 3 · 2 = 6 — столько перестановок даёт один и тот же набор." }
+  teacher_only: { accepted_values_decimal: [4], answer_text: "4", explanation: "Троек из 4 монет: 4 · 3 · 2 / 6 = 4. Порядок не важен, поэтому делим на 3 · 2 = 6 — столько перестановок даёт один и тот же набор." }
 
 - id: inf-9-graph-037
   class: 9
@@ -628,7 +628,7 @@
   prompt: "Взвешенный граф: рёбра A–B (4), A–C (2), B–D (5), C–D (8). Чему равна длина кратчайшего пути из A в D? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Пути и их длины: A→B→D = 4 + 5 = 9, A→C→D = 2 + 8 = 10. Минимум — 9 по пути A→B→D→D. Путь с меньшим числом рёбер не обязательно самый лёгкий." }
+  teacher_only: { accepted_values_decimal: [9], answer_text: "9", explanation: "Пути и их длины: A→B→D = 4 + 5 = 9, A→C→D = 2 + 8 = 10. Минимум — 9 по пути A→B→D. Путь с меньшим числом рёбер не обязательно самый лёгкий." }
 
 - id: inf-9-graph-038
   class: 9
@@ -744,10 +744,10 @@
   fgos_requirement: 1.3
   fgos_element: 1.6
   fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
-  prompt: "Граф: веса рёбер A–B = 4, A–C = 2, B–D = 5, C–D = 8. Кратчайший путь из A в D идёт по маршруту A→B→D→D. Сколько рёбер в этом маршруте? Запишите только число."
+  prompt: "Граф: веса рёбер A–B = 4, A–C = 2, B–D = 5, C–D = 8. Кратчайший путь из A в D идёт по маршруту A→B→D. Сколько рёбер в этом маршруте? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [3], answer_text: "3", explanation: "В маршруте A→B→D→D вершин 4, значит рёбер на одно меньше — 3. Число рёбер и сумма весов — разные характеристики пути, их не путают." }
+  teacher_only: { accepted_values_decimal: [2], answer_text: "2", explanation: "В маршруте A→B→D вершин 3, значит рёбер на одно меньше — 2. Число рёбер и сумма весов — разные характеристики пути, их не путают." }
 
 - id: inf-9-graph-045
   class: 9
@@ -798,7 +798,7 @@
   prompt: "Граф: веса рёбер A–B = 1, A–C = 1, B–D = 5, C–D = 5, B–E = 2, E–D = 2. Чему равен кратчайший путь из A в D? Запишите только число."
   student_view: { base: 10, placeholder: "только число" }
   auto_check: { method: numeric_base, base: 10, strip_affixes: true }
-  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Путь A→B→E→D: 1 + 2 + 2 = 5, он короче прямых вариантов по 6 и по A→C→D = 1 + 5 = 6. Значит, кратчайший маршрут — A→B→E→D→D с длиной 5." }
+  teacher_only: { accepted_values_decimal: [5], answer_text: "5", explanation: "Путь A→B→E→D: 1 + 2 + 2 = 5, он короче прямых вариантов по 6 и по A→C→D = 1 + 5 = 6. Значит, кратчайший маршрут — A→B→E→D с длиной 5." }
 
 - id: inf-9-graph-048
   class: 9

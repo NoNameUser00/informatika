@@ -431,8 +431,8 @@
           "text": "Ни от чего"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-11-algo-020",
@@ -535,8 +535,8 @@
           "text": "Строка 1, столбец 2"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-11-algo-057",
