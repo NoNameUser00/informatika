@@ -24,6 +24,9 @@ function eq(actual, expected, name) {
   }
 }
 
+// Банк записан в стиле настоящих: верный вариант назван текстом (answer_text),
+// буква answer — производная от порядка. Раньше скрипт держался за букву, и
+// перестановка её ломала; теперь он держится за текст и пересчитывает букву.
 const TASK = (id, opts, answer) => `
 - id: ${id}
   class: 9
@@ -33,7 +36,7 @@ const TASK = (id, opts, answer) => `
   prompt: "Вопрос ${id}?"
   student_view: { options: [${opts.map((t, i) => `{ id: ${'ABCD'[i]}, text: "${t}" }`).join(', ')}] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: ${answer}, explanation: "верно ${opts['ABCD'.indexOf(answer)]}" }
+  teacher_only: { answer: ${answer}, answer_text: "${opts['ABCD'.indexOf(answer)]}", explanation: "верно ${opts['ABCD'.indexOf(answer)]}" }
 `;
 
 const BANK = [
@@ -92,10 +95,32 @@ try {
     true,
     'повторный запуск сохраняет правильные варианты',
   );
+// 5. скрипт обязан ОТКАЗАТЬСЯ, а не чинить молча.
+  //    Раньше расхождение проглатывалось, и файл записывался как есть. Теперь
+  //    дрейф — ошибка с ненулевым кодом выхода, чтобы его нельзя было не заметить.
+  const runOn = (name, content) => {
+    const p = join(dir, name);
+    writeFileSync(p, content, 'utf-8');
+    try {
+      execFileSync('node', ['scripts/shuffle-options.mjs', p], { stdio: ['ignore', 'pipe', 'pipe'] });
+      return 0;
+    } catch (e) {
+      return e.status ?? 1;
+    }
+  };
+
+  // answer и answer_text разошлись: выбирать сторону молча нельзя
+  eq(runOn('drift.yaml', BANK.replace('answer: B,', 'answer: C,')), 1,
+    'расхождение answer и answer_text — ненулевой код выхода');
+
+  // якоря нет: неизвестно, какой вариант верный, перемешивать нечего
+  eq(runOn('no-anchor.yaml', BANK.replaceAll(/, answer_text: "[^"]*"/g, '')), 1,
+    'без answer_text — ненулевой код выхода');
 } finally {
   rmSync(dir, { recursive: true, force: true });
 }
 
 if (!existsSync(file)) console.log('  (временный каталог убран)');
+
 console.log(failed ? `\nПРОВАЛЕНО: ${failed}` : '\nвсе проверки пройдены');
 process.exit(failed ? 1 : 0);

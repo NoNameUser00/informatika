@@ -76,8 +76,25 @@ function shuffle(arr, rng) {
 
 const OPT_RE = /(\{ id: ([A-D]), text: ("(?:[^"\\]|\\.)*") \})/g;
 
+/**
+ * Снимает кавычки и экранирование со скалярного значения YAML. Нужна, чтобы
+ * сравнивать ТЕКСТ варианта с answer_text, а не их записанные в исходнике формы:
+ * форма может отличаться (`'` против `"`), а смысл один.
+ */
+function unquote(raw) {
+  const s = raw.trim();
+  if (s.length >= 2 && s.startsWith('"') && s.endsWith('"')) {
+    return s.slice(1, -1).replace(/\\(["\\])/g, '$1');
+  }
+  if (s.length >= 2 && s.startsWith("'") && s.endsWith("'")) {
+    return s.slice(1, -1).replace(/''/g, "'");
+  }
+  return s;
+}
+
 let totalShuffled = 0;
 let totalTasks = 0;
+let fatal = 0;
 
 for (const file of FILES) {
   const raw = readFileSync(file, 'utf-8');
@@ -109,13 +126,23 @@ for (const file of FILES) {
     }
     if (items.length < 2) continue;
 
-    // Старый правильный ответ — по букве в teacher_only
+    // Верный вариант опознаём по ТЕКСТУ (teacher_only.answer_text), а не по букве.
+    // Буква — производная от порядка вариантов, и опора на неё здесь и породила
+    // 59 неверных ключей: массив перемешивался, а буквы оставались старые.
     const ansM = /teacher_only: \{ answer: "?([A-D])"?,?/.exec(part);
     if (!ansM) {
       console.error(`  ! ${id}: не найден answer`);
+      fatal++;
       continue;
     }
     const oldLetter = ansM[1];
+    const atM = /answer_text:\s*("(?:[^"\\]|\\.)*"|'(?:[^']|'')*')/.exec(part);
+    if (!atM) {
+      console.error(`  ! ${id}: нет answer_text — перемешивать нельзя, верный вариант не назван`);
+      fatal++;
+      continue;
+    }
+    const wantText = unquote(atM[1]);
 
     // Канонический порядок перед перемешиванием: по тексту варианта. Тогда
     // результат зависит только от seed и содержимого вариантов, а не от того, в каком
@@ -123,9 +150,17 @@ for (const file of FILES) {
     const canonical = items
       .slice()
       .sort((a, b) => (a.text < b.text ? -1 : a.text > b.text ? 1 : 0));
-    const oldIdx = canonical.findIndex((it) => it.letter === oldLetter);
+    const oldIdx = canonical.findIndex((it) => unquote(it.text) === wantText);
     if (oldIdx < 0) {
-      console.error(`  ! ${id}: буква ${oldLetter} не найдена в options`);
+      console.error(`  ! ${id}: текст «${wantText}» не найден среди вариантов`);
+      fatal++;
+      continue;
+    }
+    if (canonical[oldIdx].letter !== oldLetter) {
+      // answer и answer_text разошлись: чинить надо в банке, а не молча брать
+      // одну из сторон — иначе ошибка закрепится в файле.
+      console.error(`  ! ${id}: answer=${oldLetter}, а answer_text указывает на ${canonical[oldIdx].letter}`);
+      fatal++;
       continue;
     }
 
@@ -151,6 +186,17 @@ for (const file of FILES) {
       `$1${'ABCD'[newIdx]}$2`,
     );
 
+    // Самопроверка на записанном тексте: буква, которую мы сейчас записали,
+    // обязана указывать именно на вариант с answer_text. Дешёвая проверка,
+    // которая ловит ошибку до того, как она попадёт в файл.
+    const wrote = /\{ id: ([A-D]), text: ("(?:[^"\\]|\\.)*") \}/g;
+    const written = [...newSv.matchAll(wrote)];
+    if (unquote(written[newIdx]?.[2] ?? '""') !== wantText) {
+      console.error(`  ! ${id}: после перестановки буква ${'ABCD'[newIdx]} указывает не на верный вариант`);
+      fatal++;
+      continue;
+    }
+
     if (newPart !== part) {
       parts[i] = newPart;
       changed++;
@@ -167,3 +213,10 @@ for (const file of FILES) {
 }
 
 console.log(`\nSHUFFLE ИТОГО: перемешано ${totalShuffled} из ${totalTasks} single_choice заданий`);
+if (fatal > 0) {
+  // Задания, которые не поддержаны форматом (например, блочный стиль), пропускаются
+  // молча — это не ошибка. Но если поддержанное задание не сошлось, это дрейф данных,
+  // и молчать о нём нельзя.
+  console.error(`\nSHUFFLE: ошибок ${fatal} — файлы записаны, но ключи требуют разбора`);
+  process.exit(1);
+}

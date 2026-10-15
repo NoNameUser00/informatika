@@ -14,7 +14,7 @@
   prompt: "Что из перечисленного является высказыванием?"
   student_view: { options: [{ id: C, text: "«2 + 2 = 5»" }, { id: A, text: "«Который час?»" }, { id: D, text: "«Ура!»" }, { id: B, text: "«Закрой окно!»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
+  teacher_only: { answer: A, answer_text: "«Который час?»", explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
 
 - id: inf-8-logic-002
   class: 8
@@ -31,7 +31,7 @@
   prompt: "Какие значения может принимать логическое высказывание?"
   student_view: { options: [{ id: B, text: "Истину или ложь" }, { id: D, text: "Да, нет или неизвестно" }, { id: A, text: "Только истину" }, { id: C, text: "Любое число" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Третьего не дано: истина (1) или ложь (0)" }
+  teacher_only: { answer: A, answer_text: "Только истину", explanation: "Третьего не дано: истина (1) или ложь (0)" }
 
 - id: inf-8-logic-003
   class: 8
@@ -48,7 +48,7 @@
   prompt: "Какое высказывание составное?"
   student_view: { options: [{ id: A, text: "«Идет дождь»" }, { id: D, text: "«2 × 2»" }, { id: B, text: "«Идет дождь и дует ветер»" }, { id: C, text: "«Закрой окно»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Два простых соединены связкой И" }
+  teacher_only: { answer: C, answer_text: "«Закрой окно»", explanation: "Два простых соединены связкой И" }
 
 - id: inf-8-logic-004
   class: 8
@@ -65,7 +65,7 @@
   prompt: "Какой знак обозначает конъюнкцию (И)?"
   student_view: { options: [{ id: C, text: "∧" }, { id: A, text: "∨" }, { id: B, text: "¬" }, { id: D, text: "=" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
+  teacher_only: { answer: A, answer_text: "∨", explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
 
 - id: inf-8-logic-005
   class: 8
@@ -82,7 +82,7 @@
   prompt: "Какой знак обозначает отрицание (НЕ)?"
   student_view: { options: [{ id: A, text: "∧" }, { id: C, text: "¬" }, { id: B, text: "∨" }, { id: D, text: "≠" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "¬ — НЕ" }
+  teacher_only: { answer: B, answer_text: "∨", explanation: "¬ — НЕ" }
 
 - id: inf-8-logic-006
   class: 8
@@ -150,7 +150,7 @@
   prompt: "При A=1, B=0 вычислите A ∧ B."
   student_view: { options: [{ id: B, text: "Ложь" }, { id: A, text: "Истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Подстановка даёт 0" }
+  teacher_only: { answer: A, answer_text: "Истина", explanation: "Подстановка даёт 0" }
 
 - id: inf-8-logic-010
   class: 8
@@ -167,7 +167,7 @@
   prompt: "При A=0, B=0 вычислите A ∨ B."
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+  teacher_only: { answer: B, answer_text: "Ложь", explanation: "Подстановка даёт 0" }
 
 - id: inf-8-logic-011
   class: 8
@@ -184,7 +184,7 @@
   prompt: "При A=0, B=0 вычислите ¬A."
   student_view: { options: [{ id: B, text: "Ложь" }, { id: A, text: "Истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Подстановка даёт 1" }
+  teacher_only: { answer: B, answer_text: "Ложь", explanation: "Подстановка даёт 1" }
 
 - id: inf-8-logic-012
   class: 8
@@ -201,7 +201,7 @@
   prompt: "При A=1, B=1 вычислите A ∧ ¬B."
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+  teacher_only: { answer: B, answer_text: "Ложь", explanation: "Подстановка даёт 0" }
 
 - id: inf-8-logic-013
   class: 8
@@ -218,7 +218,7 @@
   prompt: "При A=0, B=1 вычислите ¬(A ∨ B)."
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Подстановка даёт 0" }
+  teacher_only: { answer: B, answer_text: "Ложь", explanation: "Подстановка даёт 0" }
 
 - id: inf-8-logic-014
   class: 8
@@ -235,7 +235,7 @@
   prompt: "Какая операция выполняется первой в выражении A ∨ ¬B ∧ C?"
   student_view: { options: [{ id: B, text: "И" }, { id: C, text: "НЕ" }, { id: D, text: "Все одновременно" }, { id: A, text: "ИЛИ" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Сначала НЕ, потом И, потом ИЛИ" }
+  teacher_only: { answer: C, answer_text: "НЕ", explanation: "Сначала НЕ, потом И, потом ИЛИ" }
 
 - id: inf-8-logic-015
   class: 8
@@ -252,7 +252,7 @@
   prompt: "Чему равносильно выражение A ∨ (A ∧ B)?"
   student_view: { options: [{ id: B, text: "B" }, { id: A, text: "A" }, { id: D, text: "0" }, { id: C, text: "A ∧ B" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Поглощение: при A=1 всегда 1, при A=0 всегда 0" }
+  teacher_only: { answer: A, answer_text: "A", explanation: "Поглощение: при A=1 всегда 1, при A=0 всегда 0" }
 
 - id: inf-8-logic-016
   class: 8
@@ -286,7 +286,7 @@
   prompt: "При A=1 вычислите отрицание ¬A."
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Отрицание переворачивает: ¬1 = 0" }
+  teacher_only: { answer: B, answer_text: "Ложь", explanation: "Отрицание переворачивает: ¬1 = 0" }
 
 - id: inf-8-logic-018
   class: 8
@@ -320,7 +320,7 @@
   prompt: "Вычислите 1 ∨ 1."
   student_view: { options: [{ id: A, text: "Истина" }, { id: B, text: "Ложь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "ИЛИ неисключающее: достаточно одной единицы" }
+  teacher_only: { answer: A, answer_text: "Истина", explanation: "ИЛИ неисключающее: достаточно одной единицы" }
 
 - id: inf-8-logic-020
   class: 8
@@ -337,7 +337,7 @@
   prompt: "В высказывание «x — чётное число» вместо x подставили число 4. Истинно ли это высказывание?"
   student_view: { options: [{ id: D, text: "Это не высказывание" }, { id: B, text: "Ложь" }, { id: C, text: "Пока нельзя определить" }, { id: A, text: "Истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "4 делится на 2 без остатка, поэтому форма даёт истину. Область истинности — все чётные значения x." }
+  teacher_only: { answer: D, answer_text: "Это не высказывание", explanation: "4 делится на 2 без остатка, поэтому форма даёт истину. Область истинности — все чётные значения x." }
 
 - id: inf-8-logic-021
   class: 8
@@ -388,7 +388,7 @@
   prompt: "Запишите выражением условие «a больше 2 и a чётное»."
   student_view: { options: [{ id: B, text: "a > 2 ∨ (a mod 2 = 0)" }, { id: A, text: "a > 2 ∧ (a mod 2 = 0)" }, { id: D, text: "¬(a > 2) ∨ (a mod 2 = 0)" }, { id: C, text: "(a > 2) ∧ (a > 0)" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Оба условия должны выполняться одновременно — связка И. Проверка при a = 4: подходит только первый вариант." }
+  teacher_only: { answer: B, answer_text: "a > 2 ∨ (a mod 2 = 0)", explanation: "Оба условия должны выполняться одновременно — связка И. Проверка при a = 4: подходит только первый вариант." }
 
 - id: inf-8-logic-024
   class: 8
@@ -456,7 +456,7 @@
   prompt: "Чему равносильно выражение ¬(A ∨ B)?"
   student_view: { options: [{ id: B, text: "¬A ∨ ¬B" }, { id: D, text: "¬(A ∧ B)" }, { id: A, text: "¬A ∧ ¬B" }, { id: C, text: "A ∧ B" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Закон де Моргана: отрицание дизъюнкции — конъюнкция отрицаний. Проверка при A = 1, B = 0: слева ¬1 = 0, справа 0 ∧ 1 = 0." }
+  teacher_only: { answer: C, answer_text: "A ∧ B", explanation: "Закон де Моргана: отрицание дизъюнкции — конъюнкция отрицаний. Проверка при A = 1, B = 0: слева ¬1 = 0, справа 0 ∧ 1 = 0." }
 
 - id: inf-8-logic-028
   class: 8
@@ -490,7 +490,7 @@
   prompt: "У какого логического элемента один вход?"
   student_view: { options: [{ id: A, text: "И (конъюнктор)" }, { id: C, text: "НЕ (инвертор)" }, { id: D, text: "Повторитель сигнала" }, { id: B, text: "ИЛИ (дизъюнктор)" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "У инвертора один вход и кружок инверсии на выходе; у И и ИЛИ входов два и больше." }
+  teacher_only: { answer: B, answer_text: "ИЛИ (дизъюнктор)", explanation: "У инвертора один вход и кружок инверсии на выходе; у И и ИЛИ входов два и больше." }
 
 - id: inf-8-logic-030
   class: 8
@@ -561,7 +561,7 @@
   prompt: "Чем ложное высказывание отличается от предложения, которое высказыванием не является?"
   student_view: { options: [{ id: C, text: "Ложное высказывание нельзя проверить, а проверить можно только истинные" }, { id: D, text: "Ложное высказывание не содержит чисел и названий" }, { id: A, text: "Ложное высказывание всё равно высказывание: у него есть значение 0" }, { id: B, text: "Ничем: это одно и то же" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "«2 + 2 = 5» — высказывание, и оно ложно: значение 0 у него есть. А вот «Какой будет результат?» — вопрос, истинности у него нет вовсе, поэтому это не высказывание." }
+  teacher_only: { answer: A, answer_text: "Ложное высказывание всё равно высказывание: у него есть значение 0", explanation: "«2 + 2 = 5» — высказывание, и оно ложно: значение 0 у него есть. А вот «Какой будет результат?» — вопрос, истинности у него нет вовсе, поэтому это не высказывание." }
 
 - id: inf-8-logic-034
   class: 8
@@ -595,7 +595,7 @@
   prompt: "Чему равно выражение A ∧ 1 при любом значении A?"
   student_view: { options: [{ id: B, text: "1" }, { id: C, text: "0" }, { id: D, text: "Значение зависит от A и его нельзя назвать заранее" }, { id: A, text: "A" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Единичный операнд ничего не меняет: при A = 1 получаем 1 ∧ 1 = 1, при A = 0 — 0 ∧ 1 = 0. Единица сохраняет значение другого операнда, поэтому выражение равно A." }
+  teacher_only: { answer: A, answer_text: "A", explanation: "Единичный операнд ничего не меняет: при A = 1 получаем 1 ∧ 1 = 1, при A = 0 — 0 ∧ 1 = 0. Единица сохраняет значение другого операнда, поэтому выражение равно A." }
 
 - id: inf-8-logic-036
   class: 8
@@ -629,7 +629,7 @@
   prompt: "Как правильно читается выражение ¬A ∧ B?"
   student_view: { options: [{ id: C, text: "как (¬A) ∧ (¬B) — отрицаются обе переменные" }, { id: D, text: "как ¬A, а B к нему отношения не имеет" }, { id: B, text: "как ¬(A ∧ B) — отрицается всё выражение" }, { id: A, text: "как (¬A) ∧ B — отрицается только A" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Операция НЕ меняет только следующую за ней конструкцию, поэтому ¬A ∧ B = (¬A) ∧ B. Чтобы отрицать всё выражение, нужны скобки: ¬(A ∧ B) — это уже другое выражение." }
+  teacher_only: { answer: D, answer_text: "как ¬A, а B к нему отношения не имеет", explanation: "Операция НЕ меняет только следующую за ней конструкцию, поэтому ¬A ∧ B = (¬A) ∧ B. Чтобы отрицать всё выражение, нужны скобки: ¬(A ∧ B) — это уже другое выражение." }
 
 - id: inf-8-logic-038
   class: 8
@@ -697,7 +697,7 @@
   prompt: "Чему равно выражение ¬¬A?"
   student_view: { options: [{ id: B, text: "¬A" }, { id: A, text: "A" }, { id: C, text: "1" }, { id: D, text: "0" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Два отрицания подряд отменяют друг друга: при A = 1 получаем ¬1 = 0, потом ¬0 = 1; при A = 0 наоборот, результат 0. Значит ¬¬A = A при любом значении." }
+  teacher_only: { answer: A, answer_text: "A", explanation: "Два отрицания подряд отменяют друг друга: при A = 1 получаем ¬1 = 0, потом ¬0 = 1; при A = 0 наоборот, результат 0. Значит ¬¬A = A при любом значении." }
 
 - id: inf-8-logic-042
   class: 8
@@ -731,7 +731,7 @@
   prompt: "Чему равносильно выражение ¬(A ∧ B)?"
   student_view: { options: [{ id: B, text: "¬A ∧ ¬B" }, { id: A, text: "¬A ∨ ¬B" }, { id: D, text: "¬(A ∨ B)" }, { id: C, text: "A ∨ B" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Закон де Моргана: отрицание конъюнкции — это дизъюнкция отрицаний. Проверка при A = 0, B = 0: слева ¬0 = 1, справа 1 ∨ 1 = 1; при A = 1, B = 1: слева 0, справа 0 ∨ 0 = 0." }
+  teacher_only: { answer: B, answer_text: "¬A ∧ ¬B", explanation: "Закон де Моргана: отрицание конъюнкции — это дизъюнкция отрицаний. Проверка при A = 0, B = 0: слева ¬0 = 1, справа 1 ∨ 1 = 1; при A = 1, B = 1: слева 0, справа 0 ∨ 0 = 0." }
 
 - id: inf-8-logic-044
   class: 8
@@ -748,7 +748,7 @@
   prompt: "Чему равно A ∧ (B ∨ C)?"
   student_view: { options: [{ id: A, text: "(A ∧ B) ∨ (A ∧ C)" }, { id: C, text: "(A ∨ B) ∧ C" }, { id: B, text: "(A ∧ B) ∨ C" }, { id: D, text: "A ∧ B ∧ C" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Закон распределительности разносит A внутрь скобок с дизъюнкцией. Проверка при A = 0: слева 0, справа 0 ∨ 0 = 0; при A = 1 и B = 1, C = 0: слева 1, справа 1 ∨ 0 = 1. Ошибка — потерять скобку и записать (A ∧ B) ∨ C." }
+  teacher_only: { answer: A, answer_text: "(A ∧ B) ∨ (A ∧ C)", explanation: "Закон распределительности разносит A внутрь скобок с дизъюнкцией. Проверка при A = 0: слева 0, справа 0 ∨ 0 = 0; при A = 1 и B = 1, C = 0: слева 1, справа 1 ∨ 0 = 1. Ошибка — потерять скобку и записать (A ∧ B) ∨ C." }
 
 - id: inf-8-logic-045
   class: 8
@@ -816,7 +816,7 @@
   prompt: "В таблице истинности для двух переменных наборы записывают как двоичные числа от 0 до 3. Какая строка (без шапки) соответствует набору A = 1, B = 0?"
   student_view: { options: [{ id: D, text: "Четвёртая" }, { id: B, text: "Вторая" }, { id: A, text: "Третья" }, { id: C, text: "Первая" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Порядок наборов: 00, 01, 10, 11. Значит A = 1, B = 0 — это третья строка. Начинать таблицу с 01 нельзя: строка 00 тоже нужна, иначе один набор потеряется." }
+  teacher_only: { answer: A, answer_text: "Третья", explanation: "Порядок наборов: 00, 01, 10, 11. Значит A = 1, B = 0 — это третья строка. Начинать таблицу с 01 нельзя: строка 00 тоже нужна, иначе один набор потеряется." }
 
 - id: inf-8-logic-049
   class: 8
@@ -901,7 +901,7 @@
   prompt: "В готовой таблице истинности для двух переменных в наборе A = 0, B = 1 вычисляется выражение ¬A ∨ B. Какое значение стоит в этом столбце?"
   student_view: { options: [{ id: B, text: "0" }, { id: A, text: "1" }, { id: C, text: "Значение зависит от того, как расположены столбцы" }, { id: D, text: "Вычислять нужно только после НЕ, иначе таблица неверна" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Считаем по промежуточным столбцам: ¬A = ¬0 = 1, затем 1 ∨ 1 = 1. Порядок столбцов не влияет на результат вычисления — влияет только на то, в какой колонке стоит число." }
+  teacher_only: { answer: A, answer_text: "1", explanation: "Считаем по промежуточным столбцам: ¬A = ¬0 = 1, затем 1 ∨ 1 = 1. Порядок столбцов не влияет на результат вычисления — влияет только на то, в какой колонке стоит число." }
 
 - id: inf-8-logic-054
   class: 8
@@ -952,7 +952,7 @@
   prompt: "Где на схеме рисуют кружок инверсии у логического элемента?"
   student_view: { options: [{ id: A, text: "На выходе элемента — он и означает НЕ" }, { id: B, text: "На каждом входе элемента" }, { id: D, text: "Кружка нет ни на одном логическом элементе" }, { id: C, text: "На корпусе элемента, независимо от входов и выхода" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Кружок на выходе превращает обычный элемент в инвертор: сигнал на выходе берётся с противоположным значением. На входах кружков нет — там просто приходят сигналы." }
+  teacher_only: { answer: A, answer_text: "На выходе элемента — он и означает НЕ", explanation: "Кружок на выходе превращает обычный элемент в инвертор: сигнал на выходе берётся с противоположным значением. На входах кружков нет — там просто приходят сигналы." }
 
 - id: inf-8-logic-057
   class: 8
@@ -1160,7 +1160,7 @@
   prompt: "Запишите логическое выражение из двух высказываний A и B, которое истинно тогда и только тогда, когда ровно одно из них истинно."
   student_view: { options: [{ id: C, text: "A ∨ B" }, { id: D, text: "(A ∧ ¬B) ∧ (¬A ∧ B)" }, { id: A, text: "(A ∧ ¬B) ∨ (¬A ∧ B)" }, { id: B, text: "A ∧ B" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Формула «ровно одно» разбирается на два случая: A истинно, B ложно — или наоборот. Это две конъюнкции (A ∧ ¬B) и (¬A ∧ B), соединённые ИЛИ, то есть (A ∧ ¬B) ∨ (¬A ∧ B). Проверка перебором всех четырёх наборов: эта запись истинна в строках 01 и 10. Вариант A ∧ B истинна только при обоих единицах, вариант A ∨ B — ещё и при 11, а двойное И вообще всегда ложно." }
+  teacher_only: { answer: C, answer_text: "A ∨ B", explanation: "Формула «ровно одно» разбирается на два случая: A истинно, B ложно — или наоборот. Это две конъюнкции (A ∧ ¬B) и (¬A ∧ B), соединённые ИЛИ, то есть (A ∧ ¬B) ∨ (¬A ∧ B). Проверка перебором всех четырёх наборов: эта запись истинна в строках 01 и 10. Вариант A ∧ B истинна только при обоих единицах, вариант A ∨ B — ещё и при 11, а двойное И вообще всегда ложно." }
 
 - id: inf-8-logic-069
   class: 8
@@ -1194,4 +1194,4 @@
   prompt: "Какой закон алгебры логики записывается равенством A ∨ B = B ∨ A?"
   student_view: { options: [{ id: A, text: "закон коммутативности" }, { id: D, text: "закон де Моргана" }, { id: B, text: "закон ассоциативности" }, { id: C, text: "закон дистрибутивности" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "Коммутативность — переставимость операндов: от перестановки A и B ∨ значение не меняется, поэтому в записи оба слагаемых меняются местами. Ассоциативность переставляет не операнды, а скобки: (A ∨ B) ∨ C = A ∨ (B ∨ C). Дистрибутивность разносит множитель в скобки: A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C). Закон де Моргана отрицание переносит внутрь: ¬(A ∨ B) = ¬A ∧ ¬B." }
+  teacher_only: { answer: A, answer_text: "закон коммутативности", explanation: "Коммутативность — переставимость операндов: от перестановки A и B ∨ значение не меняется, поэтому в записи оба слагаемых меняются местами. Ассоциативность переставляет не операнды, а скобки: (A ∨ B) ∨ C = A ∨ (B ∨ C). Дистрибутивность разносит множитель в скобки: A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C). Закон де Моргана отрицание переносит внутрь: ¬(A ∨ B) = ¬A ∧ ¬B." }

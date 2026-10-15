@@ -11,6 +11,12 @@
 // находит задания, где ключ не согласуется с собственным пояснением банка.
 // Такие задания нужно разобрать глазами, а не чинить автоматически.
 //
+// ВТОРАЯ ПРОВЕРКА — якорь ключа. teacher_only.answer_text называет верный
+// вариант ТЕКСТОМ, а буква answer обязана указывать именно на него. Это не
+// проверка правильности (о том, какой вариант верен, по-прежнему решает
+// человек), а проверка целостности записи: пока якорь на месте, перестановка
+// вариантов физически не может тихо сломать ключ, как это случилось 88 раз.
+//
 // ЧЕСТНО О ГРАНИЦАХ. Инструмент ловит не всё, и это зафиксировано тестами:
 //  1) Символические варианты (∧, ∨, ¬, «=») нормализация съедает как «не буквы»,
 //     поэтому задания на знаки операций (например inf-8-logic-004) машинно НЕ
@@ -136,6 +142,53 @@ export function findConflicts(tasks) {
   return out;
 }
 
+/**
+ * Инвариант якоря ключа: teacher_only.answer_text обязан называть вариант,
+ * на который указывает буква teacher_only.answer, — и ровно один.
+ *
+ * Зачем. Буква ключа производна от порядка вариантов: переставил варианты —
+ * буква поехала, и если её не пересчитать, ключ указывает на чужой ответ
+ * (так появились 88 неверных ключей). Сейчас верный вариант назван ТЕКСТОМ,
+ * поэтому букву можно всегда пересчитать, а расхождение — это дрейф данных,
+ * который надо увидеть, а не загладить.
+ *
+ * Возвращает список заданий с нарушениями; пустой список означает, что
+ * перестановка вариантов больше не может тихо сломать ключ.
+ */
+export function findAnchorProblems(tasks) {
+  const out = [];
+  for (const t of tasks) {
+    if (t?.type !== 'single_choice') continue;
+    const options = t.student_view?.options ?? [];
+    const answer = t.teacher_only?.answer;
+    const want = t.teacher_only?.answer_text;
+
+    if (typeof want !== 'string' || !want.trim()) {
+      out.push({ id: t.id, reason: 'нет answer_text', answer, answerText: want });
+      continue;
+    }
+    const hits = options.filter((o) => o.text === want).map((o) => o.id);
+    if (hits.length !== 1) {
+      out.push({
+        id: t.id,
+        reason: `текст ответа встречается среди вариантов ${hits.length} раз(а)`,
+        answer,
+        answerText: want,
+      });
+      continue;
+    }
+    if (answer && hits[0] !== answer) {
+      out.push({
+        id: t.id,
+        reason: `answer=${answer}, а answer_text указывает на ${hits[0]}`,
+        answer,
+        answerText: want,
+      });
+    }
+  }
+  return out;
+}
+
 export function loadAllTasks() {
   const tasks = [];
   for (const f of yamlFiles('data/tasks')) {
@@ -154,6 +207,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   const all = findConflicts(tasks);
   const conflicts = all.filter((c) => !allow.has(c.id));
   const allowed = all.filter((c) => allow.has(c.id));
+  const anchors = findAnchorProblems(tasks);
 
   if (argv.includes('--json')) {
     console.log(JSON.stringify({ total: all.length, conflicts }, null, 2));
@@ -200,5 +254,15 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     );
     process.exit(1);
   }
-  console.log('\nПроверка пройдена: ключи не противоречат пояснениям.');
+  if (anchors.length) {
+    console.error(`\nЯКОРЬ КЛЮЧА НАРУШЕН (${anchors.length}):`);
+    for (const a of anchors.slice(0, 40)) console.error(`  ${a.id}: ${a.reason}`);
+    if (anchors.length > 40) console.error(`  ... ещё ${anchors.length - 40}`);
+    console.error(
+      '\nПРОВЕРКА НЕ ПРОЙДЕНА: верный вариант должен быть назван текстом ' +
+        '(teacher_only.answer_text), и буква answer обязана указывать именно на него.',
+    );
+    process.exit(1);
+  }
+  console.log('\nПроверка пройдена: ключи не противоречат пояснениям, якорь answer_text цел.');
 }

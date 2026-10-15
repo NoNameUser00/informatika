@@ -34,12 +34,25 @@ export function convert(t: any): TaskJson {
     };
   }
   if (t.type === 'single_choice') {
-    if (!t.student_view.options.some((o: any) => o.id === t.teacher_only.answer)) {
-      throw new Error(`selfcheck FAIL ${t.id}: ответа «${t.teacher_only.answer}» нет среди вариантов`);
+    // Ключ держим по ТЕКСТУ верного варианта, а не по букве. Буква производна от
+    // порядка вариантов, и любая перестановка могла её тихо сломать — так появились
+    // 88 неверных ключей. По тексту вариант находится однозначно, поэтому расхождение
+    // с буквой означает дрейф данных: роняем сборку, а не выбираем сторону молча.
+    const want = t.teacher_only.answer_text;
+    if (typeof want !== 'string' || !want.trim()) {
+      throw new Error(`selfcheck FAIL ${t.id}: нет teacher_only.answer_text — верный вариант должен быть назван текстом`);
+    }
+    const hits = t.student_view.options.filter((o: any) => o.text === want);
+    if (hits.length !== 1) {
+      throw new Error(`selfcheck FAIL ${t.id}: текст ответа «${want}» встречается среди вариантов ${hits.length} раз (нужен ровно один)`);
+    }
+    const correct = hits[0].id;
+    if (t.teacher_only.answer && t.teacher_only.answer !== correct) {
+      throw new Error(`selfcheck FAIL ${t.id}: answer=${t.teacher_only.answer}, а answer_text указывает на «${correct}»`);
     }
     return {
       id: t.id, lesson: t.lesson, type: t.type, points: t.points, prompt: t.prompt,
-      options: t.student_view.options, correct: t.teacher_only.answer, key: t.teacher_only.answer,
+      options: t.student_view.options, correct, key: correct,
     };
   }
   if (t.type === 'matching') {

@@ -125,6 +125,8 @@
     method: exact_option
   teacher_only:
     answer: C
+
+    answer_text: "4"
     explanation: "15 = 1111_2, четыре единицы"
     common_errors: ["Путают с числом нулей", "Считают 15_10 как 111_2"]
 
@@ -292,6 +294,8 @@
     method: exact_option
   teacher_only:
     answer: B
+
+    answer_text: "Римская"
     explanation: "В римской значение знака не зависит от позиции (I, V, X...), в остальных — зависит от разряда"
     common_errors: ["Путают основание с позиционностью"]
 

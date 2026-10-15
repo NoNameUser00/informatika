@@ -1,4 +1,4 @@
-import { scoreOptions, findConflicts } from './audit-keys.mjs';
+import { scoreOptions, findConflicts, findAnchorProblems, loadAllTasks } from './audit-keys.mjs';
 
 let failed = 0;
 function eq(actual, expected, name) {
@@ -111,6 +111,60 @@ eq(
   scoreOptions(task({ student_view: { options: opts(['A', 'x']) }, teacher_only: {} })).score,
   { A: 0 },
   'нет answer — вес не падает',
+);
+
+console.log('\nfindAnchorProblems');
+const anch = (t) => findAnchorProblems([t]);
+
+// согласованная запись: буква указывает на вариант, названный текстом
+eq(
+  anch(task({
+    student_view: { options: opts(['A', 'раз'], ['B', 'два']) },
+    teacher_only: { answer: 'B', answer_text: 'два' },
+  })),
+  [],
+  'якорь цел, когда буква указывает на названный вариант',
+);
+
+// переставили варианты, а букву забыли пересчитать — ровно тот дрейф,
+// из-за которого в банках было 88 неверных ключей
+eq(
+  anch(task({
+    student_view: { options: opts(['A', 'два'], ['B', 'раз']) },
+    teacher_only: { answer: 'B', answer_text: 'два' },
+  })).length,
+  1,
+  'буква указывает не на anchor_text — дрейф ловится',
+);
+
+// якорь не записан вовсе
+eq(
+  anch(task({
+    student_view: { options: opts(['A', 'раз'], ['B', 'два']) },
+    teacher_only: { answer: 'A' },
+  })).length,
+  1,
+  'без answer_text запись неполна',
+);
+
+// два варианта с одинаковым текстом: якорь не указывает на один вариант
+eq(
+  anch(task({
+    student_view: { options: opts(['A', 'да'], ['B', 'да']) },
+    teacher_only: { answer: 'A', answer_text: 'да' },
+  })).length,
+  1,
+  'одинаковые тексты делают якорь неоднозначным',
+);
+
+// якорь цел у ВСЕХ заданий банка — baseline, который ломается при первой же
+// правке ключа вручную
+const realSingle = loadAllTasks().filter((t) => t?.type === 'single_choice');
+const realProblems = findAnchorProblems(realSingle);
+eq(
+  realProblems.slice(0, 3).map((p) => `${p.id}: ${p.reason}`),
+  [],
+  `якорь цел во всех ${realSingle.length} single_choice банка`,
 );
 
 console.log(failed ? `\nПРОВАЛЕНО: ${failed}` : '\nвсе проверки пройдены');
