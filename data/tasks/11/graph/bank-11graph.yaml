@@ -82,7 +82,7 @@
   prompt: "Строка матрицы смежности вершины 2: 0 0 1 1. С какими вершинами она смежна?"
   student_view: { options: [{ id: D, text: "Только 4" }, { id: A, text: "3 и 4" }, { id: C, text: "2 и 3" }, { id: B, text: "1 и 2" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Единицы в столбцах 3 и 4; строка — «откуда»" }
+  teacher_only: { answer: A, explanation: "Единицы в столбцах 3 и 4; строка — «откуда»" }
 
 - id: inf-11-graph-006
   class: 11
@@ -167,7 +167,7 @@
   prompt: "Куча 7 камней, ходы +1/+2, цель 11+. За сколько своих ходов выиграет первый при лучшей игре обоих?"
   student_view: { options: [{ id: B, text: "2" }, { id: A, text: "1" }, { id: C, text: "3" }, { id: D, text: "Не выиграет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "7 → 8, затем 9 → 11 или 10 → 11: победа на 2-м ходу при любом ответе" }
+  teacher_only: { answer: B, explanation: "7 → 8, затем 9 → 11 или 10 → 11: победа на 2-м ходу при любом ответе" }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
 

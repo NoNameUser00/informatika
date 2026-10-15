@@ -48,7 +48,7 @@
   prompt: "Сколько разных символов можно закодировать кодом длины 5?"
   student_view: { options: [{ id: B, text: "25" }, { id: D, text: "64" }, { id: A, text: "10" }, { id: C, text: "32" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "N = 2^5 = 32" }
+  teacher_only: { answer: C, explanation: "N = 2^5 = 32" }
 
 - id: inf-7-inf-004
   class: 7
@@ -150,7 +150,7 @@
   prompt: "Сколько байт в одном килобайте?"
   student_view: { options: [{ id: B, text: "1024" }, { id: C, text: "8" }, { id: D, text: "256" }, { id: A, text: "1000" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, explanation: "В информатике кило — это 1024" }
+  teacher_only: { answer: B, explanation: "В информатике кило — это 1024" }
 
 - id: inf-7-inf-010
   class: 7
@@ -217,7 +217,7 @@
   prompt: "Сколько разных символов можно закодировать кодом длины 3?"
   student_view: { options: [{ id: A, text: "6" }, { id: C, text: "9" }, { id: B, text: "8" }, { id: D, text: "3" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "2^3 = 8" }
+  teacher_only: { answer: B, explanation: "2^3 = 8" }
 
 - id: inf-7-inf-014
   class: 7
@@ -356,7 +356,7 @@
   prompt: "Сообщение занимает 40 байт и закодировано равномерным кодом по 8 бит на символ. Сколько символов в сообщении?"
   student_view: { options: [{ id: C, text: "5" }, { id: B, text: "320" }, { id: D, text: "800" }, { id: A, text: "40" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "40 байт — это 320 бит; при равномерном коде символов = битов : i = 320 : 8 = 40." }
+  teacher_only: { answer: A, explanation: "40 байт — это 320 бит; при равномерном коде символов = битов : i = 320 : 8 = 40." }
 
 - id: inf-7-inf-022
   class: 7
@@ -679,7 +679,7 @@
   prompt: "Для алфавита из 64 символов ученик записал i = 64. В чём ошибка?"
   student_view: { options: [{ id: D, text: "i = 64 верно, но вес символа измеряют в байтах" }, { id: C, text: "i находят делением: 64 : 8 = 8" }, { id: A, text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит" }, { id: B, text: "Ошибки нет: N и i — одно и то же" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Из N = 2^i берут показатель степени: при 64 символах i = 6, а не 64." }
+  teacher_only: { answer: A, explanation: "Из N = 2^i берут показатель степени: при 64 символах i = 6, а не 64." }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-7-bank2.mjs ====
 # Ответы вычислены кодом (calc/подбор варианта) и проверены check.mjs.
@@ -699,7 +699,7 @@
   prompt: "Ученик написал в ответе: «Учительница завысила оценки, потому что она несправедливая». Какое свойство информации требует, чтобы сведения соответствовали реальности, а не мнению автора?"
   student_view: { options: [{ id: C, text: "Ценность" }, { id: A, text: "Объективность" }, { id: D, text: "Полнота" }, { id: B, text: "Понятность" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Объективность — соответствие реальности; оценка «несправедливо» это мнение, а его нельзя выдать за факт." }
+  teacher_only: { answer: A, explanation: "Объективность — соответствие реальности; оценка «несправедливо» это мнение, а его нельзя выдать за факт." }
 
 - id: inf-7-inf-042
   class: 7
@@ -716,7 +716,7 @@
   prompt: "Два ученика получили одно и то же сообщение о расписании на завтра. Для первого оно оказалось полезным, а для второго — бесполезным: он уже знал расписание наизусть. Какое свойство информации различается у этих двух сообщений?"
   student_view: { options: [{ id: B, text: "Полнота" }, { id: D, text: "Достоверность" }, { id: C, text: "Актуальность" }, { id: A, text: "Ценность" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Ценность — польза именно для этого человека в этот момент; сами сведения от этого не меняются." }
+  teacher_only: { answer: A, explanation: "Ценность — польза именно для этого человека в этот момент; сами сведения от этого не меняются." }
 
 - id: inf-7-inf-043
   class: 7

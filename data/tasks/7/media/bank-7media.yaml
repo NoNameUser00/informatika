@@ -14,7 +14,7 @@
   prompt: "Что идёт первым при создании презентации?"
   student_view: { options: [{ id: D, text: "Монтаж" }, { id: A, text: "Планирование" }, { id: B, text: "Анимация" }, { id: C, text: "Репетиция" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "План → слайды → монтаж → репетиция" }
+  teacher_only: { answer: A, explanation: "План → слайды → монтаж → репетиция" }
 
 - id: inf-7-media-002
   class: 7
@@ -615,7 +615,7 @@
   prompt: "Как записывается код чистого красного цвета в модели RGB?"
   student_view: { options: [{ id: D, text: "#000000" }, { id: A, text: "#FF0000" }, { id: C, text: "#0000FF" }, { id: B, text: "#00FF00" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Каналы идут в порядке R, G, B: максимум красного при нулевых зелёном и синем — это #FF0000." }
+  teacher_only: { answer: A, explanation: "Каналы идут в порядке R, G, B: максимум красного при нулевых зелёном и синем — это #FF0000." }
 
 - id: inf-7-media-037
   class: 7
@@ -717,7 +717,7 @@
   prompt: "Какая анимация меняет цвет или размер объекта?"
   student_view: { options: [{ id: D, text: "Движение по траектории" }, { id: C, text: "Появление" }, { id: B, text: "Вылет" }, { id: A, text: "Выделение" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Появление — проявление, вылет — перемещение из-за края, выделение — смена цвета или размера." }
+  teacher_only: { answer: A, explanation: "Появление — проявление, вылет — перемещение из-за края, выделение — смена цвета или размера." }
 
 - id: inf-7-media-043
   class: 7
@@ -853,7 +853,7 @@
   prompt: "Каким инструментом выделяют область произвольной формы, например силуэт зверька?"
   student_view: { options: [{ id: B, text: "Заливка" }, { id: C, text: "Пипетка" }, { id: A, text: "Лассо" }, { id: D, text: "Градиент" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Лассо обводит произвольный контур, прямоугольное выделение — только рамку, а «Волшебная палочка» берёт область одного цвета." }
+  teacher_only: { answer: A, explanation: "Лассо обводит произвольный контур, прямоугольное выделение — только рамку, а «Волшебная палочка» берёт область одного цвета." }
 
 - id: inf-7-media-051
   class: 7
@@ -870,7 +870,7 @@
   prompt: "Ширина рисунка — 2400 пикселей, а его надо уменьшить до 800. Во сколько раз уменьшится высота, если пропорции сохранены?"
   student_view: { options: [{ id: B, text: "В 2 раза" }, { id: D, text: "Высота не изменится" }, { id: C, text: "В 800 раз" }, { id: A, text: "В 3 раза" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Пропорции сохраняются, поэтому обе стороны уменьшаются в одно и то же число раз: 2400 : 800 = 3." }
+  teacher_only: { answer: A, explanation: "Пропорции сохраняются, поэтому обе стороны уменьшаются в одно и то же число раз: 2400 : 800 = 3." }
 
 - id: inf-7-media-052
   class: 7
@@ -921,7 +921,7 @@
   prompt: "Какая программа — свободный векторный графический редактор?"
   student_view: { options: [{ id: D, text: "Архиватор 7-Zip" }, { id: A, text: "Inkscape" }, { id: C, text: "Проводник" }, { id: B, text: "Карандаш" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Inkscape распространяется как свободное ПО; остальные программы из списка для векторной графики не предназначены." }
+  teacher_only: { answer: A, explanation: "Inkscape распространяется как свободное ПО; остальные программы из списка для векторной графики не предназначены." }
 
 - id: inf-7-media-055
   class: 7

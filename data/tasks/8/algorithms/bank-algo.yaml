@@ -285,7 +285,7 @@
   prompt: "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?"
   student_view: { options: [{ id: C, text: "9" }, { id: D, text: "4" }, { id: A, text: "20" }, { id: B, text: "5" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
+  teacher_only: { answer: A, explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
 
 - id: inf-8-algo-018
   class: 8
@@ -404,7 +404,7 @@
   prompt: "Какой тип данных у значения '12' в Python?"
   student_view: { options: [{ id: A, text: "int" }, { id: D, text: "bool" }, { id: B, text: "float" }, { id: C, text: "str" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Кавычки делают запись строкой (str); без кавычек 12 — целое число int." }
+  teacher_only: { answer: C, explanation: "Кавычки делают запись строкой (str); без кавычек 12 — целое число int." }
 
 - id: inf-8-algo-025
   class: 8
@@ -965,7 +965,7 @@
   prompt: "Сколько различных результатов может дать ветвление с одним условием (две ветки)?"
   student_view: { options: [{ id: B, text: "Ровно один" }, { id: D, text: "Столько, сколько входных данных" }, { id: C, text: "Четыре" }, { id: A, text: "Не больше двух" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Каждая ветка даёт свой результат, а условие одно — значит путей два и результатов не больше двух" }
+  teacher_only: { answer: A, explanation: "Каждая ветка даёт свой результат, а условие одно — значит путей два и результатов не больше двух" }
 
 - id: inf-8-algo-058
   class: 8
@@ -1033,7 +1033,7 @@
   prompt: "Программа: если x чётно, то y := x · 2, иначе y := x + 1. Вывод — 10. Каким было x?"
   student_view: { options: [{ id: D, text: "4" }, { id: A, text: "5" }, { id: C, text: "20" }, { id: B, text: "9" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Проверяем все варианты: 5 → 6, 9 → 10 (верно), 20 → 40, 4 → 8. Подходит только 9" }
+  teacher_only: { answer: B, explanation: "Проверяем все варианты: 5 → 6, 9 → 10 (верно), 20 → 40, 4 → 8. Подходит только 9" }
 
 - id: inf-8-algo-062
   class: 8

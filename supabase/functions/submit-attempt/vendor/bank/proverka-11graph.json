@@ -428,8 +428,8 @@
           "text": "1 и 2"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-11-graph-017",
@@ -822,8 +822,8 @@
           "text": "Не выиграет"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-11-graph-027",

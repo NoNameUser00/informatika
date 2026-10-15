@@ -391,7 +391,7 @@
   prompt: "Ученик дважды щёлкнул по ярлыку программы. Какая системная программа ищет программу в памяти и передаёт ей управление?"
   student_view: { options: [{ id: D, text: "Программа просмотра изображений" }, { id: C, text: "Архиватор" }, { id: B, text: "Антивирус" }, { id: A, text: "Загрузчик" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "По цепочке: инсталлятор записал программу в список, ярлык запустил системный загрузчик." }
+  teacher_only: { answer: A, explanation: "По цепочке: инсталлятор записал программу в список, ярлык запустил системный загрузчик." }
 
 - id: inf-7-base-024
   class: 7
@@ -782,7 +782,7 @@
   prompt: "Что выбрать для перечисления шагов алгоритма, где важен порядок?"
   student_view: { options: [{ id: D, text: "Круговую диаграмму" }, { id: C, text: "Таблицу" }, { id: A, text: "Нумерованный список" }, { id: B, text: "Маркированный список" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Порядок важен — нумерованный список; порядок не важен — маркированный." }
+  teacher_only: { answer: A, explanation: "Порядок важен — нумерованный список; порядок не важен — маркированный." }
 
 - id: inf-7-base-047
   class: 7
@@ -833,7 +833,7 @@
   prompt: "В каком расширении LibreOffice Writer сохраняет документ в своём родном формате?"
   student_view: { options: [{ id: C, text: ".rtf" }, { id: D, text: ".pdf" }, { id: A, text: ".odt" }, { id: B, text: ".docx" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: ".odt — свой формат LibreOffice, а .docx — обменный формат для других программ." }
+  teacher_only: { answer: A, explanation: ".odt — свой формат LibreOffice, а .docx — обменный формат для других программ." }
 
 - id: inf-7-base-050
   class: 7
@@ -1108,7 +1108,7 @@
   prompt: "К какой группе программного обеспечения относится среда разработки на Python?"
   student_view: { options: [{ id: C, text: "Прикладное программное обеспечение" }, { id: D, text: "Служебные утилиты архиватора" }, { id: A, text: "Системы программирования" }, { id: B, text: "Системное программное обеспечение" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, explanation: "Среды разработки создают новые программы, поэтому это системы программирования, а не прикладные программы." }
+  teacher_only: { answer: A, explanation: "Среды разработки создают новые программы, поэтому это системы программирования, а не прикладные программы." }
 
 - id: inf-7-base-066
   class: 7

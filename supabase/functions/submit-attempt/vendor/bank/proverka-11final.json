@@ -200,8 +200,8 @@
           "text": "Линейную: по ней видно изменение показателя по месяцам"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-11-data-029",
@@ -743,8 +743,8 @@
           "text": "1 и 2"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-11-graph-035",
@@ -834,8 +834,8 @@
           "text": "Не выиграет"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-11-graph-012",

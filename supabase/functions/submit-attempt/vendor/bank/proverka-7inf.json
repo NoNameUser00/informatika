@@ -244,8 +244,8 @@
           "text": "Понятность"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-042",
@@ -271,8 +271,8 @@
           "text": "Ценность"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-017",
@@ -426,8 +426,8 @@
           "text": "32"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-7-inf-004",
@@ -490,8 +490,8 @@
           "text": "3"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-7-inf-020",
@@ -554,8 +554,8 @@
           "text": "40"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-022",
@@ -702,8 +702,8 @@
           "text": "1000"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-7-inf-014",
@@ -1094,8 +1094,8 @@
           "text": "#00FF00"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-base-030",

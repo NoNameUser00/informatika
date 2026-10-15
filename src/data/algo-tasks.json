@@ -314,8 +314,8 @@
           "text": "str"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-algo-025",
@@ -1001,8 +1001,8 @@
           "text": "5"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-018",
@@ -1091,8 +1091,8 @@
           "text": "Не больше двух"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-058",
@@ -1195,8 +1195,8 @@
           "text": "9"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-8-algo-062",

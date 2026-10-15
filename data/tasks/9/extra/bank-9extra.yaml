@@ -48,7 +48,7 @@
   prompt: "Процедура «сторона» (вперёд + направо 90) вызвана 4 раза в цикле. Какая фигура получится?"
   student_view: { options: [{ id: D, text: "Отрезок" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: A, text: "Квадрат" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "4 поворота по 90° замыкают квадрат; процедура переиспользована" }
+  teacher_only: { answer: A, explanation: "4 поворота по 90° замыкают квадрат; процедура переиспользована" }
 
 - id: inf-9-extra-015
   class: 9
@@ -269,7 +269,7 @@
   prompt: "Каким тегом вставляется картинка на веб-страницу?"
   student_view: { options: [{ id: D, text: "<table>" }, { id: A, text: "<img>" }, { id: B, text: "<p>" }, { id: C, text: "<a>" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "<p> — абзац, <a> — ссылка, <table> — таблица" }
+  teacher_only: { answer: A, explanation: "<p> — абзац, <a> — ссылка, <table> — таблица" }
 
 - id: inf-9-extra-012
   class: 9
@@ -1196,7 +1196,7 @@
   prompt: "Что является обязательной частью любой веб-страницы?"
   student_view: { options: [{ id: D, text: "База данных" }, { id: A, text: "Тело страницы с содержимым" }, { id: C, text: "Скрипт на JavaScript" }, { id: B, text: "Таблица стилей" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "B", explanation: "Страница без тела и содержимого не покажет ничего. Стили и скрипты подключают по желанию, база данных — тем более." }
+  teacher_only: { answer: "A", explanation: "Страница без тела и содержимого не покажет ничего. Стили и скрипты подключают по желанию, база данных — тем более." }
 
 - id: inf-9-extra-071
   class: 9

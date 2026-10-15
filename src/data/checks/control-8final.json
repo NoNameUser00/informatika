@@ -159,8 +159,8 @@
           "text": "IIII"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-numsys-005",
@@ -337,8 +337,8 @@
           "text": "Ничем: это одно и то же"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-008",
@@ -490,8 +490,8 @@
           "text": "0"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-069",
@@ -892,8 +892,8 @@
           "text": "str"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-algo-025",
@@ -1013,8 +1013,8 @@
           "text": "Не больше двух"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-059",

@@ -423,7 +423,7 @@
   prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 506."
   student_view: { options: [{ id: C, text: "9" }, { id: D, text: "7" }, { id: A, text: "8" }, { id: B, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, explanation: "Старшая цифра 6, минимальное основание 7" }
+  teacher_only: { answer: D, explanation: "Старшая цифра 6, минимальное основание 7" }
 
 - id: inf-8-numsys-039
   class: 8
@@ -440,7 +440,7 @@
   prompt: "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?"
   student_view: { options: [{ id: C, text: "XL" }, { id: D, text: "MCM" }, { id: B, text: "XIV" }, { id: A, text: "IIII" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "IIII — четыре I подряд, надо IV" }
+  teacher_only: { answer: A, explanation: "IIII — четыре I подряд, надо IV" }
 
 - id: inf-8-numsys-040
   class: 8
@@ -457,7 +457,7 @@
   prompt: "Сколько цифр в алфавите восьмеричной системы счисления?"
   student_view: { options: [{ id: D, text: "10" }, { id: B, text: "16" }, { id: A, text: "7" }, { id: C, text: "8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, explanation: "Цифры 0-7, всего 8" }
+  teacher_only: { answer: C, explanation: "Цифры 0-7, всего 8" }
 
 - id: inf-8-numsys-041
   class: 8

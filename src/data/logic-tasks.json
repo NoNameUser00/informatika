@@ -183,8 +183,8 @@
           "text": "Ничем: это одно и то же"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-034",
@@ -415,8 +415,8 @@
           "text": "ИЛИ"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-logic-017",
@@ -550,8 +550,8 @@
           "text": "A"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-036",
@@ -744,8 +744,8 @@
           "text": "0"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-042",
@@ -977,8 +977,8 @@
           "text": "Первая"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-049",
@@ -1044,8 +1044,8 @@
           "text": "Вычислять нужно только после НЕ, иначе таблица неверна"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-064",
@@ -1081,8 +1081,8 @@
           "text": "A ∧ B"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-logic-029",

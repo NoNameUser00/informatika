@@ -372,8 +372,8 @@
           "text": "str"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-algo-063",
@@ -1009,8 +1009,8 @@
           "text": "Не больше двух"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-058",

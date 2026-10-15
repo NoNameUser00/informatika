@@ -95,8 +95,8 @@
           "text": "Нет, контрпример x = 3"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-010",
@@ -159,8 +159,8 @@
           "text": "Значение зависит от того, в каком порядке выполнить операции"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-011",
@@ -415,8 +415,8 @@
           "text": "R = 1, S = 0"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-014",
@@ -488,8 +488,8 @@
           "text": "A ∧ ¬B"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-036",
@@ -562,8 +562,8 @@
           "text": "A = 1, B = 0, C = 0, D = 0"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-020",
@@ -820,8 +820,8 @@
           "text": "S = 0, R = 1: это команда сбросить значение"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-043",
@@ -857,8 +857,8 @@
           "text": "Тридцать два: нужно по четыре триггера на каждый бит"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-10-logic-050",

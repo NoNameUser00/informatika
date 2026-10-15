@@ -133,8 +133,8 @@
           "text": "Понятность"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-042",
@@ -160,8 +160,8 @@
           "text": "Ценность"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-017",
@@ -764,8 +764,8 @@
           "text": "Загрузчик"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-base-024",
@@ -818,8 +818,8 @@
           "text": "Системное программное обеспечение"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-base-066",
@@ -1576,8 +1576,8 @@
           "text": "32"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-7-inf-004",
@@ -1640,8 +1640,8 @@
           "text": "3"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-7-inf-020",
@@ -1704,8 +1704,8 @@
           "text": "40"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-inf-022",
@@ -1862,8 +1862,8 @@
           "text": "1000"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-7-inf-014",
@@ -2126,8 +2126,8 @@
           "text": "#00FF00"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-037",
@@ -3305,8 +3305,8 @@
           "text": "Маркированный список"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-base-047",
@@ -3421,8 +3421,8 @@
           "text": ".docx"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-base-050",
@@ -3630,8 +3630,8 @@
           "text": "Репетиция"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-002",
@@ -3861,8 +3861,8 @@
           "text": "Выделение"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-043",
@@ -4319,8 +4319,8 @@
           "text": "Ошибки нет: N и i — одно и то же"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-026",
@@ -4427,8 +4427,8 @@
           "text": "Градиент"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-051",
@@ -4454,8 +4454,8 @@
           "text": "В 3 раза"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-052",
@@ -4777,8 +4777,8 @@
           "text": "Карандаш"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-055",
