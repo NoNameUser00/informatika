@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
   prompt: "Что такое тактовая частота процессора?"
-  student_view: { options: [{ id: A, text: "Число тактов в секунду" }, { id: B, text: "Число ядер" }, { id: C, text: "Объём памяти" }, { id: D, text: "Длина кода за раз" }] }
+  student_view: { options: [{ id: A, text: "Длина кода за раз" }, { id: B, text: "Объём памяти" }, { id: C, text: "Число тактов в секунду" }, { id: D, text: "Число ядер" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Число тактов в секунду", explanation: "Тактов в секунду, измеряется в ГГц" }
+  teacher_only: { answer: C, answer_text: "Число тактов в секунду", explanation: "Тактов в секунду, измеряется в ГГц" }
 
 - id: inf-7-base-002
   class: 7
@@ -29,9 +29,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
   prompt: "Что хранится в постоянной памяти (ПЗУ)?"
-  student_view: { options: [{ id: B, text: "Открытые документы" }, { id: A, text: "Программа первоначальной загрузки" }, { id: D, text: "Ничего" }, { id: C, text: "Скачанные фильмы" }] }
+  student_view: { options: [{ id: A, text: "Открытые документы" }, { id: B, text: "Ничего" }, { id: C, text: "Скачанные фильмы" }, { id: D, text: "Программа первоначальной загрузки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Открытые документы", explanation: "ПЗУ не стирается при выключении и грузит компьютер" }
+  teacher_only: { answer: A, answer_text: "Открытые документы", explanation: "ПЗУ не стирается при выключении и грузит компьютер" }
 
 - id: inf-7-base-003
   class: 7
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Какое право даёт свободное ПО (лицензия GNU GPL)?"
-  student_view: { options: [{ id: B, text: "Только смотреть рекламу" }, { id: D, text: "Скрывать исходный код" }, { id: A, text: "Изучать и изменять программу" }, { id: C, text: "Платить каждый месяц" }] }
+  student_view: { options: [{ id: A, text: "Платить каждый месяц" }, { id: B, text: "Только смотреть рекламу" }, { id: C, text: "Изучать и изменять программу" }, { id: D, text: "Скрывать исходный код" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Изучать и изменять программу", explanation: "Использовать, изучать, копировать, распространять изменения" }
+  teacher_only: { answer: C, answer_text: "Изучать и изменять программу", explanation: "Использовать, изучать, копировать, распространять изменения" }
 
 - id: inf-7-base-004
   class: 7
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
   prompt: "Зачем упаковывать фотографии в архив перед отправкой?"
-  student_view: { options: [{ id: C, text: "Чтобы удалить вирусы" }, { id: B, text: "Фотографии станут цветными" }, { id: A, text: "Меньше места и быстрее передать" }, { id: D, text: "Чтобы поменять формат" }] }
+  student_view: { options: [{ id: A, text: "Чтобы поменять формат" }, { id: B, text: "Фотографии станут цветными" }, { id: C, text: "Меньше места и быстрее передать" }, { id: D, text: "Чтобы удалить вирусы" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Меньше места и быстрее передать", explanation: "Архив сжимает без потери качества" }
+  teacher_only: { answer: C, answer_text: "Меньше места и быстрее передать", explanation: "Архив сжимает без потери качества" }
 
 - id: inf-7-base-006
   class: 7
@@ -97,7 +97,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-format], meta: [plan-actions] }
   prompt: "Что относится к прямому форматированию символов?"
-  student_view: { options: [{ id: A, text: "Жирность и размер шрифта" }, { id: D, text: "Оглавление" }, { id: C, text: "Колонтитулы" }, { id: B, text: "Нумерация страниц" }] }
+  student_view: { options: [{ id: A, text: "Жирность и размер шрифта" }, { id: B, text: "Оглавление" }, { id: C, text: "Нумерация страниц" }, { id: D, text: "Колонтитулы" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Жирность и размер шрифта", explanation: "Символы — шрифт/размер/начертание; остальное — абзацы и документ" }
 
@@ -114,9 +114,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем структурируют перечисления в документе?"
-  student_view: { options: [{ id: D, text: "Колонтитулами" }, { id: B, text: "Только картинками" }, { id: A, text: "Списками и таблицами" }, { id: C, text: "Только шрифтом" }] }
+  student_view: { options: [{ id: A, text: "Только шрифтом" }, { id: B, text: "Списками и таблицами" }, { id: C, text: "Колонтитулами" }, { id: D, text: "Только картинками" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Списками и таблицами", explanation: "Списки — для перечислений, таблицы — для сеток данных" }
+  teacher_only: { answer: B, answer_text: "Списками и таблицами", explanation: "Списки — для перечислений, таблицы — для сеток данных" }
 
 - id: inf-7-base-008
   class: 7
@@ -131,9 +131,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-gfx-types], meta: [plan-actions] }
   prompt: "Чем растровое изображение отличается от векторного?"
-  student_view: { options: [{ id: B, text: "Хранит формулы фигур" }, { id: C, text: "Не имеет размера" }, { id: D, text: "Не хранит цвета" }, { id: A, text: "Хранит цвет каждого пикселя" }] }
+  student_view: { options: [{ id: A, text: "Не хранит цвета" }, { id: B, text: "Хранит формулы фигур" }, { id: C, text: "Хранит цвет каждого пикселя" }, { id: D, text: "Не имеет размера" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Хранит цвет каждого пикселя", explanation: "Растр — сетка пикселей; вектор — формулы" }
+  teacher_only: { answer: C, answer_text: "Хранит цвет каждого пикселя", explanation: "Растр — сетка пикселей; вектор — формулы" }
 
 - id: inf-7-base-009
   class: 7
@@ -182,9 +182,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Поиск ничего не нашёл. Что сделать первым делом?"
-  student_view: { options: [{ id: D, text: "Ждать неделю" }, { id: C, text: "Удалить браузер" }, { id: A, text: "Проверить написание слов" }, { id: B, text: "Выключить компьютер" }] }
+  student_view: { options: [{ id: A, text: "Удалить браузер" }, { id: B, text: "Проверить написание слов" }, { id: C, text: "Выключить компьютер" }, { id: D, text: "Ждать неделю" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Проверить написание слов", explanation: "Дальше: связки, синонимы, логика запроса, другой поисковик" }
+  teacher_only: { answer: B, answer_text: "Проверить написание слов", explanation: "Дальше: связки, синонимы, логика запроса, другой поисковик" }
 
 - id: inf-7-base-012
   class: 7
@@ -199,9 +199,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "Что защищает от вирусов в первую очередь?"
-  student_view: { options: [{ id: D, text: "Быстрый интернет" }, { id: C, text: "Громкий звук" }, { id: B, text: "Яркие обои" }, { id: A, text: "Антивирусная программа" }] }
+  student_view: { options: [{ id: A, text: "Яркие обои" }, { id: B, text: "Громкий звук" }, { id: C, text: "Быстрый интернет" }, { id: D, text: "Антивирусная программа" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Антивирусная программа", explanation: "Антивирусы + осторожность с файлами" }
+  teacher_only: { answer: D, answer_text: "Антивирусная программа", explanation: "Антивирусы + осторожность с файлами" }
 
 - id: inf-7-base-013
   class: 7
@@ -216,7 +216,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем показать доли чисел из таблицы документа?"
-  student_view: { options: [{ id: D, text: "Колонтитулом" }, { id: B, text: "Жирным шрифтом" }, { id: C, text: "Красной строкой" }, { id: A, text: "Круговой диаграммой" }] }
+  student_view: { options: [{ id: A, text: "Круговой диаграммой" }, { id: B, text: "Колонтитулом" }, { id: C, text: "Красной строкой" }, { id: D, text: "Жирным шрифтом" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Круговой диаграммой", explanation: "Доли — круг; сравнение — столбцы" }
 
@@ -233,9 +233,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
   prompt: "Где стоят пальцы при слепом десятипальцевом методе?"
-  student_view: { options: [{ id: A, text: "ФЫВА — слева, ОЛДЖ — справа" }, { id: C, text: "Где попало" }, { id: D, text: "На пробеле все" }, { id: B, text: "На цифрах" }] }
+  student_view: { options: [{ id: A, text: "Где попало" }, { id: B, text: "На цифрах" }, { id: C, text: "ФЫВА — слева, ОЛДЖ — справа" }, { id: D, text: "На пробеле все" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "ФЫВА — слева, ОЛДЖ — справа", explanation: "Основной ряд; глаза в текст" }
+  teacher_only: { answer: C, answer_text: "ФЫВА — слева, ОЛДЖ — справа", explanation: "Основной ряд; глаза в текст" }
 
 - id: inf-7-base-016
   class: 7
@@ -250,9 +250,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Чем нарисовать схему прямо в текстовом процессоре?"
-  student_view: { options: [{ id: C, text: "Жирным шрифтом" }, { id: A, text: "Фигурами с группировкой" }, { id: B, text: "Скриншотом экрана" }, { id: D, text: "Колонтитулом" }] }
+  student_view: { options: [{ id: A, text: "Скриншотом экрана" }, { id: B, text: "Жирным шрифтом" }, { id: C, text: "Колонтитулом" }, { id: D, text: "Фигурами с группировкой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Фигурами с группировкой", explanation: "Фигуры — вектор: тянется без мыла" }
+  teacher_only: { answer: D, answer_text: "Фигурами с группировкой", explanation: "Фигуры — вектор: тянется без мыла" }
 
 - id: inf-7-base-014
   class: 7
@@ -267,9 +267,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-cpu], meta: [plan-actions] }
   prompt: "Какая тенденция развития компьютеров верна?"
-  student_view: { options: [{ id: C, text: "Компьютеры растут в размерах" }, { id: B, text: "Одно ядро навсегда" }, { id: A, text: "Ядер больше, устройства меньше, счёт в облаках" }, { id: D, text: "Облаков не существует" }] }
+  student_view: { options: [{ id: A, text: "Одно ядро навсегда" }, { id: B, text: "Облаков не существует" }, { id: C, text: "Компьютеры растут в размерах" }, { id: D, text: "Ядер больше, устройства меньше, счёт в облаках" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Ядер больше, устройства меньше, счёт в облаках", explanation: "Многоядерность, мобильность, облака" }
+  teacher_only: { answer: D, answer_text: "Ядер больше, устройства меньше, счёт в облаках", explanation: "Многоядерность, мобильность, облака" }
 
 # ==== ДОПИСАНО scripts/make-7-bank.mjs — ниже руками не править ====
 # Ответы вычислены кодом (calc/автоматический подбор варианта) и проверены check.mjs.
@@ -287,7 +287,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Какой компьютер обслуживает запросы многих пользователей: сайты, почту, общие файлы?"
-  student_view: { options: [{ id: C, text: "Персональный компьютер" }, { id: A, text: "Сервер" }, { id: D, text: "Суперкомпьютер" }, { id: B, text: "Встроенный компьютер" }] }
+  student_view: { options: [{ id: A, text: "Сервер" }, { id: B, text: "Встроенный компьютер" }, { id: C, text: "Суперкомпьютер" }, { id: D, text: "Персональный компьютер" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "Встроенный компьютер", explanation: "Сервер обслуживает запросы многих, суперкомпьютер считает, встроенный компьютер — часть прибора." }
 
@@ -321,7 +321,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Чем суперкомпьютер отличается от сервера?"
-  student_view: { options: [{ id: B, text: "Суперкомпьютер — это просто очень большой сервер, разница только в корпусе" }, { id: A, text: "Сервер служит запросам пользователей, а суперкомпьютер состоит из тысяч процессоров и решает научные задачи" }, { id: C, text: "У суперкомпьютера нет процессоров, есть только память" }, { id: D, text: "Сервер всегда встроен в прибор, а суперкомпьютер стоит отдельной машиной" }] }
+  student_view: { options: [{ id: A, text: "Сервер служит запросам пользователей, а суперкомпьютер состоит из тысяч процессоров и решает научные задачи" }, { id: B, text: "Сервер всегда встроен в прибор, а суперкомпьютер стоит отдельной машиной" }, { id: C, text: "Суперкомпьютер — это просто очень большой сервер, разница только в корпусе" }, { id: D, text: "У суперкомпьютера нет процессоров, есть только память" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Сервер служит запросам пользователей, а суперкомпьютер состоит из тысяч процессоров и решает научные задачи", explanation: "Сервер отвечает на запросы, суперкомпьютер считает: разные задачи, разное устройство." }
 
@@ -355,9 +355,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-mem], meta: [plan-actions] }
   prompt: "Ученик набрал текст в процессоре, но не сохранил его, и выключил компьютер. Что пропало и почему?"
-  student_view: { options: [{ id: A, text: "Пропал текст из оперативной памяти: при выключении питания она очищается" }, { id: B, text: "Ничего не пропало: диск хранит все данные даже без сохранения" }, { id: C, text: "Пропал только последний абзац: остальное записано на диск автоматически" }, { id: D, text: "Текст остался в ПЗУ, потому что ПЗУ не стирается" }] }
+  student_view: { options: [{ id: A, text: "Ничего не пропало: диск хранит все данные даже без сохранения" }, { id: B, text: "Пропал текст из оперативной памяти: при выключении питания она очищается" }, { id: C, text: "Пропал только последний абзац: остальное записано на диск автоматически" }, { id: D, text: "Текст остался в ПЗУ, потому что ПЗУ не стирается" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Пропал текст из оперативной памяти: при выключении питания она очищается", explanation: "Оперативная память — рабочая область и очищается при выключении, в отличие от ПЗУ и диска." }
+  teacher_only: { answer: B, answer_text: "Пропал текст из оперативной памяти: при выключении питания она очищается", explanation: "Оперативная память — рабочая область и очищается при выключении, в отличие от ПЗУ и диска." }
 
 - id: inf-7-base-022
   class: 7
@@ -372,9 +372,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "К какой группе программного обеспечения относится операционная система?"
-  student_view: { options: [{ id: B, text: "Прикладное программное обеспечение" }, { id: A, text: "Системное программное обеспечение" }, { id: C, text: "Системы программирования" }, { id: D, text: "Графические редакторы" }] }
+  student_view: { options: [{ id: A, text: "Прикладное программное обеспечение" }, { id: B, text: "Графические редакторы" }, { id: C, text: "Системное программное обеспечение" }, { id: D, text: "Системы программирования" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Системное программное обеспечение", explanation: "Операционная система управляет компьютером и устройствами — это системное ПО." }
+  teacher_only: { answer: C, answer_text: "Системное программное обеспечение", explanation: "Операционная система управляет компьютером и устройствами — это системное ПО." }
 
 - id: inf-7-base-023
   class: 7
@@ -389,9 +389,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Ученик дважды щёлкнул по ярлыку программы. Какая системная программа ищет программу в памяти и передаёт ей управление?"
-  student_view: { options: [{ id: D, text: "Программа просмотра изображений" }, { id: C, text: "Архиватор" }, { id: B, text: "Антивирус" }, { id: A, text: "Загрузчик" }] }
+  student_view: { options: [{ id: A, text: "Программа просмотра изображений" }, { id: B, text: "Загрузчик" }, { id: C, text: "Архиватор" }, { id: D, text: "Антивирус" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Загрузчик", explanation: "По цепочке: инсталлятор записал программу в список, ярлык запустил системный загрузчик." }
+  teacher_only: { answer: B, answer_text: "Загрузчик", explanation: "По цепочке: инсталлятор записал программу в список, ярлык запустил системный загрузчик." }
 
 - id: inf-7-base-024
   class: 7
@@ -406,9 +406,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Программа бесплатна, но её лицензия запрещает изменять исходный код. Как её правильно назвать?"
-  student_view: { options: [{ id: B, text: "Свободная, потому что за неё не платят" }, { id: D, text: "Нелицензионная, потому что лицензия ограничивает копирование" }, { id: C, text: "Свободная, потому что её можно копировать" }, { id: A, text: "Бесплатная, но не свободная" }] }
+  student_view: { options: [{ id: A, text: "Нелицензионная, потому что лицензия ограничивает копирование" }, { id: B, text: "Свободная, потому что за неё не платят" }, { id: C, text: "Свободная, потому что её можно копировать" }, { id: D, text: "Бесплатная, но не свободная" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Бесплатная, но не свободная", explanation: "Свободное ПО даёт четыре свободы, среди которых изменение кода; её отсутствие означает несвободную программу." }
+  teacher_only: { answer: D, answer_text: "Бесплатная, но не свободная", explanation: "Свободное ПО даёт четыре свободы, среди которых изменение кода; её отсутствие означает несвободную программу." }
 
 - id: inf-7-base-025
   class: 7
@@ -440,9 +440,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
   prompt: "Чем троян отличается от вируса?"
-  student_view: { options: [{ id: D, text: "Ничем: это два названия одного и того же" }, { id: C, text: "Троян шифрует файлы, а вирус их удаляет" }, { id: B, text: "Троян размножается и заражает файлы, а вирус только маскируется" }, { id: A, text: "Троян не размножается сам, а маскируется под полезную программу" }] }
+  student_view: { options: [{ id: A, text: "Троян шифрует файлы, а вирус их удаляет" }, { id: B, text: "Троян размножается и заражает файлы, а вирус только маскируется" }, { id: C, text: "Троян не размножается сам, а маскируется под полезную программу" }, { id: D, text: "Ничем: это два названия одного и того же" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Троян не размножается сам, а маскируется под полезную программу", explanation: "Вирус внедряется в файлы и размножается, троян лишь притворяется полезной программой." }
+  teacher_only: { answer: C, answer_text: "Троян не размножается сам, а маскируется под полезную программу", explanation: "Вирус внедряется в файлы и размножается, троян лишь притворяется полезной программой." }
 
 - id: inf-7-base-027
   class: 7
@@ -474,9 +474,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
   prompt: "Какой файл архиватор сожмёт сильнее — текст или фотографию — и почему?"
-  student_view: { options: [{ id: A, text: "Текст: в нём много повторов, и они сжимаются в один код" }, { id: B, text: "Фотографию: у неё больше цветов, значит и повторов больше" }, { id: D, text: "Ни один: архиватор только упаковывает, но не сжимает" }, { id: C, text: "Одинаково: архиватор не различает типы файлов" }] }
+  student_view: { options: [{ id: A, text: "Ни один: архиватор только упаковывает, но не сжимает" }, { id: B, text: "Одинаково: архиватор не различает типы файлов" }, { id: C, text: "Фотографию: у неё больше цветов, значит и повторов больше" }, { id: D, text: "Текст: в нём много повторов, и они сжимаются в один код" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Текст: в нём много повторов, и они сжимаются в один код", explanation: "Сжатие работает там, где есть повторы: в тексте их гораздо больше, чем в фотографии." }
+  teacher_only: { answer: D, answer_text: "Текст: в нём много повторов, и они сжимаются в один код", explanation: "Сжатие работает там, где есть повторы: в тексте их гораздо больше, чем в фотографии." }
 
 - id: inf-7-base-029
   class: 7
@@ -508,9 +508,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
   prompt: "Сколько Мбит/с в 1 Мбайт/с?"
-  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "64" }, { id: C, text: "1024" }, { id: D, text: "1" }] }
+  student_view: { options: [{ id: A, text: "1" }, { id: B, text: "1024" }, { id: C, text: "64" }, { id: D, text: "8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "8", explanation: "1 байт = 8 бит, значит 1 Мбайт/с = 8 Мбит/с." }
+  teacher_only: { answer: D, answer_text: "8", explanation: "1 байт = 8 бит, значит 1 Мбайт/с = 8 Мбит/с." }
 
 - id: inf-7-base-031
   class: 7
@@ -559,9 +559,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Запрос «информатика OR программирование» найдёт документы, в которых…"
-  student_view: { options: [{ id: A, text: "есть хотя бы одно из этих слов" }, { id: B, text: "есть оба слова сразу" }, { id: C, text: "нет ни одного из этих слов" }, { id: D, text: "эти два слова стоят рядом в одной строке" }] }
+  student_view: { options: [{ id: A, text: "есть оба слова сразу" }, { id: B, text: "есть хотя бы одно из этих слов" }, { id: C, text: "нет ни одного из этих слов" }, { id: D, text: "эти два слова стоят рядом в одной строке" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "есть хотя бы одно из этих слов", explanation: "OR — логическое «или»: подходит документ с любым из двух слов." }
+  teacher_only: { answer: B, answer_text: "есть хотя бы одно из этих слов", explanation: "OR — логическое «или»: подходит документ с любым из двух слов." }
 
 - id: inf-7-base-034
   class: 7
@@ -576,9 +576,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Поисковый запрос не нашёл ничего. В каком порядке правильно действовать?"
-  student_view: { options: [{ id: A, text: "Проверить написание → проверить связки → подобрать синонимы → изменить логику → сменить поисковик" }, { id: D, text: "Ничего не делать: результаты обновятся сами" }, { id: B, text: "Сменить браузер → переустановить операционную систему → обратиться в сервисный центр" }, { id: C, text: "Сразу поставить новую антивирусную программу → купить другой компьютер" }] }
+  student_view: { options: [{ id: A, text: "Ничего не делать: результаты обновятся сами" }, { id: B, text: "Сразу поставить новую антивирусную программу → купить другой компьютер" }, { id: C, text: "Проверить написание → проверить связки → подобрать синонимы → изменить логику → сменить поисковик" }, { id: D, text: "Сменить браузер → переустановить операционную систему → обратиться в сервисный центр" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Проверить написание → проверить связки → подобрать синонимы → изменить логику → сменить поисковик", explanation: "Алгоритм учебника: написание → связки → синонимы → логика запроса → другой поисковик." }
+  teacher_only: { answer: C, answer_text: "Проверить написание → проверить связки → подобрать синонимы → изменить логику → сменить поисковик", explanation: "Алгоритм учебника: написание → связки → синонимы → логика запроса → другой поисковик." }
 
 - id: inf-7-base-035
   class: 7
@@ -593,9 +593,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
   prompt: "В адресе https://school.example.com/info/page.html какая часть указывает доменное имя?"
-  student_view: { options: [{ id: C, text: "/info/page.html" }, { id: B, text: "https" }, { id: A, text: "school.example.com" }, { id: D, text: "page.html" }] }
+  student_view: { options: [{ id: A, text: "page.html" }, { id: B, text: "https" }, { id: C, text: "/info/page.html" }, { id: D, text: "school.example.com" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "school.example.com", explanation: "Домен стоит сразу после протокола, дальше идёт путь внутри сайта." }
+  teacher_only: { answer: D, answer_text: "school.example.com", explanation: "Домен стоит сразу после протокола, дальше идёт путь внутри сайта." }
 
 - id: inf-7-base-036
   class: 7
@@ -610,9 +610,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
   prompt: "Адрес собирают из фрагментов https, site, ru, /blog/. В каком порядке их соединяют?"
-  student_view: { options: [{ id: D, text: "Косая черта, протокол, домен, путь" }, { id: C, text: "Путь, косая черта, домен, протокол" }, { id: A, text: "Протокол, домен, косая черта, путь" }, { id: B, text: "Домен, протокол, путь, косая черта" }] }
+  student_view: { options: [{ id: A, text: "Путь, косая черта, домен, протокол" }, { id: B, text: "Протокол, домен, косая черта, путь" }, { id: C, text: "Домен, протокол, путь, косая черта" }, { id: D, text: "Косая черта, протокол, домен, путь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Протокол, домен, косая черта, путь", explanation: "Шаблон адреса: протокол://домен/путь, поэтому косая черта идёт перед путём." }
+  teacher_only: { answer: B, answer_text: "Протокол, домен, косая черта, путь", explanation: "Шаблон адреса: протокол://домен/путь, поэтому косая черта идёт перед путём." }
 
 - id: inf-7-base-037
   class: 7
@@ -644,9 +644,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-style], meta: [plan-actions] }
   prompt: "Автор хочет, чтобы все 12 заголовков в документе выглядели одинаково. Что применять?"
-  student_view: { options: [{ id: B, text: "Жирный начертание и размер 16 пт каждому заголовку отдельно" }, { id: A, text: "Стиль «Заголовок 1» ко всем заголовкам" }, { id: C, text: "Выравнивание по центру каждому заголовку" }, { id: D, text: "Копировать первый заголовок и вставлять его копии" }] }
+  student_view: { options: [{ id: A, text: "Жирный начертание и размер 16 пт каждому заголовку отдельно" }, { id: B, text: "Выравнивание по центру каждому заголовку" }, { id: C, text: "Копировать первый заголовок и вставлять его копии" }, { id: D, text: "Стиль «Заголовок 1» ко всем заголовкам" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Стиль «Заголовок 1» ко всем заголовкам", explanation: "Стиль — именованный набор оформления: поменял один раз, изменились все заголовки." }
+  teacher_only: { answer: D, answer_text: "Стиль «Заголовок 1» ко всем заголовкам", explanation: "Стиль — именованный набор оформления: поменял один раз, изменились все заголовки." }
 
 - id: inf-7-base-039
   class: 7
@@ -661,9 +661,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-struct], meta: [plan-actions] }
   prompt: "Диаграмма построена по таблице документа. Что произойдёт, если изменить число в одной ячейке?"
-  student_view: { options: [{ id: C, text: "Таблица и диаграмма независимы: это две отдельные картинки" }, { id: B, text: "Ничего: диаграмма сохранит прежние значения" }, { id: A, text: "Столбик на диаграмме перестроится сам, потому что диаграмма связана с таблицей" }] }
+  student_view: { options: [{ id: A, text: "Таблица и диаграмма независимы: это две отдельные картинки" }, { id: B, text: "Столбик на диаграмме перестроится сам, потому что диаграмма связана с таблицей" }, { id: C, text: "Ничего: диаграмма сохранит прежние значения" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Столбик на диаграмме перестроится сам, потому что диаграмма связана с таблицей", explanation: "Данные диаграммы берутся из таблицы, поэтому изменение числа перестраивает столбик." }
+  teacher_only: { answer: B, answer_text: "Столбик на диаграмме перестроится сам, потому что диаграмма связана с таблицей", explanation: "Данные диаграммы берутся из таблицы, поэтому изменение числа перестраивает столбик." }
 
 - id: inf-7-base-040
   class: 7
@@ -678,9 +678,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-key], meta: [plan-actions] }
   prompt: "Чем в текстовом процессоре отделяется один абзац от другого?"
-  student_view: { options: [{ id: D, text: "Знаком точки в конце строки" }, { id: A, text: "Клавишей Enter" }, { id: C, text: "Клавишей Tab" }, { id: B, text: "Пробелами" }] }
+  student_view: { options: [{ id: A, text: "Пробелами" }, { id: B, text: "Знаком точки в конце строки" }, { id: C, text: "Клавишей Tab" }, { id: D, text: "Клавишей Enter" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Пробелами", explanation: "Абзац — это отдельный блок текста, поэтому отделяется Enter, а не пробелами." }
+  teacher_only: { answer: A, answer_text: "Пробелами", explanation: "Абзац — это отдельный блок текста, поэтому отделяется Enter, а не пробелами." }
 
 - id: inf-7-base-041
   class: 7
@@ -712,9 +712,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-ocr], meta: [plan-actions] }
   prompt: "Текст распознали со скана, и в слове «Отлично» получилось «Осигнал». Что произошло?"
-  student_view: { options: [{ id: C, text: "Выбрана неверная кодировка, нужно пересохранить файл" }, { id: A, text: "Ошибка распознавания: похожие буквы приняты друг за друга, результат надо вычитать" }, { id: B, text: "Файл повреждён: его придётся набирать заново" }] }
+  student_view: { options: [{ id: A, text: "Файл повреждён: его придётся набирать заново" }, { id: B, text: "Выбрана неверная кодировка, нужно пересохранить файл" }, { id: C, text: "Ошибка распознавания: похожие буквы приняты друг за друга, результат надо вычитать" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Ошибка распознавания: похожие буквы приняты друг за друга, результат надо вычитать", explanation: "Оптическое распознавание путает похожие буквы, поэтому результат всегда вычитывают." }
+  teacher_only: { answer: C, answer_text: "Ошибка распознавания: похожие буквы приняты друг за друга, результат надо вычитать", explanation: "Оптическое распознавание путает похожие буквы, поэтому результат всегда вычитывают." }
 
 - id: inf-7-base-043
   class: 7
@@ -729,9 +729,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-page], meta: [plan-actions] }
   prompt: "Какое поле страницы обычно делают шире остальных?"
-  student_view: { options: [{ id: D, text: "Нижнее — под подпись" }, { id: A, text: "Левое — под подшивку" }, { id: C, text: "Правое — под руку" }, { id: B, text: "Верхнее — под шапку документа" }] }
+  student_view: { options: [{ id: A, text: "Правое — под руку" }, { id: B, text: "Верхнее — под шапку документа" }, { id: C, text: "Нижнее — под подпись" }, { id: D, text: "Левое — под подшивку" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Левое — под подшивку", explanation: "Листы подшивают слева, поэтому левое поле делают шире." }
+  teacher_only: { answer: D, answer_text: "Левое — под подшивку", explanation: "Листы подшивают слева, поэтому левое поле делают шире." }
 
 - id: inf-7-base-044
   class: 7
@@ -763,7 +763,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-style], meta: [plan-actions] }
   prompt: "Восемь заголовков оформлены вручную: жирные, 16 пт, по центру. Как правильно переоформить документ?"
-  student_view: { options: [{ id: B, text: "Оставить как есть: прямое форматирование быстрее" }, { id: C, text: "Сделать все заголовки обычным текстом, чтобы оформление было одинаковым" }, { id: A, text: "Применить стиль «Заголовок 1» ко всем заголовкам и убрать ручное оформление" }] }
+  student_view: { options: [{ id: A, text: "Применить стиль «Заголовок 1» ко всем заголовкам и убрать ручное оформление" }, { id: B, text: "Сделать все заголовки обычным текстом, чтобы оформление было одинаковым" }, { id: C, text: "Оставить как есть: прямое форматирование быстрее" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Применить стиль «Заголовок 1» ко всем заголовкам и убрать ручное оформление", explanation: "Стиль меняет всю структуру разом; смешивать стиль и ручное оформление нельзя." }
 
@@ -780,9 +780,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-list], meta: [plan-actions] }
   prompt: "Что выбрать для перечисления шагов алгоритма, где важен порядок?"
-  student_view: { options: [{ id: D, text: "Круговую диаграмму" }, { id: C, text: "Таблицу" }, { id: A, text: "Нумерованный список" }, { id: B, text: "Маркированный список" }] }
+  student_view: { options: [{ id: A, text: "Таблицу" }, { id: B, text: "Нумерованный список" }, { id: C, text: "Круговую диаграмму" }, { id: D, text: "Маркированный список" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Нумерованный список", explanation: "Порядок важен — нумерованный список; порядок не важен — маркированный." }
+  teacher_only: { answer: B, answer_text: "Нумерованный список", explanation: "Порядок важен — нумерованный список; порядок не важен — маркированный." }
 
 - id: inf-7-base-047
   class: 7
@@ -831,9 +831,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-file], meta: [plan-actions] }
   prompt: "В каком расширении LibreOffice Writer сохраняет документ в своём родном формате?"
-  student_view: { options: [{ id: C, text: ".rtf" }, { id: D, text: ".pdf" }, { id: A, text: ".odt" }, { id: B, text: ".docx" }] }
+  student_view: { options: [{ id: A, text: ".pdf" }, { id: B, text: ".rtf" }, { id: C, text: ".docx" }, { id: D, text: ".odt" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: ".odt", explanation: ".odt — свой формат LibreOffice, а .docx — обменный формат для других программ." }
+  teacher_only: { answer: D, answer_text: ".odt", explanation: ".odt — свой формат LibreOffice, а .docx — обменный формат для других программ." }
 
 - id: inf-7-base-050
   class: 7
@@ -848,9 +848,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-image], meta: [plan-actions] }
   prompt: "Рисунок вставили в документ и растянули за угол: круг превратился в овал. Как надо было вставлять?"
-  student_view: { options: [{ id: A, text: "Задавать размер с сохранением пропорций" }, { id: C, text: "Растягивать только по ширине" }, { id: D, text: "Сначала перевести рисунок в текстовый формат" }, { id: B, text: "Вставлять изображение вообще без указания размера" }] }
+  student_view: { options: [{ id: A, text: "Вставлять изображение вообще без указания размера" }, { id: B, text: "Растягивать только по ширине" }, { id: C, text: "Сначала перевести рисунок в текстовый формат" }, { id: D, text: "Задавать размер с сохранением пропорций" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Задавать размер с сохранением пропорций", explanation: "Пропорции задаются один раз, иначе рисунок растянется и исказится." }
+  teacher_only: { answer: D, answer_text: "Задавать размер с сохранением пропорций", explanation: "Пропорции задаются один раз, иначе рисунок растянется и исказится." }
 
 - id: inf-7-base-051
   class: 7
@@ -865,9 +865,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-formula], meta: [plan-actions] }
   prompt: "В документе нужна формула с дробями и индексами. Чем её набрать?"
-  student_view: { options: [{ id: D, text: "Растровым рисунком, чтобы вид при печати не менялся" }, { id: B, text: "Обычным текстом с клавиатуры: так быстрее" }, { id: A, text: "Редактором формул: дроби и индексы выравниваются по правилам" }, { id: C, text: "Таблицей из двух ячеек, чтобы написать дробь" }] }
+  student_view: { options: [{ id: A, text: "Таблицей из двух ячеек, чтобы написать дробь" }, { id: B, text: "Растровым рисунком, чтобы вид при печати не менялся" }, { id: C, text: "Обычным текстом с клавиатуры: так быстрее" }, { id: D, text: "Редактором формул: дроби и индексы выравниваются по правилам" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Редактором формул: дроби и индексы выравниваются по правилам", explanation: "Простую формулу можно набрать текстом, длинные выражения — только в редакторе формул." }
+  teacher_only: { answer: D, answer_text: "Редактором формул: дроби и индексы выравниваются по правилам", explanation: "Простую формулу можно набрать текстом, длинные выражения — только в редакторе формул." }
 
 - id: inf-7-base-052
   class: 7
@@ -882,7 +882,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-cite], meta: [plan-actions] }
   prompt: "Ссылка стоит внизу страницы, под тем абзацем, к которому относится. Как она называется?"
-  student_view: { options: [{ id: C, text: "Гиперссылка" }, { id: D, text: "Примечание автора" }, { id: A, text: "Подстрочная (сноска)" }, { id: B, text: "Затекстовая (концевая)" }] }
+  student_view: { options: [{ id: A, text: "Подстрочная (сноска)" }, { id: B, text: "Примечание автора" }, { id: C, text: "Гиперссылка" }, { id: D, text: "Затекстовая (концевая)" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Подстрочная (сноска)", explanation: "Сноска стоит внизу страницы, затекстовая ссылка — номером в списке источников в конце работы." }
 
@@ -916,9 +916,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-plagiat], meta: [plan-actions] }
   prompt: "Ученик скачал реферат из интернета, переставил абзацы и сдал его как свою работу. Что это?"
-  student_view: { options: [{ id: B, text: "Допустимо: автор не указал, что работу писал он" }, { id: C, text: "Допустимо, если работу не выкладывать в интернет" }, { id: D, text: "Реферат, потому что тема выбрана и развёрнута" }, { id: A, text: "Плагиат: чужая работа выдана за свою" }] }
+  student_view: { options: [{ id: A, text: "Допустимо: автор не указал, что работу писал он" }, { id: B, text: "Плагиат: чужая работа выдана за свою" }, { id: C, text: "Реферат, потому что тема выбрана и развёрнута" }, { id: D, text: "Допустимо, если работу не выкладывать в интернет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Плагиат: чужая работа выдана за свою", explanation: "Перестановка абзацев не делает чужой текст своим: без ссылки это плагиат." }
+  teacher_only: { answer: B, answer_text: "Плагиат: чужая работа выдана за свою", explanation: "Перестановка абзацев не делает чужой текст своим: без ссылки это плагиат." }
 
 - id: inf-7-base-055
   class: 7
@@ -933,9 +933,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Что хранит векторное изображение?"
-  student_view: { options: [{ id: B, text: "Цвет каждого пикселя" }, { id: D, text: "Текстовый шрифт" }, { id: A, text: "Формулы фигур: линий, кривых и многоугольников" }, { id: C, text: "Набор готовых картинок" }] }
+  student_view: { options: [{ id: A, text: "Текстовый шрифт" }, { id: B, text: "Цвет каждого пикселя" }, { id: C, text: "Набор готовых картинок" }, { id: D, text: "Формулы фигур: линий, кривых и многоугольников" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Формулы фигур: линий, кривых и многоугольников", explanation: "Вектор хранит не точки, а формулы фигур — поэтому качество не зависит от размера." }
+  teacher_only: { answer: D, answer_text: "Формулы фигур: линий, кривых и многоугольников", explanation: "Вектор хранит не точки, а формулы фигур — поэтому качество не зависит от размера." }
 
 - id: inf-7-base-056
   class: 7
@@ -950,9 +950,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Схема состоит из двенадцати линий, и её нужно передвинуть целиком. Что сделать?"
-  student_view: { options: [{ id: B, text: "Передвинуть каждую линию отдельно" }, { id: C, text: "Скопировать линии и вставить их заново" }, { id: A, text: "Выделить все фигуры и сгруппировать в один объект" }, { id: D, text: "Сохранить схему как картинку и вставить её в документ" }] }
+  student_view: { options: [{ id: A, text: "Передвинуть каждую линию отдельно" }, { id: B, text: "Скопировать линии и вставить их заново" }, { id: C, text: "Выделить все фигуры и сгруппировать в один объект" }, { id: D, text: "Сохранить схему как картинку и вставить её в документ" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Выделить все фигуры и сгруппировать в один объект", explanation: "После группировки набор фигур становится единым объектом: его можно целиком двигать и масштабировать." }
+  teacher_only: { answer: C, answer_text: "Выделить все фигуры и сгруппировать в один объект", explanation: "После группировки набор фигур становится единым объектом: его можно целиком двигать и масштабировать." }
 
 - id: inf-7-base-057
   class: 7
@@ -967,9 +967,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Группу из пяти линий растянули в три раза по ширине и по высоте. Что будет с толщиной линий?"
-  student_view: { options: [{ id: B, text: "Станет в три раза толще, потому что размер вырос" }, { id: D, text: "Появятся ступеньки, как у растровой картинки" }, { id: A, text: "Не изменится: вектор масштабируется без потерь качества" }, { id: C, text: "Станет в три раза тоньше, потому что длина выросла" }] }
+  student_view: { options: [{ id: A, text: "Появятся ступеньки, как у растровой картинки" }, { id: B, text: "Станет в три раза тоньше, потому что длина выросла" }, { id: C, text: "Не изменится: вектор масштабируется без потерь качества" }, { id: D, text: "Станет в три раза толще, потому что размер вырос" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Не изменится: вектор масштабируется без потерь качества", explanation: "Вектор хранит формулы, поэтому при увеличении пересчитываются формулы, а не точки." }
+  teacher_only: { answer: C, answer_text: "Не изменится: вектор масштабируется без потерь качества", explanation: "Вектор хранит формулы, поэтому при увеличении пересчитываются формулы, а не точки." }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-7-bank2.mjs ====
 # Ответы вычислены кодом (calc/подбор варианта) и проверены check.mjs.
@@ -987,7 +987,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Где работает встроенный компьютер?"
-  student_view: { options: [{ id: C, text: "В стойке сервера школы, чтобы отвечать на запросы" }, { id: B, text: "На рабочем столе школьника рядом с монитором" }, { id: D, text: "В кармане ученика, чтобы всегда быть под рукой" }, { id: A, text: "Внутри прибора: в стиральной машине, бортовом компьютере автомобиля, домофоне" }] }
+  student_view: { options: [{ id: A, text: "Внутри прибора: в стиральной машине, бортовом компьютере автомобиля, домофоне" }, { id: B, text: "В стойке сервера школы, чтобы отвечать на запросы" }, { id: C, text: "На рабочем столе школьника рядом с монитором" }, { id: D, text: "В кармане ученика, чтобы всегда быть под рукой" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Внутри прибора: в стиральной машине, бортовом компьютере автомобиля, домофоне", explanation: "Встроенный компьютер — часть прибора и работает по программе прибора, а не как отдельная машина." }
 
@@ -1004,9 +1004,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Компьютер называют универсальным, потому что…"
-  student_view: { options: [{ id: D, text: "он всегда стоит дороже любого другого устройства" }, { id: A, text: "одна и та же машина выполняет любые задачи, для которых написана программа" }, { id: C, text: "в него можно вставить любую деталь, и он станет другим компьютером" }, { id: B, text: "он умеет только считать, но делает это быстрее всех" }] }
+  student_view: { options: [{ id: A, text: "он умеет только считать, но делает это быстрее всех" }, { id: B, text: "в него можно вставить любую деталь, и он станет другим компьютером" }, { id: C, text: "он всегда стоит дороже любого другого устройства" }, { id: D, text: "одна и та же машина выполняет любые задачи, для которых написана программа" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "одна и та же машина выполняет любые задачи, для которых написана программа", explanation: "Универсальность обеспечивают программы: сменилась программа — сменилась задача, а машина та же." }
+  teacher_only: { answer: D, answer_text: "одна и та же машина выполняет любые задачи, для которых написана программа", explanation: "Универсальность обеспечивают программы: сменилась программа — сменилась задача, а машина та же." }
 
 - id: inf-7-base-060
   class: 7
@@ -1021,9 +1021,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Что означает «вычисления в облаке»?"
-  student_view: { options: [{ id: A, text: "тяжёлые вычисления выполняются на сервере в дата-центре, а устройство хранит данные и показывает результат" }, { id: C, text: "компьютер не подключают к сети, чтобы не заразиться вирусом" }, { id: B, text: "программы хранятся в файлах на рабочем столе компьютера" }, { id: D, text: "программа сразу после запуска сама удаляется с диска" }] }
+  student_view: { options: [{ id: A, text: "компьютер не подключают к сети, чтобы не заразиться вирусом" }, { id: B, text: "программы хранятся в файлах на рабочем столе компьютера" }, { id: C, text: "программа сразу после запуска сама удаляется с диска" }, { id: D, text: "тяжёлые вычисления выполняются на сервере в дата-центре, а устройство хранит данные и показывает результат" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "тяжёлые вычисления выполняются на сервере в дата-центре, а устройство хранит данные и показывает результат", explanation: "Облако — это вычисления и хранение на стороне дата-центра; связь идёт через интернет." }
+  teacher_only: { answer: D, answer_text: "тяжёлые вычисления выполняются на сервере в дата-центре, а устройство хранит данные и показывает результат", explanation: "Облако — это вычисления и хранение на стороне дата-центра; связь идёт через интернет." }
 
 - id: inf-7-base-061
   class: 7
@@ -1038,9 +1038,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "В процессоре 8 ядер. Что это даёт при работе программы?"
-  student_view: { options: [{ id: A, text: "задачи выполняются параллельно, поэтому та же работа делается быстрее" }, { id: B, text: "процессор потребляет в 8 раз меньше электричества" }, { id: D, text: "все файлы на диске автоматически станут в 8 раз меньше" }, { id: C, text: "компьютер может работать без программ вообще" }] }
+  student_view: { options: [{ id: A, text: "все файлы на диске автоматически станут в 8 раз меньше" }, { id: B, text: "задачи выполняются параллельно, поэтому та же работа делается быстрее" }, { id: C, text: "процессор потребляет в 8 раз меньше электричества" }, { id: D, text: "компьютер может работать без программ вообще" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "задачи выполняются параллельно, поэтому та же работа делается быстрее", explanation: "Ядро — вычислительный блок; несколько ядер делят задачи между собой, но общие программы всё равно нужны." }
+  teacher_only: { answer: B, answer_text: "задачи выполняются параллельно, поэтому та же работа делается быстрее", explanation: "Ядро — вычислительный блок; несколько ядер делят задачи между собой, но общие программы всё равно нужны." }
 
 - id: inf-7-base-062
   class: 7
@@ -1055,7 +1055,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-types], meta: [plan-actions] }
   prompt: "Какое поколение компьютеров первым использовало интегральные микросхемы?"
-  student_view: { options: [{ id: B, text: "2-е" }, { id: D, text: "1-е" }, { id: C, text: "4-е" }, { id: A, text: "3-е" }] }
+  student_view: { options: [{ id: A, text: "2-е" }, { id: B, text: "4-е" }, { id: C, text: "3-е" }, { id: D, text: "1-е" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: D, answer_text: "1-е", explanation: "Идёт 1-е поколение на лампах, 2-е на транзисторах, 3-е на интегральных микросхемах, 4-е на сверхбольших схемах." }
 
@@ -1106,7 +1106,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "К какой группе программного обеспечения относится среда разработки на Python?"
-  student_view: { options: [{ id: C, text: "Прикладное программное обеспечение" }, { id: D, text: "Служебные утилиты архиватора" }, { id: A, text: "Системы программирования" }, { id: B, text: "Системное программное обеспечение" }] }
+  student_view: { options: [{ id: A, text: "Системы программирования" }, { id: B, text: "Служебные утилиты архиватора" }, { id: C, text: "Прикладное программное обеспечение" }, { id: D, text: "Системное программное обеспечение" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Системы программирования", explanation: "Среды разработки создают новые программы, поэтому это системы программирования, а не прикладные программы." }
 
@@ -1123,9 +1123,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "К какой группе программного обеспечения относится LibreOffice Writer?"
-  student_view: { options: [{ id: D, text: "Драйверы устройств" }, { id: A, text: "Прикладное программное обеспечение" }, { id: B, text: "Системное программное обеспечение" }, { id: C, text: "Системы программирования" }] }
+  student_view: { options: [{ id: A, text: "Системы программирования" }, { id: B, text: "Драйверы устройств" }, { id: C, text: "Прикладное программное обеспечение" }, { id: D, text: "Системное программное обеспечение" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Прикладное программное обеспечение", explanation: "Текстовый процессор решает задачу пользователя — это прикладное ПО; драйверы и операционная система относятся к системному." }
+  teacher_only: { answer: C, answer_text: "Прикладное программное обеспечение", explanation: "Текстовый процессор решает задачу пользователя — это прикладное ПО; драйверы и операционная система относятся к системному." }
 
 - id: inf-7-base-067
   class: 7
@@ -1140,9 +1140,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Какие программы относятся к утилитам?"
-  student_view: { options: [{ id: B, text: "Текстовый процессор, графический редактор, браузер" }, { id: C, text: "Среды разработки и компиляторы" }, { id: D, text: "Драйверы видеокарты и звуковой карты" }, { id: A, text: "Архиватор, антивирус, дефрагментатор — программы, обслуживающие систему" }] }
+  student_view: { options: [{ id: A, text: "Драйверы видеокарты и звуковой карты" }, { id: B, text: "Среды разработки и компиляторы" }, { id: C, text: "Текстовый процессор, графический редактор, браузер" }, { id: D, text: "Архиватор, антивирус, дефрагментатор — программы, обслуживающие систему" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Архиватор, антивирус, дефрагментатор — программы, обслуживающие систему", explanation: "Утилиты обслуживают компьютер и его данные: архиватор, антивирус, дефрагментатор. Драйверы тоже служебные программы, но в школьной классификации они относятся к системному ПО, поэтому в ответе их нет." }
+  teacher_only: { answer: D, answer_text: "Архиватор, антивирус, дефрагментатор — программы, обслуживающие систему", explanation: "Утилиты обслуживают компьютер и его данные: архиватор, антивирус, дефрагментатор. Драйверы тоже служебные программы, но в школьной классификации они относятся к системному ПО, поэтому в ответе их нет." }
 
 - id: inf-7-base-068
   class: 7
@@ -1157,7 +1157,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Почему компьютер не работает, если операционная система не загрузилась?"
-  student_view: { options: [{ id: A, text: "она загружается первой и распределяет память, даёт процессору команды, работает с устройствами и запускает программы" }, { id: C, text: "она нужна только для вывода картинки на монитор" }, { id: B, text: "она хранит все файлы и без неё компьютер не знает, где их искать" }, { id: D, text: "она сама пишет все программы, которые запускают" }] }
+  student_view: { options: [{ id: A, text: "она загружается первой и распределяет память, даёт процессору команды, работает с устройствами и запускает программы" }, { id: B, text: "она сама пишет все программы, которые запускают" }, { id: C, text: "она нужна только для вывода картинки на монитор" }, { id: D, text: "она хранит все файлы и без неё компьютер не знает, где их искать" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "она загружается первой и распределяет память, даёт процессору команды, работает с устройствами и запускает программы", explanation: "Без ОС некому управлять процессором и памятью и нечем запустить программу: остаётся голое железо." }
 
@@ -1174,9 +1174,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-soft], meta: [plan-actions] }
   prompt: "Какая из программ распространяется как свободное программное обеспечение?"
-  student_view: { options: [{ id: C, text: "Платная программа без исходников" }, { id: A, text: "LibreOffice" }, { id: B, text: "Архиватор, который запрещает изменять свой код" }, { id: D, text: "Кряк с рекламой на каждом запуске" }] }
+  student_view: { options: [{ id: A, text: "Кряк с рекламой на каждом запуске" }, { id: B, text: "LibreOffice" }, { id: C, text: "Архиватор, который запрещает изменять свой код" }, { id: D, text: "Платная программа без исходников" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "LibreOffice", explanation: "Свободное ПО можно использовать, изучать, копировать и изменять; именно такие права даёт лицензия GNU GPL." }
+  teacher_only: { answer: B, answer_text: "LibreOffice", explanation: "Свободное ПО можно использовать, изучать, копировать и изменять; именно такие права даёт лицензия GNU GPL." }
 
 - id: inf-7-base-070
   class: 7
@@ -1191,7 +1191,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
   prompt: "Что такое расширение файла?"
-  student_view: { options: [{ id: D, text: "Поле в свойствах файла с датой его изменения" }, { id: B, text: "Полное имя файла вместе с именем папки, где он лежит" }, { id: C, text: "Папка, в которой система хранит все файлы одного типа" }, { id: A, text: "Часть имени после точки, по которой система понимает, какой программой его открыть" }] }
+  student_view: { options: [{ id: A, text: "Часть имени после точки, по которой система понимает, какой программой его открыть" }, { id: B, text: "Поле в свойствах файла с датой его изменения" }, { id: C, text: "Полное имя файла вместе с именем папки, где он лежит" }, { id: D, text: "Папка, в которой система хранит все файлы одного типа" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Часть имени после точки, по которой система понимает, какой программой его открыть", explanation: "Расширение — подсказка для системы; в файле otchet.docx это часть после точки, то есть .docx." }
 
@@ -1208,7 +1208,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
   prompt: "В пути D:\\Работы\\7 класс\\otchet.docx какая часть является именем файла?"
-  student_view: { options: [{ id: C, text: "Работы\\7 класс" }, { id: B, text: "D:\\Работы\\7 класс" }, { id: A, text: "otchet.docx" }, { id: D, text: "7 класс" }] }
+  student_view: { options: [{ id: A, text: "otchet.docx" }, { id: B, text: "D:\\Работы\\7 класс" }, { id: C, text: "7 класс" }, { id: D, text: "Работы\\7 класс" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "otchet.docx", explanation: "Полный путь состоит из диска, всех папок и в конце — имени файла с расширением." }
 
@@ -1225,9 +1225,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
   prompt: "Файл с расширением .jpg при просмотре оказался обычным текстом. О чём это говорит?"
-  student_view: { options: [{ id: A, text: "расширение можно изменить, поэтому о содержимом судят по типу файла, а не по расширению" }, { id: B, text: "файл повреждён и его придётся набирать заново" }, { id: D, text: "в папке слишком много файлов, поэтому они перепутались" }, { id: C, text: "выбрана неверная кодировка, достаточно пересохранить файл" }] }
+  student_view: { options: [{ id: A, text: "в папке слишком много файлов, поэтому они перепутались" }, { id: B, text: "выбрана неверная кодировка, достаточно пересохранить файл" }, { id: C, text: "файл повреждён и его придётся набирать заново" }, { id: D, text: "расширение можно изменить, поэтому о содержимом судят по типу файла, а не по расширению" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "расширение можно изменить, поэтому о содержимом судят по типу файла, а не по расширению", explanation: "Расширение — подсказка, а не гарантия: переименованный .jpg внутри оказывается текстом." }
+  teacher_only: { answer: D, answer_text: "расширение можно изменить, поэтому о содержимом судят по типу файла, а не по расширению", explanation: "Расширение — подсказка, а не гарантия: переименованный .jpg внутри оказывается текстом." }
 
 - id: inf-7-base-073
   class: 7
@@ -1259,9 +1259,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-files], meta: [plan-actions] }
   prompt: "Чем удаление мимо корзины опаснее удаления через корзину?"
-  student_view: { options: [{ id: D, text: "разницы нет: корзина нужна только чтобы освободить место" }, { id: B, text: "мимо корзины файл удаляется медленнее, и папка не успевает обновиться" }, { id: C, text: "мимо корзины удаляются только копии, а оригинал остаётся на диске" }, { id: A, text: "после удаления мимо корзины восстановить файл уже нельзя, а из корзины он ещё доступен" }] }
+  student_view: { options: [{ id: A, text: "разницы нет: корзина нужна только чтобы освободить место" }, { id: B, text: "мимо корзины файл удаляется медленнее, и папка не успевает обновиться" }, { id: C, text: "после удаления мимо корзины восстановить файл уже нельзя, а из корзины он ещё доступен" }, { id: D, text: "мимо корзины удаляются только копии, а оригинал остаётся на диске" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "после удаления мимо корзины восстановить файл уже нельзя, а из корзины он ещё доступен", explanation: "Корзина — временное хранилище: опустошив её, вернуть файл уже нечем." }
+  teacher_only: { answer: C, answer_text: "после удаления мимо корзины восстановить файл уже нельзя, а из корзины он ещё доступен", explanation: "Корзина — временное хранилище: опустошив её, вернуть файл уже нечем." }
 
 - id: inf-7-base-075
   class: 7
@@ -1276,9 +1276,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
   prompt: "Какой источник вируса самый типичный для школьного компьютера?"
-  student_view: { options: [{ id: C, text: "Справочный материал на школьном сайте" }, { id: B, text: "Файл, который учитель положил на флешку для класса" }, { id: A, text: "Вложение в письме от незнакомого отправителя" }, { id: D, text: "Файл, созданный в текстовом процессоре и сохранённый на рабочем столе" }] }
+  student_view: { options: [{ id: A, text: "Файл, который учитель положил на флешку для класса" }, { id: B, text: "Справочный материал на школьном сайте" }, { id: C, text: "Вложение в письме от незнакомого отправителя" }, { id: D, text: "Файл, созданный в текстовом процессоре и сохранённый на рабочем столе" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Вложение в письме от незнакомого отправителя", explanation: "Вредоносный код часто приходит вложением в письмо, поэтому незнакомые вложения не открывают «просто посмотреть»." }
+  teacher_only: { answer: C, answer_text: "Вложение в письме от незнакомого отправителя", explanation: "Вредоносный код часто приходит вложением в письмо, поэтому незнакомые вложения не открывают «просто посмотреть»." }
 
 - id: inf-7-base-076
   class: 7
@@ -1293,9 +1293,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
   prompt: "Почему антивирусная программа не даёт стопроцентной защиты?"
-  student_view: { options: [{ id: A, text: "новый вирус попадает в базу через несколько дней, пока антивирус о нём ещё не знает" }, { id: C, text: "антивирус работает только в интернете, без сети он молчит" }, { id: B, text: "антивирус проверяет только текстовые файлы, а картинки пропускает" }, { id: D, text: "антивирус заражает компьютер сам, защищая его вирусами" }] }
+  student_view: { options: [{ id: A, text: "антивирус заражает компьютер сам, защищая его вирусами" }, { id: B, text: "антивирус работает только в интернете, без сети он молчит" }, { id: C, text: "антивирус проверяет только текстовые файлы, а картинки пропускает" }, { id: D, text: "новый вирус попадает в базу через несколько дней, пока антивирус о нём ещё не знает" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "новый вирус попадает в базу через несколько дней, пока антивирус о нём ещё не знает", explanation: "Защиту дают три средства вместе: антивирус, обновления системы и осторожность пользователя." }
+  teacher_only: { answer: D, answer_text: "новый вирус попадает в базу через несколько дней, пока антивирус о нём ещё не знает", explanation: "Защиту дают три средства вместе: антивирус, обновления системы и осторожность пользователя." }
 
 - id: inf-7-base-077
   class: 7
@@ -1310,9 +1310,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
   prompt: "Зачем нужен архиватор?"
-  student_view: { options: [{ id: C, text: "Зашифровать фотографии от других пользователей компьютера" }, { id: B, text: "Улучшить качество фотографий, положив их в архив" }, { id: D, text: "Превратить фотографию в векторный рисунок" }, { id: A, text: "Упаковать несколько файлов в один, чтобы их было удобнее передать, и уменьшить занимаемое место" }] }
+  student_view: { options: [{ id: A, text: "Улучшить качество фотографий, положив их в архив" }, { id: B, text: "Превратить фотографию в векторный рисунок" }, { id: C, text: "Упаковать несколько файлов в один, чтобы их было удобнее передать, и уменьшить занимаемое место" }, { id: D, text: "Зашифровать фотографии от других пользователей компьютера" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Упаковать несколько файлов в один, чтобы их было удобнее передать, и уменьшить занимаемое место", explanation: "Архиватор только сжимает и упаковывает, качество данных при этом не меняется." }
+  teacher_only: { answer: C, answer_text: "Упаковать несколько файлов в один, чтобы их было удобнее передать, и уменьшить занимаемое место", explanation: "Архиватор только сжимает и упаковывает, качество данных при этом не меняется." }
 
 - id: inf-7-base-078
   class: 7
@@ -1327,9 +1327,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-virus], meta: [plan-actions] }
   prompt: "Какое действие надёжнее всего защищает компьютер от вирусов?"
-  student_view: { options: [{ id: A, text: "Не открывать вложения от незнакомцев и не скачивать программы с сомнительных сайтов" }, { id: C, text: "Хранить все файлы в одной папке на рабочем столе" }, { id: D, text: "Удалять все файлы, которые пришли по почте, даже от преподавателя" }, { id: B, text: "Всегда выключать звук на компьютере при работе в интернете" }] }
+  student_view: { options: [{ id: A, text: "Всегда выключать звук на компьютере при работе в интернете" }, { id: B, text: "Удалять все файлы, которые пришли по почте, даже от преподавателя" }, { id: C, text: "Хранить все файлы в одной папке на рабочем столе" }, { id: D, text: "Не открывать вложения от незнакомцев и не скачивать программы с сомнительных сайтов" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Не открывать вложения от незнакомцев и не скачивать программы с сомнительных сайтов", explanation: "Антивирус устаревает, а осторожность пользователя остаётся: надёжнее всего не пускать вредоносный код на компьютер." }
+  teacher_only: { answer: D, answer_text: "Не открывать вложения от незнакомцев и не скачивать программы с сомнительных сайтов", explanation: "Антивирус устаревает, а осторожность пользователя остаётся: надёжнее всего не пускать вредоносный код на компьютер." }
 
 - id: inf-7-base-079
   class: 7
@@ -1344,9 +1344,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-pc-arch], meta: [plan-actions] }
   prompt: "Ученик установил копию платной программы без разрешения правообладателя. Чем это нарушение?"
-  student_view: { options: [{ id: D, text: "Просто неаккуратным выбором программы, но не нарушением закона" }, { id: B, text: "Ничем: программа работает и школьному компьютеру дела нет" }, { id: A, text: "Нарушением авторского права на программу: копирование и распространение без разрешения запрещены" }, { id: C, text: "Только нарушением правил сайта, с которого её скачали" }] }
+  student_view: { options: [{ id: A, text: "Только нарушением правил сайта, с которого её скачали" }, { id: B, text: "Ничем: программа работает и школьному компьютеру дела нет" }, { id: C, text: "Нарушением авторского права на программу: копирование и распространение без разрешения запрещены" }, { id: D, text: "Просто неаккуратным выбором программы, но не нарушением закона" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Нарушением авторского права на программу: копирование и распространение без разрешения запрещены", explanation: "Свободное ПО — исключение: его лицензия разрешает копирование и изменение, у остальных программ такого права нет." }
+  teacher_only: { answer: C, answer_text: "Нарушением авторского права на программу: копирование и распространение без разрешения запрещены", explanation: "Свободное ПО — исключение: его лицензия разрешает копирование и изменение, у остальных программ такого права нет." }
 
 - id: inf-7-base-080
   class: 7
@@ -1361,9 +1361,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-gfx-fmt], meta: [plan-actions] }
   prompt: "Какой графический формат сжимает изображение с потерями, поэтому при увеличении видны блочные артефакты?"
-  student_view: { options: [{ id: C, text: "BMP" }, { id: B, text: "PNG" }, { id: D, text: "SVG" }, { id: A, text: "JPEG" }] }
+  student_view: { options: [{ id: A, text: "PNG" }, { id: B, text: "JPEG" }, { id: C, text: "SVG" }, { id: D, text: "BMP" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "SVG", explanation: "JPEG отбрасывает часть данных навсегда; BMP и PNG хранят изображение без потерь, а SVG — вектор." }
+  teacher_only: { answer: C, answer_text: "SVG", explanation: "JPEG отбрасывает часть данных навсегда; BMP и PNG хранят изображение без потерь, а SVG — вектор." }
 
 - id: inf-7-base-081
   class: 7
@@ -1412,9 +1412,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-speed], meta: [plan-actions] }
   prompt: "Почему файл качается дольше, чем показывает расчёт по заявленной скорости?"
-  student_view: { options: [{ id: C, text: "Файлы передаются только по выходным, в будни скорость обнуляется" }, { id: B, text: "Файл всегда весит больше, чем написано в его свойствах" }, { id: D, text: "Чем новее файл, тем ниже скорость его передачи" }, { id: A, text: "Заявленная скорость — это максимум канала, а реальный трафик делят другие пользователи" }] }
+  student_view: { options: [{ id: A, text: "Файлы передаются только по выходным, в будни скорость обнуляется" }, { id: B, text: "Файл всегда весит больше, чем написано в его свойствах" }, { id: C, text: "Чем новее файл, тем ниже скорость его передачи" }, { id: D, text: "Заявленная скорость — это максимум канала, а реальный трафик делят другие пользователи" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Заявленная скорость — это максимум канала, а реальный трафик делят другие пользователи", explanation: "Реальная скорость ниже максимума: канал делят другие пользователи, а часть трафика уходит на служебные нужды." }
+  teacher_only: { answer: D, answer_text: "Заявленная скорость — это максимум канала, а реальный трафик делят другие пользователи", explanation: "Реальная скорость ниже максимума: канал делят другие пользователи, а часть трафика уходит на служебные нужды." }
 
 - id: inf-7-base-084
   class: 7
@@ -1429,7 +1429,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Запрос «информатика NOT игра» найдёт документы, в которых…"
-  student_view: { options: [{ id: B, text: "есть оба слова сразу" }, { id: D, text: "нет ни слова «информатика», ни слова «игра»" }, { id: C, text: "есть только слово «игра»" }, { id: A, text: "есть слово «информатика», но нет слова «игра»" }] }
+  student_view: { options: [{ id: A, text: "есть слово «информатика», но нет слова «игра»" }, { id: B, text: "нет ни слова «информатика», ни слова «игра»" }, { id: C, text: "есть только слово «игра»" }, { id: D, text: "есть оба слова сразу" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "есть слово «информатика», но нет слова «игра»", explanation: "NOT (минус) убирает из выдачи документы со словом «игра», а «информатика» остаётся обязательным." }
 
@@ -1446,7 +1446,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-search], meta: [plan-actions] }
   prompt: "Что делает поиск по картинке?"
-  student_view: { options: [{ id: C, text: "Показывает рекламу с товарами по теме фотографии" }, { id: D, text: "Переводит текст, написанный на картинке, на русский язык" }, { id: A, text: "По загруженному фото находит похожие изображения — так ищут незнакомые объекты" }, { id: B, text: "Определяет автора фотографии и его адрес" }] }
+  student_view: { options: [{ id: A, text: "По загруженному фото находит похожие изображения — так ищут незнакомые объекты" }, { id: B, text: "Показывает рекламу с товарами по теме фотографии" }, { id: C, text: "Определяет автора фотографии и его адрес" }, { id: D, text: "Переводит текст, написанный на картинке, на русский язык" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "По загруженному фото находит похожие изображения — так ищут незнакомые объекты", explanation: "Если слово назвать нечем, объект опознают по фотографии: так находят название растения или модели." }
 
@@ -1463,7 +1463,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "Ученик взял первый результат из выдачи и сдал его как проверенный факт. Какое правило он нарушил?"
-  student_view: { options: [{ id: B, text: "Нужно сначала купить подписку на этот сайт" }, { id: C, text: "Нужно скопировать результат в три разных поисковика" }, { id: D, text: "Нужно выбрать результат, который стоит выше всех в списке" }, { id: A, text: "Нужно проверить факт и надёжность источника, прежде чем использовать его в работе" }] }
+  student_view: { options: [{ id: A, text: "Нужно проверить факт и надёжность источника, прежде чем использовать его в работе" }, { id: B, text: "Нужно скопировать результат в три разных поисковика" }, { id: C, text: "Нужно сначала купить подписку на этот сайт" }, { id: D, text: "Нужно выбрать результат, который стоит выше всех в списке" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Нужно проверить факт и надёжность источника, прежде чем использовать его в работе", explanation: "Первый результат — не самый верный: автор может ошибаться, поэтому факт сверяют с несколькими независимыми источниками." }
 
@@ -1480,9 +1480,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
   prompt: "Чем локальная сеть отличается от глобальной?"
-  student_view: { options: [{ id: A, text: "Локальная соединяет компьютеры в одном здании, глобальная — по всей планете, и Интернет самая большая из них" }, { id: B, text: "Локальная работает без интернета, а глобальная только с интернетом" }, { id: C, text: "Локальная соединяет больше компьютеров, чем глобальная" }, { id: D, text: "Разницы нет: это два названия одного и того же" }] }
+  student_view: { options: [{ id: A, text: "Локальная работает без интернета, а глобальная только с интернетом" }, { id: B, text: "Локальная соединяет больше компьютеров, чем глобальная" }, { id: C, text: "Локальная соединяет компьютеры в одном здании, глобальная — по всей планете, и Интернет самая большая из них" }, { id: D, text: "Разницы нет: это два названия одного и того же" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Локальная соединяет компьютеры в одном здании, глобальная — по всей планете, и Интернет самая большая из них", explanation: "Школьная сеть или домашний роутер — локальные; интернет связывает компьютеры по всему миру." }
+  teacher_only: { answer: C, answer_text: "Локальная соединяет компьютеры в одном здании, глобальная — по всей планете, и Интернет самая большая из них", explanation: "Школьная сеть или домашний роутер — локальные; интернет связывает компьютеры по всему миру." }
 
 - id: inf-7-base-088
   class: 7
@@ -1497,7 +1497,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-url], meta: [plan-actions] }
   prompt: "Веб-сайт — это…"
-  student_view: { options: [{ id: B, text: "Отдельный документ в сети с текстом и картинками" }, { id: A, text: "Набор веб-страниц, связанных ссылками и объединённых общим адресом" }, { id: D, text: "Канал, по которому идёт передача данных" }, { id: C, text: "Программа, которая скачивает файлы из сети" }] }
+  student_view: { options: [{ id: A, text: "Набор веб-страниц, связанных ссылками и объединённых общим адресом" }, { id: B, text: "Канал, по которому идёт передача данных" }, { id: C, text: "Программа, которая скачивает файлы из сети" }, { id: D, text: "Отдельный документ в сети с текстом и картинками" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Набор веб-страниц, связанных ссылками и объединённых общим адресом", explanation: "Страница — один документ, сайт — их набор; путать их нельзя, от этого зависит смысл адреса." }
 
@@ -1514,9 +1514,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "В адресе вместо латинской «a» стоит кириллическая «а». О чём это говорит?"
-  student_view: { options: [{ id: A, text: "Об адрес подделали: буквы-подделки так копируют известные сайты, чтобы выманить пароль" }, { id: B, text: "Об адрес набран в другой раскладке, это обычное дело" }, { id: D, text: "Об адрес защищён от копирования, поэтому буквы заменены" }, { id: C, text: "Об адрес написан в кодировке UTF-8, поэтому выглядит необычно" }] }
+  student_view: { options: [{ id: A, text: "Об адрес защищён от копирования, поэтому буквы заменены" }, { id: B, text: "Об адрес набран в другой раскладке, это обычное дело" }, { id: C, text: "Об адрес подделали: буквы-подделки так копируют известные сайты, чтобы выманить пароль" }, { id: D, text: "Об адрес написан в кодировке UTF-8, поэтому выглядит необычно" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Об адрес подделали: буквы-подделки так копируют известные сайты, чтобы выманить пароль", explanation: "Это приём фишинга: адрес читается как знакомый, а на самом деле ведёт на чужой ресурс." }
+  teacher_only: { answer: C, answer_text: "Об адрес подделали: буквы-подделки так копируют известные сайты, чтобы выманить пароль", explanation: "Это приём фишинга: адрес читается как знакомый, а на самом деле ведёт на чужой ресурс." }
 
 - id: inf-7-base-090
   class: 7
@@ -1531,9 +1531,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "Какое правило сетевого этикета нарушил ученик, отправив двадцать одинаковых рекламных писем в классный чат?"
-  student_view: { options: [{ id: A, text: "Запрещено спамить: незнакомым пишут один раз, а не рассылают рекламу" }, { id: B, text: "Запрещено отвечать на сообщения, чтобы не засорять чат" }, { id: C, text: "Запрещено здороваться первым: сначала должен поздороваться взрослый" }, { id: D, text: "Запрещено писать в чат во время урока по расписанию" }] }
+  student_view: { options: [{ id: A, text: "Запрещено здороваться первым: сначала должен поздороваться взрослый" }, { id: B, text: "Запрещено отвечать на сообщения, чтобы не засорять чат" }, { id: C, text: "Запрещено писать в чат во время урока по расписанию" }, { id: D, text: "Запрещено спамить: незнакомым пишут один раз, а не рассылают рекламу" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Запрещено спамить: незнакомым пишут один раз, а не рассылают рекламу", explanation: "Сетевой этикет повторяет обычный: не грубить, не засорять чужие каналы, уважать чужое время." }
+  teacher_only: { answer: D, answer_text: "Запрещено спамить: незнакомым пишут один раз, а не рассылают рекламу", explanation: "Сетевой этикет повторяет обычный: не грубить, не засорять чужие каналы, уважать чужое время." }
 
 - id: inf-7-base-091
   class: 7
@@ -1548,9 +1548,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-net-safe], meta: [plan-actions] }
   prompt: "Какие данные нельзя выкладывать в социальной сети?"
-  student_view: { options: [{ id: B, text: "Название школьного кружка, в котором ты занимаешься" }, { id: C, text: "Имя любимого автора и название прочитанной книги" }, { id: A, text: "Домашний адрес, телефон, номер банковской карты и фотографии документов" }, { id: D, text: "Свои проекты и фотографии поделок" }] }
+  student_view: { options: [{ id: A, text: "Имя любимого автора и название прочитанной книги" }, { id: B, text: "Название школьного кружка, в котором ты занимаешься" }, { id: C, text: "Домашний адрес, телефон, номер банковской карты и фотографии документов" }, { id: D, text: "Свои проекты и фотографии поделок" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Домашний адрес, телефон, номер банковской карты и фотографии документов", explanation: "Личные данные и документы в открытом доступе опасны: ими может воспользоваться посторонний." }
+  teacher_only: { answer: C, answer_text: "Домашний адрес, телефон, номер банковской карты и фотографии документов", explanation: "Личные данные и документы в открытом доступе опасны: ими может воспользоваться посторонний." }
 
 - id: inf-7-base-092
   class: 7
@@ -1565,9 +1565,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-typing], meta: [plan-actions] }
   prompt: "Почему отступ первой строки задают настройкой абзаца, а не пробелами?"
-  student_view: { options: [{ id: D, text: "Отступ пробелами автоматически превращается в табуляцию" }, { id: C, text: "Настройка абзаца выглядит в документе заметнее, чем пробелы" }, { id: A, text: "При смене шрифта пробелы останутся на месте и текст «поедет», а настройка абзаца работает всегда" }, { id: B, text: "Пробелы нельзя набирать, потому что в текстовом процессоре их нет" }] }
+  student_view: { options: [{ id: A, text: "Пробелы нельзя набирать, потому что в текстовом процессоре их нет" }, { id: B, text: "При смене шрифта пробелы останутся на месте и текст «поедет», а настройка абзаца работает всегда" }, { id: C, text: "Настройка абзаца выглядит в документе заметнее, чем пробелы" }, { id: D, text: "Отступ пробелами автоматически превращается в табуляцию" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "При смене шрифта пробелы останутся на месте и текст «поедет», а настройка абзаца работает всегда", explanation: "Пробелы — это текст: шрифт изменится и отступ станет неровным; абзацный отступ хранится как параметр." }
+  teacher_only: { answer: B, answer_text: "При смене шрифта пробелы останутся на месте и текст «поедет», а настройка абзаца работает всегда", explanation: "Пробелы — это текст: шрифт изменится и отступ станет неровным; абзацный отступ хранится как параметр." }
 
 - id: inf-7-base-093
   class: 7
@@ -1582,9 +1582,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-page], meta: [plan-actions] }
   prompt: "Какой размер бумаги обычно задают для школьного документа?"
-  student_view: { options: [{ id: A, text: "A4" }, { id: B, text: "A3" }, { id: C, text: "A5" }, { id: D, text: "B4" }] }
+  student_view: { options: [{ id: A, text: "A3" }, { id: B, text: "A4" }, { id: C, text: "A5" }, { id: D, text: "B4" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "A4", explanation: "A4 — стандартный лист для документов; A3 больше, A5 меньше, а B4 не используется в школьных работах." }
+  teacher_only: { answer: B, answer_text: "A4", explanation: "A4 — стандартный лист для документов; A3 больше, A5 меньше, а B4 не используется в школьных работах." }
 
 - id: inf-7-base-094
   class: 7
@@ -1599,9 +1599,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-table], meta: [plan-actions] }
   prompt: "Зачем в таблице нужна шапка?"
-  student_view: { options: [{ id: D, text: "Она уменьшает размер таблицы на экране" }, { id: C, text: "Она вычисляет суммы по столбцам автоматически" }, { id: B, text: "Она делает таблицу красивее при печати" }, { id: A, text: "Она называет столбцы, без неё не понятно, что в них записано" }] }
+  student_view: { options: [{ id: A, text: "Она уменьшает размер таблицы на экране" }, { id: B, text: "Она называет столбцы, без неё не понятно, что в них записано" }, { id: C, text: "Она делает таблицу красивее при печати" }, { id: D, text: "Она вычисляет суммы по столбцам автоматически" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Она называет столбцы, без неё не понятно, что в них записано", explanation: "Первая строка с заголовками — шапка: именно по ней читают, что записано в каждом столбце." }
+  teacher_only: { answer: B, answer_text: "Она называет столбцы, без неё не понятно, что в них записано", explanation: "Первая строка с заголовками — шапка: именно по ней читают, что записано в каждом столбце." }
 
 - id: inf-7-base-095
   class: 7
@@ -1616,9 +1616,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-image], meta: [plan-actions] }
   prompt: "Зачем вставленному рисунку задают обтекание текстом?"
-  student_view: { options: [{ id: B, text: "Чтобы рисунок стал векторным и не занимал места на диске" }, { id: C, text: "Чтобы при печати рисунок растянулся на всю страницу" }, { id: D, text: "Чтобы подпись к рисунку печаталась на каждой странице" }, { id: A, text: "Чтобы текст обтекал рисунок, а не наезжал на него" }] }
+  student_view: { options: [{ id: A, text: "Чтобы при печати рисунок растянулся на всю страницу" }, { id: B, text: "Чтобы рисунок стал векторным и не занимал места на диске" }, { id: C, text: "Чтобы текст обтекал рисунок, а не наезжал на него" }, { id: D, text: "Чтобы подпись к рисунку печаталась на каждой странице" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Чтобы текст обтекал рисунок, а не наезжал на него", explanation: "Варианты обтекания — «в тексте», «перед текстом», «по контуру» — определяют, как строки располагаются рядом с рисунком." }
+  teacher_only: { answer: C, answer_text: "Чтобы текст обтекал рисунок, а не наезжал на него", explanation: "Варианты обтекания — «в тексте», «перед текстом», «по контуру» — определяют, как строки располагаются рядом с рисунком." }
 
 - id: inf-7-base-096
   class: 7
@@ -1633,9 +1633,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-doc-cite], meta: [plan-actions] }
   prompt: "Почему для интернет-источника указывают дату обращения?"
-  student_view: { options: [{ id: A, text: "Сайт может измениться или исчезнуть, а дата фиксирует, когда информация была доступна" }, { id: B, text: "Дата обращения нужна, чтобы посчитать объём скачанного текста" }, { id: D, text: "Дата обращения показывает, сколько раз открыли источник" }, { id: C, text: "Дата обращения заменяет адрес сайта в списке источников" }] }
+  student_view: { options: [{ id: A, text: "Дата обращения заменяет адрес сайта в списке источников" }, { id: B, text: "Дата обращения нужна, чтобы посчитать объём скачанного текста" }, { id: C, text: "Сайт может измениться или исчезнуть, а дата фиксирует, когда информация была доступна" }, { id: D, text: "Дата обращения показывает, сколько раз открыли источник" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Сайт может измениться или исчезнуть, а дата фиксирует, когда информация была доступна", explanation: "Содержимое сайта меняется без предупреждения, поэтому указывают адрес и дату, когда его смотрели." }
+  teacher_only: { answer: C, answer_text: "Сайт может измениться или исчезнуть, а дата фиксирует, когда информация была доступна", explanation: "Содержимое сайта меняется без предупреждения, поэтому указывают адрес и дату, когда его смотрели." }
 
 - id: inf-7-base-097
   class: 7
@@ -1650,9 +1650,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Какое изображение лучше всего выполнить в векторе?"
-  student_view: { options: [{ id: C, text: "Снимок экрана окна программы" }, { id: B, text: "Фотография заката над морем" }, { id: D, text: "Отпечаток пальца на стекле" }, { id: A, text: "Чертёж или схема с тонкими линиями и подписями" }] }
+  student_view: { options: [{ id: A, text: "Фотография заката над морем" }, { id: B, text: "Снимок экрана окна программы" }, { id: C, text: "Чертёж или схема с тонкими линиями и подписями" }, { id: D, text: "Отпечаток пальца на стекле" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Чертёж или схема с тонкими линиями и подписями", explanation: "Вектор хорош там, где важны контуры и чёткость при любом масштабе; фотографию рисуют растром." }
+  teacher_only: { answer: C, answer_text: "Чертёж или схема с тонкими линиями и подписями", explanation: "Вектор хорош там, где важны контуры и чёткость при любом масштабе; фотографию рисуют растром." }
 
 - id: inf-7-base-098
   class: 7
@@ -1667,9 +1667,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Почему векторный файл того же рисунка обычно меньше растра?"
-  student_view: { options: [{ id: C, text: "Вектор сохраняет не все цвета, поэтому данных меньше" }, { id: B, text: "Вектор сжимает картинку в сто раз сильнее любого архиватора" }, { id: A, text: "Вектор хранит формулы фигур, а растр — цвет каждого пикселя" }, { id: D, text: "Вектор нельзя открыть на компьютере, поэтому файл получается пустым" }] }
+  student_view: { options: [{ id: A, text: "Вектор сохраняет не все цвета, поэтому данных меньше" }, { id: B, text: "Вектор сжимает картинку в сто раз сильнее любого архиватора" }, { id: C, text: "Вектор нельзя открыть на компьютере, поэтому файл получается пустым" }, { id: D, text: "Вектор хранит формулы фигур, а растр — цвет каждого пикселя" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Вектор хранит формулы фигур, а растр — цвет каждого пикселя", explanation: "Схема из двадцати линий — это двадцать записей с координатами, а растр хранит цвет каждой точки кадра." }
+  teacher_only: { answer: D, answer_text: "Вектор хранит формулы фигур, а растр — цвет каждого пикселя", explanation: "Схема из двадцати линий — это двадцать записей с координатами, а растр хранит цвет каждой точки кадра." }
 
 - id: inf-7-base-099
   class: 7
@@ -1684,9 +1684,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-vector], meta: [plan-actions] }
   prompt: "Нарисованная в документе схема наезжает на текст. Что нужно задать?"
-  student_view: { options: [{ id: C, text: "Размер линий: чем они толще, тем меньше схема наезжает" }, { id: A, text: "Обтекание текстом для этой группы фигур" }, { id: B, text: "Цвет текста, чтобы он был виден поверх схемы" }, { id: D, text: "Порядок вставки: схему надо было вставить в самый конец страницы" }] }
+  student_view: { options: [{ id: A, text: "Размер линий: чем они толще, тем меньше схема наезжает" }, { id: B, text: "Обтекание текстом для этой группы фигур" }, { id: C, text: "Порядок вставки: схему надо было вставить в самый конец страницы" }, { id: D, text: "Цвет текста, чтобы он был виден поверх схемы" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Обтекание текстом для этой группы фигур", explanation: "Обтекание задаётся для объекта: «в тексте», «перед текстом» или «по контуру» — тогда строки его обходят." }
+  teacher_only: { answer: B, answer_text: "Обтекание текстом для этой группы фигур", explanation: "Обтекание задаётся для объекта: «в тексте», «перед текстом» или «по контуру» — тогда строки его обходят." }
 
 
 # ==== СГЕНЕРИРОВАНО scripts/make-78final-bank3.mjs ====
@@ -1704,9 +1704,9 @@
   fgos_element: 1.1
   fgos: { subject: ["inf-7-doc-style"], meta: [plan-actions] }
   prompt: "Автор хочет, чтобы все абзацы в документе начинались с красной строки. Какой параметр абзаца нужно изменить?"
-  student_view: { options: [{ id: C, text: "Выравнивание по ширине" }, { id: A, text: "Отступ первой строки" }, { id: D, text: "Интервал после абзаца" }, { id: B, text: "Межстрочный интервал" }] }
+  student_view: { options: [{ id: A, text: "Межстрочный интервал" }, { id: B, text: "Выравнивание по ширине" }, { id: C, text: "Отступ первой строки" }, { id: D, text: "Интервал после абзаца" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "B", answer_text: "Межстрочный интервал", explanation: "Красная строка — это отступ первой строки абзаца. Межстрочный интервал меняет расстояние между строками, выравнивание — положение строки по ширине, интервал после абзаца — пустое место до следующего абзаца." }
+  teacher_only: { answer: "A", answer_text: "Межстрочный интервал", explanation: "Красная строка — это отступ первой строки абзаца. Межстрочный интервал меняет расстояние между строками, выравнивание — положение строки по ширине, интервал после абзаца — пустое место до следующего абзаца." }
 
 - id: inf-7-base-101
   class: 7

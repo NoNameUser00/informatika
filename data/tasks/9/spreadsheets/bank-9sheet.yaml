@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "С какого знака начинается любая формула?"
-  student_view: { options: [{ id: A, text: "=" }, { id: D, text: "пробел" }, { id: C, text: ";" }, { id: B, text: ":" }] }
+  student_view: { options: [{ id: A, text: ":" }, { id: B, text: "пробел" }, { id: C, text: "=" }, { id: D, text: ";" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "=", explanation: "Без = ячейка хранит текст" }
+  teacher_only: { answer: C, answer_text: "=", explanation: "Без = ячейка хранит текст" }
 
 - id: inf-9-sheet-002
   class: 9
@@ -29,7 +29,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "Что видно в режиме отображения формул?"
-  student_view: { options: [{ id: B, text: "Только результаты" }, { id: A, text: "Сами формулы" }, { id: C, text: "Только адреса" }, { id: D, text: "Пустые ячейки" }] }
+  student_view: { options: [{ id: A, text: "Сами формулы" }, { id: B, text: "Пустые ячейки" }, { id: C, text: "Только адреса" }, { id: D, text: "Только результаты" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Сами формулы", explanation: "Режим формул — для проверки логики" }
 
@@ -46,7 +46,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Формула =A1^2 из ячейки A2 скопирована в A3. Что теперь в A3?"
-  student_view: { options: [{ id: C, text: "=B1^2" }, { id: D, text: "=A1^3" }, { id: A, text: "=A2^2" }, { id: B, text: "=A1^2" }] }
+  student_view: { options: [{ id: A, text: "=A2^2" }, { id: B, text: "=B1^2" }, { id: C, text: "=A1^2" }, { id: D, text: "=A1^3" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "=A2^2", explanation: "Относительная ссылка сдвинулась на строку вниз" }
 
@@ -63,9 +63,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Какая ссылка не меняется при копировании?"
-  student_view: { options: [{ id: B, text: "A1" }, { id: D, text: "A$1" }, { id: C, text: "$A1" }, { id: A, text: "$A$1" }] }
+  student_view: { options: [{ id: A, text: "$A1" }, { id: B, text: "A1" }, { id: C, text: "A$1" }, { id: D, text: "$A$1" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "$A$1", explanation: "Два доллара — полное закрепление" }
+  teacher_only: { answer: D, answer_text: "$A$1", explanation: "Два доллара — полное закрепление" }
 
 - id: inf-9-sheet-005
   class: 9
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
   prompt: "Чем СЧЁТЕСЛИ отличается от СУММЕСЛИ?"
-  student_view: { options: [{ id: A, text: "Считает штуки, а не сумму" }, { id: C, text: "Работает без условия" }, { id: D, text: "Ничем" }, { id: B, text: "Считает сумму, а не штуки" }] }
+  student_view: { options: [{ id: A, text: "Ничем" }, { id: B, text: "Считает сумму, а не штуки" }, { id: C, text: "Считает штуки, а не сумму" }, { id: D, text: "Работает без условия" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Считает штуки, а не сумму", explanation: "СЧЁТ — количество, СУММ — сумма подходящих" }
+  teacher_only: { answer: C, answer_text: "Считает штуки, а не сумму", explanation: "СЧЁТ — количество, СУММ — сумма подходящих" }
 
 - id: inf-9-sheet-007
   class: 9
@@ -114,7 +114,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "Какая диаграмма показывает доли целого?"
-  student_view: { options: [{ id: A, text: "Круговая" }, { id: B, text: "Столбчатая" }, { id: D, text: "Лепестковая" }, { id: C, text: "Точечная" }] }
+  student_view: { options: [{ id: A, text: "Круговая" }, { id: B, text: "Лепестковая" }, { id: C, text: "Точечная" }, { id: D, text: "Столбчатая" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Круговая", explanation: "Круг — доли, столбцы — сравнение" }
 
@@ -131,9 +131,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-sort], meta: [plan-actions] }
   prompt: "Что сломается, если отсортировать только столбец баллов?"
-  student_view: { options: [{ id: A, text: "Строки разъедутся: баллы оторвутся от учеников" }, { id: B, text: "Ничего" }, { id: D, text: "Пропадёт шапка" }, { id: C, text: "Удалятся формулы" }] }
+  student_view: { options: [{ id: A, text: "Ничего" }, { id: B, text: "Пропадёт шапка" }, { id: C, text: "Удалятся формулы" }, { id: D, text: "Строки разъедутся: баллы оторвутся от учеников" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Строки разъедутся: баллы оторвутся от учеников", explanation: "Сортировать надо весь диапазон строк" }
+  teacher_only: { answer: D, answer_text: "Строки разъедутся: баллы оторвутся от учеников", explanation: "Сортировать надо весь диапазон строк" }
 
 - id: inf-9-sheet-009
   class: 9
@@ -200,7 +200,7 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "В ячейке A1 стоит число 5. В B1 введено =A1^2, в C1 введено =B1+A1. Что покажет C1?"
-  student_view: { options: [{ id: B, text: "35" }, { id: C, text: "10" }, { id: A, text: "30" }, { id: D, text: "50" }] }
+  student_view: { options: [{ id: A, text: "30" }, { id: B, text: "35" }, { id: C, text: "10" }, { id: D, text: "50" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "30", explanation: "B1 = 5 · 5 = 25, затем C1 = 25 + 5 = 30. Формулы считаются по порядку: в C1 берётся уже вычисленное значение B1." }
 
@@ -217,9 +217,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
   prompt: "В ячейку ввели число, перед которым стоит пробел. Что окажется в ячейке?"
-  student_view: { options: [{ id: D, text: "Пустая ячейка" }, { id: B, text: "Число без пробела" }, { id: C, text: "Ошибка ввода" }, { id: A, text: "Текст, а не число" }] }
+  student_view: { options: [{ id: A, text: "Число без пробела" }, { id: B, text: "Пустая ячейка" }, { id: C, text: "Текст, а не число" }, { id: D, text: "Ошибка ввода" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Текст, а не число", explanation: "Пробел в начале LibreOffice Calc воспринимает как признак начала текста. Такое значение потом не участвует в вычислениях и сортируется как текст." }
+  teacher_only: { answer: C, answer_text: "Текст, а не число", explanation: "Пробел в начале LibreOffice Calc воспринимает как признак начала текста. Такое значение потом не участвует в вычислениях и сортируется как текст." }
 
 - id: inf-9-sheet-014
   class: 9
@@ -268,9 +268,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Формула =A1^2 из ячейки B3 скопирована в ячейку C4. Что теперь в C4?"
-  student_view: { options: [{ id: A, text: "=B2^2" }, { id: D, text: "=A2^2" }, { id: B, text: "=A1^2" }, { id: C, text: "=B1^2" }] }
+  student_view: { options: [{ id: A, text: "=A1^2" }, { id: B, text: "=B2^2" }, { id: C, text: "=A2^2" }, { id: D, text: "=B1^2" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "=B2^2", explanation: "Относительная ссылка сдвигается вместе с формулой: строка 1 -> 2, столбец A -> B. Получается =B2^2." }
+  teacher_only: { answer: B, answer_text: "=B2^2", explanation: "Относительная ссылка сдвигается вместе с формулой: строка 1 -> 2, столбец A -> B. Получается =B2^2." }
 
 - id: inf-9-sheet-017
   class: 9
@@ -336,9 +336,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-cond], meta: [plan-actions] }
   prompt: "В ячейке B2 стоит 7. Что вернёт =ЕСЛИ(B2>10;\"много\";\"мало\")?"
-  student_view: { options: [{ id: A, text: "мало" }, { id: B, text: "много" }, { id: C, text: "10" }, { id: D, text: "7" }] }
+  student_view: { options: [{ id: A, text: "10" }, { id: B, text: "7" }, { id: C, text: "мало" }, { id: D, text: "много" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "мало", explanation: "7 больше 10? Нет, поэтому выполняется ветка «нет» — «мало»." }
+  teacher_only: { answer: C, answer_text: "мало", explanation: "7 больше 10? Нет, поэтому выполняется ветка «нет» — «мало»." }
 
 - id: inf-9-sheet-021
   class: 9
@@ -404,7 +404,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-filter], meta: [plan-actions] }
   prompt: "Чем фильтрация отличается от сортировки?"
-  student_view: { options: [{ id: D, text: "Ничем, это одно и то же" }, { id: B, text: "Фильтр переставляет строки по значениям столбца" }, { id: C, text: "Фильтр красит ячейки по условию" }, { id: A, text: "Фильтр прячет строки, но не удаляет и не меняет порядок остальных" }] }
+  student_view: { options: [{ id: A, text: "Фильтр прячет строки, но не удаляет и не меняет порядок остальных" }, { id: B, text: "Фильтр красит ячейки по условию" }, { id: C, text: "Фильтр переставляет строки по значениям столбца" }, { id: D, text: "Ничем, это одно и то же" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Фильтр прячет строки, но не удаляет и не меняет порядок остальных", explanation: "Сортировка меняет расположение строк, фильтрация меняет только видимость. Снял фильтр — все строки на месте." }
 
@@ -455,7 +455,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "Что произойдёт с диаграммой, если изменить число в исходной таблице?"
-  student_view: { options: [{ id: C, text: "Диаграмма исчезнет" }, { id: B, text: "Диаграмма останется прежней" }, { id: D, text: "Появится вторая диаграмма" }, { id: A, text: "Диаграмма перестроится сама" }] }
+  student_view: { options: [{ id: A, text: "Диаграмма перестроится сама" }, { id: B, text: "Диаграмма останется прежней" }, { id: C, text: "Появится вторая диаграмма" }, { id: D, text: "Диаграмма исчезнет" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Диаграмма перестроится сама", explanation: "Диаграмма связана с диапазоном ячеек: изменил таблицу — изменилось и изображение." }
 
@@ -489,9 +489,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "Сравнили площади России, Китая и США и построили круговую диаграмму. Почему это ошибка?"
-  student_view: { options: [{ id: C, text: "Нужно было взять три цвета вместо одного" }, { id: B, text: "Круговая диаграмма не умеет показывать площади" }, { id: A, text: "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли" }, { id: D, text: "Ошибки нет, круговая подходит любых трёх величин" }] }
+  student_view: { options: [{ id: A, text: "Нужно было взять три цвета вместо одного" }, { id: B, text: "Круговая диаграмма не умеет показывать площади" }, { id: C, text: "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли" }, { id: D, text: "Ошибки нет, круговая подходит любых трёх величин" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли", explanation: "Круговая диаграмма годится только для долей одного целого. Площади стран не составляют 100 %, поэтому доли получаются бессмысленными — нужна столбчатая." }
+  teacher_only: { answer: C, answer_text: "Величины не связаны и не дают 100 %, круговая покажет выдуманные доли", explanation: "Круговая диаграмма годится только для долей одного целого. Площади стран не составляют 100 %, поэтому доли получаются бессмысленными — нужна столбчатая." }
 
 - id: inf-9-sheet-030
   class: 9
@@ -608,9 +608,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-sheet-review], meta: [plan-actions] }
   prompt: "Какой разделитель аргументов используется в русской локали LibreOffice Calc?"
-  student_view: { options: [{ id: B, text: "запятая" }, { id: A, text: "точка с запятой" }, { id: C, text: "двоеточие" }, { id: D, text: "пробел" }] }
+  student_view: { options: [{ id: A, text: "запятая" }, { id: B, text: "двоеточие" }, { id: C, text: "пробел" }, { id: D, text: "точка с запятой" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "точка с запятой", explanation: "В русской локали Calc аргументы разделяют точкой с запятой; другой разделитель в такой формуле не распознаётся." }
+  teacher_only: { answer: D, answer_text: "точка с запятой", explanation: "В русской локали Calc аргументы разделяют точкой с запятой; другой разделитель в такой формуле не распознаётся." }
 
 - id: inf-9-sheet-037
   class: 9
@@ -642,9 +642,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-sheet-review], meta: [plan-actions] }
   prompt: "В B2 стоит 5, в C2 — 3. Что вернёт =ЕСЛИ(И(B2>=4;C2>=4);\"да\";\"нет\")?"
-  student_view: { options: [{ id: B, text: "да" }, { id: A, text: "нет" }, { id: C, text: "3" }, { id: D, text: "4" }] }
+  student_view: { options: [{ id: A, text: "4" }, { id: B, text: "3" }, { id: C, text: "да" }, { id: D, text: "нет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "нет", explanation: "И требует, чтобы оба условия были верны. 5 >= 4 верно, но 3 >= 4 ложно, поэтому выбирается ветка «нет»." }
+  teacher_only: { answer: D, answer_text: "нет", explanation: "И требует, чтобы оба условия были верны. 5 >= 4 верно, но 3 >= 4 ложно, поэтому выбирается ветка «нет»." }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-9-bank2.mjs — руками не править ====
 
@@ -661,9 +661,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-base], meta: [plan-actions] }
   prompt: "Как записывается адрес третьей ячейки в третьей строке таблицы?"
-  student_view: { options: [{ id: B, text: "3C" }, { id: D, text: "Ячейка 3 номер 3" }, { id: C, text: "C" }, { id: A, text: "C3" }] }
+  student_view: { options: [{ id: A, text: "C" }, { id: B, text: "Ячейка 3 номер 3" }, { id: C, text: "C3" }, { id: D, text: "3C" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "C3", explanation: "Сначала столбец, потом строка: столбец C — третий по алфавиту, строка 3. Запись 3C перепутана, а C без номера строки не указывает ни на одну ячейку." }
+  teacher_only: { answer: "C", answer_text: "C3", explanation: "Сначала столбец, потом строка: столбец C — третий по алфавиту, строка 3. Запись 3C перепутана, а C без номера строки не указывает ни на одну ячейку." }
 
 - id: inf-9-sheet-040
   class: 9
@@ -712,9 +712,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-data], meta: [plan-actions] }
   prompt: "Почему после ввода значения 1 200 (с пробелом) таблица восприняла его как текст?"
-  student_view: { options: [{ id: D, text: "Значение слишком большое" }, { id: B, text: "Пробелы нельзя вводить в таблицу" }, { id: C, text: "Числа нельзя вводить с разделителями" }, { id: A, text: "В русском формате разделителем тысяч служит не пробел, а неразрывный пробел или точка" }] }
+  student_view: { options: [{ id: A, text: "Числа нельзя вводить с разделителями" }, { id: B, text: "Значение слишком большое" }, { id: C, text: "Пробелы нельзя вводить в таблицу" }, { id: D, text: "В русском формате разделителем тысяч служит не пробел, а неразрывный пробел или точка" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "В русском формате разделителем тысяч служит не пробел, а неразрывный пробел или точка", explanation: "Обычный пробел таблица считает началом текста. Чтобы число с разделителем распозналось как число, разделитель должен быть неразрывным пробелом либо настройкой локали. Проще вводить 1200." }
+  teacher_only: { answer: "D", answer_text: "В русском формате разделителем тысяч служит не пробел, а неразрывный пробел или точка", explanation: "Обычный пробел таблица считает началом текста. Чтобы число с разделителем распозналось как число, разделитель должен быть неразрывным пробелом либо настройкой локали. Проще вводить 1200." }
 
 - id: inf-9-sheet-043
   class: 9
@@ -763,9 +763,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-refs], meta: [plan-actions] }
   prompt: "Что означает запись =$A$1 в формуле?"
-  student_view: { options: [{ id: C, text: "Ссылка на ячейку A1, которая меняется только по столбцам" }, { id: B, text: "Ссылка на столбец A, который не меняется" }, { id: D, text: "Сложение ячеек A и 1" }, { id: A, text: "Ссылка на ячейку A1, которая не меняется при копировании формулы" }] }
+  student_view: { options: [{ id: A, text: "Ссылка на ячейку A1, которая меняется только по столбцам" }, { id: B, text: "Ссылка на столбец A, который не меняется" }, { id: C, text: "Ссылка на ячейку A1, которая не меняется при копировании формулы" }, { id: D, text: "Сложение ячеек A и 1" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Ссылка на ячейку A1, которая не меняется при копировании формулы", explanation: "Доллары фиксируют и столбец, и строку — такая ссылка абсолютная. Без долларов ссылка относительная и при копировании сдвигается на столько же строк и столбцов." }
+  teacher_only: { answer: "C", answer_text: "Ссылка на ячейку A1, которая не меняется при копировании формулы", explanation: "Доллары фиксируют и столбец, и строку — такая ссылка абсолютная. Без долларов ссылка относительная и при копировании сдвигается на столько же строк и столбцов." }
 
 - id: inf-9-sheet-046
   class: 9
@@ -865,9 +865,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
   prompt: "В B1 стоит 3, в B2 — 4. Чему равен результат =ЕСЛИ(B1<B2;\"меньше\";\"не меньше\")?"
-  student_view: { options: [{ id: D, text: "истина" }, { id: C, text: "0" }, { id: A, text: "меньше" }, { id: B, text: "не меньше" }] }
+  student_view: { options: [{ id: A, text: "не меньше" }, { id: B, text: "меньше" }, { id: C, text: "0" }, { id: D, text: "истина" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "меньше", explanation: "3 < 4 — условие истинно, значит берётся первый текст «меньше». Второй вариант «не меньше» сработал бы, если бы условие было ложным." }
+  teacher_only: { answer: "B", answer_text: "меньше", explanation: "3 < 4 — условие истинно, значит берётся первый текст «меньше». Второй вариант «не меньше» сработал бы, если бы условие было ложным." }
 
 - id: inf-9-sheet-052
   class: 9
@@ -882,9 +882,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
   prompt: "В B1 стоит 5, в B2 — 4. Чему равен результат =ЕСЛИ(B1<B2;\"меньше\";\"не меньше\")?"
-  student_view: { options: [{ id: A, text: "не меньше" }, { id: B, text: "меньше" }, { id: C, text: "ложь" }, { id: D, text: "больше" }] }
+  student_view: { options: [{ id: A, text: "больше" }, { id: B, text: "ложь" }, { id: C, text: "меньше" }, { id: D, text: "не меньше" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "не меньше", explanation: "5 < 4 — условие ложно (5 больше), поэтому берётся второй вариант «не меньше». Ошибка — считать, что ЕСЛИ всегда берёт первое значение." }
+  teacher_only: { answer: "D", answer_text: "не меньше", explanation: "5 < 4 — условие ложно (5 больше), поэтому берётся второй вариант «не меньше». Ошибка — считать, что ЕСЛИ всегда берёт первое значение." }
 
 - id: inf-9-sheet-053
   class: 9
@@ -899,9 +899,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-logic], meta: [plan-actions] }
   prompt: "Оценка вычисляется формулой =ЕСЛИ(B1>=80;\"отлично\";ЕСЛИ(B1>=70;\"хорошо\";\"удовлетворительно\")). Что покажет формула, если в B1 стоит 85?"
-  student_view: { options: [{ id: D, text: "ошибку" }, { id: A, text: "отлично" }, { id: C, text: "удовлетворительно" }, { id: B, text: "хорошо" }] }
+  student_view: { options: [{ id: A, text: "хорошо" }, { id: B, text: "отлично" }, { id: C, text: "удовлетворительно" }, { id: D, text: "ошибку" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "отлично", explanation: "85 >= 80 — внешнее условие истинно, формула сразу возвращает «отлично», до внутреннего ЕСЛИ дело не доходит. Вложенные ЕСЛИ читаются слева направо и останавливаются на первом истинном условии." }
+  teacher_only: { answer: "B", answer_text: "отлично", explanation: "85 >= 80 — внешнее условие истинно, формула сразу возвращает «отлично», до внутреннего ЕСЛИ дело не доходит. Вложенные ЕСЛИ читаются слева направо и останавливаются на первом истинном условии." }
 
 - id: inf-9-sheet-054
   class: 9
@@ -916,9 +916,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-analysis], meta: [plan-actions] }
   prompt: "Данные: Аня — 4; Боря — 7; Вера — 5; Глеб — 9. Как будет выглядеть первая строка после сортировки по столбцу с оценками по возрастанию?"
-  student_view: { options: [{ id: D, text: "Вера — 5" }, { id: B, text: "Аня — 4" }, { id: A, text: "Боря — 4" }, { id: C, text: "Глеб — 9" }] }
+  student_view: { options: [{ id: A, text: "Глеб — 9" }, { id: B, text: "Боря — 4" }, { id: C, text: "Аня — 4" }, { id: D, text: "Вера — 5" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "B", answer_text: "Аня — 4", explanation: "Наименьшая оценка 4, она у Ани. При сортировке по возрастанию первая строка — с минимальным значением, и вместе с оценкой переносится вся строка, а не только ячейка." }
+  teacher_only: { answer: "C", answer_text: "Аня — 4", explanation: "Наименьшая оценка 4, она у Ани. При сортировке по возрастанию первая строка — с минимальным значением, и вместе с оценкой переносится вся строка, а не только ячейка." }
 
 - id: inf-9-sheet-055
   class: 9
@@ -1001,9 +1001,9 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "Какая диаграмма показывает, как менялась величина по месяцам?"
-  student_view: { options: [{ id: A, text: "Линейная (график)" }, { id: C, text: "Диаграмма разброса" }, { id: B, text: "Круговая" }, { id: D, text: "Гистограмма" }] }
+  student_view: { options: [{ id: A, text: "Гистограмма" }, { id: B, text: "Круговая" }, { id: C, text: "Диаграмма разброса" }, { id: D, text: "Линейная (график)" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Линейная (график)", explanation: "Линейный график показывает изменение величины по оси времени. Круговая — доли целого, разброса — связь двух величин, гистограмма — распределение значений по интервалам." }
+  teacher_only: { answer: "D", answer_text: "Линейная (график)", explanation: "Линейный график показывает изменение величины по оси времени. Круговая — доли целого, разброса — связь двух величин, гистограмма — распределение значений по интервалам." }
 
 - id: inf-9-sheet-060
   class: 9
@@ -1173,6 +1173,6 @@
   fgos_element: 1.2
   fgos: { subject: [inf-9-sheet-charts], meta: [plan-actions] }
   prompt: "На диаграмме несколько рядов данных, каждый нарисован своим цветом. Какой элемент диаграммы объясняет, что означает каждый цвет?"
-  student_view: { options: [{ id: A, text: "Легенда" }, { id: C, text: "Подпись оси" }, { id: B, text: "Заголовок" }, { id: D, text: "Линия сетки" }] }
+  student_view: { options: [{ id: A, text: "Заголовок" }, { id: B, text: "Линия сетки" }, { id: C, text: "Легенда" }, { id: D, text: "Подпись оси" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Легенда", explanation: "Легенда расшифровывает цвета и ряды: какой столбик или какая линия чему соответствует. Заголовок отвечает на вопрос «о чём диаграмма», подпись оси — «в каких единицах», а сетка просто помогает считывать значения." }
+  teacher_only: { answer: "C", answer_text: "Легенда", explanation: "Легенда расшифровывает цвета и ряды: какой столбик или какая линия чему соответствует. Заголовок отвечает на вопрос «о чём диаграмма», подпись оси — «в каких единицах», а сетка просто помогает считывать значения." }

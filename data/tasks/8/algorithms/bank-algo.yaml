@@ -12,9 +12,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-props], meta: [plan-actions] }
   prompt: "Сколько свойств алгоритма выделяют в школьном курсе?"
-  student_view: { options: [{ id: C, text: "5" }, { id: A, text: "3" }, { id: B, text: "4" }, { id: D, text: "6" }] }
+  student_view: { options: [{ id: A, text: "5" }, { id: B, text: "3" }, { id: C, text: "4" }, { id: D, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "3", explanation: "Дискретность, понятность, определённость, результативность, массовость" }
+  teacher_only: { answer: A, answer_text: "5", explanation: "Дискретность, понятность, определённость, результативность, массовость" }
 
 - id: inf-8-algo-002
   class: 8
@@ -29,9 +29,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
   prompt: "Что такое формальный исполнитель?"
-  student_view: { options: [{ id: C, text: "Выполняет только одну команду" }, { id: B, text: "Понимает смысл задачи и рассуждает" }, { id: A, text: "Выполняет команды всегда одинаково, не вникая в смысл" }, { id: D, text: "Работает без системы команд" }] }
+  student_view: { options: [{ id: A, text: "Понимает смысл задачи и рассуждает" }, { id: B, text: "Выполняет только одну команду" }, { id: C, text: "Выполняет команды всегда одинаково, не вникая в смысл" }, { id: D, text: "Работает без системы команд" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Выполняет команды всегда одинаково, не вникая в смысл", explanation: "Одинаковость без понимания смысла — основа автоматизации" }
+  teacher_only: { answer: C, answer_text: "Выполняет команды всегда одинаково, не вникая в смысл", explanation: "Одинаковость без понимания смысла — основа автоматизации" }
 
 - id: inf-8-algo-003
   class: 8
@@ -80,7 +80,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
   prompt: "Какая фигура появится после «Повтори 4 [Вперёд 20 Направо 90]»?"
-  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Треугольник" }, { id: C, text: "Круг" }, { id: D, text: "Отрезок" }] }
+  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Круг" }, { id: C, text: "Отрезок" }, { id: D, text: "Треугольник" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Квадрат", explanation: "4 поворота по 90° замыкают квадрат" }
 
@@ -114,7 +114,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
   prompt: "Что означает запись «x := x + 1»?"
-  student_view: { options: [{ id: A, text: "Положить в x старое x плюс 1" }, { id: D, text: "Цикл по x" }, { id: B, text: "Утверждение, что x равен x + 1" }, { id: C, text: "Сравнение x с x + 1" }] }
+  student_view: { options: [{ id: A, text: "Положить в x старое x плюс 1" }, { id: B, text: "Цикл по x" }, { id: C, text: "Сравнение x с x + 1" }, { id: D, text: "Утверждение, что x равен x + 1" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Положить в x старое x плюс 1", explanation: ":= — команда положить, сначала считается правая часть" }
 
@@ -148,7 +148,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
   prompt: "В какой форме ветвления при ложном условии не выполняется ничего?"
-  student_view: { options: [{ id: C, text: "В обеих" }, { id: A, text: "В полной" }, { id: D, text: "Ни в какой" }, { id: B, text: "В неполной" }] }
+  student_view: { options: [{ id: A, text: "В полной" }, { id: B, text: "В неполной" }, { id: C, text: "Ни в какой" }, { id: D, text: "В обеих" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "В неполной", explanation: "Неполная форма — только «если-то», без «иначе»" }
 
@@ -165,9 +165,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
   prompt: "Алгоритм: если x чётное, то x := x / 2, иначе x := x + 1. Что будет при x = 7?"
-  student_view: { options: [{ id: A, text: "x = 8" }, { id: C, text: "x = 7" }, { id: B, text: "x = 3" }, { id: D, text: "x = 14" }] }
+  student_view: { options: [{ id: A, text: "x = 14" }, { id: B, text: "x = 7" }, { id: C, text: "x = 3" }, { id: D, text: "x = 8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "x = 8", explanation: "7 нечётное — ветка иначе: 7 + 1 = 8" }
+  teacher_only: { answer: D, answer_text: "x = 8", explanation: "7 нечётное — ветка иначе: 7 + 1 = 8" }
 
 - id: inf-8-algo-011
   class: 8
@@ -199,9 +199,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
   prompt: "Когда проверяется условие в цикле «нц пока … кц»?"
-  student_view: { options: [{ id: D, text: "Не проверяется" }, { id: B, text: "После выполнения тела" }, { id: A, text: "До выполнения тела" }, { id: C, text: "В середине тела" }] }
+  student_view: { options: [{ id: A, text: "После выполнения тела" }, { id: B, text: "До выполнения тела" }, { id: C, text: "В середине тела" }, { id: D, text: "Не проверяется" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "До выполнения тела", explanation: "Если условие сразу ложно, тело не выполнится ни разу" }
+  teacher_only: { answer: B, answer_text: "До выполнения тела", explanation: "Если условие сразу ложно, тело не выполнится ни разу" }
 - id: inf-8-algo-013
   class: 8
   topic: Алгоритмы и исполнители
@@ -232,9 +232,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-performer], meta: [plan-actions] }
   prompt: "Что нарисует Черепаха после «Повтори 2 [Вперёд 10 Направо 90]»?"
-  student_view: { options: [{ id: A, text: "Угол из двух отрезков" }, { id: C, text: "Треугольник" }, { id: B, text: "Квадрат" }, { id: D, text: "Отрезок" }] }
+  student_view: { options: [{ id: A, text: "Квадрат" }, { id: B, text: "Треугольник" }, { id: C, text: "Отрезок" }, { id: D, text: "Угол из двух отрезков" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Угол из двух отрезков", explanation: "Два отрезка под 90° — путь не замкнулся" }
+  teacher_only: { answer: D, answer_text: "Угол из двух отрезков", explanation: "Два отрезка под 90° — путь не замкнулся" }
 
 - id: inf-8-algo-015
   class: 8
@@ -249,9 +249,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "Алгоритм: a = 5; если a > 3, то a := a · 2, иначе a := a + 1. Что получится?"
-  student_view: { options: [{ id: A, text: "6" }, { id: B, text: "10" }, { id: D, text: "8" }, { id: C, text: "5" }] }
+  student_view: { options: [{ id: A, text: "10" }, { id: B, text: "5" }, { id: C, text: "8" }, { id: D, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "10", explanation: "5 > 3 — верхняя ветка: 5 · 2 = 10" }
+  teacher_only: { answer: A, answer_text: "10", explanation: "5 > 3 — верхняя ветка: 5 · 2 = 10" }
 
 - id: inf-8-algo-016
   class: 8
@@ -283,9 +283,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "Алгоритм: чётное x делит пополам, нечётное x заменяет на x · 2 + 1. Результат — 10. Каким было x?"
-  student_view: { options: [{ id: C, text: "9" }, { id: D, text: "4" }, { id: A, text: "20" }, { id: B, text: "5" }] }
+  student_view: { options: [{ id: A, text: "5" }, { id: B, text: "9" }, { id: C, text: "20" }, { id: D, text: "4" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "20", explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
+  teacher_only: { answer: C, answer_text: "20", explanation: "Чётная ветка: x / 2 = 10, x = 20. Нечётная дала бы x = 4,5 — не целое. Остальные: 5 → 11, 9 → 19, 4 → 2" }
 
 - id: inf-8-algo-018
   class: 8
@@ -334,7 +334,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-notation], meta: [plan-actions] }
   prompt: "Что такое трассировочная таблица?"
-  student_view: { options: [{ id: A, text: "Значения переменных по шагам выполнения" }, { id: B, text: "Список учеников" }, { id: C, text: "Расписание уроков" }, { id: D, text: "Меню столовой" }] }
+  student_view: { options: [{ id: A, text: "Значения переменных по шагам выполнения" }, { id: B, text: "Меню столовой" }, { id: C, text: "Расписание уроков" }, { id: D, text: "Список учеников" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Значения переменных по шагам выполнения", explanation: "Ручной прогон: шаг — значения" }
 
@@ -385,9 +385,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-system], meta: [plan-actions] }
   prompt: "Какая часть системы программирования переводит текст программы в машинный код, понятный процессору?"
-  student_view: { options: [{ id: C, text: "Транслятор" }, { id: D, text: "Исполнитель алгоритма" }, { id: A, text: "Редактор" }, { id: B, text: "Отладчик" }] }
+  student_view: { options: [{ id: A, text: "Редактор" }, { id: B, text: "Транслятор" }, { id: C, text: "Исполнитель алгоритма" }, { id: D, text: "Отладчик" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Транслятор", explanation: "Транслятор (интерпретатор или компилятор) переводит программу в машинный код; отладчик ищет ошибки, редактор нужен для набора текста." }
+  teacher_only: { answer: B, answer_text: "Транслятор", explanation: "Транслятор (интерпретатор или компилятор) переводит программу в машинный код; отладчик ищет ошибки, редактор нужен для набора текста." }
 
 - id: inf-8-algo-024
   class: 8
@@ -402,9 +402,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
   prompt: "Какой тип данных у значения '12' в Python?"
-  student_view: { options: [{ id: A, text: "int" }, { id: D, text: "bool" }, { id: B, text: "float" }, { id: C, text: "str" }] }
+  student_view: { options: [{ id: A, text: "bool" }, { id: B, text: "str" }, { id: C, text: "float" }, { id: D, text: "int" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "str", explanation: "Кавычки делают запись строкой (str); без кавычек 12 — целое число int." }
+  teacher_only: { answer: B, answer_text: "str", explanation: "Кавычки делают запись строкой (str); без кавычек 12 — целое число int." }
 
 - id: inf-8-algo-025
   class: 8
@@ -487,9 +487,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-sequence], meta: [plan-actions] }
   prompt: "Чем следование отличается от ветвления?"
-  student_view: { options: [{ id: B, text: "В следовании есть условие, которое выбирает следующую команду" }, { id: C, text: "В следовании есть цикл, повторяющий команды" }, { id: D, text: "В следовании порядок команд можно менять без последствий" }, { id: A, text: "В следовании нет ни условия, ни цикла — команды идут строго по порядку" }] }
+  student_view: { options: [{ id: A, text: "В следовании есть цикл, повторяющий команды" }, { id: B, text: "В следовании нет ни условия, ни цикла — команды идут строго по порядку" }, { id: C, text: "В следовании порядок команд можно менять без последствий" }, { id: D, text: "В следовании есть условие, которое выбирает следующую команду" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "В следовании нет ни условия, ни цикла — команды идут строго по порядку", explanation: "Следование — самая простая конструкция: ни ветвления, ни повторения, порядок команд задаёт всё." }
+  teacher_only: { answer: B, answer_text: "В следовании нет ни условия, ни цикла — команды идут строго по порядку", explanation: "Следование — самая простая конструкция: ни ветвления, ни повторения, порядок команд задаёт всё." }
 
 - id: inf-8-algo-030
   class: 8
@@ -555,9 +555,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-branch], meta: [plan-actions] }
   prompt: "Что происходит, если условие в неполной форме ветвления ложно?"
-  student_view: { options: [{ id: D, text: "Цикл повторяется заново" }, { id: B, text: "Программа идёт дальше, ничего не выполняя" }, { id: A, text: "Выполняется ветка «иначе»" }, { id: C, text: "Программа завершается с ошибкой" }] }
+  student_view: { options: [{ id: A, text: "Цикл повторяется заново" }, { id: B, text: "Программа завершается с ошибкой" }, { id: C, text: "Выполняется ветка «иначе»" }, { id: D, text: "Программа идёт дальше, ничего не выполняя" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Программа идёт дальше, ничего не выполняя", explanation: "В неполной форме ветка «иначе» отсутствует: при ложном условии тело просто пропускается." }
+  teacher_only: { answer: D, answer_text: "Программа идёт дальше, ничего не выполняя", explanation: "В неполной форме ветка «иначе» отсутствует: при ложном условии тело просто пропускается." }
 
 - id: inf-8-algo-034
   class: 8
@@ -623,7 +623,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
   prompt: "Сколько раз минимум выполнится тело цикла с условием окончания?"
-  student_view: { options: [{ id: D, text: "Столько, сколько повторений указано в условии" }, { id: B, text: "1 раз" }, { id: A, text: "0 раз" }, { id: C, text: "2 раза" }] }
+  student_view: { options: [{ id: A, text: "Столько, сколько повторений указано в условии" }, { id: B, text: "1 раз" }, { id: C, text: "0 раз" }, { id: D, text: "2 раза" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "1 раз", explanation: "Тело стоит до проверки условия, поэтому выполняется хотя бы один раз — в отличие от цикла «пока»." }
 
@@ -691,7 +691,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
   prompt: "Какой вызов range даёт числа 2, 4, 6, 8?"
-  student_view: { options: [{ id: A, text: "range(2, 10, 2)" }, { id: C, text: "range(2, 8, 2)" }, { id: D, text: "range(8, 2, -2)" }, { id: B, text: "range(2, 8)" }] }
+  student_view: { options: [{ id: A, text: "range(2, 10, 2)" }, { id: B, text: "range(2, 8, 2)" }, { id: C, text: "range(8, 2, -2)" }, { id: D, text: "range(2, 8)" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "range(2, 10, 2)", explanation: "Начало 2, шаг 2, а правая граница не входит — чтобы дойти до 8, её надо взять равной 10" }
 
@@ -725,7 +725,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-loops], meta: [plan-actions] }
   prompt: "Что выведет программа for i in range(3): print(i * 2)? (каждое число — с новой строки)"
-  student_view: { options: [{ id: B, text: "1 3 5" }, { id: C, text: "0 2 4 6" }, { id: D, text: "2 4 6" }, { id: A, text: "0 2 4" }] }
+  student_view: { options: [{ id: A, text: "0 2 4" }, { id: B, text: "1 3 5" }, { id: C, text: "2 4 6" }, { id: D, text: "0 2 4 6" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "0 2 4", explanation: "range(3) даёт 0, 1, 2, поэтому печатаются 0, 2 и 4 — по одному числу в строке" }
 
@@ -742,7 +742,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-design], meta: [plan-actions] }
   prompt: "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?"
-  student_view: { options: [{ id: B, text: "Только ветвление" }, { id: C, text: "Цикл for и ветвление" }, { id: A, text: "Только цикл for" }, { id: D, text: "Только цикл с условием окончания" }] }
+  student_view: { options: [{ id: A, text: "Только цикл for" }, { id: B, text: "Только цикл с условием окончания" }, { id: C, text: "Только ветвление" }, { id: D, text: "Цикл for и ветвление" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Только цикл for", explanation: "for перебирает числа от 1 до n, а ветвление отбирает из них те, что делятся на 2 без остатка" }
 
@@ -810,9 +810,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-if], meta: [plan-actions] }
   prompt: "Что выведет код x = 5; if x > 3: print('да') else: print('нет')?"
-  student_view: { options: [{ id: A, text: "да" }, { id: C, text: "ничего не выведется" }, { id: B, text: "нет" }, { id: D, text: "Ошибка выполнения" }] }
+  student_view: { options: [{ id: A, text: "Ошибка выполнения" }, { id: B, text: "нет" }, { id: C, text: "да" }, { id: D, text: "ничего не выведется" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "да", explanation: "5 > 3 истинно, поэтому выполняется ветка «то» и выводится «да»; ветка «иначе» пропускается" }
+  teacher_only: { answer: C, answer_text: "да", explanation: "5 > 3 истинно, поэтому выполняется ветка «то» и выводится «да»; ветка «иначе» пропускается" }
 
 - id: inf-8-algo-049
   class: 8
@@ -827,9 +827,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-while], meta: [plan-actions] }
   prompt: "Как в Python отбросить последнюю цифру целого числа n?"
-  student_view: { options: [{ id: A, text: "n / 10" }, { id: C, text: "n % 10" }, { id: B, text: "n // 10" }, { id: D, text: "n ** 10" }] }
+  student_view: { options: [{ id: A, text: "n % 10" }, { id: B, text: "n / 10" }, { id: C, text: "n ** 10" }, { id: D, text: "n // 10" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "n // 10", explanation: "// даёт целую часть от деления (то есть число без последней цифры), / даёт дробь, % даёт саму цифру" }
+  teacher_only: { answer: D, answer_text: "n // 10", explanation: "// даёт целую часть от деления (то есть число без последней цифры), / даёт дробь, % даёт саму цифру" }
 
 - id: inf-8-algo-050
   class: 8
@@ -929,9 +929,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-str], meta: [plan-actions] }
   prompt: "Что выведет print('10' < '9')?"
-  student_view: { options: [{ id: A, text: "True" }, { id: B, text: "False" }, { id: D, text: "Ничего" }, { id: C, text: "Ошибку" }] }
+  student_view: { options: [{ id: A, text: "False" }, { id: B, text: "True" }, { id: C, text: "Ошибку" }, { id: D, text: "Ничего" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "True", explanation: "Строки сравниваются посимвольно по кодам символов: '1' < '9', поэтому True, хотя как числа 10 больше 9" }
+  teacher_only: { answer: B, answer_text: "True", explanation: "Строки сравниваются посимвольно по кодам символов: '1' < '9', поэтому True, хотя как числа 10 больше 9" }
 
 - id: inf-8-algo-056
   class: 8
@@ -963,9 +963,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "Сколько различных результатов может дать ветвление с одним условием (две ветки)?"
-  student_view: { options: [{ id: B, text: "Ровно один" }, { id: D, text: "Столько, сколько входных данных" }, { id: C, text: "Четыре" }, { id: A, text: "Не больше двух" }] }
+  student_view: { options: [{ id: A, text: "Ровно один" }, { id: B, text: "Четыре" }, { id: C, text: "Столько, сколько входных данных" }, { id: D, text: "Не больше двух" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Не больше двух", explanation: "Каждая ветка даёт свой результат, а условие одно — значит путей два и результатов не больше двух" }
+  teacher_only: { answer: D, answer_text: "Не больше двух", explanation: "Каждая ветка даёт свой результат, а условие одно — значит путей два и результатов не больше двух" }
 
 - id: inf-8-algo-058
   class: 8
@@ -1014,9 +1014,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [plan-actions] }
   prompt: "С чего начинается решение обратной задачи — найти входные данные по известному результату?"
-  student_view: { options: [{ id: D, text: "С таблицы истинности" }, { id: A, text: "С результата: определяем последнюю выполненную команду и решаем уравнение назад" }, { id: C, text: "С новой программы, которая делает то же самое" }, { id: B, text: "С самого начала программы, выполняя её на всех возможных данных" }] }
+  student_view: { options: [{ id: A, text: "С таблицы истинности" }, { id: B, text: "С новой программы, которая делает то же самое" }, { id: C, text: "С самого начала программы, выполняя её на всех возможных данных" }, { id: D, text: "С результата: определяем последнюю выполненную команду и решаем уравнение назад" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "С результата: определяем последнюю выполненную команду и решаем уравнение назад", explanation: "Идём от результата: находим последнюю команду, решаем уравнение назад и каждый найденный вход проверяем прямым прогоном" }
+  teacher_only: { answer: D, answer_text: "С результата: определяем последнюю выполненную команду и решаем уравнение назад", explanation: "Идём от результата: находим последнюю команду, решаем уравнение назад и каждый найденный вход проверяем прямым прогоном" }
 
 - id: inf-8-algo-061
   class: 8
@@ -1031,9 +1031,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-algo-analysis], meta: [self-control] }
   prompt: "Программа: если x чётно, то y := x · 2, иначе y := x + 1. Вывод — 10. Каким было x?"
-  student_view: { options: [{ id: D, text: "4" }, { id: A, text: "5" }, { id: C, text: "20" }, { id: B, text: "9" }] }
+  student_view: { options: [{ id: A, text: "9" }, { id: B, text: "20" }, { id: C, text: "5" }, { id: D, text: "4" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "9", explanation: "Проверяем все варианты: 5 → 6, 9 → 10 (верно), 20 → 40, 4 → 8. Подходит только 9" }
+  teacher_only: { answer: A, answer_text: "9", explanation: "Проверяем все варианты: 5 → 6, 9 → 10 (верно), 20 → 40, 4 → 8. Подходит только 9" }
 
 - id: inf-8-algo-062
   class: 8
@@ -1068,9 +1068,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-py-types], meta: [plan-actions] }
   prompt: "Что произойдёт в Python при выполнении a = int('3,5')?"
-  student_view: { options: [{ id: C, text: "a станет числом 35" }, { id: B, text: "a станет числом 3,5" }, { id: D, text: "a станет числом 0" }, { id: A, text: "Программа остановится с ошибкой: в int() передают точку, а не запятую" }] }
+  student_view: { options: [{ id: A, text: "a станет числом 35" }, { id: B, text: "a станет числом 3,5" }, { id: C, text: "Программа остановится с ошибкой: в int() передают точку, а не запятую" }, { id: D, text: "a станет числом 0" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Программа остановится с ошибкой: в int() передают точку, а не запятую", explanation: "int() понимает только цифры, знак и пробелы вокруг них, поэтому int(' 12 ') работает. Запятая десятичным разделителем в Python не считается — дробные числа вводят через float('3.5') с точкой." }
+  teacher_only: { answer: C, answer_text: "Программа остановится с ошибкой: в int() передают точку, а не запятую", explanation: "int() понимает только цифры, знак и пробелы вокруг них, поэтому int(' 12 ') работает. Запятая десятичным разделителем в Python не считается — дробные числа вводят через float('3.5') с точкой." }
 
 - id: inf-8-algo-064
   class: 8

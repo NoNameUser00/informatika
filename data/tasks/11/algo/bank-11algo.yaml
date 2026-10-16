@@ -29,7 +29,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-auto], meta: [plan-actions] }
   prompt: "Какое число МОЖЕТ быть результатом Автомата?"
-  student_view: { options: [{ id: C, text: "1019" }, { id: A, text: "1610" }, { id: D, text: "2000" }, { id: B, text: "1010" }] }
+  student_view: { options: [{ id: A, text: "1610" }, { id: B, text: "1010" }, { id: C, text: "2000" }, { id: D, text: "1019" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "1010", explanation: "1010 из 1910 (пары 10, 10, 1); 16/19/20 невозможны (сумма ≤ 18, порядок неубывающий)" }
 
@@ -46,9 +46,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "От чего сложность зависит сильнее всего?"
-  student_view: { options: [{ id: B, text: "От цвета монитора" }, { id: A, text: "От размера данных" }, { id: C, text: "От дня недели" }, { id: D, text: "Ни от чего" }] }
+  student_view: { options: [{ id: A, text: "От дня недели" }, { id: B, text: "Ни от чего" }, { id: C, text: "От размера данных" }, { id: D, text: "От цвета монитора" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "От размера данных", explanation: "Рост операций с ростом n" }
+  teacher_only: { answer: C, answer_text: "От размера данных", explanation: "Рост операций с ростом n" }
 
 - id: inf-11-algo-004
   class: 11
@@ -63,9 +63,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
   prompt: "Как работает сортировка выбором?"
-  student_view: { options: [{ id: A, text: "Минимум из остатка — на своё место" }, { id: C, text: "Удалить половину" }, { id: D, text: "Никак" }, { id: B, text: "Всё перемешать" }] }
+  student_view: { options: [{ id: A, text: "Всё перемешать" }, { id: B, text: "Никак" }, { id: C, text: "Удалить половину" }, { id: D, text: "Минимум из остатка — на своё место" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Минимум из остатка — на своё место", explanation: "Тот же чемпион, что в максимуме" }
+  teacher_only: { answer: D, answer_text: "Минимум из остатка — на своё место", explanation: "Тот же чемпион, что в максимуме" }
 
 - id: inf-11-algo-005
   class: 11
@@ -80,9 +80,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-matrix], meta: [plan-actions] }
   prompt: "Что означает a[1][2]?"
-  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Число 12" }, { id: B, text: "Строка 2, столбец 1" }, { id: A, text: "Строка 1, столбец 2" }] }
+  student_view: { options: [{ id: A, text: "Число 12" }, { id: B, text: "Строка 2, столбец 1" }, { id: C, text: "Строка 1, столбец 2" }, { id: D, text: "Ничего" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Строка 1, столбец 2", explanation: "Первый индекс — строка" }
+  teacher_only: { answer: C, answer_text: "Строка 1, столбец 2", explanation: "Первый индекс — строка" }
 
 - id: inf-11-algo-006
   class: 11
@@ -97,7 +97,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-rec], meta: [plan-actions] }
   prompt: "Что обязательно в рекурсии?"
-  student_view: { options: [{ id: A, text: "Базовый случай-выход" }, { id: D, text: "Ничего" }, { id: C, text: "Интернет" }, { id: B, text: "Громкий звук" }] }
+  student_view: { options: [{ id: A, text: "Базовый случай-выход" }, { id: B, text: "Ничего" }, { id: C, text: "Интернет" }, { id: D, text: "Громкий звук" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Базовый случай-выход", explanation: "Без базы — бесконечность" }
 
@@ -164,9 +164,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "Что такое инвариант цикла?"
-  student_view: { options: [{ id: C, text: "Условие выхода" }, { id: B, text: "Счётчик цикла" }, { id: A, text: "Утверждение, верное до и после каждого прохода" }, { id: D, text: "Тело цикла" }] }
+  student_view: { options: [{ id: A, text: "Условие выхода" }, { id: B, text: "Тело цикла" }, { id: C, text: "Счётчик цикла" }, { id: D, text: "Утверждение, верное до и после каждого прохода" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Утверждение, верное до и после каждого прохода", explanation: "Инвариант доказывает правильность" }
+  teacher_only: { answer: D, answer_text: "Утверждение, верное до и после каждого прохода", explanation: "Инвариант доказывает правильность" }
 
 - id: inf-11-algo-011
   class: 11
@@ -181,9 +181,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Что такое трассировка при отладке?"
-  student_view: { options: [{ id: D, text: "Печать учебника" }, { id: B, text: "Удаление программы" }, { id: C, text: "Ускорение компьютера" }, { id: A, text: "Отслеживание значений по шагам выполнения" }] }
+  student_view: { options: [{ id: A, text: "Ускорение компьютера" }, { id: B, text: "Печать учебника" }, { id: C, text: "Удаление программы" }, { id: D, text: "Отслеживание значений по шагам выполнения" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Отслеживание значений по шагам выполнения", explanation: "Видишь, где значения свернули не туда" }
+  teacher_only: { answer: D, answer_text: "Отслеживание значений по шагам выполнения", explanation: "Видишь, где значения свернули не туда" }
 
 - id: inf-11-algo-012
   class: 11
@@ -198,7 +198,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Программа делит числа. Какой набор тестов — граничные значения?"
-  student_view: { options: [{ id: A, text: "Деление на ноль и отрицательные" }, { id: D, text: "Тесты не нужны" }, { id: B, text: "Только 10 / 2" }, { id: C, text: "Только большие числа" }] }
+  student_view: { options: [{ id: A, text: "Деление на ноль и отрицательные" }, { id: B, text: "Только большие числа" }, { id: C, text: "Тесты не нужны" }, { id: D, text: "Только 10 / 2" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Деление на ноль и отрицательные", explanation: "Границы (ноль!) ломают чаще всего" }
 
@@ -215,7 +215,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
   prompt: "Что делает строка import math в программе?"
-  student_view: { options: [{ id: B, text: "Рисует графики" }, { id: D, text: "Выключает компьютер" }, { id: A, text: "Подключает библиотеку математических подпрограмм" }, { id: C, text: "Удаляет числа" }] }
+  student_view: { options: [{ id: A, text: "Подключает библиотеку математических подпрограмм" }, { id: B, text: "Удаляет числа" }, { id: C, text: "Выключает компьютер" }, { id: D, text: "Рисует графики" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Подключает библиотеку математических подпрограмм", explanation: "Готовое и проверенное — подключай, а не пиши заново" }
 
@@ -232,9 +232,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-lib], meta: [plan-actions] }
   prompt: "Где хранить свои переиспользуемые подпрограммы?"
-  student_view: { options: [{ id: A, text: "В отдельном файле-модуле" }, { id: D, text: "Нигде" }, { id: C, text: "В имени файла" }, { id: B, text: "В комментариях" }] }
+  student_view: { options: [{ id: A, text: "В имени файла" }, { id: B, text: "Нигде" }, { id: C, text: "В отдельном файле-модуле" }, { id: D, text: "В комментариях" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "В отдельном файле-модуле", explanation: "Модуль подключается import, как стандартный" }
+  teacher_only: { answer: C, answer_text: "В отдельном файле-модуле", explanation: "Модуль подключается import, как стандартный" }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
 
@@ -268,9 +268,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Что проверяет негативный тест?"
-  student_view: { options: [{ id: A, text: "Что на некорректных данных (пусто, ноль, текст вместо числа) программа сообщает об ошибке, а не выдаёт мусор" }, { id: B, text: "Что программа работает быстрее всех остальных" }, { id: D, text: "Что код программы написан аккуратно" }, { id: C, text: "Что результат программы всегда положительный" }] }
+  student_view: { options: [{ id: A, text: "Что код программы написан аккуратно" }, { id: B, text: "Что на некорректных данных (пусто, ноль, текст вместо числа) программа сообщает об ошибке, а не выдаёт мусор" }, { id: C, text: "Что результат программы всегда положительный" }, { id: D, text: "Что программа работает быстрее всех остальных" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Что на некорректных данных (пусто, ноль, текст вместо числа) программа сообщает об ошибке, а не выдаёт мусор", explanation: "Позитивные тесты проверяют верный результат, негативные — поведение при недопустимых данных." }
+  teacher_only: { answer: "B", answer_text: "Что на некорректных данных (пусто, ноль, текст вместо числа) программа сообщает об ошибке, а не выдаёт мусор", explanation: "Позитивные тесты проверяют верный результат, негативные — поведение при недопустимых данных." }
 
 - id: inf-11-algo-017
   class: 11
@@ -659,9 +659,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "Какая сложность у линейного поиска элемента в неотсортированном массиве?"
-  student_view: { options: [{ id: B, text: "O(log n)" }, { id: C, text: "O(1)" }, { id: A, text: "O(n)" }, { id: D, text: "O(n²)" }] }
+  student_view: { options: [{ id: A, text: "O(log n)" }, { id: B, text: "O(n)" }, { id: C, text: "O(1)" }, { id: D, text: "O(n²)" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "O(n)", explanation: "Линейный поиск просматривает элементы подряд, поэтому растёт вместе с n; O(log n) — это бинарный поиск по отсортированному массиву." }
+  teacher_only: { answer: "B", answer_text: "O(n)", explanation: "Линейный поиск просматривает элементы подряд, поэтому растёт вместе с n; O(log n) — это бинарный поиск по отсортированному массиву." }
 
 - id: inf-11-algo-040
   class: 11
@@ -765,9 +765,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-debug], meta: [plan-actions] }
   prompt: "Программа ищет наибольший элемент списка из 5 чисел так: for i in range(len(a)): если a[i + 1] > best, best = a[i + 1]. Что произойдёт?"
-  student_view: { options: [{ id: D, text: "Программа зациклится и будет обращаться к a[5], a[6], a[7] и дальше" }, { id: C, text: "Программа выведет 0: несуществующий элемент считается нулём" }, { id: B, text: "Программа выведет правильный максимум: лишний шаг цикла ничего не меняет" }, { id: A, text: "Программа завершится с ошибкой: при i = 4 обращение к a[5] выходит за границу списка" }] }
+  student_view: { options: [{ id: A, text: "Программа зациклится и будет обращаться к a[5], a[6], a[7] и дальше" }, { id: B, text: "Программа завершится с ошибкой: при i = 4 обращение к a[5] выходит за границу списка" }, { id: C, text: "Программа выведет правильный максимум: лишний шаг цикла ничего не меняет" }, { id: D, text: "Программа выведет 0: несуществующий элемент считается нулём" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Программа завершится с ошибкой: при i = 4 обращение к a[5] выходит за границу списка", explanation: "Обращение идёт к элементу с индексом i + 1, а цикл доходит до i = 4. Тогда программа просит a[5], а такого элемента нет — Python сообщает IndexError. Классическая ошибка на единицу: либо цикл строят от 0 до n − 2, либо последний элемент обрабатывают отдельно." }
+  teacher_only: { answer: "B", answer_text: "Программа завершится с ошибкой: при i = 4 обращение к a[5] выходит за границу списка", explanation: "Обращение идёт к элементу с индексом i + 1, а цикл доходит до i = 4. Тогда программа просит a[5], а такого элемента нет — Python сообщает IndexError. Классическая ошибка на единицу: либо цикл строят от 0 до n − 2, либо последний элемент обрабатывают отдельно." }
 
 - id: inf-11-algo-046
   class: 11
@@ -884,9 +884,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-sort], meta: [plan-actions] }
   prompt: "Чем отличается сортировка подсчётом от остальных способов сортировки?"
-  student_view: { options: [{ id: C, text: "Сортирует только числа, а строки оставляет в исходном порядке" }, { id: D, text: "Удаляет из списка повторяющиеся элементы" }, { id: B, text: "Считает число сравнений и печатает его в конце работы" }, { id: A, text: "Выстраивает элементы по количеству их значений, не сравнивая элементы попарно" }] }
+  student_view: { options: [{ id: A, text: "Считает число сравнений и печатает его в конце работы" }, { id: B, text: "Удаляет из списка повторяющиеся элементы" }, { id: C, text: "Сортирует только числа, а строки оставляет в исходном порядке" }, { id: D, text: "Выстраивает элементы по количеству их значений, не сравнивая элементы попарно" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Выстраивает элементы по количеству их значений, не сравнивая элементы попарно", explanation: "Сортировка подсчётом сначала подсчитывает, сколько раз встречается каждое значение, а затем выкладывает элементы по этим частотам. Сравнения элементов между собой при этом не нужны совсем, поэтому она работает за O(n + k), где k — число различных значений. Побочная сторона: значения должны быть небольшими целыми числами." }
+  teacher_only: { answer: "D", answer_text: "Выстраивает элементы по количеству их значений, не сравнивая элементы попарно", explanation: "Сортировка подсчётом сначала подсчитывает, сколько раз встречается каждое значение, а затем выкладывает элементы по этим частотам. Сравнения элементов между собой при этом не нужны совсем, поэтому она работает за O(n + k), где k — число различных значений. Побочная сторона: значения должны быть небольшими целыми числами." }
 
 - id: inf-11-algo-053
   class: 11
@@ -1105,7 +1105,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-11-algo-complex], meta: [plan-actions] }
   prompt: "Какая сложность у двоичного (бинарного) поиска в отсортированном массиве?"
-  student_view: { options: [{ id: B, text: "O(n): просматриваются все элементы подряд" }, { id: C, text: "O(n²): проверяются все пары элементов" }, { id: D, text: "O(1): поиск занимает ровно одно действие" }, { id: A, text: "O(log n): на каждом шаге отбрасывается половина диапазона" }] }
+  student_view: { options: [{ id: A, text: "O(log n): на каждом шаге отбрасывается половина диапазона" }, { id: B, text: "O(n): просматриваются все элементы подряд" }, { id: C, text: "O(n²): проверяются все пары элементов" }, { id: D, text: "O(1): поиск занимает ровно одно действие" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: "A", answer_text: "O(log n): на каждом шаге отбрасывается половина диапазона", explanation: "Двоичный поиск сравнивает элемент с серединой диапазона и отбрасывает половину: 1000 элементов превращаются в 500, 250 и так далее. Диапазон падает вдвое на каждом шаге, поэтому время растёт как O(log n). Линейный поиск, который просматривает элементы подряд, требует O(n) сравнений." }
 

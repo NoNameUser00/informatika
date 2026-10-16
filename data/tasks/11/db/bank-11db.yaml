@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-keys], meta: [plan-actions] }
   prompt: "Что годится в первичные ключи таблицы учеников?"
-  student_view: { options: [{ id: D, text: "Любимый цвет" }, { id: B, text: "Имя" }, { id: C, text: "Рост" }, { id: A, text: "Номер личного дела" }] }
+  student_view: { options: [{ id: A, text: "Рост" }, { id: B, text: "Любимый цвет" }, { id: C, text: "Номер личного дела" }, { id: D, text: "Имя" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Номер личного дела", explanation: "Уникален и неизменен" }
+  teacher_only: { answer: C, answer_text: "Номер личного дела", explanation: "Уникален и неизменен" }
 
 - id: inf-11-db-002
   class: 11
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
   prompt: "Как связать «Ученики» и «Классы» без дублей?"
-  student_view: { options: [{ id: D, text: "Никак" }, { id: C, text: "Удалить классы" }, { id: A, text: "Внешним ключом на справочник" }, { id: B, text: "Копировать всё в каждую строку" }] }
+  student_view: { options: [{ id: A, text: "Удалить классы" }, { id: B, text: "Никак" }, { id: C, text: "Внешним ключом на справочник" }, { id: D, text: "Копировать всё в каждую строку" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Внешним ключом на справочник", explanation: "Ссылка вместо копипасты" }
+  teacher_only: { answer: C, answer_text: "Внешним ключом на справочник", explanation: "Ссылка вместо копипасты" }
 
 - id: inf-11-db-004
   class: 11
@@ -63,7 +63,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
   prompt: "Нужны фамилии всех с баллом выше 80. Что это?"
-  student_view: { options: [{ id: B, text: "Удаление таблицы" }, { id: C, text: "Смена пароля" }, { id: A, text: "Запрос на выборку" }, { id: D, text: "Архивация" }] }
+  student_view: { options: [{ id: A, text: "Запрос на выборку" }, { id: B, text: "Смена пароля" }, { id: C, text: "Архивация" }, { id: D, text: "Удаление таблицы" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Запрос на выборку", explanation: "Выборка: поля + условие" }
 
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-query], meta: [plan-actions] }
   prompt: "Чем опасна сортировка одного столбца?"
-  student_view: { options: [{ id: A, text: "Строки разъедутся" }, { id: C, text: "Удалит данные" }, { id: D, text: "Сломает монитор" }, { id: B, text: "Ничем" }] }
+  student_view: { options: [{ id: A, text: "Ничем" }, { id: B, text: "Строки разъедутся" }, { id: C, text: "Удалит данные" }, { id: D, text: "Сломает монитор" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Строки разъедутся", explanation: "Сортировать весь диапазон" }
+  teacher_only: { answer: B, answer_text: "Строки разъедутся", explanation: "Сортировать весь диапазон" }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-11-bank.mjs — руками не править ====
 
@@ -116,9 +116,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
   prompt: "Какое ключевое слово SQL сортирует результат запроса?"
-  student_view: { options: [{ id: A, text: "ORDER BY" }, { id: C, text: "FROM" }, { id: B, text: "WHERE" }, { id: D, text: "SELECT" }] }
+  student_view: { options: [{ id: A, text: "FROM" }, { id: B, text: "SELECT" }, { id: C, text: "ORDER BY" }, { id: D, text: "WHERE" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "ORDER BY", explanation: "ORDER BY сортирует строки результата (ASC — по возрастанию, DESC — по убыванию); WHERE задаёт условие отбора, а SELECT и FROM выбирают столбцы и таблицу." }
+  teacher_only: { answer: "C", answer_text: "ORDER BY", explanation: "ORDER BY сортирует строки результата (ASC — по возрастанию, DESC — по убыванию); WHERE задаёт условие отбора, а SELECT и FROM выбирают столбцы и таблицу." }
 
 - id: inf-11-db-008
   class: 11
@@ -169,9 +169,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
   prompt: "Нужно узнать, сколько записей у каждого класса. Какое ключевое слово группирует строки так, чтобы для каждой группы можно было применить COUNT или SUM?"
-  student_view: { options: [{ id: B, text: "GROUP BY — группирует строки по значениям поля, чтобы посчитать для каждой группы" }, { id: A, text: "ORDER BY — группирует строки по значениям поля" }, { id: D, text: "FROM — группирует строки по значениям поля" }, { id: C, text: "WHERE — группирует строки по значениям поля" }] }
+  student_view: { options: [{ id: A, text: "GROUP BY — группирует строки по значениям поля, чтобы посчитать для каждой группы" }, { id: B, text: "FROM — группирует строки по значениям поля" }, { id: C, text: "WHERE — группирует строки по значениям поля" }, { id: D, text: "ORDER BY — группирует строки по значениям поля" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "ORDER BY — группирует строки по значениям поля", explanation: "GROUP BY собирает строки с одинаковым значением поля в группу, после чего COUNT или SUM считают по каждой группе отдельно. ORDER BY только меняет порядок строк, а WHERE и вовсе ничего не группирует." }
+  teacher_only: { answer: "D", answer_text: "ORDER BY — группирует строки по значениям поля", explanation: "GROUP BY собирает строки с одинаковым значением поля в группу, после чего COUNT или SUM считают по каждой группе отдельно. ORDER BY только меняет порядок строк, а WHERE и вовсе ничего не группирует." }
 
 - id: inf-11-db-011
   class: 11
@@ -239,9 +239,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-rel], meta: [plan-actions] }
   prompt: "В школе каждый ученик состоит ровно в одном классе, а в классе учатся несколько учеников. Какой тип связи описывает таблица «Ученики» со справочником «Классы»?"
-  student_view: { options: [{ id: D, text: "Связи нет: две таблицы просто стоят рядом и никак не зависят друг от друга" }, { id: C, text: "Один к одному: каждому ученику соответствует ровно один класс, и наоборот" }, { id: B, text: "Многие ко многим: ученик может состоять сразу в нескольких классах, а класс — включать много учеников" }, { id: A, text: "Один ко многим: каждому ученику соответствует ровно один класс, а в классе может быть много учеников" }] }
+  student_view: { options: [{ id: A, text: "Связи нет: две таблицы просто стоят рядом и никак не зависят друг от друга" }, { id: B, text: "Один ко многим: каждому ученику соответствует ровно один класс, а в классе может быть много учеников" }, { id: C, text: "Один к одному: каждому ученику соответствует ровно один класс, и наоборот" }, { id: D, text: "Многие ко многим: ученик может состоять сразу в нескольких классах, а класс — включать много учеников" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Один ко многим: каждому ученику соответствует ровно один класс, а в классе может быть много учеников", explanation: "Это связь «один ко многим»: со стороны ученика поле «код класса» хранит ссылку на одну строку справочника, а на один класс ссылаются многие строки таблицы учеников. Такой столбец называется внешним ключом. Связь «многие ко многим» потребовала бы отдельной таблицы-перекрёстка, а «один к одному» здесь просто противоречит жизни." }
+  teacher_only: { answer: "B", answer_text: "Один ко многим: каждому ученику соответствует ровно один класс, а в классе может быть много учеников", explanation: "Это связь «один ко многим»: со стороны ученика поле «код класса» хранит ссылку на одну строку справочника, а на один класс ссылаются многие строки таблицы учеников. Такой столбец называется внешним ключом. Связь «многие ко многим» потребовала бы отдельной таблицы-перекрёстка, а «один к одному» здесь просто противоречит жизни." }
 
 - id: inf-11-db-015
   class: 11
@@ -307,9 +307,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
   prompt: "Блюдо «Борщ» заказывали четыре раза, и в результате запроса его название встретилось четыре раза подряд. Какое ключевое слово оставит в результате только одно название?"
-  student_view: { options: [{ id: C, text: "GROUP BY: оставляет в результате только различные значения выбранного поля" }, { id: D, text: "COUNT: оставляет в результате только различные значения выбранного поля" }, { id: B, text: "ORDER BY: оставляет в результате только различные значения выбранного поля" }, { id: A, text: "DISTINCT: оставляет в результате только различные значения выбранного поля" }] }
+  student_view: { options: [{ id: A, text: "GROUP BY: оставляет в результате только различные значения выбранного поля" }, { id: B, text: "ORDER BY: оставляет в результате только различные значения выбранного поля" }, { id: C, text: "DISTINCT: оставляет в результате только различные значения выбранного поля" }, { id: D, text: "COUNT: оставляет в результате только различные значения выбранного поля" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "DISTINCT: оставляет в результате только различные значения выбранного поля", explanation: "DISTINCT убирает одинаковые значения выбранного поля: SELECT DISTINCT название FROM Поставки вернёт «Борщ» один раз. ORDER BY только меняет порядок строк, GROUP BY собирает строки в группы для подсчёта, а COUNT считает их количество — ни одно из этих слов повторы в результате не удаляет." }
+  teacher_only: { answer: "C", answer_text: "DISTINCT: оставляет в результате только различные значения выбранного поля", explanation: "DISTINCT убирает одинаковые значения выбранного поля: SELECT DISTINCT название FROM Поставки вернёт «Борщ» один раз. ORDER BY только меняет порядок строк, GROUP BY собирает строки в группы для подсчёта, а COUNT считает их количество — ни одно из этих слов повторы в результате не удаляет." }
 
 - id: inf-11-db-019
   class: 11
@@ -324,9 +324,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-sql], meta: [plan-actions] }
   prompt: "Нужно вывести записи о работах так, чтобы они шли от самой высокой оценки к самой низкой. Как закончится запрос?"
-  student_view: { options: [{ id: B, text: "ORDER BY балл ASC" }, { id: D, text: "WHERE балл DESC" }, { id: A, text: "ORDER BY балл DESC" }, { id: C, text: "GROUP BY балл DESC" }] }
+  student_view: { options: [{ id: A, text: "ORDER BY балл ASC" }, { id: B, text: "WHERE балл DESC" }, { id: C, text: "GROUP BY балл DESC" }, { id: D, text: "ORDER BY балл DESC" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "ORDER BY балл DESC", explanation: "ORDER BY задаёт порядок строк результата, а DESC означает «по убыванию». По умолчанию сортировка и так идёт по возрастанию, поэтому ASC можно не писать, но для читаемости его часто оставляют. GROUP BY не сортирует строки, а объединяет одинаковые значения в группы, а DESC в WHERE не существует вовсе." }
+  teacher_only: { answer: "D", answer_text: "ORDER BY балл DESC", explanation: "ORDER BY задаёт порядок строк результата, а DESC означает «по убыванию». По умолчанию сортировка и так идёт по возрастанию, поэтому ASC можно не писать, но для читаемости его часто оставляют. GROUP BY не сортирует строки, а объединяет одинаковые значения в группы, а DESC в WHERE не существует вовсе." }
 
 - id: inf-11-db-020
   class: 11

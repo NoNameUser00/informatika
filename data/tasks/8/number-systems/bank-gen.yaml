@@ -370,9 +370,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Сколько нулей в двоичной записи числа 128₁₀?"
-  student_view: { options: [{ id: D, text: "9" }, { id: C, text: "8" }, { id: B, text: "7" }, { id: A, text: "6" }] }
+  student_view: { options: [{ id: A, text: "9" }, { id: B, text: "8" }, { id: C, text: "7" }, { id: D, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "7", explanation: "128 = 10000000_2: один и семь нулей" }
+  teacher_only: { answer: C, answer_text: "7", explanation: "128 = 10000000_2: один и семь нулей" }
 
 - id: inf-8-numsys-036
   class: 8
@@ -387,9 +387,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Сколько единиц в двоичной записи числа 255₁₀?"
-  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "7" }, { id: C, text: "9" }, { id: D, text: "10" }] }
+  student_view: { options: [{ id: A, text: "10" }, { id: B, text: "7" }, { id: C, text: "8" }, { id: D, text: "9" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "8", explanation: "255 = 11111111_2: восемь единиц" }
+  teacher_only: { answer: C, answer_text: "8", explanation: "255 = 11111111_2: восемь единиц" }
 
 - id: inf-8-numsys-037
   class: 8
@@ -404,9 +404,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 123."
-  student_view: { options: [{ id: D, text: "8" }, { id: A, text: "3" }, { id: C, text: "4" }, { id: B, text: "5" }] }
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "3" }, { id: C, text: "5" }, { id: D, text: "4" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "4", explanation: "Старшая цифра 3, основание > 3, минимальное 4" }
+  teacher_only: { answer: D, answer_text: "4", explanation: "Старшая цифра 3, основание > 3, минимальное 4" }
 
 - id: inf-8-numsys-038
   class: 8
@@ -421,7 +421,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Укажите минимальное основание системы счисления, в которой может быть записано число 506."
-  student_view: { options: [{ id: C, text: "9" }, { id: D, text: "7" }, { id: A, text: "8" }, { id: B, text: "6" }] }
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "9" }, { id: C, text: "6" }, { id: D, text: "7" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: D, answer_text: "7", explanation: "Старшая цифра 6, минимальное основание 7" }
 
@@ -438,9 +438,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Какая запись нарушает правило «не более трёх одинаковых знаков подряд»?"
-  student_view: { options: [{ id: C, text: "XL" }, { id: D, text: "MCM" }, { id: B, text: "XIV" }, { id: A, text: "IIII" }] }
+  student_view: { options: [{ id: A, text: "XIV" }, { id: B, text: "XL" }, { id: C, text: "MCM" }, { id: D, text: "IIII" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "IIII", explanation: "IIII — четыре I подряд, надо IV" }
+  teacher_only: { answer: D, answer_text: "IIII", explanation: "IIII — четыре I подряд, надо IV" }
 
 - id: inf-8-numsys-040
   class: 8
@@ -455,9 +455,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "Сколько цифр в алфавите восьмеричной системы счисления?"
-  student_view: { options: [{ id: D, text: "10" }, { id: B, text: "16" }, { id: A, text: "7" }, { id: C, text: "8" }] }
+  student_view: { options: [{ id: A, text: "8" }, { id: B, text: "16" }, { id: C, text: "10" }, { id: D, text: "7" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "8", explanation: "Цифры 0-7, всего 8" }
+  teacher_only: { answer: A, answer_text: "8", explanation: "Цифры 0-7, всего 8" }
 
 - id: inf-8-numsys-041
   class: 8
@@ -778,7 +778,7 @@
   fgos_element: 1.3
   fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
   prompt: "Какое из чисел наибольшее?"
-  student_view: { options: [{ id: D, text: "30₈" }, { id: B, text: "1F₁₆" }, { id: A, text: "10111₂" }, { id: C, text: "27₈" }] }
+  student_view: { options: [{ id: A, text: "30₈" }, { id: B, text: "1F₁₆" }, { id: C, text: "10111₂" }, { id: D, text: "27₈" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "1F₁₆", explanation: "Значения: 10111₂=23, 1F₁₆=31, 27₈=23, 30₈=24" }
 
@@ -795,9 +795,9 @@
   fgos_element: 1.3
   fgos: { subject: [inf-8-numsys-represent, inf-8-numsys-convert], meta: [plan-actions] }
   prompt: "Какое из чисел наибольшее?"
-  student_view: { options: [{ id: A, text: "FF₁₆" }, { id: C, text: "11111111₂" }, { id: D, text: "1000₁₀" }, { id: B, text: "777₈" }] }
+  student_view: { options: [{ id: A, text: "1000₁₀" }, { id: B, text: "777₈" }, { id: C, text: "FF₁₆" }, { id: D, text: "11111111₂" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "11111111₂", explanation: "Значения: FF₁₆=255, 777₈=511, 11111111₂=255, 1000₁₀=1000" }
+  teacher_only: { answer: D, answer_text: "11111111₂", explanation: "Значения: FF₁₆=255, 777₈=511, 11111111₂=255, 1000₁₀=1000" }
 
 - id: inf-8-numsys-066
   class: 8
@@ -1091,9 +1091,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-8-numsys-represent], meta: [plan-actions] }
   prompt: "В какой из записей есть цифра, которой нет в двоичной системе счисления?"
-  student_view: { options: [{ id: B, text: "101101₂" }, { id: A, text: "1100101₂" }, { id: C, text: "111100₂" }, { id: D, text: "10211₂" }] }
+  student_view: { options: [{ id: A, text: "10211₂" }, { id: B, text: "101101₂" }, { id: C, text: "1100101₂" }, { id: D, text: "111100₂" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "10211₂", explanation: "Алфавит двоичной системы — это цифры 0, 1 и ничего больше. В записи 10211₂ стоит цифра 2, поэтому такой записи в двоичной системе не бывает; остальные варианты состоят только из нулей и единиц и записаны вполне корректно." }
+  teacher_only: { answer: A, answer_text: "10211₂", explanation: "Алфавит двоичной системы — это цифры 0, 1 и ничего больше. В записи 10211₂ стоит цифра 2, поэтому такой записи в двоичной системе не бывает; остальные варианты состоят только из нулей и единиц и записаны вполне корректно." }
 
 - id: inf-8-numsys-083
   class: 8
@@ -1176,9 +1176,9 @@
   fgos_element: 1.4
   fgos: { subject: [inf-8-numsys-arith], meta: [plan-actions] }
   prompt: "При сложении столбиком в одном разряде сложились две единицы и единица переноса из предыдущего разряда. Что записывают в этот разряд и куда уходит перенос?"
-  student_view: { options: [{ id: A, text: "В разряд записывают 1, а единица переходит в следующий разряд" }, { id: D, text: "В разряд записывают 3, а единица переходит в следующий разряд" }, { id: C, text: "В разряд записывают 2, а единица никуда не переходит" }, { id: B, text: "В разряд записывают 0, а единица переходит в следующий разряд" }] }
+  student_view: { options: [{ id: A, text: "В разряд записывают 0, а единица переходит в следующий разряд" }, { id: B, text: "В разряд записывают 3, а единица переходит в следующий разряд" }, { id: C, text: "В разряд записывают 2, а единица никуда не переходит" }, { id: D, text: "В разряд записывают 1, а единица переходит в следующий разряд" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "В разряд записывают 1, а единица переходит в следующий разряд", explanation: "Всего в разряде 1 + 1 + 1 = 3. В двоичной системе 3 записывается как 11₂: в разряде стоит 1, а единица уходит в следующий разряд переносом. Ошибка — записать в разряд само число 3: цифрой может быть только 0 или 1, всё остальное переносится на следующий разряд." }
+  teacher_only: { answer: D, answer_text: "В разряд записывают 1, а единица переходит в следующий разряд", explanation: "Всего в разряде 1 + 1 + 1 = 3. В двоичной системе 3 записывается как 11₂: в разряде стоит 1, а единица уходит в следующий разряд переносом. Ошибка — записать в разряд само число 3: цифрой может быть только 0 или 1, всё остальное переносится на следующий разряд." }
 
 - id: inf-8-numsys-088
   class: 8
@@ -1244,9 +1244,9 @@
   fgos_element: 1.3
   fgos: { subject: [inf-8-numsys-convert], meta: [plan-actions] }
   prompt: "Как записывается число 25₁₀ в двоичной системе счисления?"
-  student_view: { options: [{ id: A, text: "11001₂" }, { id: C, text: "10011₂" }, { id: D, text: "11010₂" }, { id: B, text: "10101₂" }] }
+  student_view: { options: [{ id: A, text: "10011₂" }, { id: B, text: "11001₂" }, { id: C, text: "11010₂" }, { id: D, text: "10101₂" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "11001₂", explanation: "25 = 16 + 8 + 1 = 2⁴ + 2³ + 2⁰, поэтому запись 11001₂. Остальные варианты дают 21, 19 и 26 — в них перепутаны разряды. Проверка ответа: 16 + 8 + 1 = 25, столько же получилось сложением весов единичных разрядов." }
+  teacher_only: { answer: B, answer_text: "11001₂", explanation: "25 = 16 + 8 + 1 = 2⁴ + 2³ + 2⁰, поэтому запись 11001₂. Остальные варианты дают 21, 19 и 26 — в них перепутаны разряды. Проверка ответа: 16 + 8 + 1 = 25, столько же получилось сложением весов единичных разрядов." }
 
 - id: inf-8-numsys-092
   class: 8

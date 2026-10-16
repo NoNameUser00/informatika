@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
   prompt: "Какое свойство информации нарушено, если расписание дано за прошлую неделю?"
-  student_view: { options: [{ id: D, text: "Понятность" }, { id: C, text: "Полнота" }, { id: A, text: "Актуальность" }, { id: B, text: "Достоверность" }] }
+  student_view: { options: [{ id: A, text: "Понятность" }, { id: B, text: "Полнота" }, { id: C, text: "Актуальность" }, { id: D, text: "Достоверность" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Актуальность", explanation: "Информация устарела — не вовремя" }
+  teacher_only: { answer: C, answer_text: "Актуальность", explanation: "Информация устарела — не вовремя" }
 
 - id: inf-7-inf-002
   class: 7
@@ -29,7 +29,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-process], meta: [plan-actions] }
   prompt: "Что идёт первым в цепочке передачи информации?"
-  student_view: { options: [{ id: C, text: "Канал связи" }, { id: B, text: "Источник" }, { id: A, text: "Приёмник" }, { id: D, text: "Декодирующее устройство" }] }
+  student_view: { options: [{ id: A, text: "Канал связи" }, { id: B, text: "Источник" }, { id: C, text: "Декодирующее устройство" }, { id: D, text: "Приёмник" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "Источник", explanation: "Источник → кодер → канал → декодер → приёмник" }
 
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
   prompt: "Сколько разных символов можно закодировать кодом длины 5?"
-  student_view: { options: [{ id: B, text: "25" }, { id: D, text: "64" }, { id: A, text: "10" }, { id: C, text: "32" }] }
+  student_view: { options: [{ id: A, text: "25" }, { id: B, text: "64" }, { id: C, text: "10" }, { id: D, text: "32" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "32", explanation: "N = 2^5 = 32" }
+  teacher_only: { answer: D, answer_text: "32", explanation: "N = 2^5 = 32" }
 
 - id: inf-7-inf-004
   class: 7
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
   prompt: "Что такое мощность алфавита?"
-  student_view: { options: [{ id: D, text: "Число слов языка" }, { id: C, text: "Вес одного символа" }, { id: B, text: "Длина самого длинного слова" }, { id: A, text: "Количество символов в нём" }] }
+  student_view: { options: [{ id: A, text: "Число слов языка" }, { id: B, text: "Количество символов в нём" }, { id: C, text: "Длина самого длинного слова" }, { id: D, text: "Вес одного символа" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Количество символов в нём", explanation: "N — число символов алфавита" }
+  teacher_only: { answer: B, answer_text: "Количество символов в нём", explanation: "N — число символов алфавита" }
 
 - id: inf-7-inf-006
   class: 7
@@ -148,9 +148,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-measure-units], meta: [plan-actions] }
   prompt: "Сколько байт в одном килобайте?"
-  student_view: { options: [{ id: B, text: "1024" }, { id: C, text: "8" }, { id: D, text: "256" }, { id: A, text: "1000" }] }
+  student_view: { options: [{ id: A, text: "1024" }, { id: B, text: "256" }, { id: C, text: "8" }, { id: D, text: "1000" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "1024", explanation: "В информатике кило — это 1024" }
+  teacher_only: { answer: A, answer_text: "1024", explanation: "В информатике кило — это 1024" }
 
 - id: inf-7-inf-010
   class: 7
@@ -215,7 +215,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-formula], meta: [plan-actions] }
   prompt: "Сколько разных символов можно закодировать кодом длины 3?"
-  student_view: { options: [{ id: A, text: "6" }, { id: C, text: "9" }, { id: B, text: "8" }, { id: D, text: "3" }] }
+  student_view: { options: [{ id: A, text: "3" }, { id: B, text: "8" }, { id: C, text: "6" }, { id: D, text: "9" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: B, answer_text: "8", explanation: "2^3 = 8" }
 
@@ -252,9 +252,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
   prompt: "Преподаватель проверил факт в двух независимых источниках и только потом использовал его в задании. Какое правило информационной грамотности он выполнил?"
-  student_view: { options: [{ id: A, text: "Найти по запросу первый подходящий результат" }, { id: B, text: "Проверить факт, прежде чем использовать его" }, { id: D, text: "Искать информацию, не задав цели" }, { id: C, text: "Выдать собственное мнение за факт" }] }
+  student_view: { options: [{ id: A, text: "Выдать собственное мнение за факт" }, { id: B, text: "Искать информацию, не задав цели" }, { id: C, text: "Проверить факт, прежде чем использовать его" }, { id: D, text: "Найти по запросу первый подходящий результат" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Проверить факт, прежде чем использовать его", explanation: "Надёжный источник и проверка важнее красивого результата: сначала цель, потом источник, потом проверка." }
+  teacher_only: { answer: C, answer_text: "Проверить факт, прежде чем использовать его", explanation: "Надёжный источник и проверка важнее красивого результата: сначала цель, потом источник, потом проверка." }
 
 - id: inf-7-inf-016
   class: 7
@@ -286,9 +286,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
   prompt: "Какой из примеров — аналоговая (непрерывная) информация?"
-  student_view: { options: [{ id: D, text: "Число на игральной кости" }, { id: A, text: "Температура воздуха в комнате 21,7 °C" }, { id: C, text: "Ответ теста: дождь идёт или не идёт" }, { id: B, text: "Номер кабинета, где идёт урок" }] }
+  student_view: { options: [{ id: A, text: "Число на игральной кости" }, { id: B, text: "Номер кабинета, где идёт урок" }, { id: C, text: "Температура воздуха в комнате 21,7 °C" }, { id: D, text: "Ответ теста: дождь идёт или не идёт" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Температура воздуха в комнате 21,7 °C", explanation: "Аналоговая величина принимает любое значение из промежутка; остальные примеры — из конечного набора." }
+  teacher_only: { answer: C, answer_text: "Температура воздуха в комнате 21,7 °C", explanation: "Аналоговая величина принимает любое значение из промежутка; остальные примеры — из конечного набора." }
 
 - id: inf-7-inf-018
   class: 7
@@ -320,9 +320,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
   prompt: "Яркость 63,5 кодируется числами от 0 до 255. Какое значение запишет компьютер?"
-  student_view: { options: [{ id: D, text: "255 — округлит до максимального значения" }, { id: A, text: "63,5 — запишет как есть, компьютер умеет хранить дробные числа" }, { id: C, text: "128 — округлит к середине набора" }, { id: B, text: "64 — округлит до ближайшего числа из набора" }] }
+  student_view: { options: [{ id: A, text: "64 — округлит до ближайшего числа из набора" }, { id: B, text: "128 — округлит к середине набора" }, { id: C, text: "63,5 — запишет как есть, компьютер умеет хранить дробные числа" }, { id: D, text: "255 — округлит до максимального значения" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "63,5 — запишет как есть, компьютер умеет хранить дробные числа", explanation: "Дискретизация — приближение: 63,5 округляется к ближайшему из 256 выбранных значений." }
+  teacher_only: { answer: C, answer_text: "63,5 — запишет как есть, компьютер умеет хранить дробные числа", explanation: "Дискретизация — приближение: 63,5 округляется к ближайшему из 256 выбранных значений." }
 
 - id: inf-7-inf-020
   class: 7
@@ -354,9 +354,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
   prompt: "Сообщение занимает 40 байт и закодировано равномерным кодом по 8 бит на символ. Сколько символов в сообщении?"
-  student_view: { options: [{ id: C, text: "5" }, { id: B, text: "320" }, { id: D, text: "800" }, { id: A, text: "40" }] }
+  student_view: { options: [{ id: A, text: "5" }, { id: B, text: "40" }, { id: C, text: "800" }, { id: D, text: "320" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "40", explanation: "40 байт — это 320 бит; при равномерном коде символов = битов : i = 320 : 8 = 40." }
+  teacher_only: { answer: B, answer_text: "40", explanation: "40 байт — это 320 бит; при равномерном коде символов = битов : i = 320 : 8 = 40." }
 
 - id: inf-7-inf-022
   class: 7
@@ -388,7 +388,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-prefix], meta: [plan-actions] }
   prompt: "Почему коды 0, 01 и 011 нельзя использовать в неравномерном коде?"
-  student_view: { options: [{ id: B, text: "Коды слишком короткие, поэтому в них мало информации" }, { id: C, text: "В неравномерном коде у всех символов должна быть одинаковая длина" }, { id: A, text: "Код 0 стоит в начале 01 и 011, поэтому нельзя понять, где кончился один символ" }, { id: D, text: "Три кода использовать можно, но только вместе с разделителем" }] }
+  student_view: { options: [{ id: A, text: "Код 0 стоит в начале 01 и 011, поэтому нельзя понять, где кончился один символ" }, { id: B, text: "Коды слишком короткие, поэтому в них мало информации" }, { id: C, text: "В неравномерном коде у всех символов должна быть одинаковая длина" }, { id: D, text: "Три кода использовать можно, но только вместе с разделителем" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Код 0 стоит в начале 01 и 011, поэтому нельзя понять, где кончился один символ", explanation: "Нарушено условие префиксного кода: ни один код не должен быть началом другого." }
 
@@ -626,9 +626,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [self-control] }
   prompt: "Ученик посчитал время передачи файла как скорость, умноженную на объём. Какая формула верна?"
-  student_view: { options: [{ id: C, text: "время = объём + скорость" }, { id: D, text: "время = скорость : объём" }, { id: B, text: "время = скорость · объём" }, { id: A, text: "время = объём : скорость" }] }
+  student_view: { options: [{ id: A, text: "время = скорость : объём" }, { id: B, text: "время = скорость · объём" }, { id: C, text: "время = объём : скорость" }, { id: D, text: "время = объём + скорость" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "время = объём : скорость", explanation: "Объём делят на скорость: единицы сокращаются до секунд." }
+  teacher_only: { answer: C, answer_text: "время = объём : скорость", explanation: "Объём делят на скорость: единицы сокращаются до секунд." }
 
 - id: inf-7-inf-038
   class: 7
@@ -643,7 +643,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-errors-fix], meta: [self-control] }
   prompt: "Ответ по сути верный, но дан в байтах, когда в задании требовались Кбайты. К какому типу ошибок это относится?"
-  student_view: { options: [{ id: A, text: "Единицы измерения" }, { id: B, text: "Не знал правило" }, { id: D, text: "Невнимательность при чтении вопроса" }, { id: C, text: "Ошибся в вычислении" }] }
+  student_view: { options: [{ id: A, text: "Единицы измерения" }, { id: B, text: "Не знал правило" }, { id: C, text: "Ошибся в вычислении" }, { id: D, text: "Невнимательность при чтении вопроса" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Единицы измерения", explanation: "Ответ верный, но не в тех единицах: лечится выписыванием цепочки перевода бит → байт → Кбайт." }
 
@@ -677,9 +677,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-errors-fix], meta: [self-control] }
   prompt: "Для алфавита из 64 символов ученик записал i = 64. В чём ошибка?"
-  student_view: { options: [{ id: D, text: "i = 64 верно, но вес символа измеряют в байтах" }, { id: C, text: "i находят делением: 64 : 8 = 8" }, { id: A, text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит" }, { id: B, text: "Ошибки нет: N и i — одно и то же" }] }
+  student_view: { options: [{ id: A, text: "Ошибки нет: N и i — одно и то же" }, { id: B, text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит" }, { id: C, text: "i = 64 верно, но вес символа измеряют в байтах" }, { id: D, text: "i находят делением: 64 : 8 = 8" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит", explanation: "Из N = 2^i берут показатель степени: при 64 символах i = 6, а не 64." }
+  teacher_only: { answer: B, answer_text: "Вес символа — степень двойки: 64 = 2^6, значит i = 6 бит", explanation: "Из N = 2^i берут показатель степени: при 64 символах i = 6, а не 64." }
 
 # ==== СГЕНЕРИРОВАНО scripts/make-7-bank2.mjs ====
 # Ответы вычислены кодом (calc/подбор варианта) и проверены check.mjs.
@@ -697,9 +697,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
   prompt: "Ученик написал в ответе: «Учительница завысила оценки, потому что она несправедливая». Какое свойство информации требует, чтобы сведения соответствовали реальности, а не мнению автора?"
-  student_view: { options: [{ id: C, text: "Ценность" }, { id: A, text: "Объективность" }, { id: D, text: "Полнота" }, { id: B, text: "Понятность" }] }
+  student_view: { options: [{ id: A, text: "Понятность" }, { id: B, text: "Объективность" }, { id: C, text: "Ценность" }, { id: D, text: "Полнота" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Объективность", explanation: "Объективность — соответствие реальности; оценка «несправедливо» это мнение, а его нельзя выдать за факт." }
+  teacher_only: { answer: B, answer_text: "Объективность", explanation: "Объективность — соответствие реальности; оценка «несправедливо» это мнение, а его нельзя выдать за факт." }
 
 - id: inf-7-inf-042
   class: 7
@@ -714,9 +714,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-props], meta: [plan-actions] }
   prompt: "Два ученика получили одно и то же сообщение о расписании на завтра. Для первого оно оказалось полезным, а для второго — бесполезным: он уже знал расписание наизусть. Какое свойство информации различается у этих двух сообщений?"
-  student_view: { options: [{ id: B, text: "Полнота" }, { id: D, text: "Достоверность" }, { id: C, text: "Актуальность" }, { id: A, text: "Ценность" }] }
+  student_view: { options: [{ id: A, text: "Достоверность" }, { id: B, text: "Ценность" }, { id: C, text: "Полнота" }, { id: D, text: "Актуальность" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Ценность", explanation: "Ценность — польза именно для этого человека в этот момент; сами сведения от этого не меняются." }
+  teacher_only: { answer: B, answer_text: "Ценность", explanation: "Ценность — польза именно для этого человека в этот момент; сами сведения от этого не меняются." }
 
 - id: inf-7-inf-043
   class: 7
@@ -731,7 +731,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
   prompt: "Какой из примеров — дискретная информация?"
-  student_view: { options: [{ id: C, text: "Громкость музыки: 60 %" }, { id: D, text: "Скорость машины: 82,5 км/ч" }, { id: A, text: "Число дней в неделе: 7" }, { id: B, text: "Температура воздуха: 18,4 °C" }] }
+  student_view: { options: [{ id: A, text: "Температура воздуха: 18,4 °C" }, { id: B, text: "Число дней в неделе: 7" }, { id: C, text: "Громкость музыки: 60 %" }, { id: D, text: "Скорость машины: 82,5 км/ч" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: C, answer_text: "Громкость музыки: 60 %", explanation: "Дискретная величина берётся из конечного набора; температура, громкость и скорость принимают любое значение из промежутка." }
 
@@ -748,9 +748,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-info-discrete], meta: [plan-actions] }
   prompt: "Какое утверждение о компьютере верно?"
-  student_view: { options: [{ id: A, text: "Компьютер работает только с дискретными данными" }, { id: D, text: "Чем больше дискретных значений, тем меньше данных" }, { id: B, text: "Компьютер хранит непрерывные данные без всяких ограничений" }, { id: C, text: "Дискретные данные нужны только для изображений" }] }
+  student_view: { options: [{ id: A, text: "Дискретные данные нужны только для изображений" }, { id: B, text: "Чем больше дискретных значений, тем меньше данных" }, { id: C, text: "Компьютер работает только с дискретными данными" }, { id: D, text: "Компьютер хранит непрерывные данные без всяких ограничений" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Компьютер работает только с дискретными данными", explanation: "Мир непрерывен, но компьютер оперирует конечным набором чисел; больше значений — точнее, но больше бит." }
+  teacher_only: { answer: C, answer_text: "Компьютер работает только с дискретными данными", explanation: "Мир непрерывен, но компьютер оперирует конечным набором чисел; больше значений — точнее, но больше бит." }
 
 - id: inf-7-inf-045
   class: 7
@@ -782,7 +782,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
   prompt: "Что называется знаком?"
-  student_view: { options: [{ id: A, text: "Заменитель объекта по соглашению: слово, цифру или жест" }, { id: C, text: "Ошибка при наборе текста, которую надо исправить" }, { id: D, text: "Символ, который нельзя использовать в коде" }, { id: B, text: "То, что человек вкладывает в слово при чтении" }] }
+  student_view: { options: [{ id: A, text: "Заменитель объекта по соглашению: слово, цифру или жест" }, { id: B, text: "Символ, который нельзя использовать в коде" }, { id: C, text: "То, что человек вкладывает в слово при чтении" }, { id: D, text: "Ошибка при наборе текста, которую надо исправить" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Заменитель объекта по соглашению: слово, цифру или жест", explanation: "Знак заменяет объект по договорённости; набор таких знаков и есть знаковая система." }
 
@@ -799,9 +799,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-uniform], meta: [plan-actions] }
   prompt: "Что такое кодирование информации?"
-  student_view: { options: [{ id: A, text: "Перевод информации в код по согласованным правилам" }, { id: C, text: "Изменение смысла сообщения, чтобы оно было понятнее" }, { id: B, text: "Получение информации из кода обратно" }, { id: D, text: "Выбор одного из нескольких вариантов ответа" }] }
+  student_view: { options: [{ id: A, text: "Выбор одного из нескольких вариантов ответа" }, { id: B, text: "Перевод информации в код по согласованным правилам" }, { id: C, text: "Изменение смысла сообщения, чтобы оно было понятнее" }, { id: D, text: "Получение информации из кода обратно" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Перевод информации в код по согласованным правилам", explanation: "Кодирование — перевод в код, декодирование — обратный перевод; без кодовой таблицы нельзя ни закодировать, ни разобрать." }
+  teacher_only: { answer: B, answer_text: "Перевод информации в код по согласованным правилам", explanation: "Кодирование — перевод в код, декодирование — обратный перевод; без кодовой таблицы нельзя ни закодировать, ни разобрать." }
 
 - id: inf-7-inf-048
   class: 7
@@ -816,9 +816,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-7-code-alpha], meta: [plan-actions] }
   prompt: "В коде Морзе самая частая английская буква E передаётся самым коротким кодом. Каким?"
-  student_view: { options: [{ id: C, text: "Две точки" }, { id: A, text: "Одна точка" }, { id: B, text: "Одна черта" }, { id: D, text: "Точка и черта" }] }
+  student_view: { options: [{ id: A, text: "Одна черта" }, { id: B, text: "Две точки" }, { id: C, text: "Одна точка" }, { id: D, text: "Точка и черта" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Одна черта", explanation: "В неравномерном коде частым символам отдают короткие коды: E — одна точка, T — одна черта." }
+  teacher_only: { answer: A, answer_text: "Одна черта", explanation: "В неравномерном коде частым символам отдают короткие коды: E — одна точка, T — одна черта." }
 
 - id: inf-7-inf-049
   class: 7

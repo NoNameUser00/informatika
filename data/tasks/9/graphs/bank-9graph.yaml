@@ -12,7 +12,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
   prompt: "Что означают строка и столбец матрицы смежности?"
-  student_view: { options: [{ id: D, text: "Ничего" }, { id: C, text: "Имена вершин" }, { id: A, text: "Откуда и куда" }, { id: B, text: "Цену и длину" }] }
+  student_view: { options: [{ id: A, text: "Цену и длину" }, { id: B, text: "Откуда и куда" }, { id: C, text: "Имена вершин" }, { id: D, text: "Ничего" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: C, answer_text: "Имена вершин", explanation: "Строка — откуда, столбец — куда" }
 
@@ -46,9 +46,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
   prompt: "Чем дерево отличается от графа?"
-  student_view: { options: [{ id: D, text: "Ничем" }, { id: A, text: "Нет циклов" }, { id: B, text: "Нет вершин" }, { id: C, text: "Нет рёбер" }] }
+  student_view: { options: [{ id: A, text: "Ничем" }, { id: B, text: "Нет вершин" }, { id: C, text: "Нет рёбер" }, { id: D, text: "Нет циклов" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Нет циклов", explanation: "Дерево — граф без циклов" }
+  teacher_only: { answer: D, answer_text: "Нет циклов", explanation: "Дерево — граф без циклов" }
 
 - id: inf-9-graph-004
   class: 9
@@ -80,9 +80,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-matrix], meta: [plan-actions] }
   prompt: "Что хранит весовая матрица вместо единиц?"
-  student_view: { options: [{ id: B, text: "Нули" }, { id: A, text: "Веса рёбер" }, { id: C, text: "Имена" }, { id: D, text: "Цвета" }] }
+  student_view: { options: [{ id: A, text: "Имена" }, { id: B, text: "Веса рёбер" }, { id: C, text: "Нули" }, { id: D, text: "Цвета" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Веса рёбер", explanation: "Вес — расстояние, цена, время" }
+  teacher_only: { answer: B, answer_text: "Веса рёбер", explanation: "Вес — расстояние, цена, время" }
 
 - id: inf-9-graph-006
   class: 9
@@ -97,9 +97,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-tree], meta: [plan-actions] }
   prompt: "Что такое ориентированный граф?"
-  student_view: { options: [{ id: C, text: "Только дерево" }, { id: D, text: "Только цепочка" }, { id: A, text: "Граф со стрелками" }, { id: B, text: "Граф без вершин" }] }
+  student_view: { options: [{ id: A, text: "Только дерево" }, { id: B, text: "Только цепочка" }, { id: C, text: "Граф без вершин" }, { id: D, text: "Граф со стрелками" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "Граф со стрелками", explanation: "Направление рёбер имеет значение" }
+  teacher_only: { answer: D, answer_text: "Граф со стрелками", explanation: "Направление рёбер имеет значение" }
 
 - id: inf-9-graph-007
   class: 9
@@ -250,7 +250,7 @@
   fgos_element: 1.1
   fgos: { subject: [inf-9-graph-shortest], meta: [plan-actions] }
   prompt: "Чем кратчайший путь отличается от пути с наименьшим числом переходов?"
-  student_view: { options: [{ id: B, text: "Ничем, это одно и то же" }, { id: C, text: "Кратчайший — это путь с наименьшим числом рёбер" }, { id: D, text: "Кратчайший — это всегда прямой путь без промежуточных вершин" }, { id: A, text: "Кратчайший — это путь с минимальной суммой весов, а не с минимальным числом рёбер" }] }
+  student_view: { options: [{ id: A, text: "Кратчайший — это путь с минимальной суммой весов, а не с минимальным числом рёбер" }, { id: B, text: "Кратчайший — это путь с наименьшим числом рёбер" }, { id: C, text: "Ничем, это одно и то же" }, { id: D, text: "Кратчайший — это всегда прямой путь без промежуточных вершин" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "Кратчайший — это путь с минимальной суммой весов, а не с минимальным числом рёбер", explanation: "Сумма весов и число рёбер — разные критерии. Путь A → C → B → D может оказаться короче по весу, чем прямой A → B → D." }
 
@@ -456,9 +456,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-tree], meta: [plan-actions] }
   prompt: "Какое свойство отличает дерево от произвольного связного графа?"
-  student_view: { options: [{ id: D, text: "У каждой вершины одинаковая степень" }, { id: A, text: "Между любыми двумя вершинами есть ровно один простой путь" }, { id: B, text: "Все вершины соединены со всеми" }, { id: C, text: "Рёбра направлены от корня" }] }
+  student_view: { options: [{ id: A, text: "У каждой вершины одинаковая степень" }, { id: B, text: "Все вершины соединены со всеми" }, { id: C, text: "Между любыми двумя вершинами есть ровно один простой путь" }, { id: D, text: "Рёбра направлены от корня" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Между любыми двумя вершинами есть ровно один простой путь", explanation: "Отсутствие циклов и связность дают ровно один путь между любой парой вершин. Полный граф — не дерево: там путей между двумя вершинами множество." }
+  teacher_only: { answer: "C", answer_text: "Между любыми двумя вершинами есть ровно один простой путь", explanation: "Отсутствие циклов и связность дают ровно один путь между любой парой вершин. Полный граф — не дерево: там путей между двумя вершинами множество." }
 
 - id: inf-9-graph-028
   class: 9
@@ -830,9 +830,9 @@
   fgos_element: 1.6
   fgos: { subject: [inf-9-graph-task], meta: [plan-actions] }
   prompt: "Граф содержит рёбра A→B, B→C, C→A. Можно ли в таком графе накапливать число путей от начала до конца?"
-  student_view: { options: [{ id: B, text: "Да, всегда можно" }, { id: C, text: "Да, если начать с любой вершины" }, { id: D, text: "Нет, потому что рёбер больше, чем вершин" }, { id: A, text: "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает" }] }
+  student_view: { options: [{ id: A, text: "Да, если начать с любой вершины" }, { id: B, text: "Нет, потому что рёбер больше, чем вершин" }, { id: C, text: "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает" }, { id: D, text: "Да, всегда можно" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "A", answer_text: "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает", explanation: "Число путей считают только в ациклических графах. При цикле путь можно продолжать бесконечно, и значение не сойдётся. Поэтому перед подсчётом проверяют, что циклов нет." }
+  teacher_only: { answer: "C", answer_text: "Нет: в графе есть цикл, пути не заканчиваются, накопление не работает", explanation: "Число путей считают только в ациклических графах. При цикле путь можно продолжать бесконечно, и значение не сойдётся. Поэтому перед подсчётом проверяют, что циклов нет." }
 
 - id: inf-9-graph-050
   class: 9
