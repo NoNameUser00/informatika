@@ -14,7 +14,7 @@
   prompt: "Что такое обратная связь в управлении?"
   student_view: { options: [{ id: C, text: "Выключение питания" }, { id: B, text: "Громкий звук робота" }, { id: A, text: "Возврат сведений о состоянии объекта в управление" }, { id: D, text: "Новая батарейка" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Выключение питания", explanation: "Без связи система слепая" }
+  teacher_only: { answer: A, answer_text: "Возврат сведений о состоянии объекта в управление", explanation: "Без связи система слепая" }
 
 - id: inf-9-extra-002
   class: 9
@@ -31,7 +31,7 @@
   prompt: "Зачем роботу датчики?"
   student_view: { options: [{ id: B, text: "Красиво выглядеть" }, { id: C, text: "Греть моторы" }, { id: A, text: "Получать сигналы о мире" }, { id: D, text: "Шуметь" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Греть моторы", explanation: "Датчики — глаза робота" }
+  teacher_only: { answer: A, answer_text: "Получать сигналы о мире", explanation: "Датчики — глаза робота" }
 
 - id: inf-9-extra-014
   class: 9
@@ -65,7 +65,7 @@
   prompt: "Зачем повторяющийся кусок программы выносить во вспомогательный алгоритм?"
   student_view: { options: [{ id: B, text: "Чтобы было длиннее" }, { id: A, text: "Одно место для правок вместо копипасты" }, { id: C, text: "Чтобы запутать" }, { id: D, text: "Так нельзя делать" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Чтобы было длиннее", explanation: "Написал раз — вызвал много; правишь в одном месте" }
+  teacher_only: { answer: A, answer_text: "Одно место для правок вместо копипасты", explanation: "Написал раз — вызвал много; правишь в одном месте" }
 
 - id: inf-9-extra-016
   class: 9
@@ -99,7 +99,7 @@
   prompt: "Чем анализ больших данных похож на работу с таблицами?"
   student_view: { options: [{ id: D, text: "Диаграммы запрещены" }, { id: A, text: "Сначала вопрос, потом картинка под него" }, { id: C, text: "Всё хранится в одной ячейке" }, { id: B, text: "Ничем" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Ничем", explanation: "Без вопроса утонешь в цифрах" }
+  teacher_only: { answer: A, answer_text: "Сначала вопрос, потом картинка под него", explanation: "Без вопроса утонешь в цифрах" }
 
 - id: inf-9-extra-020
   class: 9
@@ -116,7 +116,7 @@
   prompt: "Что делает минус в поисковом запросе «робот -игрушка»?"
   student_view: { options: [{ id: D, text: "Ничего" }, { id: B, text: "Ищет дефис" }, { id: C, text: "Удваивает выдачу" }, { id: A, text: "Убирает страницы про игрушки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "Ничего", explanation: "Минус — вычитание мусора" }
+  teacher_only: { answer: A, answer_text: "Убирает страницы про игрушки", explanation: "Минус — вычитание мусора" }
 
 - id: inf-9-extra-003
   class: 9
@@ -133,7 +133,7 @@
   prompt: "Что отражает модель?"
   student_view: { options: [{ id: B, text: "Абсолютно всё" }, { id: C, text: "Только цвет" }, { id: D, text: "Ничего" }, { id: A, text: "Существенные для цели признаки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "Ничего", explanation: "Цель решает, что существенно" }
+  teacher_only: { answer: A, answer_text: "Существенные для цели признаки", explanation: "Цель решает, что существенно" }
 
 - id: inf-9-extra-004
   class: 9
@@ -150,7 +150,7 @@
   prompt: "Когда модель адекватна?"
   student_view: { options: [{ id: B, text: "Она красивая" }, { id: C, text: "Она большая" }, { id: D, text: "Она старая" }, { id: A, text: "Результаты близки к эксперименту" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "Она старая", explanation: "Сверка с опытом — критерий" }
+  teacher_only: { answer: A, answer_text: "Результаты близки к эксперименту", explanation: "Сверка с опытом — критерий" }
 
 - id: inf-9-extra-005
   class: 9
@@ -184,7 +184,7 @@
   prompt: "Из чего состоит IP-адрес?"
   student_view: { options: [{ id: B, text: "3 буквы" }, { id: D, text: "Имя сайта" }, { id: C, text: "10 цифр подряд" }, { id: A, text: "4 числа от 0 до 255" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "Имя сайта", explanation: "Всего 32 бита" }
+  teacher_only: { answer: A, answer_text: "4 числа от 0 до 255", explanation: "Всего 32 бита" }
 
 - id: inf-9-extra-007
   class: 9
@@ -218,7 +218,7 @@
   prompt: "Какая последовательность НЕ может быть IP-адресом?"
   student_view: { options: [{ id: B, text: "113.256.0.138" }, { id: C, text: "22.4.13.73" }, { id: D, text: "1.2.3.4" }, { id: A, text: "10.55.0.225" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "10.55.0.225", explanation: "256 больше максимума 255" }
+  teacher_only: { answer: B, answer_text: "113.256.0.138", explanation: "256 больше максимума 255" }
 
 - id: inf-9-extra-009
   class: 9
@@ -235,7 +235,7 @@
   prompt: "Обрывки: 3.133, 22, .73, 4.13. Какой адрес соберётся?"
   student_view: { options: [{ id: C, text: "22.73.4.13.133" }, { id: D, text: "4.13.73.3.133.22" }, { id: A, text: "224.133.133.73" }, { id: B, text: "3.133.22.4.13.73" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "22.73.4.13.133", explanation: "Единственная склейка с четырьмя числами 0–255: Б-Г-А-В. Остальные дают 5 групп или числа >255" }
+  teacher_only: { answer: A, answer_text: "224.133.133.73", explanation: "Единственная склейка с четырьмя числами 0–255: Б-Г-А-В. Остальные дают 5 групп или числа >255" }
 
 - id: inf-9-extra-010
   class: 9
@@ -252,7 +252,7 @@
   prompt: "Зачем нужен DNS?"
   student_view: { options: [{ id: C, text: "Писать вирусы" }, { id: A, text: "Переводить имена в IP-адреса" }, { id: B, text: "Рисовать сайты" }, { id: D, text: "Выключать интернет" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Рисовать сайты", explanation: "Телефонная книга интернета" }
+  teacher_only: { answer: A, answer_text: "Переводить имена в IP-адреса", explanation: "Телефонная книга интернета" }
 
 - id: inf-9-extra-011
   class: 9
@@ -286,7 +286,7 @@
   prompt: "Что такое онлайн-офис как веб-сервис?"
   student_view: { options: [{ id: B, text: "Ускорение процессора через интернет" }, { id: C, text: "Замена антивируса" }, { id: A, text: "Редактирование документов в браузере без установки программ" }, { id: D, text: "Печать без принтера" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Замена антивируса", explanation: "Программа живёт в сети: открыл ссылку — и работаешь, можно вместе" }
+  teacher_only: { answer: A, answer_text: "Редактирование документов в браузере без установки программ", explanation: "Программа живёт в сети: открыл ссылку — и работаешь, можно вместе" }
 
 - id: inf-9-extra-013
   class: 9
@@ -320,7 +320,7 @@
   prompt: "Модель погоды: таблица температур, график, карта, формула. Какая она?"
   student_view: { options: [{ id: D, text: "Не модель" }, { id: B, text: "Только табличная" }, { id: C, text: "Только словесная" }, { id: A, text: "Смешанная" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "Не модель", explanation: "Языки описания соединены" }
+  teacher_only: { answer: A, answer_text: "Смешанная", explanation: "Языки описания соединены" }
 
 - id: inf-9-extra-019
   class: 9
@@ -337,7 +337,7 @@
   prompt: "База «Ученики»: поля Фамилия/Класс/Рост. Что такое запись?"
   student_view: { options: [{ id: C, text: "Название базы" }, { id: D, text: "Пароль" }, { id: A, text: "Строка — один ученик" }, { id: B, text: "Столбец" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Название базы", explanation: "Поля — свойства, записи — экземпляры" }
+  teacher_only: { answer: A, answer_text: "Строка — один ученик", explanation: "Поля — свойства, записи — экземпляры" }
 
 # ==== ДОПИСАНО scripts/make-9-bank.mjs (далее руками не править) ====
 - id: inf-9-extra-021
@@ -1247,7 +1247,7 @@
   prompt: "Какой пароль надёжнее?"
   student_view: { options: [{ id: B, text: "Короткий из цифр: его легко перебрать" }, { id: D, text: "Кличка питомца: она видна в профиле" }, { id: C, text: "Дата рождения: её легко узнать" }, { id: A, text: "Длинный и не похожий на словарь: 12–16 символов" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "D", answer_text: "Кличка питомца: она видна в профиле", explanation: "Надёжность определяется длиной и не предсказуемостью. Перебор идёт сначала по коротким и частым сочетаниям, поэтому «qwerty123» ломается за секунды, а длинная случайная строка — очень долго." }
+  teacher_only: { answer: "A", answer_text: "Длинный и не похожий на словарь: 12–16 символов", explanation: "Надёжность определяется длиной и не предсказуемостью. Перебор идёт сначала по коротким и частым сочетаниям, поэтому «qwerty123» ломается за секунды, а длинная случайная строка — очень долго." }
 
 - id: inf-9-extra-074
   class: 9
@@ -1315,7 +1315,7 @@
   prompt: "Чем веб-сервис отличается от программы, установленной на компьютере?"
   student_view: { options: [{ id: B, text: "Работает быстрее любой программы" }, { id: A, text: "Работает через браузер, данные хранятся на сервере" }, { id: D, text: "Содержит больше функций" }, { id: C, text: "Не требует интернета" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "B", answer_text: "Работает быстрее любой программы", explanation: "Веб-сервис открывают в браузере, а данные лежат на сервере: работать можно с разных устройств без установки. Обратная сторона — без интернета сервис недоступен, и данные зависят от чужого сервера." }
+  teacher_only: { answer: "A", answer_text: "Работает через браузер, данные хранятся на сервере", explanation: "Веб-сервис открывают в браузере, а данные лежат на сервере: работать можно с разных устройств без установки. Обратная сторона — без интернета сервис недоступен, и данные зависят от чужого сервера." }
 
 - id: inf-9-extra-078
   class: 9

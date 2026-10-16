@@ -5,8 +5,6 @@
 
 | Файл | Заданий | Из них без свидетельства |
 | --- | ---: | ---: |
-| [07-information.md](07-information.md) | 21 | 14 |
-| [07-media.md](07-media.md) | 43 | 36 |
 | [08-algorithms.md](08-algorithms.md) | 26 | 17 |
 | [08-logic.md](08-logic.md) | 29 | 26 |
 | [08-number-systems-gen.md](08-number-systems-gen.md) | 11 | 3 |
@@ -28,6 +26,8 @@
 | Файл | Заданий | Статус |
 | --- | ---: | --- |
 | [done/07-base.md](done/07-base.md) | 80 | применён |
+| [done/07-information.md](done/07-information.md) | 21 | применён |
+| [done/07-media.md](done/07-media.md) | 43 | применён |
 | [done/08-number-systems-bank.md](done/08-number-systems-bank.md) | 2 | применён |
 | [done/11-db.md](done/11-db.md) | 9 | применён |
 

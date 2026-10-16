@@ -639,8 +639,8 @@
           "text": "Только цепочка"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-graph-028",
@@ -746,8 +746,8 @@
           "text": "Пароль"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-039",
@@ -833,8 +833,8 @@
           "text": "Имя сайта"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-010",
@@ -860,8 +860,8 @@
           "text": "Выключать интернет"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-011",
@@ -914,8 +914,8 @@
           "text": "Печать без принтера"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-017",
@@ -941,8 +941,8 @@
           "text": "Диаграммы запрещены"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-045",

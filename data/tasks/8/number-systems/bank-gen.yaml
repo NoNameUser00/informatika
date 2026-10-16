@@ -372,7 +372,7 @@
   prompt: "Сколько нулей в двоичной записи числа 128₁₀?"
   student_view: { options: [{ id: D, text: "9" }, { id: C, text: "8" }, { id: B, text: "7" }, { id: A, text: "6" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "8", explanation: "128 = 10000000_2: один и семь нулей" }
+  teacher_only: { answer: B, answer_text: "7", explanation: "128 = 10000000_2: один и семь нулей" }
 
 - id: inf-8-numsys-036
   class: 8

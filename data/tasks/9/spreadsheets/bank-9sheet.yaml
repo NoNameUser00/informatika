@@ -31,7 +31,7 @@
   prompt: "Что видно в режиме отображения формул?"
   student_view: { options: [{ id: B, text: "Только результаты" }, { id: A, text: "Сами формулы" }, { id: C, text: "Только адреса" }, { id: D, text: "Пустые ячейки" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "Только результаты", explanation: "Режим формул — для проверки логики" }
+  teacher_only: { answer: A, answer_text: "Сами формулы", explanation: "Режим формул — для проверки логики" }
 
 - id: inf-9-sheet-003
   class: 9

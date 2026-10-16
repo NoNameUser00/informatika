@@ -140,8 +140,8 @@
           "text": "Новая батарейка"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-002",
@@ -167,8 +167,8 @@
           "text": "Шуметь"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-014",
@@ -221,8 +221,8 @@
           "text": "Так нельзя делать"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-027",
@@ -396,8 +396,8 @@
           "text": "Ничего"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-004",
@@ -423,8 +423,8 @@
           "text": "Она старая"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-005",
@@ -460,8 +460,8 @@
           "text": "Не модель"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-019",
@@ -487,8 +487,8 @@
           "text": "Пароль"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-031",
@@ -675,8 +675,8 @@
           "text": "Имя сайта"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-007",
@@ -712,8 +712,8 @@
           "text": "1.2.3.4"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-9-extra-009",
@@ -739,8 +739,8 @@
           "text": "4.13.73.3.133.22"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-010",
@@ -766,8 +766,8 @@
           "text": "Выключать интернет"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-011",
@@ -820,8 +820,8 @@
           "text": "Печать без принтера"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-016",
@@ -874,8 +874,8 @@
           "text": "Диаграммы запрещены"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-020",
@@ -901,8 +901,8 @@
           "text": "Ничего"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-042",
@@ -1073,8 +1073,8 @@
           "text": "Кличка питомца: она видна в профиле"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-048",
@@ -1334,8 +1334,8 @@
           "text": "Содержит больше функций"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-060",

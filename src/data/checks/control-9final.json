@@ -632,8 +632,8 @@
           "text": "Новая батарейка"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-002",
@@ -659,8 +659,8 @@
           "text": "Шуметь"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-014",
@@ -713,8 +713,8 @@
           "text": "Так нельзя делать"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-063",
@@ -861,8 +861,8 @@
           "text": "Ничем"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-graph-005",
@@ -888,8 +888,8 @@
           "text": "Цвета"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-graph-013",
@@ -945,8 +945,8 @@
           "text": "Нет, потому что рёбер больше, чем вершин"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-graph-050",
@@ -1012,8 +1012,8 @@
           "text": "Она старая"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-9-extra-005",
