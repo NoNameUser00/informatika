@@ -14,7 +14,7 @@
   prompt: "Что из перечисленного является высказыванием?"
   student_view: { options: [{ id: C, text: "«2 + 2 = 5»" }, { id: A, text: "«Который час?»" }, { id: D, text: "«Ура!»" }, { id: B, text: "«Закрой окно!»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "«Который час?»", explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
+  teacher_only: { answer: C, answer_text: "«2 + 2 = 5»", explanation: "Только повествовательное предложение с истинностью (здесь — ложное)" }
 
 - id: inf-8-logic-002
   class: 8
@@ -48,7 +48,7 @@
   prompt: "Какое высказывание составное?"
   student_view: { options: [{ id: A, text: "«Идет дождь»" }, { id: D, text: "«2 × 2»" }, { id: B, text: "«Идет дождь и дует ветер»" }, { id: C, text: "«Закрой окно»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "«Закрой окно»", explanation: "Два простых соединены связкой И" }
+  teacher_only: { answer: B, answer_text: "«Идет дождь и дует ветер»", explanation: "Два простых соединены связкой И" }
 
 - id: inf-8-logic-004
   class: 8
@@ -65,7 +65,7 @@
   prompt: "Какой знак обозначает конъюнкцию (И)?"
   student_view: { options: [{ id: C, text: "∧" }, { id: A, text: "∨" }, { id: B, text: "¬" }, { id: D, text: "=" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: A, answer_text: "∨", explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
+  teacher_only: { answer: C, answer_text: "∧", explanation: "∧ — И; ∨ — ИЛИ; ¬ — НЕ" }
 
 - id: inf-8-logic-005
   class: 8
@@ -82,7 +82,7 @@
   prompt: "Какой знак обозначает отрицание (НЕ)?"
   student_view: { options: [{ id: A, text: "∧" }, { id: C, text: "¬" }, { id: B, text: "∨" }, { id: D, text: "≠" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: B, answer_text: "∨", explanation: "¬ — НЕ" }
+  teacher_only: { answer: C, answer_text: "¬", explanation: "¬ — НЕ" }
 
 - id: inf-8-logic-006
   class: 8

@@ -744,7 +744,7 @@
   prompt: "Какие конструкции нужны для задачи «посчитать количество чётных чисел от 1 до n»?"
   student_view: { options: [{ id: B, text: "Только ветвление" }, { id: C, text: "Цикл for и ветвление" }, { id: A, text: "Только цикл for" }, { id: D, text: "Только цикл с условием окончания" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Цикл for и ветвление", explanation: "for перебирает числа от 1 до n, а ветвление отбирает из них те, что делятся на 2 без остатка" }
+  teacher_only: { answer: A, answer_text: "Только цикл for", explanation: "for перебирает числа от 1 до n, а ветвление отбирает из них те, что делятся на 2 без остатка" }
 
 - id: inf-8-algo-045
   class: 8

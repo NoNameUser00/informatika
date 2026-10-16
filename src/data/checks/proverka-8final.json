@@ -418,8 +418,8 @@
           "text": "«Ура!»"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-logic-031",
@@ -849,8 +849,8 @@
           "text": "Только цикл с условием окончания"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-8-algo-045",

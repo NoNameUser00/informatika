@@ -1124,8 +1124,8 @@
           "text": "Файл — это ярлык"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-006",
@@ -1151,8 +1151,8 @@
           "text": "С чужой флешки"
         }
       ],
-      "correct": "D",
-      "key": "D"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-011",
@@ -1214,8 +1214,8 @@
           "text": "Только два файла: фото.jpg и фото1.jpg"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "A",
+      "key": "A"
     },
     {
       "id": "inf-7-media-033",
