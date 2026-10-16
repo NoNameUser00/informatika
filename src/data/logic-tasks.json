@@ -29,8 +29,8 @@
           "text": "«Ура!»"
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-logic-002",
@@ -83,8 +83,8 @@
           "text": "«2 × 2»"
         }
       ],
-      "correct": "C",
-      "key": "C"
+      "correct": "B",
+      "key": "B"
     },
     {
       "id": "inf-8-logic-020",
@@ -262,8 +262,8 @@
           "text": "="
         }
       ],
-      "correct": "A",
-      "key": "A"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-logic-005",
@@ -289,8 +289,8 @@
           "text": "≠"
         }
       ],
-      "correct": "B",
-      "key": "B"
+      "correct": "C",
+      "key": "C"
     },
     {
       "id": "inf-8-logic-008",
