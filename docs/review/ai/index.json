@@ -1,0 +1,62 @@
+[
+ {
+  "bank": "10-base",
+  "total": 43
+ },
+ {
+  "bank": "10-logic",
+  "total": 25
+ },
+ {
+  "bank": "10-media",
+  "total": 42
+ },
+ {
+  "bank": "10-ss",
+  "total": 15
+ },
+ {
+  "bank": "11-algo",
+  "total": 15
+ },
+ {
+  "bank": "11-data",
+  "total": 24
+ },
+ {
+  "bank": "11-graph",
+  "total": 12
+ },
+ {
+  "bank": "11-net",
+  "total": 43
+ },
+ {
+  "bank": "8-algorithms",
+  "total": 26
+ },
+ {
+  "bank": "8-logic",
+  "total": 29
+ },
+ {
+  "bank": "8-number-systems",
+  "total": 2
+ },
+ {
+  "bank": "9-arrays",
+  "total": 7
+ },
+ {
+  "bank": "9-extra",
+  "total": 49
+ },
+ {
+  "bank": "9-graphs",
+  "total": 7
+ },
+ {
+  "bank": "9-spreadsheets",
+  "total": 25
+ }
+]
