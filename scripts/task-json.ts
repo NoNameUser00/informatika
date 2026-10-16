@@ -50,9 +50,17 @@ export function convert(t: any): TaskJson {
     if (t.teacher_only.answer && t.teacher_only.answer !== correct) {
       throw new Error(`selfcheck FAIL ${t.id}: answer=${t.teacher_only.answer}, а answer_text указывает на «${correct}»`);
     }
+    // Варианты идут строго A, B, C, D — в каком бы порядке они ни лежали в
+    // банке. Перестановка меняет ПИСЬМО варианта, а не набор; показывать ученику
+    // «B, A, D, C» нельзя, это читается как сбой. Ключ при этом остаётся
+    // буквой верного варианта, то есть после сортировки он указывает ровно на ту
+    // же формулировку, что и до неё.
+    const options = [...t.student_view.options].sort((a: any, b: any) =>
+      String(a.id).localeCompare(String(b.id)),
+    );
     return {
       id: t.id, lesson: t.lesson, type: t.type, points: t.points, prompt: t.prompt,
-      options: t.student_view.options, correct, key: correct,
+      options, correct, key: correct,
     };
   }
   if (t.type === 'matching') {

@@ -23,11 +23,12 @@
 // Запуск:
 //   node scripts/apply-key-review.mjs           применить ответы
 //   node scripts/apply-key-review.mjs --dry     только показать, что изменится
-import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, renameSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadAllTasks } from './audit-keys.mjs';
 
 const REVIEW_DIR = 'docs/review/keys';
+const DONE_DIR = join(REVIEW_DIR, 'done');
 const VERDICT_RE = /^Вердикт:[ \t]*(.*)$/m;
 const HEADING_RE = /^## \d+\. (\S+)/;
 
@@ -44,23 +45,41 @@ export function parseVerdicts(md) {
 }
 
 /**
+ * Кириллица в буквах вариантов. Глазом «А» и «A» не отличить, а для машины это
+ * разные символы, и русскоговорящий учитель печатает кириллицу естественно.
+ * Приводим к латинице; остальное — опечатка.
+ */
+const CYRILLIC_LETTERS = { А: 'A', В: 'B', С: 'C', Д: 'D' };
+
+function normalizeLetter(ch) {
+  const up = ch.toUpperCase();
+  return CYRILLIC_LETTERS[up] ?? up;
+}
+
+/**
  * Вердикт -> действие. Пусто — пропустить. «верно» — подтвердить без правки.
- * «поправить на X» — сменить ключ. Всё остальное — ошибка: молча пропускать
- * опечатку нельзя, иначе человек будет думать, что поправил.
+ * «поправить на X» (и естественные варианты формулировки) — сменить ключ. Всё
+ * остальное — ошибка: молча пропускать опечатку нельзя, иначе человек будет
+ * думать, что поправил.
  */
 export function parseVerdict(raw) {
   if (!raw) return { kind: 'skip' };
-  const t = raw.trim().toLowerCase();
-  if (t === 'верно' || t === 'да' || t === 'всё верно' || t === 'все верно') return { kind: 'ok' };
-  const m = /^поправить\s+на\s+([A-Za-zА-Яа-я])\.?$/.exec(t);
+  const t = raw.trim();
+  // Разделитель блока, однажды попавший в строку вердикта при сборке с битым
+  // регексом. Ответом он быть не может — считаем «не проверено».
+  if (t === '---') return { kind: 'skip' };
+  const lower = t.toLowerCase();
+  if (['верно', 'да', 'всё верно', 'все верно', 'правильно', 'без вопросов'].includes(lower)) {
+    return { kind: 'ok' };
+  }
+  // «поправь на A», «поправить: B», «заменить на C», «правильный ответ D»
+  const m = /^(?:поправь|поправить|заменить|правильный ответ)\s*(?:на|:)?\s*([A-Za-zА-Яа-я])\.?$/.exec(lower);
   if (m) {
-    const letter = m[1].toUpperCase();
-    // Буквы вне A–D — опечатка. Отдельно «поправить на D» в задании с тремя
-    // вариантами отсекает проверка по конкретному заданию.
-    if (!'ABCD'.includes(letter)) return { kind: 'bad', why: `буква «${letter}» вне списка A–D` };
+    const letter = normalizeLetter(m[1]);
+    if (!'ABCD'.includes(letter)) return { kind: 'bad', why: `буква «${m[1]}» вне списка A–D` };
     return { kind: 'set', letter };
   }
-  if (/поправить/.test(t)) return { kind: 'bad', why: 'не разобрана буква (ожидается A, B, C или D)' };
+  if (/поправ|замени|правильн/.test(lower)) return { kind: 'bad', why: 'не разобрана буква (ожидается A, B, C или D)' };
   return { kind: 'bad', why: 'неизвестная формулировка' };
 }
 
@@ -73,6 +92,39 @@ function collect() {
     }
   }
   return verdicts;
+}
+
+/**
+ * Полностью заполненные ведомости уходят в done/.
+ *
+ * Зачем. Ответ записан буквой, а буква — производная от порядка вариантов. Стоит
+ * позже перемешать варианты, и в ведомости останутся буквы, указывающие на
+ * ДРУГИЕ варианты: повторный запуск скрипта молча переписал бы ключ. Поэтому
+ * применённый лист убирается из очереди, а буквы в нём остаются только для
+ * истории.
+ *
+ * Переносится только то, где заполнены ВСЕ строки: прерванную на середине
+ * проверку терять нельзя.
+ */
+export function archiveFinished(reviewDir = REVIEW_DIR, doneDir = DONE_DIR) {
+  const files = readdirSync(reviewDir).filter((f) => /^\d\d-.*\.md$/.test(f));
+  if (!files.length) return { moved: [], partial: [] };
+
+  const moved = [];
+  const partial = [];
+  for (const f of files) {
+    const all = parseVerdicts(readFileSync(join(reviewDir, f), 'utf-8'));
+    if (!all.length) continue;
+    const done = all.filter((v) => parseVerdict(v.raw).kind !== 'skip').length;
+    if (done === all.length) {
+      mkdirSync(doneDir, { recursive: true });
+      renameSync(join(reviewDir, f), join(doneDir, f));
+      moved.push(`${f} (${done})`);
+    } else {
+      partial.push(`${f} (${done}/${all.length})`);
+    }
+  }
+  return { moved, partial };
 }
 
 function main() {
@@ -136,6 +188,7 @@ if (problems.length) {
 
 if (!planned.length) {
   console.log('\nПрименять нечего: подтверждённые ключи совпадают с банком.');
+  if (!dry) reportArchive();
   process.exit(0);
 }
 
@@ -207,6 +260,19 @@ if (problems.length) {
   process.exit(1);
 }
 console.log(`\nГотово: изменено ${planned.length} ключей. Дальше — node scripts/audit-keys.mjs и npm run checks.`);
+reportArchive();
+}
+
+/** Печатает, что ушло в done/, и напоминает про незаконченные листы. */
+function reportArchive() {
+  const { moved, partial } = archiveFinished();
+  if (moved.length) {
+    console.log(`\nВ очередь больше не попадут (ответы уже в банке): ${moved.join(', ')}`);
+    console.log('Файлы перенесены в docs/review/keys/done/ — это история, ключи оттуда не применяются.');
+  }
+  if (partial.length) {
+    console.log(`\nПроверка не закончена, листы остаются в очереди: ${partial.join(', ')}`);
+  }
 }
 
 // CLI запускается только при прямом вызове файла: тест импортирует

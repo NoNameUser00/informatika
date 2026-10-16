@@ -23,6 +23,7 @@ import { join } from 'node:path';
 import { scoreOptions, loadAllTasks } from './audit-keys.mjs';
 
 const OUT_DIR = 'docs/review/keys';
+const DONE_DIR = join(OUT_DIR, 'done');
 // [ \t]*, а не \s*: внутри \s есть перевод строки, и вердикт «съедал» бы
 // разделитель «---», оборачиваясь в мусор, который потом не распознаётся.
 const VERDICT_RE = /^Вердикт:[ \t]*(.*)$/m;
@@ -92,6 +93,10 @@ function bankTitle(file, tasks) {
 /**
  * Прежние вердикты по id задания. Читаем из уже существующей ведомости, чтобы
  * повторный запуск не уничтожил ответы человека.
+ *
+ * Значение «---» отбрасываем: это не ответ, а разделитель блока. Такой мусор
+ * однажды попал в файлы, когда сборка шла по старой версии с \s* в регексе:
+ * разделитель переезжал в строку вердикта и дальше воспроизводился сам.
  */
 function loadVerdicts(file) {
   if (!existsSync(file)) return new Map();
@@ -101,7 +106,7 @@ function loadVerdicts(file) {
     const id = /^## \d+\. (\S+)/.exec(block)?.[1];
     if (!id) continue;
     const v = VERDICT_RE.exec(block)?.[1]?.trim();
-    if (v) out.set(id, v);
+    if (v && v !== '---') out.set(id, v);
   }
   return out;
 }
@@ -199,6 +204,11 @@ const rows = [...groups].sort(
       bankToken(a[1].file).localeCompare(bankToken(b[1].file)),
   );
   const names = assignNames(rows);
+  // done/ ищем ВНУТРИ outDir, а не по константе модуля: иначе сборка в
+  // тестовую папку всё равно опиралась бы на настоящий репозиторий и молча
+  // пропускала бы банки, которые там уже применены.
+  const doneDir = join(outDir, 'done');
+  const done = [];
   let index = [
     '# Ведомость ключей single_choice',
     '',
@@ -212,13 +222,24 @@ const rows = [...groups].sort(
   for (const [file, row] of rows) {
     if (!row.tasks.length) continue;
     const name = names.get(file);
+    // Банк, который уже проверен и применён, лежит в done/. Возвращать его в
+    // очередь нельзя: ответы в нём записаны буквами, а после перемешивания
+    // вариантов буквы сменятся — и старый вердикт применился бы повторно уже
+    // к другому варианту.
+    if (existsSync(join(doneDir, name))) {
+      done.push(`| [done/${name}](done/${name}) | ${row.tasks.length + row.withEvidence} | применён |`);
+      continue;
+    }
     if (!stats) {
-    writeFileSync(join(outDir, name), renderBank({ ...row, name }, outDir), 'utf-8');
+      writeFileSync(join(outDir, name), renderBank({ ...row, name }, outDir), 'utf-8');
     }
     index.push(`| [${name}](${name}) | ${row.tasks.length + row.withEvidence} | ${row.tasks.length} |`);
   }
 
   if (!stats) {
+    if (done.length) {
+      index.push('', '## Уже проверено и применено', '', '| Файл | Заданий | Статус |', '| --- | ---: | --- |', ...done, '');
+    }
     index.push(
       '',
       '## Порядок работы',
