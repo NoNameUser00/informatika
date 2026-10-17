@@ -25,6 +25,7 @@ import { execFileSync } from 'node:child_process';
 const checkOnly = process.argv.includes('--check');
 
 const STEPS = [
+  { name: 'bank:index', cmd: 'npm run bank:index', about: 'индекс существующих id' },
   { name: 'trainer:json', cmd: 'npm run trainer:json', about: 'тренерские задания' },
   { name: 'checks', cmd: 'npm run checks', about: '44 работы' },
   { name: 'bank:30', cmd: 'npm run bank:30', about: 'проверка 30 вариантов' },
