@@ -22,6 +22,7 @@
 import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
+import { flat, giveawayPct, isNumericLike, len } from './distractor-length.mjs';
 
 const OUT_DIR = 'docs/review/distractors';
 const pctArg = process.argv.slice(2).find((a) => /^\d+$/.test(a));
@@ -37,14 +38,13 @@ function walk(dir, acc = []) {
   return acc;
 }
 
-const len = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().length;
-const flat = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
-
 // Варианты-числа длинной не бывают, и «10» длиннее «8» на символ, хотя по
 // смыслу это одно и то же. Такие задания в ведомость не попадают: длина там
 // ничего не выдаёт, а чинить нечего. Проверено на inf-11-graph-008 («8», «9»,
 // «10», «7»), где метрика дала +100 % на пустом месте.
-const isNumericLike = (s) => /^[\W\d]*\d[\W\d]*$/.test(String(s ?? '').trim());
+//
+// Само правило живёт в scripts/distractor-length.mjs вместе с проверкой: в нём
+// была ошибка, из-за которой задания выпадали из ведомости молча.
 
 // Механизма «сделано» тут нет намеренно: починенное задание само выпадает из
 // ведомости, как только запас падает ниже порога. Ничего размечать не нужно.
