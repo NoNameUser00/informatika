@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TaskForm from '../../components/TaskForm';
+import TeacherGate from '../../components/TeacherGate';
+---
+<Layout title="Новое задание — учитель">
+  <TeacherGate>
+    <TaskForm client:load />
+  </TeacherGate>
+</Layout>
