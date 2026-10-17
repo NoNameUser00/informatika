@@ -19,7 +19,7 @@
 //   node scripts/make-distractor-review.mjs             грубые случаи (запас > 50 %)
 //   node scripts/make-distractor-review.mjs 20          порог 20 %
 //   node scripts/make-distractor-review.mjs 20 --stats  только сводка
-import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
 
@@ -87,6 +87,7 @@ for (const f of walk('data/tasks')) {
 
 if (!statsOnly) mkdirSync(OUT_DIR, { recursive: true });
 
+const written = new Set();
 let total = 0;
 let files = 0;
 const index = [
@@ -135,10 +136,24 @@ for (const [bank, rows] of [...banks].sort()) {
 
   if (!statsOnly) {
     writeFileSync(join(OUT_DIR, name), `# Отвлекающие варианты — ${bank}\n\n${body}`, 'utf-8');
+    written.add(name);
   }
   index.push(`| [${name}](${name}) | ${rows.length} |`);
   total += rows.length;
   files++;
+}
+
+// Удаляем листы банков, у которых заданий больше не осталось. Без этого они
+// лежат вечно: починенный банк перестаёт попадать в раздачу, но его старый
+// файл остаётся на диске — и скрипт применения потом видит в нём уже внесённые
+// правки. Именно так «возвращались» 8-logic, 11-data и 9-graphs.
+if (!statsOnly) {
+  for (const f of readdirSync(OUT_DIR)) {
+    if (!f.endsWith('.md') || f === 'README.md') continue;
+    if (written.has(f)) continue;
+    rmSync(join(OUT_DIR, f));
+    console.log(`удалён устаревший лист ${f}`);
+  }
 }
 
 index.push('', `Всего заданий в ведомости: **${total}**.`, '');

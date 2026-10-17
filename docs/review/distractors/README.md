@@ -22,8 +22,7 @@
 | [11-net.md](11-net.md) | 20 |
 | [7-base.md](7-base.md) | 13 |
 | [7-media.md](7-media.md) | 4 |
-| [8-algorithms.md](8-algorithms.md) | 4 |
 | [9-extra.md](9-extra.md) | 23 |
-| [9-spreadsheets.md](9-spreadsheets.md) | 3 |
+| [9-spreadsheets.md](9-spreadsheets.md) | 1 |
 
-Всего заданий в ведомости: **131**.
+Всего заданий в ведомости: **125**.
