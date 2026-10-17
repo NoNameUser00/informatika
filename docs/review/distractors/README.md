@@ -15,14 +15,12 @@
 | Файл | Заданий |
 | --- | ---: |
 | [10-base.md](10-base.md) | 17 |
-| [10-logic.md](10-logic.md) | 6 |
 | [10-media.md](10-media.md) | 23 |
 | [10-ss.md](10-ss.md) | 10 |
 | [11-algo.md](11-algo.md) | 8 |
 | [11-net.md](11-net.md) | 20 |
 | [7-base.md](7-base.md) | 13 |
-| [7-media.md](7-media.md) | 4 |
 | [9-extra.md](9-extra.md) | 23 |
 | [9-spreadsheets.md](9-spreadsheets.md) | 1 |
 
-Всего заданий в ведомости: **125**.
+Всего заданий в ведомости: **115**.
