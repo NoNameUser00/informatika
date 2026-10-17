@@ -27,7 +27,9 @@
     "app:teacher": "node scripts/offline-pack.mjs teacher",
     "offline:all": "node scripts/offline-all.mjs",
     "offline:bundle": "python scripts/offline-bundle.py",
-    "lint": "echo \"eslint TODO: подключить после npm install\""
+    "lint": "echo \"eslint TODO: подключить после npm install\"",
+    "rebuild": "node scripts/rebuild-all.mjs",
+    "rebuild:check": "node scripts/rebuild-all.mjs --check"
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",
