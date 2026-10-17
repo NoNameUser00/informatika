@@ -63,6 +63,18 @@ if (!r6.errors.some((e) => /объяснение/i.test(e))) fail('пустое 
 const r7 = checkDraft({ ...base, prompt: '' });
 if (!r7.errors.some((e) => /вопрос/i.test(e))) fail('пустой вопрос не пойман');
 
+// Баллы не соответствуют сложности
+const r14 = checkDraft({ ...base, points: 3, difficulty: 'basic' });
+if (!r14.errors.some((e) => /Баллы/i.test(e))) fail('несоответствие баллов и сложности не поймано');
+
+// Класс не совпадает с классом банка
+const r15 = checkDraft({ ...base, cls: 7, bankClass: 11 });
+if (!r15.errors.some((e) => /Класс/i.test(e))) fail('несовпадение класса не поймано');
+
+// fgos_subject пустой — не блокирует, но предупреждение не обязательно; проверяем что не падает
+const r16 = checkDraft({ ...base, fgos_subject: '' });
+if (r16.errors.some((e) => /FGOS/i.test(e))) fail('пустой fgos_subject неожиданно заблокировал');
+
 // numeric_base: неверный ключ
 const r8 = checkDraft({ ...base, type: 'numeric_base', base: 2, accepted: '7', answer_text: '10', explanation: 'x' });
 if (!r8.errors.some((e) => /не сходится/i.test(e))) fail('numeric_base неверный ключ не пойман');

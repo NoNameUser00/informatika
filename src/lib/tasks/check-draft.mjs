@@ -22,6 +22,13 @@ export function checkDraft(draft) {
   if (!draft.subtopic || !String(draft.subtopic).trim()) errors.push('Пустая подтема');
   if (!draft.explanation || !String(draft.explanation).trim()) errors.push('Пустое объяснение (обязательное поле)');
 
+  // points жёстко связаны со сложностью: basic=1, intermediate=2, advanced=3
+  const expectedPoints = draft.difficulty === 'basic' ? 1 : draft.difficulty === 'intermediate' ? 2 : 3;
+  if (draft.points !== expectedPoints) errors.push(`Баллы ${draft.points} не соответствуют сложности ${draft.difficulty} (ожидается ${expectedPoints})`);
+
+  // Класс задания должен совпадать с классом выбранного банка
+  if (draft.bankClass && draft.cls !== draft.bankClass) errors.push(`Класс задания (${draft.cls}) не совпадает с классом банка (${draft.bankClass})`);
+
   const type = draft.type;
 
   if (type === 'single_choice') {
@@ -81,7 +88,7 @@ export function checkDraft(draft) {
     };
     const nk = checkNumericKey(task);
     if (!nk.ok) errors.push(`Ключ не сходится с accepted_values_decimal: ${nk.reason}`);
-    if (!draft.placeholder && draft.placeholder !== '') {} // placeholder опционален
+    // placeholder опционален
     if (typeof draft.base !== 'number' || draft.base < 2) errors.push('Основание должно быть >= 2');
   }
 

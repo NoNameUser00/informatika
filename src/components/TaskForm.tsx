@@ -8,6 +8,8 @@ type TaskType = 'single_choice' | 'numeric_base' | 'matching' | 'code_run';
 interface Option { id: string; text: string; }
 
 interface Draft {
+  id?: string;
+  bankClass?: number;
   type: TaskType;
   bankFile: string;
   cls: number;
@@ -53,8 +55,8 @@ function yamlEscape(s: string): string {
 }
 
 function buildYaml(d: Draft): string {
-  const id = nextIdFor(d.bankFile);
-  const base = `  - id: ${id}
+  const id = (d as any).id || nextIdFor(d.bankFile);
+  const base = `- id: ${id}
   class: ${d.cls}
   topic: ${yamlEscape(d.topic)}
   subtopic: ${yamlEscape(d.subtopic)}
@@ -65,17 +67,18 @@ function buildYaml(d: Draft): string {
   lesson: ${yamlEscape(d.lesson)}
   fgos_requirement: 1.1
   fgos_element: 1.1
-  fgos: { subject: [${d.fgos_subject}], meta: [${d.fgos_meta}] }
+  fgos: { subject: [${d.fgos_subject.split(',').map((s) => s.trim()).filter(Boolean).map(yamlEscape).join(', ')}], meta: [${d.fgos_meta.split(',').map((s) => s.trim()).filter(Boolean).map(yamlEscape).join(', ')}] }
   prompt: ${yamlEscape(d.prompt)}`;
 
   if (d.type === 'single_choice') {
     const opts = d.options.map((o) => `{ id: ${o.id}, text: ${yamlEscape(o.text)} }`).join(', ');
     const errs = d.common_errors.split('\n').map((s) => s.trim()).filter(Boolean);
     const errsYaml = errs.length ? `[${errs.map(yamlEscape).join(', ')}]` : '[]';
+    const answerText = d.options.find((o) => o.id === d.answer)?.text ?? '';
     return `${base}
   student_view: { options: [${opts}] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: "${d.answer}", answer_text: ${yamlEscape(d.answer_text)}, explanation: ${yamlEscape(d.explanation)}, common_errors: ${errsYaml} }`;
+  teacher_only: { answer: "${d.answer}", answer_text: ${yamlEscape(answerText)}, explanation: ${yamlEscape(d.explanation)}, common_errors: ${errsYaml} }`;
   }
 
   if (d.type === 'numeric_base') {
@@ -106,6 +109,7 @@ function buildYaml(d: Draft): string {
 const EMPTY_DRAFT: Draft = {
   type: 'single_choice',
   bankFile: '',
+  bankClass: 0,
   cls: 8,
   topic: '',
   subtopic: '',
@@ -140,7 +144,8 @@ export default function TaskForm() {
   const banks = (bankIndex as any).banks as { file: string; token: string; class: number; nextId: number }[];
   const lessons = ALL_LESSONS.filter((l) => !draft.cls || l.id.startsWith(String(draft.cls)));
 
-  const result = useMemo(() => checkDraft(draft), [draft]);
+  const computedId = nextIdFor(draft.bankFile);
+  const result = useMemo(() => checkDraft({ ...draft, id: computedId }), [draft, computedId]);
 
   function set<K extends keyof Draft>(key: K, value: Draft[K]) {
     setDraft((d) => ({ ...d, [key]: value }));
@@ -151,7 +156,7 @@ export default function TaskForm() {
   }
 
   function onGenerate() {
-    const yaml = buildYaml(draft);
+    const yaml = buildYaml({ ...draft, id: computedId });
     setOutput(yaml);
   }
 
@@ -179,7 +184,10 @@ export default function TaskForm() {
       </label>
 
       <label>Целевой банк
-        <select value={draft.bankFile} onChange={(e) => set('bankFile', e.target.value)}>
+        <select value={draft.bankFile} onChange={(e) => {
+          const bank = banks.find((b) => b.file === e.target.value);
+          setDraft((d) => ({ ...d, bankFile: e.target.value, cls: bank ? bank.class : d.cls, bankClass: bank ? bank.class : 0 }));
+        }}>
           <option value="">— выбери банк —</option>
           {banks.map((b) => (
             <option key={b.file} value={b.file}>{b.file} (следующий: inf-{b.class}-{b.token}-{String(b.nextId).padStart(3, '0')})</option>
@@ -275,12 +283,22 @@ export default function TaskForm() {
 
       {draft.type === 'matching' && (
         <>
-          <p className="muted">Заполни левую и правую части по строкам (по одной на строку), затем укажи пары.</p>
+          <p className="muted">Заполни левую и правую части по строкам (по одной на строку), затем укажи пары в формате «левая: правая», по одной на строку.</p>
           <label>Левая часть (по одной на строку)
             <textarea value={draft.left.join('\n')} onChange={(e) => set('left', e.target.value.split('\n'))} rows={4} />
           </label>
           <label>Правая часть (по одной на строку)
             <textarea value={draft.right.join('\n')} onChange={(e) => set('right', e.target.value.split('\n'))} rows={4} />
+          </label>
+          <label>Пары (по одной на строку: левая: правая)
+            <textarea value={Object.entries(draft.answer_map).map(([k, v]) => `${k}: ${v}`).join('\n')} onChange={(e) => {
+              const m: Record<string, string> = {};
+              for (const line of e.target.value.split('\n')) {
+                const idx = line.indexOf(':');
+                if (idx > 0) m[line.slice(0, idx).trim()] = line.slice(idx + 1).trim();
+              }
+              set('answer_map', m);
+            }} rows={4} />
           </label>
           <label>Объяснение (обязательно)
             <textarea value={draft.explanation} onChange={(e) => set('explanation', e.target.value)} rows={3} />

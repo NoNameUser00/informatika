@@ -21,6 +21,11 @@
 ## Качество
 - Перед коммитом: `npm run rebuild:check`, `npm run typecheck`, `npm test`, `npm run build`.
   Пакетный менеджер проекта — `npm` (в этом правиле старый текст про `pnpm` неверен).
+- Новые гейты: `scripts/check-distractor-length.mjs` (верный вариант не выдаёт себя
+  длиной, с allow-листом `data/tasks/distractor-length.allow.json`) и
+  `scripts/build-bank-index.mjs` (индекс существующих id для формы ввода заданий).
+  Форма ввода заданий учителем: `/teacher/new` (`src/pages/teacher/new.astro`,
+  `src/components/TaskForm.tsx`). Она готовит YAML-блок, не пишет файлы.
 - **Пересобираемые файлы — одной командой.** `npm run rebuild` гоняет все четыре
   генератора в нужном порядке: `trainer:json` → `checks` → `bank:30` → `edge:sync`.
   Запускать по одному нельзя: забытый генератор локально выглядит как «всё зелёное»
