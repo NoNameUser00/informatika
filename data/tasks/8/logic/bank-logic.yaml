@@ -46,9 +46,9 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-utter], meta: [plan-actions] }
   prompt: "Какое высказывание составное?"
-  student_view: { options: [{ id: A, text: "«На столе лежит большая книга»" }, { id: B, text: "«На улице сильный ливень»" }, { id: C, text: "«Окно в аудитории открыто»" }, { id: D, text: "«Идет дождь и дует ветер»" }] }
+  student_view: { options: [{ id: A, text: "«Идет дождь и дует ветер»" }, { id: B, text: "«Окно в аудитории открыто»" }, { id: C, text: "«На столе лежит большая книга»" }, { id: D, text: "«На улице сильный ливень»" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: D, answer_text: "«Идет дождь и дует ветер»", explanation: "Два простых соединены связкой И" }
+  teacher_only: { answer: A, answer_text: "«Идет дождь и дует ветер»", explanation: "Два простых соединены связкой И" }
 
 - id: inf-8-logic-004
   class: 8
@@ -746,7 +746,7 @@
   fgos_element: 1.5
   fgos: { subject: [inf-8-logic-laws], meta: [plan-actions] }
   prompt: "Чему равно A ∧ (B ∨ C)?"
-  student_view: { options: [{ id: A, text: "(A ∧ B) ∨ (A ∧ C)" }, { id: B, text: "(A ∨ B) ∧ (C ∨ A)" }, { id: C, text: "(A ∧ B) ∨ (C ∧ B)" }, { id: D, text: "(A ∨ B) ∧ (A ∨ C)" }] }
+  student_view: { options: [{ id: A, text: "(A ∧ B) ∨ (A ∧ C)" }, { id: B, text: "(A ∨ B) ∧ (A ∨ C)" }, { id: C, text: "(A ∧ B) ∨ (C ∧ B)" }, { id: D, text: "(A ∨ B) ∧ (C ∨ A)" }] }
   auto_check: { method: exact_option }
   teacher_only: { answer: A, answer_text: "(A ∧ B) ∨ (A ∧ C)", explanation: "Закон распределительности разносит A внутрь скобок с дизъюнкцией. Проверка при A = 0: слева 0, справа 0 ∨ 0 = 0; при A = 1 и B = 1, C = 0: слева 1, справа 1 ∨ 0 = 1. Ошибка — потерять скобку и записать (A ∧ B) ∨ C." }
 

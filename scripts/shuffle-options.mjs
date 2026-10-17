@@ -114,7 +114,12 @@ for (const file of FILES) {
     // Находим student_view: { options: [...] }
     const svM = /student_view: \{ options: \[(.*)\] \}/.exec(part);
     if (!svM) {
-      console.error(`  ! ${id}: не найдена секция options`);
+      // Раньше здесь был молчаливый continue, и два задания в блочном стиле
+      // (inf-8-numsys-005 и inf-8-numsys-012) годами выпадали из перемешивания,
+      // а скрипт рапортовал об успехе. Задание, которое скрипт не разобрал, —
+      // это задание, чей ключ никто не перепроверял: молчать здесь нельзя.
+      console.error(`  ! ${id}: не найдена секция options — задание не в потоковом стиле`);
+      fatal++;
       continue;
     }
     const inner = svM[1];
@@ -124,7 +129,11 @@ for (const file of FILES) {
     while ((m = OPT_RE.exec(inner)) !== null) {
       items.push({ full: m[1], letter: m[2], text: m[3] });
     }
-    if (items.length < 2) continue;
+    if (items.length < 2) {
+      console.error(`  ! ${id}: разобрано ${items.length} вариантов — перемешивать нечего`);
+      fatal++;
+      continue;
+    }
 
     // Верный вариант опознаём по ТЕКСТУ (teacher_only.answer_text), а не по букве.
     // Буква — производная от порядка вариантов, и опора на неё здесь и породила
