@@ -35,24 +35,11 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parse } from 'yaml';
+import { findAnchorProblems, findConflicts } from '../src/lib/tasks/checks.mjs';
 
 const ALLOW_FILE = 'data/tasks/key-conflicts.allow.json';
 
-/** Поля, которые считаем «указанием на вариант» в пояснении. */
-function normText(s) {
-  return String(s ?? '')
-    .toLowerCase()
-    .replace(/ё/g, 'е')
-    .replace(/[«»"']/g, ' ')
-    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-/** Числа из текста: ими пояснение называет конкретный вариант-число. */
-function numbersIn(s) {
-  return new Set((String(s ?? '').match(/-?\d+(?:\.\d+)?/g) ?? []).map((x) => x.replace(',', '.')));
-}
+// normText, numbersIn — в src/lib/tasks/checks.mjs, переэкспортируются ниже.
 
 function yamlFiles(dir, acc = []) {
   for (const name of readdirSync(dir)) {
@@ -72,122 +59,8 @@ function loadAllow() {
   }
 }
 
-/**
- * Вес свидетельства в пользу варианта:
- *  +3 — текст варианта прямо назван в пояснении;
- *  +3 — вариант короткий и числовой, и его значение названо в пояснении;
- *  -4 — вариант назван в common_errors, то есть это отвергнутая ошибка.
- *
- * Числовое правило намеренно узкое. Иначе ловятся операнды, а не ответы:
- * в «Поглощение: при A=1 всегда 1, при A=0 всегда 0» детектор считал бы
- * ответом «0», хотя это значение операнда. Поэтому число засчитывается, только
- * если вариант короткий, содержит ровно одно число и в пояснении НЕТ присваиваний
- * вида «A = 1» (тогда числа в пояснении — операнды, а не результат).
- */
-export function scoreOptions(task) {
-  const options = task.student_view?.options ?? [];
-  const answer = task.teacher_only?.answer;
-  const expl = String(task.teacher_only?.explanation ?? '');
-  const common = task.teacher_only?.common_errors ?? [];
-  const commonList = Array.isArray(common) ? common : common ? [common] : [];
-
-  const eText = normText(expl);
-  const eNums = numbersIn(expl);
-  const hasAssignment = /=\s*-?\d/.test(expl); // «A = 1», «A=0» — числа как операнды
-  const cTexts = commonList.map(normText);
-
-  const score = {};
-  for (const o of options) {
-    const tText = normText(o.text);
-    let s = 0;
-    if (tText.length >= 2 && eText.includes(tText)) s += 3;
-
-    const words = tText.split(/\s+/).filter(Boolean);
-    const tNums = numbersIn(o.text);
-    if (!hasAssignment && words.length <= 5 && tNums.size === 1) {
-      if (eNums.has([...tNums][0])) s += 3;
-    }
-
-    if (tText && cTexts.some((c) => c.includes(tText))) s -= 4;
-    score[o.id] = s;
-  }
-  return { score, answer, options };
-}
-
-/** Конфликт: другой вариант выигрывает у ключа с отрывом. */
-export function findConflicts(tasks) {
-  const out = [];
-  for (const t of tasks) {
-    if (t?.type !== 'single_choice') continue;
-    const { score, answer, options } = scoreOptions(t);
-    if (!options.length || !(answer in score)) continue;
-    const best = Object.keys(score).reduce((a, b) => (score[b] > score[a] ? b : a));
-    if (score[best] >= 3 && score[best] > score[answer]) {
-      out.push({
-        id: t.id,
-        file: t.__file,
-        prompt: t.prompt,
-        answer,
-        answerText: options.find((o) => o.id === answer)?.text,
-        suggested: best,
-        suggestedText: options.find((o) => o.id === best)?.text,
-        options: options.map((o) => ({ id: o.id, text: o.text })),
-        explanation: t.teacher_only?.explanation ?? '',
-        commonErrors: t.teacher_only?.common_errors ?? [],
-        scoreAnswer: score[answer],
-        scoreSuggested: score[best],
-      });
-    }
-  }
-  return out;
-}
-
-/**
- * Инвариант якоря ключа: teacher_only.answer_text обязан называть вариант,
- * на который указывает буква teacher_only.answer, — и ровно один.
- *
- * Зачем. Буква ключа производна от порядка вариантов: переставил варианты —
- * буква поехала, и если её не пересчитать, ключ указывает на чужой ответ
- * (так появились 88 неверных ключей). Сейчас верный вариант назван ТЕКСТОМ,
- * поэтому букву можно всегда пересчитать, а расхождение — это дрейф данных,
- * который надо увидеть, а не загладить.
- *
- * Возвращает список заданий с нарушениями; пустой список означает, что
- * перестановка вариантов больше не может тихо сломать ключ.
- */
-export function findAnchorProblems(tasks) {
-  const out = [];
-  for (const t of tasks) {
-    if (t?.type !== 'single_choice') continue;
-    const options = t.student_view?.options ?? [];
-    const answer = t.teacher_only?.answer;
-    const want = t.teacher_only?.answer_text;
-
-    if (typeof want !== 'string' || !want.trim()) {
-      out.push({ id: t.id, reason: 'нет answer_text', answer, answerText: want });
-      continue;
-    }
-    const hits = options.filter((o) => o.text === want).map((o) => o.id);
-    if (hits.length !== 1) {
-      out.push({
-        id: t.id,
-        reason: `текст ответа встречается среди вариантов ${hits.length} раз(а)`,
-        answer,
-        answerText: want,
-      });
-      continue;
-    }
-    if (answer && hits[0] !== answer) {
-      out.push({
-        id: t.id,
-        reason: `answer=${answer}, а answer_text указывает на ${hits[0]}`,
-        answer,
-        answerText: want,
-      });
-    }
-  }
-  return out;
-}
+// scoreOptions, findConflicts, findAnchorProblems — в src/lib/tasks/checks.mjs,
+// переэкспортируются ниже.
 
 export function loadAllTasks() {
   const tasks = [];
@@ -198,6 +71,10 @@ export function loadAllTasks() {
   }
   return tasks;
 }
+
+// Переэкспорт чистых функций из src/lib, чтобы тесты и скрипты работали
+// как раньше, а браузерная форма могла импортировать их из src/lib.
+export { findAnchorProblems, findConflicts, normText, numbersIn, scoreOptions } from '../src/lib/tasks/checks.mjs';
 
 // ── запуск из командной строки ──
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {

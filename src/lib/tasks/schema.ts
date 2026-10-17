@@ -42,6 +42,7 @@ const singleTask = meta.extend({
   auto_check: z.object({ method: z.literal('exact_option') }),
   teacher_only: z.object({
     answer: z.string().min(1),
+    answer_text: z.string().min(1),
     explanation: z.string().min(1),
     common_errors: z.array(z.string()).optional(),
   }),
