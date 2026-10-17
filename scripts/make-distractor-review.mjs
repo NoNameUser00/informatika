@@ -19,7 +19,7 @@
 //   node scripts/make-distractor-review.mjs             грубые случаи (запас > 50 %)
 //   node scripts/make-distractor-review.mjs 20          порог 20 %
 //   node scripts/make-distractor-review.mjs 20 --stats  только сводка
-import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync, existsSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from 'yaml';
 
@@ -40,13 +40,14 @@ function walk(dir, acc = []) {
 const len = (s) => String(s ?? '').replace(/\s+/g, ' ').trim().length;
 const flat = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
 
-/** Уже исправленные задания: берём их из раскладки, чтобы не гонять по кругу. */
-const doneIds = new Set(
-  existsSync(OUT_DIR)
-    ? readdirSync(join(OUT_DIR, 'done')).map((f) => f.replace(/\.md$/, ''))
-    : [],
-);
+// Варианты-числа длинной не бывают, и «10» длиннее «8» на символ, хотя по
+// смыслу это одно и то же. Такие задания в ведомость не попадают: длина там
+// ничего не выдаёт, а чинить нечего. Проверено на inf-11-graph-008 («8», «9»,
+// «10», «7»), где метрика дала +100 % на пустом месте.
+const isNumericLike = (s) => /^[\W\d]*\d[\W\d]*$/.test(String(s ?? '').trim());
 
+// Механизма «сделано» тут нет намеренно: починенное задание само выпадает из
+// ведомости, как только запас падает ниже порога. Ничего размечать не нужно.
 const banks = new Map();
 
 for (const f of walk('data/tasks')) {
@@ -54,9 +55,9 @@ for (const f of walk('data/tasks')) {
   const bankKey = `${Number(rel[2])}-${rel[3]}`;
   for (const t of parse(readFileSync(f, 'utf-8')) ?? []) {
     if (t?.type !== 'single_choice') continue;
-    if (doneIds.has(t.id)) continue;
     const opts = t.student_view?.options ?? [];
     if (opts.length < 2) continue;
+    if (opts.every((o) => isNumericLike(o.text))) continue;
     const opt = opts.find((o) => String(o.id) === String(t.teacher_only?.answer));
     if (!opt) continue;
     const others = opts.filter((o) => o.id !== opt.id);

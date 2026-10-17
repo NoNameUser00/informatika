@@ -16,18 +16,14 @@
 | --- | ---: |
 | [10-base.md](10-base.md) | 17 |
 | [10-logic.md](10-logic.md) | 6 |
-| [10-media.md](10-media.md) | 24 |
+| [10-media.md](10-media.md) | 23 |
 | [10-ss.md](10-ss.md) | 10 |
 | [11-algo.md](11-algo.md) | 8 |
-| [11-data.md](11-data.md) | 3 |
-| [11-graph.md](11-graph.md) | 1 |
 | [11-net.md](11-net.md) | 20 |
 | [7-base.md](7-base.md) | 13 |
 | [7-media.md](7-media.md) | 4 |
-| [8-algorithms.md](8-algorithms.md) | 6 |
-| [8-logic.md](8-logic.md) | 2 |
+| [8-algorithms.md](8-algorithms.md) | 4 |
 | [9-extra.md](9-extra.md) | 23 |
-| [9-graphs.md](9-graphs.md) | 3 |
 | [9-spreadsheets.md](9-spreadsheets.md) | 3 |
 
-Всего заданий в ведомости: **143**.
+Всего заданий в ведомости: **131**.
