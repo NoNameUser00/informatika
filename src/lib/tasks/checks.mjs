@@ -67,6 +67,11 @@ export function scoreOptions(task) {
   for (const o of options) {
     const tText = normText(o.text);
     let s = 0;
+    // Числовое правило намеренно узкое. Иначе ловятся операнды, а не ответы:
+    // в «Поглощение: при A=1 всегда 1, при A=0 всегда 0» детектор считал бы
+    // ответом «0», хотя это значение операнда. Поэтому число засчитывается,
+    // только если вариант короткий, содержит ровно одно число и в пояснении НЕТ
+    // присваиваний вида «A = 1» (тогда числа в пояснении — операнды).
     if (tText.length >= 2 && eText.includes(tText)) s += 3;
 
     const words = tText.split(/\s+/).filter(Boolean);
@@ -180,6 +185,6 @@ export function checkNumericKey(task) {
   const want = too.answer_text;
   if (accepted.length === 0) return { ok: false, reason: 'нет accepted_values_decimal' };
   if (typeof base !== 'number') return { ok: false, reason: 'нет основания' };
-  const result = checkNumericBase(accepted[0], want, base);
-  return { ok: result?.isCorrect === true, reason: result?.isCorrect ? '' : 'несовпадение' };
+  const ok = accepted.some((v) => checkNumericBase(v, want, base)?.isCorrect === true);
+  return { ok, reason: ok ? '' : 'несовпадение' };
 }

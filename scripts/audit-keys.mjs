@@ -35,7 +35,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parse } from 'yaml';
-import { findAnchorProblems, findConflicts, normText, numbersIn, scoreOptions } from '../src/lib/tasks/checks.mjs';
+import { findAnchorProblems, findConflicts } from '../src/lib/tasks/checks.mjs';
 
 const ALLOW_FILE = 'data/tasks/key-conflicts.allow.json';
 
