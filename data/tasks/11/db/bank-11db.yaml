@@ -12,9 +12,9 @@
   fgos_element: 1.1
   fgos: { subject: [inf-11-db-keys], meta: [plan-actions] }
   prompt: "Что годится в первичные ключи таблицы учеников?"
-  student_view: { options: [{ id: A, text: "Рост" }, { id: B, text: "Любимый цвет" }, { id: C, text: "Номер личного дела" }, { id: D, text: "Имя" }] }
+  student_view: { options: [{ id: A, text: "Рост в сантиметрах" }, { id: B, text: "Любимый цвет ученика" }, { id: C, text: "Номер личного дела" }, { id: D, text: "Имя и отчество ученика" }] }
   auto_check: { method: exact_option }
-  teacher_only: { answer: C, answer_text: "Номер личного дела", explanation: "Уникален и неизменен" }
+  teacher_only: { answer: "C", answer_text: "Номер личного дела", explanation: "Первичный ключ должен быть уникальным и не меняться: рост, любимый цвет и имя у учеников повторяются, а номер личного дела у каждого свой и постоянный" }
 
 - id: inf-11-db-002
   class: 11
