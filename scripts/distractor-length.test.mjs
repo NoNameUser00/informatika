@@ -102,28 +102,35 @@ for (const f of walk('data/tasks')) {
 }
 
 const dir = 'docs/review/distractors';
-let sheets = 0;
+const bodies = [];
 for (const f of readdirSync(dir)) {
   if (!f.endsWith('.md') || f === 'README.md') continue;
-  sheets++;
-  const body = readFileSync(join(dir, f), 'utf-8');
-  for (const id of gross.keys()) {
-    if (!body.includes(id)) fail(`${id} выдаёт себя длиной, но его нет в ведомости ${f}`);
-  }
+  bodies.push(readFileSync(join(dir, f), 'utf-8'));
 }
-if (!sheets) fail('в ведомости нет ни одного листа — проверка ничего не подтверждает');
+const all = bodies.join('\n');
+
+// Сверка идёт по объединённому тексту листов, а не по каждому листу отдельно.
+// Иначе при пустой ведомости — а это и есть желаемое конечное состояние — цикл
+// по листам не выполнился бы ни разу и проверка молча прошла бы, не проверив
+// ничего. Теперь пустая ведомость проходит только когда метрика тоже ничего
+// не находит, то есть emptiness настоящая, а не поломка обхода.
+for (const id of gross.keys()) {
+  if (!all.includes(id)) fail(`${id} выдаёт себя длиной, но его нет в ведомости`);
+}
 
 // Наоборот: в ведомости не должно быть заданий, которые уже не выдают себя,
-// иначе лист врёт и правки в нём бессмысленны.
-for (const f of readdirSync(dir)) {
-  if (!f.endsWith('.md') || f === 'README.md') continue;
-  for (const m of readFileSync(join(dir, f), 'utf-8').matchAll(/^## \d+\. (\S+)/gm)) {
-    if (!gross.has(m[1])) fail(`${m[1]} перечислен в ведомости ${f}, но метрикой не ловится`);
+// иначе лист врёт и правки в нём бессмысленны. Эта проверка первая по нужности:
+// именно она ловит устаревший лист после правки банка.
+for (const body of bodies) {
+  for (const m of body.matchAll(/^## \d+\. (\S+)/gm)) {
+    if (!gross.has(m[1])) fail(`${m[1]} перечислен в ведомости, но метрикой не ловится`);
   }
 }
 
 if (failed) {
-  console.log(`\nЗАПАС ДЛИНЫ: провалено проверок ${failed}`);
+  console.log('\nЗАПАС ДЛИНЫ: провалено проверок ' + failed);
   process.exit(1);
 }
-console.log(`  OK запас длины: выдающих себя заданий ${gross.size}, листов ведомости ${sheets}`);
+console.log(
+  `  OK запас длины: выдающих себя заданий ${gross.size}, листов ведомости ${bodies.length}`,
+);
