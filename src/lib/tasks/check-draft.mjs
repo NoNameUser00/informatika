@@ -2,7 +2,7 @@
 //
 // Живёт в src/lib, чтобы форма в браузере и тесты работали с одним кодом.
 // Никаких node-зависимостей. Импортирует только ./checks.mjs и ../scoring/check.mjs.
-import { checkDuplicateOptions, findAnchorProblems, findConflicts, giveawayPct, isNumericLike, scoreOptions } from './checks.mjs';
+import { checkDuplicateOptions, checkNumericKey, findAnchorProblems, findConflicts, giveawayPct, isNumericLike, scoreOptions } from './checks.mjs';
 
 /**
  * Проверяет черновик задания.
